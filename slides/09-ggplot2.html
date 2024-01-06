@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+<meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
+<title>MATH/COSC 3570 - Spring 2024 - Data Visualization – ggplot2 r emo::ji('bar_chart')</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+<style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+<style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="MATH/COSC 3570 - Spring 2024 - Data Visualization – ggplot2 r emo::ji('bar_chart')">
+<meta property="og:description" content="MATH/COSC 3570 Introduction to Data Science">
+<meta property="og:site-name" content="MATH/COSC 3570 - Spring 2024">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="#447099" class="quarto-title-block center"><h1 class="title">Data Visualization – <strong>ggplot2</strong> 📊</h1>
+  <p class="subtitle">MATH/COSC 3570 Introduction to Data Science</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University 
+</div>
+</div>
+</div>
+
+</section><section><section id="exploratory-data-analysis-eda" class="slide level2"><h2><a href="https://r4ds.hadley.nz/eda">Exploratory Data Analysis (EDA)</a></h2>
+<ul>
+<li>EDA is an approach to analyzing data sets to <em>summarize their main characteristics</em>. <!-- - Many widely used data analysis tools were initiated by discoveries made via EDA.  -->
+</li>
+<li>EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked.</li>
+</ul>
+<!-- - Often, the strongest tool of EDA is **data visualization**.  --><blockquote>
+<p>“The simple graph has brought more information to the data analyst’s mind than any other device.” — John Tukey</p>
+</blockquote>
+<ul>
+<li>We also calculate summary statistics and perform data wrangling/manipulation/transformation at (or before) this stage of doing data science.</li>
+</ul>
+
+<img data-src="https://raw.githubusercontent.com/hadley/r4ds/main/diagrams/data-science/visualize.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>After importing or reading data into R, the first thing we need to do is to understand our data.
+<ul>
+<li>What are variables in the data set?</li>
+<li>Are the variables related in some way?</li>
+<li>Are there any missing values, outliers, or other weird values?</li>
+<li>Do we need to transform some variables to make it easier to answer our research questions or to do our analysis.</li>
+</ul>
+</li>
+<li>So before doing data analysis, we should understand our data well, and be able to answer all those questions. This understanding helps us choose the correct model and algorithm and helps us do the correct analysis.</li>
+<li>The process of understanding our data is called Exploratory Data Analysis or EDA.</li>
+<li>So I said here, EDA is an approach to analyzing data sets to summarize their main characteristics.</li>
+<li>Many widely used data analysis tools were initiated by discoveries made via EDA.</li>
+<li>EDA is perhaps the most important part of data analysis, yet it is one that is often overlooked. Again, without understanding our data, we may end up choosing a bad model for analysis because we may neglect some important information stored in the data set.</li>
+<li>Often, the strongest tool of EDA is data visualization, and let’s why we spend two weeks talking about it.</li>
+<li>We might also calculate summary statistics and perform data wrangling/manipulation/transformation at (or before) this stage of doing data science, which will be discussed after data visualization.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="section-1" class="title-slide slide level1 center" data-background-color="#A7D5E8"><h1></h1>
+<img data-src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" width="380"><img data-src="https://raw.githubusercontent.com/slowkow/ggrepel/master/man/figures/logo.svg" width="180"><img data-src="https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png" width="180"><img data-src="https://raw.githubusercontent.com/sjmgarnier/viridis/master/hex_logo/viridis.svg" width="180"><img data-src="./images/09-ggplot2/patchwork_logo.png" width="180"><img data-src="./images/09-ggplot2/ggiraph_logo.png" width="180"><img data-src="https://raw.githubusercontent.com/ropensci/plotly/master/man/figures/plotly.png" width="380"><h3>
+gthemes, ggridges, ggbeeswarm, ggdendro, ggpubr, ggmap, ggradar, ggcorrplot, GGally, and more!
+</h3>
+<h1>
+Visualizing Data
+</h1>
+<aside class="notes"><ul>
+<li>this week and and next week, we will be talking about data visualization.</li>
+<li>So it is great to master this package because with the package you can produce lots of beautiful and amazing plots. All right. Let’s dive in and see how to create a ggplot!</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="plotting-systems-base-lattice-and-ggplot2" class="slide level2"><h2>
+<a href="https://bookdown.org/rdpeng/exdata/plotting-systems.html">Plotting Systems</a>: <strong>base</strong>, <strong>lattice</strong> and <strong>ggplot2</strong>
+</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-4-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-5-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-6-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>ggplot2</strong></p>
+<ul>
+<li><p>has the most powerful functionality.</p></li>
+<li><p>is more beautiful?</p></li>
+<li><p>has larger file size that occupies more memory space and has longer render time.</p></li>
+</ul>
+<aside class="notes"><ul>
+<li>We already learned a little bit about R plotting, right? In fact R has three main plotting systems, the base package, lattice package, and the ggplot2 package.</li>
+<li>There are lots of tools and packages that greatly extend the ggplot2 functionality, as I listed here.</li>
+<li>Basically, ggplot2 has the most powerful functionality than the other two. It can create lots of graphs that the other two cannot, and ggplot2 is more beautiful than the other two, I think. But one disadvantage of ggplot2 is that it’s size is larger than the other two, occupying more memory spaces than the other two, and the rendering time is longer.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="section-2" class="title-slide slide level1 center" data-background-color="#A7D5E8" data-background-image="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/ggplot2.png" data-background-size="30%" data-background-position="70% 50%"><h1></h1>
+<div class="left">
+<h2>
+Elegant Data Visualisation
+</h2>
+<h2>
+Using the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">Grammar of Graphics</a>
+</h2>
+</div>
+</section><section id="the-ggplot2-grammar" class="slide level2"><h2><a href="https://r4ds.hadley.nz/data-visualize.html">The ggplot2 Grammar</a></h2>
+<ul>
+<li>Three main components:</li>
+</ul>
+<p><!-- Grammar element          | What it is --> <!-- :----------------------- | :----------------------------- --> <!-- **Data**                 | The **data frame** being plotted --> <!-- **Geometry**             | The geometric **shape** that will represent the data --> <!--                          | (e.g., point, boxplot, histogram) --> <!-- **Aesthetic mapping**    | The aesthetics of the geometric object --> <!--                          | (e.g., color, size, shape) --></p>
+<table>
+<colgroup>
+<col style="width: 29%">
+<col style="width: 70%">
+</colgroup>
+<thead><tr class="header">
+<th>Grammar element</th>
+<th>What it is</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data</strong></td>
+<td>The <strong>data frame</strong> used for plotting</td>
+</tr>
+<tr class="even">
+<td><strong>Geometry</strong></td>
+<td><ul>
+<li>The geometric <strong>shape</strong> that represents the data</li>
+<li>e.g., <em>point</em>, <em>boxplot</em>, <em>histogram</em>
+</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><strong>Aesthetic mapping</strong></td>
+<td><ul>
+<li>The aesthetics of the geometric object</li>
+<li>e.g., <em>color</em>, <em>size</em>, <em>shape</em>
+</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>How we define the mapping depends on what geometry we are using.</li>
+</ul>
+<div class="large">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATASET<span class="sc">&gt;</span>, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span> </span>
+<span id="cb2-2"><a href="#cb2-2"></a>       <span class="er">&lt;</span>GEOM_FUNCTION<span class="sc">&gt;</span>() <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>       other options<span class="sc">/</span>layers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Data: the data input of ggplot2 is always a data frame, not a vector, or matrix.</li>
+<li>Geometry: defines what kind of plot we are going to make.</li>
+<li>Aesthetic mapping: basically tell ggplot2 how we decorate the plot and make it more visible or more informative. For example, use different point colors or sizes for different categories, such male and female</li>
+<li>Structure of the code for ggplots can be summarized as the following code.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="mpg-data" class="slide level2"><h2>mpg Data</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>ggplot2<span class="sc">::</span>mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 234 × 11
+  manufacturer model      displ  year   cyl trans  drv     cty   hwy fl    class
+  &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
+1 audi         a4           1.8  1999     4 auto(… f        18    29 p     comp…
+2 audi         a4           1.8  1999     4 manua… f        21    29 p     comp…
+3 audi         a4           2    2008     4 manua… f        20    31 p     comp…
+4 audi         a4           2    2008     4 auto(… f        21    30 p     comp…
+5 audi         a4           2.8  1999     6 auto(… f        16    26 p     comp…
+6 audi         a4           2.8  1999     6 manua… f        18    26 p     comp…
+7 audi         a4           3.1  2008     6 auto(… f        18    27 p     comp…
+8 audi         a4 quattro   1.8  1999     4 manua… 4        18    26 p     comp…
+# ℹ 226 more rows</code></pre>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Here shows the mpg data set saved in ggplot2.</li>
+<li>It is a tibble with 11 variables, including ……</li>
+<li>We are gonna use it as an example to learn to create a ggplot.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-3" class="slide level2"><h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li>
+<li><a href="#tabset-1-2">Code</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-9-1.png" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell" data-layout-align="center" data-labrel="mpg" data-hash="09-ggplot2_cache/revealjs/mpg_b207c4428c7333b2261860be5c9582fb">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>                     <span class="at">y =</span> hwy, </span>
+<span id="cb5-4"><a href="#cb5-4"></a>                     <span class="at">color =</span> class)) <span class="sc">+</span> </span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Engine Size v.s. Fuel Efficiency"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>         <span class="at">subtitle =</span> <span class="st">"Dimensions for class"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>         <span class="at">x =</span> <span class="st">"Engine displacement (litres)"</span>, <span class="at">y =</span> <span class="st">"Highway (mpg)"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9"></a>         <span class="at">color =</span> <span class="st">"Type of car"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>         <span class="at">caption =</span> <span class="st">"Source: http://fueleconomy.gov"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Here shows a ggplot, showing the relationship between mpg and engine displacement. We have titles, labels, and footnote.</li>
+<li>And we also use different colors to show different types of car. Right.</li>
+<li>The code is right here. We are gonna create this plot step by step by step OK.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="coding-out-loud" class="title-slide slide level1 center"><h1>Coding out loud 😃</h1>
+
+</section><section id="section-4" class="slide level2"><h2></h2>
+<blockquote>
+<p><strong>Start with the <code>mpg</code> data frame</strong></p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-11-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Remember the data input is always a data frame.<br>
+</li>
+<li>When you call the function ggplot(), but without any geometry, R just renders a plot background colored in gray.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-5" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, <strong>map engine displacement to the x-axis</strong></p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-1_d78590deeb0cd3c65c8445f3e820fe53">
+<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span><span class="op">)</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>
+<code>displ</code> is the variable name in <code>mpg</code>.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-13-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>R will create tick marks and label of x-axis for you.</li>
+</ul>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Then after specifying the data set, we can start decorating our plot.</li>
+<li>Remember we are going to create a scatter plot of displacement and miles pewr gallon.</li>
+<li>So we can first map engine displacement to the x-axis using mapping = aes(x = displ)</li>
+<li>displ is the variable name in the mpg data set.</li>
+<li>R will create some default tick marks and label of x-axis for you.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-6" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis <strong>and map highway miles per gallon to the y-axis.</strong></p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-2_ae3f717a41dbe61e92009fd15b068373">
+<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>,</span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Specify <code>y = hwy</code> in the same <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> of the <code>mapping</code> argument as <code>x = displ</code>, separated by comma.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-15-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Then we map highway miles per gallon to the y-axis by specifying <code>y = hwy</code> in aesthetics</li>
+<li>
+<code>hwy</code> is the variable name in the mpg data set.</li>
+<li>R will create some default tick marks and label of y-axis for you.</li>
+<li>Now we have variables in both x and y axis. It’s time to define the geometry of the plot. That is, tell ggplot, what kind of plot you want!</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-7" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. <strong>Represent each observation with a point</strong></p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-3_07d02c18d37a9a43d0d64ddbe2420ae4">
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>To define a geometry, add a <strong>geom</strong> layer.</li>
+</ul>
+<div class="center">
+<p><strong>Don’t miss <code>+</code> sign!</strong></p>
+</div>
+<ul>
+<li><p>For scatterplots we add <strong>points</strong>, and use <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code></p></li>
+<li><p><a href="https://ggplot2.tidyverse.org/reference/">Lots of geoms</a></p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-17-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><p><strong>geom</strong> (geometric object) - What’s the next? Remember we use different colors of points to represent different car types, right? - Which part of code you think we can use to color the points? - aesthetics in the mapping! - By default, ggplot generates black solid points, each representing an observation’s <code>hwy</code> and <code>displ</code> value.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-8" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point <strong>and map type of car (<code>class</code>) to the color of each point.</strong></p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-4_d1c1c3455d13ee42ab66e6c46a936834">
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> </span>
+<span>         <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>             y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>             color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="co">#&lt;&lt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>Add <code>color = class</code> in <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> of the <code>mapping</code> argument, where <code>class</code> is the variable name for type of car.</p></li>
+<li><p>ggplot automatically generates a legend on the right.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-20-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>To map type of car (class) to the color of each point, add <code>color = class</code> in <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code> of the <code>mapping</code> argument</li>
+<li>And now you can see that each color represent a type of car.</li>
+<li>ggplot automatically generates a default legend on the right, where the title of the legend is the variable name, and the names of legend are the variable values.</li>
+<li>OK. We are almost done. The rest are just adding titles x, y labels. Let’s see how.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-9" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (<code>class</code>) to the color of each point. <strong>Title the plot “Engine Size v.s. Fuel Efficiency”</strong></p>
+</blockquote>
+<div class="midi">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-5_afcc9a7a301c0cf71715bd611976521a">
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                     color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title<span class="op">=</span><span class="st">"Engine Size vs. Fuel Efficiency"</span> <span class="co">#&lt;&lt;</span></span>
+<span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Add any labels in <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> layer.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-22-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We can add any labels in <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> layer.</li>
+<li>Here we set title = “Engine Size v.s. Fuel Efficiency”</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-10" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (<code>class</code>) to the color of each point. Title the plot “Engine Size vs.&nbsp;Fuel Efficiency”, <strong>add the subtitle “Dimensions for class”</strong></p>
+</blockquote>
+<div class="midi">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-6_244054664d75d06f07ab027d02e87947">
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                     color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title<span class="op">=</span><span class="st">"Engine Size vs. Fuel Efficiency"</span>,</span>
+<span>    subtitle<span class="op">=</span><span class="st">"Dimensions for class"</span> <span class="co">#&lt;&lt;</span></span>
+<span>    <span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Add a subtitle in <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code>
+</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-24-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We can also add a subtitle title “Dimensions for class”.</li>
+<li>BTW, we can change the font size, color and position of the title. Here is just the default setting.</li>
+<li>In theme(plot.title = element_text(size = 20, color = “#1b98e0”)</li>
+<li>https://statisticsglobe.com/ggplot2-title-subtitle-with-different-size-and-color-in-r</li>
+<li>https://en.wikipedia.org/wiki/Point_(typography)</li>
+<li>https://stackoverflow.com/questions/17311917/ggplot2-the-unit-of-size</li>
+<li>We will talk about that if time permitted. Or I can ask you in homework and you can learn by yourself.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-11" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (<code>class</code>) to the color of each point. Title the plot “Engine Size vs.&nbsp;Fuel Efficiency”, add the subtitle “Dimensions for class”, <strong>label the x and y axes as “Engine displacement (litres)” and “Highway (mpg)”, respectively</strong></p>
+</blockquote>
+<div class="midi">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-7_18fd02028ec5a5cd41993e60151040d2">
+<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                     color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Engine Size vs. Fuel Efficiency"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Dimensions for class"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Engine displacement (litres)"</span>, <span class="co">#&lt;&lt;</span></span>
+<span>    y <span class="op">=</span> <span class="st">"Highway (mpg)"</span> <span class="co">#&lt;&lt;</span></span>
+<span>    <span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-26-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We then label the x and y axes as “Engine displacement (litres)” and “Highway (mpg)”, respectively.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-12" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (<code>class</code>) to the color of each point. Title the plot “Engine Size vs.&nbsp;Fuel Efficiency”, add the subtitle “Dimensions for class”, label the x and y axes as “Engine displacement (litres)” and “Highway (mpg)”, respectively, <strong>label the legend “Type of car”</strong></p>
+</blockquote>
+<div class="midi">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-8_9f31fc292b8fc72fcd100b0cb18d6672">
+<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                     color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Engine Size vs. Fuel Efficiency"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Dimensions for class"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Engine displacement (litres)"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"Highway (mpg)"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Type of car"</span> <span class="co">#&lt;&lt;</span></span>
+<span>    <span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>The legend is generated when we map type of car (<code>class</code>) to <strong>color</strong>.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-28-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We label the legend “Type of car” using color = “Type of car”. Why?</li>
+<li>Because the legend is generated when we map type of car to color.</li>
+<li>The color title is the legend title.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-13" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (<code>class</code>) to the color of each point. Title the plot “Engine Size vs.&nbsp;Fuel Efficiency”, add the subtitle “Dimensions for class”, label the x and y axes as “Engine displacement (litres)” and “Highway (mpg)”, respectively, label the legend “Type of car”, <strong>and add a caption for the data source.</strong></p>
+</blockquote>
+<div class="midi">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-9_80f5e5f2a84a46da639276c25fbb3d22">
+<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                     color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Engine Size vs. Fuel Efficiency"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Dimensions for class"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Engine displacement (litres)"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"Highway (mpg)"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Type of car"</span>,</span>
+<span>    caption<span class="op">=</span><span class="st">"Source: http://fueleconomy.gov"</span> <span class="co">#&lt;&lt;</span></span>
+<span>    <span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-30-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Finally, we can add a caption for the data source using caption argument</li>
+<li>Then we are done! We have this beautiful scatter plot!</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-14" class="slide level2"><h2></h2>
+<blockquote>
+<p>Start with the <code>mpg</code> data frame, map engine displacement to the x-axis and map highway miles per gallon to the y-axis. Represent each observation with a point and map type of car (<code>class</code>) to the color of each point. Title the plot “Engine Size vs.&nbsp;Fuel Efficiency”, add the subtitle “Dimensions for class”, label the x and y axes as “Engine displacement (litres)” and “Highway (mpg)”, respectively, label the legend “Type of car”, and add a caption for the data source. <strong>Finally, use a discrete color scale that is designed to be perceived by viewers with common forms of color blindness.</strong></p>
+</blockquote>
+<div class="midi">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/mpg-10_10af92e776fbe54a215e33b02ee3938f">
+<div class="sourceCode" id="cb16" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>       mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                     y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                     color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Engine Size vs. Fuel Efficiency"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"Dimensions for class"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Engine displacement (litres)"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"Highway (mpg)"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Type of car"</span>,</span>
+<span>    caption <span class="op">=</span> <span class="st">"Source: http://fueleconomy.gov"</span></span>
+<span>    <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_colour_viridis_d</a></span><span class="op">(</span><span class="op">)</span> <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-32-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>And if we are considerate enough, we can use a discrete color scale that is designed to be perceived by viewers with common forms of color blindness.</li>
+<li>=======================================</li>
+<li>Let’s continue our discussion of ggplot2. We learned there are three main components of ggplot2, the data, which is a data frame, the geometry object, and aesthetics mapping.</li>
+<li>And we are free to add more layers with the plus sign to manipulate or put more features on the plot.</li>
+<li>In fact, we can actually save a ggplot as an object, and we can recreate the plot by just printing the object out. Let’s see how.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-15" class="slide level2"><h2></h2>
+<div class="lab">
+<p><span style="color:blue"> <strong>11-ggplot2</strong> </span> <!-- - Create a R script named **lab09-ggplot2.R** and load the **tidyverse** package. --></p>
+<p>In <strong>lab.qmd</strong> <code>## Lab 11</code> section,</p>
+<ul>
+<li><p>Use <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv()</a></code> to import the data <strong>penguins.csv</strong> into your R workspace.</p></li>
+<li><p>Generate the following ggplot:</p></li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-33_ab89954e1b455efb2e5520c7f3afd0f3">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-33-1.png" style="width:55.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="section-16" class="slide level2"><h2></h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(_________________)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>________ <span class="sc">|&gt;</span> </span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">____</span>(<span class="at">x =</span> ______________,</span>
+<span id="cb17-4"><a href="#cb17-4"></a>                        <span class="at">y =</span> ______________,</span>
+<span id="cb17-5"><a href="#cb17-5"></a>                        <span class="at">colour =</span> ________)) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a>  <span class="fu">geom______</span>() <span class="sc">+</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>  <span class="fu">____</span>(<span class="at">title =</span> ____________________,</span>
+<span id="cb17-8"><a href="#cb17-8"></a>       <span class="at">_________ =</span> <span class="st">"Dimensions for Adelie, Chinstrap, and Gentoo Penguins"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9"></a>       <span class="at">x =</span> _____________, <span class="at">y =</span> _______________,</span>
+<span id="cb17-10"><a href="#cb17-10"></a>       <span class="at">_______ =</span> <span class="st">"Species"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11"></a>       <span class="at">_______ =</span> <span class="st">"Source: Palmer Station LTER / palmerpenguins package"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="assign-a-plot-to-an-object" class="slide level2"><h2>Assign a Plot to an Object</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/assign_26369fb388bfcaef076ef05d5b5ab14a">
+<div class="sourceCode" id="cb18" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">mpg</span>,</span>
+<span>            mapping <span class="op">=</span> </span>
+<span>                <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">displ</span>, </span>
+<span>                    y <span class="op">=</span> <span class="va">hwy</span>, </span>
+<span>                    color <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "gg"     "ggplot"</code></pre>
+</div>
+<div class="sourceCode" id="cb20" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/assign-1.png" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-36_28f786028cd235cb837bd3af4e0b986b">
+<div class="sourceCode" id="cb21" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>      title <span class="op">=</span> <span class="st">"Engine Size vs. Fuel Efficiency"</span>,</span>
+<span>      subtitle <span class="op">=</span> <span class="st">"Dimensions for class"</span>,</span>
+<span>      x <span class="op">=</span> <span class="st">"Engine displacement (litres)"</span>, </span>
+<span>      y <span class="op">=</span> <span class="st">"Highway (mpg)"</span>,</span>
+<span>      color <span class="op">=</span> <span class="st">"Type of car"</span>,</span>
+<span>      caption <span class="op">=</span> <span class="st">"Source: http://fueleconomy.gov"</span></span>
+<span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-36-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>So one advantage of ggplot is that you can Assign a ggplot to an Object that has its own class ggplot.</li>
+<li>base R plotting system is not able to assign an object to a plot for rendering.</li>
+<li>here, I assign the plot to the object called “p”. When I print it out, it shows the ggplot.</li>
+<li>This object “p” stores the scatter plot structure, and can be saved for later use.</li>
+<li>For example, we can add labels on the existent ggplot object. And if we want to use the same scatter plot but with a different labels or any other features, just add the new labels or features to the object “p”.</li>
+<li>So this way we don’t need to type the basic ggplot structure all over again.</li>
+<li>It’s quite useful if you wanna generate the same plot but with different decorations. Maybe here you want red labels, and at another place you want blue labels, for example.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="theme-options" class="slide level2"><h2><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">Theme Options</a></h2>
+<p>Options include</p>
+<p><code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_grey()</a></code> (default), <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_dark()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic()</a></code>, etc.</p>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-37_272e2d4dfb7978331d3d86d40a38c77e">
+
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/theme-1_505098d71e7cdded40291bb6c425369a">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>p <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/theme-1-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/theme-2_0c15cfa0652997ed2b65f6e44b4965a9">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>p <span class="sc">+</span> <span class="fu">theme_dark</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/theme-2-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>OK theme. You can add a theme layer theme() to your plot to tweak the display of the theme the plot is currently using, including title, axis labels, etc. Check theme() in the help page. You will learn which components of a plot can be changed.</li>
+<li>Some theme options you can use include <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_grey()</a></code> (default), <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_dark()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic()</a></code>, etc</li>
+<li>To use another theme, we just add its corresponding theme function to the plot.</li>
+<li>Here shows how the black/white theme and dark theme look like.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="add-on-ggthemes" class="slide level2"><h2>Add-on 📦: <strong>ggthemes</strong>
+</h2>
+<ul>
+<li><p>Many other themes are added by the package <strong>ggthemes</strong>.</p></li>
+<li><p>Check <a href="https://github.com/jrnold/ggthemes">package website</a>, <a href="https://exts.ggplot2.tidyverse.org/ggthemes.html">ggplot2 extensions</a>, and <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">ALL YOUR FIGURE ARE BELONG TO US</a> for more themes.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/ggthemes-1_d20d2ed886bbdfe169e9194e37e1f941">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>p <span class="sc">+</span> ggthemes<span class="sc">::</span><span class="fu">theme_economist</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/ggthemes-1-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/ggthemes-2_f46c0ce17f17a4d4eaa2fa46575e29be">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>p <span class="sc">+</span> ggthemes<span class="sc">::</span><span class="fu">theme_fivethirtyeight</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/ggthemes-2-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>As I mentioned before, many people are really into ggplot2, and lots of add-on packages have been created for ggplot2, that greatly extend its functionalities.</li>
+<li>For example, there is a package called ggthemes that provide more theme options for us.</li>
+<li>Here I showed you the same scatter plot but in economist and fivethirtyeight theme.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="customize-theme" class="slide level2"><h2>Customize Theme</h2>
+<ul>
+<li>Use <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> to tweak the display of the current theme, including title, axis labels, etc. Check <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">?theme</a></code>.</li>
+</ul>
+<!-- # ```{r, echo=FALSE, cache=TRUE} --><!-- # p <- p + labs(title = "Engine Size v.s. Fuel Efficiency", --><!-- #               subtitle = "Dimensions for class", --><!-- #               x = "Engine displacement (litres)",  --><!-- #               y = "Highway (mpg)", --><!-- #               color = "Type of car", --><!-- #               caption = "Source: http://fueleconomy.gov") --><!-- # ``` --><div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb26" data-code-line-numbers="false"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    panel.background <span class="op">=</span> </span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#FFCC00"</span>,</span>
+<span>                     colour <span class="op">=</span> <span class="st">"blue"</span>,</span>
+<span>                     size <span class="op">=</span> <span class="fl">2.5</span>, </span>
+<span>                     linetype <span class="op">=</span> <span class="st">"solid"</span><span class="op">)</span>,</span>
+<span>    plot.background <span class="op">=</span> </span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span>,</span>
+<span>    axis.line <span class="op">=</span> </span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_line</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">0.5</span>, </span>
+<span>                     linetype <span class="op">=</span> <span class="st">"solid"</span>,</span>
+<span>                     colour <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-43-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><p>In conjunction with the theme system, the element_ functions specify the display of how non-data components of the plot are drawn.</p>
+<p>element_blank(): draws nothing, and assigns no space.</p>
+<p>element_rect(): borders and backgrounds.</p>
+<p>element_line(): lines.</p>
+<p>element_text(): text.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="aesthetics" class="title-slide slide level1 center"><h1>Aesthetics</h1>
+<aside class="notes"><ul>
+<li>OK. Let’s talk a little more about aesthetics, so that your plot can be more informative.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="aesthetics-options" class="slide level2"><h2>Aesthetics options</h2>
+<p>Commonly used characteristics of plotting characters that can be <strong>mapped to a specific variable</strong> in the data are</p>
+<ul>
+<li><code>colour</code></li>
+<li><code>shape</code></li>
+<li><code>size</code></li>
+<li>
+<code>alpha</code> (transparency)</li>
+</ul>
+<aside class="notes"><ul>
+<li>Remember that we map color to type of car in the scatter plot of hwy mpg and displacement.</li>
+<li>other options can be <strong>mapped to a specific variable</strong> in the data as well, such as shape, size and alpha that controls the transparency of your geometric objects.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="colour" class="slide level2"><h2>Colour</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/colour_2642d2c5b88e031f2910254bfec35892">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb27-2"><a href="#cb27-2"></a>    <span class="at">data =</span> mpg,</span>
+<span id="cb27-3"><a href="#cb27-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb27-4"><a href="#cb27-4"></a>        <span class="at">x =</span> displ, </span>
+<span id="cb27-5"><a href="#cb27-5"></a>        <span class="at">y =</span> hwy, </span>
+<span id="cb27-6"><a href="#cb27-6"></a>        <span class="at">color =</span> class)) <span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb27-7"><a href="#cb27-7"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-45_095bf003f81f3fc6a3fc09089cabbf8e">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-45-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><p>Yes, we have seen this.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="shape" class="slide level2"><h2>Shape</h2>
+<p>Mapped to a different variable than <code>colour</code></p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/shape-trans_8bc11e344ce133cc3a080decc447da4e">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb28-2"><a href="#cb28-2"></a>    <span class="at">data =</span> mpg,</span>
+<span id="cb28-3"><a href="#cb28-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb28-4"><a href="#cb28-4"></a>        <span class="at">x =</span> displ, </span>
+<span id="cb28-5"><a href="#cb28-5"></a>        <span class="at">y =</span> hwy, </span>
+<span id="cb28-6"><a href="#cb28-6"></a>        <span class="at">color =</span> class,</span>
+<span id="cb28-7"><a href="#cb28-7"></a>        <span class="at">shape =</span> drv)) <span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb28-8"><a href="#cb28-8"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-47_73f6dff0593f665bdd84d6f25d61d31d">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-47-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We can map color to type of car, the class variable, and map point shape to another variable, here the drive type.</li>
+<li>This way, we have more information in one figure. For a single point or an observation, we can learn its displacement and highway mpg values, and we can also learn its class, the car type by color and drive train type by point shape.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="shape-1" class="slide level2"><h2>Shape</h2>
+<p>Mapped to same variable as <code>colour</code></p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/shape-class_27611bbae3504ba134174cdbacbec2be">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb29-2"><a href="#cb29-2"></a>    <span class="at">data =</span> mpg,</span>
+<span id="cb29-3"><a href="#cb29-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb29-4"><a href="#cb29-4"></a>        <span class="at">x =</span> displ, </span>
+<span id="cb29-5"><a href="#cb29-5"></a>        <span class="at">y =</span> hwy, </span>
+<span id="cb29-6"><a href="#cb29-6"></a>        <span class="at">color =</span> class,</span>
+<span id="cb29-7"><a href="#cb29-7"></a>        <span class="at">shape =</span> class)) <span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb29-8"><a href="#cb29-8"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-49_d4770702868e02443b7767ff7f32d68f">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-49-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>We can of course map color and shape to the same variable.</li>
+<li>Here, we use both color and point shape to classify or categorize the type of car.</li>
+<li>But you guys need to think if it is meaningful and helpful, or it is just redundant, and make it hard to read the plot.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="size" class="slide level2"><h2>Size</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/size_3812750e7a261f107de97f92bf15a98e">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb30-2"><a href="#cb30-2"></a>    <span class="at">data =</span> mpg,</span>
+<span id="cb30-3"><a href="#cb30-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb30-4"><a href="#cb30-4"></a>        <span class="at">x =</span> displ, </span>
+<span id="cb30-5"><a href="#cb30-5"></a>        <span class="at">y =</span> hwy, </span>
+<span id="cb30-6"><a href="#cb30-6"></a>        <span class="at">color =</span> class,</span>
+<span id="cb30-7"><a href="#cb30-7"></a>        <span class="at">shape =</span> class,</span>
+<span id="cb30-8"><a href="#cb30-8"></a>        <span class="at">size =</span> cty)) <span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb30-9"><a href="#cb30-9"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-51_8470ad480150b42b47730d93f54a0ebb">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-51-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>OK, Size. Here, we use color and shape to indicate car type, and we use point size to represent city mpg. The higher city mpg, the bigger the point is.</li>
+<li>You can see that the plot is not very clear and visible. So it is not always good to include much information in one single plot.</li>
+<li>Yes, the plot contains lots of information, but we may not be able to read those information.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="alpha" class="slide level2"><h2>Alpha</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/alpha_eaf8104b054859bc5a62e84db88372b5">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb31-2"><a href="#cb31-2"></a>    <span class="at">data =</span> mpg,</span>
+<span id="cb31-3"><a href="#cb31-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb31-4"><a href="#cb31-4"></a>        <span class="at">x =</span> displ, </span>
+<span id="cb31-5"><a href="#cb31-5"></a>        <span class="at">y =</span> hwy, </span>
+<span id="cb31-6"><a href="#cb31-6"></a>        <span class="at">color =</span> class,</span>
+<span id="cb31-7"><a href="#cb31-7"></a>        <span class="at">shape =</span> class,</span>
+<span id="cb31-8"><a href="#cb31-8"></a>        <span class="at">size =</span> cty,</span>
+<span id="cb31-9"><a href="#cb31-9"></a>        <span class="at">alpha =</span> year)) <span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb31-10"><a href="#cb31-10"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-53_2efa167e8167813b068c1e02204740b1">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-53-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>Here we further map the transparency of points, alpha to the variable year. So the older the car is, the more transparent the point is.</li>
+<li>We use lots of aesthetics options at the same time in one figure. Again, in practice this may not be a good idea, and the plot may not visualize the data well.</li>
+<li>If you are interested in data visualization, there are lots of studies out there talking about what makes a good plot. My suggestion is, don’t put too much information in one single plot. This will make it hard to read.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="mapping-vs.-setting" class="slide level2"><h2>Mapping vs.&nbsp;Setting</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><strong>Mapping</strong></p>
+<ul>
+<li>Determine the size, alpha, etc.</li>
+</ul>
+<p><strong>based on the values of a variable</strong> in the data.</p>
+<ul>
+<li>Goes into <code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>.</li>
+</ul>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-54_dd05dfc8a1111514b873e0f6bcf8d41b">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg,</span>
+<span id="cb32-2"><a href="#cb32-2"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, </span>
+<span id="cb32-3"><a href="#cb32-3"></a>                     <span class="at">y =</span> hwy, </span>
+<span id="cb32-4"><a href="#cb32-4"></a>                     <span class="at">size =</span> cty, <span class="co">#&lt;&lt;</span></span>
+<span id="cb32-5"><a href="#cb32-5"></a>                     <span class="at">alpha =</span> year)) <span class="sc">+</span> <span class="co">#&lt;&lt;</span></span>
+<span id="cb32-6"><a href="#cb32-6"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-54-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>OK. Now I want to talk about the difference between mapping and setting.</li>
+<li>First, the aesthetic options such as color, size, shape, alpha can be used in both mapping and setting.</li>
+<li>When we use these options in mapping arguments, wrapped by aes() function, we actually map these options to some variables. In other words, we use those options to represents the values of the variables. Like here, the point size is used to represent the city mpg, the different point transparency are for different car years.</li>
+<li>So there is a mapping between aesthetics options and variables.</li>
+<li>Alright setting. When we use the aesthetics options as a geometry setting, the aesthetics are pure decoration of your plot, the aesthetics are not used to represent any other variable values.</li>
+<li>Look at the example here. If we want to set point size at 5 and point transparency at 0.5, we put size = 5, alpha = 0.5 in the geometry function geom_point(), not in the mapping argument.</li>
+<li>And the result is that, all the points in the scatter plot will have size 5 and alpha 0.5. And it is true for all observations and variables. It is not related to any other variables as mapping does. OK.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="mapping-vs.-setting-1" class="slide level2"><h2>Mapping vs.&nbsp;Setting</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><strong>Setting</strong></p>
+<ul>
+<li>Determine the size, alpha, etc.</li>
+</ul>
+<p><em><strong>not</strong> based on the values of a variable in the data</em>.</p>
+<ul>
+<li>goes into <code>geom_*()</code>.</li>
+</ul>
+</div><div class="column" style="width:65%;">
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-55_54b8f0dc74897c093a2eb1d95c58cade">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg,</span>
+<span id="cb33-2"><a href="#cb33-2"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, </span>
+<span id="cb33-3"><a href="#cb33-3"></a>                     <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
+<span id="cb33-4"><a href="#cb33-4"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-55-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><ul>
+<li>So here is the summary.</li>
+<li>(<code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code> in the example, but we’ll learn other geoms soon!)</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="faceting" class="title-slide slide level1 center"><h1>Faceting</h1>
+<aside class="notes"><ul>
+<li>OK. The last thing I wanna talk about is facet.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="faceting-1" class="slide level2"><h2>Faceting</h2>
+<ul>
+<li><p>One way to add additional variables’ information is with aesthetics. But we see that putting all information in one plot may not be a good idea.</p></li>
+<li><p>Another way, particularly useful for categorical variables, is to</p></li>
+</ul>
+<p><em>split your plot into <strong>facets</strong></em>, smaller plots that each display one subset of the data.</p>
+<ul>
+<li>Useful for exploring conditional relationships and large data.</li>
+</ul>
+<aside class="notes"><ul>
+<li>You see that one way to add additional variables’ information is with aesthetics mapping. But we see that putting all information in one plot may not be a good idea.</li>
+<li>We can actually present our data using another way, particularly useful for categorical variables, which is split your plot into the so-called facets, so each smaller plot display one subset of the data conditional on some categorical variable.</li>
+<li>The idea is, we can map color to gender in a one single plot, or we can create two small plots, one for male, and the other for female. OK.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-17" class="slide level2"><h2></h2>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-56_03b50d5ee9e7188ab232300337561489">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb34-2"><a href="#cb34-2"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb34-3"><a href="#cb34-3"></a>    <span class="fu">facet_grid</span>(drv <span class="sc">~</span> cyl)  <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="images/09-ggplot2/unnamed-chunk-56-1.png" style="width:75.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>Suppose again we would like to see the relationship between hwy and displacement.</li>
+<li>But now we want to see their relationship given at a different number of cylinders and type of drive trains.</li>
+<li>And we can create several scatterplots, each at a particular number of cylinders and type of drive trains.</li>
+<li>How do we create facets?</li>
+<li>We can use facet_grid() command to create a matrix-like plot defined by row and column faceting variables, which are usually categorical variables. Inside the parenthesis, we put the row variable ~ column variable.</li>
+<li>So here, drive values, 4, f, r defines the rows, and cylinder values 4, 5, 6, 8 defines the columns.</li>
+<li>And each smaller plot is a scatter plot with some value of drive and some value of cylinder.</li>
+<li>For example, the top right one is the scatter plot of hwy mpg and displacement when drive is 4 and cylinder is 8.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-18" class="slide level2"><h2></h2>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-57_f2d414305c53ddd89172c4516a6886f8">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb35-2"><a href="#cb35-2"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb35-3"><a href="#cb35-3"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> cyl)  <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="images/09-ggplot2/unnamed-chunk-57-1.png" style="width:75.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>How about we want to create a scatter plot conditional on just one variable, say cylinder?</li>
+<li>Instead of facet_grid(), we can use facet_wrap() function.</li>
+<li>Inside the parenthesis, we use ~ followed by the variable name cyl.</li>
+<li>And the ggplot will automatically create a display, so that each smaller plot is normally rectangular.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-19" class="slide level2"><h2></h2>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-58_32199c8b0e782babac45440cd74f2755">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb36-2"><a href="#cb36-2"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb36-3"><a href="#cb36-3"></a>    <span class="fu">facet_wrap</span>(<span class="st">"cyl"</span>)  <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="images/09-ggplot2/unnamed-chunk-58-1.png" style="width:75.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>If you don’t like vars(), you can use ““. It gives you the same plot as well. OK</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-20" class="slide level2"><h2></h2>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-59_cd742a6389657e0786343563ea054e93">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb37-2"><a href="#cb37-2"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb37-3"><a href="#cb37-3"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> cyl, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="images/09-ggplot2/unnamed-chunk-59-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>If you don’t like the default display, you can specify any number of rows or columns you like.</li>
+<li>For example, here the number of column is 3.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="faceting-summary" class="slide level2"><h2>Faceting Summary</h2>
+<ul>
+<li>
+<code><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid()</a></code>:
+<ul>
+<li>2d grid</li>
+<li><code>rows ~ cols</code></li>
+</ul>
+</li>
+<li>
+<code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code>: 1d ribbon wrapped according to number of rows and columns specified or available plotting area</li>
+</ul>
+<aside class="notes"><ul>
+<li>
+<code><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid()</a></code>:
+<ul>
+<li>2d grid</li>
+<li><code>rows ~ cols</code></li>
+<li>use <code>.</code> for no split (no rows or no cols)</li>
+</ul>
+</li>
+<li>
+<code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code>: 1d ribbon wrapped according to number of rows and columns specified or available plotting area</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="facet-and-color" class="slide level2"><h2>Facet and Color</h2>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/facet-color-legend_429d36dcc926838bc54751bfe0e8c8ef">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, </span>
+<span id="cb38-2"><a href="#cb38-2"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>                     <span class="at">color =</span> drv)) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb38-5"><a href="#cb38-5"></a>    <span class="fu">facet_grid</span>(drv <span class="sc">~</span> cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="images/09-ggplot2/facet-color-legend-1.png" style="width:58.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>We can add color to faceting variables for sure.</li>
+<li>For example here, we map color to variable drive, which is the row variable in faceting.</li>
+<li>And now each row has its own color.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="facet-and-color-with-no-legend" class="slide level2"><h2>Facet and Color with no Legend</h2>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/facet-color-no-legend_b8ffa2c60e1d9e7e88df18b7fa9a51d8">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, </span>
+<span id="cb39-2"><a href="#cb39-2"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy, <span class="at">color =</span> drv)) <span class="sc">+</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb39-4"><a href="#cb39-4"></a>    <span class="fu">facet_grid</span>(drv <span class="sc">~</span> cyl) <span class="sc">+</span></span>
+<span id="cb39-5"><a href="#cb39-5"></a>    <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>) <span class="co">#&lt;&lt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="images/09-ggplot2/facet-color-no-legend-1.png" style="width:55.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>theme(legend.position = “none”) - Since each row is for one value of drive, it’s pretty clear to see which color is for which value of drive. - If you don’t want the legend, use guides() and set color = FALSE. - Basically guides() can set or remove the legend for a specific aesthetic option. If you have two aesthetics color and size, guides(color = FALSE) will only remove the legend for color and the legend for size will be still there. OK.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="section-21" class="slide level2"><h2></h2>
+<div class="lab">
+<p><span style="color:blue"> <strong>12-Faceting</strong> </span></p>
+<p>In <strong>lab.qmd</strong> <code>## Lab 12</code> section, <!-- - Create a R script named **lab10-facet.R** and load the **ggplot2** package. Generate --></p>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-62_13f33aaaa29715bbdac0cd529d51f523">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> _______, </span>
+<span id="cb40-2"><a href="#cb40-2"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> ______, <span class="at">y =</span> ______, <span class="at">______ =</span> drv, <span class="at">shape =</span> _____)) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3"></a>    <span class="fu">geom______</span>(<span class="at">______ =</span> <span class="dv">3</span>, <span class="at">______ =</span> <span class="fl">0.8</span>) <span class="sc">+</span> </span>
+<span id="cb40-4"><a href="#cb40-4"></a>    <span class="fu">facet_grid</span>(______ <span class="sc">~</span> _______) <span class="sc">+</span></span>
+<span id="cb40-5"><a href="#cb40-5"></a>    <span class="fu">guides</span>(<span class="at">______ =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center" data-hash="09-ggplot2_cache/revealjs/unnamed-chunk-63_124b203aa81e53e1ebe0c817d984174a">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/09-ggplot2/unnamed-chunk-63-1.png" style="width:48.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section><section id="ggplot-for-python" class="slide level2"><h2>ggplot for Python</h2>
+<ul>
+<li><p><a href="https://plotnine.readthedocs.io/en/stable/index.html">plotnine</a> package</p></li>
+<li><p>Syntax are the same as ggplot in R.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, geom_point, aes, stat_smooth, facet_wrap</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="./images/09-ggplot2/plotnine.webp" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://math3570-s24.github.io/website/">math3570-s24.github.io/website</a></p>
+</div>
+</section></section>
+</div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/multiplex/socket.io.js"></script><script src="../site_libs/revealjs/plugin/multiplex/multiplex.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'multiplex': {"secret":null,"id":"f42c77dbe763bb4a","url":"https://reveal-multiplex.glitch.me/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1800,
+
+        height: 1000,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 5.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,807 @@
+[
+  {
+    "objectID": "project-work.html",
+    "href": "project-work.html",
+    "title": "Project work",
+    "section": "",
+    "text": "Here shows group project’s proposal.\n\nGroup 1:\nGroup 2:\nGroup 3:\nGroup 4:\nGroup 5:\nGroup 6:\nGroup 7:"
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nDiscussion forum\n🔗 on Sakai\n\n\nLecture streaming and recordings\n🔗 on Panopto\n\n\nGradebook\n🔗 on Sakai\n\n\nVirtual meetings\n🔗 on Sakai"
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "MSSC 6250 - Spring 2024",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "project-description-5780.html",
+    "href": "project-description-5780.html",
+    "title": "MSSC 5780 Project Description",
+    "section": "",
+    "text": "The final project written report and participation of MATH 4780 project presentation account for 220 points of the total 1200 points."
+  },
+  {
+    "objectID": "project-description-5780.html#timeline-and-things-to-do",
+    "href": "project-description-5780.html#timeline-and-things-to-do",
+    "title": "MSSC 5780 Project Description",
+    "section": "Timeline and Things to Do",
+    "text": "Timeline and Things to Do\n\nTeam up! You work as a team of two or three. No individual project. One of you, please email me your group member list by Friday, 11/17 11:59 PM.\n\nYou lose 20 points if you miss the deadline.\nYou will be randomly assigned to a group if you do not belong to any group before the deadline.\n\nProposal. Please send me a one-page PDF describing what you are going to do for your project (no word limit) with your project title by Friday, 12/1 11:59 PM.\n\nYou lose 20 points if you miss the deadline.\n\nMaterial. Please submit your report and code to D2L by Tuesday, 12/12 11:59 PM.\n\nYou receive 0 point if you miss the deadline."
+  },
+  {
+    "objectID": "project-description-5780.html#project-writing",
+    "href": "project-description-5780.html#project-writing",
+    "title": "MSSC 5780 Project Description",
+    "section": "Project Writing",
+    "text": "Project Writing\nYour project can be in either of the following categories:\n\nData Analysis (DA) using one or more regression methods learned in class.\nIntroduce a new regression model/method/algorithm (RM) and compare it with the model/method/algorithms learned in class.\n\n\nRegression Content\nIf you choose to do DA, your project should:\n\nInclude regression diagnostics: model adequacy checking, residual diagnostics, leverage and influence diagnostics, and collinearity diagnostics.\nExplain how you deal with violation of assumptions and collinearity issue if it exists.\nDemonstrate that your final selected model has no violation of assumptions and answers your questions well through any inference (estimation and testing) or prediction methods. If some issues remain, explain why they cannot be fixed, and what is the limitation of your model due to these issues. Provide suggestions for improving your analysis.\nThe chosen data set cannot be any data set used in class, the textbook or homework assignments.\nBelow are a list of data repositories you may start with, but you are encouraged to explore more and find your favorite one.\n\nTidyTuesday\nKaggle\nAwesome Public Datasets\nHarvard Dataverse\nUCI Machine Learning Repository\nFiveThirtyEight\n\n\nIf you choose to do RM, your project should:\n\nExplain the model/method. Define and explain the notations, parameters, and model/method assumptions. Compare it with the model/method learned in class.\nShow the model/method with graphics and possible geometrical meaning. Compare it with the model/method learned in class.\nShow how to perform parameter estimation and response prediction. Discuss the methods used for training/fitting the model, and compare the prediction performance with MLR.\nInterpret the fitted and prediction results.\nDiscuss the advantages and disadvantages of the model/method. Under what situations the model/method performs the best/worst?\nDemonstrate how to fit the model and implement its relevant method/algorithm via a simulation study or data analysis. The data set could be a data set used in class.\nPossible topics being considered include but not limited to:\n\nBayesian linear regression\nGaussian process regression\nLASSO\nPoisson regression\nRegression trees\nMultivariate adaptive regression splines\nGeneralized additive model\nRobust regression\nQuantile regression\nPartial Least Squares Regression\n\n\n\n\nPaper Structure\nIf you choose to do DA, your report should include the following sections:\n\nIntroduction: State why you think the questions you would like to answer are important or interesting, and why you think the method(s) you consider is an appropriate one to answer your questions.\nData: Describe the selected data set. Perform a thorough exploratory data analysis.\nAnalysis: Include the Regression Content by\n\nExplaining the chosen model/method.\nShowing why the chosen model(s) is appropriate and better than others.\nAnswering your research questions by the analysis result.\n\nConclusion: Restate your research question, and summarize how you learn from data to answer your questions. What is the contribution of this project? Discuss any limitation of your model/method, and how it could be improved for better inference or prediction results.\nReferences/Bibliography: Include a detailed list of references, including papers, books, websites, code, and any idea/work that is not produced by yourself.\n\nIf you choose to do RM, your report should include the following sections:\n\nIntroduction: State why you choose to learn this new method. Provide an overview and little history of the method. Describe the intuition and idea of the method. What are the pros and cons of the method?\nModel/Method: Provide the mathematical expression of the model. Address the points mentioned in Regression Content.\nSimulation: Do a simulation study, and compare the chosen method with other methods learned in class. Determine which method performs better under what conditions. Address the points mentioned in Regression Content.\nDiscussion: Based on the simulation results, discuss the advantages and disadvantages of the chosen method. Discuss any variants of the chosen method.\nReferences/Bibliography: Include a detailed list of references, including papers, books, websites, code, and any idea/work that is not produced by yourself.\n\n\n\nFormat\n\nExcept the project title and section title, the font size is 12 pt.\nYour paper should have your project title and your name on the first page. Date, Abstract, Keywords are optional.\nPlease use 1.5 or double line spacing.\nYour report, including everything, should have at least 10 pages, but no more than 13 pages.\nYour code should NOT be included in the paper.\n\n\n\nCode\n\nYour code should be able to reproduce all the numerical results, outputs, tables, and figures shown in the report, including the source of the raw data (where you find and load the data) if the project is about data analysis."
+  },
+  {
+    "objectID": "project-description-5780.html#project-evaluation",
+    "href": "project-description-5780.html#project-evaluation",
+    "title": "MSSC 5780 Project Description",
+    "section": "Project Evaluation",
+    "text": "Project Evaluation\nYour project will be evaluated based on\n\nContent:\n\nThe quality of research question and relevancy of data to those questions? For example, the relationship between human height and weight is a BAD question. An elementary-school height and weight data set is a BAD data set.\nThe quality of the chosen model. For example, one-way ANOVA is a BAD model.\n\nCorrectness, Completeness and Complexity:\n\nAre the regression methods carried out and explained correctly?\nDoes project include rigorous analysis and models? Simple linear regression model lacks complexity.\n\nWriting: The quality of the regression model/method presentation, visualization, writing, and explanations.\nFormat: Does the report follow the required format?\nCreativity and Critical Thought: Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project?\nReproducibility: Can your code reproduce what you show in the paper?\nReference: Do you cite others work properly?"
+  },
+  {
+    "objectID": "project-description-5780.html#assessment-policy",
+    "href": "project-description-5780.html#assessment-policy",
+    "title": "MSSC 5780 Project Description",
+    "section": "Assessment Policy",
+    "text": "Assessment Policy\n\nYou evaluate group performance based on the four criteria:\n\nProject Content and Organization (8 pts)\nSlides Quality (4 pts)\nOral Presentation Skill and Delivery (4 pts)\nInteractions and Q&A (4 pts)\n\nThe total points of a project presentation is 20 points.\nEvaluation sheets will be provided on the presentation day.\nContent and Organization\n\nClear visualization that helps find out relationship of variables and specification of models\nAll questions are answered accurately by the models\nDiscuss how and why the models are chosen\nApply sophisticated models and detailed analysis including diagnostics\nAll ideas are presented in logical order\n\nSlides Quality\n\nSlides show code and output beautifully\nSlides clearly aid the speaker in telling a coherent story\nAll tables and graphics are informative and related to the topic and make it easier to understand\nAttractive design, layout, and neatness.\n\nOral Presentation Skill\n\nGood volume and energy\nProper pace and diction\nAvoidance of distracting gestures\n\nInteractions and Q&A\n\nGood eye contact with audience\nExcellent listening skills\nAnswers audience questions with authority and accuracy\n\nAfter you evaluate group project presentations, you rank them from 1st to the last based on their earned points.\nNo two groups receive the same ranking. If you give two or more groups some points, you still need to give them a different ranking, deciding which teams deserve a higher ranking according to your personal preference.\n\nDr. Yu reserves the right to make changes to the project policy."
+  },
+  {
+    "objectID": "weeks/week-6.html",
+    "href": "weeks/week-6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-6.html#participate",
+    "href": "weeks/week-6.html#participate",
+    "title": "Week 6",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides -Visualizing Data\n openintro::loans_full_schema"
+  },
+  {
+    "objectID": "weeks/week-6.html#reading-and-resources",
+    "href": "weeks/week-6.html#reading-and-resources",
+    "title": "Week 6",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 More add-on 📦: ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS"
+  },
+  {
+    "objectID": "weeks/week-6.html#exercise",
+    "href": "weeks/week-6.html#exercise",
+    "title": "Week 6",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-13 Visualization\n penguins.csv\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-7.html",
+    "href": "weeks/week-7.html",
+    "title": "Week 7",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-7.html#participate",
+    "href": "weeks/week-7.html#participate",
+    "title": "Week 7",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Interactive Data Vaisualization\n🖥️ Slides - Data Wrangling (one data frame)\n Data - loans\n Data - Murders"
+  },
+  {
+    "objectID": "weeks/week-7.html#reading-and-resources",
+    "href": "weeks/week-7.html#reading-and-resources",
+    "title": "Week 7",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Data Transformation"
+  },
+  {
+    "objectID": "weeks/week-7.html#exercise",
+    "href": "weeks/week-7.html#exercise",
+    "title": "Week 7",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-14 Interactive Visualization (Present)\n📋 Lab-15 dplyr\n Data - Murders\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-5.html",
+    "href": "weeks/week-5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-5.html#participate",
+    "href": "weeks/week-5.html#participate",
+    "title": "Week 5",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Data Importing\n🖥️ Slides - ggplot2"
+  },
+  {
+    "objectID": "weeks/week-5.html#reading-and-resources",
+    "href": "weeks/week-5.html#reading-and-resources",
+    "title": "Week 5",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Data Import\n📖 R for Data Science - Data Visualization"
+  },
+  {
+    "objectID": "weeks/week-5.html#exercise",
+    "href": "weeks/week-5.html#exercise",
+    "title": "Week 5",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-10 Data Importing\n📋 Lab-11 ggplot2\n📋 Lab-12 Faceting\n penguins.csv\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-4.html",
+    "href": "weeks/week-4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-4.html#participate",
+    "href": "weeks/week-4.html#participate",
+    "title": "Week 4",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - R/Python Data Frames for Data Science"
+  },
+  {
+    "objectID": "weeks/week-4.html#reading-and-resources",
+    "href": "weeks/week-4.html#reading-and-resources",
+    "title": "Week 4",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 tibble\n📖 pipes\n📖 NumPy\n📖 pandas"
+  },
+  {
+    "objectID": "weeks/week-4.html#perform",
+    "href": "weeks/week-4.html#perform",
+    "title": "Week 4",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-08 Tibbles and Pipes\n📋 Lab-09 NumPy and pandas\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-1.html",
+    "href": "weeks/week-1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!"
+  },
+  {
+    "objectID": "weeks/week-1.html#reading-and-resources",
+    "href": "weeks/week-1.html#reading-and-resources",
+    "title": "Week 1",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Introduction\n📖 R for Data Science - Whole game\n📖 RStudio IDE :: Cheatsheet\n📖 Posit Cloud Guide"
+  },
+  {
+    "objectID": "weeks/week-1.html#participate",
+    "href": "weeks/week-1.html#participate",
+    "title": "Week 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Welcome to MATH/COSC 3570\n🖥️ Slides - Overview of Data Science\n🖥️ Slides - Posit Cloud\n ggplot2::mpg\n ggplot2::diamond"
+  },
+  {
+    "objectID": "weeks/week-1.html#perform",
+    "href": "weeks/week-1.html#perform",
+    "title": "Week 1",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-00 Posit Cloud\n📋 Lab-01 Running R Script\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-3.html",
+    "href": "weeks/week-3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Important\n\n\n\n\nPresenting Lab 07-Plotting for extra points!"
+  },
+  {
+    "objectID": "weeks/week-3.html#participate",
+    "href": "weeks/week-3.html#participate",
+    "title": "Week 3",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - R/Python Syntax"
+  },
+  {
+    "objectID": "weeks/week-3.html#reading-and-resources",
+    "href": "weeks/week-3.html#reading-and-resources",
+    "title": "Week 3",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib"
+  },
+  {
+    "objectID": "weeks/week-3.html#exercise",
+    "href": "weeks/week-3.html#exercise",
+    "title": "Week 3",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting (Present)\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-2.html",
+    "href": "weeks/week-2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-2.html#reading-and-resources",
+    "href": "weeks/week-2.html#reading-and-resources",
+    "title": "Week 2",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n\nGit/GitHub\n📖 Create a personal access token (PAT)\n📖 Two-factor authentication\n📖 Git hands-on session within RStudio\n📖 Happy Git and GitHub for the useR\n📖 Happier version control with Git and GitHub\n\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto"
+  },
+  {
+    "objectID": "weeks/week-2.html#participate",
+    "href": "weeks/week-2.html#participate",
+    "title": "Week 2",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Git/GitHub\n🖥️ Slides - Quarto"
+  },
+  {
+    "objectID": "weeks/week-2.html#perform",
+    "href": "weeks/week-2.html#perform",
+    "title": "Week 2",
+    "section": "Perform",
+    "text": "Perform\n📋 Lab-00 Git/GitHub\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-10.html#participate",
+    "href": "weeks/week-10.html#participate",
+    "title": "Week 10",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Probability and Statistics\n🖥️ Slides - Linear Regression\n ggplot2::mpg"
+  },
+  {
+    "objectID": "weeks/week-10.html#exercise",
+    "href": "weeks/week-10.html#exercise",
+    "title": "Week 10",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-18 Probability\n📋 Lab-19 Confidence Interval\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-11.html#participate",
+    "href": "weeks/week-11.html#participate",
+    "title": "Week 11",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Linear Regression\n ggplot2::mpg"
+  },
+  {
+    "objectID": "weeks/week-11.html#exercise",
+    "href": "weeks/week-11.html#exercise",
+    "title": "Week 11",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-20 Simple Linear Regression\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "Week 13",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-13.html#participate",
+    "href": "weeks/week-13.html#participate",
+    "title": "Week 13",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - K Nearest Neighbors\n Data - body"
+  },
+  {
+    "objectID": "weeks/week-13.html#reading",
+    "href": "weeks/week-13.html#reading",
+    "title": "Week 13",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-13.html#exercise",
+    "href": "weeks/week-13.html#exercise",
+    "title": "Week 13",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-22 K Nearest Neighbors\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-12.html#participate",
+    "href": "weeks/week-12.html#participate",
+    "title": "Week 12",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Logistic Regression\n Data - body"
+  },
+  {
+    "objectID": "weeks/week-12.html#reading",
+    "href": "weeks/week-12.html#reading",
+    "title": "Week 12",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-12.html#exercise",
+    "href": "weeks/week-12.html#exercise",
+    "title": "Week 12",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-21 Logistic Regression\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-9.html",
+    "href": "weeks/week-9.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "Important\n\n\n\n\n\n\nHappy spring break!\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-8.html",
+    "href": "weeks/week-8.html",
+    "title": "Week 8",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-8.html#participate",
+    "href": "weeks/week-8.html#participate",
+    "title": "Week 8",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Data Wrangling - two data frames\n🖥️ Slides - Tidying Data\n Data - Pop_x and elec_vote_y\n\nlibrary(tidyverse)\nlibrary(dslabs)\npop_x <- murders |> \n    slice(1:6) |>\n    select(state, population)\n\nelec_vote_y <- results_us_election_2016 |> \n    filter(state %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \n                        \"California\", \"Connecticut\", \"Delaware\")) |> \n    select(state, electoral_votes) |> \n    rename(elec_vote = electoral_votes)\n\n Data - Customers"
+  },
+  {
+    "objectID": "weeks/week-8.html#reading-and-resources",
+    "href": "weeks/week-8.html#reading-and-resources",
+    "title": "Week 8",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 R for Data Science - Joins\n📖 R for Data Science - Data tidying"
+  },
+  {
+    "objectID": "weeks/week-8.html#exercise",
+    "href": "weeks/week-8.html#exercise",
+    "title": "Week 8",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-16 Joining tables\n https://www.jaredlander.com/data/DiamondColors.csv\n ggplot2::diamonds\n📋 Lab-17 tidyr\n trump.csv\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-15.html",
+    "href": "weeks/week-15.html",
+    "title": "Week 15",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-15.html#participate",
+    "href": "weeks/week-15.html#participate",
+    "title": "Week 15",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - K-Means Clustering\n Data - clus_data"
+  },
+  {
+    "objectID": "weeks/week-15.html#reading",
+    "href": "weeks/week-15.html#reading",
+    "title": "Week 15",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-15.html#exercise",
+    "href": "weeks/week-15.html#exercise",
+    "title": "Week 15",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-24 K-Means Clustering\n palmerpenguins::penguins\n\nlibrary(palmerpenguins)\npeng <- penguins[complete.cases(penguins), ] |> \n    select(flipper_length_mm, bill_length_mm)\n\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-14.html",
+    "href": "weeks/week-14.html",
+    "title": "Week 14",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-14.html#participate",
+    "href": "weeks/week-14.html#participate",
+    "title": "Week 14",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Principal Component Analysis\n USArrests"
+  },
+  {
+    "objectID": "weeks/week-14.html#reading",
+    "href": "weeks/week-14.html#reading",
+    "title": "Week 14",
+    "section": "Reading",
+    "text": "Reading\n📖"
+  },
+  {
+    "objectID": "weeks/week-14.html#exercise",
+    "href": "weeks/week-14.html#exercise",
+    "title": "Week 14",
+    "section": "Exercise",
+    "text": "Exercise\n📋 Lab-23 Principal Component Analysis\n iris\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "activity-work.html",
+    "href": "activity-work.html",
+    "title": "Class activity work",
+    "section": "",
+    "text": "MSSC 5780 Presenters: David Aguilera, Rachel Cutlan\nMATH 4780 Questioners: Ethan Baierl, Patrick Campbell, Dylan Cardoza"
+  },
+  {
+    "objectID": "activity-work.html#class-activity-2---0926",
+    "href": "activity-work.html#class-activity-2---0926",
+    "title": "Class activity work",
+    "section": "Class activity 2 - 09/26",
+    "text": "Class activity 2 - 09/26\n\nMSSC 5780 Presenters: Timothy Goodwin, Matt Jaeggin\nMATH 4780 Questioners: Huangkun Chen, Davion Cook, Nicky Diaz"
+  },
+  {
+    "objectID": "activity-work.html#class-activity-3---1010",
+    "href": "activity-work.html#class-activity-3---1010",
+    "title": "Class activity work",
+    "section": "Class activity 3 - 10/10",
+    "text": "Class activity 3 - 10/10\n\nMSSC 5780 Presenters: Samantha Juedemann, Edward Liu\nMATH 4780 Questioners: Nathan Fisher, Alberto Gamez Gonzalez, Andrew Hiller"
+  },
+  {
+    "objectID": "activity-work.html#class-activity-4---1024",
+    "href": "activity-work.html#class-activity-4---1024",
+    "title": "Class activity work",
+    "section": "Class activity 4 - 10/24",
+    "text": "Class activity 4 - 10/24\n\nMSSC 5780 Presenters: Sylvester Mensah, Navid Mohseni\nMATH 4780 Questioners: Jake Konrad, Vanessa Lattas, Danny O’Shea"
+  },
+  {
+    "objectID": "activity-work.html#class-activity-5---1114",
+    "href": "activity-work.html#class-activity-5---1114",
+    "title": "Class activity work",
+    "section": "Class activity 5 - 11/14",
+    "text": "Class activity 5 - 11/14\n\nMSSC 5780 Presenters: Adam Reeson\nMATH 4780 Questioners: Kayley Reith, Donny Robbins, Ray Sun"
+  },
+  {
+    "objectID": "activity-work.html#class-activity-6---1205",
+    "href": "activity-work.html#class-activity-6---1205",
+    "title": "Class activity work",
+    "section": "Class activity 6 - 12/05",
+    "text": "Class activity 6 - 12/05\n\nMSSC 5780 Presenters: Anesti Sotirovski, Tanjina Zaman\nMATH 4780 Questioners: Violet Wang, T.J. James Whapham II, Serena Yang"
+  },
+  {
+    "objectID": "project-tips-resources.html",
+    "href": "project-tips-resources.html",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "To be announced."
+  },
+  {
+    "objectID": "activity-description.html",
+    "href": "activity-description.html",
+    "title": "Class activity description",
+    "section": "",
+    "text": "There are six in-class activities on Tuesdays 09/19, 09/26, 10/10, 10/24, 11/14, and 12/05."
+  },
+  {
+    "objectID": "activity-description.html#format",
+    "href": "activity-description.html#format",
+    "title": "Class activity description",
+    "section": "Format",
+    "text": "Format\nOn each class activity day,\n\nTwo assigned MSSC 5780 students are presenting the regression problems assigned two days before the presentation date.\nEach presentation including Q & A is about  7 to 8 minute  long. You will be forced to end your presentation if it is too long.\nEach presenter should prepare at least two non-Yes-No questions for all participants to answer.\nEach of the three assigned MATH 4780 students should ask either one or both presenters at least one non-Yes-No question."
+  },
+  {
+    "objectID": "activity-description.html#presentation-materials",
+    "href": "activity-description.html#presentation-materials",
+    "title": "Class activity description",
+    "section": "Presentation Materials",
+    "text": "Presentation Materials\n\nNo specific presentation style/format/materials are required. You, the presenter, decide how you present your work.\nThe presenters should send the presentation materials, PDF, slides for example, to Dr. Yu before the class begins on the class activity day.\nYour presentation materials will be posted on Activity work page."
+  },
+  {
+    "objectID": "activity-description.html#evaluation",
+    "href": "activity-description.html#evaluation",
+    "title": "Class activity description",
+    "section": "Evaluation",
+    "text": "Evaluation\nThere are 60 points for class participation in the final grade calculation. Dr. Yu is the only one who evaluates your participation. Your goal is to convince Dr. Yu that you understand your work well and get engaged in the class activity.\n\nMSSC 5780\nFor MSSC 5780 students, your class activity grade is determined by\n\noral presentation\npresentation material\nyour non-Yes-No questions\ncorrectness of your answers to MATH 4780 students\n5-minute time management\n\n\n\nMATH 4780\nFor MATH 4780 students, your class activity grade is determined by\n\nquality of your non-Yes-No questions  (three assigned 4780 students) \nthe willingness to  answer/ask questions (all students) \ncorrectness of your answers to the questions asked by MSSC 5780 presenters"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA210 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA210 under My reservations to access the RStudio instance you’ll use for the course."
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "MATH/COSC 3570: Introduction to Data Science",
+    "section": "",
+    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive documenting systems RMarkdown and Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas and Scikit-Learn libraries are introduced."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MSSC 6250 - Statistical Machine Learning",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nLab Exercise\nHomework\nLab Presentation\n\n\n\n\n1\nTue, Jan 16\nGreetings + Overview of Data Science\n📖\n🖥️ 🖥️\n\n\n\n\n\n\nThu, Jan 18\nPosit Cloud\n\n🖥️\n📋📋\n\n\n\n\n2\nTue, Jan 23\nGit/GitHub\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Jan 25\nQuarto\n\n🖥️\n📋📋📋\n\n\n\n\n3\nTue, Jan 30\nR programming\n📖\n🖥️\n📋\n✍️\n\n\n\n\nThu, Feb 1\nPython Programming\n\n\n📋\n\n\n\n\n4\nTue, Feb 6\nR Tidyverse\n📖\n🖥️\n📋\n\n✅\n\n\n\nThu, Feb 8\nPython Pandas\n\n\n📋\n\n\n\n\n5\nTue, Feb 13\nData Importing\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Feb 15\nData Vaisualization\n\n🖥️\n📋📋\n\n\n\n\n6\nTue, Feb 20\nData Vaisualization\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Feb 22\nData Vaisualization\n\n\n\n\n\n\n\n7\nTue, Feb 27\nInteractive Data Vaisualization\n📖\n🖥️\n\n✍️\n✅\n\n\n\nThu, Feb 29\nData Wrangling\n\n🖥️\n📋\n\n\n\n\n8\nTue, Mar 5\nData Wrangling\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Mar 7\nData Wrangling\n\n🖥️\n📋\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nProbabilistic and Statistical Simulation\n📖\n🖥️\n📋📋\n\n\n\n\n\nThu, Mar 21\nLinear Regression\n\n🖥️\n\n\n\n\n\n11\nTue, Mar 26\nLinear Regression\n📖\n\n📋\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nLogistic Regression\n\n\n📋\n\n\n\n\n13\nTue, Apr 9\nK-Nearest Neighbors\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nK-Nearest Neighbors\n\n\n📋\n✍️\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n📂\n\n\n\nThu, Apr 18\nPrincipal Component Analysis\n\n\n📋\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nK-Means Clustering\n\n\n📋\n\n\n\n\n16\nTue, Apr 30\nQuarto Dashboards\n📖\n🖥️\n\n\n📂\n\n\n16\nThu, May 2\nQuarto Werbsites\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Dr. Mine Çetinkaya-Rundel (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine’s work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMondays 10:30 am - 11:30 am\nZoom\n\n\nThursdays 11:00 am - 12:00 pm\nOld Chem 213\n\n\n\nIf these times don’t work for you or you’d like to schedule a one-on-one meeting, you can do so at bit.ly/meet-mine."
+  },
+  {
+    "objectID": "course-team.html#teaching-assistants",
+    "href": "course-team.html#teaching-assistants",
+    "title": "Teaching team",
+    "section": "Teaching assistants",
+    "text": "Teaching assistants\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nMartha Aboagye\nThursday 7 - 9 pm\nZoom\n\n\n\nRichard Fremgen\nLead TA for Section 3 (5:15 pm)\nTues 7 - 9 pm\nZoom\n\n\n\nEmily Gentles\nLead TA for Section 1 (1:45pm)\nWednesday 1 - 3 pm\nOld Chem 203B (On Zoom until January 18)\n\n\n\nSara Mehta\nMon 2 - 4 pm\nZoom\n\n\n\nRick Presman\nHead TA\nLead TA for Section 2 (3:30pm)\nThursday 3:30 - 4:30 pm\nFri 9 - 10 am\nZoom\n\n\n\nShari Tian\nTue 8 - 10 am\nZoom\n\n\n\nAaditya Warrier\nMon 12pm - 1pm\nFri 1:30 - 2:30 pm\nZoom"
+  },
+  {
+    "objectID": "computing-pipelines.html",
+    "href": "computing-pipelines.html",
+    "title": "Pipelines",
+    "section": "",
+    "text": "library(palmerpenguins)\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✓ ggplot2 3.3.5     ✓ purrr   0.3.4\n✓ tibble  3.1.6     ✓ dplyr   1.0.7\n✓ tidyr   1.1.4     ✓ stringr 1.4.0\n✓ readr   2.1.1     ✓ forcats 0.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\nx dplyr::filter() masks stats::filter()\nx dplyr::lag()    masks stats::lag()\n\nlibrary(tidymodels)\n\nRegistered S3 method overwritten by 'tune':\n  method                   from   \n  required_pkgs.model_spec parsnip\n\n\n── Attaching packages ────────────────────────────────────── tidymodels 0.1.4 ──\n\n\n✓ broom        0.7.10         ✓ rsample      0.1.1     \n✓ dials        0.0.10         ✓ tune         0.1.6     \n✓ infer        1.0.1.9000     ✓ workflows    0.2.4     \n✓ modeldata    0.1.1          ✓ workflowsets 0.1.0     \n✓ parsnip      0.1.7          ✓ yardstick    0.0.9     \n✓ recipes      0.2.0          \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\nx scales::discard() masks purrr::discard()\nx dplyr::filter()   masks stats::filter()\nx recipes::fixed()  masks stringr::fixed()\nx dplyr::lag()      masks stats::lag()\nx yardstick::spec() masks readr::spec()\nx recipes::step()   masks stats::step()\n• Search for functions across packages at https://www.tidymodels.org/find/\n\nlibrary(knitr)"
+  },
+  {
+    "objectID": "computing-pipelines.html#simple-linear-regression",
+    "href": "computing-pipelines.html#simple-linear-regression",
+    "title": "Pipelines",
+    "section": "Simple linear regression",
+    "text": "Simple linear regression\n\nModel fitting\nFit model:\n\npenguins_fit <- linear_reg() %>%\n  set_engine(\"lm\") %>%\n  fit(body_mass_g ~ flipper_length_mm, data = penguins)\n\nTidy model output:\n\ntidy(penguins_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        -5781.     306.       -18.9 5.59e- 55\n2 flipper_length_mm     49.7      1.52      32.7 4.37e-107\n\n\nFormat model output as table:\n\ntidy(penguins_fit) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-5780.831\n305.815\n-18.903\n0\n\n\nflipper_length_mm\n49.686\n1.518\n32.722\n0\n\n\n\n\n\nAugment data with model:\n\naugment(penguins_fit$fit)\n\n# A tibble: 342 × 9\n   .rownames body_mass_g flipper_length_… .fitted  .resid    .hat .sigma .cooksd\n   <chr>           <int>            <int>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>\n 1 1                3750              181   3212.  538.   0.00881   394. 8.34e-3\n 2 2                3800              186   3461.  339.   0.00622   394. 2.33e-3\n 3 3                3250              195   3908. -658.   0.00344   393. 4.83e-3\n 4 5                3450              193   3808. -358.   0.00385   394. 1.60e-3\n 5 6                3650              190   3659.   -9.43 0.00469   395. 1.35e-6\n 6 7                3625              181   3212.  413.   0.00881   394. 4.91e-3\n 7 8                4675              195   3908.  767.   0.00344   393. 6.56e-3\n 8 9                3475              193   3808. -333.   0.00385   394. 1.39e-3\n 9 10               4250              190   3659.  591.   0.00469   394. 5.31e-3\n10 11               3300              186   3461. -161.   0.00622   395. 5.23e-4\n# … with 332 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\nStatistical inference"
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.1.2: https://cran.r-project.org/\nDownload and install a daily build of RStudio: https://dailies.rstudio.com/\nInstall Quarto CLI: https://quarto.org/docs/getting-started/installation.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+  },
+  {
+    "objectID": "project-description-4780.html",
+    "href": "project-description-4780.html",
+    "title": "MATH 4780 Project Description",
+    "section": "",
+    "text": "The project accounts for 220 points of the total 1000 points."
+  },
+  {
+    "objectID": "project-description-4780.html#team-up",
+    "href": "project-description-4780.html#team-up",
+    "title": "MATH 4780 Project Description",
+    "section": "Team up!",
+    "text": "Team up!\n\nEach one of you loses 20 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou will be randomly assigned to a group if you do not belong to any group before the deadline."
+  },
+  {
+    "objectID": "project-description-4780.html#proposal",
+    "href": "project-description-4780.html#proposal",
+    "title": "MATH 4780 Project Description",
+    "section": "Proposal",
+    "text": "Proposal\n\nEach one of you loses 20 points of your project grade if you don’t meet the requirement or miss the deadline.\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else."
+  },
+  {
+    "objectID": "project-description-4780.html#presentation",
+    "href": "project-description-4780.html#presentation",
+    "title": "MATH 4780 Project Description",
+    "section": "Presentation",
+    "text": "Presentation\n\nYou need to participate (in-person) in the final presentation in order to pass the course.\nEach group presentation should be between 14 and 16 minute long, followed by 1 to 3 minute Q&A. If your presentation is too short or too long, every one of you loses 10 points of your project grade.\nEvery group member has to present some part of the group work. The one who does not present receives 0 point.\nThe order of presentation is determined by random sampling using the function .\nQuestions are encouraged during Q&A. Everyone is welcome to ask any questions about the projects.\nEach group is required to ask as least one question. After the 1st group presentation, the 2nd group should ask at least one question in Q&A. After the 2nd group presentation, the 3rd group should at least ask one question in Q&A, and so on and so forth. The 1st group will ask the last group questions about their project. If you, as a group, don’t ask a question when you should, every one of you loses 10 points of your project grade."
+  },
+  {
+    "objectID": "project-description-4780.html#materials",
+    "href": "project-description-4780.html#materials",
+    "title": "MATH 4780 Project Description",
+    "section": "Materials",
+    "text": "Materials\n\nEach one of you loses 20 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, and data if applicable.\nYour code should be able to reproduce all the numerical results, outputs, tables, and figures shown in the slides, including the source of the raw data (where you find and load the data) if the project is about data analysis."
+  },
+  {
+    "objectID": "project-description-4780.html#group-performance-evaluation",
+    "href": "project-description-4780.html#group-performance-evaluation",
+    "title": "MATH 4780 Project Description",
+    "section": "Group Performance Evaluation",
+    "text": "Group Performance Evaluation\n\n\nMSSC 5780 students and Dr. Yu evaluate your performance based on the four criteria:\n\nContent and Organization (8 pts)\nSlides Quality (4 pts)\nOral Presentation Skill and Delivery (4 pts)\nInteractions and Q&A (4 pts)\n\n\n\n\n\n\n\nContent and Organization (Data Analysis)\n\nBeautiful visualization helps find out relationship of variables and specification of models\nAll questions are answered accurately by the models\nDiscuss how and why the models are chosen\nApply sophisticated models and detailed analysis\nAll ideas are presented in logical order\n\nSlides Quality\n\nSlides show code and output beautifully\nSlides clearly aid the speaker in telling a coherent story\nAll tables and graphics are informative and related to the topic and make it easier to understand\nAttractive design, layout, and neatness.\n\nOral Presentation Skill\n\nGood volume and energy\nProper pace and diction\nAvoidance of distracting gestures\n\nInteractions and Q&A\n\nGood eye contact with audience\nExcellent listening skills\nAnswers audience questions with authority and accuracy"
+  },
+  {
+    "objectID": "project-description-4780.html#best-contributor-nomination",
+    "href": "project-description-4780.html#best-contributor-nomination",
+    "title": "MATH 4780 Project Description",
+    "section": "Best Contributor Nomination",
+    "text": "Best Contributor Nomination\n\n\nYou nominate one single person who you think contributes the most to your group project.\nYou cannot nominate yourself, and you can only vote for one of your teammates.\nIf you don’t vote, you can’t be the best contributor even if you obtain the most votes. The person with the second highest votes wins the best contribution reward.\nIf there is no one single person who gets the most votes, every team member remains the same grade. For example, if your group finish in third place, and there is no best contributor, all members receive 200 points.\n\nDr. Yu reserves the right to make changes to the project policy."
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help."
+  },
+  {
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
+  },
+  {
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
+  },
+  {
+    "objectID": "course-support.html#discussion-forum",
+    "href": "course-support.html#discussion-forum",
+    "title": "Course support",
+    "section": "Discussion forum",
+    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Conversations as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go Conversations), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 210” in the subject line. Barring extenuating circumstances, I will respond to STA 210 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. ARC services are available free to any Duke undergraduate student, in any year, studying in any discipline. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact theARC@duke.edu, 919-684-5917."
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nStudent mental health and wellness is of primary importance at Duke, and the university offers resources to support students in managing daily stress and self-care. Duke offers several resources for students to seek assistance on coursework and to nurture daily habits that support overall well-being, some of which are listed below:\n\nThe Academic Resource Center: (919) 684-5917, theARC@duke.edu, or arc.duke.edu,\nDuWell: (919) 681-8421, duwell@studentaffairs.duke.edu, or studentaffairs.duke.edu/duwell\n\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Duke encourages all students to access these resources.\n\nDukeReach. Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance. studentaffairs.duke.edu/dukereach\nCounseling and Psychological Services (CAPS). CAPS helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000. studentaffairs.duke.edu/caps\nBlue Devils Care. A convenient and cost-effective way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling. bluedevilscare.duke.edu\nTwo-Click Support. Duke Student Government and DukeReach partnership that connects students to help in just two clicks. bit.ly/TwoClickSupport\nWellTrack. Sign up for WellTrack at app.welltrack.com."
+  },
+  {
+    "objectID": "course-support.html#technology-accommodations",
+    "href": "course-support.html#technology-accommodations",
+    "title": "Course support",
+    "section": "Technology accommodations",
+    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited.\nNote that we will be using Duke’s computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available."
+  },
+  {
+    "objectID": "course-support.html#course-materials-costs",
+    "href": "course-support.html#course-materials-costs",
+    "title": "Course support",
+    "section": "Course materials costs",
+    "text": "Course materials costs\nThere are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.)."
+  },
+  {
+    "objectID": "course-support.html#assistance-with-zoom-or-sakai",
+    "href": "course-support.html#assistance-with-zoom-or-sakai",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Sakai",
+    "text": "Assistance with Zoom or Sakai\nFor technical help with Sakai or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "MATH/COSC 3570 Project Description",
+    "section": "",
+    "text": "To be announced."
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Click here to download the syllabus."
+  },
+  {
+    "objectID": "course-syllabus.html#time-and-location",
+    "href": "course-syllabus.html#time-and-location",
+    "title": "Syllabus",
+    "section": "Time and location",
+    "text": "Time and location\n\n\n\n\nDay\nTime\nLocation\n\n\n\n\nLectures\nTu & Th\n2:00 - 3:15 PM\nOlin Engineering 198\n\n\nLab\nNone\nNone\nNone"
+  },
+  {
+    "objectID": "course-syllabus.html#office-hours",
+    "href": "course-syllabus.html#office-hours",
+    "title": "Syllabus",
+    "section": "Office Hours",
+    "text": "Office Hours\n\nMy in-person office hours are TuTh 4:50 - 5:50 PM, and Fri 12 - 1 PM in Cudahy Hall room 353.\nYou are welcome to schedule an online meeting via Microsoft Teams if you need/prefer."
+  },
+  {
+    "objectID": "course-syllabus.html#learning-objectives",
+    "href": "course-syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nBy the end of the semester, you will be able to…\n\nRepresent and manipulate data in effective ways\nManipulate data using packages/tools and by ad hoc data handling\nUse mathematical, computational and statistical tools to detect patterns and model performance\nUse computational principles and tools to tackle issues addressable by data science\nUse a solid foundation in data science to independently learn new methodologies and technologies in the field of data science"
+  },
+  {
+    "objectID": "course-syllabus.html#prerequisites",
+    "href": "course-syllabus.html#prerequisites",
+    "title": "Syllabus",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nCOSC 1010 (Intro to Programming) and MATH 4720 (Intro to Statistics), or MATH 2780 (Intro to Regression and Classification).\nProgramming experience is helpful because the course involves doing regression analysis using  programming language.\nThe course will also assume facility with using the internet and a personal computer/laptop. The course involves coding in R and Python using Posit Cloud, a cloud integrated development environment (IDE).\nTalk to me if you are not sure whether or not this is the right course for you."
+  },
+  {
+    "objectID": "course-syllabus.html#e-mail-policy",
+    "href": "course-syllabus.html#e-mail-policy",
+    "title": "Syllabus",
+    "section": "E-mail Policy",
+    "text": "E-mail Policy\n\nI will attempt to reply your email quickly, at least within 24 hours.\nExpect a reply on Monday if you send a question during weekends. If you do not receive a response from me within two days, re-send your question/comment in case there was a “mix-up” with email communication (Hope this won’t happen!).\nPlease start your subject line with [math3570] or [cosc3570] followed by a clear description of your question. See an example below.\n\n\n\n\nEmail Subject Line Example\n\n\n\nEmail etiquette is important. Please read this article to learn more about email etiquette.\nI am more than happy to answer your questions about this course or data science/statistics in general. However, with tons of email messgaes everyday, I may choose NOT to respond to students’ e-mail if\n\nThe student could answer his/her own inquiry by reading the syllabus or information on the course website or D2L.\nThe student is asking for an extra credit opportunity. The answer is “no”.\nThe student is requesting an extension on homework. The answer is “no”.\nThe student is asking for a grade to be raised for no legitimate reason. The answer is “no”.\nThe student is sending an email with no etiquette."
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\n\nNo textbook is required for this course. Course materials are mainly Dr. Yu’s slides. Below are some good references.\n\n(r4ds) R for Data Science by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\n(tmwr) Tidy Modeling with R by Max Kuhn and Julia Silge.\n(py4ds) Python for Data Science by Wes McKinney.\n(IS) Introduction to Statistics by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)"
+  },
+  {
+    "objectID": "course-syllabus.html#grading-policy",
+    "href": "course-syllabus.html#grading-policy",
+    "title": "Syllabus",
+    "section": "Grading Policy",
+    "text": "Grading Policy\n\n40% In-class lab exercises and participation.\n30% Homework\n30% Final project competition\nEvery student has to participate (in-person) in the final presentation in order to pass the course.\nYou will NOT be allowed any extra credit projects/homework/exam to compensate for a poor grade. Everyone is given the same opportunity to do well in this class. I may use class participation to make grade adjustments at the end of the semester.\nThe final grade is based on the grade-percentage conversion Table 1 on the next page. \\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.1 is in \\([94, 100]\\) and the grade is A and 93.8 is in \\([90, 94)\\) and the grade is A-.\n\n\n\n\nGrade-Percentage Conversion\n\n\nGrade\nPercentage\n\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[73, 77)\n\n\nC-\n[70, 73)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)\n\n\n\n\n\n\nLab exercises\n\nThere are several in-class lab exercises, which are graded as complete/incomplete and used as evidence of attendance and class participation.\nYou are allowed to have one incomplete lab exercises without penalty. Beyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\nIf you answer the questions in the form correctly, you are allowed to miss 2 lab exercises without penalty.\nNo make-up lab exercises for any reason.\n\n\n\nHomework\n\nThe homework assignments are individual. You should submit your own work.\nYou may not directly share or discuss answers/code with anyone other than the instructor. But you are welcome to discuss the problems in general and ask for advice.\nHomework will be assigned through GitHub. You need to clone/pull the homework repo into Posit Cloud and work on the Quarto file in the repo. A step-by-step guide will be discussed in class before homework is assigned.\nYou will have at least one week to complete your assignment.\nNo make-up homework for any reason unless you got COVID or excused absence.\nIf you miss a homework assignment due to COVID-19 symptoms, exposure, diagnosis, quarantine, and/or isolation, or you have an excused absence as defined in Attendance in Academic Regulations, the homework percentage will be added to your final project. If you miss more than one assignment, only one assignment percentage can be added to the final project percentage. You get 0% for the other assignment.\n\n\n\nFinal project competition\n\nYou will be team up to do the final project. Your project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nWeb development: Shiny website or dashboard, including live demo\n\nDetails about the project will be provided as the course progresses. You must complete the final project and be in class to present it in order to pass this course.\n\n\n\n\n\nThe final project presentation is on Monday, 5/6 10:30 AM - 12:30 PM."
+  },
+  {
+    "objectID": "course-syllabus.html#sharingreusing-code-policy",
+    "href": "course-syllabus.html#sharingreusing-code-policy",
+    "title": "Syllabus",
+    "section": "Sharing/Reusing Code Policy",
+    "text": "Sharing/Reusing Code Policy\n\nUnless explicitly stated otherwise, you may make use of any online resources, but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solutions.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source."
+  },
+  {
+    "objectID": "course-syllabus.html#university-and-college-policies",
+    "href": "course-syllabus.html#university-and-college-policies",
+    "title": "Syllabus",
+    "section": "University and college policies",
+    "text": "University and college policies\nAs a student in this course, you have agreed to comply with Marquette undergraduate policies and regulations."
+  },
+  {
+    "objectID": "course-syllabus.html#accommodation",
+    "href": "course-syllabus.html#accommodation",
+    "title": "Syllabus",
+    "section": "Accommodation",
+    "text": "Accommodation\nIf you need to request accommodations, or modify existing accommodations that address disability-related needs, please contact Disability Service."
+  },
+  {
+    "objectID": "course-syllabus.html#important-dates",
+    "href": "course-syllabus.html#important-dates",
+    "title": "Syllabus",
+    "section": "Important dates",
+    "text": "Important dates\n\nJan 24: Last day to add/swap/drop\nMar 10-16: Spring break\nMar 12: Midterm grade submission\nMar 28 - Apr 1: Easter break\nApr 12: Withdrawal deadline\nMay 4: Last day of class\nMay 6: Final project presentation\nMay 14: Final grade submission\n\nClick here for the full Marquette academic calendar."
+  },
+  {
+    "objectID": "computing-troubleshooting.html",
+    "href": "computing-troubleshooting.html",
+    "title": "Computing troubleshooting",
+    "section": "",
+    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\nEither way you can also fill out the form here, which will notify our the R TA for the department as well as our undergraduate coordinator. They’ll be able to help diagnose the issue."
+  }
+]
