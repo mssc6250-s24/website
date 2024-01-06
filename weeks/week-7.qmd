@@ -1,0 +1,36 @@
+---
+title: "Week 7"
+subtitle: "Interactive Visualization and Data Wrangling (one data frame)"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Interactive Data Vaisualization](/slides/11-interactive-viz.html)
+
+🖥️ [Slides - Data Wrangling (one data frame)](/slides/12-dplyr-1.html)
+
+`r fontawesome::fa("table")` [Data - loans](/slides/data/loans.csv)
+
+`r fontawesome::fa("table")` [Data - Murders](/slides/data/murders.csv)
+
+## Reading and Resources
+
+📖 [R for Data Science  - Data Transformation](https://r4ds.hadley.nz/data-transform)
+
+## Exercise
+
+📋 [Lab-14 Interactive Visualization](/exercise/lab14-interactive.html) (Present)
+
+📋 [Lab-15 dplyr](/exercise/lab15-dplyr.html)
+
+`r fontawesome::fa("table")` [Data - Murders](/slides/data/murders.csv)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

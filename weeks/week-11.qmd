@@ -1,0 +1,24 @@
+---
+title: "Week 11"
+subtitle: "Linear Regression"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Linear Regression](/slides/16-linear-reg.html)
+
+`r fontawesome::fa("table")` `ggplot2::mpg`
+
+## Exercise
+
+📋 [Lab-20 Simple Linear Regression](/exercise/lab20-slr.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

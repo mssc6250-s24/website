@@ -1,0 +1,28 @@
+---
+title: "Week 10"
+subtitle: "Probabilistic and Statistical Simulation and Linear Regression"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - Probability and Statistics](/slides/15-probstat.html)
+
+🖥️ [Slides - Linear Regression](/slides/16-linear-reg.html)
+
+`r fontawesome::fa("table")` **`ggplot2::mpg`**
+
+## Exercise
+
+📋 [Lab-18 Probability](/exercise/lab18-prob.html)
+
+📋 [Lab-19 Confidence Interval](/exercise/lab19-ci.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

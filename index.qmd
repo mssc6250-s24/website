@@ -1,0 +1,53 @@
+---
+title: "MSSC 6250 - Statistical Machine Learning"
+tbl-colwidths: [5,10,30,5,5,5,5,5]
+---
+
+This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.
+
+::: column-screen-inset-right
+| Week | Date        | Topic                                    | To Do | Slides | Lab Exercise | Homework | Lab Presentation |
+|:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  1   | Tue, Jan 16 | Greetings + Overview of Data Science     |  📖   | 🖥️ 🖥️  |              |          |                  |
+|      | Thu, Jan 18 | Posit Cloud                              |       |   🖥️   |     📋📋     |          |                  |
+|  2   | Tue, Jan 23 | Git/GitHub                               |  📖   |   🖥️   |      📋      |          |                  |
+|      | Thu, Jan 25 | Quarto                                   |       |   🖥️   |    📋📋📋    |          |                  |
+|  3   | Tue, Jan 30 | R programming                            |  📖   |   🖥️   |      📋      |    ✍️    |                  |
+|      | Thu, Feb 1  | Python Programming                       |       |        |      📋      |          |                  |
+|  4   | Tue, Feb 6  | R Tidyverse                              |  📖   |   🖥️   |      📋      |          |        ✅        |
+|      | Thu, Feb 8  | Python Pandas                            |       |        |      📋      |          |                  |
+|  5   | Tue, Feb 13 | Data Importing                           |  📖   |   🖥️   |      📋      |          |                  |
+|      | Thu, Feb 15 | Data Vaisualization                      |       |   🖥️   |     📋📋     |          |                  |
+|  6   | Tue, Feb 20 | Data Vaisualization                      |  📖   |   🖥️   |      📋      |          |                  |
+|      | Thu, Feb 22 | Data Vaisualization                      |       |        |              |          |                  |
+|  7   | Tue, Feb 27 | Interactive Data Vaisualization          |  📖   |   🖥️   |              |    ✍️    |        ✅        |
+|      | Thu, Feb 29 | Data Wrangling                           |       |   🖥️   |      📋      |          |                  |
+|  8   | Tue, Mar 5  | Data Wrangling                           |  📖   |   🖥️   |      📋      |          |                  |
+|      | Thu, Mar 7  | Data Wrangling                           |       |   🖥️   |      📋      |          |                  |
+|  9   | Tue, Mar 12 | ***NO CLASS: Spring break***             |       |        |              |          |                  |
+|      | Thu, Mar 14 | ***NO CLASS: Spring break***             |       |        |              |          |                  |
+|  10  | Tue, Mar 19 | Probabilistic and Statistical Simulation |  📖   |   🖥️   |     📋📋     |          |                  |
+|      | Thu, Mar 21 | Linear Regression                        |       |   🖥️   |              |          |                  |
+|  11  | Tue, Mar 26 | Linear Regression                        |  📖   |        |      📋      |          |                  |
+|      | Thu, Mar 28 | ***NO CLASS: Easter break***             |       |        |              |          |                  |
+|  12  | Tue, Apr 2  | Logistic Regression                      |  📖   |   🖥️   |              |          |                  |
+|      | Thu, Apr 4  | Logistic Regression                      |       |        |      📋      |          |                  |
+|  13  | Tue, Apr 9  | K-Nearest Neighbors                      |  📖   |   🖥️   |              |          |                  |
+|      | Thu, Apr 11 | K-Nearest Neighbors                      |       |        |      📋      |    ✍️    |                  |
+|  14  | Tue, Apr 16 | Principal Component Analysis             |  📖   |   🖥️   |              |          |        📂        |
+|      | Thu, Apr 18 | Principal Component Analysis             |       |        |      📋      |          |                  |
+|  15  | Tue, Apr 23 | K-Means Clustering                       |  📖   |   🖥️   |              |          |                  |
+|      | Thu, Apr 25 | K-Means Clustering                       |       |        |      📋      |          |                  |
+|  16  | Tue, Apr 30 | Quarto Dashboards                        |  📖   |   🖥️   |              |          |        📂        |
+|  16  | Thu, May 2  | Quarto Werbsites                         |       |        |              |          |                  |
+:::
+
+I reserve the right to make changes to the schedule.
+
+```{r echo = FALSE}
+knitr::knit_exit()
+```
+
+|      |      |       | Prepare | Slides | AE  |                                                    Labs                                                    | HW  | Exam | Project |
+|--------|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| Week | Date | Topic |   📖    |   🖥️   | 📋  | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️  |  ✅  |   📂    |

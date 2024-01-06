@@ -1,0 +1,14 @@
+{
+  "hash": "4fe1f7a2563beeab583616bfb8d324f2",
+  "result": {
+    "markdown": "---\ntitle: \"Lab 22: K Nearest Neighbors\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: true\n---\n\n::: {.cell}\n\n:::\n\n\n::: callout-note\n\n:::\n\n\nIn **lab.qmd** `## Lab 22` section, \n\n1. use `HEIGHT`, `WAIST` and `BMI` to predict `GENDER` using KNN with $K = 3$.\n\n2. Generate the (test) confusion matrix.\n\n3. Calculate (test) accuracy rate.\n\n4. Does using more predictors predict better?\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nlibrary(tidymodels)\n## load data\nbodydata <- read_csv(\"./data/body.csv\")\nbody <- bodydata |> \n    select(GENDER, HEIGHT, WAIST, BMI) |> \n    mutate(GENDER = as.factor(GENDER))\n\n## training and test data\nset.seed(2024)\ndf_split <- rsample::initial_split(data = body, prop = 0.8)\ndf_trn <- rsample::training(df_split)\ndf_tst <- rsample::testing(df_split)\n```\n:::\n\n\n### R Code\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\n## KNN training\nknn_recipe <- recipes::recipe(GENDER ~ HEIGHT + WAIST + BMI, data = df_trn) |> \n    step_normalize(all_predictors())\n\nknn_mdl <- parsnip::nearest_neighbor(neighbors = 3) |> \n    set_mode(\"classification\") |>\n    set_engine(\"kknn\")\n\nknn_out <- workflows::workflow() |> \n    add_recipe(knn_recipe) |> \n    add_model(knn_mdl) |> \n    fit(data = df_trn)\n\n## KNN prediction\nknn_pred <- pull(predict(knn_out, df_tst))\ntable(knn_pred, df_tst$GENDER)\nmean(knn_pred == df_tst$GENDER)\n```\n:::\n\n\n\n### Python Code\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.python .cell-code}\nimport numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\n\n## load data\nbody = pd.read_csv('./data/body.csv')\n\nX = body[['HEIGHT', 'WAIST', 'BMI']]\ny = body['GENDER']\nX_trn, X_tst, y_trn, y_tst = train_test_split(X, y, test_size=0.2, random_state=2024)\n\n## KNN training\nneigh = KNeighborsClassifier(n_neighbors = 3)\nX_trn = np.array(X_trn)\nX_tst = np.array(X_tst)\nneigh.fit(X_trn, y_trn)\n\n## KNN prediction\ny_pred = neigh.predict(X_tst)\nfrom sklearn.metrics import confusion_matrix\nconfusion_matrix(y_tst, y_pred)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

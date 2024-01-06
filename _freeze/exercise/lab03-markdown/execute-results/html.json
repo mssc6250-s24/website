@@ -1,0 +1,14 @@
+{
+  "hash": "90a8a6a860a0abcca20e26f5bcf23d03",
+  "result": {
+    "markdown": "---\ntitle: \"Lab 03: Markdown\"\neditor: source\nreference-location: margin\nexecute:\n  freeze: true\n  echo: false\n---\n\n::: {.cell}\n\n:::\n\n\n::: callout-note\n\n:::\n\n- Back to your **lab.qmd**. In `## Lab 3: Markdown` section, add a self-introduction paragraph containing a header, **bold** and *italic* text.\n\n- Add another paragraph that contains\n  - listed items\n  - a hyperlink\n  - a blockquote\n  - math expression\n  \n- Once done, commit with message [_\"03-Markdown\"_]{style=\"color:green\"} and push your updated work to GitHub.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

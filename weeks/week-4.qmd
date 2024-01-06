@@ -1,0 +1,34 @@
+---
+title: "Week 4"
+subtitle: "R/Python Data Frames for Data Science"
+editor: visual
+---
+
+::: callout-important
+:::
+
+## Participate
+
+🖥️ [Slides - R/Python Data Frames for Data Science](/slides/07-package.html)
+
+## Reading and Resources
+
+📖 [tibble](https://tibble.tidyverse.org/)
+
+📖 [pipes](https://r4ds.hadley.nz/data-transform.html#sec-the-pipe)
+
+📖 [NumPy](https://numpy.org/doc/stable/user/index.html)
+
+📖 [pandas](https://pandas.pydata.org/docs/user_guide/index.html)
+
+## Perform
+
+📋 [Lab-08 Tibbles and Pipes](/exercise/lab08-tibble.html)
+
+📋 [Lab-09 NumPy and pandas](/exercise/lab09-numpy.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
