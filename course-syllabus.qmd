@@ -2,40 +2,30 @@
 title: "Syllabus"
 ---
 
-[**Click here**](/documents/syllabus-3570-s24.pdf "PDF of syllabus") **to download the syllabus.**
+[**Click here**](/documents/syllabus-6250-spring2024.pdf "PDF of syllabus") **to download the syllabus.**
 
 ## Time and location
 
 |          | Day     | Time           | Location             |
 |----------|---------|----------------|----------------------|
-| Lectures | Tu & Th | 2:00 - 3:15 PM | Olin Engineering 198 |
+| Lectures | Tu & Th | 3:30 - 4:45 PM | Cuday Hall 143       |
 | Lab      | None    | None           | None                 |
 
 ## Office Hours
 
--   My in-person office hours are TuTh 4:50 - 5:50 PM, and Fri 12 - 1 PM in Cudahy Hall room 353.
+-   My in-person office hours are TuTh 4:50 - 5:50 PM, and Wed 12 - 1 PM in Cudahy Hall room 353.
 
 -   You are welcome to schedule an online meeting via Microsoft Teams if you need/prefer.
 
-## Learning objectives
-
-By the end of the semester, you will be able to...
-
--   Represent and manipulate data in effective ways
--   Manipulate data using packages/tools and by ad hoc data handling
--   Use mathematical, computational and statistical tools to detect patterns and model performance
--   Use computational principles and tools to tackle issues addressable by data science
--   Use a solid foundation in data science to independently learn new methodologies and technologies in the field of data science
 
 ## Prerequisites
 
--   COSC 1010 (Intro to Programming) and MATH 4720 (Intro to Statistics), or MATH 2780 (Intro to Regression and Classification).
+- MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MATH 4780 (Regression Analysis)
 
--   Programming experience is helpful because the course involves doing regression analysis using [\textsf{R}](https://www.r-project.org/about.html) programming language.
+- Having taken MATH 4700 (Probability) and MATH 4710 (Statistical Inference) or more advanced ones is strongly recommended.
 
--   The course will also assume facility with using the internet and a personal computer/laptop. The course involves coding in [R](https://www.r-project.org/) and [Python](https://www.python.org/) using [Posit Cloud](https://posit.cloud/), a cloud integrated development environment (IDE).
+- This course is supposed to be taken in the *last* semester for the applied statistics (APST) master students. Talk to me if you are not sure whether or not this is the right course for you.
 
--   Talk to me if you are not sure whether or not this is the right course for you.
 
 ## E-mail Policy
 
@@ -43,9 +33,9 @@ By the end of the semester, you will be able to...
 
 -   **Expect a reply on Monday if you send a question during weekends**. If you do not receive a response from me within two days, re-send your question/comment in case there was a "mix-up" with email communication (Hope this won't happen!).
 
--   Please start your subject line with **\[math3570\]** or **\[cosc3570\]** followed by a clear description of your question. See an example below.
+-   Please start your subject line with **\[mssc6250\]** followed by a clear description of your question. See an example below.
 
-![Email Subject Line Example](./images/email_3570.png)
+![Email Subject Line Example](./images/email.png)
 
 -   Email etiquette is important. Please read this [article](https://www.insidehighered.com/views/2015/04/16/advice-students-so-they-dont-sound-silly-emails-essay) to learn more about email etiquette.
 
@@ -61,92 +51,82 @@ By the end of the semester, you will be able to...
 
     5.  The student is sending an email with no etiquette.
 
-## Textbooks
+## Required Textbook
+- [(**ISL**) *An Introduction to Statistical Learning*](https://www.statlearning.com/), by James et al. Publisher: Springer. (Undergraduate to master level, R and Python code)
 
-<!-- ### Required Textbook -->
 
-No textbook is required for this course. Course materials are mainly Dr. Yu's slides. Below are some good references.
+## Optional References
+- [(**PML**) *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html), by Kevin Murphy. Publisher: MIT Press. (Master to PhD level, lots of mathematics foundations, Python code)
 
--   [*(**r4ds**) R for Data Science*](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
+- [(**PMLA**) *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html), by Kevin Murphy. Publisher: MIT Press. (PhD level, more probabilistic-based or Bayesian)
 
--   [*(**tmwr**) Tidy Modeling with R*](https://www.tmwr.org/) by Max Kuhn and Julia Silge.
+- [(**ESL**) *The Elements of Statistical Learning, 2nd edition*](https://hastie.su.domains/ElemStatLearn/), by Hastie et. al. Publisher: Springer. (PhD level, more frequentist-based)
 
--   [*(**py4ds**) Python for Data Science*](https://wesmckinney.com/book/) by Wes McKinney.
 
--   [(**IS**) *Introduction to Statistics*](https://chenghanyu-introstatsbook.netlify.app/) by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)
 
 ## Grading Policy
 
--   **40%** In-class lab exercises and participation.
+- Your final grade is earned out of **1000 total points** distributed as follows:
+  - **Homework: 500 pts**
+  - **In-class Activity: 200 pts**
+  - **Final project presentation and/or written report: 300 pts**
+  
+  <!-- - **In-class attendance/participation: 50 pts** -->
+  
+- You will **NOT** be allowed any extra credit projects/homework/exam to compensate for a poor average. Everyone must be given the same opportunity to do well in this class. Individual exam will **NOT** be curved.
+<!-- however, I may use class participation to make grade adjustments at the end of the semester. -->
 
--   **30%** Homework
+- The final grade is based on your percentage of points earned out of 1000 points and the grade-percentage conversion Table. $[x, y)$ means greater than or equal to $x$ and less than $y$. For example, 94.1 is in $[93, 100]$ and the grade is A and 92.8 is in $[90, 94)$ and the grade is A-.
 
--   **30%** Final project competition
 
--   Every student has to participate (in-person) in the final presentation in order to pass the course.
-
--   You will **NOT** be allowed any extra credit projects/homework/exam to compensate for a poor grade. Everyone is given the same opportunity to do well in this class. I may use class participation to make grade adjustments at the end of the semester.
-
--   The final grade is based on the grade-percentage conversion Table 1 on the next page. $[x, y)$ means greater than or equal to $x$ and less than $y$. For example, 94.1 is in $[94, 100]$ and the grade is A and 93.8 is in $[90, 94)$ and the grade is A-.
 
 ```{r, echo=FALSE}
-letter <- c("A", "A-", "B+", "B", "B-", "C+", "C", "C-",
-                       "D+", "D", "F")
+letter <- c("A", "A-", "B+", "B", "B-", "C+", "C", "F")
 percentage <- c("[94, 100]", "[90, 94)", "[87, 90)", "[83, 87)", "[80, 83)",
-                "[77, 80)", "[73, 77)", "[70, 73)", 
-                "[65, 70)", "[60, 65)", "[0, 60)")
+                "[77, 80)", "[70, 77)", "[0, 70)")
 grade_dist <- data.frame(Grade = letter, Percentage = percentage)
 knitr::kable(grade_dist, longtable = TRUE, caption = "Grade-Percentage Conversion")
 ```
 
+<!-- - This is not a course that gives most of students grade A. If you want to obtain a good grade, study hard. No pain, no gain. -->
 
-### Lab exercises
-
-- There are several **in-class** lab exercises, which are graded as **complete/incomplete** and used as evidence of attendance and class participation.
-
-- You are allowed to have **one** incomplete lab exercises without penalty. Beyond that, **2%** grade percentage will be taken off for each missing/incomplete exercise.
-
-- If you answer the questions in the [form](https://forms.office.com/r/542zDbEde8) correctly, you are allowed to miss **2** lab exercises without penalty.
-
-- **No make-up lab exercises** for any reason.
-
+- You may use any programming language to complete your homework and/or your project.
 
 ### Homework
 
--   The homework assignments are *individual*. You should submit your own work. 
+<!-- - Homework will be assigned through D2L in weekly modules in **Content**.  -->
 
-- **You may not directly share or discuss answers/code with anyone other than the instructor**. But you are welcome to discuss the problems in general and ask for advice.
+- Homework will be assigned through the course website in weekly modules.
 
--   Homework will be assigned through GitHub. You need to clone/pull the homework repo into Posit Cloud and work on the Quarto file in the repo. A step-by-step guide will be discussed in class before homework is assigned.
+- To submit your homework, please go to **D2L > Assessments > Dropbox** and upload your homework in **PDF** format.
 
--   You will have *at least one week* to complete your assignment.
-
-- **No make-up homework** for any reason unless you got [COVID](https://www.marquette.edu/central/registrar/faculty-staff/guidance-on-spring-2023-class-attendance-withdrawal-grading.php) or [excused absence](https://bulletin.marquette.edu/undergrad/academicregulations/#attendance).
-
-- If you miss a homework assignment due to COVID-19 symptoms, exposure, diagnosis, quarantine, and/or isolation, or you have an excused absence as defined in [Attendance in Academic Regulations](https://bulletin.marquette.edu/undergrad/academicregulations/#attendance), the homework percentage will be added to your final project. If you miss more than one assignment, only one assignment percentage can be added to the final project percentage. You get 0% for the other assignment.
+- **No late or make-up homework** for any reason.
 
 
-### Final project competition
 
--   You will be team up to do the final project. Your project can be in either of the following categories:
 
-    1.  **Data analysis** using statistical models or machine learning algorithms
+### In-Class Activity
 
-    2.  Introduce a **R or Python package** not learned in class, including **live demo**
+- There will be 3 to 4 in-class activities.
 
-    3.  Introduce a **data science tool (visualization, computing, etc)** not learned in class, including **live demo**
-    
-    4.  **Web development**: Shiny website or dashboard, including **live demo**
-    
--   Details about the project will be provided as the course progresses. You must complete the final project and be in class to present it in order to pass this course.
+- Students will learn from each other by presenting and discussing the assigned topics.
 
-<!-- -   The final project will consist of analysis on a data set of your own choosing. More information will be released later (page limit, format, etc). -->
+- More details about the in-class activities will be released later.
 
-<!-- -   Your project is individual. You work on your own project. \textcolor{red}{(may change to group project)} -->
 
-<!-- -   Submit your one-page project proposal before **Friday, 3/19 11:59 PM**. -->
 
--   The final project presentation is on **Monday, 5/6 10:30 AM - 12:30 PM**.
+
+### Project
+
+- The final project includes two parts: written report and oral presentation.
+
+- **You need to participate (in-person) in the final presentation in order to pass the course**.
+
+-   The final project presentation is on **Thursday, 5/9, 8 - 10 AM**.
+
+- More details about the written report and oral presentation will be released later.
+
+
 
 ## Sharing/Reusing Code Policy
 
@@ -179,7 +159,7 @@ If you need to request accommodations, or modify existing accommodations that ad
 -   **Mar 28 - Apr 1:** Easter break
 -   **Apr 12:** Withdrawal deadline
 -   **May 4**: Last day of class
--   **May 6**: Final project presentation
+-   **May 9**: Final project presentation/report submission
 -   **May 14**: Final grade submission
 
 Click [here](https://www.marquette.edu/central/registrar/2024-spring-academic-calendar.php) for the full Marquette academic calendar.
