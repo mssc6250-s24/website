@@ -4,7 +4,7 @@
     "href": "project-work.html",
     "title": "Project work",
     "section": "",
-    "text": "Here shows group project’s proposal.\n\nGroup 1:\nGroup 2:\nGroup 3:\nGroup 4:\nGroup 5:\nGroup 6:\nGroup 7:"
+    "text": "Here shows group project’s proposal.\n\nGroup 1:\nGroup 2:\nGroup 3:\nGroup 4:"
   },
   {
     "objectID": "course-links.html",
@@ -441,46 +441,25 @@
     "text": "Exercise\n📋 Lab-23 Principal Component Analysis\n iris\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "activity-work.html",
-    "href": "activity-work.html",
+    "objectID": "activity-work.html#class-activity-2",
+    "href": "activity-work.html#class-activity-2",
     "title": "Class activity work",
-    "section": "",
-    "text": "MSSC 5780 Presenters: David Aguilera, Rachel Cutlan\nMATH 4780 Questioners: Ethan Baierl, Patrick Campbell, Dylan Cardoza"
+    "section": "Class activity 2",
+    "text": "Class activity 2"
   },
   {
-    "objectID": "activity-work.html#class-activity-2---0926",
-    "href": "activity-work.html#class-activity-2---0926",
+    "objectID": "activity-work.html#class-activity-3",
+    "href": "activity-work.html#class-activity-3",
     "title": "Class activity work",
-    "section": "Class activity 2 - 09/26",
-    "text": "Class activity 2 - 09/26\n\nMSSC 5780 Presenters: Timothy Goodwin, Matt Jaeggin\nMATH 4780 Questioners: Huangkun Chen, Davion Cook, Nicky Diaz"
+    "section": "Class activity 3",
+    "text": "Class activity 3"
   },
   {
-    "objectID": "activity-work.html#class-activity-3---1010",
-    "href": "activity-work.html#class-activity-3---1010",
+    "objectID": "activity-work.html#class-activity-4",
+    "href": "activity-work.html#class-activity-4",
     "title": "Class activity work",
-    "section": "Class activity 3 - 10/10",
-    "text": "Class activity 3 - 10/10\n\nMSSC 5780 Presenters: Samantha Juedemann, Edward Liu\nMATH 4780 Questioners: Nathan Fisher, Alberto Gamez Gonzalez, Andrew Hiller"
-  },
-  {
-    "objectID": "activity-work.html#class-activity-4---1024",
-    "href": "activity-work.html#class-activity-4---1024",
-    "title": "Class activity work",
-    "section": "Class activity 4 - 10/24",
-    "text": "Class activity 4 - 10/24\n\nMSSC 5780 Presenters: Sylvester Mensah, Navid Mohseni\nMATH 4780 Questioners: Jake Konrad, Vanessa Lattas, Danny O’Shea"
-  },
-  {
-    "objectID": "activity-work.html#class-activity-5---1114",
-    "href": "activity-work.html#class-activity-5---1114",
-    "title": "Class activity work",
-    "section": "Class activity 5 - 11/14",
-    "text": "Class activity 5 - 11/14\n\nMSSC 5780 Presenters: Adam Reeson\nMATH 4780 Questioners: Kayley Reith, Donny Robbins, Ray Sun"
-  },
-  {
-    "objectID": "activity-work.html#class-activity-6---1205",
-    "href": "activity-work.html#class-activity-6---1205",
-    "title": "Class activity work",
-    "section": "Class activity 6 - 12/05",
-    "text": "Class activity 6 - 12/05\n\nMSSC 5780 Presenters: Anesti Sotirovski, Tanjina Zaman\nMATH 4780 Questioners: Violet Wang, T.J. James Whapham II, Serena Yang"
+    "section": "Class activity 4",
+    "text": "Class activity 4"
   },
   {
     "objectID": "project-tips-resources.html",
@@ -490,32 +469,25 @@
     "text": "To be announced."
   },
   {
-    "objectID": "activity-description.html",
-    "href": "activity-description.html",
-    "title": "Class activity description",
-    "section": "",
-    "text": "There are six in-class activities on Tuesdays 09/19, 09/26, 10/10, 10/24, 11/14, and 12/05."
-  },
-  {
     "objectID": "activity-description.html#format",
     "href": "activity-description.html#format",
     "title": "Class activity description",
     "section": "Format",
-    "text": "Format\nOn each class activity day,\n\nTwo assigned MSSC 5780 students are presenting the regression problems assigned two days before the presentation date.\nEach presentation including Q & A is about  7 to 8 minute  long. You will be forced to end your presentation if it is too long.\nEach presenter should prepare at least two non-Yes-No questions for all participants to answer.\nEach of the three assigned MATH 4780 students should ask either one or both presenters at least one non-Yes-No question."
+    "text": "Format"
   },
   {
     "objectID": "activity-description.html#presentation-materials",
     "href": "activity-description.html#presentation-materials",
     "title": "Class activity description",
     "section": "Presentation Materials",
-    "text": "Presentation Materials\n\nNo specific presentation style/format/materials are required. You, the presenter, decide how you present your work.\nThe presenters should send the presentation materials, PDF, slides for example, to Dr. Yu before the class begins on the class activity day.\nYour presentation materials will be posted on Activity work page."
+    "text": "Presentation Materials"
   },
   {
     "objectID": "activity-description.html#evaluation",
     "href": "activity-description.html#evaluation",
     "title": "Class activity description",
     "section": "Evaluation",
-    "text": "Evaluation\nThere are 60 points for class participation in the final grade calculation. Dr. Yu is the only one who evaluates your participation. Your goal is to convince Dr. Yu that you understand your work well and get engaged in the class activity.\n\nMSSC 5780\nFor MSSC 5780 students, your class activity grade is determined by\n\noral presentation\npresentation material\nyour non-Yes-No questions\ncorrectness of your answers to MATH 4780 students\n5-minute time management\n\n\n\nMATH 4780\nFor MATH 4780 students, your class activity grade is determined by\n\nquality of your non-Yes-No questions  (three assigned 4780 students) \nthe willingness to  answer/ask questions (all students) \ncorrectness of your answers to the questions asked by MSSC 5780 presenters"
+    "text": "Evaluation"
   },
   {
     "objectID": "computing-access.html",
@@ -527,16 +499,16 @@
   {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
-    "title": "MATH/COSC 3570: Introduction to Data Science",
+    "title": "MSSC 6250: Statistical Machine Learning",
     "section": "",
-    "text": "This course introduces main aspects of doing a practical data science project, from importing data to deploying what is learned from data. We start with learning popular data science tools such as basic R and Python programming, Git and GitHub, and interactive documenting systems RMarkdown and Quarto. Then we learn data importing, data visualization and data wrangling using both R and Python. The second half of the course focuses on several basic simulation and machine learning methods, including Monte Carlo simulation, linear regression, K-nearest neighbors, logistic regression, principal component analysis, and K-means clustering. We learn R tidyverse and tidymodels packages. For Python, Pandas and Scikit-Learn libraries are introduced."
+    "text": "The course covers supervised learning and unsupervised learning models and algorithms. Supervised learning methods include various regression and classification methods, and unsupervised learning methods involves dimension reduction and clustering techniques. Topics include Bayesian linear regression, shrinkage and regularization, regression splines, Gaussian processes, logistic regression, discriminant analysis, nearest neighbors, tree-based methods, principal components, K-means, Gaussian mixture clustering, neural networks, etc."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "MSSC 6250 - Statistical Machine Learning",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nLab Exercise\nHomework\nLab Presentation\n\n\n\n\n1\nTue, Jan 16\nGreetings + Overview of Data Science\n📖\n🖥️ 🖥️\n\n\n\n\n\n\nThu, Jan 18\nPosit Cloud\n\n🖥️\n📋📋\n\n\n\n\n2\nTue, Jan 23\nGit/GitHub\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Jan 25\nQuarto\n\n🖥️\n📋📋📋\n\n\n\n\n3\nTue, Jan 30\nR programming\n📖\n🖥️\n📋\n✍️\n\n\n\n\nThu, Feb 1\nPython Programming\n\n\n📋\n\n\n\n\n4\nTue, Feb 6\nR Tidyverse\n📖\n🖥️\n📋\n\n✅\n\n\n\nThu, Feb 8\nPython Pandas\n\n\n📋\n\n\n\n\n5\nTue, Feb 13\nData Importing\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Feb 15\nData Vaisualization\n\n🖥️\n📋📋\n\n\n\n\n6\nTue, Feb 20\nData Vaisualization\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Feb 22\nData Vaisualization\n\n\n\n\n\n\n\n7\nTue, Feb 27\nInteractive Data Vaisualization\n📖\n🖥️\n\n✍️\n✅\n\n\n\nThu, Feb 29\nData Wrangling\n\n🖥️\n📋\n\n\n\n\n8\nTue, Mar 5\nData Wrangling\n📖\n🖥️\n📋\n\n\n\n\n\nThu, Mar 7\nData Wrangling\n\n🖥️\n📋\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nProbabilistic and Statistical Simulation\n📖\n🖥️\n📋📋\n\n\n\n\n\nThu, Mar 21\nLinear Regression\n\n🖥️\n\n\n\n\n\n11\nTue, Mar 26\nLinear Regression\n📖\n\n📋\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nLogistic Regression\n\n\n📋\n\n\n\n\n13\nTue, Apr 9\nK-Nearest Neighbors\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nK-Nearest Neighbors\n\n\n📋\n✍️\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n📂\n\n\n\nThu, Apr 18\nPrincipal Component Analysis\n\n\n📋\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nK-Means Clustering\n\n\n📋\n\n\n\n\n16\nTue, Apr 30\nQuarto Dashboards\n📖\n🖥️\n\n\n📂\n\n\n16\nThu, May 2\nQuarto Werbsites\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance trade-off\n\n\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression\n📖\n\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n\n\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n\n\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n\n\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n\n\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n\n\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n\n\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n\n\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
     "objectID": "course-team.html",
@@ -709,7 +681,7 @@
   {
     "objectID": "project-description.html",
     "href": "project-description.html",
-    "title": "MATH/COSC 3570 Project Description",
+    "title": "MSSC 6250 Project Description",
     "section": "",
     "text": "To be announced."
   },
@@ -725,49 +697,49 @@
     "href": "course-syllabus.html#time-and-location",
     "title": "Syllabus",
     "section": "Time and location",
-    "text": "Time and location\n\n\n\n\nDay\nTime\nLocation\n\n\n\n\nLectures\nTu & Th\n2:00 - 3:15 PM\nOlin Engineering 198\n\n\nLab\nNone\nNone\nNone"
+    "text": "Time and location\n\n\n\n\nDay\nTime\nLocation\n\n\n\n\nLectures\nTu & Th\n3:30 - 4:45 PM\nCuday Hall 143\n\n\nLab\nNone\nNone\nNone"
   },
   {
     "objectID": "course-syllabus.html#office-hours",
     "href": "course-syllabus.html#office-hours",
     "title": "Syllabus",
     "section": "Office Hours",
-    "text": "Office Hours\n\nMy in-person office hours are TuTh 4:50 - 5:50 PM, and Fri 12 - 1 PM in Cudahy Hall room 353.\nYou are welcome to schedule an online meeting via Microsoft Teams if you need/prefer."
-  },
-  {
-    "objectID": "course-syllabus.html#learning-objectives",
-    "href": "course-syllabus.html#learning-objectives",
-    "title": "Syllabus",
-    "section": "Learning objectives",
-    "text": "Learning objectives\nBy the end of the semester, you will be able to…\n\nRepresent and manipulate data in effective ways\nManipulate data using packages/tools and by ad hoc data handling\nUse mathematical, computational and statistical tools to detect patterns and model performance\nUse computational principles and tools to tackle issues addressable by data science\nUse a solid foundation in data science to independently learn new methodologies and technologies in the field of data science"
+    "text": "Office Hours\n\nMy in-person office hours are TuTh 4:50 - 5:50 PM, and Wed 12 - 1 PM in Cudahy Hall room 353.\nYou are welcome to schedule an online meeting via Microsoft Teams if you need/prefer."
   },
   {
     "objectID": "course-syllabus.html#prerequisites",
     "href": "course-syllabus.html#prerequisites",
     "title": "Syllabus",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nCOSC 1010 (Intro to Programming) and MATH 4720 (Intro to Statistics), or MATH 2780 (Intro to Regression and Classification).\nProgramming experience is helpful because the course involves doing regression analysis using  programming language.\nThe course will also assume facility with using the internet and a personal computer/laptop. The course involves coding in R and Python using Posit Cloud, a cloud integrated development environment (IDE).\nTalk to me if you are not sure whether or not this is the right course for you."
+    "text": "Prerequisites\n\nMATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MATH 4780 (Regression Analysis)\nHaving taken MATH 4700 (Probability) and MATH 4710 (Statistical Inference) or more advanced ones is strongly recommended.\nThis course is supposed to be taken in the last semester for the applied statistics (APST) master students. Talk to me if you are not sure whether or not this is the right course for you."
   },
   {
     "objectID": "course-syllabus.html#e-mail-policy",
     "href": "course-syllabus.html#e-mail-policy",
     "title": "Syllabus",
     "section": "E-mail Policy",
-    "text": "E-mail Policy\n\nI will attempt to reply your email quickly, at least within 24 hours.\nExpect a reply on Monday if you send a question during weekends. If you do not receive a response from me within two days, re-send your question/comment in case there was a “mix-up” with email communication (Hope this won’t happen!).\nPlease start your subject line with [math3570] or [cosc3570] followed by a clear description of your question. See an example below.\n\n\n\n\nEmail Subject Line Example\n\n\n\nEmail etiquette is important. Please read this article to learn more about email etiquette.\nI am more than happy to answer your questions about this course or data science/statistics in general. However, with tons of email messgaes everyday, I may choose NOT to respond to students’ e-mail if\n\nThe student could answer his/her own inquiry by reading the syllabus or information on the course website or D2L.\nThe student is asking for an extra credit opportunity. The answer is “no”.\nThe student is requesting an extension on homework. The answer is “no”.\nThe student is asking for a grade to be raised for no legitimate reason. The answer is “no”.\nThe student is sending an email with no etiquette."
+    "text": "E-mail Policy\n\nI will attempt to reply your email quickly, at least within 24 hours.\nExpect a reply on Monday if you send a question during weekends. If you do not receive a response from me within two days, re-send your question/comment in case there was a “mix-up” with email communication (Hope this won’t happen!).\nPlease start your subject line with [mssc6250] followed by a clear description of your question. See an example below.\n\n\n\n\nEmail Subject Line Example\n\n\n\nEmail etiquette is important. Please read this article to learn more about email etiquette.\nI am more than happy to answer your questions about this course or data science/statistics in general. However, with tons of email messgaes everyday, I may choose NOT to respond to students’ e-mail if\n\nThe student could answer his/her own inquiry by reading the syllabus or information on the course website or D2L.\nThe student is asking for an extra credit opportunity. The answer is “no”.\nThe student is requesting an extension on homework. The answer is “no”.\nThe student is asking for a grade to be raised for no legitimate reason. The answer is “no”.\nThe student is sending an email with no etiquette."
   },
   {
-    "objectID": "course-syllabus.html#textbooks",
-    "href": "course-syllabus.html#textbooks",
+    "objectID": "course-syllabus.html#required-textbook",
+    "href": "course-syllabus.html#required-textbook",
     "title": "Syllabus",
-    "section": "Textbooks",
-    "text": "Textbooks\n\nNo textbook is required for this course. Course materials are mainly Dr. Yu’s slides. Below are some good references.\n\n(r4ds) R for Data Science by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\n(tmwr) Tidy Modeling with R by Max Kuhn and Julia Silge.\n(py4ds) Python for Data Science by Wes McKinney.\n(IS) Introduction to Statistics by Cheng-Han Yu. (Good resource for brushing up your basic probability, statistics and simple linear regression knowledge.)"
+    "section": "Required Textbook",
+    "text": "Required Textbook\n\n(ISL) An Introduction to Statistical Learning, by James et al. Publisher: Springer. (Undergraduate to master level, R and Python code)"
+  },
+  {
+    "objectID": "course-syllabus.html#optional-references",
+    "href": "course-syllabus.html#optional-references",
+    "title": "Syllabus",
+    "section": "Optional References",
+    "text": "Optional References\n\n(PML) Probabilistic Machine Learning: An Introduction, by Kevin Murphy. Publisher: MIT Press. (Master to PhD level, lots of mathematics foundations, Python code)\n(PMLA) Probabilistic Machine Learning: Advanced Topics, by Kevin Murphy. Publisher: MIT Press. (PhD level, more probabilistic-based or Bayesian)\n(ESL) The Elements of Statistical Learning, 2nd edition, by Hastie et. al. Publisher: Springer. (PhD level, more frequentist-based)"
   },
   {
     "objectID": "course-syllabus.html#grading-policy",
     "href": "course-syllabus.html#grading-policy",
     "title": "Syllabus",
     "section": "Grading Policy",
-    "text": "Grading Policy\n\n40% In-class lab exercises and participation.\n30% Homework\n30% Final project competition\nEvery student has to participate (in-person) in the final presentation in order to pass the course.\nYou will NOT be allowed any extra credit projects/homework/exam to compensate for a poor grade. Everyone is given the same opportunity to do well in this class. I may use class participation to make grade adjustments at the end of the semester.\nThe final grade is based on the grade-percentage conversion Table 1 on the next page. \\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.1 is in \\([94, 100]\\) and the grade is A and 93.8 is in \\([90, 94)\\) and the grade is A-.\n\n\n\n\nGrade-Percentage Conversion\n\n\nGrade\nPercentage\n\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[73, 77)\n\n\nC-\n[70, 73)\n\n\nD+\n[65, 70)\n\n\nD\n[60, 65)\n\n\nF\n[0, 60)\n\n\n\n\n\n\nLab exercises\n\nThere are several in-class lab exercises, which are graded as complete/incomplete and used as evidence of attendance and class participation.\nYou are allowed to have one incomplete lab exercises without penalty. Beyond that, 2% grade percentage will be taken off for each missing/incomplete exercise.\nIf you answer the questions in the form correctly, you are allowed to miss 2 lab exercises without penalty.\nNo make-up lab exercises for any reason.\n\n\n\nHomework\n\nThe homework assignments are individual. You should submit your own work.\nYou may not directly share or discuss answers/code with anyone other than the instructor. But you are welcome to discuss the problems in general and ask for advice.\nHomework will be assigned through GitHub. You need to clone/pull the homework repo into Posit Cloud and work on the Quarto file in the repo. A step-by-step guide will be discussed in class before homework is assigned.\nYou will have at least one week to complete your assignment.\nNo make-up homework for any reason unless you got COVID or excused absence.\nIf you miss a homework assignment due to COVID-19 symptoms, exposure, diagnosis, quarantine, and/or isolation, or you have an excused absence as defined in Attendance in Academic Regulations, the homework percentage will be added to your final project. If you miss more than one assignment, only one assignment percentage can be added to the final project percentage. You get 0% for the other assignment.\n\n\n\nFinal project competition\n\nYou will be team up to do the final project. Your project can be in either of the following categories:\n\nData analysis using statistical models or machine learning algorithms\nIntroduce a R or Python package not learned in class, including live demo\nIntroduce a data science tool (visualization, computing, etc) not learned in class, including live demo\nWeb development: Shiny website or dashboard, including live demo\n\nDetails about the project will be provided as the course progresses. You must complete the final project and be in class to present it in order to pass this course.\n\n\n\n\n\nThe final project presentation is on Monday, 5/6 10:30 AM - 12:30 PM."
+    "text": "Grading Policy\n\nYour final grade is earned out of 1000 total points distributed as follows:\n\nHomework: 500 pts\nIn-class Activity: 200 pts\nFinal project presentation and/or written report: 300 pts\n\n\nYou will NOT be allowed any extra credit projects/homework/exam to compensate for a poor average. Everyone must be given the same opportunity to do well in this class. Individual exam will NOT be curved. \nThe final grade is based on your percentage of points earned out of 1000 points and the grade-percentage conversion Table. \\([x, y)\\) means greater than or equal to \\(x\\) and less than \\(y\\). For example, 94.1 is in \\([93, 100]\\) and the grade is A and 92.8 is in \\([90, 94)\\) and the grade is A-.\n\n\n\n\nGrade-Percentage Conversion\n\n\nGrade\nPercentage\n\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[70, 77)\n\n\nF\n[0, 70)\n\n\n\n\n\n\n\nYou may use any programming language to complete your homework and/or your project.\n\n\nHomework\n\n\nHomework will be assigned through the course website in weekly modules.\nTo submit your homework, please go to D2L > Assessments > Dropbox and upload your homework in PDF format.\nNo late or make-up homework for any reason.\n\n\n\nIn-Class Activity\n\nThere will be 3 to 4 in-class activities.\nStudents will learn from each other by presenting and discussing the assigned topics.\nMore details about the in-class activities will be released later.\n\n\n\nProject\n\nThe final project includes two parts: written report and oral presentation.\nYou need to participate (in-person) in the final presentation in order to pass the course.\nThe final project presentation is on Thursday, 5/9, 8 - 10 AM.\nMore details about the written report and oral presentation will be released later."
   },
   {
     "objectID": "course-syllabus.html#sharingreusing-code-policy",
@@ -795,7 +767,7 @@
     "href": "course-syllabus.html#important-dates",
     "title": "Syllabus",
     "section": "Important dates",
-    "text": "Important dates\n\nJan 24: Last day to add/swap/drop\nMar 10-16: Spring break\nMar 12: Midterm grade submission\nMar 28 - Apr 1: Easter break\nApr 12: Withdrawal deadline\nMay 4: Last day of class\nMay 6: Final project presentation\nMay 14: Final grade submission\n\nClick here for the full Marquette academic calendar."
+    "text": "Important dates\n\nJan 24: Last day to add/swap/drop\nMar 10-16: Spring break\nMar 12: Midterm grade submission\nMar 28 - Apr 1: Easter break\nApr 12: Withdrawal deadline\nMay 4: Last day of class\nMay 9: Final project presentation/report submission\nMay 14: Final grade submission\n\nClick here for the full Marquette academic calendar."
   },
   {
     "objectID": "computing-troubleshooting.html",
