@@ -28,7 +28,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/mssc6250-s24
+        href: https://github.com/mssc6250-s24/website
         text: "GitHub organization"
       # - icon: code-square
       #   href: https://cmgr.oit.duke.edu/containers
