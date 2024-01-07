@@ -508,7 +508,7 @@
     "href": "index.html",
     "title": "MSSC 6250 - Statistical Machine Learning",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance trade-off\n\n\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression\n📖\n\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n\n\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n\n\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n\n\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n\n\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n\n\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n\n\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n\n\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance trade-off\n\n\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression\n📖\n\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n\n\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n\n\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n\n\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n\n\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n\n\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n\n\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n\n\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
     "objectID": "course-team.html",
@@ -649,6 +649,174 @@
     "title": "Welcome Aboard 🙌",
     "section": "Attendance and COVID-19",
     "text": "Attendance and COVID-19\n\nIt is your responsibility as a Marquette University student to protect the health and safety of our community in this course.\nVisit What to do if you are exposed to COVID-19 or test positive website for university guidelines on the best course of action.\nVisit guidance on Spring 2024 Class attendance, withdrawal, and grading\n\nStudents are responsible for contacting instructors prior to the missed class session to indicate absence and the need to make up classwork/assignments.\n\nStudents requesting make up classwork/assignments are required to provide the COVID Cheq “stop sign” to confirm inability to attend class.\n\n\n\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/02-overview.html#imageobject-recognition",
+    "href": "slides/02-overview.html#imageobject-recognition",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Image/Object Recognition",
+    "text": "Image/Object Recognition\n\n\n\n\n\n\n\n\n\nMachine learning is everywhere.\nCan we train a machine to have an ability to recognize dogs and cats?\nhundreds of thousands of objects?"
+  },
+  {
+    "objectID": "slides/02-overview.html#recommender-system",
+    "href": "slides/02-overview.html#recommender-system",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Recommender System",
+    "text": "Recommender System\n\n\nwatch one video on YouTube, then lots of other videos that never show up pop up.\nCheck some items on Amazon, then it recommends some other items saying “you may also like XXX”\nThis kind of recommendation relies on machine learning.\nHow does the model know you may also like those items. Well the model learn this from other customer surfing and purchasing history."
+  },
+  {
+    "objectID": "slides/02-overview.html#covid-detection",
+    "href": "slides/02-overview.html#covid-detection",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "COVID Detection",
+    "text": "COVID Detection"
+  },
+  {
+    "objectID": "slides/02-overview.html#stock-price-forecasting",
+    "href": "slides/02-overview.html#stock-price-forecasting",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Stock Price Forecasting",
+    "text": "Stock Price Forecasting"
+  },
+  {
+    "objectID": "slides/02-overview.html#risk-factors-for-cancer",
+    "href": "slides/02-overview.html#risk-factors-for-cancer",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Risk Factors for Cancer",
+    "text": "Risk Factors for Cancer"
+  },
+  {
+    "objectID": "slides/02-overview.html#how-we-solve-real-life-problems",
+    "href": "slides/02-overview.html#how-we-solve-real-life-problems",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "How We Solve Real-Life Problems?",
+    "text": "How We Solve Real-Life Problems?\n\nWe describe and formulate our problems/questions by models.\n\n\n\nSolve problems/Answer questions by doing inference and/or predictions from the built model using the information from the data and computer algorithms.\n\n\n\n\nSo what is Machine Learning?\n\n\nMathematical/statistical or machine learning models.\nwe know the eating habits from a data of 100 american people. How do we know the the eating habits of all the people in the united states.\nIf we know someone’s GPA and major, how can we predict his salary after graduation?"
+  },
+  {
+    "objectID": "slides/02-overview.html#machine-learning-vs.-statistical-learning",
+    "href": "slides/02-overview.html#machine-learning-vs.-statistical-learning",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Machine Learning vs. Statistical Learning",
+    "text": "Machine Learning vs. Statistical Learning\n\n\nMachine learning (ML) is a field in Computer Science (CS).\n\n\n“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell, Professor of ML at Carnegie Mellon University\n\n\ncomputer programs = software and algorithms\nexperience = data\ntasks = problems\n\n\n\nThe ML algorithms are mainly for predictive modeling problems, and many have been borrowed from Statistics, for example, linear regression.\nML is a CS perspective on modeling data with a focus on algorithmic methods.\n\n\n\n\nWait, I am a statistical modeler (computational statistician), and this is exactly what I am doing!"
+  },
+  {
+    "objectID": "slides/02-overview.html#machine-learning-vs.-statistical-learning-1",
+    "href": "slides/02-overview.html#machine-learning-vs.-statistical-learning-1",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Machine Learning vs. Statistical Learning",
+    "text": "Machine Learning vs. Statistical Learning\n\n\nStatistical learning, used to be called Applied Statistics (what a “fancy” name, 🤣), arose as a subfield of Statistics.\n\n\n\nStatistical learning refers to a set of tools for modeling and understanding complex datasets. – An Introduction to Statistical Learning\n\n\n…to extract important patterns and trends, and understand “what the data says.” We call this learning from data. – The Elements of Statistical Learning\n\n\ntools = mathematics, computing hardware/software/architecture, programming languages, algorithms, etc.\nStatistical learning is a mathematical perspective on modeling data with a focus on data models and on goodness of fit."
+  },
+  {
+    "objectID": "slides/02-overview.html#machine-learning-vs.-statistical-learning-2",
+    "href": "slides/02-overview.html#machine-learning-vs.-statistical-learning-2",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Machine Learning vs. Statistical Learning",
+    "text": "Machine Learning vs. Statistical Learning\n\nMachine learning emphasizes algorithms and automation.\nStatistical learning emphasizes modeling, interpretability, and uncertainty.\n\n\n\nThe distinction is blur:\n\nA machine learner needs a well-built statistical model that quantifies uncertainty about prediction\nA statistical learner needs a computationally efficient algorithm to deal with large complex data.\n\n\n\n\n\n\nBUT, one thing for sure. Machine learning has the upper hand in marketing!"
+  },
+  {
+    "objectID": "slides/02-overview.html#fancy-terms-and-larger-grant",
+    "href": "slides/02-overview.html#fancy-terms-and-larger-grant",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Fancy Terms and Larger Grant!",
+    "text": "Fancy Terms and Larger Grant!\n\n\n\n\n\n\n\nSource: http://statweb.stanford.edu/~tibs/stat315a/glossary.pdf"
+  },
+  {
+    "objectID": "slides/02-overview.html#section-1",
+    "href": "slides/02-overview.html#section-1",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "",
+    "text": "Source: All of Statistics"
+  },
+  {
+    "objectID": "slides/02-overview.html#types-of-learning",
+    "href": "slides/02-overview.html#types-of-learning",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Types of Learning",
+    "text": "Types of Learning"
+  },
+  {
+    "objectID": "slides/02-overview.html#supervised-learning",
+    "href": "slides/02-overview.html#supervised-learning",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nResponse Y (output, outcome, target, label, dependent/endogenous variable)\nVector of p predictors X = (X_1, X_2, \\dots, X_p) (inputs, features, regressors, covariates, explanatory/exogenous/independent variable).\n\n\n\nRegression: Y is numeric (e.g price, blood pressure). (if p = 1, simple regression; if p > 1, multiple regression)\nClassification: Y is categorical (e.g survived/died, digit 0-9, cancer class of tissue sample).\n\n\n\n\nTraining data \\mathcal{D} = \\{(x_1, y_1), \\dots ,(x_n , y_n)\\} =\\{(x_i, y_i)\\}_{i=1}^n, x_i \\in \\mathbf{R}^p.\n\n\n\nGoal: Use training data (E) to train our model for better inference/prediction on the response (T)\n\nLearn a mapping from inputs to outputs."
+  },
+  {
+    "objectID": "slides/02-overview.html#regression-example",
+    "href": "slides/02-overview.html#regression-example",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Regression Example",
+    "text": "Regression Example\n\nGoal: Establish the relationship between salary and demographic variables.\n\n\nSource: ISL Fig. 1.1"
+  },
+  {
+    "objectID": "slides/02-overview.html#statistics-nah-machine-learning-neat",
+    "href": "slides/02-overview.html#statistics-nah-machine-learning-neat",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Statistics Nah… Machine Learning Neat!",
+    "text": "Statistics Nah… Machine Learning Neat!\n\nSource: https://towardsdatascience.com/the-actual-difference-between-statistics-and-machine-learning-64b49f07ea3"
+  },
+  {
+    "objectID": "slides/02-overview.html#statistics-nah-machine-learning-neat-1",
+    "href": "slides/02-overview.html#statistics-nah-machine-learning-neat-1",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Statistics Nah… Machine Learning Neat!",
+    "text": "Statistics Nah… Machine Learning Neat!"
+  },
+  {
+    "objectID": "slides/02-overview.html#classification-example",
+    "href": "slides/02-overview.html#classification-example",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Classification Example",
+    "text": "Classification Example\n\nGoal: Build a customized spam filtering system\n\n\nSource: http://penplusbytes.org/strategies-for-dealing-with-e-mail-spam/"
+  },
+  {
+    "objectID": "slides/02-overview.html#classification-example-1",
+    "href": "slides/02-overview.html#classification-example-1",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Classification Example",
+    "text": "Classification Example\n\n\n\n\nSource: https://www.yesware.com/blog/email-spam/\n\n\n\n\n\nData: 4601 emails sent to George at HP, before 2000. Each is labeled as spam or email.\nInputs: relative frequencies of 57 of the commonly occurring words and punctuation marks.\n\n\n\n\n\nSource: The elements of statistical learning"
+  },
+  {
+    "objectID": "slides/02-overview.html#objectives-of-supervised-learning",
+    "href": "slides/02-overview.html#objectives-of-supervised-learning",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Objectives of Supervised Learning",
+    "text": "Objectives of Supervised Learning\nOn the basis of the training data (E) we’d like to :\n\n(T) Prediction: Accurately predict unseen test cases.\n\nGiven a new test input (age, year, education), what is predicted salary level?\nGiven a new bunch of words in the email, does the model classify the email correctly?\n\n\n\n\n\n(T) Inference Understand which inputs affect the outcome, and how.\n\nIf education is up one level, how much salary will increase on average?\nIf “!” increases one more time, how much percentage does the probability of being labeled as spam go up?\n\n\n\n\n\n\n(P) Assess the quality of our predictions and inferences.\n\nUse evalution metrics to assess the performance of a machine learning model/algorithm."
+  },
+  {
+    "objectID": "slides/02-overview.html#unsupervised-learning",
+    "href": "slides/02-overview.html#unsupervised-learning",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\n\nNo outcome variable, just a set of features measured on a set of samples.\nOur training sample is \\mathcal{D} = \\{x_1, \\dots, x_n\\}, x_i \\in \\mathbf{R}^p.\n\n\n\nObjective is more fuzzy\n\nfind groups of samples or features that behave similarly (Clustering)\n\nfind linear combinations of features with the most variation (Dimension Reduction).\n\n\n\n\n\n\nDifficult to know how well you are doing.\nCan be useful as a pre-processing step for supervised learning."
+  },
+  {
+    "objectID": "slides/02-overview.html#clustering-example",
+    "href": "slides/02-overview.html#clustering-example",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Clustering Example",
+    "text": "Clustering Example\n\nCustomer Segmentation: dividing customers into groups or clusters on the basis of common characteristics.\n\n\nSource: https://www.datacamp.com/community/tutorials/introduction-customer-segmentation-python"
+  },
+  {
+    "objectID": "slides/02-overview.html#deep-learning",
+    "href": "slides/02-overview.html#deep-learning",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Deep Learning",
+    "text": "Deep Learning\n\nAn (artifical) neural network is a machine learning model inspired by the biological neural networks that constitute animal brains.\n\n\n\n\n\nSource: Wiki"
+  },
+  {
+    "objectID": "slides/02-overview.html#section-2",
+    "href": "slides/02-overview.html#section-2",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "",
+    "text": "A neural network with several hidden layers is called a deep neural network, or deep learning.\n\nSource: ISL Ch 10"
+  },
+  {
+    "objectID": "slides/02-overview.html#accuracy-and-interpretability-trade-off",
+    "href": "slides/02-overview.html#accuracy-and-interpretability-trade-off",
+    "title": "Overview of Statistical Machine Learning 💻",
+    "section": "Accuracy and Interpretability Trade-Off",
+    "text": "Accuracy and Interpretability Trade-Off\n\n\n\n\nSource: ISL Fig. 2.7\n\n\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "computing-pipelines.html",
