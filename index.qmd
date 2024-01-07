@@ -9,7 +9,7 @@ This page contains an outline of the topics, content, and assignments for the se
 | Week | Date        | Topic                                     | To Do |                                      Slides                                      | In-class Activities | Homework | Project |
 |:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
 |  1   | Tue, Jan 16 | Syllabus/Overview of Statistical Learning |  📖   | [🖥️](slides/01-syllabus.html "Syllabus")[🖥️](slides/02-overview.html "Overview") |                     |          |         |
-|      | Thu, Jan 18 | Bias-variance trade-off                   |       |                                                                                  |                     |          |         |
+|      | Thu, Jan 18 | Bias-variance trade-off                   |       |                [🖥️](slides/03-bias-var.html "bias-var-tradeoff")                 |                     |          |         |
 |  2   | Tue, Jan 23 | Linear Regression                         |  📖   |                                                                                  |                     |          |         |
 |      | Thu, Jan 25 | Linear Regression                         |       |                                                                                  |                     |          |         |
 |  3   | Tue, Jan 30 | Ridge Regression                          |  📖   |                                                                                  |                     |          |         |
