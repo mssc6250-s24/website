@@ -15,3 +15,4 @@ LaTeX: pdfLaTeX
 StripTrailingWhitespace: Yes
 
 BuildType: Website
+WebsitePath: /Users/chenghanyu/Dropbox/academia/teaching/machine_learning/mssc6250-s24-website

@@ -1,0 +1,494 @@
+---
+title: "Welcome Aboard `r emo::ji('raised_hands')`"
+subtitle: "MSSC 6250 Statistical Machine Learning"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+format: 
+  revealjs:
+    html-math-method: katex
+    highlight-style: github
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[mssc6250-s24.github.io/website](https://mssc6250-s24.github.io/website/)"
+    theme: ["simple", "styles.scss"]
+    echo: false
+    multiplex: true
+    code-link: true
+    transition: none ## fade slide convex concave zoom
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: auto
+  echo: false
+---
+
+
+# {visibility="hidden"}
+
+
+\def\bx{\mathbf{x}}
+\def\bg{\mathbf{g}}
+\def\bw{\mathbf{w}}
+\def\bbeta{\boldsymbol \beta}
+\def\bX{\mathbf{X}}
+\def\by{\mathbf{y}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\T{\text{T}}
+\def\cov{\mathrm{Cov}}
+\def\cor{\mathrm{Corr}}
+\def\var{\mathrm{Var}}
+\def\E{\mathrm{E}}
+\def\bmu{\boldsymbol \mu}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\Trace{\text{Trace}}
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+# library(countdown)
+library(emo)
+library(knitr)
+library(kableExtra)
+# library(gt)
+# library(gtExtras)
+# library(ggplot2)
+# library(tidyverse)
+# library(tidymodels)
+# library(ISLR2)
+# library(genridge)
+# library(glmnet)
+# library(gam)
+# library(splines)
+# library(MASS)
+
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/01-syllabus/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+```
+
+
+
+# Taipei, Taiwan {background-image="images/01-syllabus/taiwan.jpeg" background-size="cover" background-position="50% 50%" background-color="#447099"}
+
+::: {.absolute bottom="50" right="10"}
+![](images/01-syllabus/taiwan.svg){width="500" fig-alt="Taiwan location"}
+:::
+
+## My Journey {background-image="images/01-syllabus/sample_gate.png" background-size="cover" background-position="50% 50%" background-opacity="0.3"}
+
+-   Assistant Professor (2020/08 - )
+
+```{r}
+#| out.width: 20%
+#| fig.align: center
+knitr::include_graphics("./images/01-syllabus/mu.svg")
+```
+
+-   Postdoctoral Fellow
+
+```{r}
+#| out.width: 20%
+#| fig.align: center
+knitr::include_graphics("./images/01-syllabus/rice.png")
+```
+
+-   PhD in Statistics
+
+```{r}
+#| out.width: 20%
+#| fig.align: center
+knitr::include_graphics("./images/01-syllabus/ucsc.png")
+```
+
+-   MA in Economics/PhD program in Statistics
+
+```{r}
+#| out.width: 20%
+#| fig.align: center
+knitr::include_graphics("./images/01-syllabus/iub.png")
+```
+
+## My Research
+
+-   Bayesian spatio-temporal modeling and machine learning algorithms in neuroimaging
+-   Bayesian Deep Learning for image classification
+-   Efficient MCMC for high dimensional regression
+-   Game-based learning for STEM and data science education
+
+::: columns
+::: column
+**fMRI**
+
+```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/activate.png")
+```
+:::
+
+::: column
+**EEG**
+
+```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/eeg.png")
+```
+:::
+:::
+
+## How to Reach Me
+
+- Office hours **TuTh 4:50 - 5:50 PM** and **W 12 - 1 PM** in **Cudahy Hall 353**.
+- `r emo::ji('e-mail')`  <cheng-han.yu@marquette.edu> 
+  + Answer your question within 24 hours. 
+  + Expect a reply on **Monday** if shoot me a message **on weekends**.
+  + Start your subject line with **[mssc6250]** followed by a **clear description of your question**. 
+  
+
+```{r}
+#| echo: false
+#| out-width: 45%
+#| fig-align: center
+knitr::include_graphics("./images/01-syllabus/email6250.png")
+```
+  + I will **NOT** reply your e-mail if ... **Check the email policy in the [syllabus](./syllabus-6250-spring2023.pdf)**!
+  
+
+## Prerequisites
+- On bulletin: MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MATH 4780 (Regression Analysis)
+
+- Programming experience (Who does machine learning without coding?)
+
+. . .
+
+- Having taken MATH 5700 (Probability) and MATH 5710 (Stats Inference) or other math and statistics courses (Stats Computing, etc) is recommended.
+
+## Textbook
+::: columns
+::: column
+- [(**ISL**) *An Introduction to Statistical Learning, 2nd edition*](https://www.statlearning.com/), by James et al. Publisher: Springer. 
+<!-- - The 5th edition is sufficient. -->
+- Discuss all chapters except Chapter 11 (survival analysis) and 13 (multiple testing).
+- R and Python code
+
+In the Preface, 
+
+> *... for advanced undergraduates or master's students in Statistics or related quantitative fields,*
+
+> *... concentrate more on the applications of the methods and less on the mathematical details.*
+
+:::
+
+
+::: column
+```{r}
+#| echo: false
+#| out-width: 65%
+knitr::include_graphics("./images/01-syllabus/isl.png")
+```
+:::
+
+:::
+
+
+## Optional References {visibility="hidden"}
+
+::: columns
+
+::: column
+- [(**HML**) *Hands-On Machine Learning with R*](https://bradleyboehmke.github.io/HOML/), by Bradley Boehmke and Brandon Greenwell. Publisher: CRC Press.
+- Focus on R implementation
+:::
+
+::: column
+```{r}
+knitr::include_graphics("./images/01-syllabus/hmlr.png")
+```
+:::
+:::
+
+## Optional References
+
+::: columns
+::: column
+- [(**PMLI**) *Probabilistic Machine Learning: An Introduction*](https://probml.github.io/pml-book/book1.html), by Kevin Murphy. Publisher: MIT Press. 
+
+- Self-contained with lots of mathematics foundations
+- Python code
+:::
+
+::: column
+```{r}
+#| out-width: 85%
+knitr::include_graphics("./images/01-syllabus/pmli.png")
+```
+:::
+:::
+
+
+
+## Optional References
+::: columns
+::: column
+- [(**PMLA**) *Probabilistic Machine Learning: Advanced Topics*](https://probml.github.io/pml-book/book2.html), by Kevin Murphy. Publisher: MIT Press.
+
+- PhD level
+- Probabilistic or distributional-based
+<!-- - Bayesian 🤟 -->
+
+:::
+
+::: column
+```{r}
+#| out-width: 85%
+knitr::include_graphics("./images/01-syllabus/pmla.png")
+```
+:::
+:::
+
+
+## Optional References
+::: columns
+::: column
+- [(**ESL**) *The Elements of Statistical Learning, 2nd edition*](https://hastie.su.domains/ElemStatLearn/), by Hastie et. al. Publisher: Springer.
+
+- For PhD students or researchers in mathematical sciences
+- Frequentist-based
+:::
+
+
+::: column
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("./images/01-syllabus/esl.png")
+```
+:::
+:::
+
+
+
+
+
+## Course Website - <https://mssc6250-s24.github.io/website/>
+
+```{r}
+knitr::include_graphics("./images/01-syllabus/website.png")
+```
+
+  
+
+
+## Learning Management System ([D2L](https://d2l.mu.edu/d2l/home/544009))
+
+```{r}
+knitr::include_graphics("./images/01-syllabus/d2l_6250.png")
+```
+
+- Any new announcement will be posted in **News** in **Course Home**.
+<!-- - **Content > Start Here: Course Information** includes syllabus and other useful information. -->
+<!-- - Week modules (**Content > Week 1 to Week 15**) include course materials. -->
+- Submit your homework **Assessments > Dropbox**.
+
+- Go to <https://www.marquette.edu/remote-learning/d2l.php> to learn more about D2L.
+
+
+## Grading Policy &#x2728;
+- The grade is earned out of **1000 total points** distributed as follows:
+  - **Homework: 500 pts**
+  - **Class activity: 200 pts**
+  - **Final project presentation and/or written report: 300 pts**
+  
+  <!-- - Midterm or Final Exam? -->
+  <!-- - Attendance and class participation? -->
+
+- `r emo::ji("x")` No extra credit projects/homework/exam to compensate for a poor grade. 
+
+<!-- - Individual grade will **NOT** be curved. -->
+
+<!-- - This is not a course that gives most of students grade A. Want to obtain a good grade? Study hard. No pain, no gain! &#x270D; &#x270D; -->
+
+
+## Grade-Percentage Conversion
+
+- Your final grade is based on your percentage of pts earned out of 1000 pts.
+- $[x, y)$ means greater than or equal to $x$ and less than $y$.
+
+```{r}
+letter <- c("A", "A-", "B+", "B", "B-", "C+", "C", "F")
+percentage <- c("[94, 100]", "[90, 94)", "[87, 90)", "[83, 87)", "[80, 83)",
+                "[77, 80)", "[70, 77)", "[0, 70)")
+grade_dist <- data.frame(Grade = letter, Percentage = percentage)
+knitr::kable(grade_dist, longtable = TRUE, caption = "") |> kable_styling(position = "center", font_size = 40)
+```
+
+## Homework (500 pts)
+
+<!-- - There are 4 homework sets. -->
+- **Assessments > Dropbox** and upload your homework in **PDF** format.
+
+- `r emo::ji("x")` **No make-up homework**.
+
+- Due **Friday 11:59 PM ** (**Hard deadline and no late submission**).
+
+- You have **at least one week** to finish your homework.
+
+<!-- - Your homework grade is based on (1) the completeness and correctness of your PDF document and (2) your in-class presentation of homework questions. -->
+
+
+## In-Class Activity (200 pts)
+
+- There will be 3 to 4 in-class activities.
+
+- Students will learn from each other by presenting and discussing the assigned topics.
+
+- More details about the in-class activities will be released later.
+
+
+
+## Final Project (300 pts)
+
+
+- The final project includes two parts: written report and oral presentation?.
+
+- [**You have to participate (in-person) in the final presentation in order to pass the course.**]{.green}
+
+- More details about the project will be released later.
+
+
+
+## Which Programming Language?
+
+::: columns
+::: {.column width="25%"}
+```{r}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg")
+```
+
+:::
+
+::: {.column width="25%"}
+```{r}
+knitr::include_graphics("https://www.r-project.org/logo/Rlogo.png")
+```
+:::
+
+::: {.column width="25%"}
+```{r}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png")
+```
+:::
+
+::: {.column width="25%"}
+```{r}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg")
+```
+:::
+
+:::
+
+[Use any language you want!]{.r-fit-text .fragment style="color: #EE6331;"}
+
+## Academic Integrity
+
+This course expects all students to follow University and College statements on [academic integrity](https://bulletin.marquette.edu/undergrad/academicregulations/).
+
+- **Honor Pledge and Honor Code**: *I recognize the importance of personal integrity in all aspects of life and work. I commit myself to truthfulness, honor, and responsibility, by which I earn the respect of others. I support the development of good character, and commit myself to uphold the highest standards of academic integrity as an important aspect of personal integrity. My commitment obliges me to conduct myself according to the Marquette University Honor Code*.
+
+<!-- - `r emo::ji("x")` `r emo::ji("x")` `r emo::ji("x")` You know what I am talking about. Yes, **DO NOT CHEAT**. `r emo::ji("x")` `r emo::ji("x")` `r emo::ji("x")` -->
+
+
+## Attendance and COVID-19
+- It is **your** responsibility as a Marquette University student to protect the health and safety of our community in this course.
+- Visit [What to do if you are exposed to COVID-19 or test positive](https://www.marquette.edu/coronavirus/what-to-do-if-you-are-exposed-or-test-positive.php) website for university guidelines on the best course of action. 
+- Visit guidance on Spring 2024 [Class attendance, withdrawal, and grading](https://www.marquette.edu/central/registrar/faculty-staff/guidance-on-spring-2024-class-attendance-withdrawal-grading.php)
+  + Students are responsible for contacting instructors prior to the missed class session to indicate absence and the need to make up classwork/assignments.  
+  + Students requesting make up classwork/assignments are required to provide the COVID Cheq "stop sign" to confirm inability to attend class.
+  
+
+<!-- ## Comments and Questions from the Background Survey -->
+<!-- `r emo::ji("question")` **... I hope to start with a refresher on basics of the math required in this subject.**   -->
+<!-- `r emo::ji("point_right")` We will review probability, statistics, and matrix algebra before we need them. -->
+
+<!-- <br> -->
+
+<!-- `r emo::ji("question")` **... any way to receive assignments and projects with as much lead time as possible to allow for adequate planning would be most appreciated.**   -->
+<!-- `r emo::ji("point_right")` You have at least one week to do your homework. I'll try to release assignments as early as possible. -->
+
+<!-- <br> -->
+
+<!-- `r emo::ji("question")` **I am hoping course material/lectures may be available online as well as in person.**   -->
+<!-- `r emo::ji("point_right")` All course materials will be put on D2L. I am not planning to record lectures because of low watching rate and solving time-consuming technical issues during classes. -->
+
+
+<!-- <br> -->
+
+<!-- `r emo::ji("question")` **I like when topics such as these are related back to the real world.**   -->
+<!-- `r emo::ji("point_right")` We will deal with some real data sets. But the data sets are much smaller and more organized than the real-world data. We focus on methodology, not data cleaning, tidying or wrangling. -->
+
+
+<!-- ## Code {background-color="black"} -->
+
+<!-- - Let try some `code` and see what `happened` -->
+
+
+<!-- ## Code -->
+
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- library(ggplot2) -->
+<!-- ggplot(airquality, aes(Ozone, Temp)) +  -->
+<!--         geom_point() +  -->
+<!--         geom_smooth(method = "loess", se = FALSE) -->
+<!-- ``` -->
+
