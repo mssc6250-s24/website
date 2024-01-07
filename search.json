@@ -151,21 +151,21 @@
     "href": "weeks/week-4.html#participate",
     "title": "Week 4",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - R/Python Data Frames for Data Science"
+    "text": "Participate"
   },
   {
     "objectID": "weeks/week-4.html#reading-and-resources",
     "href": "weeks/week-4.html#reading-and-resources",
     "title": "Week 4",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 tibble\n📖 pipes\n📖 NumPy\n📖 pandas"
+    "text": "Reading and Resources"
   },
   {
     "objectID": "weeks/week-4.html#perform",
     "href": "weeks/week-4.html#perform",
     "title": "Week 4",
     "section": "Perform",
-    "text": "Perform\n📋 Lab-08 Tibbles and Pipes\n📋 Lab-09 NumPy and pandas\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-1.html",
@@ -179,21 +179,21 @@
     "href": "weeks/week-1.html#reading-and-resources",
     "title": "Week 1",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Introduction\n📖 R for Data Science - Whole game\n📖 RStudio IDE :: Cheatsheet\n📖 Posit Cloud Guide"
+    "text": "Reading and Resources"
   },
   {
     "objectID": "weeks/week-1.html#participate",
     "href": "weeks/week-1.html#participate",
     "title": "Week 1",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Welcome to MATH/COSC 3570\n🖥️ Slides - Overview of Data Science\n🖥️ Slides - Posit Cloud\n ggplot2::mpg\n ggplot2::diamond"
+    "text": "Participate"
   },
   {
     "objectID": "weeks/week-1.html#perform",
     "href": "weeks/week-1.html#perform",
     "title": "Week 1",
     "section": "Perform",
-    "text": "Perform\n📋 Lab-00 Posit Cloud\n📋 Lab-01 Running R Script\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-3.html",
@@ -207,21 +207,21 @@
     "href": "weeks/week-3.html#participate",
     "title": "Week 3",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - R/Python Syntax"
+    "text": "Participate"
   },
   {
     "objectID": "weeks/week-3.html#reading-and-resources",
     "href": "weeks/week-3.html#reading-and-resources",
     "title": "Week 3",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 The R Graph Gallery\n📖 matplotlib"
+    "text": "Reading and Resources"
   },
   {
     "objectID": "weeks/week-3.html#exercise",
     "href": "weeks/week-3.html#exercise",
     "title": "Week 3",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-05 R Data Summary\n📋 Lab-06 Python Data Structure\n📋 Lab-07 Plotting (Present)\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-2.html",
@@ -235,21 +235,21 @@
     "href": "weeks/week-2.html#reading-and-resources",
     "title": "Week 2",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n\nGit/GitHub\n📖 Create a personal access token (PAT)\n📖 Two-factor authentication\n📖 Git hands-on session within RStudio\n📖 Happy Git and GitHub for the useR\n📖 Happier version control with Git and GitHub\n\n\nMarkdown\n📖 Markdown Tutorial\n📖 Mastering Markdown GitHub Guides\n📖 Markdown Guide\n\n\nQuarto\n📖 Quarto Website\n📖 Get Started with Quarto\n📖 R for Data Science - Quarto"
+    "text": "Reading and Resources"
   },
   {
     "objectID": "weeks/week-2.html#participate",
     "href": "weeks/week-2.html#participate",
     "title": "Week 2",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Git/GitHub\n🖥️ Slides - Quarto"
+    "text": "Participate"
   },
   {
     "objectID": "weeks/week-2.html#perform",
     "href": "weeks/week-2.html#perform",
     "title": "Week 2",
     "section": "Perform",
-    "text": "Perform\n📋 Lab-00 Git/GitHub\n📋 Lab-02 Quarto File\n📋 Lab-03 Markdown\n📋 Lab-04 Code Chunk\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-10.html",
@@ -523,6 +523,132 @@
     "title": "Teaching team",
     "section": "Teaching assistants",
     "text": "Teaching assistants\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nMartha Aboagye\nThursday 7 - 9 pm\nZoom\n\n\n\nRichard Fremgen\nLead TA for Section 3 (5:15 pm)\nTues 7 - 9 pm\nZoom\n\n\n\nEmily Gentles\nLead TA for Section 1 (1:45pm)\nWednesday 1 - 3 pm\nOld Chem 203B (On Zoom until January 18)\n\n\n\nSara Mehta\nMon 2 - 4 pm\nZoom\n\n\n\nRick Presman\nHead TA\nLead TA for Section 2 (3:30pm)\nThursday 3:30 - 4:30 pm\nFri 9 - 10 am\nZoom\n\n\n\nShari Tian\nTue 8 - 10 am\nZoom\n\n\n\nAaditya Warrier\nMon 12pm - 1pm\nFri 1:30 - 2:30 pm\nZoom"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#my-journey",
+    "href": "slides/01-syllabus.html#my-journey",
+    "title": "Welcome Aboard 🙌",
+    "section": "My Journey",
+    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#my-research",
+    "href": "slides/01-syllabus.html#my-research",
+    "title": "Welcome Aboard 🙌",
+    "section": "My Research",
+    "text": "My Research\n\nBayesian spatio-temporal modeling and machine learning algorithms in neuroimaging\nBayesian Deep Learning for image classification\nEfficient MCMC for high dimensional regression\nGame-based learning for STEM and data science education\n\n\n\nfMRI\n\n\n\n\n\n\n\n\n\nEEG"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#how-to-reach-me",
+    "href": "slides/01-syllabus.html#how-to-reach-me",
+    "title": "Welcome Aboard 🙌",
+    "section": "How to Reach Me",
+    "text": "How to Reach Me\n\nOffice hours TuTh 4:50 - 5:50 PM and W 12 - 1 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [mssc6250] followed by a clear description of your question.\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#prerequisites",
+    "href": "slides/01-syllabus.html#prerequisites",
+    "title": "Welcome Aboard 🙌",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nOn bulletin: MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MATH 4780 (Regression Analysis)\nProgramming experience (Who does machine learning without coding?)\n\n\n\nHaving taken MATH 5700 (Probability) and MATH 5710 (Stats Inference) or other math and statistics courses (Stats Computing, etc) is recommended."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#textbook",
+    "href": "slides/01-syllabus.html#textbook",
+    "title": "Welcome Aboard 🙌",
+    "section": "Textbook",
+    "text": "Textbook\n\n\n\n\n(ISL) An Introduction to Statistical Learning, 2nd edition, by James et al. Publisher: Springer. \n\nDiscuss all chapters except Chapter 11 (survival analysis) and 13 (multiple testing).\nR and Python code\n\nIn the Preface,\n\n… for advanced undergraduates or master’s students in Statistics or related quantitative fields,\n\n\n… concentrate more on the applications of the methods and less on the mathematical details."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#optional-references-1",
+    "href": "slides/01-syllabus.html#optional-references-1",
+    "title": "Welcome Aboard 🙌",
+    "section": "Optional References",
+    "text": "Optional References\n\n\n\n(PMLI) Probabilistic Machine Learning: An Introduction, by Kevin Murphy. Publisher: MIT Press.\nSelf-contained with lots of mathematics foundations\nPython code"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#optional-references-2",
+    "href": "slides/01-syllabus.html#optional-references-2",
+    "title": "Welcome Aboard 🙌",
+    "section": "Optional References",
+    "text": "Optional References\n\n\n\n(PMLA) Probabilistic Machine Learning: Advanced Topics, by Kevin Murphy. Publisher: MIT Press.\nPhD level\nProbabilistic or distributional-based"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#optional-references-3",
+    "href": "slides/01-syllabus.html#optional-references-3",
+    "title": "Welcome Aboard 🙌",
+    "section": "Optional References",
+    "text": "Optional References\n\n\n\n(ESL) The Elements of Statistical Learning, 2nd edition, by Hastie et. al. Publisher: Springer.\nFor PhD students or researchers in mathematical sciences\nFrequentist-based"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#course-website---httpsmssc6250-s24.github.iowebsite",
+    "href": "slides/01-syllabus.html#course-website---httpsmssc6250-s24.github.iowebsite",
+    "title": "Welcome Aboard 🙌",
+    "section": "Course Website - https://mssc6250-s24.github.io/website/\n",
+    "text": "Course Website - https://mssc6250-s24.github.io/website/"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#learning-management-system-d2l",
+    "href": "slides/01-syllabus.html#learning-management-system-d2l",
+    "title": "Welcome Aboard 🙌",
+    "section": "Learning Management System (D2L)",
+    "text": "Learning Management System (D2L)\n\n\nAny new announcement will be posted in News in Course Home.  \nSubmit your homework Assessments > Dropbox.\nGo to https://www.marquette.edu/remote-learning/d2l.php to learn more about D2L."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#grading-policy",
+    "href": "slides/01-syllabus.html#grading-policy",
+    "title": "Welcome Aboard 🙌",
+    "section": "Grading Policy ✨",
+    "text": "Grading Policy ✨\n\nThe grade is earned out of 1000 total points distributed as follows:\n\nHomework: 500 pts\nClass activity: 200 pts\nFinal project presentation and/or written report: 300 pts\n\n\n\n❌ No extra credit projects/homework/exam to compensate for a poor grade."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#grade-percentage-conversion",
+    "href": "slides/01-syllabus.html#grade-percentage-conversion",
+    "title": "Welcome Aboard 🙌",
+    "section": "Grade-Percentage Conversion",
+    "text": "Grade-Percentage Conversion\n\nYour final grade is based on your percentage of pts earned out of 1000 pts.\n\n[x, y) means greater than or equal to x and less than y.\n\n\n\n\n\n\n \n Grade \n    Percentage \n  \n\n\n A \n    [94, 100] \n  \n\n A- \n    [90, 94) \n  \n\n B+ \n    [87, 90) \n  \n\n B \n    [83, 87) \n  \n\n B- \n    [80, 83) \n  \n\n C+ \n    [77, 80) \n  \n\n C \n    [70, 77) \n  \n\n F \n    [0, 70)"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#homework-500-pts",
+    "href": "slides/01-syllabus.html#homework-500-pts",
+    "title": "Welcome Aboard 🙌",
+    "section": "Homework (500 pts)",
+    "text": "Homework (500 pts)\n\n\nAssessments > Dropbox and upload your homework in PDF format.\n❌ No make-up homework.\nDue Friday 11:59 PM  (Hard deadline and no late submission).\nYou have at least one week to finish your homework."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#in-class-activity-200-pts",
+    "href": "slides/01-syllabus.html#in-class-activity-200-pts",
+    "title": "Welcome Aboard 🙌",
+    "section": "In-Class Activity (200 pts)",
+    "text": "In-Class Activity (200 pts)\n\nThere will be 3 to 4 in-class activities.\nStudents will learn from each other by presenting and discussing the assigned topics.\nMore details about the in-class activities will be released later."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#final-project-300-pts",
+    "href": "slides/01-syllabus.html#final-project-300-pts",
+    "title": "Welcome Aboard 🙌",
+    "section": "Final Project (300 pts)",
+    "text": "Final Project (300 pts)\n\nThe final project includes two parts: written report and oral presentation?.\nYou have to participate (in-person) in the final presentation in order to pass the course.\nMore details about the project will be released later."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#which-programming-language",
+    "href": "slides/01-syllabus.html#which-programming-language",
+    "title": "Welcome Aboard 🙌",
+    "section": "Which Programming Language?",
+    "text": "Which Programming Language?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUse any language you want!"
+  },
+  {
+    "objectID": "slides/01-syllabus.html#academic-integrity",
+    "href": "slides/01-syllabus.html#academic-integrity",
+    "title": "Welcome Aboard 🙌",
+    "section": "Academic Integrity",
+    "text": "Academic Integrity\nThis course expects all students to follow University and College statements on academic integrity.\n\n\nHonor Pledge and Honor Code: I recognize the importance of personal integrity in all aspects of life and work. I commit myself to truthfulness, honor, and responsibility, by which I earn the respect of others. I support the development of good character, and commit myself to uphold the highest standards of academic integrity as an important aspect of personal integrity. My commitment obliges me to conduct myself according to the Marquette University Honor Code."
+  },
+  {
+    "objectID": "slides/01-syllabus.html#attendance-and-covid-19",
+    "href": "slides/01-syllabus.html#attendance-and-covid-19",
+    "title": "Welcome Aboard 🙌",
+    "section": "Attendance and COVID-19",
+    "text": "Attendance and COVID-19\n\nIt is your responsibility as a Marquette University student to protect the health and safety of our community in this course.\nVisit What to do if you are exposed to COVID-19 or test positive website for university guidelines on the best course of action.\nVisit guidance on Spring 2024 Class attendance, withdrawal, and grading\n\nStudents are responsible for contacting instructors prior to the missed class session to indicate absence and the need to make up classwork/assignments.\n\nStudents requesting make up classwork/assignments are required to provide the COVID Cheq “stop sign” to confirm inability to attend class.\n\n\n\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "computing-pipelines.html",
