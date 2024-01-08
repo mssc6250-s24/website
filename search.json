@@ -508,7 +508,7 @@
     "href": "index.html",
     "title": "MSSC 6250 - Statistical Machine Learning",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance trade-off\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression\n📖\n\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n\n\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n\n\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n\n\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n\n\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n\n\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n\n\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n\n\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n\n\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance trade-off\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
     "objectID": "course-team.html",
@@ -523,6 +523,223 @@
     "title": "Teaching team",
     "section": "Teaching assistants",
     "text": "Teaching assistants\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nMartha Aboagye\nThursday 7 - 9 pm\nZoom\n\n\n\nRichard Fremgen\nLead TA for Section 3 (5:15 pm)\nTues 7 - 9 pm\nZoom\n\n\n\nEmily Gentles\nLead TA for Section 1 (1:45pm)\nWednesday 1 - 3 pm\nOld Chem 203B (On Zoom until January 18)\n\n\n\nSara Mehta\nMon 2 - 4 pm\nZoom\n\n\n\nRick Presman\nHead TA\nLead TA for Section 2 (3:30pm)\nThursday 3:30 - 4:30 pm\nFri 9 - 10 am\nZoom\n\n\n\nShari Tian\nTue 8 - 10 am\nZoom\n\n\n\nAaditya Warrier\nMon 12pm - 1pm\nFri 1:30 - 2:30 pm\nZoom"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#when-ols-doesnt-work-well",
+    "href": "slides/06-lasso-vs.html#when-ols-doesnt-work-well",
+    "title": "Feature Selection and LASSO \n",
+    "section": "When OLS Doesn’t Work Well",
+    "text": "When OLS Doesn’t Work Well\nWhen \\(p \\gg n\\), it is often that many of the features in the model are not associated with the response.\n\nModel Interpretability: By removing irrelevant features \\(X_j\\)s, i.e., setting the corresponding \\(\\beta_j\\)s to zero, we can obtain a model that is more easily interpreted. (Feature/Variable selection)\nLeast squares is unlikely to yield any coefficient estimates that are exactly zero."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#three-classes-of-methods",
+    "href": "slides/06-lasso-vs.html#three-classes-of-methods",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Three Classes of Methods",
+    "text": "Three Classes of Methods\n\n\nSubset Selection. Identify a subset of all the candidate predictors with the best OLS performance.\n\n\nAll possible selection olsrr::ols_step_all_possible()\n\nBest subset olsrr::ols_step_best_subset()\n\nForward stepwise selection olsrr::ols_step_forward_p()\n\nBackward stepwise elimination olsrr::ols_step_backward_p()\n\nHybrid stepwise selection olsrr::ols_step_both_p()\n\n\n\n\n\n\n\nShrinkage. Fit a model that forces some coefficients to be shrunk to zero.\n\n\nLasso glmnet::glmnet()\n\n\n\n\n\n\n\n\nDimension Reduction. Find \\(m\\) representative features that are linear combinations of the \\(p\\) original predictors (\\(m \\ll p\\)), then fit least squares.\n\n\nPrincipal component regression (Unsupervised) pls::pcr()\n\nPartial least squares (Supervised) pls::plsr()\n\n\n\n\nWe then fit a model using least squares on the reduced set of variables."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#variable-selection",
+    "href": "slides/06-lasso-vs.html#variable-selection",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Variable Selection",
+    "text": "Variable Selection\n\nWe have a large pool of candidate regressors, of which only a few are likely to be important.\n\nTwo “conflicting” goals in model building:\n\nas many features as possible for better predictive performance on new data (smaller bias).\n\nas few regressors as possible because as the number of regressors increases,\n\n\n\\(\\mathrm{Var}(\\hat{y})\\) will increase (larger variance)\ncost more in data collecting and maintaining\nmore model complexity\n\n\n\nA compromise between the two hopefully leads to the “best” regression equation.\n\nWhat does best mean?\n\n\nThere is no unique definition of “best”, and different methods specify different subsets of the candidate regressors as best."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#model-selection-criteria",
+    "href": "slides/06-lasso-vs.html#model-selection-criteria",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Model Selection Criteria",
+    "text": "Model Selection Criteria\n\nThe full (largest) model has \\(M\\) candidate regressors.\nThere are \\(M \\choose d\\) possible subset models of \\(d\\) coefficients.\nThere are totally \\(2^M\\) possible subset models.\nAn evaluation metric should consider Goodness of Fit and Model Complexity:\n\n\nGoodness of Fit: The more regressors, the better\n\n\nComplexity Penalty: The less regressors, the better\n\n\n\nEvaluate subset models:\n\n\n\\(R_{adj}^2\\) \\(\\uparrow\\)\n\nMallow’s \\(C_p\\) \\(\\downarrow\\)\n\nInformation Criterion (AIC, BIC) \\(\\downarrow\\)\n\n\nPREdiction Sum of Squares (PRESS) \\(\\downarrow\\) (Allen, D.M. (1974))\n\n\n\n\n\n\n\n\n\nNote\n\n\nAll the measures are not appropriate in the high-dimensional (\\(n \\ll p\\)) setting."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#selection-criteria-mallows-c_p-statistic-downarrow",
+    "href": "slides/06-lasso-vs.html#selection-criteria-mallows-c_p-statistic-downarrow",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Selection Criteria: Mallow’s \\(C_p\\) Statistic \\(\\downarrow\\)\n",
+    "text": "Selection Criteria: Mallow’s \\(C_p\\) Statistic \\(\\downarrow\\)\n\nFor a model with \\(d\\) predictors,\n\\[\\begin{align} C_p &= \\frac{SS_{res}(d)}{\\hat{\\sigma}^2} - n + 2d \\\\ &= d + \\frac{(s^2 - \\hat{\\sigma}^2)(n-d)}{\\hat{\\sigma}^2} \\end{align}\\]\n\n\\(\\hat{\\sigma}^2\\) is the variance estimate from the full model, i.e., \\(\\hat{\\sigma}^2 = MS_{res}(M)\\).\n\\(s^2\\) is the variance estimate from the model with \\(d\\) coefficients, i.e., \\(s^2 = MS_{res}(d)\\).\nFavors the candidate model with the smallest \\(C_p\\).\n\nFor unbiased models that \\(E[\\hat{y}_i] = E[y_i]\\), \\(C_p = d\\).\n\nAll of the errors in \\(\\hat{y}_i\\) is variance, and the model is not underfitted.\n\n\n\n\n\n\\(C_p\\) in ISL is defined as \\(C_p = \\frac{1}{n}(SS_{res} + 2d\\hat{\\sigma}^2)\\) which is equivalent to the definition given above."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#mallows-c_p-plot",
+    "href": "slides/06-lasso-vs.html#mallows-c_p-plot",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Mallow’s \\(C_p\\) Plot",
+    "text": "Mallow’s \\(C_p\\) Plot\n\n\n\n\n\n\n\n\n\n\n\n\nModel A is a heavily biased model.\nModel D is the poorest performer.\nModel B and C are reasonable.\nModel C has \\(C_p < 3\\) which implies \\(MS_{res}(3) < MS_{res}(M)\\)"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#selection-criteria-information-criterion-downarrow",
+    "href": "slides/06-lasso-vs.html#selection-criteria-information-criterion-downarrow",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Selection Criteria: Information Criterion \\(\\downarrow\\)\n",
+    "text": "Selection Criteria: Information Criterion \\(\\downarrow\\)\n\nFor a model with \\(d\\) predictors,\n\nAkaike information criterion (AIC) is \\[\\text{AIC} = n \\ln \\left( \\frac{SS_{res}(d)}{n} \\right) + 2d\\]\nBayesian information criterion (BIC) is \\[\\text{BIC} = n \\ln \\left( \\frac{SS_{res}(d)}{n} \\right) + d \\ln (n)\\]\nBIC penalizes more when adding more variables as the sample size increases.\nBIC tends to choose models with less features.\n\n\n\n\\(\\text{AIC}\\) is proportional to \\(C_p\\)."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#selection-criteria-press-downarrow",
+    "href": "slides/06-lasso-vs.html#selection-criteria-press-downarrow",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Selection Criteria: PRESS \\(\\downarrow\\)\n",
+    "text": "Selection Criteria: PRESS \\(\\downarrow\\)\n\n\nPREdiction Sum of Squares (PRESS)\n\\(\\text{PRESS}_d = \\sum_{i=1}^n[y_i - \\hat{y}_{(i)}]^2 = \\sum_{i=1}^n\\left( \\frac{e_i}{1-h_{ii}}\\right)^2\\) where \\(e_i = y_i - \\hat{y}_i\\).1\nPRESS is in fact the LOOCV estimate of test MSE!\n\\(R_{pred, d}^2 = 1 - \\frac{PRESS_d}{SS_T}\\)\n\\(\\text{Absolute PRESS}_p = \\sum_{i=1}^n|y_i - \\hat{y}_{(i)}|\\) can also be considered when some large prediction errors are too influential."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#selection-methods-all-possible-selection",
+    "href": "slides/06-lasso-vs.html#selection-methods-all-possible-selection",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Selection Methods: All Possible Selection",
+    "text": "Selection Methods: All Possible Selection\n\nAssume the intercept is in all models.\nIf there are \\(M\\) possible regressors, we investigate all \\(2^M - 1\\) possible regression equations.\nUse the selection criteria to determine some candidate models and complete regression analysis on them.\n\n\n\n\nmanpower <- read.csv(file = \"./data/manpower.csv\", header = TRUE)\nlm_full <- lm(y ~ ., data = manpower)\nolsrr_all <- olsrr::ols_step_all_possible(lm_full)\nnames(olsrr_all)\n\n [1] \"mindex\"     \"n\"          \"predictors\" \"rsquare\"    \"adjr\"      \n [6] \"predrsq\"    \"cp\"         \"aic\"        \"sbic\"       \"sbc\"       \n[11] \"msep\"       \"fpe\"        \"apc\"        \"hsp\"       \n\n\n\n\n\n\n\n\n\n\n\nn: number of predictors\n\npredictors: predictors in the model\n\nrsquare: R-square of the model\n\nadjr: adjusted R-square of the model\n\npredrsq: predicted R-square of the model\n\ncp: Mallow’s Cp\n\naic: AIC\n\nsbic: Sawa BIC\n\nsbc: Schwarz BIC (the one we defined)"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#section-1",
+    "href": "slides/06-lasso-vs.html#section-1",
+    "title": "Feature Selection and LASSO \n",
+    "section": "",
+    "text": "Index N     Predictors R-Square Adj. R-Square Mallow's Cp\n3      1 1             x3    0.972         0.970       20.38\n1      2 1             x1    0.971         0.970       21.20\n2      3 1             x2    0.893         0.886      114.97\n4      4 1             x4    0.884         0.877      125.87\n5      5 1             x5    0.335         0.290      785.26\n10     6 2          x2 x3    0.987         0.985        4.94\n6      7 2          x1 x2    0.986         0.984        5.66\n14     8 2          x3 x5    0.985         0.983        7.29\n9      9 2          x1 x5    0.984         0.982        8.16\n13    10 2          x3 x4    0.975         0.972       18.57\n8     11 2          x1 x4    0.974         0.970       20.04\n7     12 2          x1 x3    0.973         0.969       21.99\n11    13 2          x2 x4    0.931         0.921       72.29\n12    14 2          x2 x5    0.924         0.913       80.30\n15    15 2          x4 x5    0.910         0.898       96.50\n23    16 3       x2 x3 x5    0.990         0.988        2.92\n18    17 3       x1 x2 x5    0.989         0.987        3.71\n16    18 3       x1 x2 x3    0.987         0.984        6.21\n22    19 3       x2 x3 x4    0.987         0.984        6.90\n17    20 3       x1 x2 x4    0.986         0.983        7.66\n20    21 3       x1 x3 x5    0.985         0.982        8.97\n25    22 3       x3 x4 x5    0.985         0.982        9.00\n21    23 3       x1 x4 x5    0.985         0.981        9.41\n19    24 3       x1 x3 x4    0.978         0.974       16.80\n24    25 3       x2 x4 x5    0.952         0.941       48.28\n30    26 4    x2 x3 x4 x5    0.991         0.988        4.03\n28    27 4    x1 x2 x4 x5    0.991         0.987        4.26\n27    28 4    x1 x2 x3 x5    0.991         0.987        4.35\n26    29 4    x1 x2 x3 x4    0.988         0.984        7.54\n29    30 4    x1 x3 x4 x5    0.985         0.980       10.92\n31    31 5 x1 x2 x3 x4 x5    0.991         0.987        6.00"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#other-subset-selection-methods",
+    "href": "slides/06-lasso-vs.html#other-subset-selection-methods",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Other Subset Selection Methods",
+    "text": "Other Subset Selection Methods\n\n\nAll possible selection olsrr::ols_step_all_possible()\n\nConsider all possible subsets of regressors.\n\n\n\nBest subset olsrr::ols_step_best_subset()\n\nIdentify the best model of each model size.\n\n\n\nForward selection olsrr::ols_step_forward_p()\n\nBegins with no regressors, and insert regressors into the model one at a time.\n\n\n\nBackward elimination olsrr::ols_step_backward_p()\n\nBegin with the full model with all possible regressors, then remove regressors from the model one at a time.\n\n\n\nStepwise regression olsrr::ols_step_both_p()\n\nDo forward selection, but refit the model when a new predictor is inserted. Remove a predictor that becomes redundant from the refit model.\n\n\nCheck Variable Selection Methods"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#why-lasso",
+    "href": "slides/06-lasso-vs.html#why-lasso",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Why Lasso?",
+    "text": "Why Lasso?\n\nAll possible selection may be computationally infeasible.\nOther subset selection methods do not explore all possible subset models. (No global solution)\nRidge regression does shrink coefficients, but still include all predictors.\nLasso regularizes coefficients so that some coefficients are shrunk to zero, doing feature selection.\nLike ridge regression, for a given \\(\\lambda\\), Lasso only fits a single model."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#what-is-lasso",
+    "href": "slides/06-lasso-vs.html#what-is-lasso",
+    "title": "Feature Selection and LASSO \n",
+    "section": "What is Lasso?",
+    "text": "What is Lasso?\nDifferent from the Ridge regression that adds \\(\\ell_2\\) norm, Lasso adds \\(\\ell_1\\) penalty on the parameters:\n\\[\\begin{align}\n\\widehat{\\boldsymbol \\beta}^\\text{l} =& \\, \\, \\mathop{\\mathrm{arg\\,min}}_{\\boldsymbol \\beta} \\lVert \\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\rVert_2^2 + n \\lambda \\lVert\\boldsymbol \\beta\\rVert_1\\\\\n=& \\, \\, \\mathop{\\mathrm{arg\\,min}}_{\\boldsymbol \\beta} \\frac{1}{n} \\sum_{i=1}^n (y_i - x_i' \\boldsymbol \\beta)^2 + \\lambda \\sum_{j=1}^p |\\beta_j|,\n\\end{align}\\]\n\nThe \\(\\ell_1\\) penalty forces some of the coefficient estimates to be exactly equal to zero when \\(\\lambda\\) is sufficiently large, yielding sparse models."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#ell_2-vs.-ell_1",
+    "href": "slides/06-lasso-vs.html#ell_2-vs.-ell_1",
+    "title": "Feature Selection and LASSO \n",
+    "section": "\n\\(\\ell_2\\) vs. \\(\\ell_1\\)\n",
+    "text": "\\(\\ell_2\\) vs. \\(\\ell_1\\)\n\n\nRidge shrinks big coefficients much more than lasso.\nLasso has larger penalty on small coefficients.\n\n\n\nRidge shrinks big coefficients much more than lasso.\nLasso has larger penalty on small coefficients. This is one of the intuitions why Lasso has exact zero coefficients after shrinkage. Because when punishing small coefficients a lot more, it may be better to set them exactly equal to zero to get smaller loss or objective value."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#elemstatlearnprostate-data",
+    "href": "slides/06-lasso-vs.html#elemstatlearnprostate-data",
+    "title": "Feature Selection and LASSO \n",
+    "section": "\nElemStatLearn::prostate Data",
+    "text": "ElemStatLearn::prostate Data\n\n\n\n\n\n\n\n\nlcavol\n      lweight\n      age\n      lbph\n      svi\n      lcp\n      gleason\n      pgg45\n      lpsa\n      train\n    \n\n\n-0.580\n2.77\n50\n-1.386\n0\n-1.39\n6\n0\n-0.431\nTRUE\n\n\n-0.994\n3.32\n58\n-1.386\n0\n-1.39\n6\n0\n-0.163\nTRUE\n\n\n-0.511\n2.69\n74\n-1.386\n0\n-1.39\n7\n20\n-0.163\nTRUE\n\n\n-1.204\n3.28\n58\n-1.386\n0\n-1.39\n6\n0\n-0.163\nTRUE\n\n\n0.751\n3.43\n62\n-1.386\n0\n-1.39\n6\n0\n0.372\nTRUE\n\n\n-1.050\n3.23\n50\n-1.386\n0\n-1.39\n6\n0\n0.765\nTRUE\n\n\n0.737\n3.47\n64\n0.615\n0\n-1.39\n6\n0\n0.765\nFALSE\n\n\n0.693\n3.54\n58\n1.537\n0\n-1.39\n6\n0\n0.854\nTRUE"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#cv.glmnetalpha-1",
+    "href": "slides/06-lasso-vs.html#cv.glmnetalpha-1",
+    "title": "Feature Selection and LASSO \n",
+    "section": "cv.glmnet(alpha = 1)",
+    "text": "cv.glmnet(alpha = 1)\n\nlasso_fit <- cv.glmnet(x = data.matrix(prostate[, 1:8]), y = prostate$lpsa, nfolds = 10, \n                       alpha = 1)\n\n\nCode    plot(lasso_fit)\n    plot(lasso_fit$glmnet.fit, \"lambda\")\n\n\ngenridge Package"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#lasso-coefficients",
+    "href": "slides/06-lasso-vs.html#lasso-coefficients",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Lasso Coefficients",
+    "text": "Lasso Coefficients\n\nlambda.min contains more nonzero parameters.\nLarger penalty \\(\\lambda\\) forces more parameters to be zero, and the model is more “sparse”.\n\n\n\n\ncoef(lasso_fit, s = \"lambda.min\")\n\n9 x 1 sparse Matrix of class \"dgCMatrix\"\n                  s1\n(Intercept)  0.17999\nlcavol       0.56099\nlweight      0.61908\nage         -0.02069\nlbph         0.09531\nsvi          0.75180\nlcp         -0.09912\ngleason      0.04745\npgg45        0.00432\n\n\n\n\ncoef(lasso_fit, s = \"lambda.1se\")\n\n9 x 1 sparse Matrix of class \"dgCMatrix\"\n               s1\n(Intercept) 1.101\nlcavol      0.433\nlweight     0.202\nage         .    \nlbph        .    \nsvi         0.271\nlcp         .    \ngleason     .    \npgg45       ."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept",
+    "href": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept",
+    "title": "Feature Selection and LASSO \n",
+    "section": "One-Variable Lasso and Shrinkage: Concept",
+    "text": "One-Variable Lasso and Shrinkage: Concept\n\nLasso solution does not have an analytic or closed form in general.\nConsider the univariate regression model\n\n\\[\\underset{\\beta}{\\mathop{\\mathrm{arg\\,min}}}  \\quad \\frac{1}{n} \\sum_{i=1}^n (y_i - x_i \\beta)^2 + \\lambda |\\beta|\\]\nWith some derivation, and also utilize the OLS solution of the loss function, we have\n\\[\\begin{align}\n&\\frac{1}{n} \\sum_{i=1}^n (y_i - x_i \\beta)^2 \\\\\n=& \\frac{1}{n} \\sum_{i=1}^n (y_i - x_i b + x_i b - x_i \\beta)^2 \\\\\n=& \\frac{1}{n} \\sum_{i=1}^n \\Big[ \\underbrace{(y_i - x_i b)^2}_{\\text{I}} + \\underbrace{2(y_i - x_i b)(x_i b - x_i \\beta)}_{\\text{II}} + \\underbrace{(x_i b - x_i \\beta)^2}_{\\text{III}} \\Big]\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept-1",
+    "href": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept-1",
+    "title": "Feature Selection and LASSO \n",
+    "section": "One-Variable Lasso and Shrinkage: Concept",
+    "text": "One-Variable Lasso and Shrinkage: Concept\n\\[\\begin{align}\n& \\sum_{i=1}^n 2(y_i - x_i b)(x_i b - x_i \\beta)\n= (b - \\beta) {\\color{OrangeRed}{\\sum_{i=1}^n 2(y_i - x_i b)x_i}}\n= (b - \\beta) {\\color{OrangeRed}{0}} = 0\n\\end{align}\\]\nOur original problem reduces to just the third term and the penalty\n\\[\\begin{align}\n&\\underset{\\beta}{\\mathop{\\mathrm{arg\\,min}}}  \\quad \\frac{1}{n} \\sum_{i=1}^n (x_ib - x_i \\beta)^2 + \\lambda |\\beta| \\\\\n=&\\underset{\\beta}{\\mathop{\\mathrm{arg\\,min}}}  \\quad \\frac{1}{n} \\left[ \\sum_{i=1}^n x_i^2 \\right] (b - \\beta)^2 + \\lambda |\\beta|\n\\end{align}\n\\] Without loss of generality, assume that \\(x\\) is standardized with mean 0 and variance \\(\\frac{1}{n}\\sum_{i=1}^n x_i^2 = 1\\).\nb is arbitrary We learned that to solve for an optimizer, we can set the gradient to be zero. However, the function is not everywhere differentiable"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept-2",
+    "href": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept-2",
+    "title": "Feature Selection and LASSO \n",
+    "section": "One-Variable Lasso and Shrinkage: Concept",
+    "text": "One-Variable Lasso and Shrinkage: Concept\nThis leads to a general problem of\n\\[\\underset{\\beta}{\\mathop{\\mathrm{arg\\,min}}}  \\quad (\\beta - b)^2 + \\lambda |\\beta|,\\] For \\(\\beta > 0\\),\n\\[\\begin{align}\n0 =& \\frac{\\partial}{\\partial \\beta} \\,\\, \\left[(\\beta - b)^2 + \\lambda |\\beta| \\right] = 2 (\\beta - b) + \\lambda \\\\\n\\Longrightarrow \\quad \\beta =&\\, b - \\lambda/2\n\\end{align}\\]\n\\[\\begin{align}\n\\widehat{\\beta}^\\text{l} &=\n        \\begin{cases}\n        b - \\lambda/2 & \\text{if} \\quad b > \\lambda/2 \\\\\n        0 & \\text{if} \\quad |b| \\le \\lambda/2 \\\\\n        b + \\lambda/2 & \\text{if} \\quad b < -\\lambda/2 \\\\\n        \\end{cases}\n\\end{align}\\]\n\nLasso provides a soft-thresholding solution.\nWhen \\(\\lambda\\) is large enough, \\(\\widehat{\\beta}^\\text{l}\\) will be shrunk to zero.\n\nb is arbitrary We learned that to solve for an optimizer, we can set the gradient to be zero. However, the function is not everywhere differentiable"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#objective-function",
+    "href": "slides/06-lasso-vs.html#objective-function",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Objective function",
+    "text": "Objective function\nThe objective function is \\((\\beta - 1)^2\\). Once the penalty is larger than 2, the optimizer would stay at 0.\n\n\n\n\n\n\nBased on our analysis, once the penalty is larger than 2, the optimizer would stay at 0."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#variable-selection-property-and-shrinkage",
+    "href": "slides/06-lasso-vs.html#variable-selection-property-and-shrinkage",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Variable Selection Property and Shrinkage",
+    "text": "Variable Selection Property and Shrinkage\n\nThe proportion of times a variable has a non-zero parameter estimation.\n\\(\\mathbf{y}= \\mathbf{X}' \\boldsymbol \\beta + \\epsilon = \\sum_{j = 1}^p X_j \\times 0.4^{\\sqrt{j}} + \\epsilon\\)\n\\(p = 20\\), \\(\\epsilon \\sim N(0, 1)\\) and replicate 100 times.\n\n\n\nSince Lasso shrinks some parameter to exactly zero, it has the variable selection property — the ones that are nonzero are the ones being selected. This is a very nice properly in high-dimensional data analysis, where we cannot estimate the effects of all variables.\nWe can then look at the proportion of times a variable has a non-zero parameter estimation"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#bias-variance-trade-off",
+    "href": "slides/06-lasso-vs.html#bias-variance-trade-off",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Bias-Variance Trade-off",
+    "text": "Bias-Variance Trade-off"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#constrained-optimization",
+    "href": "slides/06-lasso-vs.html#constrained-optimization",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Constrained Optimization",
+    "text": "Constrained Optimization\n\nFor every value of \\(\\lambda\\), there is some \\(s\\) such that the two optimization problems are equivalent, giving the same coefficient estimates.\nThe \\(\\ell_1\\) and \\(\\ell_2\\) penalties form a constraint region that \\(\\beta_j\\) can move around or budget for how large \\(\\beta_j\\) can be.\nLarger \\(s\\) (smaller \\(\\lambda\\)) means a larger region \\(\\beta_j\\) can freely move.\n\n\n\nLasso \\[\\begin{align}\n\\min_{\\boldsymbol \\beta} \\,\\,& \\lVert \\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\rVert_2^2 + n\\lambda\\lVert\\boldsymbol \\beta\\rVert_1\n\\end{align}\\]\n\n\\[\\begin{align}\n\\min_{\\boldsymbol \\beta} \\,\\,& \\lVert \\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\rVert_2^2\\\\\n\\text{s.t.} \\,\\, & \\sum_{j=1}^p|\\beta_j| \\leq s\n\\end{align}\\]\n\nRidge \\[\\begin{align}\n\\min_{\\boldsymbol \\beta} \\,\\,& \\lVert \\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\rVert_2^2 + n\\lambda\\lVert\\boldsymbol \\beta\\rVert_2^2\n\\end{align}\\]\n\n\\[\\begin{align}\n\\min_{\\boldsymbol \\beta} \\,\\,& \\lVert \\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\rVert_2^2\\\\\n\\text{s.t.} \\,\\, & \\sum_{j=1}^p \\beta_j^2 \\leq s\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#geometric-representation-of-optimization",
+    "href": "slides/06-lasso-vs.html#geometric-representation-of-optimization",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Geometric Representation of Optimization",
+    "text": "Geometric Representation of Optimization\n\nWhat do the constraints look like geometrically?\n\n\nWhen \\(p = 2\\),\n\nthe \\(\\ell_1\\) constraint is \\(|\\beta_1| + |\\beta_2| \\leq s\\) (diamond)\nthe \\(\\ell_2\\) constraint is \\(\\beta_1^2 + \\beta_2^2 \\leq s\\) (circle)\n\n\n\n\n\n\n\n\nSource: https://stats.stackexchange.com/questions/350046/the-graphical-intuiton-of-the-lasso-in-case-p-2\n\n\n\n\n\nthe solution has to stay within the shaded area. The objective function is shown with the contour, and once the contained area is sufficiently small, some β parameter will be shrunk to exactly zero. On the other hand, the Ridge regression also has a similar interpretation. However, since the constrained areas is a circle, it will never for the estimated parameters to be zero."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#way-of-shrinking-p-1-and-standardized-x",
+    "href": "slides/06-lasso-vs.html#way-of-shrinking-p-1-and-standardized-x",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Way of Shrinking (\\(p = 1\\) and standardized \\(x\\))",
+    "text": "Way of Shrinking (\\(p = 1\\) and standardized \\(x\\))\n\n\nLasso Soft-thresholding\n\n\\[\\begin{align}\n\\widehat{\\beta}^\\text{l} &=\n        \\begin{cases}\n        b - \\lambda/2 & \\text{if} \\quad b > \\lambda/2 \\\\\n        0 & \\text{if} \\quad |b| < \\lambda/2 \\\\\n        b + \\lambda/2 & \\text{if} \\quad b < -\\lambda/2 \\\\\n        \\end{cases}\n\\end{align}\\]\n\n\n\n\n\n\n\n\n\n\nRidge Proportional shrinkage\n\\[\\begin{align}\n\\widehat{\\beta}^\\text{r} = \\dfrac{b}{1+\\lambda}\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#predictive-performance",
+    "href": "slides/06-lasso-vs.html#predictive-performance",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Predictive Performance",
+    "text": "Predictive Performance\nPerform well (lower test MSE) when\n\n\nLasso (—)\n\nA relatively small number of \\(\\beta_j\\)s are substantially large, and the remaining \\(\\beta_k\\)s are small or equal to zero.\nReduce more bias\n\n\n\n\n\nISL Fig. 6.9\n\n\n\n\n\nRidge (…)\n\nThe response is a function of many predictors, all with coefficients of roughly equal size.\nReduce more variance\n\n\n\n\n\nISL Fig. 6.8\n\n\n\n\n\n\nRidge focus more on variance stablization Lasso focus more on model selection and interpretbility higher R^2 (larger lambda), more overfitting, so low bias high variance"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#bayesian-interpretation",
+    "href": "slides/06-lasso-vs.html#bayesian-interpretation",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Bayesian Interpretation",
+    "text": "Bayesian Interpretation\n\n\nLasso\n\nRidge\n\n\n\n\nLet’s wait until we discuss Bayesian Regression!"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#notes-of-lasso",
+    "href": "slides/06-lasso-vs.html#notes-of-lasso",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Notes of Lasso",
+    "text": "Notes of Lasso\n\n\n\n\n\n\nWarning\n\n\n\n\nEven Lasso does feature selection, do not add predictors that are known to be not associated with the response in any way.\nCurse of dimensionality. The test MSE tends to increase as the dimensionality \\(p\\) increases, unless the additional features are truly associated with the response.\nDo not conclude that the predictors with non-zero coefficients selected by Lasso and other selection methods predict the response more effectively than other predictors not included in the model.\n\n\n\n\n\nThis is just one of many possible models for predicting response, and that it must be further validated on independent data sets."
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#other-topics",
+    "href": "slides/06-lasso-vs.html#other-topics",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Other Topics",
+    "text": "Other Topics\n\n\nCombination \\(\\ell_1\\) and \\(\\ell_2\\): Elastic net penalty (Zou and Hastie, 2005)\n\n\n\\[\\lambda \\left[ (1 - \\alpha) \\lVert \\boldsymbol \\beta\\rVert_2^2 + \\alpha \\lVert\\boldsymbol \\beta\\lVert_1 \\right]\\]\n\n\n\nGeneral \\(\\ell_q\\) penalty: \\(\\lambda \\sum_{j=1}^p |\\beta_j|^q\\)\n\n\n\n\n\n\nESL Fig. 3.12"
+  },
+  {
+    "objectID": "slides/06-lasso-vs.html#other-topics-1",
+    "href": "slides/06-lasso-vs.html#other-topics-1",
+    "title": "Feature Selection and LASSO \n",
+    "section": "Other Topics",
+    "text": "Other Topics\n\n\nAlgorithms\n\nShooting algorithm (Fu 1998)\nLeast angle regression (LAR) (Efron et al. 2004)\nCoordinate descent (Friedman et al 2010) (used in glmnet)\n\n\n\n\n\n\nVariants\n\nAdaptive Lasso\nGroup Lasso\nBayesian Lasso, etc.\n\n\n\nLasso may suffer in the case where two variables are strongly correlated. The situation is similar to OLS, however, in Lasso, it would only select one out of the two, instead of letting both parameter estimates to be large. This is not preferred in some practical situations such as genetic studies because expressions of genes from the same pathway may have large correlation, but biologist want to identify all of them instead of just one. The Ridge penalty may help in this case because it naturally considers the correlation structure. The following simulation may show the effect. - The Lasso problem is convex, although it may not be strictly convex in β when p is large - The solution is a global minimum, but may not be the unique global one - The Lasso solution is unique under conditions of the covariance matrix\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "slides/03-bias-var.html#supervised-learning-1",
@@ -651,6 +868,531 @@
     "text": "Lab: Bias-Variance Tradeoff\n\nModel 1: Under-fitting y = \\beta_0+\\beta_1x+\\epsilon\nModel 2: Right-fitting y = \\beta_0+\\beta_1x+ \\beta_2x^2 + \\epsilon\nModel 3: Over-fitting y = \\beta_0+\\beta_1x+ \\beta_2x^2 + \\cdots + \\beta_9x^9 + \\epsilon\nTo see expectation/bias and variance, we need replicates of training data."
   },
   {
+    "objectID": "slides/07-splines.html#when-y-and-x-are-not-linearly-associated",
+    "href": "slides/07-splines.html#when-y-and-x-are-not-linearly-associated",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "When \\(y\\) and \\(x\\) are Not Linearly Associated",
+    "text": "When \\(y\\) and \\(x\\) are Not Linearly Associated\n\nLinear models can describe non-linear relationship.\nFeature engineering: When \\(y\\) and \\(x\\) are not linearly associated, we transform \\(x\\) (sometimes also \\(y\\)) so that \\(y\\) and the transformed \\(x\\) become linearly related.\n\n\n\nPopular methods\n\nPolynominal regression (MSSC 5780)\nPiecewise regression (MSSC 5780)\nLocal regression (MSSC 5780)\nBasis function approach\nRegression splines\nSmoothing splines\nGeneral additive models (GAMs)"
+  },
+  {
+    "objectID": "slides/07-splines.html#polynomial-regression",
+    "href": "slides/07-splines.html#polynomial-regression",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Polynomial Regression",
+    "text": "Polynomial Regression\n\nThe \\(d\\)th-order (degree) polynomial model in one variable is \\[y = \\beta_0 + \\beta_1 x + \\beta_2 x^2 + \\cdots + \\beta_dx^d + \\epsilon\\]\n\n\n\n\nWe extend the simple linear regression by mapping \\(x\\) to \\((x, x^2, \\dots, x^d)\\).\n\n\n\n“Bayesian Deep Learning and a Probabilistic Perspective of Generalization” Wilson and Izmailov (2020) for the rationale of choosing a super high-order polynomial as the regression model.\nExtra flexibility produces undesirable results at the boundaries."
+  },
+  {
+    "objectID": "slides/07-splines.html#basis-function-approach",
+    "href": "slides/07-splines.html#basis-function-approach",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Basis Function Approach",
+    "text": "Basis Function Approach\n\nA set of basis functions or transformations that can be applied to a variable \\(x\\):\\[[b_1(x), b_2(x), \\dots , b_K(x)]\\]\n\n\nAdaptive basis function model: \\[y = \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\cdots + \\beta_K b_K(x) + \\epsilon\\]\n\n\n\nIs polynomial regression a basis function approach?\n\n\n\n\nPolynomial basis: \\(\\phi(x) = [1, x, x^2, \\dots, x^K]\\)\n\n\nFourier series basis: \\(\\phi(x) = [1, \\cos(\\omega_1x + \\psi_1), \\cos(\\omega_2x + \\psi_2), \\dots]\\)\n\nB-Spline basis\n\n\n\n\n\n\n\nImportant\n\n\n\n\\([b_1(x), b_2(x), \\dots , b_K(x)]\\) are fixed and known."
+  },
+  {
+    "objectID": "slides/07-splines.html#piecewise-regression",
+    "href": "slides/07-splines.html#piecewise-regression",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Piecewise regression",
+    "text": "Piecewise regression\n\nPolynomial regression imposes a global structure on the non-linear function.\nPiecewise regression allows structural changes in different parts of the range of \\(x\\)\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\beta_{21}x^2 +\\epsilon     & \\quad \\text{if } x < \\xi\\\\\n    \\beta_{02} + \\beta_{12}x+ \\beta_{22}x^2+\\beta_{32}x^3+\\epsilon      & \\quad \\text{if } x \\ge \\xi\n  \\end{cases}\\]\n\nThe joint points of pieces are called knots.\nUsing more knots leads to a more flexible piecewise polynomial.\n\n\nWith \\(K\\) different knots, how many different polynomials do we have?\n\n\nA polynomial regression may provide a poor fit, and increasing the order does not improve the situation.\nThis may happen when the regression function behaves differently in different parts of the range of x ."
+  },
+  {
+    "objectID": "slides/07-splines.html#u.s.-birth-rate-from-1917-to-2003",
+    "href": "slides/07-splines.html#u.s.-birth-rate-from-1917-to-2003",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "U.S. Birth Rate from 1917 to 20031\n",
+    "text": "U.S. Birth Rate from 1917 to 20031\n\n\n\n\n\n     Year Birthrate\n1917 1917       183\n1918 1918       184\n1919 1919       163\n1920 1920       180\n1921 1921       181\n1922 1922       173\n1923 1923       168\n1924 1924       177\n1925 1925       172\n1926 1926       170\n1927 1927       164\n1928 1928       152\n1929 1929       145\n1930 1930       145\n1931 1931       139\n1932 1932       132\n1933 1933       126\n1934 1934       130\n1935 1935       130\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe data is only for illustrating ideas of different methods. The methods introduced here are best for inference about relationship between variables of some physical or natural system, not mainly for time series forecasting."
+  },
+  {
+    "objectID": "slides/07-splines.html#a-polynomial-regression-provide-a-poor-fit",
+    "href": "slides/07-splines.html#a-polynomial-regression-provide-a-poor-fit",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "A Polynomial Regression Provide a Poor Fit",
+    "text": "A Polynomial Regression Provide a Poor Fit\n\nlmfit3 <- lm(Birthrate ~ poly(Year - mean(Year), degree = 3, \n                              raw = TRUE),  \n             data = birthrates)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraw if true, use raw and not orthogonal polynomials.\n\nA polynomial regression may provide a poor fit, and increasing the order does not improve the situation.\nThis may happen when the regression function behaves differently in different parts of the range of x."
+  },
+  {
+    "objectID": "slides/07-splines.html#piecewise-polynomials-3-knots-at-1936-60-78",
+    "href": "slides/07-splines.html#piecewise-polynomials-3-knots-at-1936-60-78",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Piecewise Polynomials: 3 knots at 1936, 60, 78",
+    "text": "Piecewise Polynomials: 3 knots at 1936, 60, 78\n\n\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\quad \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\quad \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\quad \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\quad \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nAny issue of piecewise polynomials?"
+  },
+  {
+    "objectID": "slides/07-splines.html#splines",
+    "href": "slides/07-splines.html#splines",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Splines",
+    "text": "Splines\nSplines of degree \\(d\\) are smooth piecewise polynomials of degree \\(d\\) with continuity in derivatives (smoothing) up to degree \\(d-1\\) at each knot.\n\nHow do we turn the piecewise regression of degree 1 into a regression spline?\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\quad \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\quad \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\quad \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\quad \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\nFor splines of degree 1, we require continuous piecewise linear function\n\n\n\n\\[\\begin{align}\n\\beta_{01} + \\beta_{11}1936 &= \\beta_{02} + \\beta_{12}1936\\\\\n\\beta_{02} + \\beta_{12}1960 &= \\beta_{03} + \\beta_{13}1960\\\\\n\\beta_{03} + \\beta_{13}1978 &= \\beta_{04} + \\beta_{14}1978\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/07-splines.html#splinesbs",
+    "href": "slides/07-splines.html#splinesbs",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "splines::bs()",
+    "text": "splines::bs()\n\npar(mar = c(2,2,2,0))\n\n\n\nThe function is continuous everywhere, also at knots \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\), i.e. \\(f_{k}(\\xi_k^-) = f_{k+1}(\\xi_k^+)\\).\nLinear everywhere except \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\).\nHas a different slope for each region."
+  },
+  {
+    "objectID": "slides/07-splines.html#splines-as-adaptive-basis-function-model",
+    "href": "slides/07-splines.html#splines-as-adaptive-basis-function-model",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Splines as Adaptive Basis Function Model",
+    "text": "Splines as Adaptive Basis Function Model\nFor linear splines with 3 knots,\n\\[\\begin{align}\nb_1(x) &= x\\\\\nb_2(x) &= (x - \\xi_1)_+\\\\\nb_3(x) &= (x - \\xi_2)_+\\\\\nb_4(x) &= (x - \\xi_3)_+\n\\end{align}\\] where\n\n\n\n\\((x - \\xi_k)_+\\) denotes the positive part:\n\n\\[(x - \\xi_k)_+=\\begin{cases}\n    x - \\xi_k & \\quad \\text{if }x > \\xi_k\\\\\n    0  & \\quad \\text{otherwise}\n  \\end{cases}\\]\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\beta_3 b_3(x) + \\beta_4 b_4(x) + \\epsilon\\\\\n&=\\beta_0 + \\beta_1 x + \\beta_2 (x - \\xi_1)_+ + \\beta_3 (x - \\xi_2)_+ + \\beta_4 (x - \\xi_3)_+ + \\epsilon\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/07-splines.html#linear-splines-basis-functions",
+    "href": "slides/07-splines.html#linear-splines-basis-functions",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Linear Splines Basis Functions",
+    "text": "Linear Splines Basis Functions"
+  },
+  {
+    "objectID": "slides/07-splines.html#splines-as-adaptive-basis-function-model-1",
+    "href": "slides/07-splines.html#splines-as-adaptive-basis-function-model-1",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Splines as Adaptive Basis Function Model",
+    "text": "Splines as Adaptive Basis Function Model\nWith degree \\(d\\) and \\(K\\) knots, the regression spline with first \\(d-1\\) derivatives being continuous at the knots can be represented as\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\dots + \\beta_d b_d(x) + \\beta_{d+1}b_{d+1}(x) + \\dots + \\beta_{d+K}b_{d+K}(x) + \\epsilon\n\\end{align}\\] where\n\n\\(b_j(x) = x^j, j = 1, 2, \\dots, d\\)\n\\(b_{d+s} = (x - \\xi_s)^{d}_+, s = 1, \\dots, K\\) (truncated power basis function)\n\n\nCan you write the model with \\(d = 2\\) and \\(k = 3\\)?"
+  },
+  {
+    "objectID": "slides/07-splines.html#cubic-splines",
+    "href": "slides/07-splines.html#cubic-splines",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Cubic Splines1\n",
+    "text": "Cubic Splines1\n\n\nThe cubic spline is a spline of degree 3 with first 2 derivatives are continuous at the knots.\n\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 x + \\beta_2 x^2 + \\beta_3 x^3 + \\sum_{k = 1}^K \\beta_{k+3} (x - \\xi_k)_+^3 + \\epsilon\n\\end{align}\\]\n\nSmooth at knots because\n\n\\(f(\\xi_k^-) = f(\\xi_k^+)\\)\n\\(f'(\\xi_k^-) = f'(\\xi_k^+)\\)\n\\(f''(\\xi_k^-) = f''(\\xi_k^+)\\)\n\\(f^{(3)}(\\xi_k^-) \\ne f^{(3)}(\\xi_k^+)\\)\n\n\nCubic splines are popular because most human eyes cannot detect the discontinuity at the knots."
+  },
+  {
+    "objectID": "slides/07-splines.html#degrees-of-freedom",
+    "href": "slides/07-splines.html#degrees-of-freedom",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Degrees of Freedom",
+    "text": "Degrees of Freedom\n\nIn regression, (effective) degrees of freedom (df) can be viewed as the number of regression coeffcients that are freely to move.\nIt measures the model complexity/flexiblity. The larger df is, the more flexible the model is.\n\n\n\n\nPiecewise linear: 3 knots, 4 linear regressions, and 8 dfs.\n\n\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\quad \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\quad \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\quad \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\quad \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\n\nLinear splines (continuous piecewise linear): 8 - 3 constraints = 5 dfs.\n\n\n\n\\[\\begin{align}\n\\beta_{01} + \\beta_{11}1936 &= \\beta_{02} + \\beta_{12}1936\\\\\n\\beta_{02} + \\beta_{12}1960 &= \\beta_{03} + \\beta_{13}1960\\\\\n\\beta_{03} + \\beta_{13}1978 &= \\beta_{04} + \\beta_{14}1978\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/07-splines.html#degrees-of-freedom-1",
+    "href": "slides/07-splines.html#degrees-of-freedom-1",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Degrees of Freedom",
+    "text": "Degrees of Freedom\n\nWith degree \\(d\\) and \\(K\\) knots,\n\n\\[\\begin{align} \\text{df} &= \\text{(# regions)} \\times \\text{(# coefficients)} - \\text{(# constraints)} \\times \\text{(# knots)}\\\\\n&=(K + 1)(d + 1) - dK\\\\\n&= K + d + 1 \\end{align} \\]\n\n\n\n\nCubic splines:\n\nWe have 3 constraints:\n\ncontinuity \\(f(\\xi ^ {-}) = f(\\xi ^ {+})\\)\n\n1st derivative \\(f'(\\xi ^ {-}) = f'(\\xi ^ {+})\\)\n\n2nd derivative \\(f''(\\xi ^ {-}) = f''(\\xi ^ {+})\\)\n\n\n\\(\\text{df} = \\text{(# regions)} \\times \\text{(# coef)} - \\text{(# constraints)} \\times \\text{(# knots)} = (K + 1)4 - 3K = 4 + K\\)"
+  },
+  {
+    "objectID": "slides/07-splines.html#cubic-splines-1",
+    "href": "slides/07-splines.html#cubic-splines-1",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Cubic Splines",
+    "text": "Cubic Splines\n\ncub_sp <- lm(Birthrate ~ splines::bs(Year, degree = 3, knots = c(1936, 1960, 1978)), \n             data = birthrates)"
+  },
+  {
+    "objectID": "slides/07-splines.html#natural-splines",
+    "href": "slides/07-splines.html#natural-splines",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Natural Splines",
+    "text": "Natural Splines\n\nSplines1 tends to produce erratic and undesirable results near the boundaries, and huge variance at the outer range of the predictors.\n\n\n\nA natural spline is a regression spline with additional boundary constraints:\n\nThe natural function is linear at the boundary (in the region where \\(X\\) is smaller than the smallest knot, or larger than the largest knot).\n\n\n\n\n\n\n\nNatural splines generally produce more stable estimates at the boundaries.\nAssuming linearity near the boundary is reasonable since there is less information available there.\n\n\nsplines::ns()\n\n\n\n\nNatural Cubic Spline (NCS) forces the 2nd and 3rd derivatives to be zero at the boundaries.\nThe constraints frees up 4 dfs.\nThe df of NCS is \\(K\\).\n\n\nEspecially for high-degree polynomials."
+  },
+  {
+    "objectID": "slides/07-splines.html#spline-and-natural-spline-comparison",
+    "href": "slides/07-splines.html#spline-and-natural-spline-comparison",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Spline and Natural Spline Comparison",
+    "text": "Spline and Natural Spline Comparison\n\nCubic Spline vs. Natural Cubic Spline with the same degrees of freedom 6."
+  },
+  {
+    "objectID": "slides/07-splines.html#b-splines-basis-functions",
+    "href": "slides/07-splines.html#b-splines-basis-functions",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "\nB-Splines Basis Functions",
+    "text": "B-Splines Basis Functions\n\nB-splines use a different basis representation for regression splines.\n\n\n\n\nbs(x, df = NULL, knots = NULL, \n   degree = 3, intercept = FALSE)\n\n\n\ndf: the number of basis\n\nknots: the quantiles of \\(x\\)\n\n\n\n\n\n\n\n\n\n\n\n\nns(x, df = NULL, knots = NULL, \n   degree = 3, intercept = FALSE)\n\n\n\ndf: the number of basis\n\nknots: the quantiles of \\(x\\)\n\n\n\n\n\n\n\n\n\n\n\n\nB-splines is more computationally efficient"
+  },
+  {
+    "objectID": "slides/07-splines.html#practical-issues",
+    "href": "slides/07-splines.html#practical-issues",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Practical Issues",
+    "text": "Practical Issues\n\n\nHow many knots should we use\n\n\nAs few knots as possible, with at least 5 data points per segment (Wold, 1974)\nCross-validation: e.g., choose the \\(K\\) giving the smallest \\(MSE_{CV}\\)\n\n\n\n\n\n\nWhere to place the knots\n\n\nNo more than one extreme or inflection point per segment (Wold, 1974)\nIf possible, the extreme points should be centered in the segment\n\nMore knots in places where the function might vary most rapidly, and fewer knots where it seems more stable\nPlace knots in a uniform fashion\n\nSpecify the desired df, and have the software place the corresponding number of knots at uniform quantiles of the data (bs(), ns())\n\n\n\n\n\n\n\nWhat is the degree of functions in each region\n\nUse \\(d < 4\\) to avoid overly flexible curve fitting\nCubic spline is popular\n\n\n\nToo many knots can overfit Regression splines often give superior results to polynomial regression"
+  },
+  {
+    "objectID": "slides/07-splines.html#roughness-penalty-approach",
+    "href": "slides/07-splines.html#roughness-penalty-approach",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Roughness Penalty Approach",
+    "text": "Roughness Penalty Approach\n\nOur goal is inference or curve fitting rather than out of range prediction or forecasting.\nIs there a method that we can select the number and location of knots automatically?\n\nConsider this criterion for fitting a smooth function \\(g(x)\\) to some data:\n\\[\\begin{equation} \\min_{g} \\sum_{i=1}^n \\left( y_i - g(x_i) \\right)^2 + \\lambda \\int g''(t)^2 \\, dt \\end{equation}\\]\n\nThe first term is \\(SS_{res}\\), and tries to make \\(g(x)\\) match the data at each \\(x_i\\). (Goodness-of-fit)\nThe second term with \\(\\lambda \\ge 0\\) is a roughness penalty and controls how wiggly \\(g(x)\\) is.\n\n\n\n\n\nLoss + Penalty"
+  },
+  {
+    "objectID": "slides/07-splines.html#roughness-penalty-approach-1",
+    "href": "slides/07-splines.html#roughness-penalty-approach-1",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Roughness Penalty Approach",
+    "text": "Roughness Penalty Approach\n\\[\\begin{equation} \\min_{g} \\sum_{i=1}^n \\left( y_i - g(x_i) \\right)^2 + \\lambda \\int g''(t)^2 \\, dt \\end{equation}\\]\n\nHow \\(\\lambda\\) affects the shape of \\(g(x)\\)?\n\n\nThe smaller \\(\\lambda\\) is, the more wiggly \\(g(x)\\) is, eventually interpolating \\(y_i\\) when \\(\\lambda = 0\\).\nAs \\(\\lambda \\rightarrow \\infty\\), \\(g(x)\\) becomes linear.\nThe function \\(g\\) that minimizes the objective is known as a smoothing spline.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe solution \\(\\hat{g}\\) is a natural cubic spline, with knots at \\(x_1, x_2, \\dots , x_n\\)!\nBut, it is not the same NCS gotten from the basis function approach.\nIt is a shrunken version where \\(\\lambda\\) controls the level of shrinkage."
+  },
+  {
+    "objectID": "slides/07-splines.html#properties-of-smoothing-splines",
+    "href": "slides/07-splines.html#properties-of-smoothing-splines",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Properties of Smoothing splines",
+    "text": "Properties of Smoothing splines\n\nSmoothing splines avoid the knot-selection issue, leaving a single \\(\\lambda\\) to be chosen.\n\n\n\nLinear regression\n\n\\(\\hat{\\mathbf{y}} = \\bf H \\mathbf{y}\\) where \\(\\bf H\\) is the hat matrix\nThe degrees of freedom \\((\\text{# coef})\\) is \\[p = \\sum_{i=1}^n {\\bf H}_{ii}\\]\nPRESS for model selection\n\n\\[\\begin{align} PRESS &= \\sum_{i = 1}^n \\left( y_i - \\hat{y}_i^{(-i)}\\right)^2 \\\\\n&= \\sum_{i = 1}^n \\left[ \\frac{y_i - \\hat{y}_i}{1 - {\\bf H}_{ii}}\\right]^2\\end{align}\\]\n\nSmoothing splines\n\n\\(\\hat{\\mathbf{g}}_{\\lambda} = {\\bf S}_{\\lambda} \\mathbf{y}\\) where \\(\\bf {\\bf S}_{\\lambda}\\) is the smoother matrix.\nThe effective degrees of freedom \\((\\text{# coef})\\) is \\[df_{\\lambda} = \\sum_{i=1}^n \\{{\\bf S}_{\\lambda}\\}_{ii} \\in (0, n)\\]\nLOOCV for choosing \\(\\lambda\\)1\n\n\\[\\begin{align} (SS_{res})_{CV}(\\lambda) &= \\sum_{i = 1}^n \\left( y_i - \\hat{g}_{\\lambda}^{(-i)}(x_i)\\right)^2 \\\\\n&= \\sum_{i = 1}^n \\left[ \\frac{y_i - \\hat{g}_{\\lambda}(x_i)}{1 - \\{{\\bf S}_{\\lambda}\\}_{ii}}\\right]^2 \\end{align}\\]\n\n\nGCV can be used too."
+  },
+  {
+    "objectID": "slides/07-splines.html#smooth.spline",
+    "href": "slides/07-splines.html#smooth.spline",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "smooth.spline()",
+    "text": "smooth.spline()\n\nsmooth.spline(x, y, df, lambda, cv = FALSE)\n\n\n\ncv = TRUE use LOOCV; cv = FALSE use GCV\n\n\nfit <- smooth.spline(birthrates$Year, birthrates$Birthrate)\n\n\n\nfit$df\n\n[1] 60.8\n\n\noverfitting since the birthrate data has little variation in adjacent years"
+  },
+  {
+    "objectID": "slides/07-splines.html#smooth.spline-1",
+    "href": "slides/07-splines.html#smooth.spline-1",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "smooth.spline()",
+    "text": "smooth.spline()\n\npar(mar = c(2, 2, 0, 0))"
+  },
+  {
+    "objectID": "slides/07-splines.html#extending-splines-to-multiple-variables",
+    "href": "slides/07-splines.html#extending-splines-to-multiple-variables",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Extending Splines to Multiple Variables",
+    "text": "Extending Splines to Multiple Variables\n\nAll methods discussed so far are extensions of simple linear regression.\nHow to flexibly predict \\(y\\) or nonlinear regression function on the basis of several predictors \\(x_1, \\dots, x_p\\)?\n\n\nMaintaining the additive structure of linear models, but allowing nonlinear functions of each of the variables.\n\\[y = \\beta_0 + f_1(x_1) + f_2(x_2) + \\dots + f_p(x_p) + \\epsilon\\]\n\nThis is a generalized additive model.\n\nIt’s general: it can be modelling response with other distributions, binary, counts, positive values, for example.\nIt’s additive: calculate a separate \\(f_j\\) for each \\(x_j\\), and add together all of their contributions.\n\n\n\n\n\n\n\n\\(f_1(x_1) = x_1\\); \\(f_2(x_2) = x_2 + x_2^2\\); \\(f_3(x_3) = \\text{cubic splines}\\)"
+  },
+  {
+    "objectID": "slides/07-splines.html#wage-data-in-isl",
+    "href": "slides/07-splines.html#wage-data-in-isl",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "\nWage data in ISL",
+    "text": "Wage data in ISL\n\nlibrary(ISLR2)\nattach(Wage)\ndplyr::glimpse(Wage)\n\nRows: 3,000\nColumns: 11\n$ year       <int> 2006, 2004, 2003, 2003, 2005, 2008, 2009, 2008, 2006, 2004,…\n$ age        <int> 18, 24, 45, 43, 50, 54, 44, 30, 41, 52, 45, 34, 35, 39, 54,…\n$ maritl     <fct> 1. Never Married, 1. Never Married, 2. Married, 2. Married,…\n$ race       <fct> 1. White, 1. White, 1. White, 3. Asian, 1. White, 1. White,…\n$ education  <fct> 1. < HS Grad, 4. College Grad, 3. Some College, 4. College …\n$ region     <fct> 2. Middle Atlantic, 2. Middle Atlantic, 2. Middle Atlantic,…\n$ jobclass   <fct> 1. Industrial, 2. Information, 1. Industrial, 2. Informatio…\n$ health     <fct> 1. <=Good, 2. >=Very Good, 1. <=Good, 2. >=Very Good, 1. <=…\n$ health_ins <fct> 2. No, 2. No, 1. Yes, 1. Yes, 1. Yes, 1. Yes, 1. Yes, 1. Ye…\n$ logwage    <dbl> 4.32, 4.26, 4.88, 5.04, 4.32, 4.85, 5.13, 4.72, 4.78, 4.86,…\n$ wage       <dbl> 75.0, 70.5, 131.0, 154.7, 75.0, 127.1, 169.5, 111.7, 118.9,…"
+  },
+  {
+    "objectID": "slides/07-splines.html#gamgam",
+    "href": "slides/07-splines.html#gamgam",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "gam::gam()",
+    "text": "gam::gam()\n\nlibrary(gam)\ngam.m3 <- gam(wage ~ s(year, df = 4) + s(age , df = 5) + education,\n              data = Wage)\n\n\ns() for smoothing splines\nCoefficients not that interesting; fitted functions are.\n\n\nupper and lower pointwise twice-standard-error curves are included\nThe left-hand panel indicates that holding age and education fixed, wage tends to increase slightly with year; this may be due to inflation. The center panel indicates that holding education and year fixed, wage tends to be highest for intermediate values of age, and lowest for the very young and very old."
+  },
+  {
+    "objectID": "slides/07-splines.html#gam-fitting",
+    "href": "slides/07-splines.html#gam-fitting",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "GAM fitting",
+    "text": "GAM fitting\n\nNatural splines lm(wage ~ ns(year, df = 5) + ns(age, df = 5) + education)\nCan mix terms, e.g., smoothing splines and local regression\n\ngam(wage ~ s(year, df = 5) + lo(age, span = .5) + education)\n\nCan add interactions, e.g. ns(age, df = 5):ns(year, df = 5)\nUse anova() to compare models."
+  },
+  {
+    "objectID": "slides/07-splines.html#summary-of-gams",
+    "href": "slides/07-splines.html#summary-of-gams",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Summary of GAMs",
+    "text": "Summary of GAMs\n\nAllow to fit a non-linear \\(f_j\\) to each \\(X_j\\), so that we can automatically model non-linear relationships that standard linear regression will miss.\nNo need to manually try out many different transformations on each variable individually.\nThe non-linear fits can potentially make more accurate predictions for the response.\nThe smoothness of the function \\(f_j\\) for the variable \\(X_j\\) can be summarized via degrees of freedom.\nThe model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting.\n\n\nBecause the model is additive, we can examine the effect of each \\(X_j\\) on \\(Y\\) individually while holding all of the other variables fixed.\nThe smoothness of the function \\(f_j\\) for the variable \\(X_j\\) can be summarized via degrees of freedom."
+  },
+  {
+    "objectID": "slides/07-splines.html#other-topics",
+    "href": "slides/07-splines.html#other-topics",
+    "title": "Splines and General Additive Models 〰️",
+    "section": "Other Topics",
+    "text": "Other Topics\n\nBasis spline (B-spline) definition (de Boor, 1978): more computationally efficient\nAlgorithms for fitting GAMs using smoothing splines: Backfitting, ISL Sec 7.9 Exercise 11.\nGAMs for binary response and classification.\nMultivariate Adaptive Regression Splines (MARS)\n\nHow many knots should be used Where to place the knots What is the degree of functions in each region\nwe can control that using the df parameter. We use a total of 6 parameters, chosen by the function automatically. However, this does not seems to perform better than the knots we implemented. The choice of knots can be crucial.\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#linear-regression",
+    "href": "slides/04-linear-reg.html#linear-regression",
+    "title": "Linear Regression 📈",
+    "section": "Linear Regression",
+    "text": "Linear Regression\n\nLinear regression is an approach to supervised learning.\nIt assumes that the dependence of \\(Y\\) on \\(X_1, X_2, \\dots, X_k\\)1 is linear.\nTrue regression functions \\(f(x)\\) are never linear!\nAlthough it is overly simplistic, the linear model has distinct advantages in terms of its interpretability and often shows good predictive performance.\n\nlinear regression is extremely useful both conceptually and practically\nThe textbook uses \\(p\\) instead of \\(k\\) to denote the number of predictors in the model. We use \\(k\\) here, but switch to \\(p\\) starting next week."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#why-multiple-linear-regression-mlr-model",
+    "href": "slides/04-linear-reg.html#why-multiple-linear-regression-mlr-model",
+    "title": "Linear Regression 📈",
+    "section": "Why Multiple Linear Regression (MLR) Model",
+    "text": "Why Multiple Linear Regression (MLR) Model\n\nOur target response may be affected by several factors.\nTotal sales \\((Y)\\) and amount of money spent on advertising on YouTube (YT) \\((X_1)\\), Facebook (FB) \\((X_2)\\), Instagram (IG) \\((X_3)\\).1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPredict sales based on the three advertising expenditures and see which medium is more effective.\nIn ISL, the predictors are TV, radio and newspaper."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#fit-separate-simple-linear-regression-slr-models",
+    "href": "slides/04-linear-reg.html#fit-separate-simple-linear-regression-slr-models",
+    "title": "Linear Regression 📈",
+    "section": "Fit Separate Simple Linear Regression (SLR) Models",
+    "text": "Fit Separate Simple Linear Regression (SLR) Models\n\n\n\n❌ Fitting a separate SLR model for each predictor is not satisfactory."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#dont-fit-a-separate-simple-linear-regression",
+    "href": "slides/04-linear-reg.html#dont-fit-a-separate-simple-linear-regression",
+    "title": "Linear Regression 📈",
+    "section": "Don’t Fit a Separate Simple Linear Regression",
+    "text": "Don’t Fit a Separate Simple Linear Regression\n\n👉 How to make a single prediction of sales given levels of the 3 advertising media budgets?\n\n How to predict the sales when the amount spent on YT is 50, 100 on FB and 30 on IG? \n\n\n\n\n\n👉 Each regression equation ignores the other 2 media in forming coefficient estimates.\n\n The effect of FB advertising on sales may be increased or decreased when YT and IG advertising are in the model. \n IG advertising may have no impact on sales when YT and FB advertising are in the model. \n\n\n\n\n\n\n👍👍 Better approach: extend the SLR model so that it can directly accommodate multiple predictors."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#multiple-linear-regression-model",
+    "href": "slides/04-linear-reg.html#multiple-linear-regression-model",
+    "title": "Linear Regression 📈",
+    "section": "Multiple Linear Regression Model",
+    "text": "Multiple Linear Regression Model\n\nThe population MLR model: \\[Y_i= \\beta_0 + \\beta_1X_{i1} + \\beta_2X_{i2} + \\dots + \\beta_kX_{ik} + \\epsilon_i\\]  \n\nIn the advertising example, \\(k = 3\\) and \\[\\texttt{sales} = \\beta_0 + \\beta_1 \\times \\texttt{YouTube} + \\beta_2 \\times  \\texttt{Facebook} + \\beta_3 \\times \\texttt{Instagram} + \\epsilon\\]\n\nModel assumptions:\n\n\\(\\epsilon_i \\stackrel{iid}{\\sim} N(0, \\sigma^2)\\)\n\n\n\n\n\nHow many parameters are there in the model?"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#sample-mlr-model",
+    "href": "slides/04-linear-reg.html#sample-mlr-model",
+    "title": "Linear Regression 📈",
+    "section": "Sample MLR Model",
+    "text": "Sample MLR Model\n\nGiven the training sample \\((x_{11}, \\dots, x_{1k}, y_1), (x_{21}, \\dots, x_{2k}, y_2), \\dots, (x_{n1}, \\dots, x_{nk}, y_n),\\)\n\nThe sample MLR model to be trained: \\[\\begin{align*}\ny_i &= \\beta_0 + \\beta_1x_{i1} + \\beta_2x_{i2} + \\dots + \\beta_k x_{ik} + \\epsilon_i \\\\\n&= \\beta_0 + \\sum_{j=1}^k\\beta_j x_{ij} + \\epsilon_i, \\quad i = 1, 2, \\dots, n\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#regression-hyperplane",
+    "href": "slides/04-linear-reg.html#regression-hyperplane",
+    "title": "Linear Regression 📈",
+    "section": "Regression Hyperplane",
+    "text": "Regression Hyperplane\n\n\nSLR: regression line\nMLR: regression hyperplane or response surface\n\\(y = \\beta_0 + \\beta_1x_1 + \\beta_{2}x_2 + \\epsilon\\)\n\\(E(y \\mid x_1, x_2) = 50 + 10x_1 + 7x_2\\)"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#response-surface",
+    "href": "slides/04-linear-reg.html#response-surface",
+    "title": "Linear Regression 📈",
+    "section": "Response Surface",
+    "text": "Response Surface\n\n\\(y = \\beta_0 + \\beta_1x_1 + \\beta_{2}x_2 + \\beta_{11}x_1^2 + \\beta_{22}x_2^2 + \\beta_{12}x_1x_2 + \\epsilon\\)\n\\(E(y \\mid x_1, x_2) = 800+10x_1+7x_2 -8.5x_1^2-5x_2^2- 4x_1x_2\\)\n😎 🤓 A linear regression model can describe a complex nonlinear relationship between the response and predictors!"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#ordinary-least-squares-estimation-of-the-coefficients",
+    "href": "slides/04-linear-reg.html#ordinary-least-squares-estimation-of-the-coefficients",
+    "title": "Linear Regression 📈",
+    "section": "Ordinary Least Squares Estimation of the Coefficients",
+    "text": "Ordinary Least Squares Estimation of the Coefficients\n\\[\\begin{align*}\ny_i &= \\beta_0 + \\beta_1x_{i1} + \\beta_2x_{i2} + \\dots + \\beta_k x_{ik} + \\epsilon_i \\\\\n&= \\beta_0 + \\sum_{j=1}^k\\beta_j x_{ij} + \\epsilon_i, \\quad i = 1, 2, \\dots, n\n\\end{align*}\\]\n\nThe least-squares function Sum of Squared Residuals (\\(SS_{res}\\))1 is \\[SS_{res}(\\alpha_0, \\alpha_1, \\dots, \\alpha_k) = \\sum_{i=1}^n\\left(y_i - \\alpha_0 - \\sum_{j=1}^k\\alpha_j x_{ij}\\right)^2\\]\n\n\n\\(SS_{res}\\) must be minimized with respect to the coefficients, i.e., \\[(b_0, b_1, \\dots, b_k) = \\underset{{\\alpha_0, \\alpha_1, \\dots, \\alpha_k}}{\\mathrm{arg \\, min}}  SS_{res}(\\alpha_0, \\alpha_1, \\dots, \\alpha_k)\\]\n\nIn ISL, RSS is used for Residual Sum of Squares."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#geometry-of-least-squares-estimation",
+    "href": "slides/04-linear-reg.html#geometry-of-least-squares-estimation",
+    "title": "Linear Regression 📈",
+    "section": "Geometry of Least Squares Estimation",
+    "text": "Geometry of Least Squares Estimation"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#least-squares-normal-equations",
+    "href": "slides/04-linear-reg.html#least-squares-normal-equations",
+    "title": "Linear Regression 📈",
+    "section": "Least-squares Normal Equations",
+    "text": "Least-squares Normal Equations\n\\[\\begin{align*}\n\\left.\\frac{\\partial SS_{res}}{\\partial\\alpha_0}\\right\\vert_{b_0, b_1, \\dots, b_k} &= -2 \\sum_{i=1}^n\\left(y_i - b_0 - \\sum_{j=1}^k b_j x_{ij}\\right) = 0\\\\\n\\left.\\frac{\\partial SS_{res}}{\\partial\\alpha_j}\\right\\vert_{b_0, b_1, \\dots, b_k} &= -2 \\sum_{i=1}^n\\left(y_i - b_0 - \\sum_{j=1}^k b_j x_{ij}\\right)x_{ij} = 0, \\quad j = 1, 2, \\dots, k\n\\end{align*}\\]\n\n\\(k + 1\\) equations with \\(k + 1\\) unknown parameters.\nThe ordinary least squares estimators are the solutions to the normal equations.\n\n\n\n🍹 🍺 🍸 🥂 I buy you a drink if you solve the equations by hand without using matrix notations or operations!"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#interpreting-coefficients",
+    "href": "slides/04-linear-reg.html#interpreting-coefficients",
+    "title": "Linear Regression 📈",
+    "section": "Interpreting Coefficients",
+    "text": "Interpreting Coefficients\n\n\n\n            Estimate Std. Error t value Pr(>|t|)\n(Intercept)    2.939      0.312   9.422     0.00\nyoutube        0.046      0.001  32.809     0.00\nfacebook       0.189      0.009  21.893     0.00\ninstagram     -0.001      0.006  -0.177     0.86\n\n\n\n\\[\\hat{y} = b_0 + b_1 x_1 + \\cdots + b_kx_k\\]\n\\[\\widehat{\\texttt{sales}} = 2.939 + 0.046 \\times \\texttt{YouTube} + 0.189 \\times  \\texttt{Facebook} - 0.001 \\times \\texttt{Instagram}\\]\n\n\n\\(b_1\\): Holding all other predictors fixed, for one unit increase of Youtube, the sales is expected to be increased, on average, by 0.046 units.\n\n\\(b_2\\): All else held constant, one unit increase of Facebook leads to, on average, 0.189 unit increase of sales.\n\n\\(b_0\\): The sales with no expenditures on Youtube, Facebook, and Instagram is expected to be 2.939. (Make sense?!)"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#inference-on-coefficients",
+    "href": "slides/04-linear-reg.html#inference-on-coefficients",
+    "title": "Linear Regression 📈",
+    "section": "Inference on Coefficients",
+    "text": "Inference on Coefficients\n\n\n\n\n\nThe \\((1-\\alpha)100\\%\\) Wald confidence interval (CI) for \\(\\beta_j\\), \\(j = 0, 1, \\dots, k\\) is\n\n\\[\\left(b_j- t_{\\alpha/2, n-p}~se(b_j), \\quad b_j + t_{\\alpha/2, n-p}~ se(b_j)\\right)\\]\n\n\n\n            2.5 % 97.5 %\n(Intercept)  2.32   3.55\nyoutube      0.04   0.05\nfacebook     0.17   0.21\ninstagram   -0.01   0.01\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nThese are marginal CIs seperately for each \\(b_j\\).\nIndividual CI ignores the correlation between \\(b_j\\)s.\nBetter to consider elliptically-shaped regions."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#collinearity",
+    "href": "slides/04-linear-reg.html#collinearity",
+    "title": "Linear Regression 📈",
+    "section": "Collinearity",
+    "text": "Collinearity\n\nInterpretation makes sense when predictors are not highly correlated.\n\nCorrelations amongst predictors cause problems (Collinearity).\n\n\nLarge variance of coefficients.\n\nLarge magnitude of coefficients.\n\nInstable and wrong signed coefficients.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThink about the standard error size. Do we tend to conclude \\(\\beta_j = 0\\) or not?"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#extrapolation",
+    "href": "slides/04-linear-reg.html#extrapolation",
+    "title": "Linear Regression 📈",
+    "section": "Extrapolation",
+    "text": "Extrapolation\n\nRegression models are intended as interpolation equations over the range of the regressors used to fit the model.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nDo not use regression for time series forecasting!"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#regression-is-not-for-causal-inference",
+    "href": "slides/04-linear-reg.html#regression-is-not-for-causal-inference",
+    "title": "Linear Regression 📈",
+    "section": "Regression is Not for Causal Inference",
+    "text": "Regression is Not for Causal Inference\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClaims of causality should be avoided for observational data."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#practical-significance-vs.-statisical-significance",
+    "href": "slides/04-linear-reg.html#practical-significance-vs.-statisical-significance",
+    "title": "Linear Regression 📈",
+    "section": "Practical Significance vs. Statisical Significance",
+    "text": "Practical Significance vs. Statisical Significance\n\n\n\n\n\n\nImportant\n\n\n\n\n\n\\(H_0:\\beta_j = 0\\) will always be rejected as long as the sample size is large enough, even \\(x_j\\) has a very small effect on \\(y\\).\n\nConsider the practical significance of the result, not just the statistical significance.\nUse confidence intervals to draw conclusions instead of relying only on p-values.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nIf the sample size is small, there may not be enough evidence to reject \\(H_0:\\beta_j = 0\\).\n\n\nDo Not immediately conclude that the variable has no association with the response.\nThere may be a linear association that is just not strong enough to detect given your data, or there may be a non-linear association.\n\n\n\n\n\n\n\np-value is a dichotomous approach"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#test-for-significance",
+    "href": "slides/04-linear-reg.html#test-for-significance",
+    "title": "Linear Regression 📈",
+    "section": "Test for significance",
+    "text": "Test for significance\n\nTest for significance: Determine if there is a linear relationship between the response and any of the regressor variables.\n \\(H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_k = 0 \\quad H_1: \\beta_j \\ne 0 \\text{ for at least one } j\\) \n\n\n\n\\(\\sum_{i=1}^n(y_i - \\overline{y})^2 = \\sum_{i=1}^n(\\hat{y}_i - \\overline{y})^2 + \\sum_{i=1}^n(y_i - \\hat{y}_i)^2\\)\nReject \\(H_0\\) if \\(F_{test} > F_{\\alpha, k, n - k - 1}\\).\n\n\n\nWhat is the sample statistic we use to accesses how well the model fits the data?"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#reduced-model-vs.-full-model",
+    "href": "slides/04-linear-reg.html#reduced-model-vs.-full-model",
+    "title": "Linear Regression 📈",
+    "section": "Reduced Model vs. Full Model",
+    "text": "Reduced Model vs. Full Model\n\nOverall test of significance: all predictors vs. Marginal \\(t\\)-test: one single predictor\nHow to test any subset of predictors?\n\n\n\n\nFull Model: \\(y = \\beta_0 + \\beta_1x_1+\\beta_2x_2 + \\beta_3x_3 + \\beta_4x_4 + \\epsilon\\)\n\n\\(H_0: \\beta_{2} = \\beta_{4} = 0\\)\n\n\n\n\n\nReduced Model (under \\(H_0\\)): \\(y = \\beta_0 + \\beta_1x_1 + \\beta_3x_3 + \\epsilon\\)\n\nLike to see if \\(x_2\\) and \\(x_4\\) can contribute significantly to the regression model when \\(x_1\\) and \\(x_3\\) are in the model.\n\nIf yes, \\(\\beta_{2} \\ne 0\\) and/or \\(\\beta_{4} \\ne 0\\). (Reject \\(H_0\\))\nOtherwise, \\(\\beta_{2} = \\beta_{4} = 0\\). (Do not reject \\(H_0\\))\n\n\n\n\nGiven \\(x_1\\) and \\(x_3\\) in the model, we examine how much extra \\(SS_R\\) is increased (\\(SS_{res}\\) is reduced) if \\(x_2\\) and \\(x_4\\) are added to the model."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#extra-sum-of-squares-and-partial-f-test",
+    "href": "slides/04-linear-reg.html#extra-sum-of-squares-and-partial-f-test",
+    "title": "Linear Regression 📈",
+    "section": "Extra-sum-of-squares and Partial \\(F\\)-test",
+    "text": "Extra-sum-of-squares and Partial \\(F\\)-test\n\n\\(F_{test} = \\frac{SS_R(\\beta_2, \\beta_4 \\mid \\beta_1, \\beta_3)/r}{SS_{res}/(n-k-1)} = \\frac{MS_R(\\beta_2, \\beta_4 \\mid \\beta_1, \\beta_3)}{MS_{res}}\\) where \\(r\\) is the number of coefficients being tested.\nUnder \\(H_0\\) that \\(\\beta_{2} = \\beta_{4} = 0\\), \\(F_{test} \\sim F_{r, n-k-1}\\).\nReject \\(H_0\\) if \\(F_{test} > F_{\\alpha, r, n-k-1}\\).\n\n\n\nGiven the regressors of \\(x_1, x_3\\) are in the model,\n\nIf the regressors of \\(x_2\\) and \\(x_4\\) contribute much, \\(SS_R(\\beta_2, \\beta_4 \\mid \\beta_1, \\beta_3)\\) will be large.\nA large \\(SS_R(\\beta_2, \\beta_4 \\mid \\beta_1, \\beta_3)\\) implies a large \\(F_{test}\\).\nA large \\(F_{test}\\) tends to reject \\(H_0\\), and conclude that \\(\\beta_{2} \\ne 0\\) and/or \\(\\beta_{4} \\ne 0\\).\nThe regressors of \\((x_2, x_4)\\) provide additional explanatory and prediction power that \\((x_1, x_3)\\) cannot provide."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#regression-model-in-matrix-form",
+    "href": "slides/04-linear-reg.html#regression-model-in-matrix-form",
+    "title": "Linear Regression 📈",
+    "section": "Regression Model in Matrix Form",
+    "text": "Regression Model in Matrix Form\n\\[y_i= \\beta_0 + \\beta_1x_{i1} + \\beta_2x_{i2} + \\dots + \\beta_kx_{ik} + \\epsilon_i, \\quad \\epsilon_i \\stackrel{iid}{\\sim} N(0, \\sigma^2), \\quad i = 1, 2, \\dots, n\\]\n\n\n\\[\\bf y = \\bf X \\boldsymbol{\\beta} + \\boldsymbol{\\epsilon}\\] where\n\\[\\begin{align}\n\\bf y = \\begin{bmatrix}\ny_1 \\\\\ny_2 \\\\\n\\vdots \\\\\ny_n \\end{bmatrix},\\quad\n\\bf X = \\begin{bmatrix}\n  1 & x_{11} & x_{12} & \\cdots & x_{1k} \\\\\n  1 & x_{21} & x_{22} & \\cdots & x_{2k} \\\\\n  \\vdots & \\vdots  & \\vdots  & \\ddots & \\vdots  \\\\\n  1 & x_{n1} & x_{n2} & \\cdots & x_{nk} \\end{bmatrix}, \\quad\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\vdots \\\\\n\\beta_k \\end{bmatrix} , \\quad\n\\boldsymbol{\\epsilon} = \\begin{bmatrix}\n\\epsilon_1 \\\\\n\\epsilon_2 \\\\\n\\vdots \\\\\n\\epsilon_n\\end{bmatrix}\n\\end{align}\\]\n\n\n\\({\\bf X}_{n \\times p}\\): Design matrix\n\n\\(\\boldsymbol{\\epsilon} \\sim MVN_n({\\bf 0}, \\sigma^2 {\\bf I}_n)\\)1\n\n\n\nFor simplicity and convenience, \\(N({\\bf a}, {\\bf B})\\) represents a multivariate normal distribution with mean vector \\({\\bf a}\\) and covariance matrix \\({\\bf B}\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#least-squares-estimation-in-matrix-form",
+    "href": "slides/04-linear-reg.html#least-squares-estimation-in-matrix-form",
+    "title": "Linear Regression 📈",
+    "section": "Least Squares Estimation in Matrix Form",
+    "text": "Least Squares Estimation in Matrix Form\n\\[\\begin{align}\nS(\\boldsymbol{\\beta}) = \\sum_{i=1}^n\\epsilon_i^2 = \\boldsymbol{\\epsilon}'\\boldsymbol{\\epsilon} &= (\\bf y - \\bf X \\boldsymbol{\\beta})'(\\bf y - \\bf X \\boldsymbol{\\beta}) \\\\\n&= \\bf y'\\bf y - \\boldsymbol{\\beta}'\\bf X'\\bf y - \\bf y'\\bf X \\boldsymbol{\\beta} + \\boldsymbol{\\beta}' \\bf X' \\bf X \\boldsymbol{\\beta} \\\\\n&={\\bf y}'{\\bf y} - 2\\boldsymbol{\\beta}'{\\bf X}'{\\bf y} + \\boldsymbol{\\beta}' {\\bf X}' {\\bf X} \\boldsymbol{\\beta}\n\\end{align}\\]\n\nLet \\({\\bf t}\\) and \\({\\bf a}\\) be \\(n \\times 1\\) column vectors, and \\({\\bf A}_{n \\times n}\\) is a symmetric matrix.\n\n\\(\\frac{\\partial {\\bf t}'{\\bf a} }{\\partial {\\bf t}} = \\frac{\\partial {\\bf a}'{\\bf t} }{\\partial {\\bf t}} = {\\bf a}\\)\n\\(\\frac{\\partial {\\bf t}'{\\bf A} {\\bf t}}{\\partial {\\bf t}} = 2{\\bf A} {\\bf t}\\)\n\n\n\nNormal equations: \\(\\begin{align} \\left.\\frac{\\partial S}{\\partial \\boldsymbol{\\beta}}\\right \\vert_{\\bf b} = -2 {\\bf X}' {\\bf y} + 2 {\\bf X}' {\\bf X} {\\bf b} = \\boldsymbol{0} \\end{align}\\)\n\n\n\n\nLSE for \\(\\boldsymbol{\\beta}\\):  \\(\\begin{align} \\boxed{{\\bf b} = \\arg \\min _{\\boldsymbol{\\beta}} (\\bf y - \\bf X \\boldsymbol{\\beta})'(\\bf y - \\bf X \\boldsymbol{\\beta}) = ({\\bf X}' {\\bf X}) ^{-1} {\\bf X}' \\bf y} \\end{align}\\)  provided that \\({\\bf X}' {\\bf X}\\) is full rank."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#normal-equations",
+    "href": "slides/04-linear-reg.html#normal-equations",
+    "title": "Linear Regression 📈",
+    "section": "Normal Equations",
+    "text": "Normal Equations\n\\((\\bf X' \\bf X) \\bf b = \\bf X' \\bf y\\)"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#hat-matrix",
+    "href": "slides/04-linear-reg.html#hat-matrix",
+    "title": "Linear Regression 📈",
+    "section": "Hat Matrix",
+    "text": "Hat Matrix\n\\[\\hat{\\bf y} = {\\bf X} {\\bf b} = {\\bf X} ({\\bf X}' {\\bf X}) ^{-1} \\bf X' \\bf y = \\bf H \\bf y\\]\n\nThe hat matrix \\({\\bf H}_{n \\times n} = {\\bf X} ({\\bf X}' {\\bf X}) ^{-1} \\bf X'\\)\nThe vector of residuals \\(e_i = y_i - \\hat{y}_i\\) is \\[\\bf e = \\bf y - \\hat{\\bf y} = \\bf y - \\bf X \\bf b = \\bf y -\\bf H \\bf y = (\\bf I - \\bf H) \\bf y\\]\n\n\n\n\nBoth \\(\\bf H\\) and \\(\\bf I-H\\) are symmetric and idempotent. They are projection matrices.\n\\(\\bf H\\) projects \\(\\bf y\\) to \\(\\hat{\\bf y}\\) on the \\((k+1)\\)-dimensional space spanned by columns of \\(\\bf X\\), or the column space of \\(\\bf X\\), \\(Col(\\bf X)\\).\n\\(\\bf I - H\\) projects \\(\\bf y\\) to \\(\\bf e\\) on the space perpendicular to \\(Col(\\bf X)\\), or \\(Col(\\bf X)^{\\bot}\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#geometrical-interpretation-of-least-squares",
+    "href": "slides/04-linear-reg.html#geometrical-interpretation-of-least-squares",
+    "title": "Linear Regression 📈",
+    "section": "Geometrical Interpretation of Least Squares",
+    "text": "Geometrical Interpretation of Least Squares\n\n\n\n\\(Col({\\bf X}) = \\{ {\\bf Xb}: {\\bf b} \\in {\\bf R}^{k+1} \\}\\), \\({\\bf y} \\notin Col({\\bf X})\\)\n\\(\\hat{{\\bf y}} = {\\bf Xb} = {\\bf H} {\\bf y} \\in Col({\\bf X})\\)\n\\(\\small {\\bf e} = ({\\bf y - \\hat{\\bf y}}) = ({\\bf y - X b}) = ({\\bf I} - {\\bf H}) {\\bf y} \\perp Col({\\bf X})\\)\n\\({\\bf X}'{\\bf e} = 0\\)\n\n\nSearching for \\(\\bf b\\) that minimizes \\(SS_{res}\\) is equivalent to locating the point \\({\\bf Xb} \\in Col({\\bf X})\\) \\((C)\\) that is as close to \\(\\bf y\\) \\((A)\\) as possible!\n\n\n\n\n\n\nhttps://commons.wikimedia.org/wiki/File:OLS_geometric_interpretation.svg\n\n\n\n\n\n\n\nMinimize the distance of \\(\\color{red}{A}\\) to \\(Col(\\bf X)\\): Find the point in \\(Col(\\bf X)\\) that is closest to \\(A\\). The distance is minimized when the point in the space is the foot of the line from \\(A\\) normal to the space. This is point \\(C\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#multivariate-gaussiannormal-distribution",
+    "href": "slides/04-linear-reg.html#multivariate-gaussiannormal-distribution",
+    "title": "Linear Regression 📈",
+    "section": "Multivariate Gaussian/Normal Distribution",
+    "text": "Multivariate Gaussian/Normal Distribution\n\n\n\\({\\bf y} \\sim N_n(\\boldsymbol \\mu, {\\bf \\Sigma})\\)\n\n\n\\(\\boldsymbol \\mu\\): \\(n \\times 1\\) mean vector\n\n\\({\\bf \\Sigma}\\): \\(n \\times n\\) covariance matrix\n\n\n\n\\(\\boldsymbol \\mu= (2, 1)'\\); \\({\\bf \\Sigma} = \\begin{pmatrix} 2 & -1 \\\\ -1 & 2\\end{pmatrix}\\)"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#sampling-distribution-of-bf-b",
+    "href": "slides/04-linear-reg.html#sampling-distribution-of-bf-b",
+    "title": "Linear Regression 📈",
+    "section": "Sampling Distribution of \\({\\bf b}\\)\n",
+    "text": "Sampling Distribution of \\({\\bf b}\\)\n\n\n\\({\\bf y} \\sim N(\\boldsymbol \\mu, {\\bf \\Sigma})\\), and \\({\\bf Z = By + c}\\) with a constant matrix \\({\\bf B}\\) and vector \\(\\bf c\\), then \\[{\\bf Z} \\sim N({\\bf B\\boldsymbol \\mu}, {\\bf B \\Sigma B}')\\]\n\n\\({\\bf b} = ({\\bf X}' {\\bf X}) ^{-1} \\bf X' \\bf y\\)\n\\[\\textbf{b} \\sim N\\left(\\boldsymbol \\beta, \\sigma^2 {\\bf (X'X)}^{-1} \\right)\\] \\[E(\\textbf{b}) = E\\left[ {\\bf (X'X)}^{-1} {\\bf X}' {\\bf y}\\right] = \\boldsymbol \\beta\\] \\[\\mathrm{Var}(\\textbf{b}) = \\mathrm{Var}\\left[{\\bf (X'X)}^{-1} {\\bf X}' {\\bf y} \\right] = \\sigma^2 {\\bf (X'X)}^{-1}\\]\n\nThe unknown \\(\\sigma^2\\) is estimated by \\(\\hat{\\sigma}^2 = MS_{res} = \\frac{SS_{res}}{n - k - 1}\\).\n\\(\\textbf{b}\\) is Best Linear Unbiased Estimator (BLUE) (Gauss-Markov Theorem).\n\nThe standard error of \\(b_j\\) is \\({\\sqrt{s^2C_{jj}}}\\), where \\(C_{jj}\\) is the diagonal element of \\(({\\bf X'X})^{-1}\\) corresponding to \\(b_j\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#what-is-not-covered",
+    "href": "slides/04-linear-reg.html#what-is-not-covered",
+    "title": "Linear Regression 📈",
+    "section": "What is Not Covered",
+    "text": "What is Not Covered\n\nDetailed statistical inference\nRegression Diagnostics (Usual Data: Outliers, leverage points, influential points; Non-normality; Non-constant variance; Non-linearity)\nCategorical variables\nModel/Variable Selection\nCode for doing regression (lm() in R and linear_model.LinearRegression() in sklearn of Python)\nMaximum likelihood estimation\n\n\nWhere to learn these stuff?\n\nDr. Yu’s MSSC 5780 slides https://math4780-f23.github.io/website/\nISL Ch 3, 6.1."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#generalizations-of-the-linear-model",
+    "href": "slides/04-linear-reg.html#generalizations-of-the-linear-model",
+    "title": "Linear Regression 📈",
+    "section": "Generalizations of the Linear Model",
+    "text": "Generalizations of the Linear Model\n\nClassification: logistic regression, support vector machines\nNon-linearity: kernel smoothing, splines and generalized additive models, nearest neighbor methods.\nInteractions: Tree-based methods, bagging, random forests and boosting\nShrinkage and Regularization: Ridge regression and LASSO"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#basic-concepts",
+    "href": "slides/04-linear-reg.html#basic-concepts",
+    "title": "Linear Regression 📈",
+    "section": "Basic Concepts",
+    "text": "Basic Concepts\n\nAlthough we have the closed form for \\({\\bf b} = ({\\bf X}' {\\bf X}) ^ {-1} \\bf X' \\bf y\\), we can solve for \\(\\bf b\\) numerically.\n\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta}{\\text{min}} \\quad \\ell(\\boldsymbol \\beta) = \\frac{1}{n} \\sum_i (y_i - \\beta_0 - x_i\\beta_1)^2 \\\\\n\\end{align}\\]\n\n\n\\(\\ell(\\boldsymbol \\beta)\\), in machine learning, is called the (squared) loss function.\n\n\n# generate data from a simple linear regression beta0 = 0.5, beta1 = 1\nset.seed(2024)\nn <- 1000\nx <- rnorm(n)\ny <- 0.5 + x + rnorm(n)\n\n\nStart with an initial value of \\(\\boldsymbol \\beta\\), say \\(\\widehat{\\boldsymbol \\beta} = (0.3, 1.5)\\), we compute the \\(SS_{res}\\)\n\n\n\\[\\begin{align}\n\\sum_i \\left( y_i - 0.3 - 1.5 x_i \\right)^2 \\\\\n\\end{align}\\]\nLet’s first generate a set of data. We have two parameters, an intercept \\(\\beta_= 0.5\\) and a slope \\(\\beta_1 = 1\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#basic-concepts-1",
+    "href": "slides/04-linear-reg.html#basic-concepts-1",
+    "title": "Linear Regression 📈",
+    "section": "Basic Concepts",
+    "text": "Basic Concepts\n\n# calculate the residual sum of squares for a grid of beta values\nrss <- function(b, trainx, trainy) mean((trainy - b[1] - trainx * b[2]) ^ 2)\nrss(b = c(0.3, 1.5), trainx = x, trainy = y)\n\n[1] 1.250039\n\n\n\nThe initial point \\((0.3, 1.5)\\) is not at the bottom of the surface.\n\n\n\n\n\n\n\nDoing this on all such β values would allow us to create a surface of the RSS, as a function of the parameters. - Our goal is to minimize the \\(RR_{res}\\), knowing the corresponding \\(\\boldsymbol \\beta\\) values. Numerical optimization is a research field that investigates such problems and their properties."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#optim",
+    "href": "slides/04-linear-reg.html#optim",
+    "title": "Linear Regression 📈",
+    "section": "\noptim()1\n",
+    "text": "optim()1\n\n\n(lm_optim <- optim(par = c(0.3, 1.5), fn = rss, trainx = x, trainy = y))\n\n$par\n[1] 0.5258467 0.9857827\n\n$value\n[1] 0.9449767\n\n$counts\nfunction gradient \n      55       NA \n\n$convergence\n[1] 0\n\n$message\nNULL\n\n\n\nlm(y ~ x)$coef\n\n(Intercept)           x \n  0.5257906   0.9857546 \n\n\n\nThe par argument specifies an initial value. In this case, it is \\(\\beta_0 = \\beta_1 = 2\\).\nThe fn argument specifies the name of a function (rss in this case) that can calculate the objective function. This function may have multiple arguments. However, the first argument has to be the parameter(s) that is being optimized. In addition, the parameters need to be supplied to the function as a vector, but not matrix, list or other formats.\nThe arguments trainx = x, trainy = y specifies any additional arguments that the objective function fn (rss) needs. It behaves the same as if you are supplying this to the function rss it self.\nscipy.optimize for Python."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#basic-principles",
+    "href": "slides/04-linear-reg.html#basic-principles",
+    "title": "Linear Regression 📈",
+    "section": "Basic Principles",
+    "text": "Basic Principles\nFor a general function \\(f(\\mathbf{x})\\) to be minimized with respect to (w.r.t.) \\(\\mathbf{x}\\in \\mathbf{R}^{p}\\), we have\n\n\nFirst-Order Necessary Condition:\n\n\nIf \\(f\\) is continuously differentiable in an open neighborhood of local minimum \\(\\mathbf{x}^\\ast\\), then \\(\\nabla f(\\mathbf{x}^\\ast) = \\mathbf{0}\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#taylor-expansion",
+    "href": "slides/04-linear-reg.html#taylor-expansion",
+    "title": "Linear Regression 📈",
+    "section": "Taylor Expansion",
+    "text": "Taylor Expansion\n\\[f(\\mathbf{x}^\\text{new}) \\approx f(\\mathbf{x}) + \\nabla f(\\mathbf{x}) (\\mathbf{x}^\\text{new} - \\mathbf{x})\\]\n\nWhether \\(\\nabla f(\\mathbf{x})\\) is positive or negative, we can always find a new point \\(\\mathbf{x}^\\text{new}\\) that makes \\(\\nabla f(\\mathbf{x}) (\\mathbf{x}^\\text{new} - \\mathbf{x})\\) less than 0, so that \\(\\mathbf{x}^\\text{new}\\) has a smaller functional value than \\(\\mathbf{x}\\).\n\n\n\n\n\\(\\nabla f(\\mathbf{x}^\\ast) = \\mathbf{0}\\) is only a necessary condition, not a sufficient condition.\n\\(x = 1\\) is a local minimizer, not a global one.\n\nOn the left hand side, we have a convex function, which looks like a bowl. The intuition is that, if \\(f(\\mathbf{x})\\) is a function that is smooth enough, and \\(\\mathbf{x}\\) is a point with \\(\\nabla f(\\mathbf{x}^\\ast) \\neq 0\\), then by the Taylor expansion, we have, for any new point \\(\\mathbf{x}^{new}\\) in the neighborhood of \\(\\mathbf{x}\\), we can approximate its function value - Since we only checked if the slope if “flat” but didn’t care if its facing upward or downward, our condition cannot tell the difference."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#second-order-property",
+    "href": "slides/04-linear-reg.html#second-order-property",
+    "title": "Linear Regression 📈",
+    "section": "Second-order Property",
+    "text": "Second-order Property\nSecond-order Sufficient Condition:\n\n\\(f\\) is twice continuously differentiable in an open neighborhood of \\(\\mathbf{x}^\\ast\\). If \\(\\nabla f(\\mathbf{x}^\\ast) = \\mathbf{0}\\) and \\(\\nabla^2 f(\\mathbf{x}^\\ast)\\) , the Hessian matrix, is positive definite, i.e., \\[\n\\nabla^2 f(\\mathbf{x}) = \\left(\\frac{\\partial^2 f(\\mathbf{x})}{\\partial x_i \\partial x_j}\\right) = \\mathbf{H}(\\mathbf{x}) \\succeq 0\n\\] then \\(\\mathbf{x}^\\ast\\) is a strict local minimizer of \\(f\\).\n\n\n\\[\\begin{align}\n\\text{Left:} \\qquad \\nabla^2 f_1(x) &= 2 \\\\\n\\text{Right:} \\qquad \\nabla^2 f_2(x) &= 12x^2 + 12 x - 10\\\\\n\\end{align}\\]\n\nFor \\(f_1\\), \\(\\mathbf{H}(\\mathbf{x}) \\succeq 0\\), and the solution is a minimizer.\nFor \\(f_2\\), \\(\\nabla^2 f_2(-2.5) = 35\\), \\(\\nabla^2 f_2(0) = -10\\) and \\(\\nabla^2 f_2(1) = 14\\). So \\(-2.5\\) and \\(1\\) are local minimizers and \\(0\\) is a local maximizer.\n\n\n\n\\(\\mathbf{H}(\\mathbf{x})\\) is called the Hessian matrix, which will be frequently used in second-order methods. We can easily check this property for our examples: These conditions are sufficient, but again, they only discuss local properties, not global properties."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#optimization-algorithm",
+    "href": "slides/04-linear-reg.html#optimization-algorithm",
+    "title": "Linear Regression 📈",
+    "section": "Optimization Algorithm",
+    "text": "Optimization Algorithm\n\n 1. Start with \\(\\mathbf{x}^{(0)}\\)\n\nFor \\(i = 1, 2, \\dots\\) until convergence, find \\(\\mathbf{x}^{(i)}\\) s.t. \\(f(\\mathbf{x}^{(i)}) < f(\\mathbf{x}^{(i-1)})\\)\n\n\n\n\nStopping criterion:\n\nGradient of the objective function: \\(\\lVert \\nabla f(\\mathbf{x}^{(i)}) \\rVert < \\epsilon\\)\n\n(Relative) change of distance: \\(\\lVert \\mathbf{x}^{(i)} - \\mathbf{x}^{(i-1)} \\rVert / \\lVert \\mathbf{x}^{(i-1)}\\rVert< \\epsilon\\) or \\(\\lVert \\mathbf{x}^{(i)} - \\mathbf{x}^{(i-1)} \\rVert < \\epsilon\\)\n\n(Relative) change of functional value: \\(| f(\\mathbf{x}^{(i)}) - f(\\mathbf{x}^{(i-1)})| / |f(\\mathbf{x}^{(i)})| < \\epsilon\\) or \\(| f(\\mathbf{x}^{(i)}) - f(\\mathbf{x}^{(i-1)})| < \\epsilon\\)\n\nStop at a pre-specified number of iterations\n\n\n\n\noptim(par, fn, gr = NULL, ...,\n      method = c(\"Nelder-Mead\", \"BFGS\", \"CG\", \"L-BFGS-B\", \"SANN\",\n                 \"Brent\"),\n      lower = -Inf, upper = Inf,\n      control = list(), hessian = FALSE)\nMost optimization algorithms follow the same idea: starting from a point x(0) (which is usually specified by the user) and move to a new point x(1) that improves the objective function value. Repeatedly performing this to get a sequence of points x(0),x(1),x(2),x(3),… until the certain stopping criterion is reached. Most algorithms differ in terms of how to move from the current point x(k) to the next, better target point x(k+1). This may depend on the smoothness or structure of f, constrains on the domain, computational complexity, memory limitation, and many others."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#bfgs-demo",
+    "href": "slides/04-linear-reg.html#bfgs-demo",
+    "title": "Linear Regression 📈",
+    "section": "\nBFGS Demo",
+    "text": "BFGS Demo\n\n\n\nf1 <- function(x) x ^ 2\nf2 <- function(x) {\n    x ^ 4 + 2 * x ^ 3 - 5 * x ^ 2\n}\noptim(par = 3, fn = f1, method = \"BFGS\")\n\n$par\n[1] -8.384004e-16\n\n$value\n[1] 1.75742e-29\n\n$counts\nfunction gradient \n       8        3 \n\n$convergence\n[1] 0\n\n$message\nNULL\n\n\n\n\noptim(par = 10, fn = f2, method = \"BFGS\")\n\n$par\n[1] 0.9999996\n\n$value\n[1] -2\n\n$counts\nfunction gradient \n      37       12 \n\n$convergence\n[1] 0\n\n$message\nNULL\n\n\n\noptim(par = 3, fn = f2, method = \"BFGS\")$par\n\n[1] -2.5"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#second-order-newtons-method",
+    "href": "slides/04-linear-reg.html#second-order-newtons-method",
+    "title": "Linear Regression 📈",
+    "section": "Second-order Newton’s Method\n",
+    "text": "Second-order Newton’s Method\n\n\nSecond order Taylor expansion at a current point \\(\\mathbf{x}\\):\n\n\\[f(\\mathbf{x}^\\ast) \\approx f(\\mathbf{x}) + \\nabla f(\\mathbf{x})' (\\mathbf{x}^\\ast - \\mathbf{x}) + \\frac{1}{2} (\\mathbf{x}^\\ast - \\mathbf{x})' \\mathbf{H}(\\mathbf{x}) (\\mathbf{x}^\\ast - \\mathbf{x})\\]\n\nTake derivative w.r.t \\(\\mathbf{x}^\\ast\\) on both sides: \\[0 = \\nabla f(\\mathbf{x}^\\ast) = 0 + \\nabla f(\\mathbf{x}) + \\mathbf{H}(\\mathbf{x}) (\\mathbf{x}^\\ast - \\mathbf{x})\\] \\[\\boxed{\\mathbf{x}^{(i+1)} = \\mathbf{x}^{(i)} -  \\mathbf{H}(\\mathbf{x}^{(i)})^{-1} \\nabla f(\\mathbf{x}^{(i)})}\\]\nFor numerical stability, introduce a step size \\(\\delta \\in (0, 1)\\): \\[\\mathbf{x}^{(i+1)} = \\mathbf{x}^{(i)} -  {\\color{red}{\\delta}} \\, \\mathbf{H}(\\mathbf{x}^{(i)})^{-1} \\nabla f(\\mathbf{x}^{(i)})\\]\n\nIf \\(\\mathbf{H}\\) is difficult to compute, we may use some matrix to substitute it. For example, if we simplify use the identity matrix \\(\\mathbf{I}\\), then this reduces to a first-order method to be introduced later. However, if we can get a good approximation, we can still solve this linear system and get to a better point. Then the question is how to obtain such matrix in a computationally inexpensive way. The Broyden–Fletcher–Goldfarb–Shanno (BFSG) algorithm is such an approach by iteratively updating its (inverse) estimation. For details, please see the SMLR book. We have already used the BFGS method previously in the optim() example."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#first-order-gradient-descent",
+    "href": "slides/04-linear-reg.html#first-order-gradient-descent",
+    "title": "Linear Regression 📈",
+    "section": "First-Order Gradient Descent\n",
+    "text": "First-Order Gradient Descent\n\n\n\n\n\n\n\nNote\n\n\n\nWhen \\(\\mathbf{H}\\) or \\(\\mathbf{H}^{-1}\\) is difficult to compute\n\nGet an approximate one in a computationally inexpensive way. The BFGS algorithm is such an approach by iteratively updating its (inverse) estimation.\nUse first-order methods\n\n\n\n\n\n\nWhen using \\(\\mathbf{H}= \\mathbf{I}\\), we update \\[\\mathbf{x}^{(i+1)} = \\mathbf{x}^{(i)} - \\delta \\nabla f(\\mathbf{x}^{(i)}).\\]\n\nIt is crucial to figure out the step size \\(\\delta\\).\n\nA too large \\(\\delta\\) may not converge.\nA too small \\(\\delta\\) takes too many iterations.\n\n\n\nAlternatively, line search could be used."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#demo-ss_res-contour",
+    "href": "slides/04-linear-reg.html#demo-ss_res-contour",
+    "title": "Linear Regression 📈",
+    "section": "\nDemo \\(SS_{res}\\) Contour",
+    "text": "Demo \\(SS_{res}\\) Contour\nThe objective function is \\(\\ell(\\boldsymbol \\beta) = \\frac{1}{2n}||\\mathbf{y} - \\mathbf{X} \\boldsymbol \\beta ||^2\\) with solution \\({\\bf b} = \\left(\\mathbf{X}'\\mathbf{X}\\right)^{-1} \\mathbf{X}'\\mathbf{y}\\).\n\nCodeset.seed(2024)\nn <- 200\n\n# create some data with linear model\nX <- MASS::mvrnorm(n, c(0, 0), matrix(c(1, 0.7, 0.7, 1), 2, 2))\ny <- rnorm(n, mean = 2 * X[, 1] + X[, 2])\n  \nbeta1 <- seq(-1, 4, 0.005)\nbeta2 <- seq(-1, 4, 0.005)\nallbeta <- data.matrix(expand.grid(beta1, beta2))\nrss <- matrix(apply(allbeta, 1, \n                    function(b, X, y) sum((y - X %*% b) ^ 2), X, y),\n              length(beta1), length(beta2))\n  \n# quantile levels for drawing contour\nquanlvl = c(0.01, 0.025, 0.05, 0.2, 0.5, 0.75)\n  \n# plot the contour\ncontour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1)\nbox()\n  \n# the truth\nb <- solve(t(X) %*% X) %*% t(X) %*% y\npoints(b[1], b[2], pch = 19, col = \"blue\", cex = 2)"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#demo-gradient-descent",
+    "href": "slides/04-linear-reg.html#demo-gradient-descent",
+    "title": "Linear Regression 📈",
+    "section": "\nDemo Gradient Descent",
+    "text": "Demo Gradient Descent\n\\[\n\\begin{align}\n\\frac{\\partial \\ell(\\boldsymbol \\beta)}{\\partial \\boldsymbol \\beta} = -\\frac{1}{n} \\sum_{i=1}^n (y_i - x_i' \\boldsymbol \\beta) x_i.\n\\end{align}\n\\] First set an initial beta value, say \\(\\boldsymbol \\beta = \\mathbf{0}\\) for all entries, then proceed with the update\n\\[\\begin{align}\n\\boldsymbol \\beta^\\text{new} =& \\boldsymbol \\beta^\\text{old} - \\delta \\frac{\\partial \\ell(\\boldsymbol \\beta)}{\\partial \\boldsymbol \\beta}\\\\\n=&\\boldsymbol \\beta^\\text{old} + \\delta \\frac{1}{n} \\sum_{i=1}^n (y_i - x_i' \\boldsymbol \\beta) x_i.\\\\\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#demo-gradient-descent-1",
+    "href": "slides/04-linear-reg.html#demo-gradient-descent-1",
+    "title": "Linear Regression 📈",
+    "section": "\nDemo Gradient Descent",
+    "text": "Demo Gradient Descent\n\nSet \\(\\boldsymbol{\\beta}^{(0)} = \\mathbf{0}\\), \\(\\delta = 0.2\\)"
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#demo-effect-of-delta",
+    "href": "slides/04-linear-reg.html#demo-effect-of-delta",
+    "title": "Linear Regression 📈",
+    "section": "\nDemo Effect of \\(\\delta\\)\n",
+    "text": "Demo Effect of \\(\\delta\\)\n\n\nThe descent path is very smooth because we choose a very small step size. However, if the step size is too large, we may observe unstable results or even unable to converge. For example, if We set \\(\\delta = 1\\) or \\(\\delta = 1.5\\)."
+  },
+  {
+    "objectID": "slides/04-linear-reg.html#revisit-optim",
+    "href": "slides/04-linear-reg.html#revisit-optim",
+    "title": "Linear Regression 📈",
+    "section": "Revisit optim()\n",
+    "text": "Revisit optim()\n\noptim(par, fn, gr = NULL, ...,\n      method = c(\"Nelder-Mead\", \"BFGS\", \"CG\", \"L-BFGS-B\", \"SANN\",\n                 \"Brent\"),\n      lower = -Inf, upper = Inf,\n      control = list(), hessian = FALSE)\n\nIf gradient is known, we provide this information in the argument gr = to avoid numerically approximating the gradient.\n\nfaster convergence\nmore precise\n\n\n\n\n\n\nWhen we only supply the optim() function the objective function definition fn =, it will internally numerically approximate the gradient. Sometimes this is not preferred due to computational reasons. And when you do have the theoretical gradient, it is likely to be more accurate than numerically approximated values. Hence, as long as the gradient itself does not cost too much compute, we may take advantage of it. We could supply the optim() function using the gradient gr =. This is the example we used previously:\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
     "objectID": "slides/01-syllabus.html#my-journey",
     "href": "slides/01-syllabus.html#my-journey",
     "title": "Welcome Aboard 🙌",
@@ -775,6 +1517,524 @@
     "title": "Welcome Aboard 🙌",
     "section": "Attendance and COVID-19",
     "text": "Attendance and COVID-19\n\nIt is your responsibility as a Marquette University student to protect the health and safety of our community in this course.\nVisit What to do if you are exposed to COVID-19 or test positive website for university guidelines on the best course of action.\nVisit guidance on Spring 2024 Class attendance, withdrawal, and grading\n\nStudents are responsible for contacting instructors prior to the missed class session to indicate absence and the need to make up classwork/assignments.\n\nStudents requesting make up classwork/assignments are required to provide the COVID Cheq “stop sign” to confirm inability to attend class.\n\n\n\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/08-bayes.html#thinking-like-a-bayesian",
+    "href": "slides/08-bayes.html#thinking-like-a-bayesian",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Thinking like a Bayesian",
+    "text": "Thinking like a Bayesian\n\n\nWhen flipping a fair coin, we say that “the probability of flipping Heads is 0.5.” How do you interpret this probability?\n\nIf I flip this coin over and over, roughly 50% will be Heads.\nHeads and Tails are equally plausible.\nBoth a. and b. make sense.\n\n\n\n\n\n\nAn election is coming up and a pollster claims that candidate A has a 0.9 probability of winning. How do you interpret this probability?\n\nIf we observe the election over and over, candidate A will win roughly 90% of the time.\nCandidate A is much more likely to win than to lose.\nThe pollster’s calculation is wrong. Candidate A will either win or lose, thus their probability of winning can only be 0 or 1.\n\n\n\n\n\n\n\n1. a = 1 pt, b = 3 pts, c = 2 pts\n\n2. a = 1 pt, b = 3 pts, c = 1 pt"
+  },
+  {
+    "objectID": "slides/08-bayes.html#thinking-like-a-bayesian-1",
+    "href": "slides/08-bayes.html#thinking-like-a-bayesian-1",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Thinking like a Bayesian",
+    "text": "Thinking like a Bayesian\n\n\nTwo claims.\n(1) Ben claims he can predict the coin flip outcome. To test his claim, you flip a fair coin 5 times and he correctly predicts all.\n(2) Emily claims she can distinguish natural and artificial sweeteners. To test her claim, you give her 5 samples and she correctly identifies each.\nIn light of these experiments, what do you conclude?\n\nYou’re more confident in Emily’s claim than Ben’s claim.\nThe evidence supporting Ben’s claim is just as strong as the evidence supporting Emily’s claim.\n\n\n\n\n\n\nSuppose that during a doctor’s visit, you tested positive for COVID. If you only get to ask the doctor one question, which would it be?\n\nWhat’s the chance that I actually have COVID?\nIf in fact I don’t have COVID, what’s the chance that I would’ve gotten this positive test result?\n\n\n\n\n\n\n\n3. a = 3 pts, b = 1 pt\n\n4. a = 3 pts, b = 1 pt\n\nTotals from 4–5 indicate that your current thinking is fairly frequentist, whereas totals from 9–12 indicate alignment with the Bayesian philosophy. In between these extremes, totals from 6–8 indicate that you see strengths in both philosophies."
+  },
+  {
+    "objectID": "slides/08-bayes.html#frequentist-or-bayesian",
+    "href": "slides/08-bayes.html#frequentist-or-bayesian",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Frequentist or Bayesian?",
+    "text": "Frequentist or Bayesian?\n\n\n\nTotals 4-5: your thinking is frequentist\n\n\n\n\n\n\n\n\n\n\n\n\nTotals 9-12: your thinking is Bayesian\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTotals 6-8: you see strengths in both philosophies"
+  },
+  {
+    "objectID": "slides/08-bayes.html#the-meaning-of-probability-relative-frequency",
+    "href": "slides/08-bayes.html#the-meaning-of-probability-relative-frequency",
+    "title": "Bayesian Linear Regression \n",
+    "section": "The Meaning of Probability: Relative Frequency\n",
+    "text": "The Meaning of Probability: Relative Frequency\n\n\nThe frequentist philosophy interprets probability as the long-run relative frequency of a repeatable experiment.\n\n\n\nThe probability that some outcome of a process will be obtained is defined as the relative frequency with which that outcome would be obtained if the process were repeated a large number of times independently under similar conditions.\n\n\n\n\n\n\n\n\n      Frequency Relative Frequency\nHeads         4                0.4\nTails         6                0.6\nTotal        10                1.0\n---------------------\n      Frequency Relative Frequency\nHeads       512              0.512\nTails       488              0.488\nTotal      1000              1.000\n---------------------\n\n\n\nIf we repeat tossing the coin 10 times, the probability of obtaining heads is 40%.\nIf 1000 times, the probability is 51.2%.\n\n\n\n\n\n\n\n\n\n\n\n\nsource: usplash"
+  },
+  {
+    "objectID": "slides/08-bayes.html#issues-of-relative-frequency",
+    "href": "slides/08-bayes.html#issues-of-relative-frequency",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Issues of Relative Frequency\n",
+    "text": "Issues of Relative Frequency\n\n\n😕 How large of a number is large enough?\n\n\n\n😕 Meaning of “under similar conditions”\n\n\n\n\n😕 The relative frequency is reliable under identical conditions?\n\n\n\n\n👉 We only obtain an approximation instead of exact value.\n\n\n\n\n😂 How do you compute the probability that Chicago Cubs wins the World Series next year?"
+  },
+  {
+    "objectID": "slides/08-bayes.html#the-meaning-of-probability-relative-plausibility",
+    "href": "slides/08-bayes.html#the-meaning-of-probability-relative-plausibility",
+    "title": "Bayesian Linear Regression \n",
+    "section": "The Meaning of Probability: Relative Plausibility\n",
+    "text": "The Meaning of Probability: Relative Plausibility\n\n\nIn the Bayesian philosophy, a probability measures the relative plausibility of an event.\n\n\n\n\n\nFor the statement “candidate A has a 0.9 probability of winning”\n\nA frequentist might\n\nsay the conclusion is wrong\nweirdly say in long-run hypothetical repetitions of the election, candidate A would win roughly 90% of the time.\n\n\nA Bayesian would say based on analysis the candidate A is 9 times more likely to win than to lose.\n\n\n\n\n\n\n\n\n\nSource: https://twitter.com/nytgraphics/status/796195155158171648/photo/1\n\n\n\n\n\n\n\n\nFor the statement “the probability of flipping Heads is 0.5”\n\nA frequentist would conclude that if we flip the coin over and over, roughly 1/2 of these flips will be Heads.\nA Bayesian would conclude that Heads and Tails are equally likely."
+  },
+  {
+    "objectID": "slides/08-bayes.html#everybody-changes-their-mind",
+    "href": "slides/08-bayes.html#everybody-changes-their-mind",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Everybody Changes Their Mind",
+    "text": "Everybody Changes Their Mind\n\nWe continuously update our knowledge about the world as we accumulate lived experiences, or collect data.\n\n\nFig 1.1 of https://www.bayesrulesbook.com/. The figures not being sourced come from this book too."
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-knowledge-building-process",
+    "href": "slides/08-bayes.html#bayesian-knowledge-building-process",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Knowledge-building Process",
+    "text": "Bayesian Knowledge-building Process\n\nUsing data and prior beliefs to update our knowledge (Posterior), and repeating."
+  },
+  {
+    "objectID": "slides/08-bayes.html#frequentist-relys-on-limited-data-only",
+    "href": "slides/08-bayes.html#frequentist-relys-on-limited-data-only",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Frequentist Relys on (Limited) Data Only",
+    "text": "Frequentist Relys on (Limited) Data Only\n\nIn Question 3, in a frequentist analysis, “5 out of 5” is “5 out of 5” no matter if it’s in the context of Ben’s coins or Emily’s sweeteners.\n\n\nEqually confident conclusions that Ben can predict coin flips and Emily can distinguish between natural and artificial sweeteners.\n\n\n\n\n\n\nBut do you really believe Ben’s claim 100%? 🤔 😕\n\n\n\n\nIn fact, we judge their claim before evidence are collected, don’t we? 🤔\n\n\n\n\nFrequentist throws out all prior knowledge in favor of a mere 5 data points."
+  },
+  {
+    "objectID": "slides/08-bayes.html#the-bayesian-balancing",
+    "href": "slides/08-bayes.html#the-bayesian-balancing",
+    "title": "Bayesian Linear Regression \n",
+    "section": "The Bayesian Balancing",
+    "text": "The Bayesian Balancing\n\nBen probably overstates his ability but Emily’s claim is reasonable, right?\n\n\n\nBayesian analyses balance and weight our prior experience/knowledge/belief and new data/evidence to judge a claim or make a conclusion.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe are not stubborn! If Ben had correctly predicted the outcome of 1 million coin flips, the strength of this data would far surpass that of our prior, leading to a posterior conclusion that perhaps Ben is psychic!"
+  },
+  {
+    "objectID": "slides/08-bayes.html#asking-different-questions",
+    "href": "slides/08-bayes.html#asking-different-questions",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Asking Different Questions",
+    "text": "Asking Different Questions\n\n\nIn Question 4,\n\nA Bayesian answer (a) what’s the chance that I actually have COVID?\n\nA frequentist answer (b) if in fact I do not have COVID, what’s the chance that I would’ve gotten this positive test result?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(H_0\\): Do not have COVID vs. \\(H_1\\): Have COVID\nA frequestist assesses the uncertainty of the observed data in light of an assumed hypothesis \\(P(Data \\mid H_0)\\)\nA Bayesian assesses the uncertainty of the hypothesis in light of the observed data \\(P(H_0 \\mid Data)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nTest Positive\nTest Negative\nTotal\n\n\n\ndisease\n3\n1\n4\n\n\nno disease\n9\n87\n96\n\n\nTotal\n12\n88\n100\n\n\n\na Bayesian analysis would ask: Given my positive test result, what’s the chance that I actually have the disease? Since only 3 of the 12 people that tested positive have the disease (Table 1.1), there’s only a 25% chance that you have the disease. Thus, when we take into account the disease’s rarity and the relatively high false positive rate, it’s relatively unlikely that you actually have the disease. What a relief.\nsince disease status isn’t repeatable, the probability you have the disease is either 1 or 0 – you have it or you don’t. To the contrary, medical testing (and data collection in general) is repeatable. You can get tested for the disease over and over and over. Thus, a frequentist analysis would ask: If I don’t actually have the disease, what’s the chance that I would’ve tested positive? Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive even if you didn’t have the disease."
+  },
+  {
+    "objectID": "slides/08-bayes.html#fake-news",
+    "href": "slides/08-bayes.html#fake-news",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Fake News",
+    "text": "Fake News\n\n\n\nTell if an incoming article is fake.\n\n\n\n\n\n\nPrior info: Our prior information suggested that 40% of the articles are fake,\n\n\n\n  type   n percent\n  fake  60     0.4\n  real  90     0.6\n Total 150     1.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData come in: The usage of an ! might seem odd for a real article. The exclamation point data is more consistent with fake news.\n\n\n\n title_has_excl fake real\n          FALSE   44   88\n           TRUE   16    2\n          Total   60   90"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-updating-rule",
+    "href": "slides/08-bayes.html#bayesian-updating-rule",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Updating Rule",
+    "text": "Bayesian Updating Rule\n\n\nLet \\(F\\) denote the event that an article is fake.\nThe prior probability model\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\nProbability \\(P(\\cdot)\\)\n\n0.4\n0.6\n1"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-model-for-events",
+    "href": "slides/08-bayes.html#bayesian-model-for-events",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Model for Events",
+    "text": "Bayesian Model for Events\n\n\n\n title_has_excl fake real\n          FALSE   44   88\n           TRUE   16    2\n          Total   60   90\n\n\n\nLet \\(D\\) be the event that an article title has exclamation mark.\nConditional probability: \\(P(D \\mid F) = 0.27\\); \\(P(D \\mid F^c) = 0.02\\).\n\n\n\n\nOpposite position: We know the incoming article used ! (data); we don’t know whether or not the article is fake (what we want to decide).\n\n\n\n\nCompare \\(P(D \\mid F)\\) and \\(P(D \\mid F^c)\\) to ascertain the relative likelihoods of observed data \\(D\\) under different scenarios of the uncertain article status."
+  },
+  {
+    "objectID": "slides/08-bayes.html#likelihood-function",
+    "href": "slides/08-bayes.html#likelihood-function",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Likelihood Function",
+    "text": "Likelihood Function\n\n\n\nLikelihood function notation \\(L(\\cdot\\mid D)\\):\n\n\\[L(F \\mid D) = P(D \\mid F) \\text{ and } L(F^c \\mid D) = P(D \\mid F^c)\\]\n\n\n\n\nWhen \\(F\\) is known, the conditional probability function \\(P(\\cdot \\mid F)\\) allows us to compare the probabilities of an unknown event \\(D\\), \\(D^c\\), occurring with \\(F\\):\n\n\\[P(D \\mid F) \\text{  vs. } P(D^c \\mid F)\\]\n\n\n\n\n\nWhen \\(D\\) is known, the likelihood function \\(L(\\cdot \\mid D) = P(D \\mid \\cdot)\\) allows us to evaluate the relative compatibility of data \\(D\\) with \\(F\\) or \\(F^c\\):\n\n\\[L(F \\mid D) \\text{  vs. } L(F^c \\mid D)\\]\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\n\nProbability \\(P(\\cdot)\\)\n\n0.4\n0.6\n1\n\n\nLikelihood \\(L(\\cdot \\mid D)\\)\n\n0.27\n0.02\n0.29\n\n\n\n\n\n\n\nThe likelihood function is not a probability function!"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayes-rule",
+    "href": "slides/08-bayes.html#bayes-rule",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayes’ Rule",
+    "text": "Bayes’ Rule\n\\[\\begin{align*} P(F \\mid D) &= \\frac{P(F \\cap D)}{P(D)}\\\\ &= \\frac{P(D \\mid F)P(F)}{P(D)} \\\\ &= \\frac{P(D \\mid F)P(F)}{P(D \\mid F)P(F) + P(D \\mid F^c)P(F^c)}\\\\ &= \\frac{L(F \\mid D)P(F)}{L(F \\mid D)P(F) + L(F^c \\mid D)P(F^c)}\\end{align*}\\]\n\n\\[\\text{posterior = } \\frac{\\text{likelihood} \\cdot \\text{prior }}{ \\text{normalizing constant}} \\]\n\nThe normalizing constant \\(P(D)\\) is known as marginal likelihood or evidence."
+  },
+  {
+    "objectID": "slides/08-bayes.html#posterior",
+    "href": "slides/08-bayes.html#posterior",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Posterior",
+    "text": "Posterior\n\nStarted with a prior understanding that there’s a 40% chance that the incoming article would be fake.\nYet upon observing the use of an exclamation point in the title\n\n\n\n“The president has a funny secret!”\n\n\na feature that’s more common to fake news\n\nOur posterior understanding evolved quite a bit – the chance that the article is fake jumped to 88.9%.\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\n\nPrior prob \\(P(\\cdot)\\)\n\n0.4\n0.6\n1\n\n\nPosterior prob \\(P(\\cdot \\mid D)\\)\n\n0.89\n0.11\n1"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-inference-for-random-variables",
+    "href": "slides/08-bayes.html#bayesian-inference-for-random-variables",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Inference for Random Variables",
+    "text": "Bayesian Inference for Random Variables\nFor any random variables parameter \\(\\theta\\) and sample data \\({\\bf Y} = (Y_1, \\dots, Y_n)\\),\n\n\\(\\pi(\\theta)\\): the prior pmf/pdf of \\(\\theta\\)\n\\(L(\\theta \\mid y_1,\\dots, y_n)\\): the likelihood function of \\(\\theta\\) given observed data \\(\\mathbf{y}= \\{y_i \\}_{i = 1}^n\\).\nThe posterior distribution of \\(\\theta\\) given \\(\\mathbf{y}\\) is\n\n\\[\\pi(\\theta \\mid \\mathbf{y}) = \\frac{L(\\theta \\mid \\mathbf{y})\\pi(\\theta)}{p(\\mathbf{y})}\\] where \\[p(\\mathbf{y}) = \\begin{cases} \\int_{\\Theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta) ~ d\\theta & \\text{if } \\theta \\text{ is continuous }\\\\\n\\sum_{\\theta \\in \\Theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta) & \\text{if } \\theta \\text{ is discrete }\n\\end{cases}\\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#proportionality",
+    "href": "slides/08-bayes.html#proportionality",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Proportionality",
+    "text": "Proportionality\n\\[\\pi(\\theta \\mid \\mathbf{y}) = \\frac{L(\\theta \\mid \\mathbf{y})\\pi(\\theta)}{p(\\mathbf{y})} \\propto_{\\theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta)\\]\n\\[\\text{posterior } \\propto \\text{ likelihood } \\cdot \\text{ prior } \\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#motivation-example",
+    "href": "slides/08-bayes.html#motivation-example",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Motivation Example",
+    "text": "Motivation Example\n\n\n\nMichelle has decided to run for governor of Wisconsin.\n\n\nAccording to previous 30 polls, Michelle’s support is centered round 45%, and she polled at around 35% in the dreariest days and around 55% in the best days.\nWith this prior information, we’d like to estimate/update Michelle’s support by conducting a new poll.\n\n\n\n\n\n\n\n\n\n\n\n\nKey: Describe prior and data information using probabilistic models.\n\n\nThe parameter to be estimated is \\(\\theta\\), the Michelle’s support, which is between 0 and 1."
+  },
+  {
+    "objectID": "slides/08-bayes.html#prior-distribution",
+    "href": "slides/08-bayes.html#prior-distribution",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Prior Distribution",
+    "text": "Prior Distribution\n\nA popular probability distribution for probability is beta distribution, denoted as \\(\\text{Beta}(\\alpha, \\beta)\\), where \\(\\alpha > 0\\) and \\(\\beta > 0\\) are shape parameters.\n\n\\[\\pi(\\theta \\mid \\alpha, \\beta) = \\frac{\\Gamma(\\alpha+\\beta)}{\\Gamma(\\alpha)\\Gamma(\\beta)}\\theta^{\\alpha - 1}(1-\\theta)^{\\beta-1}\\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#prior-distribution-1",
+    "href": "slides/08-bayes.html#prior-distribution-1",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Prior Distribution",
+    "text": "Prior Distribution\n\n\\(\\theta \\sim \\text{beta}(\\alpha, \\beta)\\)\nIn the prior model, \\(\\alpha\\) and \\(\\beta\\) are hyperparameters to be chosen to reflect our prior information.\n\n\n\nMichelle’s support is centered round 45%, and she polled at around 35% in the dreariest days and around 55% in the best days.\n\n\nChoose \\(\\alpha\\) and \\(\\beta\\) so that the prior mean is about 0.45 and the range is from 0.35 to 0.55.\n\\(\\mathrm{E}(\\theta) = \\frac{\\alpha}{\\alpha + \\beta}\\)\n\\(\\mathrm{Var}(\\theta) = \\frac{\\alpha\\beta}{(\\alpha+\\beta)^2(\\alpha+\\beta+1)}\\)"
+  },
+  {
+    "objectID": "slides/08-bayes.html#prior-distribution-2",
+    "href": "slides/08-bayes.html#prior-distribution-2",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Prior Distribution",
+    "text": "Prior Distribution"
+  },
+  {
+    "objectID": "slides/08-bayes.html#likelihood",
+    "href": "slides/08-bayes.html#likelihood",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Likelihood",
+    "text": "Likelihood\n\nYou plan to conduct a new poll of \\(n = 50\\) Cheeseheads and record \\(Y\\), the number that support Michelle.\n\n\nWhat distribution can be used for modeling likelihood connecting the data \\(y\\) and the parameter we are interested, \\(\\theta\\)?\n\n\n\nIf voters answer the poll independently, and the probability that any polled voter supports Michelle is \\(\\theta\\), we could consider\n\n\\[Y \\mid \\theta \\sim \\text{binomial}(n=50, \\theta)\\]\n\n\n\nThe poll result is \\(y = 30\\), the likelihood is\n\n\\[L(\\theta \\mid y = 30) = {50 \\choose 30}\\theta^{30}(1-\\theta)^{20}, \\quad \\theta \\in (0, 1)\\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#likelihood-1",
+    "href": "slides/08-bayes.html#likelihood-1",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Likelihood",
+    "text": "Likelihood"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-model",
+    "href": "slides/08-bayes.html#bayesian-model",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Model",
+    "text": "Bayesian Model\n\\[\\begin{align}Y \\mid \\theta &\\sim \\text{binomial}(n=50, \\theta)\\\\ \\theta &\\sim \\text{beta}(45, 55)\n\\end{align}\\]\nGoal: Obtain the posterior distribution \\(\\pi(\\theta \\mid y)\\).\n\n\\[\n\\begin{align} \\pi(\\theta \\mid y) &\\propto_{\\theta} L(\\theta \\mid y)\\pi(\\theta) \\\\\n&= {50 \\choose 30}\\theta^{30}(1-\\theta)^{20} \\times \\frac{\\Gamma(100)}{\\Gamma(45)\\Gamma(55)}\\theta^{44}(1-\\theta)^{54}\\\\\n&\\propto_{\\theta} \\theta^{74}(1-\\theta)^{74}\\\\\n&= \\frac{\\Gamma(150)}{\\Gamma(75)\\Gamma(75)} \\theta^{74}(1-\\theta)^{74} \\\\\n&= \\text{beta}(75, 75)\\end{align}\n\\]\nusing the fact that \\(\\int_{\\mathcal{X}} f(x) dx = 1\\) for any pdf \\(f(x)\\)."
+  },
+  {
+    "objectID": "slides/08-bayes.html#posterior-distribution",
+    "href": "slides/08-bayes.html#posterior-distribution",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Posterior Distribution",
+    "text": "Posterior Distribution"
+  },
+  {
+    "objectID": "slides/08-bayes.html#take-home-message",
+    "href": "slides/08-bayes.html#take-home-message",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Take-home Message",
+    "text": "Take-home Message\n\nThe parameter is a random variable in the Bayesian world.\nIt is fixed and constant in the frequentist world."
+  },
+  {
+    "objectID": "slides/08-bayes.html#normal-data-model",
+    "href": "slides/08-bayes.html#normal-data-model",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Normal Data Model",
+    "text": "Normal Data Model\nIn simple linear regression, we have\n\\[Y_i \\mid \\beta_0, \\beta_1, \\sigma \\stackrel{ind}{\\sim}  N\\left(\\mu_i, \\sigma^2 \\right) \\quad \\text{with} \\quad \\mu_i = \\beta_0 + \\beta_1 X_i\\]\nThis normal data model is our likelihood \\(L(\\boldsymbol \\theta= (\\beta_0, \\beta_1, \\sigma) \\mid \\mathcal{D} = \\{\\mathbf{y}, \\mathbf{x}\\})\\), as it evaluates how the data are compatible with different possible values of parameters.\n\nTo be a Bayesian, what do we do next?\n\n\n\nWe just assign priors to the unknown parameters, then do the posterior inference using Bayes’ rule!\n\n\n\n\nThe big question is how?"
+  },
+  {
+    "objectID": "slides/08-bayes.html#prior-models",
+    "href": "slides/08-bayes.html#prior-models",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Prior Models",
+    "text": "Prior Models\n\nThere are countless approaches to construct priors for \\(\\beta_0, \\beta_1\\), and \\(\\sigma\\).\n\n\n\nFor simplicity, assume \\(\\beta_0, \\beta_1\\), and \\(\\sigma\\) are independent, \\(\\pi(\\boldsymbol \\theta) = \\pi(\\beta_0, \\beta_1, \\sigma) = \\pi(\\beta_0)\\pi(\\beta_1)\\pi(\\sigma)\\)\n\n\n\n\n\n\n\\(\\beta_0\\) and \\(\\beta_1\\) can technically take any values in the real line.\n\n\\[\\begin{align} \\beta_0 \\sim N(m_0, s_0^2) \\\\\n\\beta_1 \\sim N(m_1, s_1^2) \\end{align}\\]\n\n\n\n\n\\(\\sigma\\) must be positive.\n\n\\[\\begin{align} \\sigma \\sim \\text{Exp}(\\lambda) \\end{align}\\] \\(\\pi(\\sigma) = \\lambda e^{-\\lambda \\sigma}\\), \\(\\lambda > 0\\) and \\(\\mathrm{E}(\\sigma) = 1/\\lambda\\), and \\(\\mathrm{Var}(\\sigma) = 1/\\lambda^2\\)\nhttps://mc-stan.org/rstanarm/articles/priors.html"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-simple-linear-regression-model",
+    "href": "slides/08-bayes.html#bayesian-simple-linear-regression-model",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Simple Linear Regression Model",
+    "text": "Bayesian Simple Linear Regression Model\n\\[\\begin{align} Y_i \\mid \\beta_0, \\beta_1, \\sigma &\\stackrel{ind}{\\sim}  N\\left(\\mu_i, \\sigma^2 \\right) \\quad \\text{with} \\quad \\mu_i = \\beta_0 + \\beta_1 X_i \\\\\n\\beta_0 &\\sim N(m_0, s_0^2) \\\\\n\\beta_1 &\\sim N(m_1, s_1^2) \\\\\n\\sigma &\\sim \\text{Exp}(\\lambda) \\end{align}\\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#capital-bikeshare-bikes-data-in-the-washington-d.c.-area.",
+    "href": "slides/08-bayes.html#capital-bikeshare-bikes-data-in-the-washington-d.c.-area.",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Capital Bikeshare bikes Data in the Washington, D.C. Area.",
+    "text": "Capital Bikeshare bikes Data in the Washington, D.C. Area.\n\n\nRows: 500\nColumns: 2\n$ rides     <int> 654, 1229, 1454, 1518, 1362, 891, 1280, 1220, 1137, 1368, 13…\n$ temp_feel <dbl> 64.7, 49.0, 51.1, 52.6, 50.8, 46.6, 45.6, 49.2, 46.4, 45.6, …"
+  },
+  {
+    "objectID": "slides/08-bayes.html#tuning-prior-models",
+    "href": "slides/08-bayes.html#tuning-prior-models",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Tuning Prior Models",
+    "text": "Tuning Prior Models\n\n\nPrior understanding 1:\n\nOn an average temperature day, say 65 or 70 degrees, there are typically around 5000 riders, though this average could be somewhere between 3000 and 7000.\n\n\n\n\n\nThe prior information tells us something about \\(\\beta_0\\), but the information has been centered.\n\nThe centered intercept, \\(\\beta_{0c}\\), reflects the typical ridership at the typical temperature.\n\n\n\n\\(\\beta_{0c} \\sim N(5000, 1000^2)\\)"
+  },
+  {
+    "objectID": "slides/08-bayes.html#tuning-prior-models-1",
+    "href": "slides/08-bayes.html#tuning-prior-models-1",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Tuning Prior Models",
+    "text": "Tuning Prior Models\n\n\nPrior understanding 2:\n\nFor every one degree increase in temperature, ridership typically increases by 100 rides, though this average increase could be as low as 20 or as high as 180.\n\n\n\n\n\\(\\beta_{1} \\sim N(100, 40^2)\\)"
+  },
+  {
+    "objectID": "slides/08-bayes.html#tuning-prior-models-2",
+    "href": "slides/08-bayes.html#tuning-prior-models-2",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Tuning Prior Models",
+    "text": "Tuning Prior Models\n\n\nPrior understanding 3:\n\nAt any given temperature, daily ridership will tend to vary with a moderate standard deviation of 1250 rides.\n\n\n\n\n\\(\\sigma \\sim \\text{Exp}(0.0008)\\) because \\(\\mathrm{E}(\\sigma) = 1/\\lambda = 1/0.0008 = 1250\\)"
+  },
+  {
+    "objectID": "slides/08-bayes.html#prior-model-simulation",
+    "href": "slides/08-bayes.html#prior-model-simulation",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Prior Model Simulation",
+    "text": "Prior Model Simulation\n\n100 prior plausible model lines \\(\\mu_{Y|X} = \\beta_0 + \\beta_1 X\\)"
+  },
+  {
+    "objectID": "slides/08-bayes.html#posterior-inference",
+    "href": "slides/08-bayes.html#posterior-inference",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Posterior Inference",
+    "text": "Posterior Inference\n\nUpdate our prior understanding of the relationship between ridership and temperature using data information provided by likelihood.\nThe joint posterior distribution is\n\n\\[\\pi(\\beta_0, \\beta_1, \\sigma \\mid \\mathbf{y}) = \\frac{L(\\beta_0, \\beta_1, \\sigma \\mid \\mathbf{y})\\pi(\\beta_0, \\beta_1, \\sigma)}{p(\\mathbf{y})}\\] where\n\n\\(L(\\beta_0, \\beta_1, \\sigma \\mid \\mathbf{y}) = p(\\mathbf{y}\\mid \\beta_0, \\beta_1, \\sigma) = \\prod_{i=1}^np(y_i \\mid \\beta_0, \\beta_1, \\sigma)\\)\n\\(\\pi(\\beta_0, \\beta_1, \\sigma) = \\pi(\\beta_0)\\pi(\\beta_1)\\pi(\\sigma)\\)\n\\(p(\\mathbf{y}) = \\int \\int \\int \\left[\\prod_{i=1}^np(y_i \\mid \\beta_0, \\beta_1, \\sigma)\\right]\\pi(\\beta_0)\\pi(\\beta_1)\\pi(\\sigma) ~ d\\beta_0d\\beta_1d\\sigma\\)\nThere are lots of ways to generate/approximate the posterior distribution of parameters. One method is Markov chain Monte Carlo (MCMC)."
+  },
+  {
+    "objectID": "slides/08-bayes.html#rstanarmstan_glm",
+    "href": "slides/08-bayes.html#rstanarmstan_glm",
+    "title": "Bayesian Linear Regression \n",
+    "section": "rstanarm::stan_glm()",
+    "text": "rstanarm::stan_glm()\n\n\nrstanarm uses RStan syntax1 to do Bayesian inference for applied regression models (arm).\n\n\nbike_model <- rstanarm::stan_glm(rides ~ temp_feel, data = bikes,\n                                 family = gaussian,\n                                 prior_intercept = normal(5000, 1000),\n                                 prior = normal(100, 40), \n                                 prior_aux = exponential(0.0008),\n                                 chains = 4, iter = 5000*2, seed = 84735)\n\n\nGenerate 4 Monte Carlo chains (chains = 4), each having 10000 iterations (iter = 5000*2).\nEach iteration draw a posterior sample of the parameters \\(\\beta_0\\), \\(\\beta_1\\), and \\(\\sigma\\).\nAfter tossing out the first half of Markov chain values from the warm-up or burn-in phase, stan_glm() simulation produces four parallel chains of length 5000 for each model parameter:\n\n\\(\\{ \\beta_0^{(1)}, \\beta_0^{(2)}, \\dots, \\beta_0^{(5000)} \\}\\), \\(\\{ \\beta_1^{(1)}, \\beta_1^{(2)}, \\dots, \\beta_1^{(5000)} \\}\\), \\(\\{ \\sigma^{(1)}, \\sigma^{(2)}, \\dots, \\sigma^{(5000)} \\}\\)\nRStan is the R interface to Stan."
+  },
+  {
+    "objectID": "slides/08-bayes.html#convergence-diagnostics",
+    "href": "slides/08-bayes.html#convergence-diagnostics",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Convergence Diagnostics",
+    "text": "Convergence Diagnostics\n\n# Trace plots of parallel chains\nbayesplot::mcmc_trace(bike_model, size = 0.1)"
+  },
+  {
+    "objectID": "slides/08-bayes.html#convergence-diagnostics-1",
+    "href": "slides/08-bayes.html#convergence-diagnostics-1",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Convergence Diagnostics",
+    "text": "Convergence Diagnostics\n\n# Density plots of parallel chains\nbayesplot::mcmc_dens_overlay(bike_model)\n\n\n\nquantifies the number of independent samples it would take to produce an equivalently accurate posterior approximation.\nwe observe that these four chains produce nearly indistinguishable posterior approximations. This provides evidence that our simulation is stable and sufficiently long – running the chains for more iterations likely wouldn’t produce drastically different or improved posterior approximations."
+  },
+  {
+    "objectID": "slides/08-bayes.html#convergence-diagnostics-2",
+    "href": "slides/08-bayes.html#convergence-diagnostics-2",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Convergence Diagnostics",
+    "text": "Convergence Diagnostics\n\n# Effective sample size ratio\nbayesplot::neff_ratio(bike_model)\n\n(Intercept)   temp_feel       sigma \n      1.006       0.997       1.017 \n\n# Rhat\nbayesplot::rhat(bike_model)\n\n(Intercept)   temp_feel       sigma \n          1           1           1 \n\n\n\nBoth effective sample size and R-hat are close to 1, indicating that the chains are stable, mixing quickly, and behaving much like an independent sample.\n\n\nThere’s no magic rule for interpreting this ratio, and it should be utilized alongside other diagnostics such as the trace plot. That said, we might be suspicious of a Markov chain for which the effective sample size ratio is less than 0.1, i.e., the effective sample size is less than 10% of the actual sample size.\nan R-hat ratio greater than 1.05 raises some red flags about the stability of the simulation."
+  },
+  {
+    "objectID": "slides/08-bayes.html#convergence-issues",
+    "href": "slides/08-bayes.html#convergence-issues",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Convergence Issues",
+    "text": "Convergence Issues\n\n\n\n\nHighly Autocorrelated Chain: Effective size is small, not many independent samples that are representative of the true posterior distribution.\n\nRun longer and thinning the chain\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSlow Convergence: Need wait longer to have the chain reached a stable mixing zone that are representative of the true posterior distribution.\n\nSet a longer burn-in or warm-up period"
+  },
+  {
+    "objectID": "slides/08-bayes.html#interpreting-the-posterior",
+    "href": "slides/08-bayes.html#interpreting-the-posterior",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Interpreting the Posterior",
+    "text": "Interpreting the Posterior\n\n# Posterior summary statistics\ntidy(bike_model, effects = c(\"fixed\", \"aux\"),\n     conf.int = TRUE, conf.level = 0.80)\n\n# A tibble: 4 × 5\n  term        estimate std.error conf.low conf.high\n  <chr>          <dbl>     <dbl>    <dbl>     <dbl>\n1 (Intercept)  -2196.     356.    -2643.    -1738. \n2 temp_feel       82.2      5.10     75.7      88.5\n3 sigma         1282.      40.9    1231.     1336. \n4 mean_PPD      3487.      81.2    3382.     3591. \n\n\n\nThe posterior relationship is\n\n\\[-2196 + 82.2 X\\]\n\nThe 80% credible interval for \\(\\beta_1\\) is \\((75.7, 88.5)\\).\nGiven the data, the probability that \\(\\beta_1\\) is between 75.7 and 88.5 is 80%., i.e., \\(P(\\beta_1 \\in(75.7, 88.5) \\mid \\mathbf{y}, \\mathbf{x}) = 80\\%\\)."
+  },
+  {
+    "objectID": "slides/08-bayes.html#posterior-samples",
+    "href": "slides/08-bayes.html#posterior-samples",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Posterior Samples",
+    "text": "Posterior Samples\n\n# Store the 4 chains for each parameter in 1 data frame\nbike_model_df <- as.data.frame(bike_model)\nnrow(bike_model_df)\n\n[1] 20000\n\nhead(bike_model_df)\n\n  (Intercept) temp_feel sigma\n1       -2316      84.2  1245\n2       -2489      87.1  1306\n3       -2491      86.3  1295\n4       -2853      91.6  1298\n5       -2379      85.9  1319\n6       -2277      82.7  1278\n\n\nHow to obtain \\(P(\\beta_1 > 0 \\mid \\mathbf{y}, \\mathbf{x})\\)?\n\n\\(P(\\beta_1 > 0 \\mid \\mathbf{y}, \\mathbf{x}) \\approx \\frac{1}{20000}\\sum_{t=1}^{20000} \\mathbf{1}\\left(\\beta_1^{(t)} > 0\\right)\\)\n\nsum(bike_model_df$temp_feel > 0) / nrow(bike_model_df)\n\n[1] 1"
+  },
+  {
+    "objectID": "slides/08-bayes.html#posterior-regression-lines",
+    "href": "slides/08-bayes.html#posterior-regression-lines",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Posterior Regression Lines",
+    "text": "Posterior Regression Lines"
+  },
+  {
+    "objectID": "slides/08-bayes.html#posterior-predictive-draws",
+    "href": "slides/08-bayes.html#posterior-predictive-draws",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Posterior Predictive Draws",
+    "text": "Posterior Predictive Draws\nFor each posterior draw \\(\\{\\beta_0^{(t)}, \\beta_1^{(t)}, \\sigma^{(t)} \\}_{t = 1}^{20000}\\), we have the posterior predictive distribution \\[Y_i^{(t)} \\sim N\\left(\\beta_0^{(t)} + \\beta_1^{(t)}X_i, \\, (\\sigma^{(t)})^2\\right)\\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#bayesian-interpretation-for-ridge-and-lasso",
+    "href": "slides/08-bayes.html#bayesian-interpretation-for-ridge-and-lasso",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Bayesian Interpretation for Ridge and Lasso",
+    "text": "Bayesian Interpretation for Ridge and Lasso\n\nLasso and Ridge regression can be interpreted as a Bayesian regression model.\nThe same data-level likelihood \\[Y_i \\mid \\boldsymbol \\beta, \\sigma \\stackrel{ind}{\\sim}  N\\left(\\mu_i, \\sigma^2 \\right) \\quad \\text{with} \\quad \\mu_i = \\mathbf{x}_i'\\boldsymbol \\beta\\]\nWe use prior distributions to regularize how parameters behave.\n\n\n\nThe two methods can assign the same prior distributions to \\(\\beta_0\\) and \\(\\sigma\\), but they use different priors on \\(\\{\\beta_j\\}_{j = 1}^p\\).1\n\nLasso: \\(\\beta_j \\stackrel{iid}{\\sim} \\text{Laplace}\\left(0, \\tau(\\lambda)\\right)\\)\nRidge: \\(\\beta_j \\stackrel{iid}{\\sim} N\\left(0, \\tau(\\lambda)\\right)\\)\n\n\n\n\nRemember we usually standardize coefficients before implementing Ridge and Lasso."
+  },
+  {
+    "objectID": "slides/08-bayes.html#ridge-and-lasso-priors",
+    "href": "slides/08-bayes.html#ridge-and-lasso-priors",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Ridge and Lasso Priors",
+    "text": "Ridge and Lasso Priors\n\n\nLasso\n\n\\[\\beta_j \\stackrel{iid}{\\sim} \\text{Laplace}\\left(0, \\tau(\\lambda)\\right)\\]\nLasso solution is the posterior mode of \\(\\boldsymbol \\beta\\)\n\\[\\boldsymbol \\beta^{(l)} = \\mathop{\\mathrm{arg\\,max}}_{\\boldsymbol \\beta} \\,\\,\\, \\pi(\\boldsymbol \\beta\\mid \\mathbf{y}, \\mathbf{x})\\]\n\n\n\n\n\n\n\n\n\n\nRidge\n\n\\[\\beta_j \\stackrel{iid}{\\sim} N\\left(0, \\tau(\\lambda)\\right)\\]\nRidge solution is the posterior mode/mean of \\(\\boldsymbol \\beta\\)\n\\[\\boldsymbol \\beta^{(r)} = \\mathop{\\mathrm{arg\\,max}}_{\\boldsymbol \\beta} \\,\\, \\, \\pi(\\boldsymbol \\beta\\mid \\mathbf{y}, \\mathbf{x})\\]"
+  },
+  {
+    "objectID": "slides/08-bayes.html#resources",
+    "href": "slides/08-bayes.html#resources",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Resources",
+    "text": "Resources\n\nBayes Rules! An Introduction to Applied Bayesian Modeling\nStatistical Rethinking\nA Student’s Guide to Bayesian Statistics\nBayesian Data Analysis\n\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#when-ordinary-least-squares-ols-doesnt-work-well-collinearity",
+    "href": "slides/05-ridge-cv.html#when-ordinary-least-squares-ols-doesnt-work-well-collinearity",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "When Ordinary Least Squares (OLS) Doesn’t Work Well: Collinearity",
+    "text": "When Ordinary Least Squares (OLS) Doesn’t Work Well: Collinearity\n\nWhen predictors are highly correlated, \\(\\mathrm{Var}(b_j)\\) is much inflated.1\n\nA tiny change in the training data causes a large change in \\(b_j\\), leading to unreliable estimation and prediction.\n\n\n\n\n\n\\({\\bf X'X} = \\begin{bmatrix} 1 & 0.99 \\\\ 0.99 & 1 \\end{bmatrix}\\) \\(\\quad ({\\bf X'X})^{-1} = \\begin{bmatrix} 50.3 & -49.7 \\\\ -49.7 & 50.3 \\end{bmatrix}\\)\n\n\\(\\mathrm{Var}(b_j) = 50.3\\sigma^2\\)\n\nAn increase in 50-fold over the ideal case when the two regressors are orthogonal.\n\n\n\n\nsolve(matrix(c(1, 0.99, 0.99, 1), 2, 2))\n\n      [,1]  [,2]\n[1,]  50.3 -49.7\n[2,] -49.7  50.3\n\n\nthe eigen vector direction with the smallest eigen value\n\n\nAlthough \\(\\mathrm{Var}(b_j)\\) is still the smallest among all linear unbiased estimators."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-optimization-perspective",
+    "href": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-optimization-perspective",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "When OLS Doesn’t Work Well: Optimization Perspective",
+    "text": "When OLS Doesn’t Work Well: Optimization Perspective\n\n\\(\\beta_1 = \\beta_2 = 1\\) and \\(\\mathrm{Corr}(x_1, x_2) = 0.99\\)\nThe relatively “flat” valley in the objective function walks along the eigen-vector of \\({\\bf X}'{\\bf X}\\) having the smallest eigen-value.\n\n\n\n\n\n\n\n\n\n\n\n\n\neigen(\n    matrix(c(1, 0.99, 0.99, 1), \n             2, 2)\n    )\n\neigen() decomposition\n$values\n[1] 1.99 0.01\n\n$vectors\n      [,1]   [,2]\n[1,] 0.707 -0.707\n[2,] 0.707  0.707\n\n\n\n\n\nFrom optimization point of view, the objective function (\\(\\ell_2\\) loss) is “flat” along certain directions in the parameter domain.\na small eigen-value in XTX makes the corresponding eigen-value large in the inverse."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-optimization-perspective-1",
+    "href": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-optimization-perspective-1",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "When OLS Doesn’t Work Well: Optimization Perspective",
+    "text": "When OLS Doesn’t Work Well: Optimization Perspective\n\nA little change in the training set perturbs the objective function. The LSEs lie on a valley centered around the truth."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-high-variance",
+    "href": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-high-variance",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "When OLS Doesn’t Work Well: High Variance",
+    "text": "When OLS Doesn’t Work Well: High Variance\n\nThe optimizer could land anywhere along the valley, leading to large variance of the LSE.\nOver many simulation runs, the LSE lies around the line of \\(\\beta_1 + \\beta_2 = 2\\), the direction of the eigen-vector of the smallest eigen-value."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-large-p-small-n-high-dimensional-data",
+    "href": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-large-p-small-n-high-dimensional-data",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "When OLS Doesn’t Work Well: Large-\\(p\\)-small-\\(n\\) (High Dimensional Data)",
+    "text": "When OLS Doesn’t Work Well: Large-\\(p\\)-small-\\(n\\) (High Dimensional Data)\n\nOLS stays well in the world of “large-\\(n\\)-small-\\(p\\)”.\nWhen \\(p > n\\), \\({\\bf X}'{\\bf X}\\) is not invertible.\nThere is no unique \\(\\boldsymbol \\beta\\) estimate.\n\n\nIntuition: Too many degrees of freedom (\\(p\\)) to specify a model, but not enough information (\\(n\\)) to decide which one is the one.\n\nToo flexible and ends up with overfitting"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#remedy-for-large-variance-and-large-p-small-n",
+    "href": "slides/05-ridge-cv.html#remedy-for-large-variance-and-large-p-small-n",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Remedy for Large Variance and Large-\\(p\\)-small-\\(n\\)\n",
+    "text": "Remedy for Large Variance and Large-\\(p\\)-small-\\(n\\)\n\n\nMake \\({\\bf X}'{\\bf X}\\) invertible when \\(p > n\\) by regularizing coefficient behavior!\nA good estimator balances bias and variance well, or minimizes the mean square error \\[\\text{MSE}(\\hat{\\beta}) = E[(\\hat{\\beta} - \\beta)^2] = \\mathrm{Var}(\\hat{\\beta}) + \\text{Bias}(\\hat{\\beta})^2\\]\nFind a biased estimator \\(\\hat{\\boldsymbol \\beta}\\) that has smaller variance and MSE than the LSE \\({\\bf b}\\)."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#ridge-regression-1",
+    "href": "slides/05-ridge-cv.html#ridge-regression-1",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Ridge Regression",
+    "text": "Ridge Regression\n\nIdea: Add a ridge (diagonal matrix) to \\({\\bf X} ' {\\bf X}\\).1\n\n\n\\[\\widehat{\\boldsymbol \\beta}^\\text{r} = (\\mathbf{X}' \\mathbf{X}+ n \\lambda \\mathbf{I})^{-1} \\mathbf{X}' \\mathbf{y},\\]\n\n\nTo regularize coefficient behavior, we add an \\(\\ell_2\\) penalty to the residual sum of squares, for some tuning parameter \\(\\lambda > 0\\).\n\n\\[\n\\begin{align}\n\\widehat{\\boldsymbol \\beta}^\\text{r} =& \\, \\mathop{\\mathrm{arg\\,min}}_{\\boldsymbol \\beta} \\underbrace{\\lVert \\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\rVert_2^2}_{SS_{res}} + n \\lambda \\lVert\\boldsymbol \\beta\\rVert_2^2\\\\\n=& \\, \\mathop{\\mathrm{arg\\,min}}_{\\boldsymbol \\beta} \\underbrace{\\frac{1}{n} \\sum_{i=1}^n (y_i - x_i'\\boldsymbol \\beta)^2}_{\\text{MSE}_{\\texttt{Tr}}} + \\lambda \\sum_{j=1}^p \\beta_j^2\\\\\n=& \\, \\mathop{\\mathrm{arg\\,min}}_{\\boldsymbol \\beta} \\color{green} - \\text{ goodness of fit } + \\text{ model complexity/flexibility}\n\\end{align}\n\\]\n\nThis is a special case of the Tikhonov regularization."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#properties-of-ridge-regression",
+    "href": "slides/05-ridge-cv.html#properties-of-ridge-regression",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Properties of Ridge Regression",
+    "text": "Properties of Ridge Regression\n\\[\n\\begin{align}\n\\widehat{\\boldsymbol \\beta}^\\text{r} =& \\mathop{\\mathrm{arg\\,min}}_{\\boldsymbol \\beta} \\frac{1}{n} \\sum_{i=1}^n (y_i - x_i'\\boldsymbol \\beta)^2 + \\lambda \\sum_{j=1}^p \\beta_j^2,\n\\end{align}\n\\]\nProperties of ridge regression:\n\nHas less degrees of freedom in the sense that the cost increases when large coefficients are used.\n\n\n\nFavors small-magnitude coefficient estimates to avoid cost penalty. (Shrinkage)\n\n\n\n\nThe shrinkage parameter \\(\\lambda\\) controls the degree of penalty.\n\n\n\\(\\lambda \\rightarrow 0\\): No penalty, and \\(\\widehat{\\boldsymbol \\beta}^\\text{r} = \\bf b\\).\n\n\\(\\lambda \\rightarrow \\infty\\): Unbearable penalty, and \\(\\widehat{\\boldsymbol \\beta}^\\text{r} \\rightarrow \\mathbf{0}\\)"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#ridge-penalty",
+    "href": "slides/05-ridge-cv.html#ridge-penalty",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Ridge Penalty",
+    "text": "Ridge Penalty\n\\[\\lambda \\lVert \\boldsymbol \\beta\\rVert^2_2 = \\lambda \\boldsymbol \\beta' \\mathbf{I}\\boldsymbol \\beta\\]\n\nThe penalty contour is circle-shaped, forcing the objective function to be more convex, leading to a more stable or less varying solution."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#more-convex-loss-function",
+    "href": "slides/05-ridge-cv.html#more-convex-loss-function",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "More Convex Loss Function",
+    "text": "More Convex Loss Function\n\nAdding a ridge penalty forces the objective to be more convex due to the added eigenvalues.\n\n\neigen(matrix(c(1, 0.99, 0.99, 1), 2, 2) + diag(2))[1]\n\n$values\n[1] 2.99 1.01\n\n\n\nHence, by adding this to the OLS objective function, the solution is more stable, in the sense that each time we observe a new set of data, this contour looks pretty much the same. This may be interpreted in several different ways such as: 1) the objective function is more convex and less affected by the random samples; 2) the variance of the estimator is smaller because the eigenvalues of \\(\\mathbf{X}^\\text{T}\\mathbf{X}+ n \\lambda \\mathbf{I}\\) are large."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#the-bias-variance-trade-off",
+    "href": "slides/05-ridge-cv.html#the-bias-variance-trade-off",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "The Bias-variance Trade-off",
+    "text": "The Bias-variance Trade-off\n\nAs \\(\\lambda \\downarrow\\), bias \\(\\downarrow\\) and variance \\(\\uparrow\\)\n\nAs \\(\\lambda \\uparrow\\), bias \\(\\uparrow\\) and variance \\(\\downarrow\\)\n\n\n\nThis effect is gradually changing as we increase the penalty level. The following simulation shows how the variation of \\(\\boldsymbol \\beta\\) changes. We show this with two penalty values, and see how the estimated parameters are away from the truth.\nNow, we may ask the question: is it worth it? In fact, this bias and variance will be then carried to the predicted values \\(x^\\text{T}\\widehat{\\boldsymbol \\beta}^\\text{ridge}\\). Hence, we can judge if this is beneficial from the prediction accuracy. And we need some procedure to do this.\nRemark: The bias-variance trade-off will appear frequently in this course. And the way to evaluate the benefit of this is to see if it eventually reduces the prediction error (\\(\\text{Bias}^2 + \\text{Variance}\\) plus a term called irreducible error, which will be introduced in later chapter)."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#lower-test-mse",
+    "href": "slides/05-ridge-cv.html#lower-test-mse",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Lower Test MSE",
+    "text": "Lower Test MSE\n\n\n\nWhen LS \\(b_j\\) are variable or \\(p > n\\), ridge regression could have lower test MSE and better predictive performance.\nSquared bias (black)\nVariance (green)\n\\(\\text{MSE}_{\\texttt{Tr}}\\) (purple)\n\n\n\n\n\n\n\nSource: ISL Figure 6.5"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#masslm.ridge",
+    "href": "slides/05-ridge-cv.html#masslm.ridge",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "MASS::lm.ridge()",
+    "text": "MASS::lm.ridge()\n\nThe lambda parameter lm.ridge() actually specifies the \\(n\\lambda\\) in our notation.\nOLS is scale equivalent: \\(X_jb_j\\) remains the same regardless of how the \\(j\\)-th predictor is scaled.\nRidge coefficient estimates can change substantially when multiplying a given predictor by a constant. \\(X_j\\hat{\\beta}^{r}_{j, \\lambda}\\) depends on \\(\\lambda\\), the scaling of \\(X_j\\), and even the scaling of other predictors.\nStandardize all predictors!1\n\n\n\nhead(mtcars, 3)\n\n               mpg cyl disp  hp drat   wt qsec vs am gear carb\nMazda RX4     21.0   6  160 110 3.90 2.62 16.5  0  1    4    4\nMazda RX4 Wag 21.0   6  160 110 3.90 2.88 17.0  0  1    4    4\nDatsun 710    22.8   4  108  93 3.85 2.32 18.6  1  1    4    1\n\n(fit <- MASS::lm.ridge(mpg ~ ., data = mtcars, lambda = 1)) ## ridge fit\n\n              cyl     disp       hp     drat       wt     qsec       vs \n16.53766 -0.16240  0.00233 -0.01493  0.92463 -2.46115  0.49259  0.37465 \n      am     gear     carb \n 2.30838  0.68572 -0.57579 \n\n\n\n\nIn practice, if the intercept is not our interest, we also standardize the response."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge",
+    "href": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Scaling Issues of lm.ridge()\n",
+    "text": "Scaling Issues of lm.ridge()\n\n\ncoef(fit) transforms these back to the original scale.\nfit$coef shows the coefficients of the standardized predictors.\n\n\ncoef(fit)\n\n              cyl     disp       hp     drat       wt     qsec       vs \n16.53766 -0.16240  0.00233 -0.01493  0.92463 -2.46115  0.49259  0.37465 \n      am     gear     carb \n 2.30838  0.68572 -0.57579 \n\nfit$coef\n\n   cyl   disp     hp   drat     wt   qsec     vs     am   gear   carb \n-0.285  0.285 -1.008  0.487 -2.370  0.866  0.186  1.134  0.498 -0.915"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge-1",
+    "href": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge-1",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Scaling Issues of lm.ridge()\n",
+    "text": "Scaling Issues of lm.ridge()\n\n\nfit$coef\n\n   cyl   disp     hp   drat     wt   qsec     vs     am   gear   carb \n-0.285  0.285 -1.008  0.487 -2.370  0.866  0.186  1.134  0.498 -0.915 \n\n\n\n\nlm.ridge() uses \\(n\\) instead of \\(n-1\\) when calculating the standard deviation.\n\n\n# each column has mean 0 and var 1\nX <- scale(data.matrix(mtcars[, -1]), center = TRUE, scale = TRUE)\n\n# center y but not scaling\ny <- scale(mtcars$mpg, center = TRUE, scale = FALSE)\n\n\n\n# lambda = 1\nmy_ridge_coef <- solve(t(X) %*% X + diag(ncol(X))) %*% t(X) %*% y\nt(my_ridge_coef)\n\n        cyl disp    hp  drat    wt qsec   vs   am  gear   carb\n[1,] -0.294 0.27 -1.02 0.495 -2.39 0.87 0.19 1.15 0.505 -0.937"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge-2",
+    "href": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge-2",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Scaling Issues of lm.ridge()\n",
+    "text": "Scaling Issues of lm.ridge()\n\n\nfit$coef\n\n   cyl   disp     hp   drat     wt   qsec     vs     am   gear   carb \n-0.285  0.285 -1.008  0.487 -2.370  0.866  0.186  1.134  0.498 -0.915 \n\n\n\n\n# use n instead of (n-1) for standardization\nn <- nrow(X); X <- X * sqrt(n / (n - 1))\n\n\n\n        cyl  disp    hp  drat    wt  qsec    vs   am  gear   carb\n[1,] -0.285 0.285 -1.01 0.487 -2.37 0.866 0.186 1.13 0.498 -0.915\n\n\nMore discussion at https://stats.stackexchange.com/questions/288754/lm-ridge-returns-different-results-that-are-from-manual-calculation"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#ridge-trace",
+    "href": "slides/05-ridge-cv.html#ridge-trace",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Ridge Trace",
+    "text": "Ridge Trace\n\nridge_fit <- lm.ridge(mpg ~ ., data = mtcars, lambda = 0:40)\nmatplot(coef(ridge_fit)[, -1], type = \"l\", xlab = \"Lambda\", ylab = \"Coefficients\")\ntext(rep(1, 10), coef(ridge_fit)[1,-1], colnames(mtcars)[2:11])\n\n\n\nSelect a value of \\(\\lambda\\) at which the ridge estimates are stable."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#methods-for-choosing-lambda",
+    "href": "slides/05-ridge-cv.html#methods-for-choosing-lambda",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Methods for Choosing \\(\\lambda\\)\n",
+    "text": "Methods for Choosing \\(\\lambda\\)\n\n\nMASS::select(ridge_fit)\n\nmodified HKB estimator is 2.59 \nmodified L-W estimator is 1.84 \nsmallest value of GCV  at 15 \n\n\n\nHoerl, Kennard, and Baldwin (1975): \\(\\lambda \\approx \\frac{p \\hat{\\sigma}^2}{{\\bf b}'{\\bf b}}\\)\nLawless and Wang (1976): \\(\\lambda \\approx \\frac{np \\hat{\\sigma}^2}{{\\bf b'X}'{\\bf Xb}}\\)\nGolub, Health, and Wahba (1979): Generalized Cross Validation"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#cross-validation",
+    "href": "slides/05-ridge-cv.html#cross-validation",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Cross Validation",
+    "text": "Cross Validation\n\nCross Validation (CV) is a resampling method.\nResampling methods refit a model of interest to data sampled from the training set.\n\nCV can be used to\n\nestimate the test error when there is no test data. (Model assessment)\n\nselect the tuning parameters that controls the model complexity/flexibility. (Model selection)\n\n\n\n\nHence, by adding this to the OLS objective function, the solution is more stable, in the sense that each time we observe a new set of data, this contour looks pretty much the same. This may be interpreted in several different ways such as: 1) the objective function is more convex and less affected by the random samples; 2) the variance of the estimator is smaller because the eigenvalues of \\(\\mathbf{X}^\\text{T}\\mathbf{X}+ n \\lambda \\mathbf{I}\\) are large."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#k-fold-cross-validation",
+    "href": "slides/05-ridge-cv.html#k-fold-cross-validation",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "\n\\(k\\)-Fold Cross Validation",
+    "text": "\\(k\\)-Fold Cross Validation\n\nRandomly divide the training data into \\(k\\) folds, of approximately equal size.\nUse 1 fold for validation to compute MSE, and the remaining \\(k - 1\\) partitions for training.\nRepeat \\(k\\) times. Each time a different fold is treated as a validation set.\nAverage \\(k\\) metrics, \\(\\text{MSE}_{CV} = \\frac{1}{k}\\sum_{i=1}^k\\text{MSE}_i\\).\nUse the CV estimate \\(\\text{MSE}_{CV}\\) to select the “best” tuning parameter.\n\n\nFive-fold cross validation. Source: Data science in a boxCan compute other performance measures."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#glmnet-package",
+    "href": "slides/05-ridge-cv.html#glmnet-package",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "\nglmnet package \n",
+    "text": "glmnet package \n\n\nThe parameter alpha controls the ridge (alpha = 0) and lasso (alpha = 1) penalties.\nSupply a decreasing sequence of lambda values.\nlm.ridge() use \\(SS_{res}\\) and \\(n\\lambda\\), while glmnet() use \\(\\text{MSE}_{\\texttt{Tr}}\\) and \\(\\lambda\\).\nArgument x should be a matrix.\n\n\n\n\nlm.ridge(formula = mpg ~ ., \n         data = mtcars, \n         lambda = 5:0)\n\n\n\nglmnet(x = data.matrix(mtcars[, -1]), \n       y = mtcars$mpg, \n       alpha = 0, \n       lambda = 5:0/nrow(mtcars))\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nlm.ridge() and glmnet() coefficients do not match exactly, specially when transforming back to original scale.\nNo need to worry too much as we focus on predictive performance.\n\n\n\n\n\nhttps://stats.stackexchange.com/questions/74206/ridge-regression-results-different-in-using-lm-ridge-and-glmnet"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#k-fold-cross-validation-using-cv.glmnet",
+    "href": "slides/05-ridge-cv.html#k-fold-cross-validation-using-cv.glmnet",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "\n\\(k\\)-Fold Cross Validation using cv.glmnet()1\n",
+    "text": "\\(k\\)-Fold Cross Validation using cv.glmnet()1\n\n\nThe \\(\\lambda\\) values are automatically selected, on the \\(\\log_{e}\\) scale.\n\n\nridge_cv_fit <- cv.glmnet(x = data.matrix(mtcars[, -1]), y = mtcars$mpg, alpha = 0,\n                          nfolds = 10, type.measure = \"mse\")\nplot(ridge_cv_fit$glmnet.fit, \"lambda\")\n\n\n\n\n\n\n\n\nWhy s and not lambda? In case we want to allow one to specify the model size in other ways in the future. s: Value(s) of the penalty parameter lambda at which predictions are required. Default is the entire sequence used to create the model.\nThere are other ways to do CV for ridge regression in R, for example, the caret (Classification And REgression Training) package and the rsample package in tidymodels ecosystem."
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#determine-lambda",
+    "href": "slides/05-ridge-cv.html#determine-lambda",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Determine \\(\\lambda\\)\n",
+    "text": "Determine \\(\\lambda\\)\n\n\n\n\nplot(ridge_cv_fit)\n\n\n\n\n\n\n\n\n\nridge_cv_fit$lambda.min\n\n[1] 2.75\n\n# largest lambda s.t. error is within 1 s.e of the min\nridge_cv_fit$lambda.1se \n\n[1] 16.1\n\ncoef(ridge_cv_fit, s = \"lambda.min\")\n\n11 x 1 sparse Matrix of class \"dgCMatrix\"\n                  s1\n(Intercept) 21.11734\ncyl         -0.37134\ndisp        -0.00525\nhp          -0.01161\ndrat         1.05477\nwt          -1.23420\nqsec         0.16245\nvs           0.77196\nam           1.62381\ngear         0.54417\ncarb        -0.54742\n\n\n\n\ncoef(fit2, s = “lambda.1se”)"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#generalized-cross-validation",
+    "href": "slides/05-ridge-cv.html#generalized-cross-validation",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Generalized Cross-Validation",
+    "text": "Generalized Cross-Validation\n\nThe generalized cross-validation (GCV) is a modified version of the leave-one-out CV (\\(n\\)-fold CV).\nThe GCV criterion is given by \\[\\text{GCV}(\\lambda) = \\frac{1}{n}\\sum_{i=1}^n \\left[ \\frac{y_i - x_i' \\widehat{\\boldsymbol \\beta}^\\text{r}_\\lambda}{1 - \\text{Trace}(\\mathbf{S}_\\lambda)/n} \\right]^2\\]\n\nwhere \\(\\mathbf{S}_\\lambda\\) is the hat matrix corresponding to the ridge regression:\n\\[\\mathbf{S}_\\lambda = \\mathbf{X}(\\mathbf{X}' \\mathbf{X}+ n\\lambda \\mathbf{I})^{-1} \\mathbf{X}'\\]\nThe interesting fact about leave-one-out CV in the linear regression setting is that we do not need to explicitly fit all leave-one-out models.\n\nESL p. 244\nlm.ridge code"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#generalized-cross-validation-1",
+    "href": "slides/05-ridge-cv.html#generalized-cross-validation-1",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Generalized Cross-Validation",
+    "text": "Generalized Cross-Validation\n\n\n\nplot(ridge_fit$lambda, \n     ridge_fit$GCV, \n     type = \"l\", col = \"darkgreen\", \n     ylab = \"GCV\", xlab = \"Lambda\", \n     lwd = 3)\n\n\n\n\n\n\n\n\n\nidx <- which.min(ridge_fit$GCV)\nridge_fit$lambda[idx]\n\n[1] 15\n\nround(coef(ridge_fit)[idx, ], 2)\n\n        cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb \n21.13 -0.37 -0.01 -0.01  1.05 -1.23  0.16  0.77  1.62  0.54 -0.55 \n\n\n\n\nSelect the best \\(\\lambda\\) that produces the smallest GCV.\nYou can clearly see that the GCV decreases initially, as \\(\\lambda\\) increases, this is because the reduced variance is more beneficial than the increased bias. However, as \\(\\lambda\\) increases further, the bias term will eventually dominate and causing the overall prediction error to increase. The fitted MSE under this model is\n\n\n\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "slides/02-overview.html#imageobject-recognition",
