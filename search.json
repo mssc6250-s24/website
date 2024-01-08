@@ -742,6 +742,139 @@
     "text": "Other Topics\n\n\nAlgorithms\n\nShooting algorithm (Fu 1998)\nLeast angle regression (LAR) (Efron et al. 2004)\nCoordinate descent (Friedman et al 2010) (used in glmnet)\n\n\n\n\n\n\nVariants\n\nAdaptive Lasso\nGroup Lasso\nBayesian Lasso, etc.\n\n\n\nLasso may suffer in the case where two variables are strongly correlated. The situation is similar to OLS, however, in Lasso, it would only select one out of the two, instead of letting both parameter estimates to be large. This is not preferred in some practical situations such as genetic studies because expressions of genes from the same pathway may have large correlation, but biologist want to identify all of them instead of just one. The Ridge penalty may help in this case because it naturally considers the correlation structure. The following simulation may show the effect. - The Lasso problem is convex, although it may not be strictly convex in β when p is large - The solution is a global minimum, but may not be the unique global one - The Lasso solution is unique under conditions of the covariance matrix\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
+    "objectID": "slides/11-knn.html#nonparametric-examplar-based-methods",
+    "href": "slides/11-knn.html#nonparametric-examplar-based-methods",
+    "title": "K-nearest Neighbors \n",
+    "section": "Nonparametric Examplar-based Methods",
+    "text": "Nonparametric Examplar-based Methods\n\nSo far we have mostly focused on parametric models, either unconditional \\(p({\\bf y} \\mid \\boldsymbol \\theta)\\) or conditional \\(p({\\bf y} \\mid \\mathbf{x}, \\boldsymbol \\theta)\\), where \\(\\boldsymbol \\theta\\) is a fixed-dimensional vector of parameters. 1\nThe parameters are estimated from the training set \\(\\mathcal{D} = \\{(\\mathbf{x}_i, \\mathbf{y}_i)\\}_{i=1}^n\\) but after model fitting, the data is not used anymore.\n\n\n\nThe nonparametric models that keep the training data around at the test time are called examplar-based models, instance-based learning or memory-based learning.\n\nK-nearest neighbors classification and regression\nKernel regression\nLocal regression (LOESS)\nKernel density estimation\n\n\n\n\n\n\nThe examplar-based models usually perform a local averaging technique based on the similarity or distance between a test input \\(\\mathbf{x}_0\\) and each of the training inputs \\(\\mathbf{x}_i\\).\n\n\n\nFor example, \\(\\beta\\) coefficients in linear regression."
+  },
+  {
+    "objectID": "slides/11-knn.html#k-nearest-neighbor-regression",
+    "href": "slides/11-knn.html#k-nearest-neighbor-regression",
+    "title": "K-nearest Neighbors \n",
+    "section": "K-nearest Neighbor Regression",
+    "text": "K-nearest Neighbor Regression\n\nK-nearest neighbor (KNN) is a nonparametric method.\nIt can be used for both regression and classification.\nIn KNN, we don’t have parameters \\(\\boldsymbol \\beta\\), and \\(f(\\mathbf{x}_0) = \\mathbf{x}_0'\\boldsymbol \\beta\\) in regression.\nWe directly estimate \\(f(\\mathbf{x}_0)\\) using our examples or memory.1\n\n\\[ \\widehat{y}_0 = \\frac{1}{k} \\sum_{x_i \\in N_k(x_0)} y_i,\\] where the neighborhood of \\(x_0\\), \\(N_k(x_0)\\), defines the \\(k\\) training data points that are closest to \\(x_0\\).\n\nCloseness (Similarity) is defined using a distance measure, such as the Euclidean distance.\n\\(\\widehat{y}_0 = \\widehat{f}(x_0)\\)."
+  },
+  {
+    "objectID": "slides/11-knn.html#nearest-neighbor-regression",
+    "href": "slides/11-knn.html#nearest-neighbor-regression",
+    "title": "K-nearest Neighbors \n",
+    "section": "1-Nearest Neighbor Regression",
+    "text": "1-Nearest Neighbor Regression"
+  },
+  {
+    "objectID": "slides/11-knn.html#tuning-k",
+    "href": "slides/11-knn.html#tuning-k",
+    "title": "K-nearest Neighbors \n",
+    "section": "Tuning \\(k\\)\n",
+    "text": "Tuning \\(k\\)\n\n\n\\(y_i = 2\\sin(x_i) + \\epsilon_i, \\quad \\epsilon_i \\stackrel{iid}{\\sim} N(0, 1), \\quad i = 1, \\dots, 200\\)\n\n\n\n\n\n\nput all weights on one single training point. The predictive value at some test \\(x\\) relies solely on one single training point that is closest to \\(x\\)."
+  },
+  {
+    "objectID": "slides/11-knn.html#the-bias-variance-trade-off",
+    "href": "slides/11-knn.html#the-bias-variance-trade-off",
+    "title": "K-nearest Neighbors \n",
+    "section": "The Bias-variance Trade-off",
+    "text": "The Bias-variance Trade-off\n\nIf we consider different values of \\(k\\), we can observe the trade-off between bias and variance."
+  },
+  {
+    "objectID": "slides/11-knn.html#bias-variance-trade-off",
+    "href": "slides/11-knn.html#bias-variance-trade-off",
+    "title": "K-nearest Neighbors \n",
+    "section": "Bias-Variance Trade-Off",
+    "text": "Bias-Variance Trade-Off\n\\[\\begin{aligned}\n\\text{E}\\Big[ \\big( Y - \\widehat f(x_0) \\big)^2 \\Big]\n&= \\underbrace{\\text{E}\\Big[ ( Y - f(x_0))^2 \\big]}_{\\text{Irreducible Error}} +\n\\underbrace{\\Big(f(x_0) - \\text{E}[\\widehat f(x_0)]\\Big)^2}_{\\text{Bias}^2} +\n\\underbrace{\\text{E}\\Big[ \\big(\\widehat f(x_0) - \\text{E}[\\widehat f(x_0)] \\big)^2 \\Big]}_{\\text{Variance}}\n\\end{aligned}\\]\n\nAs \\(k \\uparrow\\), bias \\(\\uparrow\\) and variance \\(\\downarrow\\) (smoother)\nAs \\(k \\downarrow\\), bias \\(\\downarrow\\) and variance \\(\\uparrow\\) (more wiggly)\n\nwhen k is small, the estimated model is unstable. Also, each time we observe a new training data, we may get a very different estimation. (due to the closest sample and ) When k is large, the estimated model eventually deviates (systematically) from the truth. If we use more “neighbouring” points, say k, the variance would reduce to approximately σ2/k. But the bias2 will increase as neighbours are far away from x0. k determines the model complexity"
+  },
+  {
+    "objectID": "slides/11-knn.html#degrees-of-freedom",
+    "href": "slides/11-knn.html#degrees-of-freedom",
+    "title": "K-nearest Neighbors \n",
+    "section": "Degrees of Freedom",
+    "text": "Degrees of Freedom\n\n\\(k\\) determines the model complexity and degrees of freedom (df).\nIn general, the df can be defined as\n\n\\[\\text{df}(\\hat{f}) = \\frac{1}{\\sigma^2}\\text{Trace}\\left( \\mathrm{Cov}(\\hat{\\mathbf{y}}, \\mathbf{y})\\right)= \\frac{1}{\\sigma^2}\\sum_{i=1}^n \\mathrm{Cov}(\\hat{y}_i, y_i)\\]\n\n\\(k = 1\\): \\(\\hat{f}(x_i) = y_i\\) and \\(\\text{df}(\\hat{f}) = n\\)\n\\(k = n\\): \\(\\hat{f}(x_i) = \\bar{y}\\) and \\(\\text{df}(\\hat{f}) = 1\\)\nFor general \\(k\\), \\(\\text{df}(\\hat{f}) = n/k\\).\n\n\n\nLinear regression with \\(p\\) coefficients: \\(\\text{df}(\\hat{f}) = \\text{Trace}\\left( {\\bf H} \\right) = p\\)\nFor any linear smoother \\(\\hat{\\mathbf{y}} = {\\bf S} \\mathbf{y}\\), \\(\\text{df}(\\hat{f}) = \\text{Trace}({\\bf S})\\)."
+  },
+  {
+    "objectID": "slides/11-knn.html#k-nearest-neighbor-classification",
+    "href": "slides/11-knn.html#k-nearest-neighbor-classification",
+    "title": "K-nearest Neighbors \n",
+    "section": "K-nearest Neighbor Classification",
+    "text": "K-nearest Neighbor Classification\n\nInstead of taking average in regression, KNN classification uses majority voting:\n\n\nLook for the most popular class label among its neighbors.\n\n\n1NN decision boundary is a Voronoi diagram.\n\n\n\n\n\n\n\n\n\n\n\n\nVoronoi tessellation. https://en.wikipedia.org/wiki/Voronoi_diagram"
+  },
+  {
+    "objectID": "slides/11-knn.html#example",
+    "href": "slides/11-knn.html#example",
+    "title": "K-nearest Neighbors \n",
+    "section": "Example",
+    "text": "Example\n\n\nThe KNN decision boundary is nonlinear.\nR: class::knn(), kknn::kknn(), parsnip::nearest_neighbor()\nPython: from sklearn.neighbors import KNeighborsClassifier"
+  },
+  {
+    "objectID": "slides/11-knn.html#example-1",
+    "href": "slides/11-knn.html#example-1",
+    "title": "K-nearest Neighbors \n",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "slides/11-knn.html#confusion-matrix",
+    "href": "slides/11-knn.html#confusion-matrix",
+    "title": "K-nearest Neighbors \n",
+    "section": "Confusion Matrix",
+    "text": "Confusion Matrix\n\n  knn_fit <- class::knn(train = x, test = x, cl = y, k = 15)\n  caret::confusionMatrix(table(knn_fit, y))\n\nConfusion Matrix and Statistics\n\n       y\nknn_fit  0  1\n      0 82 13\n      1 18 87\n                                        \n               Accuracy : 0.845         \n                 95% CI : (0.787, 0.892)\n    No Information Rate : 0.5           \n    P-Value [Acc > NIR] : <2e-16        \n                                        \n                  Kappa : 0.69          \n                                        \n Mcnemar's Test P-Value : 0.472         \n                                        \n            Sensitivity : 0.820         \n            Specificity : 0.870         \n         Pos Pred Value : 0.863         \n         Neg Pred Value : 0.829         \n             Prevalence : 0.500         \n         Detection Rate : 0.410         \n   Detection Prevalence : 0.475         \n      Balanced Accuracy : 0.845         \n                                        \n       'Positive' Class : 0"
+  },
+  {
+    "objectID": "slides/11-knn.html#choosing-k",
+    "href": "slides/11-knn.html#choosing-k",
+    "title": "K-nearest Neighbors \n",
+    "section": "Choosing K",
+    "text": "Choosing K\n\nCodeset.seed(2023)\nlibrary(caret)\ncontrol <- trainControl(method = \"cv\", number = 10)\nknn_cvfit <- train(y ~ ., method = \"knn\", \n                   data = data.frame(\"x\" = x, \"y\" = as.factor(y)),\n                   tuneGrid = data.frame(k = seq(1, 40, 1)),\n                   trControl = control)\npar(mar = c(4, 4, 0, 0))\nplot(knn_cvfit$results$k, 1 - knn_cvfit$results$Accuracy,\n     xlab = \"K\", ylab = \"Classification Error\", type = \"b\",\n     pch = 19, col = 2)"
+  },
+  {
+    "objectID": "slides/11-knn.html#scaling-and-distance-measures",
+    "href": "slides/11-knn.html#scaling-and-distance-measures",
+    "title": "K-nearest Neighbors \n",
+    "section": "Scaling and Distance Measures",
+    "text": "Scaling and Distance Measures\n\nBy default, we use Euclidean distance (\\(\\ell_2\\) norm).\n\n\n\\[d^2(\\mathbf{u}, \\mathbf{v}) = \\lVert \\mathbf{u}- \\mathbf{v}\\rVert_2^2 = \\sum_{j=1}^p (u_j - v_j)^2\\]\n\n\nThis measure is not scale invariant: Multiplying the data with a factor changes the distance!\n\n\n\nOften consider a normalized version:\n\n\n\\[d^2(\\mathbf{u}, \\mathbf{v}) = \\sum_{j=1}^p \\frac{(u_j - v_j)^2}{\\sigma_j^2}\\]\n\n\n\n\n\nMahalanobis distance takes the covariance structure into account\n\n\n\\[d^2(\\mathbf{u}, \\mathbf{v}) = (\\mathbf{u}- \\mathbf{v})' \\Sigma^{-1} (\\mathbf{u}- \\mathbf{v}),\\]\n\n\nIf \\(\\Sigma = \\mathbf{I}\\), Mahalanobis = Euclidean\nIf \\(\\Sigma = diag(\\sigma^2_1, \\dots, \\sigma^2_p)\\), Mahalanobis = normalized version"
+  },
+  {
+    "objectID": "slides/11-knn.html#mahalanobis-distance",
+    "href": "slides/11-knn.html#mahalanobis-distance",
+    "title": "K-nearest Neighbors \n",
+    "section": "Mahalanobis distance",
+    "text": "Mahalanobis distance\n\nRed and green points have the same Euclidean distance to the center.\nThe red point is farther away from the center in terms of Mahalanobis distance.\n\n\nIn the following plot, the red cross and orange cross have the same Euclidean distance to the center. However, the red cross is more of a “outlier” based on the joint distribution. The Mahalanobis distance would reflect this."
+  },
+  {
+    "objectID": "slides/11-knn.html#example-image-data-elemstatlearnzip.train",
+    "href": "slides/11-knn.html#example-image-data-elemstatlearnzip.train",
+    "title": "K-nearest Neighbors \n",
+    "section": "Example: Image Data ElemStatLearn::zip.train\n",
+    "text": "Example: Image Data ElemStatLearn::zip.train\n\n\nDigits 0-9 scanned from envelopes by the U.S. Postal Service\n\\(16 \\times 16\\) pixel images, totally \\(p=256\\) variables\nAt each pixel, we have the gray scale as the numerical value\n1NN with Euclidean distance gives 5.6% error rate\n1NN with tangent distance (Simard et al., 1993) gives 2.6% error"
+  },
+  {
+    "objectID": "slides/11-knn.html#example-3nn-on-image-data",
+    "href": "slides/11-knn.html#example-3nn-on-image-data",
+    "title": "K-nearest Neighbors \n",
+    "section": "Example: 3NN on Image Data",
+    "text": "Example: 3NN on Image Data\n\n  # fit 3nn model and calculate the error\n  knn.fit <- class::knn(zip.train[, 2:257], zip.test[, 2:257], zip.train[, 1], k = 3)\n  # overall prediction error\n  mean(knn.fit != zip.test[, 1])\n\n[1] 0.0543\n\n\n\n  # the confusion matrix\n  table(knn.fit, zip.test[, 1])\n\n       \nknn.fit   0   1   2   3   4   5   6   7   8   9\n      0 355   0   7   2   0   4   3   0   4   1\n      1   0 258   0   0   2   0   0   1   0   0\n      2   3   0 183   2   0   3   1   1   0   0\n      3   0   0   1 153   0   3   0   1   3   0\n      4   0   3   1   0 182   0   2   4   0   3\n      5   0   0   0   6   2 145   1   0   2   1\n      6   0   2   1   0   2   0 163   0   0   0\n      7   0   1   2   1   3   0   0 138   1   4\n      8   0   0   3   0   1   1   0   1 153   0\n      9   1   0   0   2   8   4   0   1   3 168"
+  },
+  {
+    "objectID": "slides/11-knn.html#example-3nn-on-image-data-1",
+    "href": "slides/11-knn.html#example-3nn-on-image-data-1",
+    "title": "K-nearest Neighbors \n",
+    "section": "Example: 3NN on Image Data",
+    "text": "Example: 3NN on Image Data"
+  },
+  {
+    "objectID": "slides/11-knn.html#computational-issues",
+    "href": "slides/11-knn.html#computational-issues",
+    "title": "K-nearest Neighbors \n",
+    "section": "Computational Issues",
+    "text": "Computational Issues\n\nNeed to store the entire training data for prediction. (Lazy learner)\nNeeds to calculate the distance from \\(x_0\\) to all training sample and sort them.1\nDistance measures may affect accuracy.\n\n\\(K\\)NN can be quite computationally intense for large sample size because to find the nearest neighbors, we need to calculate and compare the distances to each of the data point. In addition, it is not memory friendly because we need to store the entire training dataset for future prediction. In contrast, for linear model, we only need to store the estimated \\(\\boldsymbol \\beta\\) parameters. Some algorithms have been developed to search for the neighbors more efficiently. You can try the FNN package for these faster computations when \\(n\\) is large.\nR FNN package for faster computations when \\(n\\) is large."
+  },
+  {
+    "objectID": "slides/11-knn.html#curse-of-dimensionality",
+    "href": "slides/11-knn.html#curse-of-dimensionality",
+    "title": "K-nearest Neighbors \n",
+    "section": "Curse of Dimensionality",
+    "text": "Curse of Dimensionality\n\nKNN does does not work well in high-dimensional space (\\(p \\gg n\\)) due to curse of dimensionality.\n\n\nAs \\(p\\) increases, it’s getting harder to find \\(k\\) neighbors in the input space. KNN needs to explore a large range of values along each input dimension to grab the “neighbors”.\n\n\nThe “neighbors” of \\(x_0\\) are in fact far away from \\(x_0\\), and so they may not be good predictors about the behavior of the function at \\(x_0\\).\nThe method is not local anymore despite the name “nearest neighbor”!\nIn high dimensions KNN often performs worse than linear regression."
+  },
+  {
     "objectID": "slides/03-bias-var.html#supervised-learning-1",
     "href": "slides/03-bias-var.html#supervised-learning-1",
     "title": "Bias-Variance Tradeoff 🎯",
@@ -866,6 +999,195 @@
     "title": "Bias-Variance Tradeoff 🎯",
     "section": "\nLab: Bias-Variance Tradeoff",
     "text": "Lab: Bias-Variance Tradeoff\n\nModel 1: Under-fitting y = \\beta_0+\\beta_1x+\\epsilon\nModel 2: Right-fitting y = \\beta_0+\\beta_1x+ \\beta_2x^2 + \\epsilon\nModel 3: Over-fitting y = \\beta_0+\\beta_1x+ \\beta_2x^2 + \\cdots + \\beta_9x^9 + \\epsilon\nTo see expectation/bias and variance, we need replicates of training data."
+  },
+  {
+    "objectID": "slides/10-generative.html#bayes-classifier",
+    "href": "slides/10-generative.html#bayes-classifier",
+    "title": "Generative Models \n",
+    "section": "Bayes Classifier",
+    "text": "Bayes Classifier\n\nThe test error rate is minimized, on average, by a classifier that assigns each observation to the most likely category, given its predictor values.\n\nThis fact leads to\n\n\nBayes (Optimal) Classifier: Assign a test observation \\(y_j\\) with predictor \\(x_j\\) to class \\(k\\) for which the conditional probability \\(P(Y_j = k \\mid X = x_j)\\) is largest.\nThe Bayes classifier produces the lowest possible test error rate, called Bayes error rate.\n\n\n\nThe problem is\n\nWe never know \\(P(Y_j = k \\mid X = x_j)\\) 😭\nThe goal of soft classifiers is to estimate it, like logistic regression:\n\n\\[ \\widehat{\\pi}(\\mathbf{x}) = \\widehat{P}(Y = 1 \\mid \\mathbf{x}) = \\frac{1}{1+e^{-\\mathbf{x}'\\widehat{\\boldsymbol{\\beta}}}}\\]"
+  },
+  {
+    "objectID": "slides/10-generative.html#what-is-a-generative-model",
+    "href": "slides/10-generative.html#what-is-a-generative-model",
+    "title": "Generative Models \n",
+    "section": "What is a Generative Model?",
+    "text": "What is a Generative Model?\n\nWe assume predictors are fixed and known, and we care about the distribution of the response conditional on the predictors, \\(p(y \\mid \\mathbf{x})\\)\n\nLogistic regression (LR)\n\n\n\n\n\nA generative model considers the joint distribution of the response and predictors, i.e., \\(p(y, \\mathbf{x})\\)\n\nDiscriminant analysis\nNaive Bayes (NB)\n\n\n\n\n\nWhy not just logistic regression?\n\nWhen the classes are substaintially separated, the parameter estimates for the logistic regression are unstable.\nIf the distribution of the predictors is approximately normal in each of the classes and the sample size is small, the generative models could perform better and more stable again.\n\n\\(\\mathbf{x}\\) is variable whose value is generated from some distribution given a value of \\(y\\)"
+  },
+  {
+    "objectID": "slides/10-generative.html#generative-modeling",
+    "href": "slides/10-generative.html#generative-modeling",
+    "title": "Generative Models \n",
+    "section": "Generative Modeling",
+    "text": "Generative Modeling\n\nTo infer \\(p(y \\mid \\mathbf{x})\\) from a generative model, Bayes theorem comes into play:\n\n\n\\[\\begin{align} p(y = k \\mid \\mathbf{x}) &= \\frac{p(y = k, \\mathbf{x})}{p(\\mathbf{x})} = \\frac{p(y = k)p(\\mathbf{x}\\mid y = k) }{p(\\mathbf{x})} = \\frac{p(y = k)p(\\mathbf{x}\\mid y = k)}{\\sum_{l=1}^K p(y = k)p(\\mathbf{x}\\mid y = l)}\\\\\n&=\\frac{\\pi_kf_k(\\mathbf{x})}{\\sum_{l=1}^K\\pi_lf_l(\\mathbf{x})}\\end{align}\\]\n\n\nTo get the posterior \\(p(y = k \\mid \\mathbf{x})\\), we need\n\n\nprior \\(\\pi_k = p(y = k)\\)\n\n\nlikelihood \\(f_k(\\mathbf{x}) = p(\\mathbf{x}\\mid y = k)\\)\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nDifferent generative models use different priors and likelihood functions, resulting in different strengths and weakness."
+  },
+  {
+    "objectID": "slides/10-generative.html#bayes-decision-boundary",
+    "href": "slides/10-generative.html#bayes-decision-boundary",
+    "title": "Generative Models \n",
+    "section": "Bayes Decision Boundary",
+    "text": "Bayes Decision Boundary\n\nHow do we find/estimate the Bayes decision boundary generated by the Bayes classifier?"
+  },
+  {
+    "objectID": "slides/10-generative.html#linear-discriminant-analysis-lda",
+    "href": "slides/10-generative.html#linear-discriminant-analysis-lda",
+    "title": "Generative Models \n",
+    "section": "Linear Discriminant Analysis (LDA)",
+    "text": "Linear Discriminant Analysis (LDA)\n\n\\[\\begin{align} p(y = k \\mid \\mathbf{x})  = \\frac{p(y = k)p(\\mathbf{x}\\mid y = k)}{\\sum_{l=1}^K p(y = k)p(\\mathbf{x}\\mid y = l)} =\\frac{\\pi_kf_k(\\mathbf{x})}{\\sum_{l=1}^K\\pi_lf_l(\\mathbf{x})}\\end{align}\\]\n\n\nEstimate the prior \\(\\pi_k = p(y = k)\\) using the proportion of the training labels that belong to the \\(k\\)th class: \\[\\hat{\\pi}_k = n_k / n \\]\n\n\n\ntable(Default$default)/length(Default$default)\n\n\n    No    Yes \n0.9667 0.0333 \n\n\n\n\nLDA assumption for \\(f_k(\\mathbf{x})\\): \\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma \\right)}\\)\n\n\n\\(\\boldsymbol{\\mu}_k\\): class-specific mean vector\n\n\\(\\Sigma\\): covariance matrix common to all \\(K\\) classes"
+  },
+  {
+    "objectID": "slides/10-generative.html#two-multivariate-normals-with-common-covariance",
+    "href": "slides/10-generative.html#two-multivariate-normals-with-common-covariance",
+    "title": "Generative Models \n",
+    "section": "Two Multivariate Normals with Common Covariance",
+    "text": "Two Multivariate Normals with Common Covariance\n\n\n\\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma \\right)}\\)\n\n\\(\\boldsymbol{\\mu}_1 = (0.5, -1)'\\), \\(\\boldsymbol{\\mu}_2 = (-0.5, 0.5)'\\)\n\\(\\Sigma = \\begin{pmatrix} 1 & 0.5 \\\\ 0.5 & 1 \\end{pmatrix}\\)\n\\(\\pi_1 = 0.4\\), \\(\\pi_2 = 0.6\\)\nEach class has its own predictor mean.\nThe predictor’s variability are the same for the two classes.\n\n\n\n\n\n\n\n\n\n\nplot_ly has mu1 mu2 problems! Be careful!"
+  },
+  {
+    "objectID": "slides/10-generative.html#parameter-estimation-for-lda",
+    "href": "slides/10-generative.html#parameter-estimation-for-lda",
+    "title": "Generative Models \n",
+    "section": "Parameter Estimation for LDA",
+    "text": "Parameter Estimation for LDA\n\\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma \\right)}\\)\n\nEstimating \\(p(\\mathbf{x}\\mid y = k)\\) is reduced to estimating \\(\\boldsymbol{\\mu}_1, \\dots, \\boldsymbol{\\mu}_K\\) and \\(\\Sigma\\).\n\n\n\n\n\nCentroids: \\(\\widehat{\\boldsymbol{\\mu}}_k = n_k^{-1} \\sum_{i: \\,y_i = k} \\mathbf{x}_i\\)\n\nPooled covariance matrix: \\[\\widehat \\Sigma = \\frac{1}{n-K} \\sum_{k=1}^K \\sum_{i : \\, y_i = k} (\\mathbf{x}_i - \\widehat{\\boldsymbol{\\mu}}_k) (\\mathbf{x}_i - \\widehat{\\boldsymbol{\\mu}}_k)' = \\sum_{k=1}^K \\frac{n_k-1}{n-K}\\widehat \\Sigma_k\\] where \\(\\widehat \\Sigma_k = \\frac{1}{n_k-1}\\sum_{i : \\, y_i = k} (\\mathbf{x}_i - \\widehat{\\boldsymbol{\\mu}}_k) (\\mathbf{x}_i - \\widehat{\\boldsymbol{\\mu}}_k)'\\)\n\n\n\n\n\nmu1_hat =\n\n\n[1]  0.47 -1.01\n\n\nmu2_hat =\n\n\n[1] -0.54  0.51\n\n\nSigma_hat = \n\n\n     [,1] [,2]\n[1,] 1.13 0.54\n[2,] 0.54 1.02"
+  },
+  {
+    "objectID": "slides/10-generative.html#decision-boundary-by-lda",
+    "href": "slides/10-generative.html#decision-boundary-by-lda",
+    "title": "Generative Models \n",
+    "section": "Decision Boundary by LDA",
+    "text": "Decision Boundary by LDA"
+  },
+  {
+    "objectID": "slides/10-generative.html#discriminant-function",
+    "href": "slides/10-generative.html#discriminant-function",
+    "title": "Generative Models \n",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\nThe likelihood is Gaussian\n\\[f_k(x) = \\frac{1}{(2\\pi)^{p/2} |\\Sigma|^{1/2}} \\exp\\left[ -\\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) \\right]\\]\n\nThe log-likelihood is\n\\[\\begin{align}\n\\log f_k(\\mathbf{x}) =&~ -\\log \\big((2\\pi)^{p/2} |\\Sigma|^{1/2} \\big) - \\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)'\\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) \\\\\n    =&~ - \\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) + \\text{Constant}\n\\end{align}\\]\n\n\nThe maximum a posteriori estimate is\n\\[\\begin{align}\n\\widehat f(\\mathbf{x}) =& ~\\underset{k}{\\arg\\max} \\,\\, \\log \\big( \\pi_k f_k(\\mathbf{x}) \\big) \\\\\n    =& ~\\underset{k}{\\arg\\max} \\,\\, - \\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) + \\log(\\pi_k)\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/10-generative.html#discriminant-function-1",
+    "href": "slides/10-generative.html#discriminant-function-1",
+    "title": "Generative Models \n",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\n\\[\\begin{align}\n\\widehat f(\\mathbf{x}) =& ~\\underset{k}{\\arg\\max} \\,\\, - \\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) + \\log(\\pi_k)\n\\end{align}\\]\n\n\n\\((\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k)\\) is the Mahalanobis distance between \\(\\mathbf{x}\\) and the centroid \\(\\boldsymbol{\\mu}_k\\).\n\nClassify \\(y\\) so that its \\(\\mathbf{x}\\) and the centroid of the labeled class is the closest.\n\n\n\n\\[\\begin{align}\n& - \\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) + \\log(\\pi_k)\\\\\n&=~ \\mathbf{x}' \\underbrace{\\Sigma^{-1} \\boldsymbol{\\mu}_k}_{\\mathbf{w}_k} \\underbrace{- \\frac{1}{2}\\boldsymbol{\\mu}_k' \\Sigma^{-1} \\boldsymbol{\\mu}_k + \\log(\\pi_k)}_{b_k} + \\text{irrelevant terms} \\\\\n&=~ \\mathbf{x}' \\mathbf{w}_k + b_k + \\text{irrelevant terms}\\\\\n&=~ \\delta_k(\\mathbf{x}) + \\text{irrelevant terms}\n\\end{align}\\] where \\(\\delta_k(\\mathbf{x})\\) the discriminant function which is linear in \\(\\mathbf{x}\\)."
+  },
+  {
+    "objectID": "slides/10-generative.html#discriminant-function-2",
+    "href": "slides/10-generative.html#discriminant-function-2",
+    "title": "Generative Models \n",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\n\n\n\nThe decision boundary of LDA is a linear function of \\(\\mathbf{x}\\).\nThe boundary between two classes \\(k\\) and \\(l\\) is where they have the same density value.\n\n\\[\\begin{align}\n\\delta_k(\\mathbf{x}) &= \\delta_l(\\mathbf{x}) \\\\\n\\Leftrightarrow \\quad \\mathbf{x}' \\mathbf{w}_k + b_k &= \\mathbf{x}' \\mathbf{w}_l + b_l \\\\\n\\Leftrightarrow \\quad \\mathbf{x}' (\\mathbf{w}_k - \\mathbf{w}_l) + (b_k - b_l) &= 0. \\\\\n\\end{align}\\]\n\\[\\begin{align}\n&\\delta_k(\\mathbf{x}) - \\delta_l(\\mathbf{x}) \\\\\n\\propto & \\quad \\log \\left(\\pi_k f_k(\\mathbf{x})\\right) -  \\log \\left(\\pi_l f_l(\\mathbf{x}))\\right)\\\\\n\\propto & \\quad \\log \\left(P(Y = k \\mid \\mathbf{x})\\right) -  \\log \\left(P(Y = l \\mid \\mathbf{x})\\right) \\\\\n\\propto & \\quad \\log \\left( \\frac{P(Y = k \\mid \\mathbf{x})}{P(Y = l \\mid \\mathbf{x})}\\right)\n\\end{align}\\]\n\n\n\n\n\n\n\n\n\nby incorporating the covariance matrix and adjusting the for prior. Note that anything that does not depends on the class index \\(k\\) is irrelevant to the decision."
+  },
+  {
+    "objectID": "slides/10-generative.html#test-data",
+    "href": "slides/10-generative.html#test-data",
+    "title": "Generative Models \n",
+    "section": "Test Data",
+    "text": "Test Data"
+  },
+  {
+    "objectID": "slides/10-generative.html#interpretation-of-lda",
+    "href": "slides/10-generative.html#interpretation-of-lda",
+    "title": "Generative Models \n",
+    "section": "Interpretation of LDA",
+    "text": "Interpretation of LDA\n\nESL Fig 4.9Check ESL\nFind the linear combination \\(Z = a'X\\) such that the between class variance is maximized relative to the within-class variance.\nAgain, the between class variance is the variance of the class means of Z, and the within class variance is the pooled variance about the means. Figure 4.9 shows why this criterion makes sense. Although the direction joining the centroids separates the means as much as possible (i.e., maximizes the between-class variance), there is considerable overlap between the projected classes due to the nature of the covariances. By taking the covariance into account as well, a direction with minimum overlap can be found.\nGaussian classification with common covariances leads to linear decision boundaries. Classification can be achieved by sphering the data with respect to W, and classifying to the closest centroid (modulo log πk) in the sphered space. Since only the relative distances to the centroids count, one can confine the data to the subspace spanned by the centroids in the sphered space. This subspace can be further decomposed into successively optimal subspaces in term of centroid separation. This decomposition is identical to the decomposition due to Fisher."
+  },
+  {
+    "objectID": "slides/10-generative.html#masslda",
+    "href": "slides/10-generative.html#masslda",
+    "title": "Generative Models \n",
+    "section": "MASS::lda()",
+    "text": "MASS::lda()\nLogistic Regression\n\n\n       \n          No  Yes\n  FALSE 9625  233\n  TRUE    42  100\n\n\nLDA\n\nlda_fit <- MASS::lda(default ~ balance, data = Default)\nlda_pred <- predict(lda_fit, data = Default)\ntable(lda_pred$class, Default$default)\n\n     \n        No  Yes\n  No  9643  257\n  Yes   24   76\n\n\n\nLogistic regression training accuracy is 0.973\nLDA training accuracy is 0.972"
+  },
+  {
+    "objectID": "slides/10-generative.html#quadratic-discriminant-analysis-qda",
+    "href": "slides/10-generative.html#quadratic-discriminant-analysis-qda",
+    "title": "Generative Models \n",
+    "section": "Quadratic Discriminant Analysis (QDA)",
+    "text": "Quadratic Discriminant Analysis (QDA)\n\n\n\n\nLDA assumption for \\(f_k(\\mathbf{x})\\): \\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma \\right)}\\)\n\n\n\\(\\Sigma\\): covariance matrix common to all K classes\n\n\n\n\n\n\nQDA assumption for \\(f_k(\\mathbf{x})\\): \\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma_k \\right)}\\)\n\n\n\\(\\Sigma_k\\): each class has its own covariance matrix\n\n\n\n\n\n\nThe discriminant function for QDA is\n\\[\\begin{align} \\delta_k(\\mathbf{x}) &= - \\frac{1}{2} (\\mathbf{x}- \\boldsymbol{\\mu}_k)' \\Sigma_k^{-1} (\\mathbf{x}- \\boldsymbol{\\mu}_k) - \\frac{1}{2} \\log |\\Sigma_k |+ \\log(\\pi_k) \\\\\n&= \\mathbf{x}' \\mathbf{W}_k \\mathbf{x}+ \\mathbf{x}'\\mathbf{w}_k + b_k \\end{align}\\] which is a quadratic function of \\(\\mathbf{x}\\).\n\n\nThe boundary between class \\(k\\) and \\(l\\) for QDA is\n\\[\\begin{align}\n\\mathbf{x}' (\\mathbf{W}_k - \\mathbf{W}_l) \\mathbf{x}+ \\mathbf{x}' (\\mathbf{w}_k - \\mathbf{w}_l) + (b_k - b_l) = 0\\\\\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/10-generative.html#parameter-estimation-for-qda",
+    "href": "slides/10-generative.html#parameter-estimation-for-qda",
+    "title": "Generative Models \n",
+    "section": "Parameter Estimation for QDA",
+    "text": "Parameter Estimation for QDA\nThe estimation procedure is almost the same as LDA.\n\n\\(\\hat{\\pi}_k = n_k / n\\)\nCentroids: \\(\\widehat{\\boldsymbol{\\mu}}_k = n_k^{-1} \\sum_{i: \\,y_i = k} \\mathbf{x}_i\\)\nIndividual covariance matrix: \\[\\widehat \\Sigma_k = \\frac{1}{n_k-1}\\sum_{i : \\, y_i = k} (\\mathbf{x}_i - \\widehat{\\boldsymbol{\\mu}}_k) (\\mathbf{x}_i - \\widehat{\\boldsymbol{\\mu}}_k)'\\]"
+  },
+  {
+    "objectID": "slides/10-generative.html#two-multivariate-normals-with-different-covariance-matrices",
+    "href": "slides/10-generative.html#two-multivariate-normals-with-different-covariance-matrices",
+    "title": "Generative Models \n",
+    "section": "Two Multivariate Normals with Different Covariance Matrices",
+    "text": "Two Multivariate Normals with Different Covariance Matrices\n\n\n\\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma_k \\right)}\\)\n\n\\(\\boldsymbol{\\mu}_1 = (0.5, -1)'\\)\n\\(\\boldsymbol{\\mu}_2 = (-0.5, 0.5)'\\)\n\\(\\Sigma_1 = \\begin{pmatrix} 1 & 0.5 \\\\ 0.5 & 1 \\end{pmatrix}\\)\n\\(\\Sigma_2 = \\begin{pmatrix} 1 & -0.5 \\\\ -0.5 & 1 \\end{pmatrix}\\)\n\\(\\pi_1 = 0.4\\), \\(\\pi_2 = 0.6\\)\nEach class has its own predictor mean and covariance matrix."
+  },
+  {
+    "objectID": "slides/10-generative.html#decision-boundary-by-qda",
+    "href": "slides/10-generative.html#decision-boundary-by-qda",
+    "title": "Generative Models \n",
+    "section": "Decision Boundary by QDA",
+    "text": "Decision Boundary by QDA\n\nhttps://freakonometrics.hypotheses.org/tag/qda"
+  },
+  {
+    "objectID": "slides/10-generative.html#massqda",
+    "href": "slides/10-generative.html#massqda",
+    "title": "Generative Models \n",
+    "section": "MASS::qda",
+    "text": "MASS::qda\nLDA\n\n\n     \n        No  Yes\n  No  9643  257\n  Yes   24   76\n\n\nQDA\n\nqda_fit <- MASS::qda(default ~ balance, data = Default)\nqda_pred <- predict(qda_fit, data = Default)\ntable(qda_pred$class, Default$default)\n\n     \n        No  Yes\n  No  9639  246\n  Yes   28   87\n\n\n\nQDA training accuracy is 0.973"
+  },
+  {
+    "objectID": "slides/10-generative.html#naive-bayes-nb",
+    "href": "slides/10-generative.html#naive-bayes-nb",
+    "title": "Generative Models \n",
+    "section": "Naive Bayes (NB)",
+    "text": "Naive Bayes (NB)\n\n\n\n\n\nLDA assumption for \\(f_k(\\mathbf{x})\\): \\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma \\right)}\\)\n\n\n\\(\\Sigma\\): covariance matrix common to all K classes\n\n\n\n\n\n\nQDA assumption for \\(f_k(\\mathbf{x})\\): \\(\\color{blue}{(\\mathbf{x}\\mid y = k) \\sim N_p\\left(\\boldsymbol{\\mu}_k, \\Sigma_k \\right)}\\)\n\n\n\\(\\Sigma_k\\): each class has its own covariance matrix\n\n\n\n\n\n\nNB assumption for \\(f_k(\\mathbf{x})\\):\n\nfeatures are independent in each class!\n\\(f_k(\\mathbf{x}) = f_{k1}(x_1) \\times f_{k2}(x_2) \\times \\cdots \\times f_{kp}(x_p)\\)\n\n\n\n\n\n\n\n\nCondsidering the joint distribution of predictors is a pain when \\(p\\) is large.\nWe don’t believe \\(p\\) predictors are not associated at all, but\n\nthis “naive” assumption leads to decent results when \\(n\\) is not large enough relative to \\(p\\).\n\nThe naive independence assumption introduces some bias, but reduces variance.\n\n\n\n\n\\[\\begin{align} p(y = k \\mid \\mathbf{x})  =\\frac{\\pi_kf_k(\\mathbf{x})}{\\sum_{l=1}^K\\pi_lf_l(\\mathbf{x})} = \\frac{\\pi_k\\prod_{j=1}^p f_{kj(x_j)}}{\\sum_{l=1}^K\\pi_l\\prod_{j=1}^p f_{lj(x_j)}} \\end{align}\\]\n\nestimating a joint distribution requires such a huge amount of data"
+  },
+  {
+    "objectID": "slides/10-generative.html#options-for-estimating-f_kjx_j",
+    "href": "slides/10-generative.html#options-for-estimating-f_kjx_j",
+    "title": "Generative Models \n",
+    "section": "Options for Estimating \\(f_{kj}(x_j)\\)\n",
+    "text": "Options for Estimating \\(f_{kj}(x_j)\\)\n\n\nNumerical \\(X_j\\)\n\nParametric: \\[(X_j \\mid Y = k) \\sim N\\left(\\mu_{jk}, \\sigma_{jk}^2 \\right).\\] It’s QDA with additional assumption that \\(\\Sigma_k\\) is diagonal.\nNon-parametric: Estimate \\(f_{kj}(x_j)\\) by (discrete) histogram, (continuous) kernel density estimator, etc.\n\n\n\n\n\n\nCategorical \\(X_j\\)\n\n\n\\(f_{kj}(x_j) \\approx\\) the proportion of training data for \\(x_j\\) corresponding to class \\(k\\)."
+  },
+  {
+    "objectID": "slides/10-generative.html#e1071naivebayes",
+    "href": "slides/10-generative.html#e1071naivebayes",
+    "title": "Generative Models \n",
+    "section": "e1071::naiveBayes()",
+    "text": "e1071::naiveBayes()\nQDA\n\n\n     \n        No  Yes\n  No  9643  257\n  Yes   24   76\n\n\nNaive Bayes - By default, each feature is Gaussian distributed.\n\nnb_fit <- e1071::naiveBayes(default ~ balance, data = Default)\nnb_pred <- predict(nb_fit, Default)\ntable(nb_pred, Default$default)\n\n       \nnb_pred   No  Yes\n    No  9639  246\n    Yes   28   87\n\n\n\nNaive Bayes training accuracy is 0.973"
+  },
+  {
+    "objectID": "slides/10-generative.html#log-odds-of-lr-and-lda",
+    "href": "slides/10-generative.html#log-odds-of-lr-and-lda",
+    "title": "Generative Models \n",
+    "section": "Log Odds of LR and LDA",
+    "text": "Log Odds of LR and LDA\nSuppose class \\(K\\) is the baseline.\n\nLR\n\n\\[\\log \\left( \\frac{P(Y = k \\mid \\mathbf{x})}{P(Y = K \\mid \\mathbf{x})}\\right) = \\beta_{k0} + \\beta_{k1}x_{1} + \\dots + \\beta_{kp}x_{p}\\]\n\nLDA\n\n\\[\\log \\left( \\frac{P(Y = k \\mid \\mathbf{x})}{P(Y = K \\mid \\mathbf{x})}\\right) = a_k + \\sum_{j=1}^pc_{kj}x_j\\] where \\(a_k = \\log(\\pi_k / \\pi_K) - \\frac{1}{2}(\\boldsymbol{\\mu}_k + \\boldsymbol{\\mu}_K)'\\Sigma^{-1}(\\boldsymbol{\\mu}_k - \\boldsymbol{\\mu}_K)\\) and \\(c_{kj}\\) is the \\(j\\)th element of \\(\\Sigma^{-1}(\\boldsymbol{\\mu}_k - \\boldsymbol{\\mu}_K)\\).\nBoth log odds are linear in \\(\\mathbf{x}\\)."
+  },
+  {
+    "objectID": "slides/10-generative.html#log-odds-of-qda-and-nb",
+    "href": "slides/10-generative.html#log-odds-of-qda-and-nb",
+    "title": "Generative Models \n",
+    "section": "Log Odds of QDA and NB",
+    "text": "Log Odds of QDA and NB\n\nQDA\n\n\\[\\log \\left( \\frac{P(Y = k \\mid \\mathbf{x})}{P(Y = K \\mid \\mathbf{x})}\\right) = a_k + \\sum_{j=1}^pc_{kj}x_j + \\sum_{j=1}^p\\sum_{l=1}^p d_{kjl}x_jx_l\\] The log odds is quadratic in \\(\\mathbf{x}\\), where \\(a_k\\), \\(c_{kj}\\) and \\(d_{kjl}\\) are functions of \\(\\pi_k\\), \\(\\pi_K\\), \\(\\boldsymbol{\\mu}_k\\), \\(\\boldsymbol{\\mu}_K\\), \\(\\Sigma_k\\) and \\(\\Sigma_K\\).\n\nNB\n\n\\[\\log \\left( \\frac{P(Y = k \\mid \\mathbf{x})}{P(Y = K \\mid \\mathbf{x})}\\right) = a_k + \\sum_{j=1}^pg_{kj}(x_j)\\] where \\(a_k = \\log(\\pi_k / \\pi_K)\\) and \\(g_{kj}(x_j) = \\log\\left( \\frac{f_{kj}(x_j)}{f_{Kj}(x_j)}\\right)\\).\nThe log odds takes the form of a generalized additive model!"
+  },
+  {
+    "objectID": "slides/10-generative.html#comparison-of-log-odds",
+    "href": "slides/10-generative.html#comparison-of-log-odds",
+    "title": "Generative Models \n",
+    "section": "Comparison of Log Odds",
+    "text": "Comparison of Log Odds\n\nLDA is a special case of QDA with \\(d_{kjl} = 0\\) for all \\(k, j\\) and \\(l\\). \\((\\Sigma_1 = \\cdots = \\Sigma_k = \\Sigma)\\)\n\nAny classifier with a linear decision boundary is a special case of NB with \\(g_{kj}(x_j) = c_{kj}x_j.\\)\n\nLDA is a special case of NB\n\n\nNB is a special case of LDA if \\(f_{kj}(x_j) = N\\left(\\mu_{jk}, \\sigma_{j}^2 \\right)\\). \\((\\Sigma = \\text{diag}(\\sigma_1^2, \\dots, \\sigma_p^2))\\)\n\nNeither QDA nor NB is a special case of the other\n\nNB is more flexible for any transformation of \\(x_j\\), \\(g_{kj}(x_j)\\).\nNB is more restrictive because of its pure additive fit with no quadratic interactions \\(d_{kjl}x_jx_l\\)."
+  },
+  {
+    "objectID": "slides/10-generative.html#which-method-to-use",
+    "href": "slides/10-generative.html#which-method-to-use",
+    "title": "Generative Models \n",
+    "section": "Which Method to Use",
+    "text": "Which Method to Use\n\nNone of these methods uniformly dominates the others.\n\nThe choice of method depends on\n\nthe true distribution of \\(X_j\\)s in each class\nthe sizes of \\(n\\) and \\(p\\) that controls bias-variance trade-off\n\n\n\n\n\nLDA outperforms LR when predictors are approximately normal, but use LR when data are away from normal.\nUse LDA but not QDA when variability of predictors are similar among all \\(K\\) classes.\nDo not use naive Bayes when predictors are clearly correlated.\nUse QDA when predictors clearly have different covariance structure for each class.\n\n\nLDA outperforms LR when predictors are approximately normal, but use LR when data are away from normal.\nUse LDA but not QDA when variability of predictors are similar among all \\(K\\) classes. QDA fits a more flexible classifier than necessary.\nDo not use naive Bayes when predictors are clearly correlated.\nUse QDA when predictors clearly have different covariance structure for each class."
+  },
+  {
+    "objectID": "slides/10-generative.html#which-method-to-use-1",
+    "href": "slides/10-generative.html#which-method-to-use-1",
+    "title": "Generative Models \n",
+    "section": "Which Method to Use",
+    "text": "Which Method to Use\n\nQDA is more flexible than LDA (more parameters to be estimated), and hence low bias and high variance.\nLDA tends to be better than QDA if \\(n\\) is small, and so reducing variance is crucial.\nQDA is recommended if \\(n\\) is large so that the variance of the classifier is not a major concern.\nNaive Bayes works when \\(n\\) is not large enough relative to \\(p\\).\n\n\\(n\\) small more bias; \\(p\\) small less bias small \\(n\\) large \\(p\\): low bias high variance, so reducing variance by using less flexible method\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "slides/07-splines.html#when-y-and-x-are-not-linearly-associated",
@@ -1860,6 +2182,349 @@
     "title": "Bayesian Linear Regression \n",
     "section": "Resources",
     "text": "Resources\n\nBayes Rules! An Introduction to Applied Bayesian Modeling\nStatistical Rethinking\nA Student’s Guide to Bayesian Statistics\nBayesian Data Analysis\n\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#non-gaussian-and-non-continuous-response",
+    "href": "slides/09-class-glm.html#non-gaussian-and-non-continuous-response",
+    "title": "Generalized Linear Models \n",
+    "section": "Non-Gaussian and Non-continuous Response",
+    "text": "Non-Gaussian and Non-continuous Response\n\n\nIn many applications, the response or error term are nonnormal.\n\n\nBinary response: how an online banking system determine whether or not a transaction is fraudulent based on the user’s IP address.\n\nCount response: how weather conditions affect the number of users of a bike sharing program during a particular hour of the day.\n\n\n\n\n\nBesides normal, the response in a generalized linear model (GLM) can be Bernoulli, binomial, Poisson, etc.\nThere is no assumption that \\(\\mathrm{Var}(y_i)\\) is homogeneous: Both \\(E(y_i)\\) and \\(\\mathrm{Var}(y_i)\\) may vary with the regressors from data point to data point.\nOrdinary least squares does not apply when the response is not normal."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#classification",
+    "href": "slides/09-class-glm.html#classification",
+    "title": "Generalized Linear Models \n",
+    "section": "Classification",
+    "text": "Classification\n\nLinear regression assumes that the response \\(Y\\) is numerical.\nIn many situations, \\(Y\\) is categorical.\n\n\n\n\nNormal vs. COVID vs. Smoking\n\n\n\n\n\n\n\n\n\nfake news vs. true news\n\n\n\n\n\n\n\n\n\n\n\nA process of predicting categorical response is known as classification."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#regression-function-fx-vs.-classifier-cx",
+    "href": "slides/09-class-glm.html#regression-function-fx-vs.-classifier-cx",
+    "title": "Generalized Linear Models \n",
+    "section": "Regression Function \\(f(x)\\) vs. Classifier \\(C(x)\\)\n",
+    "text": "Regression Function \\(f(x)\\) vs. Classifier \\(C(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://daviddalpiaz.github.io/r4sl/classification-overview.html"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#soft-and-hard-classifiers",
+    "href": "slides/09-class-glm.html#soft-and-hard-classifiers",
+    "title": "Generalized Linear Models \n",
+    "section": "Soft and Hard Classifiers",
+    "text": "Soft and Hard Classifiers\nTwo popular approaches when modeling binary data\n\n\nSoft classifiers\n\nEstimate the conditional probabilities \\(Pr(Y = k \\mid {\\bf X})\\) for each category \\(k\\).\nUse \\(\\mathbf{1}\\{Pr(Y \\mid {\\bf X}) > c \\}\\) for classification, where \\(c \\in(0, 1)\\) is a threshold or cutoff.\ne.g. logistic regression\n\n\n\n\n\n\nHard classifiers\n\nDirectly estimate the classification decision boundary\ne.g. support vector machines"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#classification-example",
+    "href": "slides/09-class-glm.html#classification-example",
+    "title": "Generalized Linear Models \n",
+    "section": "Classification Example",
+    "text": "Classification Example\nGiven the training data \\(\\{(x_i, y_i)\\}_{i=1}^n\\), we build a classifier to predict whether people will default on their credit card payment \\((Y)\\) yes or no, based on monthly credit card balance \\((X)\\)."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#why-not-linear-regression",
+    "href": "slides/09-class-glm.html#why-not-linear-regression",
+    "title": "Generalized Linear Models \n",
+    "section": "Why Not Linear Regression",
+    "text": "Why Not Linear Regression\n\\[Y =\\begin{cases}\n    0  & \\quad \\text{if not default}\\\\\n    1  & \\quad \\text{if default}\n     \\end{cases}\\]\n\n\n\\(Y = \\beta_0 + \\beta_1X + \\epsilon\\), \\(\\, X =\\) credit card balance\n\n\nWhat are potential issues with this dummy variable approach?\n\n\n\n\\(\\hat{Y} = b_0 + b_1X\\) estimates \\(P(Y = 1 \\mid X) = P(default = yes \\mid balance)\\), which is equivalent to linear discriminant analysis (LDA) discussed later.\nHowever,"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#why-not-linear-regression-1",
+    "href": "slides/09-class-glm.html#why-not-linear-regression-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Why Not Linear Regression?",
+    "text": "Why Not Linear Regression?\n\nProbability estimates can be outside \\([0, 1]\\)."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#why-not-linear-regression-2",
+    "href": "slides/09-class-glm.html#why-not-linear-regression-2",
+    "title": "Generalized Linear Models \n",
+    "section": "Why Not Linear Regression?",
+    "text": "Why Not Linear Regression?\n\nLinear regression generally cannot handle more than two categories.\n\n\\[Y =\\begin{cases}\n    1  & \\quad \\text{stroke}\\\\\n    2  & \\quad \\text{drug overdose} \\\\\n    3  & \\quad \\text{epileptic seisure}\n     \\end{cases}\\]\n\n\nThe coding\n\nsuggests an ordering epileptic seisure \\(>\\) drug overdose \\(>\\) stroke\n\nimplies that stroke \\(-\\) drug overdose \\(=\\) drug overdose \\(-\\) epileptic seizure."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#binary-logistic-regression-1",
+    "href": "slides/09-class-glm.html#binary-logistic-regression-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Binary Logistic Regression",
+    "text": "Binary Logistic Regression\n\nFirst predict the probability of each category of \\(Y\\)\n\nPredict probability of default using a S-shaped curve."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#framing-the-problem-binary-responses",
+    "href": "slides/09-class-glm.html#framing-the-problem-binary-responses",
+    "title": "Generalized Linear Models \n",
+    "section": "Framing the Problem: Binary Responses",
+    "text": "Framing the Problem: Binary Responses\n\nWe use normal distribution for numerical \\(y\\). What distribution we can use for binary \\(y\\) that takes value 0 or 1?\n\n\n\nEach outcome default \\((y = 1)\\) and not default \\((y = 0)\\) is a Bernoulli variable. But,\n\n\n\n\nThe probability of “success” \\(\\pi\\) is not constant but varies with predictor values!\n\n\n\\[ y_i \\mid x_i \\stackrel{indep}{\\sim} \\text{Bernoulli}(\\pi = \\pi_i = \\pi(x_i)) = \\text{binomial}(m=1,\\pi = \\pi_i) \\]\n\n\n\n\n\\(X =\\) balance. \\(x_1 = 2000\\) has a larger \\(\\pi_1 = \\pi(2000)\\) than \\(\\pi_2 = \\pi(500)\\) with \\(x_2 = 500\\)\n\nCredit cards with a higher balance are more likely to be defaulted.\n\n\n\n\n\n\n\n\n\n\n\n\nIn the credit card example, - do we have exactly two outcomes? - do we have constant probability? \\(P(y_1 = 1) = P(y_2 = 1) = \\cdots = P(y_n = 1) = \\pi?\\) Exactly the same idea as linear regression, where the the mean response is not constant but varies with the value of predictors, \\(E(y_i) = \\beta_0+\\beta_1x_i\\)."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#logistic-function",
+    "href": "slides/09-class-glm.html#logistic-function",
+    "title": "Generalized Linear Models \n",
+    "section": "Logistic Function",
+    "text": "Logistic Function\n\nInstead of predicting \\(y_i\\) directly, we use the predictors to model its probability of success, \\(\\pi_i\\).\n\n\nBut how?\n\n\n\nTransform \\(\\pi \\in (0, 1)\\) into a variable \\(\\eta \\in (-\\infty, \\infty)\\). Then construct a linear predictor on \\(\\eta\\): \\(\\eta_i = \\mathbf{x}_i'\\boldsymbol \\beta\\)\n\n\n\n\n\nLogit function: For \\(0 < \\pi < 1\\)\n\n\n\\[\\eta = \\text{logit}(\\pi) = \\ln\\left(\\frac{\\pi}{1-\\pi}\\right)\\]"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#logit-function-eta-textlogitpi-lnleftfracpi1-piright",
+    "href": "slides/09-class-glm.html#logit-function-eta-textlogitpi-lnleftfracpi1-piright",
+    "title": "Generalized Linear Models \n",
+    "section": "Logit function \\(\\eta = \\text{logit}(\\pi) = \\ln\\left(\\frac{\\pi}{1-\\pi}\\right)\\)\n",
+    "text": "Logit function \\(\\eta = \\text{logit}(\\pi) = \\ln\\left(\\frac{\\pi}{1-\\pi}\\right)\\)"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#logistic-function-1",
+    "href": "slides/09-class-glm.html#logistic-function-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Logistic Function",
+    "text": "Logistic Function\n\nThe logit function \\(\\eta = \\text{logit}(\\pi) = \\ln\\left(\\frac{\\pi}{1-\\pi}\\right)\\) takes a value \\(\\pi \\in (0, 1)\\) and maps it to a value \\(\\eta \\in (-\\infty, \\infty)\\).\n\nLogistic function: \\[\\pi = \\text{logistic}(\\eta) = \\frac{1}{1+\\exp(-\\eta)} \\in (0, 1)\\]\n\nThe logistic (sigmoid) function takes a value \\(\\eta \\in (-\\infty, \\infty)\\) and maps it to a value \\(\\pi \\in (0, 1)\\).\n\n\n\nOnce \\(\\eta\\) is estimated by the linear regression, we use the logistic function to transform \\(\\eta\\) back to the probability.\n\n\\[\\pi = \\text{logistic}(\\eta) = \\frac{\\exp(\\eta)}{1+\\exp(\\eta)} = \\frac{1}{1+\\exp(-\\eta)} \\in (0, 1)\\]"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#logistic-sigmoid-function-pi-textlogisticeta-frac11exp-eta",
+    "href": "slides/09-class-glm.html#logistic-sigmoid-function-pi-textlogisticeta-frac11exp-eta",
+    "title": "Generalized Linear Models \n",
+    "section": "Logistic (Sigmoid) Function \\(\\pi = \\text{logistic}(\\eta) = \\frac{1}{1+\\exp(-\\eta)}\\)\n",
+    "text": "Logistic (Sigmoid) Function \\(\\pi = \\text{logistic}(\\eta) = \\frac{1}{1+\\exp(-\\eta)}\\)"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#logistic-regression-model",
+    "href": "slides/09-class-glm.html#logistic-regression-model",
+    "title": "Generalized Linear Models \n",
+    "section": "Logistic Regression Model",
+    "text": "Logistic Regression Model\nFor \\(i = 1, \\dots, n\\) and with \\(p\\) predictors: \\[Y_i \\mid \\pi_i({\\bf x}_i) \\stackrel{indep}{\\sim} \\text{Bernoulli}(\\pi_i), \\quad {\\bf x}_i' = (x_{i1}, \\dots, x_{ip})\\] \\[\\text{logit}(\\pi_i) = \\ln \\left( \\frac{\\pi_i}{1 - \\pi_i} \\right) = \\eta_i = \\beta_0+\\beta_1 x_{i1} + \\cdots + \\beta_p x_{ip} = {\\bf x}_i'\\boldsymbol \\beta\\]\n\nThe \\(\\eta_i = \\text{logit}(\\pi_i)\\) is a link function that links the linear predictor and the mean of \\(Y_i\\).\n\n\n\\[\\small E(Y_i) = \\pi_i = \\frac{1}{1 + \\exp(-{\\bf x}_i'\\boldsymbol \\beta)}\\] \\[\\small \\hat{\\pi}_i = \\frac{1}{1 + \\exp(-{\\bf x}_i'\\hat{\\boldsymbol \\beta} )}\\]"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#default-data-in-islr2",
+    "href": "slides/09-class-glm.html#default-data-in-islr2",
+    "title": "Generalized Linear Models \n",
+    "section": "\nDefault Data in ISLR2\n",
+    "text": "Default Data in ISLR2\n\n\ndata(\"Default\"); head(Default, 10)\n\n   default student balance income\n1       No      No     730  44362\n2       No     Yes     817  12106\n3       No      No    1074  31767\n4       No      No     529  35704\n5       No      No     786  38463\n6       No     Yes     920   7492\n7       No      No     826  24905\n8       No     Yes     809  17600\n9       No      No    1161  37469\n10      No      No       0  29275\n\nstr(Default)\n\n'data.frame':   10000 obs. of  4 variables:\n $ default: Factor w/ 2 levels \"No\",\"Yes\": 1 1 1 1 1 1 1 1 1 1 ...\n $ student: Factor w/ 2 levels \"No\",\"Yes\": 1 2 1 1 1 2 1 2 1 1 ...\n $ balance: num  730 817 1074 529 786 ...\n $ income : num  44362 12106 31767 35704 38463 ..."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#glm",
+    "href": "slides/09-class-glm.html#glm",
+    "title": "Generalized Linear Models \n",
+    "section": "glm()",
+    "text": "glm()\n\nlogit_fit <- glm(default ~ balance, data = Default, \n                 family = binomial)\nsumm_logit_fit <- summary(logit_fit)\n\n            Estimate Std. Error z value Pr(>|z|)\n(Intercept) -10.6513     0.3612   -29.5        0\nbalance       0.0055     0.0002    25.0        0\n\n\n\\(\\hat{\\eta} = \\text{logit}(\\hat{\\pi}) = \\ln \\left( \\frac{\\hat{\\pi}}{1 - \\hat{\\pi}}\\right) = -10.651 + 0.0055 \\times \\text{balance}\\)"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#interpretation-of-coefficients",
+    "href": "slides/09-class-glm.html#interpretation-of-coefficients",
+    "title": "Generalized Linear Models \n",
+    "section": "Interpretation of Coefficients",
+    "text": "Interpretation of Coefficients\nThe ratio \\(\\frac{\\pi}{1-\\pi} \\in (0, \\infty)\\) is called the odds of some event.\n\nExample: If 1 in 5 people will default, the odds is 1/4 since \\(\\pi = 0.2\\) implies an odds of \\(0.2/(1−0.2) = 1/4\\).\n\n\\[\\ln \\left( \\frac{\\pi(x)}{1 - \\pi(x)} \\right)= \\beta_0 + \\beta_1x\\]\n\nIncreasing \\(x\\) by one unit\n\nchanges the log-odds by \\(\\beta_1\\)\n\nmultiplies the odds by \\(e^{\\beta_1}\\)\n\n\n\n\n\n\n\n\\(\\beta_1\\) does not correspond to the change in \\(\\pi(x)\\) associated with a one-unit increase in \\(x\\).\n\n\\(\\beta_1\\) is the change in log odds associated with one-unit increase in \\(x\\)."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#interpretation-of-coefficients-1",
+    "href": "slides/09-class-glm.html#interpretation-of-coefficients-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Interpretation of Coefficients",
+    "text": "Interpretation of Coefficients\n\n\n            Estimate Std. Error z value Pr(>|z|)\n(Intercept) -10.6513     0.3612   -29.5        0\nbalance       0.0055     0.0002    25.0        0\n\n\n\n\\(\\hat{\\eta} = \\text{logit}(\\hat{\\pi}) = \\ln \\left( \\frac{\\hat{\\pi}}{1 - \\hat{\\pi}}\\right) = -10.651 + 0.0055 \\times \\text{balance}\\)\n\n\n\n\\(\\hat{\\eta}(x) = \\hat{\\beta}_0 + \\hat{\\beta}_1x\\)\n\\(\\hat{\\eta}(x+1) = \\hat{\\beta}_0 + \\hat{\\beta}_1(x+1)\\)\n\\(\\hat{\\eta}(x+1) - \\hat{\\eta}(x) = \\hat{\\beta}_1 = \\ln(\\text{odds}_{x+1}) - \\ln(\\text{odds}_{x})\\)\nOne-unit increase in balance increases the log odds of default by 0.0055 units.\n\n\n\n\nThe odds ratio, \\(\\widehat{OR} = \\frac{\\text{odds}_{x+1}}{\\text{odds}_{x}} = e^{\\hat{\\beta}_1} = e^{0.0055} = 1.005515\\).\nThe odds of default increases by 0.55% with additional one unit of credit card balance."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#prdefault-when-balance-is-2000",
+    "href": "slides/09-class-glm.html#prdefault-when-balance-is-2000",
+    "title": "Generalized Linear Models \n",
+    "section": "Pr(default) When Balance is 2000",
+    "text": "Pr(default) When Balance is 2000\n\\[\\log\\left(\\frac{\\hat{\\pi}}{1-\\hat{\\pi}}\\right) = -10.651+0.0055\\times 2000\\]\n\\[ \\hat{\\pi} = \\frac{1}{1+\\exp(-(-10.651+0.0055 \\times 2000)} = 0.586\\]\n\n\npi_hat <- predict(logit_fit, type = \"response\")\neta_hat <- predict(logit_fit, type = \"link\")  ## default gives us b0 + b1*x\npredict(logit_fit, newdata = data.frame(balance = 2000), type = \"response\")\n\n    1 \n0.586"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#probability-curve",
+    "href": "slides/09-class-glm.html#probability-curve",
+    "title": "Generalized Linear Models \n",
+    "section": "Probability Curve",
+    "text": "Probability Curve\n\nWhat is the probability of default when the balance is 500? What about balance 2500?\n\n\n\n\n\n\n\n\n\n\n\n\n\n500 balance: Pr(default) = 0\n2000 balance: Pr(default) = 0.59\n2500 balance: Pr(default) = 0.96"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#maximum-likelihood-estimation",
+    "href": "slides/09-class-glm.html#maximum-likelihood-estimation",
+    "title": "Generalized Linear Models \n",
+    "section": "Maximum Likelihood Estimation",
+    "text": "Maximum Likelihood Estimation\n\n\nglm() uses maximum likelihood to estimate the parameters \\(\\boldsymbol \\beta\\).\n\nThe log-likelihood is given by\n\\[\\ell(\\boldsymbol \\beta) = \\sum_{i=1}^n \\log \\, p(y_i \\mid x_i, \\boldsymbol \\beta).\\]\nUsing Bernoulli probabilities, we have\n\\[\\begin{align}\n\\ell(\\boldsymbol \\beta) =& \\sum_{i=1}^n \\log \\left\\{ \\pi(\\mathbf{x}_i)^{y_i} [1-\\pi(\\mathbf{x}_i)]^{1-y_i} \\right\\}\\\\\n    =& \\sum_{i=1}^n y_i \\log \\frac{\\pi(\\mathbf{x}_i)}{1-\\pi(\\mathbf{x}_i)} + \\log [1-\\pi(\\mathbf{x}_i)] \\\\\n    =& \\sum_{i=1}^n y_i \\mathbf{x}_i' \\boldsymbol \\beta- \\log [ 1 + \\exp(\\mathbf{x}_i' \\boldsymbol \\beta)]\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#maximum-likelihood-estimation-1",
+    "href": "slides/09-class-glm.html#maximum-likelihood-estimation-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Maximum Likelihood Estimation",
+    "text": "Maximum Likelihood Estimation\n\nWe can use Newton’s method that needs the gradient and Hessian matrix.\n\n\\[\\boldsymbol \\beta^{\\text{new}} = \\boldsymbol \\beta^{\\text{old}} - \\left[ \\frac{\\partial ^2 \\ell(\\boldsymbol \\beta)}{\\partial \\boldsymbol \\beta\\partial \\boldsymbol \\beta'}\\right] ^{-1}\\frac{\\partial \\ell(\\boldsymbol \\beta)}{\\partial \\boldsymbol \\beta}\\]\n\n\nSimply use optim()\n\n\n\n\n\n\nx <- as.matrix(cbind(\"intercept\" = 1, Default$balance))\ny <- as.matrix(as.numeric(Default$default) - 1)\nbeta <- rep(0, ncol(x))  ## start with 0\n\noptim(beta, fn = my_loglik, gr = my_gradient, method = \"BFGS\", \n      x = x, y = y, \n      control = list(\"fnscale\" = -1))$par # \"fnscale\" = -1 for maximization\n\n[1] -10.6454   0.0055"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#evaluation",
+    "href": "slides/09-class-glm.html#evaluation",
+    "title": "Generalized Linear Models \n",
+    "section": "Evaluation1\n",
+    "text": "Evaluation1\n\n\nConfusion Matrix\n\n\n\n\n\n\n\n\n\nTrue 0\nTrue 1\n\n\n\nPredict 0\nTrue Negative (TN)\nFalse Negative (FN)\n\n\nPredict 1\nFalse Positive (FP)\nTrue Positive (TP)\n\n\n\n\nSensitivity (True Positive Rate) \\(= P( \\text{predict 1} \\mid \\text{true 1}) = \\frac{TP}{TP+FN}\\)\nSpecificity (True Negative Rate) \\(= P( \\text{predict 0} \\mid \\text{true 0}) = \\frac{TN}{FP+TN}\\)\nAccuracy \\(= \\frac{TP + TN}{TP+FN+FP+TN} = \\frac{1}{m}\\sum_{j=1}^mI(y_j = \\hat{y}_j)\\), where \\(y_j\\)s are true test labels and \\(\\hat{y}_j\\)s are their corresponding predicted label.\n\n\nA good classifier is one which the test accuracy rate is highest, or test error rate \\(\\frac{1}{m}\\sum_{j=1}^mI(y_j \\ne \\hat{y}_j)\\) is smallest.\n\n\nMore on Wiki page."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#confusion-matrix",
+    "href": "slides/09-class-glm.html#confusion-matrix",
+    "title": "Generalized Linear Models \n",
+    "section": "Confusion Matrix",
+    "text": "Confusion Matrix\n\npred_prob <- predict(logit_fit, type = \"response\")\ntable(pred_prob > 0.5, Default$default)\n\n       \n          No  Yes\n  FALSE 9625  233\n  TRUE    42  100\n\n\n\n\nPackages:\n\n\ncaret (Classification And REgression Training)\n\nyardstick of tidymodels\n\n\n\n\n\ncaret::confusionMatrix()\nyardstick::conf_mat()"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#receiver-operating-characteristic-roc-curve",
+    "href": "slides/09-class-glm.html#receiver-operating-characteristic-roc-curve",
+    "title": "Generalized Linear Models \n",
+    "section": "Receiver Operating Characteristic (ROC) Curve",
+    "text": "Receiver Operating Characteristic (ROC) Curve\n\nThe ROC curve plots True Positive Rate (Sensitivity) vs. False Positive Rate (1 - Specificity)\nPackages: ROCR, pROC, yardstick::roc_curve()\n\n\n\n\nlibrary(ROCR)\n\n# create an object of class prediction \npred <- ROCR::prediction(\n    predictions = pred_prob, \n    labels = Default$default)\n\n# calculates the ROC curve\nroc <- ROCR::performance(\n    prediction.obj = pred, \n    measure = \"tpr\",\n    x.measure = \"fpr\")\n\n\n\nplot(roc, colorize = TRUE, lwd = 3)"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#area-under-curve-auc",
+    "href": "slides/09-class-glm.html#area-under-curve-auc",
+    "title": "Generalized Linear Models \n",
+    "section": "Area Under Curve (AUC)",
+    "text": "Area Under Curve (AUC)\nFind the area under the curve:\n\n\n\n## object of class 'performance'\nauc <- ROCR::performance(\n    prediction.obj = pred, \n    measure = \"auc\")\nauc@y.values\n\n[[1]]\n[1] 0.948"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#threshold-0.5-issue",
+    "href": "slides/09-class-glm.html#threshold-0.5-issue",
+    "title": "Generalized Linear Models \n",
+    "section": "Threshold 0.5 Issue",
+    "text": "Threshold 0.5 Issue\n\nThreshold 0.5 may be inappropriate if\n\nimbalanced data or skewed class distribution in training\nthe cost of one type of misclassification is more important than another."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#optimal-threshold",
+    "href": "slides/09-class-glm.html#optimal-threshold",
+    "title": "Generalized Linear Models \n",
+    "section": "Optimal Threshold",
+    "text": "Optimal Threshold\nFrom the training set, choose the cut-off that maximizes\n\nG-Mean \\(= \\sqrt{\\text{TPR} * \\text{TNR}}\\) (geometric mean of TPR and TNR)\nYouden’s J index \\(= \\text{TPR} + \\text{TNR} - 1\\) (the distance to the 45 degree identity line)\n\nthat minimizes\n\\(\\sqrt{(1 - \\text{TPR})^2 + (1 - \\text{TNR})^2}\\) (the distance to the optimal point)"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#optimal-threshold-1",
+    "href": "slides/09-class-glm.html#optimal-threshold-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Optimal Threshold",
+    "text": "Optimal Threshold\nWith Youden’s J index, the optimal threshold is \\(3.18\\%\\).\n\n\n\n\n\nThe predicted probabilities are not calibrated, e.g. those predicted by an SVM or decision tree.\nThe metric used to train the model is different from the metric used to evaluate a final model.\nThe class distribution is severely skewed.\nThe cost of one type of misclassification is more important than another type of misclassification.\nLearning from Imbalanced Data Sets 1st ed. 2018 Edition\nhttps://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/ The index is represented graphically as the height above the chance line, and it is also equivalent to the area under the curve subtended by a single operating point. https://web.expasy.org/pROC/files/pROC_1.7.2_R_manual.pdf"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-logistic-regression-1",
+    "href": "slides/09-class-glm.html#multinomial-logistic-regression-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Logistic Regression",
+    "text": "Multinomial Logistic Regression\n\nWhen classifying \\(K > 2\\) categories, we can consider multinomial logistic regression1.\nThe response should be nominal. If \\(Y_i\\) is ordinal, we should consider the ordinal regression.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSometimes it is known as multiclass logistic regression."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-link",
+    "href": "slides/09-class-glm.html#multinomial-link",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Link",
+    "text": "Multinomial Link\n\nFirst select a single class to serve as the baseline, the \\(K\\)th class for example.1\n\n\n\n\\[Pr(Y = k \\mid {\\bf x}) = \\dfrac{e^{\\beta_{k0}+\\beta_{k1}x_1 + \\cdots + \\beta_{kp}x_p}}{ \\sum_{l=1}^{K}e^{\\beta_{l0}+\\beta_{l1}x_1 + \\cdots + \\beta_{lp}x_p}}\\] for \\(k = 1, 2, \\dots, K-1\\), and \\[Pr(Y = K \\mid {\\bf x}) = \\dfrac{1}{ \\sum_{l=1}^{K}e^{\\beta_{l0}+\\beta_{l1}x_1 + \\cdots + \\beta_{lp}x_p}}.\\]\n\n\n\nFor \\(k = 1, \\dots, K-1\\), \\[\\log\\left( \\frac{Pr(Y = k \\mid \\mathbf{x})}{Pr(Y = K \\mid \\mathbf{x})} \\right) = \\beta_{k0}+\\beta_{k1}x_1 + \\cdots + \\beta_{kp}x_p.\\]\n\n\nThe coefficient estimates will differ if a different baseline is used. But the fitted values, predictions, log odds between any pair of classes remain the same."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-link-1",
+    "href": "slides/09-class-glm.html#multinomial-link-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Link",
+    "text": "Multinomial Link\n\nFirst select a single class to serve as the baseline, the \\(K\\)th class for example.1\n\\(\\pi_{ik} = Pr(Y_i = k \\mid {\\bf x}_i)\\): the probability that the \\(i\\)-th response falls in the \\(k\\)-th category.\n\\(\\sum_{k = 1}^K \\pi_{ik} = 1\\) for each observation \\(i\\).\n\n\n\nFor \\(k = 1, \\dots, K-1\\), the link \\(\\eta_{ik} = \\log\\left( \\frac{\\pi_{ik}}{\\pi_{iK}}\\right) = \\beta_{k0}+\\beta_{k1}x_1 + \\cdots + \\beta_{kp}x_p = {\\bf x}_i'\\boldsymbol \\beta_k\\), where \\(\\boldsymbol \\beta_k = (\\beta_{k0}, \\beta_{k1}, \\dots, \\beta_{kp})'\\)\n\n\n\nWhat is the value of \\(\\eta_{iK}\\)?\n\n\n\nFor \\(k = 1, \\dots, K\\),\n\\[\\pi_{ik} = \\dfrac{e^{\\eta_{ik}}}{\\sum_{l=1}^{K}e^{\\eta_{il}}};  \\left(\\pi_{iK} = \\dfrac{1}{\\sum_{l=1}^{K}e^{\\eta_{il}}} \\right)\\]\n\nThe coefficient estimates will differ if a different baseline is used. But the fitted values, predictions, log odds between any pair of classes remain the same."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-data-multino_data",
+    "href": "slides/09-class-glm.html#multinomial-data-multino_data",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Data multino_data\n",
+    "text": "Multinomial Data multino_data\n\n\n\nRows: 200\nColumns: 3\n$ prog  <fct> vocation, general, vocation, vocation, vocation, general, vocati…\n$ ses   <fct> low, middle, high, low, middle, high, middle, middle, middle, mi…\n$ write <dbl> 35, 33, 39, 37, 31, 36, 36, 31, 41, 37, 44, 33, 31, 44, 35, 44, …\n\n\n\nResponse:\n\n\nprog (program type: general, academic, vocation)\n\n\nPredictors:\n\n\nses (social economic status: low, middle, high)\n\nwrite (writing score)"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-logit---variable-association",
+    "href": "slides/09-class-glm.html#multinomial-logit---variable-association",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Logit - Variable Association",
+    "text": "Multinomial Logit - Variable Association\nProgram type is affected by social economic status\n\n\n\n        prog\nses      general academic vocation\n  low         16       19       12\n  middle      20       44       31\n  high         9       42        7\n\n\n\n\nand writing score\n\n\n\n            M   SD\ngeneral  51.3 9.40\nacademic 56.3 7.94\nvocation 46.8 9.32\n\n\n\nThe level (coding order) of prog is\n\n\n\n[1] \"general\"  \"academic\" \"vocation\""
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-logit---setting-baseline",
+    "href": "slides/09-class-glm.html#multinomial-logit---setting-baseline",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Logit - Setting Baseline",
+    "text": "Multinomial Logit - Setting Baseline\n\nmultino_data$prog2 <- relevel(multino_data$prog, ref = \"academic\")\nlevels(multino_data$prog2)\n\n[1] \"academic\" \"general\"  \"vocation\"\n\n\n\n\n\\(K = 3\\) (academic = 1, general = 2, vocation = 3)\nFor ses, low = 1, middle = 2, high = 3\n\n\n\n\\[\\log \\left( \\frac{Pr(prog = general)}{Pr(prog = academic)}\\right) = b_{10} + b_{11}(ses = 2) + b_{12}(ses = 3) + b_{13}write\\]\n\\[\\log \\left( \\frac{Pr(prog = vocation)}{Pr(prog = academic)}\\right) = b_{20} + b_{21}(ses = 2) + b_{22}(ses = 3) + b_{23}write\\]\n\n\n\\(b_{13}\\): All others held constant, the amount changed in the log odds of being in general vs. academic program as write increases one unit.\n\\(b_{21}\\) All others held constant, the amount changed in the log odds of being in vocation vs. academic program if moving from ses = \"low\" to ses = \"middle\".\n\nset “academic” as the baseline category factor(multino_data$prog, levels = c(“general”, “vocation”, “academic”)\nb13 A one-unit increase in the variable write is associated with the decrease in the log odds of being in general program vs. academic program in the amount of .058 . b23 A one-unit increase in the variable write is associated with the decrease in the log odds of being in vocation program vs. academic program. in the amount of .1136 . b12 The log odds of being in general program vs. in academic program will decrease by 1.163 if moving from ses=“low” to ses=“high”. b11 The log odds of being in general program vs. in academic program will decrease by 0.533 if moving from ses=“low”to ses=“middle”, although this coefficient is not significant. b22 The log odds of being in vocation program vs. in academic program will decrease by 0.983 if moving from ses=“low” to ses=“high”. b21 The log odds of being in vocation program vs. in academic program will increase by 0.291 if moving from ses=“low” to ses=“middle”, although this coefficient is not significant."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-logit---nnetmultinom",
+    "href": "slides/09-class-glm.html#multinomial-logit---nnetmultinom",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Logit - nnet::multinom()\n",
+    "text": "Multinomial Logit - nnet::multinom()\n\n\nmultino_fit <- nnet::multinom(prog2 ~ ses + write, \n                              data = multino_data)\n\n# weights:  15 (8 variable)\ninitial  value 219.722458 \niter  10 value 179.982880\nfinal  value 179.981726 \nconverged\n\nsumm <- summary(multino_fit)\nsumm$coefficients\n\n         (Intercept) sesmiddle seshigh   write\ngeneral         2.85    -0.533  -1.163 -0.0579\nvocation        5.22     0.291  -0.983 -0.1136"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-logit---estimated-probability",
+    "href": "slides/09-class-glm.html#multinomial-logit---estimated-probability",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Logit - Estimated Probability",
+    "text": "Multinomial Logit - Estimated Probability\n\nhead(fitted(multino_fit))\n\n  academic general vocation\n1    0.148   0.338    0.513\n2    0.120   0.181    0.699\n3    0.419   0.237    0.345\n4    0.173   0.351    0.476\n5    0.100   0.169    0.731\n6    0.353   0.238    0.409\n\n\n\nHold write at its mean and examine the predicted probabilities for each level of ses.\n\n\ndses <- data.frame(ses = c(\"low\", \"middle\", \"high\"), \n                   write = mean(multino_data$write))\npredict(multino_fit, newdata = dses, type = \"probs\")\n\n  academic general vocation\n1    0.440   0.358    0.202\n2    0.478   0.228    0.294\n3    0.701   0.178    0.121"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#multinomial-logit---probability-curve",
+    "href": "slides/09-class-glm.html#multinomial-logit---probability-curve",
+    "title": "Generalized Linear Models \n",
+    "section": "Multinomial Logit - Probability Curve",
+    "text": "Multinomial Logit - Probability Curve"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#softmax-coding",
+    "href": "slides/09-class-glm.html#softmax-coding",
+    "title": "Generalized Linear Models \n",
+    "section": "Softmax Coding1\n",
+    "text": "Softmax Coding1\n\n\nTreat all \\(K\\) classes symmetrically,\n\n\\[\\pi_{ik} = Pr(Y_i = k \\mid {\\bf x}) = \\dfrac{e^{\\beta_{k0}+\\beta_{k1}x_{i1} + \\cdots + \\beta_{kp}x_{ip}}}{ \\sum_{l=1}^{K}e^{\\beta_{l0}+\\beta_{l1}x_{i1} + \\cdots + \\beta_{lp}x_{ip}}}; \\quad \\pi_{iK} \\ne \\dfrac{1}{ \\sum_{l=1}^{K}e^{\\beta_{l0}+\\beta_{l1}x_{i1} + \\cdots + \\beta_{lp}x_{ip}}}\\]\nFor any classes \\(k\\) and \\(k' \\in\\{1, 2, \\dots, K \\}\\), \\[\\eta_{ikk'} = \\log\\left( \\frac{\\pi_{ik}}{\\pi_{ik'}} \\right) = (\\beta_{k0} - \\beta_{k'0}) + (\\beta_{k1} - \\beta_{k'1}) x_{i1} + \\cdots + (\\beta_{kp} - \\beta_{k'p})x_{ip}\\]\n\n\nglmnet() uses the softmax coding.\n\n\nEstimate coefficients for all \\(K\\) classes.\nThe fitted values, predictions, log odds between any pair of classes, and other key model outputs remain the same."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#generalized-linear-models-in-greater-generality",
+    "href": "slides/09-class-glm.html#generalized-linear-models-in-greater-generality",
+    "title": "Generalized Linear Models \n",
+    "section": "\nGeneralized Linear Models in Greater Generality",
+    "text": "Generalized Linear Models in Greater Generality\n\n\nConditional on \\(\\mathbf{X}\\), the response \\(Y\\) belongs to a certain family of distribution.1\n\nLinear regression: Gaussian\nLogistic regression: Bernoulli, binomial, multinomial\n\n\n\n\n\n\n\nModel the mean of \\(Y\\) as a function of the predictors.\n\nLinear regression: \\(E(Y \\mid \\mathbf{x}) = \\mathbf{x}'\\boldsymbol \\beta\\)\n\nLogistic regression: \\(E(Y \\mid \\mathbf{x}) = P(Y=1 \\mid \\mathbf{x}) = \\pi(\\mathbf{x}) = \\frac{e^{\\mathbf{x}'\\boldsymbol \\beta}}{1 + e^{\\mathbf{x}'\\boldsymbol \\beta}}\\)\n\n\n\n\n\n\n\n\nIn general, with \\(E(Y \\mid \\mathbf{x}) = \\mu\\), the link function \\(\\eta(\\mu) = {\\bf x}'\\boldsymbol \\beta\\) transforms \\(\\mu\\) so that the transformed mean is a linear function of predictors!\n\nLinear regression: \\(\\eta(\\mu) = \\mu\\)\n\nLogistic regression: \\(\\eta(\\mu) = \\log(\\mu/(1-\\mu))\\)\n\n\n\n\nAny regression approach that follows this general recipe is known as a generalized linear model (GLM).\n\n\nUsually the distribution of \\(Y\\) belongs to the exponential family."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#link-function",
+    "href": "slides/09-class-glm.html#link-function",
+    "title": "Generalized Linear Models \n",
+    "section": "Link Function",
+    "text": "Link Function\n\nLogistic regression uses the logit function \\(\\eta = g(\\pi) = \\ln\\left( \\dfrac{\\pi}{1-\\pi}\\right)\\) as the link function.\n\\(\\pi = \\dfrac{1}{1 + e^{-\\eta}} \\in (0, 1)\\) is the CDF of the logistic distribution, whose PDF is of the from \\[f(\\eta) = \\frac{e^{-\\eta}}{(1 + e^{-\\eta})^2}, \\quad \\eta \\in(-\\infty, \\infty)\\]\nCould use a different link function and hence CDF to describe the probability (S-shaped) curve."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#probit-and-complementary-log-log-cloglog-link",
+    "href": "slides/09-class-glm.html#probit-and-complementary-log-log-cloglog-link",
+    "title": "Generalized Linear Models \n",
+    "section": "Probit and Complementary log-log (cloglog) Link",
+    "text": "Probit and Complementary log-log (cloglog) Link\n\nIf \\(\\pi = \\Phi(\\eta) \\in (0, 1)\\), \\(\\Phi(\\cdot)\\) is the CDF of standard normal distribution, the link function \\[\\eta = g(\\pi) = \\Phi^{-1}(\\pi)\\] is called probit, and the model is called probit model or probit regression.\n\n\n\nAnother popular link function is the complementary log-log link: \\[\\eta = g(\\pi) = \\log\\left( -\\log(1-\\pi)\\right)\\] where \\(\\pi = 1 - \\exp(-\\exp(\\eta))\\) is the CDF of the so called Gumbel distribution.1\n\n\n\nThe complementary log-log link is actually defined by a negative Gumbel random variable. No worries about why it is used at this moment."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#link-function-summary",
+    "href": "slides/09-class-glm.html#link-function-summary",
+    "title": "Generalized Linear Models \n",
+    "section": "Link Function Summary",
+    "text": "Link Function Summary\n\n\n\n\n\n\n\n\nDistribution\nLink Function \\(\\eta = g(\\pi)\\)\n\nCDF \\(\\pi = g^{-1}(\\eta)\\)\n\nPDF\n\n\n\nLogistic\nlogit: \\(\\ln\\left( \\dfrac{\\pi}{1-\\pi}\\right)\\)\n\n\\(\\dfrac{1}{1 + e^{-\\eta}}\\)\n\\(\\dfrac{e^{-\\eta}}{(1 + e^{-\\eta})^2}\\)\n\n\nNormal\nprobit: \\(\\Phi^{-1}(\\pi)\\)\n\n\\(\\Phi(\\eta)\\)\n\\(\\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{\\eta^2}{2}}\\)\n\n\nGumbel\ncloglog: \\(\\log\\left( -\\log(1-\\pi)\\right)\\)\n\n\\(1 - \\exp(-\\exp(\\eta))\\)\n\\(e^{-(\\eta + e ^ {-\\eta})}\\)\n\n\n\n\nAny transformation that maps probabilities into the real line could be used to produce a GLM for binary classification, as long as the transformation is one-to-one continuous and differentiable.\n\\[\\pi = F(\\eta)\\] \\[\\eta = F^{-1}(\\pi)\\]"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#link-function-summary-1",
+    "href": "slides/09-class-glm.html#link-function-summary-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Link Function Summary",
+    "text": "Link Function Summary\n\n\nName\nLink Function \\(\\eta = g(\\pi)\\)\n\n\n\n\nlogit\n\\(\\ln\\left( \\dfrac{\\pi}{1-\\pi}\\right)\\)\n\n\nprobit\n\\(\\Phi^{-1}(\\pi)\\)\n\n\ncloglog\n\\(\\log\\left( -\\log(1-\\pi)\\right)\\)\n\n\n\n\nLogit and probit links produce similar curve. For simple regression, both estimate \\(\\pi = 1/2\\) when \\(x = -\\beta_0/\\beta_1\\) and exhibit symmetric behavior.\nThe complementary log-log link is not symmetric."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#pdf",
+    "href": "slides/09-class-glm.html#pdf",
+    "title": "Generalized Linear Models \n",
+    "section": "PDF",
+    "text": "PDF\n\nNormal and logistic density are symmetric, while Gumbel is right skewed."
+  },
+  {
+    "objectID": "slides/09-class-glm.html#probability-curve-1",
+    "href": "slides/09-class-glm.html#probability-curve-1",
+    "title": "Generalized Linear Models \n",
+    "section": "Probability Curve",
+    "text": "Probability Curve"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#probit-and-complementary-log-log-links",
+    "href": "slides/09-class-glm.html#probit-and-complementary-log-log-links",
+    "title": "Generalized Linear Models \n",
+    "section": "Probit and Complementary log-log Links",
+    "text": "Probit and Complementary log-log Links\n\nprobit_fit <- glm(default ~ balance, data = Default, family = binomial(link = \"probit\"))\ncloglog_fit <- glm(default ~ balance, data = Default, family = binomial(link = \"cloglog\"))"
+  },
+  {
+    "objectID": "slides/09-class-glm.html#other-topics",
+    "href": "slides/09-class-glm.html#other-topics",
+    "title": "Generalized Linear Models \n",
+    "section": "Other Topics",
+    "text": "Other Topics\n\nRepeated measures and binomial logistic regression (MSSC 5780)\nRegression diagnostics for binary data\nPenalized logistic regression\nExponential family\nPoisson regression\n\nhttps://grodri.github.io/glms/\nhttps://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/\nhttps://glmnet.stanford.edu/articles/glmnet.html\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "slides/05-ridge-cv.html#when-ordinary-least-squares-ols-doesnt-work-well-collinearity",
