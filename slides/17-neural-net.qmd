@@ -1,0 +1,444 @@
+---
+title: "Artificial Neural Networks `r emo::ji('raised_hands')`"
+subtitle: "MSSC 6250 Statistical Machine Learning"
+author: "Dr. Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <br> Marquette University"
+# date: "`r format(Sys.time(), '%B %d %Y')`"
+# macros: _macros.tex # import a list of TeX/LaTeX definitions
+format: 
+  revealjs:
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    # include-in-header:
+    #     - "macros.tex"
+    highlight-style: github
+    code-block-bg: true
+    self-contained: false
+    slide-number: c/t
+    incremental: false
+    width: 1800
+    height: 1000
+    margin: 0.05
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
+    footer: "[mssc6250-s24.github.io/website](https://mssc6250-s24.github.io/website/)"
+    theme: ["simple", "styles.scss"]
+    echo: false
+    multiplex: true
+    code-link: true
+    fig-cap-location: bottom
+    fig-align: center
+    transition: none ## fade slide convex concave zoom
+    title-slide-attributes:
+      data-background-color: "#447099"
+      # data-background-image: images/paper-texture.jpg
+      # data-background-size: cover
+      # data-background-color: "#698ED5"
+editor: source
+execute:
+  freeze: true
+  echo: false
+---
+
+
+# {visibility="hidden"}
+
+
+
+
+\def\cD{{\cal D}}
+\def\cL{{\cal L}}
+\def\cX{{\cal X}}
+\def\cF{{\cal F}}
+\def\cH{{\cal H}}
+\def\bA{\mathbf{A}}
+\def\bB{\mathbf{B}}
+\def\bX{\mathbf{X}}
+\def\bH{\mathbf{H}}
+\def\bI{\mathbf{I}}
+\def\bU{\mathbf{U}}
+\def\bD{\mathbf{D}}
+\def\bV{\mathbf{V}}
+\def\bS{\mathbf{S}}
+\def\bW{\mathbf{W}}
+\def\bZ{\mathbf{Z}}
+\def\bK{\mathbf{K}}
+\def\bx{\mathbf{x}}
+\def\by{\mathbf{y}}
+\def\bs{\mathbf{s}}
+\def\br{\mathbf{r}}
+\def\bu{\mathbf{u}}
+\def\be{\mathbf{e}}
+\def\bv{\mathbf{v}}
+\def\bp{\mathbf{p}}
+\def\bw{\mathbf{w}}
+\def\bz{\mathbf{z}}
+\def\bzero{\mathbf{0}}
+\def\balpha{\boldsymbol \alpha}
+\def\bbeta{\boldsymbol \beta}
+\def\btheta{\boldsymbol \theta}
+\def\bSigma{\boldsymbol \Sigma}
+\def\bxi{\boldsymbol \xi}
+\def\bmu{\boldsymbol \mu}
+\def\bep{\boldsymbol \epsilon}
+\def\T{\text{T}}
+\def\Trace{\text{Trace}}
+\def\Cov{\text{Cov}}
+\def\Corr{\text{Corr}}
+\def\Var{\text{Var}}
+\def\E{\text{E}}
+\def\pr{\text{pr}}
+\def\Prob{\text{P}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+
+```{r}
+#| label: setup
+#| include: false
+#| eval: true
+library(countdown)
+library(knitr)
+library(gt)
+library(gtExtras)
+library(ggplot2)
+library(ISLR2)
+library(genridge)
+library(glmnet)
+library(gam)
+library(splines)
+# library(ElemStatLearn)
+knitr::opts_chunk$set(
+    fig.asp = 0.618,
+    fig.align = "center",
+    out.width = "100%",
+    fig.retina = 10,
+    fig.path = "images/17-neural-net/",
+    message = FALSE,
+    global.par = TRUE
+)
+options(
+  htmltools.dir.version = FALSE,
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  tibble.width = 80,
+  width = 80,
+  digits = 3
+  )
+hook_output <- knitr::knit_hooks$get("output")
+knitr::knit_hooks$set(output = function(x, options) {
+  lines <- options$output.lines
+  if (is.null(lines)) {
+    return(hook_output(x, options))  # pass to default hook
+  }
+  x <- unlist(strsplit(x, "\n"))
+  more <- "..."
+  if (length(lines)==1) {        # first n lines
+    if (length(x) > lines) {
+      # truncate the output, but add ....
+      x <- c(head(x, lines), more)
+    }
+  } else {
+    x <- c(more, x[lines], more)
+  }
+  # paste these lines together
+  x <- paste(c(x, ""), collapse = "\n")
+  hook_output(x, options)
+})
+
+theme_set(theme_minimal(base_size = 20))
+```
+
+
+
+
+
+# Feed-forward Neural Networks 
+
+<!-- {background-color="#447099"} -->
+
+
+## Neural Networks
+- An (artifical) **neural network** is a machine learning model inspired by the biological neural networks that constitute animal brains.
+
+::: columns
+::: {.column width="70%"}
+![Source: Wiki](https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png){width="1000"}
+:::
+
+:::{.column width="30%"}
+![](https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg){width="600"}
+:::
+
+:::
+
+
+## Deep Learning
+- A neural network takes an input vector of $p$ variables $X = (X_1, X_2, \dots, X_p)$ and builds a nonlinear function $f(X)$ to predict the response $Y$.
+
+- A neural network with several hidden layers is called a deep neural network, or **deep learning**.
+
+![Source: ISL Ch 10](./images/17-neural-net/deeplearning.png){fig-align="center" width="1600"}
+
+
+##
+
+<!-- <center> -->
+<!-- [<img src="neural-network-banner.gif" height="250"/>](http://brainstormingbox.org/a-beginners-guide-to-neural-networks/){target='_blank'} -->
+<!-- </center> -->
+
+```{r}
+#| out-width: "90%"
+#| fig-cap: "Source: http://brainstormingbox.org/a-beginners-guide-to-neural-networks/"
+knitr::include_graphics("http://brainstormingbox.org/wp-content/uploads/2020/08/nural-network-banner.gif")
+```
+
+
+
+
+## Single (Hidden) Layer Neural Network with One Output
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Starts from inputs $X$, for each **hidden neuron** $A_k$, $k = 1, \dots, K$,
+
+- $A_k(X) = g(w_{k0} + w_{k1}X_1 + \cdots + w_{kp}X_p)$
+
+- $f(X) = g_f(\beta_0 + \beta_1A_1(X) + \cdots + \beta_KA_K(X))$
+
+- $g_k(z)$ and $g_f(z)$ are (non)linear **activation functions** that are specified in advance.
+
+- $\beta_0, \dots, \beta_K$ and $w_{10}, \dots, w_{1p}, \dots, w_{K0}, \dots, w_{Kp}$ are parameters to be estimated.
+
+
+
+:::
+
+::: {.column width="40%"}
+
+- $p = 4, K = 5$
+```{r}
+#| fig-cap: "Source: ISL Fig. 10.1"
+knitr::include_graphics("./images/17-neural-net/10_1.png")
+```
+
+:::
+
+::::
+
+
+::: notes
+We can think of each Ak as a different transformation hk(X) of the original function
+features, much like the basis functions
+:::
+
+
+
+## Linear Regression as Neural Network
+
+:::{.question}
+
+Can we represent a linear regression model as a neural network?
+
+:::
+
+
+. . .
+
+- YES! Linear regression is a single layer neural network with 
+
+  + identity activation $g(z) = z$ and $g_f(z) = z$
+  + $p = K$
+  + $w_{kk} = 1$ and $w_{kj} = 0$ for all $k \ne j$
+
+
+
+
+::: notes
+https://ml-explained.com/blog/kernel-pca-explained
+:::
+
+## Logistic Regression as Neural Network
+
+:::{.question}
+
+Can we represent a binary logistic regression model as a neural network?
+
+:::
+
+
+. . .
+
+- YES! Binary logistic regression is a single layer neural network with 
+
+  + identity activation $g(z) = z$
+  + **sigmoid activation** $g_f(z) = \frac{e^{z}}{1+e^z}$
+  + $p = K$
+  + $w_{kk} = 1$ and $w_{kj} = 0$ for all $k \ne j$
+  
+  
+## Activation Functions
+
+Activation functions are usually continuous for optimization purpose.
+
+* sigmoid: $\frac{1}{1+e^{-z}} = \frac{e^z}{1+e^z}$
+* hyperbolic tangent: $\frac{e^z - e^{-z}}{e^z + e^{-z}}$
+* rectified linear unit (ReLU): $\max(0, z)$; $\ln(1 + e^z)$ (Soft version)
+* Gaussian-error linear unit (GELU): $z \Phi(z)$, where $\Phi(\cdot)$ is the $N(0, 1)$ CDF
+
+<!-- ## Convolutional Neural Networks -->
+
+## 
+```{r}
+  u = seq(-4, 4, 0.01)
+  # step = (u>0)
+  sigmoid = 1/(1+exp(-u))
+  tanh = (exp(u) - exp(-u)) / (exp(u) + exp(-u))
+  ReLU = pmax(0, u)
+  ReLUSoft = log(1 + exp(u))
+  GELU = u * pnorm(u)
+  par(mar = c(4, 2.5, 0, 0))
+  plot(u, sigmoid, ylim = c(-1.1, 2.1), type = "l", col = 2, lwd = 2, las = 1, ylab = "")
+  # lines(u, step, col = 1, lwd = 2)
+  lines(u, tanh, col = 3, lwd = 2)
+  lines(u, ReLU, col = 4, lwd = 2)
+  lines(u, ReLUSoft, col = 5, lwd = 2)
+  lines(u, GELU, col = 6, lwd = 2)
+  legend("topleft", c("sigmoid", "tanh", "ReLU",  "ReLUSoft", "GELU"), 
+         cex = 1.5, col = c(2, 3, 4, 5, 6), lwd = 2, bty = "n")
+```
+
+
+## Choose a Activation Function
+
+- The activation function used in hidden layers is typically chosen based on the type of neural network architecture.
+
+  + Multilayer Perceptron (MLP): ReLU (leaky ReLU)
+  + Convolutional Neural Network: ReLU
+  + Recurrent Neural Network: Tanh and/or Sigmoid
+  
+- never use softmax and identity functions in the hidden layers.
+
+
+- For output activation function,
+
+  + Regression: One node, Linear
+  + Binary Classification: One node, Sigmoid
+  + Multiclass Classification: One node per class, Softmax
+  + Multilabel Classification: One node per class, Sigmoid
+
+::: notes
+Finally, we make an remark that a single hidden layer neural network is sufficient for approximating any continuous function
+- https://machinelearningmastery.com/choose-an-activation-function-for-deep-learning/
+- https://towardsdatascience.com/how-to-choose-the-right-activation-function-for-neural-networks-3941ff0e6f9c
+:::
+
+
+## When to Use Deep Learning
+
+- The signal to noise ratio is high.
+
+- The sample size is huge.
+
+- Interpretability of the model is not a priority.
+
+. . .
+
+- When possible, try the simpler models as well, and then make a choice
+based on the performance/complexity tradeoff.
+
+- Occam’s razor principle: when faced with several methods that give roughly equivalent performance, pick the simplest.
+
+
+## Fitting Neural Networks
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| fig-cap: "Source: ISL Fig. 10.1"
+knitr::include_graphics("./images/17-neural-net/10_1.png")
+```
+:::
+
+::: {.column width="50%"}
+
+$$\min_{\bbeta, \{\bw\}_1^K} \frac{1}{2}\sum_{i=1}^n\left(y_i - f(x_i) \right)^2,$$ where $$f(x_i) = \beta_0 + \sum_{k=1}^K\beta_Kg\left( w_{k0} + \sum_{j=1}^pw_{kj}x_{xj}\right).$$
+
+- This problem is difficult because the objective is non-convex: there are multiple solutions.
+
+:::
+
+::::
+
+
+## Gradient Descent
+
+- For the objective function $R(\theta)$ and the parameter vector $\theta$ to be estimated, gradient descent keeps finding new parameter value that reduces the objective until the objective fails to decrease.
+
+- $\theta^{(t+1)} = \theta^{(t)} -\rho\nabla R(\theta^{(t)})$, where $\rho$ is the learning rate that is typically small like 0.001.
+
+
+- $\nabla R(\theta^{(t)}) = \left. \frac{\partial R(\theta)}{\partial \theta} \right  \rvert_{\theta = \theta^{(t)}}$
+
+
+## [Backpropagation](https://www.nature.com/articles/323533a0)
+
+::: {.midi}
+\begin{align}
+R(\theta) \overset{\triangle}{=} \sum_{i=1}^nR_i(\theta) =& \frac{1}{2}\sum_{i=1}^n \big(y_i - f_{\theta}(x_i)\big)^2\\
+=& \frac{1}{2} \sum_{i=1}^n \big(y_i - \beta_0 - \beta_1 g(w_1' x_i) - \cdots - \beta_K g(w_K' x_i) \big)^2 \\
+
+\end{align}
+:::
+. . .
+
+- Nothing but chain rule for differentiation:
+
+With $z_{ik} = w_k' x_i$,
+
+::: {.midi}
+$$\frac{\partial R_i(\theta)}{\partial \beta_{k}} = \frac{\partial R_i(\theta)}{\partial f_{\theta}(x_i)} \cdot \frac{\partial f_{\theta}(x_i)}{\partial \beta_{k}} =  {\color{red}{-\big( y_i - f_{\theta}(x_i)\big)}} \cdot g(z_{ik})$$
+:::
+
+::: {.midi}
+$$\frac{\partial R_i(\theta)}{w_{kj}} = \frac{\partial R_i(\theta)}{\partial f_{\theta}(x_i)} \cdot \frac{\partial f_{\theta}(x_i)}{\partial g(z_{ik})} \cdot \frac{\partial g(z_{ik})}{\partial z_{ik}} \cdot \frac{\partial z_{ik}}{\partial w_{kj}} =  {\color{red}{-\big( y_i - f_{\theta}(x_i)\big)}} \cdot \beta_k \cdot g'(z_{ik}) \cdot x_{ij}$$
+:::
+
+. . .
+
+- Reuse the red part in different layers of gradients to reduce computational burden.
+
+
+
+<!-- \begin{align} -->
+<!-- \frac{\partial R_i}{\partial \beta_{k}} =& \frac{\partial R_i}{\partial f_{\theta}} \frac{\partial f_{\theta}}{\partial \beta_{k}} = \color{red}{-\big( y_i - f_{\theta}(x_i)\big)} g(z_{ik}), \\ -->
+
+<!-- \quad \frac{\partial R_i}{w_{kj}} = \frac{\partial R_i}{\partial f_{\theta}}\frac{\partial f_{\theta}}{\partial g(z_{ik}} \frac{\partial g(z_{ik}}{\partial z_{ik} \frac{\partial z_{ik}{\partial w_{kj} &= \color{red}{\big( y_i - f_{\theta}(x_i)\big)} \beta_k g'(z_{ik}) x_{ij}. -->
+<!-- \end{align} -->
+
+
+
+
+
+## Other Topics
+
+- Stochastic Gradient Descent
+
+- Dropout Learning
+
+- Convolutional Neural Network (Spatial modeling)
+
+- Recurrent Neural Network (Temporal modeling)
+
+- Bayesian Deep Learning
+
+
+::: notes
+https://stackoverflow.com/questions/70977755/could-not-find-a-version-that-satisfies-the-requirement-tensorflow-python3-9-6
+https://developer.apple.com/metal/tensorflow-plugin/
+:::
