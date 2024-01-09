@@ -742,6 +742,356 @@
     "text": "Other Topics\n\n\nAlgorithms\n\nShooting algorithm (Fu 1998)\nLeast angle regression (LAR) (Efron et al. 2004)\nCoordinate descent (Friedman et al 2010) (used in glmnet)\n\n\n\n\n\n\nVariants\n\nAdaptive Lasso\nGroup Lasso\nBayesian Lasso, etc.\n\n\n\nLasso may suffer in the case where two variables are strongly correlated. The situation is similar to OLS, however, in Lasso, it would only select one out of the two, instead of letting both parameter estimates to be large. This is not preferred in some practical situations such as genetic studies because expressions of genes from the same pathway may have large correlation, but biologist want to identify all of them instead of just one. The Ridge penalty may help in this case because it naturally considers the correlation structure. The following simulation may show the effect. - The Lasso problem is convex, although it may not be strictly convex in β when p is large - The solution is a global minimum, but may not be the unique global one - The Lasso solution is unique under conditions of the covariance matrix\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
+    "objectID": "slides/15-pca.html#unsupervised-learning-1",
+    "href": "slides/15-pca.html#unsupervised-learning-1",
+    "title": "Dimension Reduction \n",
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\n\nSupervised Learning: response \\(Y\\) and features \\(X_1, X_2, \\dots, X_p\\) measured on \\(n\\) observations.\n\nUnsupervised Learning: only features \\(X_1, X_2, \\dots, X_p\\) measured on \\(n\\) observations.\n\nNot interested in prediction (no response to be predicted)\nDiscover any interesting pattern or relationships among these features.\n\n\n\n\n\nEstimate the density, covariance, graph (network), etc. of \\(\\mathbf{X}\\)\n\n\n\n\n\n\nDimension reduction for effective data visualization or extracting most important information those features contain.\n\nplot a bunch of points of \\(\\boldsymbol{x} = (x_1, x_2, \\dots, x_p)\\) in a 2-D scatter plot (manifold). (reduce dimension from \\(p\\) to 2)\n use 2 variables to explain most variations or represents high data density in the \\(p\\) variables \n\n\n\n\n\n\n\nClustering discovers unknown subgroups/clusters in data\n\nfind 3 sub-groups of people based on variables income, occupation, age, etc"
+  },
+  {
+    "objectID": "slides/15-pca.html#one-dimension-1d-number-line",
+    "href": "slides/15-pca.html#one-dimension-1d-number-line",
+    "title": "Dimension Reduction \n",
+    "section": "One-Dimension (1D) Number line",
+    "text": "One-Dimension (1D) Number line\n\n\n\n\n# A tibble: 50 × 1\n   English\n     <int>\n 1      41\n 2      65\n 3      55\n 4      94\n 5      66\n 6      85\n 7      44\n 8      44\n 9      67\n10      73\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s go back to your first grade. You remember that one-dimension equals a number line.\nNow suppose we have 50 English grades. The first 3 scores are 41, 65, and 55.\nWe can plot these values on the number line just like we did in the elementary school.\n1st student with score 41 it’s a dot at 41, 2nd student with score 65, it’s a dot at 65, and so on."
+  },
+  {
+    "objectID": "slides/15-pca.html#one-dimension-1d-number-line-uniform-students",
+    "href": "slides/15-pca.html#one-dimension-1d-number-line-uniform-students",
+    "title": "Dimension Reduction \n",
+    "section": "One-Dimension (1D) Number line: Uniform students",
+    "text": "One-Dimension (1D) Number line: Uniform students\n\n\n\n\n# A tibble: 50 × 1\n   English\n     <int>\n 1      41\n 2      65\n 3      55\n 4      94\n 5      66\n 6      85\n 7      44\n 8      44\n 9      67\n10      73\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf you plot all students scores, we might see something like this: an uniform distribution of English scores."
+  },
+  {
+    "objectID": "slides/15-pca.html#d-number-line-non-uniform-students",
+    "href": "slides/15-pca.html#d-number-line-non-uniform-students",
+    "title": "Dimension Reduction \n",
+    "section": "1D Number line: Non-uniform students",
+    "text": "1D Number line: Non-uniform students\n\n\n\n\n# A tibble: 50 × 1\n   English\n     <int>\n 1      77\n 2      78\n 3      81\n 4      78\n 5      52\n 6      62\n 7      47\n 8      58\n 9      43\n10      59\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOr we might get a non-uniform distribution of English scores. Some students obtain a very high grade, but some students are falling behind and get a very low grade."
+  },
+  {
+    "objectID": "slides/15-pca.html#two-dimensions-2d-x-y-scatter-plot-high-correlated",
+    "href": "slides/15-pca.html#two-dimensions-2d-x-y-scatter-plot-high-correlated",
+    "title": "Dimension Reduction \n",
+    "section": "Two-Dimensions (2D) X-Y Scatter plot: High Correlated",
+    "text": "Two-Dimensions (2D) X-Y Scatter plot: High Correlated\nEnglish and Math measure an overall academic performance.\n\n\n\n\n# A tibble: 50 × 2\n   English  Math\n     <int> <dbl>\n 1      41  33.2\n 2      65  63.6\n 3      55  44.6\n 4      94  95  \n 5      66  65.6\n 6      85  73.1\n 7      44  46.6\n 8      44  51  \n 9      67  69.4\n10      73  66.5\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNow let’s go to sixth grade when we learned about 2 dimensional graphs.\nNow we have two axes instead of one, and now we can plot data from two different subjects instead of just one.\nAdditional to English scores, here we also have Math scores of some students.\nAnd we all know how to map a English and math score pair to a point on a 2D plot.\nIf we put all students English and Math scores on the plot, we might see something like this that English and Math scores are positively correlated, meaning that a student having high English score tends to have high Math score too.\nThis might be due to the fact that English and Math measure an overall academic performance. A good student tends to have both high English and Math scores."
+  },
+  {
+    "objectID": "slides/15-pca.html#two-dimensions-2d-x-y-scatter-plot-no-correlated",
+    "href": "slides/15-pca.html#two-dimensions-2d-x-y-scatter-plot-no-correlated",
+    "title": "Dimension Reduction \n",
+    "section": "Two-Dimensions (2D) X-Y Scatter plot: No correlated",
+    "text": "Two-Dimensions (2D) X-Y Scatter plot: No correlated\nEnglish and Math measure different abilities.\n\n\n\n\n# A tibble: 50 × 2\n   English  Math\n     <int> <int>\n 1      41    27\n 2      65    47\n 3      55    32\n 4      94    44\n 5      66    20\n 6      85    30\n 7      44    16\n 8      44    72\n 9      67    86\n10      73    82\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOr we might see English and Math scores are not correlated, meaning that a high English score does not tell us anything about Math score, whether it is high or low.\nBecause English and Math might measure different abilities.\nEnglish measures verbal and communication skills and Math measures logic and quantitative skills"
+  },
+  {
+    "objectID": "slides/15-pca.html#three-dimensions-3d-x-y-z-scatter-plot",
+    "href": "slides/15-pca.html#three-dimensions-3d-x-y-z-scatter-plot",
+    "title": "Dimension Reduction \n",
+    "section": "Three-Dimensions (3D) X-Y-Z Scatter plot",
+    "text": "Three-Dimensions (3D) X-Y-Z Scatter plot\n\n\n\n\n# A tibble: 50 × 3\n   English  Math Biology\n     <int> <dbl>   <dbl>\n 1      41  33.2    39.2\n 2      65  63.6    61.6\n 3      55  44.6    41.6\n 4      94  95      92  \n 5      66  65.6    73.6\n 6      85  73.1    71.1\n 7      44  46.6    56.6\n 8      44  51      56  \n 9      67  69.4    79.4\n10      73  66.5    59.5\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOK. Now maybe in college, we started drawing 3D graph, having height, width and depth.\nWith 3 separate axes, we can now plot data from three different subjects.\nSo now we have three subjects, English, Math and Biology.\nWith the same logic as 2D plot, we put English score on X-axis, Math score on Y-axis, and biology score on Z-axis, then draw lines perpendicular to each axis to put the point in the 3D space.\nAnd this is our 3D scatter plot.\nSo, if we have one subject data, we can make a 1D graph.\nIf we have two subject data, we can make a 2D graph.\nIf we have three subject data, we can make a 3D graph."
+  },
+  {
+    "objectID": "slides/15-pca.html#four-dimension-4d-x-y-z--scatter-plot",
+    "href": "slides/15-pca.html#four-dimension-4d-x-y-z--scatter-plot",
+    "title": "Dimension Reduction \n",
+    "section": "Four-Dimension (4D) X-Y-Z-? Scatter plot",
+    "text": "Four-Dimension (4D) X-Y-Z-? Scatter plot\n\n\n\n\n# A tibble: 50 × 4\n   English  Math Biology History\n     <int> <dbl>   <dbl>   <dbl>\n 1      41  33.2    39.2      51\n 2      65  63.6    61.6      53\n 3      55  44.6    41.6      63\n 4      94  95      92        83\n 5      66  65.6    73.6      51\n 6      85  73.1    71.1      74\n 7      44  46.6    56.6      34\n 8      44  51      56        33\n 9      67  69.4    79.4      76\n10      73  66.5    59.5      74\n# ℹ 40 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBut what happens if we have data from 4 academic subjects?? here English, Math, Biology and History.\nWell we need 4D graph. The problem is You can’t draw a 4D plot on paper!\nWhat if a student has 20 different grades from 20 different courses?? We need a 20 dimensional graph?\nBut what is that?? There is no way we can draw that."
+  },
+  {
+    "objectID": "slides/15-pca.html#how-about-pair-plots",
+    "href": "slides/15-pca.html#how-about-pair-plots",
+    "title": "Dimension Reduction \n",
+    "section": "How about Pair Plots?",
+    "text": "How about Pair Plots?\n\n\nPlotting all 2-D scatter plots of all possible pairs might be a solution to check the relationship between variables, or exploratory data analysis.\nLike here we see basically any two variables or two subject scores are positively correlated."
+  },
+  {
+    "objectID": "slides/15-pca.html#tooooo-many-pair-plots",
+    "href": "slides/15-pca.html#tooooo-many-pair-plots",
+    "title": "Dimension Reduction \n",
+    "section": "Tooooo Many Pair Plots!",
+    "text": "Tooooo Many Pair Plots!\n\nIf we have \\(p\\) variables, there are \\({p \\choose 2} = p(p-1)/2\\) pairs.\nIf \\(p = 10\\), we have 45 such scatter plots to look at!\nIn practice, we may encounter over 100 variables!!\n\n\nBut still, there is a problem.\nIf you have \\(p\\) variables, you are gonna have \\({p \\choose 2} = p(p-1)/2\\) pairs.\nIf \\(p = 10\\), you have 45 such scatter plots to look at!\nNot to mention that in real data science work, you may encounter over 100 variables!!"
+  },
+  {
+    "objectID": "slides/15-pca.html#dimension-reduction",
+    "href": "slides/15-pca.html#dimension-reduction",
+    "title": "Dimension Reduction \n",
+    "section": "Dimension Reduction",
+    "text": "Dimension Reduction\n\nOne variable represents one dimension.\nWith many variables in the data, we live in a high dimensional world.\n\n\nGOAL:\n\nFind a low-dimensional (usually 2D) representation of the data that captures as much of the information all of those variables provide as possible.\nUse two created variables to represent all \\(p\\) variables, and make a scatter plot of the two created variables to learn what our observations look like as if they lived in the high dimensional space. \n\n\n\n\nWhy and when can we omit dimensions?\n\n\nSo in order to meaningfully represent the relationship of all variables, we need a technique, Dimension Reduction.\nIn mathematics, One variable represents one dimension, so with many variables in the data, we live in a high dimensional world.\nWe would like to find a low-dimensional (usually 2D) representation of the data that captures as much of the information all of those variables provide as possible.\nWe use two created variables to represent all \\(p\\) variables, and make a scatter plot of the two created variables to learn what our observations look like as if they lived in the high dimensional space.\nOf course, it’s not always a good idea to just use two variables to represent all \\(p\\) variables. Some information will be missing when we just use two variables to represent or explain all the relationships of \\(p\\) variables.\nBut sometimes, a low-dimensional representation looks very like a high dimensional space, and does not lose much information. In this situation, a low-dimensional representation is very useful.\nSo Let’s see why and when can we omit dimensions?"
+  },
+  {
+    "objectID": "slides/15-pca.html#variation-mostly-from-one-variable",
+    "href": "slides/15-pca.html#variation-mostly-from-one-variable",
+    "title": "Dimension Reduction \n",
+    "section": "Variation mostly from One Variable",
+    "text": "Variation mostly from One Variable\n\nAlmost all of the variation in the data is from left to right.\n\n\n\nLet’s suppose we have two variables, and their data look like this.\nHere we see almost all of the variation in the data from left to right.\nIt means that for variable X, some observations have low values, and some observations have high values.\nBut it looks like all observations have variable Y at about the same level.\nSince X varies more than Y, having larger variation, X contains more information than Y in the data."
+  },
+  {
+    "objectID": "slides/15-pca.html#variation-mostly-from-one-variable-1",
+    "href": "slides/15-pca.html#variation-mostly-from-one-variable-1",
+    "title": "Dimension Reduction \n",
+    "section": "Variation mostly from One Variable",
+    "text": "Variation mostly from One Variable\n\nIf we flattened the data, the graph would not look much different.\n\n\n\nIf we flattened the data, removing the up and down variation, our graph would not look much different from what it look like before.\nMost of the variation, or information is still kept in the data."
+  },
+  {
+    "objectID": "slides/15-pca.html#variation-mostly-from-one-variable-2",
+    "href": "slides/15-pca.html#variation-mostly-from-one-variable-2",
+    "title": "Dimension Reduction \n",
+    "section": "Variation mostly from One Variable",
+    "text": "Variation mostly from One Variable\n\nIf we flattened the data, we could graph it with a 1D number line!\n\n\n\nNow, with up-and-down variation removed, the variable Y becomes redundant, and we can just represent the flattened data using 1D single number line."
+  },
+  {
+    "objectID": "slides/15-pca.html#variation-mostly-from-one-variable-3",
+    "href": "slides/15-pca.html#variation-mostly-from-one-variable-3",
+    "title": "Dimension Reduction \n",
+    "section": "Variation mostly from One Variable",
+    "text": "Variation mostly from One Variable\n\nBoth graphs say “the important variation is left to right.”\n\n\n\n\nSo in this case, we can display 2D data on a 1D plot without losing too much information!\nBoth graphs say “the important variation is left to right.”\n\nAnother example is watching TV. TV is a 2D thing, but we watch TV for 3D shows. The 2D TV represents the 3D shows, programs or drama very well because the 2D representation does not lose much information the 3D shows provide.\nSo through the example, we know some dimensions are more important than others. Like here Variable X is more important than variable Y because variable X explains most of the variation stored in the data."
+  },
+  {
+    "objectID": "slides/15-pca.html#idea-of-pca",
+    "href": "slides/15-pca.html#idea-of-pca",
+    "title": "Dimension Reduction \n",
+    "section": "Idea of PCA",
+    "text": "Idea of PCA\n\nPCA is a dimension reduction tool that finds a low-dimensional representation of a data set that contains as much as possible of variation.\nEach observation lives in a high-dimensional space (lots of variables), but not all of these dimensions (variables) are equally interesting/important.\nThe concept of interesting/important is measured by the amount that the observations vary along each dimension.\n\n\nPCA is a dimension reduction tool that finds a low-dimensional representation of a data set that contains as much as possible of variation stored in the data set.\nAs we’ve seen before, each of the observations lives in a high-dimensional space, meaning that each observation has lots of variables associated with it, but not all of these dimensions (variables) are equally interesting/important.\nThe concept of interesting/important is measured by the amount that the observations vary along each dimension.\nA characteristic or attribute of observations is called variable because its value varies from sample to sample.\nIf the variable does not vary, it becomes an irrelevant or un-important variable because we cannot use the variable to differentiate or distinguish observations. If everyone in this class gets grade A, then the data science grade is not an important variable to learn which students perform academically better than others."
+  },
+  {
+    "objectID": "slides/15-pca.html#pca-illustration-2-variable-example",
+    "href": "slides/15-pca.html#pca-illustration-2-variable-example",
+    "title": "Dimension Reduction \n",
+    "section": "PCA Illustration: 2 Variable Example",
+    "text": "PCA Illustration: 2 Variable Example\n\n\n\n\n# A tibble: 50 × 2\n   English  Math\n     <int> <dbl>\n 1      41  33.2\n 2      65  63.6\n 3      55  44.6\n 4      94  95  \n 5      66  65.6\n 6      85  73.1\n 7      44  46.6\n 8      44  51  \n 9      67  69.4\n10      73  66.5\n11      47  58.9\n12      66  66.5\n13      57  51  \n14      57  33.2\n15      77  83.6\n16      83  78.8\n# ℹ 34 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe use the English and Math score example to illustrate how PCA works.\nFrom the data, we have a 2D scatter plot like this.\nWith the data, we can have the average of English score and the average of math score, shown as the red squared point in the scatter plot."
+  },
+  {
+    "objectID": "slides/15-pca.html#step-1-shift-or-standardize-the-data",
+    "href": "slides/15-pca.html#step-1-shift-or-standardize-the-data",
+    "title": "Dimension Reduction \n",
+    "section": "Step 1: Shift (or standardize) the Data",
+    "text": "Step 1: Shift (or standardize) the Data\n\nSo the two variables have both mean 0. If the variables are measured in a different unit, consider standardization, \\(\\frac{x_i - \\bar{x}}{s_x}\\).\nShifting does not change how the data points are positioned relative to each other.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPCA first shift or standardize our data so that the center is on top of the origin (0, 0) in the graph.\nIf the two variables are measured in a different scale, standardization is highly recommended. Here because both English and Math scores are measured using the same scale. We only do the shifting, and no scaling.\nAfter standardization, all variables will use the same scale to measure their variation, and that makes more sense because PCA wants to find some axis or coordinate lower dimensional representation that contains the most variation, and we don’t want the variation depends on variable’s measurement units.\nNotice that Shifting does not change how the data points are positioned relative to each other. The scattering shape remains the same."
+  },
+  {
+    "objectID": "slides/15-pca.html#step-2-find-a-line-that-fits-the-data-the-best",
+    "href": "slides/15-pca.html#step-2-find-a-line-that-fits-the-data-the-best",
+    "title": "Dimension Reduction \n",
+    "section": "Step 2: Find a Line that Fits the Data the Best",
+    "text": "Step 2: Find a Line that Fits the Data the Best\n\nStart with a line going through the origin.\n\nRotate the line until it fits the data as well as it can, given that it goes through the origin.\n\n\n\nThe second step of PCA is going to fit a line to the centered or normalized data set. \n\nTo do this, we start by drawing a random line that goes through the origin."
+  },
+  {
+    "objectID": "slides/15-pca.html#step-2-find-a-line-that-fits-the-data-the-best-1",
+    "href": "slides/15-pca.html#step-2-find-a-line-that-fits-the-data-the-best-1",
+    "title": "Dimension Reduction \n",
+    "section": "Step 2: Find a Line that Fits the Data the Best",
+    "text": "Step 2: Find a Line that Fits the Data the Best\n\nStart with a line going through the origin.\n\nRotate the line until it fits the data as well as it can, given that it goes through the origin.\n\n\n\nThen we rotate the line until if fits the data as well as it can, given that it has to go through the origin."
+  },
+  {
+    "objectID": "slides/15-pca.html#step-2-find-a-line-that-fits-the-data-the-best-2",
+    "href": "slides/15-pca.html#step-2-find-a-line-that-fits-the-data-the-best-2",
+    "title": "Dimension Reduction \n",
+    "section": "Step 2: Find a Line that Fits the Data the Best",
+    "text": "Step 2: Find a Line that Fits the Data the Best\n\nStart with a line going through the origin.\n\nRotate the line until it fits the data as well as it can, given that it goes through the origin.\n\n\n\nUltimately, this line fits best. \n\nSo let’s see what makes this line the best fit, and the meaning of this line."
+  },
+  {
+    "objectID": "slides/15-pca.html#the-meaning-of-the-best-line",
+    "href": "slides/15-pca.html#the-meaning-of-the-best-line",
+    "title": "Dimension Reduction \n",
+    "section": "The Meaning of the Best line",
+    "text": "The Meaning of the Best line\n\n\n\n\nPrincipal Component 1 (PC1): maximizes the variance of the projected points.\n\nPC1 is the line in the Eng-Math space that is closest to the \\(n\\) observations\n\nPC1 minimizes the sum of squared distances between the data points and the PC1.\n\n\n\nPC1 is the best 1D representation of the 2D data\n\n\n\n\n\n\n\n\n\n\n\n\n\nTo quantify how good this line fits the data, PCA projects the data onto it.\nThen the idea is that we can either measure the distances from the data to the line and try to find the line that minimizes those distances.\nOr we can try to find the line that maximizes the distances from the projected points to the origin.\nThe two criteria are equivalent.\nDEMO\nSo we are find the line that maximizes the variation of the projected points from the data points onto the line!\nThe best line is called Principal Component 1 (PC1), which maximizes the sum of squared distances between projected points and the origin.\n\nRegression line: minimizes the sum of squared residuals (vertical lines from the data points to the line)\n\nPrincipal Component 1 (PC1): maximizes the sum of squared distances between between projected points and the origin.\nPC1 is the line in the Eng-Math 2 dimensional space that is closest to the \\(n\\) observations, i.e., PC1 minimizes the sum of squared distances between the data points and the PC1.\nPC1 is the best 1D representation of the 2D data"
+  },
+  {
+    "objectID": "slides/15-pca.html#the-meaning-of-the-best-line-1",
+    "href": "slides/15-pca.html#the-meaning-of-the-best-line-1",
+    "title": "Dimension Reduction \n",
+    "section": "The Meaning of the Best line",
+    "text": "The Meaning of the Best line\n\n\n\n\n\nSource: https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues\n\n\n\n\n\n\nI am going to conclude the idea of PCA using this gif.\nThis gif shows you the idea of finding principal components.\nAs the line rotates, you can see the locations of the projected points on the line keeps changing as well.\nAnd the PC1 is the line that maximizes the variation of the projected points.\nAlso, the PC1 is the line that minimizes the distance between the data points and the line. In the figure, the sum of those red lines will be the smallest.\nQuestions?"
+  },
+  {
+    "objectID": "slides/15-pca.html#pc1-and-pc2",
+    "href": "slides/15-pca.html#pc1-and-pc2",
+    "title": "Dimension Reduction \n",
+    "section": "PC1 and PC2",
+    "text": "PC1 and PC2\n\n\n\nThe data points are also spread out a little above and below the PC1.\nThere are some variation that is not explained by the PC1.\nFind the second PC, PC2, that\n\nexplains the remaining variation\nis the line through the origin and perpendicular to PC1.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlong with the PC1, the data points are also spread out a little above and below the PC1.\nThere are some variation of the two variables that is not explained by the PC1.\nTo find another PC that explains the remaining variation, we find the second PC, called PC2 that is the line through the origin and perpendicular to PC1."
+  },
+  {
+    "objectID": "slides/15-pca.html#linear-combinations",
+    "href": "slides/15-pca.html#linear-combinations",
+    "title": "Dimension Reduction \n",
+    "section": "Linear Combinations",
+    "text": "Linear Combinations\n\n\n\n\n\n\n\n\n\n\n\n\nPC1 = 0.68 \\(\\times\\) English \\(+\\) 0.74 \\(\\times\\) Math\nPC2 = 0.74 \\(\\times\\) English \\(-\\) 0.68 \\(\\times\\) Math\nPC1 is like an overall intelligence index as it is a weighted average combining verbal and quantitative abilities.\nPC2 accounts for individual difference in English and Math scores.\n\n\\(0.68^2 + 0.74^2 = 1\\) (Pythagorean theorem)\nThe combination weights 0.68, 0.74, etc are called PC loadings.\n\n\n\n\nNow let’s look at PC1 and PC2 a little more carefully.\nFirst PC1 and PC2 are just a vector in 2 dimensional space, right?\nIn other words, they are linear combinations of two standard basis, here our English axis and Math axis.\nPCA help us get the linear combinations.\nHere PC1 = 0.68 \\(\\times\\) English + 0.74 \\(\\times\\) Math\nPC2 = 0.74 \\(\\times\\) English - 0.68 \\(\\times\\) Math\nSo to make PC1, we mix 0.68 part of English score with 0.74 parts of Math score.\nOne unit of PC1 consists of 0.68 parts of English and 0.74 parts of Math.\nAnd because the weight of math score is a little bit larger, Math score is a little bit more important when it comes to describing how the data are spread out.\nPC1 can be viewed as an overall intelligence index because it is an weighted average combining both verbal and quantitative reasoning abilities.\nPC2 accounts for individual difference in English and Math scores.\n\n\\(0.68^2 + 0.74^2 = 1\\) (Pythagorean theorem)\nThe combination weights 0.68, 0.74, etc are called loadings of PC."
+  },
+  {
+    "objectID": "slides/15-pca.html#rotate-everything-so-that-pc1-is-horizontal",
+    "href": "slides/15-pca.html#rotate-everything-so-that-pc1-is-horizontal",
+    "title": "Dimension Reduction \n",
+    "section": "Rotate Everything so that PC1 is Horizontal",
+    "text": "Rotate Everything so that PC1 is Horizontal\n\n\n1D representation\n\nPC1 is our 1D number line that explains the most variation contained in 2D data using a 1D line.\nPoints on the PC1 are the projected points of data onto PC1.\n\n\n\n\n\n\n\n\n\n\n2D representation\n\nThe new coordinates PC1 and PC2 are ordered by variation size of the English and Math scores\n\n\n\n\n\n\n\n\n\n\n\n\nIf we make PC1 and PC2 the new X-Y coordinates, the new coordinates PC1 and PC2 are ordered by variation size of the English and Math scores.\nPC1 is our 1D number line that explains the most variation contained in 2D data using a 1D line.\nPoints on the PC1 are the projected points of data onto PC1.\nPC1 explains the most variation, and PC2 explains the second most variation.\nAnd PC2 explains the remaining variations that are not explained by PC1.\nHere, because we only have 2 dimensions, we have at most 2 PCs."
+  },
+  {
+    "objectID": "slides/15-pca.html#variation",
+    "href": "slides/15-pca.html#variation",
+    "title": "Dimension Reduction \n",
+    "section": "Variation",
+    "text": "Variation\n\n\n\nIf the variation for PC1 is \\(17\\) and the variation for PC2 is \\(2\\), the total variation presented in the data is \\(17+2=19\\).\nPC1 accounts for \\(17/19 = 89\\%\\) of the total variation, and PC2 accounts for \\(2/19 = 11\\%\\) of the total variation.\n\n\nOK how do we quantify variation. Let’s give it a definition.\nVariation for PC1 \\(= \\frac{\\text{Sum of squared distances of projected points on PC1}}{n-1}\\)\n\nVariation for PC2 \\(= \\frac{\\text{Sum of squared distances of projected points on PC2}}{n-1}\\)\n\nIf the variation for PC1 is \\(17\\) and the variation for PC2 is \\(2\\), the total variation presented in the data is \\(17+2=19\\).\nPC1 accounts for \\(17/19 = 89\\%\\) of the total variation, and PC2 accounts for \\(2/19 = 11\\%\\) of the total variation."
+  },
+  {
+    "objectID": "slides/15-pca.html#how-about-3-or-more-variables",
+    "href": "slides/15-pca.html#how-about-3-or-more-variables",
+    "title": "Dimension Reduction \n",
+    "section": "How about 3 or More Variables?",
+    "text": "How about 3 or More Variables?\n\nPC1 spans the direction of the most variation\n\n\n\nPC2 spans the direction of the 2nd most variation\n\n\n\n\nPC3 spans the direction of the 3rd most variation\n\n\n\n\nPC4 spans the direction of the 4th most variation\n\n\n\n\nIf we have \\(n\\) observations and \\(p\\) variables (dimensions), there are at most \\(\\min(n - 1, p)\\) PCs.\n\n\nOK. We use a 2D data to illustrate PCA. How about 3 or More Variables?\nWell the idea of 2D data can be exactly applied to 3 or more dimensional data."
+  },
+  {
+    "objectID": "slides/15-pca.html#us-arrest-data-in-1973",
+    "href": "slides/15-pca.html#us-arrest-data-in-1973",
+    "title": "Dimension Reduction \n",
+    "section": "US Arrest Data in 1973",
+    "text": "US Arrest Data in 1973\n\ndim(USArrests)\n\n[1] 50  4\n\n\n\nhead(USArrests, 16)\n\n            Murder Assault UrbanPop Rape\nAlabama       13.2     236       58   21\nAlaska        10.0     263       48   44\nArizona        8.1     294       80   31\nArkansas       8.8     190       50   20\nCalifornia     9.0     276       91   41\nColorado       7.9     204       78   39\nConnecticut    3.3     110       77   11\nDelaware       5.9     238       72   16\nFlorida       15.4     335       80   32\nGeorgia       17.4     211       60   26\nHawaii         5.3      46       83   20\nIdaho          2.6     120       54   14\nIllinois      10.4     249       83   24\nIndiana        7.2     113       65   21\nIowa           2.2      56       57   11\nKansas         6.0     115       66   18\n\n\n\nOK. Time to learn how to perform PCA in R.\nThe data set used for PCA is USArrests data set in 1973.\nEach observation or subject is a state, and we have 4 features or dimensions, Murder, Assault, UrbanPop, and Rape."
+  },
+  {
+    "objectID": "slides/15-pca.html#pc-loading-vectors-on-usarrests",
+    "href": "slides/15-pca.html#pc-loading-vectors-on-usarrests",
+    "title": "Dimension Reduction \n",
+    "section": "PC Loading Vectors on USArrests\n",
+    "text": "PC Loading Vectors on USArrests\n\n\npca_output <- prcomp(USArrests, scale = TRUE)\n\n## rotation matrix provides PC loadings\n(pca_output$rotation <- -pca_output$rotation)\n\n          PC1   PC2   PC3    PC4\nMurder   0.54  0.42 -0.34 -0.649\nAssault  0.58  0.19 -0.27  0.743\nUrbanPop 0.28 -0.87 -0.38 -0.134\nRape     0.54 -0.17  0.82 -0.089\n\n\n\n\nPCs are unique up to a sign change, so -pca_output$rotation gives us the same PCs as pca_output$rotation does. The sign just change the direction, not the angle.\n\n\\(\\text{PC1} = 0.54 \\times \\text{Murder} + 0.58 \\times \\text{Assault} + 0.28 \\times \\text{UrbanPop} + 0.54 \\times \\text{Rape}\\)\n\n\\(\\text{PC2} = -0.42 \\times \\text{Murder} - 0.19 \\times \\text{Assault} + 0.87 \\times \\text{UrbanPop} + 0.17 \\times \\text{Rape}\\)\n\n\n\nWe have 4 PCs because \\(\\min(n-1, p) = \\min(50-1, 4) = 4\\).\n\n\nTo perform PCA in R, it cannot be easier.\nWe just need to use the function prcomp(), and put the data set in the function. Then we get everything we want.\nHere I choose to scale the data because variables are not measured in the same scale. For example, Murder rate and UrbanPop are measured in different units.\nThis makes sure that every variable has variance 1, and our analysis is not affected by units.\nThe PCA results are stored as a list in pca_output object.\nOK first we can look at the rotation matrix because it provides PC loadings, and so we know what PC1 and PC2 are.\nChanging signs for easier interpretation of PCs\nThose PC loadings define how we rotates the coordinates to obtain the PCs. ???\nAgain, PC1 is just a linear combination or weighted average of the 4 variables, same as PC2. ???\nAgain, PC1 is just a linear combination or weighted average of the 4 variables, same as PC2.\nPCs are unique up to a sign change, so -pca_output$rotation gives us the same PCs as pca_output$rotation does.\nWe have 4 PCs because \\(\\min(n-1, k) = \\min(50-1, 4) = 4\\)."
+  },
+  {
+    "objectID": "slides/15-pca.html#pc-scores",
+    "href": "slides/15-pca.html#pc-scores",
+    "title": "Dimension Reduction \n",
+    "section": "PC Scores",
+    "text": "PC Scores\n\nThe value of the rotated data, the data values of each PC are stored in pca_output$x\n\n\n\nhead(pca_output$x <- -pca_output$x, 16) |> round(2)\n\n              PC1   PC2   PC3   PC4\nAlabama      0.98  1.12 -0.44 -0.15\nAlaska       1.93  1.06  2.02  0.43\nArizona      1.75 -0.74  0.05  0.83\nArkansas    -0.14  1.11  0.11  0.18\nCalifornia   2.50 -1.53  0.59  0.34\nColorado     1.50 -0.98  1.08  0.00\nConnecticut -1.34 -1.08 -0.64  0.12\nDelaware     0.05 -0.32 -0.71  0.87\nFlorida      2.98  0.04 -0.57  0.10\nGeorgia      1.62  1.27 -0.34 -1.07\nHawaii      -0.90 -1.55  0.05 -0.89\nIdaho       -1.62  0.21  0.26  0.49\nIllinois     1.37 -0.67 -0.67  0.12\nIndiana     -0.50 -0.15  0.23 -0.42\nIowa        -2.23 -0.10  0.16 -0.02\nKansas      -0.79 -0.27  0.03 -0.20\n\n\n\nThe value of the rotated data, the data values of each PC are stored in pca_output$x.\nIn other words, PC1 column here shows the projected values of observations onto PC1. PC2 column shows the projected values of observations onto PC2, and so on."
+  },
+  {
+    "objectID": "slides/15-pca.html#interpretation-of-pcs",
+    "href": "slides/15-pca.html#interpretation-of-pcs",
+    "title": "Dimension Reduction \n",
+    "section": "Interpretation of PCs",
+    "text": "Interpretation of PCs\n\npca_output$rotation\n\n          PC1   PC2   PC3    PC4\nMurder   0.54  0.42 -0.34 -0.649\nAssault  0.58  0.19 -0.27  0.743\nUrbanPop 0.28 -0.87 -0.38 -0.134\nRape     0.54 -0.17  0.82 -0.089\n\n\n\nPCs are less interpretable than original features.\nThe first loading vector places approximately equal weight on Assualt, Murder and Rape, with much less weights on UrbanPop.\nPC1 roughly corresponds to a overall serious crime rate.\n\n\n\nThe second loading vector places most of its weight on UrbanPop, and much less weight on the other 3 features.\nPC2 roughly corresponds to the level of urbanization.\n\n\nIntepretability decreases with the order of PCs.\nSo it’s easier to give PC1 a meaningful name than PC2, and PC2 is more meaningful than PC3, and so on. Because the PCs after the first 2 PCs usually explain quite small variation in the data, and some of them may be just noises.\nLet’s see if we can interpret these PCs.\nFirst keep in mind that PCs are less interpretable than original features. Sometimes we even don’t know how to interpret it, especially for PCs that explain small variations. So this is the price we pay for dimension reduction.\nBut let’s look at this example.\nThe first loading vector places approximately equal weight on Assualt, Murder and Rape, with much less weights on UrbanPop.\nSo PC1 roughly corresponds to a overall serious crime rate because PC1 explains the variations of data caused by those crime variables Assualt, Murder and Rape.\nOn the contrary, the second loading vector places most of its weight on UrbanPop, and much less weight on the other 3 features.\nSo we can say PC2 roughly corresponds to the level of urbanization.\nSo you get the idea, Assualt, Murder and Rape are similar each other because they all are measures of crime rate.\nSo when reducing dimensions, we sort of combine the three similar variables together to become a one single index that measures an overall crime rate.\nUrban population measures a totally different thing. So the variation created by this variable cannot be explained well by the crime rate, and it should be absorbed in PC2."
+  },
+  {
+    "objectID": "slides/15-pca.html#d-representation-of-the-4d-data",
+    "href": "slides/15-pca.html#d-representation-of-the-4d-data",
+    "title": "Dimension Reduction \n",
+    "section": "2D Representation of the 4D data",
+    "text": "2D Representation of the 4D data\n\n\n\n\n            PC1   PC2   PC3   PC4\nWisconsin -2.06 -0.61 -0.14 -0.18\nWyoming   -0.62  0.32 -0.24  0.16\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigher value of PC1 means higher crime rates (roughly).\nHigher value of PC2 means higher level of urbanization (roughly).\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnd we can show our 2D Representation of the 4D data.\nHigher value of PC1 means higher crime rates (roughly).\nHigher value of PC2 means higher level of urbanization (roughly).\nWe may be able to further analysis on the reduced dimension data, for example, we may want to partition the data into 2 clusters.\nOne cluster has high crime rate and low urbanization, the other group shows low crime rate and high urbanization.\nOne cluster may be the low economically-developed states, and the other high economically-developed states.\nSo you see, we can tell lots of stories by analyzing our data."
+  },
+  {
+    "objectID": "slides/15-pca.html#d-representation-of-the-4d-data-biplot",
+    "href": "slides/15-pca.html#d-representation-of-the-4d-data-biplot",
+    "title": "Dimension Reduction \n",
+    "section": "2D Representation of the 4D data: biplot",
+    "text": "2D Representation of the 4D data: biplot\n\n\n\nbiplot(pca_output, xlabs = state.abb, \n       scale = 0)\n\n\nTop axis: PC1 loadings\nRight axis: PC2 loadings\nRed arrows: PC1 and PC2 loading vector, e.g., (0.28, 0.87) for UrbanPop.\nCrime-related variables (Assualt, Murder and Rape) are located close to each other.\n\nUrbanPop is far from the other three.\n\nAssualt, Murder and Rape are more correlated, and UrbanPop is less correlated with the other three.\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can simply use the function biplot() to show the 2D Representation of the data.\nThis function also provide loading vector of PC1 and PC2 that gives us an idea of which direction means a large value of a variable/feature.\nThis is why it is called biplot because we plot two things in one single plot.\nHere, Top axis is for PC1 loadings\nRight axis is PC2 loadings\nRed arrows: PC1 and PC2 loading vector, e.g., (0.28, 0.87) for UrbanPop.\nSo NJ and Ca have pretty high urban pop rate because they are large in the UrbanPop arrow direction.\nCrime-related variables (Assualt, Murder and Rape) are located close to each other.\n\nUrbanPop is far from the other three.\n\nAssualt, Murder and Rape are more correlated, and UrbanPop is less correlated with the other three.\n\nAssualt, Murder and Rape sort of point to the same direction as PC1 and UrbanPop points to the same direction as PC2."
+  },
+  {
+    "objectID": "slides/15-pca.html#proportion-of-variance-explained",
+    "href": "slides/15-pca.html#proportion-of-variance-explained",
+    "title": "Dimension Reduction \n",
+    "section": "Proportion of Variance Explained",
+    "text": "Proportion of Variance Explained\n\n(pc_var <- pca_output$sdev ^ 2)\n\n[1] 2.48 0.99 0.36 0.17\n\n(pc_var_prop <- pc_var / sum(pc_var))\n\n[1] 0.620 0.247 0.089 0.043\n\n\n\nPC1 explains \\(62\\%\\) of the variations in the data, and PC2 explains \\(24.7\\%\\) of the variance.\nPC1 and PC2 explain about \\(87\\%\\) of the variance, and the last two PCs explain only \\(13\\%\\).\n2D plot provides pretty accurate summary of the data.\n\n\nFinally I want to talk a little bit about Proportion of Variance Explained.\nIn the pca_output, we have SD of each PC.\nWe square it to get variance.\nThen if we divided by the sum of variance, we get the Proportion of Variance Explained by each PC.\nSo PC1 explains \\(62\\%\\) of the variations in the data, and PC2 explains \\(24.7\\%\\) of the variance.\nPC1 and PC2 explain about \\(87\\%\\) of the variance, and the last two PCs explain only \\(13\\%\\).\n2D plot provides pretty accurate summary of the data."
+  },
+  {
+    "objectID": "slides/15-pca.html#scree-plot",
+    "href": "slides/15-pca.html#scree-plot",
+    "title": "Dimension Reduction \n",
+    "section": "Scree Plot",
+    "text": "Scree Plot\nLook for a point at which the proportion of variance explained by each subsequent PC drops off."
+  },
+  {
+    "objectID": "slides/15-pca.html#principal-components",
+    "href": "slides/15-pca.html#principal-components",
+    "title": "Dimension Reduction \n",
+    "section": "Principal Components",
+    "text": "Principal Components\n\nThe \\(k\\)th PC is\n\n\\[Z_k = \\phi_{1k}X_1 + \\phi_{2k}X_2 + \\dots + \\phi_{pk}X_p,\\] where \\(\\sum_{j=1}^p\\phi_{jk}^2=1\\).\n\n\\((\\phi_{1k}, \\phi_{2k}, \\dots, \\phi_{pk})'\\) is the PC loading vector.\nThe PC1 loading vector solves\n\n\\[\\max_{\\phi_{11}, \\phi_{21}, \\dots, \\phi_{p1}} \\left\\{ \\frac{1}{n}\\sum_{i=1}^n \\left( \\sum_{j=1}^p  \\phi_{j1} x_{ij}\\right)^2\\right\\} \\quad \\text{s.t.} \\quad \\sum_{j=1}^p\\phi_{j1}^2 = 1\\]\n\nWe maximize the sample variance of the projected points, or the scores \\(z_{11}, z_{21}, \\dots, z_{n1}\\).\nThe PC loading vector defines a direction in feature space along which the data vary the most."
+  },
+  {
+    "objectID": "slides/15-pca.html#principal-components-1",
+    "href": "slides/15-pca.html#principal-components-1",
+    "title": "Dimension Reduction \n",
+    "section": "Principal Components",
+    "text": "Principal Components\nFor \\(k\\)th PC, \\(k > 1\\),\n\\[\\max_{\\phi_{1k}, \\phi_{2k}, \\dots, \\phi_{pk}} \\left\\{ \\frac{1}{n}\\sum_{i=1}^n \\left( \\sum_{j=1}^p  \\phi_{jk} x_{ij}\\right)^2\\right\\} \\quad \\text{s.t.} \\quad \\sum_{j=1}^p\\phi_{jk}^2 = 1, \\text{ and } {\\mathbf{z}_m}'\\mathbf{z}_k = 0, \\, m = 1, \\dots, k-1\\] where\n\\(\\mathbf{z}_l = (z_{1l}, z_{2l}, \\dots, z_{nl})'\\)"
+  },
+  {
+    "objectID": "slides/15-pca.html#low-rank-approximation",
+    "href": "slides/15-pca.html#low-rank-approximation",
+    "title": "Dimension Reduction \n",
+    "section": "Low-Rank Approximation",
+    "text": "Low-Rank Approximation\n\nPCs provide low-dimensional linear surfaces that are closest to the observations.\n\\(x_{ij} \\approx \\sum_{m=1}^M z_{im}\\phi_{jm}\\) with equality when \\(M = \\min(n-1, p)\\)\n\n\n\\[(z_{im}, \\phi_{jm}) = \\mathop{\\mathrm{arg\\,min}}_{a_{im}, b_{jm}} \\left\\{ \\sum_{j=1}^p\\sum_{i=1}^n\\left( x_{ij} - \\sum_{m=1}^Ma_{im}b_{jm}\\right)^2\\right\\}\\]\n\n\n\n\nSource: ISL Fig 12.2"
+  },
+  {
+    "objectID": "slides/15-pca.html#scaling-the-variables",
+    "href": "slides/15-pca.html#scaling-the-variables",
+    "title": "Dimension Reduction \n",
+    "section": "Scaling the Variables",
+    "text": "Scaling the Variables\n\napply(USArrests, 2, var)\n\n  Murder  Assault UrbanPop     Rape \n      19     6945      210       88 \n\n\n\nIf we perform PCA on the unscaled variables, PC1 loading vector will have a large loading for Assault.\nWhen all the variables are of the same type, no need to scale the variables."
+  },
+  {
+    "objectID": "slides/15-pca.html#pca-and-svd",
+    "href": "slides/15-pca.html#pca-and-svd",
+    "title": "Dimension Reduction \n",
+    "section": "PCA and SVD",
+    "text": "PCA and SVD\nPCA is equivalent to singular value decomposition (SVD) of \\(\\mathbf{X}\\)\n\\[\\mathbf{X}_{n\\times p} = \\mathbf{U}_{n \\times n} \\mathbf{D}_{n \\times p} \\mathbf{V}'_{p \\times p}\\] where \\(\\mathbf{U}\\) and \\(\\mathbf{V}\\) are orthogonal matrices, and \\(\\mathbf{D}\\) is diagonal with diagonal elements singular values \\(d_1 \\ge d_2 \\ge \\cdots \\ge d_p\\)."
+  },
+  {
+    "objectID": "slides/15-pca.html#pc-scores-and-svd",
+    "href": "slides/15-pca.html#pc-scores-and-svd",
+    "title": "Dimension Reduction \n",
+    "section": "PC Scores and SVD",
+    "text": "PC Scores and SVD\n\n\\({\\bf Z}_{n \\times p} = [{\\bf z}_1 \\, {\\bf z}_2 \\, \\cdots \\, {\\bf z}_p] = \\mathbf{X}\\mathbf{V}\\)\nThe \\(j\\)th PC is the \\(j\\)th column of \\({\\bf Z}\\) given by \\({\\bf z}_j = (z_{1j}, z_{2j}, \\dots, z_{nj})' = {\\bf Xv}_j\\).\nProject \\(\\mathbf{X}\\) onto the space spanned by \\(\\mathbf{v}_j\\)s\n\\(\\mathbf{v}_j\\)s are loading vectors.\n\n\n\n\\({\\bf Z}_{n \\times p} = \\mathbf{U}\\mathbf{D}\\)\n\\({\\bf z}_j = d_j\\mathbf{u}_j\\).\n\\(\\mathbf{u}_j\\)s are the unit PC vectors, and \\(d_j\\) controls the variation along the \\(\\mathbf{u}_j\\) direction."
+  },
+  {
+    "objectID": "slides/15-pca.html#low-rank-approximation-and-svd",
+    "href": "slides/15-pca.html#low-rank-approximation-and-svd",
+    "title": "Dimension Reduction \n",
+    "section": "Low-Rank Approximation and SVD",
+    "text": "Low-Rank Approximation and SVD\n\\({\\mathbf{X}} = {\\mathbf{U}}{\\mathbf{D}}{\\mathbf{V}}'\\)\n\\(\\mathbf{A}= \\mathbf{U}_{n\\times M}\\mathbf{D}_{M \\times M}\\) and \\(\\mathbf{B}' = \\mathbf{V}_{M\\times p}'\\) are the minimizer of\n\\[ \\min_{\\mathbf{A}\\in \\mathbf{R}^{n \\times M}, \\mathbf{B}\\in \\mathbf{R}^{p \\times M}} \\|\\mathbf{X}- \\mathbf{A}\\mathbf{B}' \\|\\] where\n\n\n\\(\\mathbf{U}_{n\\times M}\\) is \\(\\mathbf{U}\\) with the first \\(M\\) columns\n\n\\(\\mathbf{D}_{M \\times M}\\) is \\(\\mathbf{D}\\) of the first \\(M\\) rows and columns\n\n\\(\\mathbf{V}_{M\\times p}'\\) is \\(\\mathbf{V}'\\) with the first \\(M\\) rows\n\n\n\n\\(x_{ij} = \\sum_{m = 1}^p d_mu_{im}v_{jm}\\)\n\\(x_{ij} \\approx \\sum_{m = 1}^M d_mu_{im}v_{jm}\\)"
+  },
+  {
+    "objectID": "slides/15-pca.html#pca-and-eigendecomposition",
+    "href": "slides/15-pca.html#pca-and-eigendecomposition",
+    "title": "Dimension Reduction \n",
+    "section": "PCA and Eigendecomposition",
+    "text": "PCA and Eigendecomposition\nPCA is equivalent to eigendecomposition of \\(\\mathbf{X}'\\mathbf{X}\\) or \\(\\boldsymbol \\Sigma= \\text{Cov}(\\mathbf{X}) = \\dfrac{\\mathbf{X}'\\mathbf{X}}{n-1}\\)1, the covariance matrix of \\(\\mathbf{X}\\).\n\n\\[\\mathbf{X}'\\mathbf{X}= \\mathbf{V}\\mathbf{D}^2\\mathbf{V}' = d_1^2\\mathbf{v}_1\\mathbf{v}_1' + \\dots + d_p^2\\mathbf{v}_p\\mathbf{v}_p'\\]\n\nTotal variation: \\(\\sum_{j=1}^p \\text{Var}(\\mathbf{x}_j) = \\frac{1}{n-1}\\sum_{j=1}^pd_j^2 = p\\)\nVariation of \\(m\\)th PC: \\(\\text{Var}(\\mathbf{z}_m) = \\frac{d_m^2}{n-1}\\)\nUnit normal scaling (normalization or standardization) is such that the variance is one, and unit length scaling makes the length one. If \\(\\mathbf{W}\\) is the unit length scaled version, \\(\\text{Corr}(\\mathbf{W}) = \\mathbf{W}'\\mathbf{W}= \\frac{\\mathbf{X}'\\mathbf{X}}{n-1}\\)"
+  },
+  {
+    "objectID": "slides/15-pca.html#transformed-ols-regression",
+    "href": "slides/15-pca.html#transformed-ols-regression",
+    "title": "Dimension Reduction \n",
+    "section": "Transformed OLS Regression",
+    "text": "Transformed OLS Regression\nTransform \\({\\bf y = X\\boldsymbol \\beta+ \\boldsymbol \\epsilon}\\) into \\[{\\bf y = XVV'\\boldsymbol \\beta+ \\boldsymbol \\epsilon= Z\\boldsymbol \\alpha} + \\boldsymbol \\epsilon\\] where \\(\\mathbf{Z}= \\mathbf{X}\\mathbf{V}\\) and \\(\\boldsymbol \\alpha= \\mathbf{V}'\\boldsymbol \\beta\\), or \\(\\boldsymbol \\beta= \\mathbf{V}\\boldsymbol \\alpha\\).\n\nThe least- squares estimator \\(\\hat{\\boldsymbol \\alpha} = (\\mathbf{Z}'\\mathbf{Z})^{-1}\\mathbf{Z}'\\mathbf{y}= \\mathbf{D}^{-2}\\mathbf{Z}'\\mathbf{y}\\)\n\\(\\text{Var}\\left(\\hat{\\boldsymbol \\alpha} \\right) = \\sigma^2 (\\mathbf{Z}'\\mathbf{Z})^{-1} = \\sigma^2 \\mathbf{D}^{-2}\\)\nA small \\(d_j\\) means that the variance of \\(\\alpha_j\\) will be large.\n\nThe PC regression combats multicollinearity by using less PCs \\((m \\ll p)\\) in the model.\n\nThe PCs corresponding to tiny \\(d_j\\)s (huge variance) are removed and least-squares is applied to the remaining PCs.\n\n\n\n\nEven though the new variables are orthogonal, the same magnitude of variance due to the ill-conditioning in \\(X'X\\) is retained. The total variance has merely been redistributed.\n\\({\\bf y = X\\boldsymbol \\beta+ \\boldsymbol \\epsilon}\\)\n\n\\({\\bf y = XVV'\\boldsymbol \\beta+ \\boldsymbol \\epsilon= Z\\boldsymbol \\alpha} + \\boldsymbol \\epsilon\\) where \\({\\bf Z =XV}\\) and \\({\\bf \\boldsymbol \\alpha= V'\\boldsymbol \\beta}\\).\nThe least- squares estimator \\(\\hat{\\boldsymbol \\alpha} = {\\bf (Z'Z)^{-1}Z'y = \\Lambda^{-1}Z'y}\\)\n\n\\(\\var\\left(\\hat{\\boldsymbol \\alpha} \\right) = \\sigma^2 {\\bf (Z'Z)}^{-1} = \\sigma^2 {\\bf \\Lambda}^{-1}\\)\nA small \\(\\lambda_j\\) means that the variance of \\(\\alpha_j\\) will be large.\nThe PC regression combats multicollinearity by using less PCs in the model.\nAssume that the regressors are arranged in order of decreasing eigenvalues, \\(\\lambda_1 \\ge \\lambda_2 \\ge \\cdots \\ge \\lambda_k > 0\\).\nThe PCs corresponding to near-zero eigenvalues are removed and least squares applied to the remaining PCs.\nIf all PCs are in the model, it is just a rotation of the regressors. The same magnitude of variance is retained.\nThe small variation in the \\(z_2\\) direction is responsible for the large variance in \\(\\hat{\\alpha}_2\\).\nA large \\(\\lambda_1\\) allows variance of \\(\\hat{\\alpha}_1\\) to be relatively unaffected by the dependency of \\(x_1\\) and \\(x_2\\)."
+  },
+  {
+    "objectID": "slides/15-pca.html#principal-component-regression-pcr",
+    "href": "slides/15-pca.html#principal-component-regression-pcr",
+    "title": "Dimension Reduction \n",
+    "section": "Principal Component Regression (PCR)",
+    "text": "Principal Component Regression (PCR)\n\nKeep \\(m < p\\) PCs with the largest \\(m\\) singular values \\(d_1, d_2, \\dots, d_m\\).\nThe least- squares estimator is \\[\\hat{\\boldsymbol \\alpha}_m = ({\\bf Z} _m ' {\\bf Z} _m) ^ {-1} {\\bf Z}_m ' {\\bf y} = \\mathbf{D}_m ^ {-2} {\\bf Z}_m '{\\bf y}\\] where \\({\\bf Z}_m = [{\\bf z}_1 \\, {\\bf z}_2 \\, \\cdots \\, {\\bf z}_m]\\) and \\({\\bf \\mathbf{D}}_m = \\text{diag}(d_1, d_2, \\dots, d_m)\\)\n\n\n\n\n\\({\\bf b}_{pc} = {\\bf V}_m\\hat{\\boldsymbol \\alpha}_m = [{\\bf v}_1 \\, {\\bf v}_2 \\, \\cdots \\, {\\bf v}_m] \\begin{bmatrix} \\hat{\\alpha}_1 \\\\ \\hat{\\alpha}_2 \\\\ \\vdots \\\\ \\hat{\\alpha}_m \\end{bmatrix}\\)\n\n\\({\\bf b}_{pc}\\) is biased but has smaller variance than \\({\\bf b}\\).\n\n\nKeep the first \\(m < k\\) PCs.\nThe least- squares estimator is \\[\\hat{\\boldsymbol \\alpha}_m = ({\\bf Z} _m ' {\\bf Z} _m) ^ {-1} {\\bf Z}_m ' {\\bf y} = {\\bf \\Lambda} _m ^ {-1} {\\bf Z}_m '{\\bf y}\\] where \\({\\bf Z}_m = [{\\bf z}_1 \\, {\\bf z}_2 \\, \\cdots \\, {\\bf z}_m]\\) and \\({\\bf \\Lambda}_m = \\text{diag}(\\lambda_1, \\lambda_2, \\dots, \\lambda_m)\\)\n\nTo transform back to the original coefficients, since \\({\\bf \\boldsymbol \\alpha= V'\\boldsymbol \\beta}\\), \\({\\bf \\boldsymbol \\beta= V\\boldsymbol \\alpha}\\)\n\n\\({\\bf b}_{pc} = {\\bf V}_m\\hat{\\boldsymbol \\alpha}_m = [{\\bf v}_1 \\, {\\bf v}_2 \\, \\cdots \\, {\\bf v}_m] \\begin{bmatrix} \\hat{\\alpha}_1 \\\\ \\hat{\\alpha}_2 \\\\ \\vdots \\\\ \\hat{\\alpha}_m \\end{bmatrix}\\)\n\n\\({\\bf b}_{pc}\\) is biased but has smaller variance than \\({\\bf b}\\). Deleting PCs does not imply deletion of any of original regressors. The selected \\(m\\) PCs do contain information provided by all \\(k\\) original regressors."
+  },
+  {
+    "objectID": "slides/15-pca.html#principal-component-regression",
+    "href": "slides/15-pca.html#principal-component-regression",
+    "title": "Dimension Reduction \n",
+    "section": "Principal Component Regression",
+    "text": "Principal Component Regression\n\n\nPCR performs well when the directions in which \\(X_1, \\dots ,X_p\\) show the most variation (the first few PCs) are the directions that are associated with \\(Y\\).\n\n\n\n\n\n\nDeleting PCs does not imply deletion of any of original regressors. The selected \\(m\\) PCs contain information provided by all \\(k\\) original regressors. (Not a feature selection method)\n\n\n\n\n\n\nPCR and ridge regression are closely related. Ridge regression is a continuous version of PCR."
+  },
+  {
+    "objectID": "slides/15-pca.html#plspcr",
+    "href": "slides/15-pca.html#plspcr",
+    "title": "Dimension Reduction \n",
+    "section": "pls::pcr()",
+    "text": "pls::pcr()\n\n\n\n\nlibrary(pls)\nset.seed(1)\npcr.fit <- pcr(Salary ~ ., data = Hitters, \n               subset = train,\n               scale = TRUE, validation = \"CV\")\nvalidationplot(pcr.fit, val.type = \"MSEP\")\n\n\nhttps://stats.stackexchange.com/questions/371054/what-is-adjusted-cv-or-bias-corrected-cv"
+  },
+  {
+    "objectID": "slides/15-pca.html#plspcr-1",
+    "href": "slides/15-pca.html#plspcr-1",
+    "title": "Dimension Reduction \n",
+    "section": "pls::pcr()",
+    "text": "pls::pcr()\n\npcr.pred <- predict(pcr.fit, x[test, ], ncomp = 5)\nmean((pcr.pred - y.test)^2)\n\n[1] 142812\n\npcr.fit <- pcr(y ~ x, scale = TRUE, ncomp = 5)\nsummary(pcr.fit)\n\nData:   X dimension: 263 19 \n    Y dimension: 263 1\nFit method: svdpc\nNumber of components considered: 5\nTRAINING: % variance explained\n   1 comps  2 comps  3 comps  4 comps  5 comps\nX    38.31    60.16    70.84    79.03    84.29\ny    40.63    41.58    42.17    43.22    44.90\n\n\ncoefficients are in scaled unit, not original units."
+  },
+  {
+    "objectID": "slides/15-pca.html#other-dimension-reduction-latent-variable-methods",
+    "href": "slides/15-pca.html#other-dimension-reduction-latent-variable-methods",
+    "title": "Dimension Reduction \n",
+    "section": "Other Dimension Reduction (Latent Variable) Methods",
+    "text": "Other Dimension Reduction (Latent Variable) Methods\n\nKernel Principal Component Analysis https://ml-explained.com/blog/kernel-pca-explained\nProbabilistic PCA\nFactor Analysis\nAutoencoders\nt-SNE\n\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
     "objectID": "slides/11-knn.html#nonparametric-examplar-based-methods",
     "href": "slides/11-knn.html#nonparametric-examplar-based-methods",
     "title": "K-nearest Neighbors \n",
@@ -873,6 +1223,412 @@
     "title": "K-nearest Neighbors \n",
     "section": "Curse of Dimensionality",
     "text": "Curse of Dimensionality\n\nKNN does does not work well in high-dimensional space (\\(p \\gg n\\)) due to curse of dimensionality.\n\n\nAs \\(p\\) increases, it’s getting harder to find \\(k\\) neighbors in the input space. KNN needs to explore a large range of values along each input dimension to grab the “neighbors”.\n\n\nThe “neighbors” of \\(x_0\\) are in fact far away from \\(x_0\\), and so they may not be good predictors about the behavior of the function at \\(x_0\\).\nThe method is not local anymore despite the name “nearest neighbor”!\nIn high dimensions KNN often performs worse than linear regression."
+  },
+  {
+    "objectID": "slides/14-tree.html#tree-based-methods",
+    "href": "slides/14-tree.html#tree-based-methods",
+    "title": "Tree-based Methods \n",
+    "section": "Tree-based Methods",
+    "text": "Tree-based Methods\n\nCan be used for regression and classification.\nIDEA: Segmenting the predictor space into many simple regions.\nSimple, useful for interpretation, and has nice graphical representation.\nNot competitive with the best supervised learning approaches in terms of prediction accuracy. (Large bias)\nCombining a large number of trees (ensembles) often results in improvements in prediction accuracy, at the expense of some loss interpretation."
+  },
+  {
+    "objectID": "slides/14-tree.html#decision-trees-classification-and-regression-trees-cart",
+    "href": "slides/14-tree.html#decision-trees-classification-and-regression-trees-cart",
+    "title": "Tree-based Methods \n",
+    "section": "Decision Trees: Classification and Regression Trees (CART)",
+    "text": "Decision Trees: Classification and Regression Trees (CART)\n\nCART is a nonparametric method that recursively partitions the feature space into hyper-rectangular subsets (boxes), and make prediction on each subset.\nDivide the predictor space — the set of possible values for \\(X_1, X_2, \\dots, X_p\\) — into \\(J\\) distinct and non-overlapping regions, \\(R_1, R_2, \\dots, R_J\\).\n\n\n\n\n\n\n\nFor every test point that falls into the region \\(R_j\\) , we make the same prediction:\n\n\nRegression: the mean of the response values for the training points in \\(R_j\\).\n\nClassification: the most commonly occurring class of training points in \\(R_j\\)."
+  },
+  {
+    "objectID": "slides/14-tree.html#recursive-binary-splitting",
+    "href": "slides/14-tree.html#recursive-binary-splitting",
+    "title": "Tree-based Methods \n",
+    "section": "Recursive Binary Splitting",
+    "text": "Recursive Binary Splitting\n\nComputationally infeasible to consider every possible partition of the feature space into \\(J\\) boxes.\n\n\n\n\n\nThe recursive binary splitting is top-down and greedy:\n\n\nTop-down: begins at the top of the tree\n\nGreedy: at each step, the best split is made at that particular step, rather than looking ahead and picking a split that will lead to a better tree in some future step.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSelect \\(X_j\\) and a cutoff \\(s\\) so that splitting the predictor space into \\(\\{\\mathbf{X}\\mid X_j < s \\}\\) and \\(\\{\\mathbf{X}\\mid X_j \\ge s \\}\\) leads to the greatest possible reduction in\n\n\n\\(SS_{res}\\) for regression\n\nGini index, entropy or misclassification rate for classification\n\n\nRepeatedly split one of the two previously identified regions until a stopping criterion is reached.\n\nat each step of the tree-building process"
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree",
+    "href": "slides/14-tree.html#classification-tree",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\n\n\n\nKNN requires K and a distance measure.\nSVM requires kernels.\nTree solves this by recursively partitioning the feature space using a binary splitting rule \\(\\mathbf{1}\\{x \\le c \\}\\)\n0: Red; 1: Blue"
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-1",
+    "href": "slides/14-tree.html#classification-tree-1",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\n\n\n\nIf \\(x_2 < -0.64\\), \\(y = 0\\)."
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-2",
+    "href": "slides/14-tree.html#classification-tree-2",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\nIf \\(x_2 \\ge -0.64\\) and \\(x_1 \\ge 0.69\\), \\(y = 0\\)."
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-3",
+    "href": "slides/14-tree.html#classification-tree-3",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\nIf \\(x_2 \\ge -0.64\\), \\(x_1 < 0.69\\), and \\(x_2 \\ge 0.75\\), \\(y = 0\\)."
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-4",
+    "href": "slides/14-tree.html#classification-tree-4",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\nIf \\(x_2 \\ge -0.64\\), \\(x_1 < 0.69\\), \\(x_2 < 0.75\\), and \\(x_1 < -0.69\\), \\(y = 0\\)."
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-5",
+    "href": "slides/14-tree.html#classification-tree-5",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\nStep 5 may not be beneficial."
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-6",
+    "href": "slides/14-tree.html#classification-tree-6",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\nStep 6 may not be beneficial. (Could overfit)"
+  },
+  {
+    "objectID": "slides/14-tree.html#classification-tree-7",
+    "href": "slides/14-tree.html#classification-tree-7",
+    "title": "Tree-based Methods \n",
+    "section": "Classification Tree",
+    "text": "Classification Tree\nStep 7 may not be beneficial. (Could overfit)"
+  },
+  {
+    "objectID": "slides/14-tree.html#misclassification-rate",
+    "href": "slides/14-tree.html#misclassification-rate",
+    "title": "Tree-based Methods \n",
+    "section": "Misclassification Rate",
+    "text": "Misclassification Rate\n\nThe classification error rate is the fraction of the training observations in that region that do not belong to the most common class: \\[1 - \\max_{k} (\\hat{p}_{mk})\\] where \\(\\hat{p}_{mk}\\) is the proportion of training observations in the \\(m\\)th region that are from the \\(k\\)th class.\nClassification error is not sensitive for tree-growing.\nIdeally hope to have nodes (regions) including training points that belong to only one class."
+  },
+  {
+    "objectID": "slides/14-tree.html#gini-index-impurity",
+    "href": "slides/14-tree.html#gini-index-impurity",
+    "title": "Tree-based Methods \n",
+    "section": "Gini Index (Impurity)",
+    "text": "Gini Index (Impurity)\nThe Gini index is defined by\n\\[\\sum_{k=1}^K \\hat{p}_{mk}(1 - \\hat{p}_{mk})\\] which is a measure of total variance across the K classes.\n\nGini is small if all of the \\(\\hat{p}_{mk}\\)s are close to zero or one.\nNode purity: a small value indicates that a node contains predominantly observations from a single class."
+  },
+  {
+    "objectID": "slides/14-tree.html#shannon-entropy",
+    "href": "slides/14-tree.html#shannon-entropy",
+    "title": "Tree-based Methods \n",
+    "section": "Shannon Entropy",
+    "text": "Shannon Entropy\nThe Shannon entropy is defined as\n\\[- \\sum_{k=1}^K \\hat{p}_{mk} \\log(\\hat{p}_{mk}).\\] - The entropy is near zero if the \\(\\hat{p}_{mk}\\)s are all near zero or one.\n\nGini index and the entropy are similar numerically.\n\nAny of these three approaches might be used when pruning the tree, but the classification error rate is preferable if prediction accuracy of the final pruned tree is the goal."
+  },
+  {
+    "objectID": "slides/14-tree.html#comparing-measures",
+    "href": "slides/14-tree.html#comparing-measures",
+    "title": "Tree-based Methods \n",
+    "section": "Comparing Measures",
+    "text": "Comparing Measures\n\nMisclassification can be used for evaluating a tree, but may not be sensitive enough for building a tree.\n\n\nFor each quantity, smaller value means that the node is more “pure”, hence, there is a higher certainty when we predict a new value. The idea of splitting a node is that, we want the two resulting child node to contain less variation. In other words, we want each child node to be as “pure” as possible."
+  },
+  {
+    "objectID": "slides/14-tree.html#regression-tree",
+    "href": "slides/14-tree.html#regression-tree",
+    "title": "Tree-based Methods \n",
+    "section": "Regression Tree",
+    "text": "Regression Tree\nThe goal is to find boxes \\(R_1, \\dots ,R_J\\) that minimize the \\(SS_{res}\\), given by \\[\\sum_{j=1}^J\\sum_{i \\in R_j}\\left( y_i - \\hat{y}_{R_j}\\right)^2\\] where \\(\\hat{y}_{R_j}\\) is the mean response for the training observations within \\(R_j\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: ISL Fig 8.3"
+  },
+  {
+    "objectID": "slides/14-tree.html#tree-pruning",
+    "href": "slides/14-tree.html#tree-pruning",
+    "title": "Tree-based Methods \n",
+    "section": "Tree Pruning",
+    "text": "Tree Pruning\n\nUsing regression and classification performance measures to grow trees with no penalty on the tree size leads to overfitting.\n\n\n\n\nCost complexity pruning:\n\nGiven the largest tree \\(T_{max}\\),\n\\[\\begin{align}\n\\min_{T \\subset T_{max}} \\sum_{m=1}^{|T|}\\sum_{i:x_i\\in R_m} \\left( y_i - \\hat{y}_{R_m}\\right)^2 +  \\alpha|T|\n\\end{align}\\] where \\(|T|\\) indicates the number of terminal nodes of the tree \\(T\\).\n\nLarge \\(\\alpha\\) results in small trees\nChoose \\(\\alpha\\) using CV\nAlgorithm 8.1 in ISL for building a regression tree.\nReplace \\(SS_{res}\\) with misclassification rate for classification."
+  },
+  {
+    "objectID": "slides/14-tree.html#implementation",
+    "href": "slides/14-tree.html#implementation",
+    "title": "Tree-based Methods \n",
+    "section": "Implementation",
+    "text": "Implementation\n\nrpart::rpart()\n\n\nlibrary(rpart)\nrpart::rpart(formula = y ~ x1 + x2, data)\n\n\n\ntree::tree()\n\n\nlibrary(tree)\ntree::tree(formula = y ~ x1 + x2, data)\n\n\n\nsklearn tree\n\n\nfrom sklearn import tree\ndtc = tree.DecisionTreeClassifier()\ndtc = dtc.fit(X, y)\ndtr = tree.DecisionTreeRegressor()\ndtr = dtr.fit(X, y)"
+  },
+  {
+    "objectID": "slides/14-tree.html#trees-v.s.-linear-regression",
+    "href": "slides/14-tree.html#trees-v.s.-linear-regression",
+    "title": "Tree-based Methods \n",
+    "section": "Trees v.s. Linear Regression",
+    "text": "Trees v.s. Linear Regression\n\n\nLinear regression\n\\[f(X) = \\beta_0 + \\sum_{j=1}^pX_j\\beta_j\\]\n\nPerforms better when the relationship between \\(y\\) and \\(x\\) is approximately linear.\n\n\nRegression tree\n\\[f(X) = \\sum_{j=1}^J \\hat{y}_{R_j}\\mathbf{1}(\\mathbf{X}\\in R_j)\\]\n\nPerforms better when there is a highly nonlinear and complex relationship between \\(y\\) and \\(x\\).\nPreferred for interpretability and visualization."
+  },
+  {
+    "objectID": "slides/14-tree.html#trees-v.s.-linear-models",
+    "href": "slides/14-tree.html#trees-v.s.-linear-models",
+    "title": "Tree-based Methods \n",
+    "section": "Trees v.s. Linear Models",
+    "text": "Trees v.s. Linear Models\n\n\n\n\n\nSource: ISL Fig 8.7"
+  },
+  {
+    "objectID": "slides/14-tree.html#ensemble-methods",
+    "href": "slides/14-tree.html#ensemble-methods",
+    "title": "Tree-based Methods \n",
+    "section": "Ensemble Methods",
+    "text": "Ensemble Methods\n\nAn ensemble method combines many weak learners (unstable, less accurate) to obtain a single and powerful model.\nThe CARTs suffer from high variance.\nIf independent \\(Z_1, \\dots, Z_n\\) have variance \\(\\sigma^2\\), then \\(\\bar{Z}\\) has variance \\(\\sigma^2/n\\).\nAveraging a set of observations reduces variance!\n\n\nWith \\(B\\) separate training sets,\n\\[\\hat{f}_{avg}(x) = \\frac{1}{B}\\sum_{b=1}^B\\hat{f}_{b}(x)\\]"
+  },
+  {
+    "objectID": "slides/14-tree.html#bagging",
+    "href": "slides/14-tree.html#bagging",
+    "title": "Tree-based Methods \n",
+    "section": "Bagging",
+    "text": "Bagging\n\nBootstrap aggregation, or bagging is a procedure for reducing variance.\nGenerate \\(B\\) bootstrap samples by repeatedly sampling with replacement from the training set \\(B\\) times.\n\n\n\\[\\hat{f}_{bag}(x) = \\frac{1}{B}\\sum_{b=1}^B\\hat{f}^*_{b}(x)\\]\n\n\n\n\n\n\nSource: Wiki page of bootstrap aggregating\n\n\n\n\n\nBagging works for many regression methods, but it is particularly useful for decision trees."
+  },
+  {
+    "objectID": "slides/14-tree.html#bagging-on-decision-trees",
+    "href": "slides/14-tree.html#bagging-on-decision-trees",
+    "title": "Tree-based Methods \n",
+    "section": "Bagging on Decision Trees",
+    "text": "Bagging on Decision Trees\n\n\n\n\n\nSource: Wiki page of ensemble learning"
+  },
+  {
+    "objectID": "slides/14-tree.html#cart-v.s.-bagging",
+    "href": "slides/14-tree.html#cart-v.s.-bagging",
+    "title": "Tree-based Methods \n",
+    "section": "CART v.s. Bagging",
+    "text": "CART v.s. Bagging\n\nFor CART, the decision line has to be aligned to axis.\nFor Bagging, \\(B = 200\\) each having 400 training points. Boundaries are smoother."
+  },
+  {
+    "objectID": "slides/14-tree.html#notes-of-bagging",
+    "href": "slides/14-tree.html#notes-of-bagging",
+    "title": "Tree-based Methods \n",
+    "section": "Notes of Bagging",
+    "text": "Notes of Bagging\n\nUsing a very large \\(B\\) will not lead to overfitting.\nUse \\(B\\) sufficiently large that the error has settled down.\nBagging improves prediction accuracy at the expense of interpretability.\n\n\n\nWhen different trees are highly correlated, simply averaging is not very effective.\nIf there is one very strong predictor in the data set, in the collection of bagged trees, most or all of the trees will use this strong predictor in the top split. Therefore, all of the bagged trees will look quite similar to each other.\nThe predictions from the bagged trees will be highly correlated, and hence averaging does not lead to as large reduction in variance.\n\n\nUse many trees and averaging. It is no longer clear which variables are most important to the procedure.\nIf there is one very strong predictor in the data set, in the collection of bagged trees, most or all of the trees will use this strong predictor in the top split. Therefore, all of the bagged trees will look quite similar to each other.\nThe predictions from the bagged trees will be highly correlated, and hence averaging does not lead to as large reduction in variance."
+  },
+  {
+    "objectID": "slides/14-tree.html#random-forests",
+    "href": "slides/14-tree.html#random-forests",
+    "title": "Tree-based Methods \n",
+    "section": "Random Forests",
+    "text": "Random Forests\n\nRandom forests improve bagged trees by decorrelating the trees.\n\\(m\\) predictors are randomly sampled as split candidates from the \\(p\\) predictors.\n\n\n\n\n\n\nSource: Misra and Li in Machine Learning for Subsurface Characterization (2020)\n\n\n\n\n\n\nWhen building decision trees, each time a split in a tree is considered, a random sample of \\(m\\) predictors is chosen as split candidates from the full set of \\(p\\) predictors.\nThe split is allowed to use only one of those \\(m\\) predictors."
+  },
+  {
+    "objectID": "slides/14-tree.html#random-forests-1",
+    "href": "slides/14-tree.html#random-forests-1",
+    "title": "Tree-based Methods \n",
+    "section": "Random Forests",
+    "text": "Random Forests\n\n\\(m \\approx \\sqrt{p}\\) for classification; \\(m \\approx p/3\\) for regression.\nDecorrelating: on average \\((p − m)/p\\) of the splits will not even consider the strong predictor, and so other predictors will have more of a chance.\nIf \\(m = p\\), random forests = bagging.\nThe improvement is significant when \\(p\\) is large."
+  },
+  {
+    "objectID": "slides/14-tree.html#cart-vs.-bagging-vs.-random-forests",
+    "href": "slides/14-tree.html#cart-vs.-bagging-vs.-random-forests",
+    "title": "Tree-based Methods \n",
+    "section": "CART vs. Bagging vs. Random Forests",
+    "text": "CART vs. Bagging vs. Random Forests\n\n\nrandomForest::randomForest(x, y, mtry, ntree, nodesize, sampsize)"
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting",
+    "href": "slides/14-tree.html#boosting",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting",
+    "text": "Boosting\n\nBagging trees are built on bootstrap data sets, independent with each other.\nBoosting1 trees are grown sequentially: each tree is grown using information from previously grown trees.\nBoosting does not involve bootstrap sampling; instead each tree is fit on a modified version of the original data set, the residuals!\n\n\n\n\n\n\nSource: Fig. 12.1 of Hands-on Machine Learning with R\n\n\n\n\n\n\n\nBoosting can also be applied to many models, but most effectively applied to decision trees."
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting-1",
+    "href": "slides/14-tree.html#boosting-1",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting",
+    "text": "Boosting\n\nBase (weak) learners: Could any simple model (high-bias low-variance). Usually a decision tree.\nTraining weak models: Fit a (shallow) tree \\(\\hat{f}^b\\) with relatively few \\(d\\) splits\nSequential Training w.r.t. residuals: Fitting each tree in the sequence to the previous tree’s residuals.\n\nSuppose our final tree is \\(\\hat{f}(x)\\) that starts with \\(0\\).\n\nFit a decision tree \\(\\hat{f}^1\\) to \\(\\{ y_i \\}\\)\n\nGrow the tree: \\(\\hat{f}(x) = \\lambda\\hat{f}^1\\)\n\nFit the next decision tree \\(\\hat{f}^2\\) to the residuals of the previous fit \\(\\{ e^1_i\\} = \\{ y_i - \\lambda\\hat{f}^1(x_i)\\}\\)\n\nGrow the tree: \\(\\hat{f}(x) = \\lambda\\hat{f}^1 + \\lambda\\hat{f}^2\\)\n\nFit the next decision tree \\(\\hat{f}^3\\) to the residuals of the previous fit \\(\\{ e^2_i \\} = \\{ e^1_i - \\lambda\\hat{f}^2(x_i)\\}\\)\n\nGrow the tree: \\(\\hat{f}(x) = \\lambda\\hat{f}^1 + \\lambda\\hat{f}^2 + \\lambda\\hat{f}^3\\)"
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting-2",
+    "href": "slides/14-tree.html#boosting-2",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting",
+    "text": "Boosting\n\nThe final boosting tree is \\[\\hat{f}(x) = \\sum_{b=1}^B\\lambda\\hat{f}^b(x)\\]\n\nTuning parameters\n\nNumber of base trees \\(B\\): Large \\(B\\) can overfit. Use cross-validation to choose \\(B\\).\nNumber of base tree splits \\(d\\): Often \\(d=1\\) works well. The growth of a tree takes into account the other grown trees, so small trees are sufficient.\nShrinkage \\(\\lambda > 0\\): Controls the learning rate of boosting. Usual values are 0.01 or 0.001. Small \\(\\lambda\\) needs large \\(B\\)."
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting-for-classification",
+    "href": "slides/14-tree.html#boosting-for-classification",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting for Classification",
+    "text": "Boosting for Classification\n\n\ndistribution = \"bernoulli\": LogitBoost\n\n\n\ngbm.fit = gbm(y ~ ., data = data.frame(x1, x2, y), \n              distribution = \"bernoulli\", \n              n.trees = 10000, shrinkage = 0.01, bag.fraction = 0.6, \n              interaction.depth = 2, cv.folds = 10)"
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting-cross-validation",
+    "href": "slides/14-tree.html#boosting-cross-validation",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting Cross Validation",
+    "text": "Boosting Cross Validation\n\ngbm.perf(gbm.fit, method = \"cv\")\n\n\n[1] 1181"
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting-for-regression",
+    "href": "slides/14-tree.html#boosting-for-regression",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting for Regression",
+    "text": "Boosting for Regression\n\n\ngbm.fit <- gbm::gbm(y ~ x, data = data.frame(x, y), \n                    distribution = \"gaussian\", n.trees = 300,\n                    shrinkage = 0.5, bag.fraction = 0.8,\n                    cv.folds = 10)"
+  },
+  {
+    "objectID": "slides/14-tree.html#boosting-for-regression-1",
+    "href": "slides/14-tree.html#boosting-for-regression-1",
+    "title": "Tree-based Methods \n",
+    "section": "Boosting for Regression",
+    "text": "Boosting for Regression"
+  },
+  {
+    "objectID": "slides/14-tree.html#other-topics",
+    "href": "slides/14-tree.html#other-topics",
+    "title": "Tree-based Methods \n",
+    "section": "Other Topics",
+    "text": "Other Topics\n\n\nAdaBoost (Adaptive Boosting) gbm(y ~ ., distribution = \"adaboost\")\n\nGradient Boosting/Extreme Gradient Boosting (XGBoost) xgboost\n\nhttp://uc-r.github.io/gbm_regression\nhttps://xgboost.readthedocs.io/en/stable/R-package/xgboostPresentation.html\nhttps://github.com/dmlc/xgboost\nhttps://cran.r-project.org/web/packages/xgboost/xgboost.pdf\n\n\nBayesian Additive Regression Trees (BART) (ISL Sec. 8.2.4)\n\nhttps://jamleecute.web.app/gradient-boosting-machines-gbm/\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/13-svm.html#support-vector-machines-svms",
+    "href": "slides/13-svm.html#support-vector-machines-svms",
+    "title": "Support Vector Machines \n",
+    "section": "Support Vector Machines (SVMs)",
+    "text": "Support Vector Machines (SVMs)\n\nSVMs have been shown to perform well in a variety of settings, and are often considered one of the best “out of the box” classifiers.\nStart with the maximal margin classifier (1960s), then the support vector classifier (1990s), and then the support vector machine."
+  },
+  {
+    "objectID": "slides/13-svm.html#classifier",
+    "href": "slides/13-svm.html#classifier",
+    "title": "Support Vector Machines \n",
+    "section": "Classifier",
+    "text": "Classifier\n\n\\({\\cal D}_n = \\{\\mathbf{x}_i, y_i\\}_{i=1}^n\\)\nIn SVM, we code the binary outcome \\(y\\) as 1 or -1, representing one class and the other.\nThe goal is to find a linear classifier \\(f(\\mathbf{x}) = \\beta_0 + \\mathbf{x}' \\boldsymbol \\beta\\) so that the classification rule is the sign of \\(f(\\mathbf{x})\\):\n\n\\[\n\\hat{y} =\n\\begin{cases}\n        +1, \\quad \\text{if} \\quad f(\\mathbf{x}) > 0\\\\\n        -1, \\quad \\text{if} \\quad f(\\mathbf{x}) < 0\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/13-svm.html#separating-hyperplane",
+    "href": "slides/13-svm.html#separating-hyperplane",
+    "title": "Support Vector Machines \n",
+    "section": "Separating Hyperplane",
+    "text": "Separating Hyperplane\n\nThe \\(f(\\mathbf{x}) = \\beta_0 + \\mathbf{x}' \\boldsymbol \\beta= 0\\) is a hyperplane, which is a subspace of dimension \\(p-1\\) in the \\(p\\)-dimensional space.\n\\(f(\\mathbf{x}) = \\beta_0 + \\beta_1X_1+\\beta_2X_2 = 0\\) is a straight line (hyperplane of dimension one) in the 2-dimensional space.\nThe classification rule is \\(y_i f(\\mathbf{x}_i) >0\\)."
+  },
+  {
+    "objectID": "slides/13-svm.html#maximum-margin-classifier",
+    "href": "slides/13-svm.html#maximum-margin-classifier",
+    "title": "Support Vector Machines \n",
+    "section": "Maximum-margin Classifier",
+    "text": "Maximum-margin Classifier\n\nIf our data can be perfectly separated using a hyperplane, there exists an infinite number of such hyperplanes. But which one is the best?\nA natural choice is the maximal margin hyperplane (optimal separating hyperplane), which is the separating hyperplane that is farthest from the training points."
+  },
+  {
+    "objectID": "slides/13-svm.html#maximum-margin-classifier-1",
+    "href": "slides/13-svm.html#maximum-margin-classifier-1",
+    "title": "Support Vector Machines \n",
+    "section": "Maximum-margin Classifier",
+    "text": "Maximum-margin Classifier\n\nlibrary(e1071)\nsvm_fit <- svm(y ~ ., data = data.frame(x, y), type = 'C-classification', \n               kernel = 'linear', scale = FALSE, cost = 10000)\n\n\n\n\nHope the classifier will also have a large margin on the test data.\nIt can lead to overfitting when \\(p\\) is large.\n\nThe training points lied on the dashed lines are support vectors:\n\nif they were moved, then the maximal margin hyperplane would move too.\nthe maximal margin hyperplane depends directly on the support vectors, but not on the other observations.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe use the e1071 package to fit the SVM. There is a cost parameter C , with default value 1. This parameter has a significant impact on non-separable problems. However, for our separable case, we will set this to be a very large value, meaning that the cost for having a wrong classification is very large. We also need to specify the linear kernel.\n\nindex gives the index of all support vectors\ncoefs provides the yiαi for the support vectors\nSV are the xi values correspond to the support vectors\nrho is negative β0\n\nthey “support” the maximal margin hyperplane in the sense vector that if these points were moved slightly then the maximal margin hyperplane would move as well.\nhttps://afit-r.github.io/svm\nkernlab::ksvm()\nwe can compute the (perpendicular) distance from each training observation to a given separating hyperplane; the smallest such distance is the minimal distance from the observations to the hyperplane, and is known as the margin. The maximal margin hyperplane is the separating hyperplane for which the margin is margin largest—that is, it is the hyperplane that has the farthest minimum distance to the training observations.\n\nUse from sklearn import svm for Python implementation."
+  },
+  {
+    "objectID": "slides/13-svm.html#linearly-separable-svm",
+    "href": "slides/13-svm.html#linearly-separable-svm",
+    "title": "Support Vector Machines \n",
+    "section": "Linearly Separable SVM",
+    "text": "Linearly Separable SVM\nIn linear SVM, \\(f(\\mathbf{x}) = \\beta_0 + \\mathbf{x}' \\boldsymbol \\beta\\). When \\(f(\\mathbf{x}) = 0\\), it corresponds to a hyperplane that separates the two classes:\n\\[\\{ \\mathbf{x}: \\beta_0 + \\mathbf{x}'\\boldsymbol \\beta = 0 \\}\\]\n\nFor this separable case, all observations with \\(y_i = 1\\) are on one side \\(f(\\mathbf{x}) > 0\\), and observations with \\(y_i = -1\\) are on the other side.\nThe distance from any point \\(\\mathbf{x}_0\\) to the hyperplane is\n\n\\[\\frac{1}{\\lVert \\boldsymbol \\beta\\lVert} |f(\\mathbf{x}_0)|\\] For \\(p = 2\\), and the plane \\(\\beta_0 + \\beta_1 X_1 + \\beta_2X_2 = 0\\), the distance is \\[ \\frac{ |\\beta_0 + \\beta_1 x_{01} + \\beta_2x_{02}|}{\\sqrt{\\beta_1^2 + \\beta^2_2}}\\]"
+  },
+  {
+    "objectID": "slides/13-svm.html#optimization-for-linearly-separable-svm",
+    "href": "slides/13-svm.html#optimization-for-linearly-separable-svm",
+    "title": "Support Vector Machines \n",
+    "section": "Optimization for Linearly Separable SVM",
+    "text": "Optimization for Linearly Separable SVM\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta, \\beta_0}{\\text{max}} \\quad & M \\\\\n\\text{subject to} \\quad & \\frac{1}{\\lVert \\boldsymbol \\beta\\lVert} y_i(\\mathbf{x}' \\boldsymbol \\beta+ \\beta_0) \\geq M, \\,\\, i = 1, \\ldots, n.\n\\end{align}\\]\n\nThe constraint requires that each point be on the correct side of the hyperplane, with some cushion.\nNote that the scale of \\(\\boldsymbol \\beta\\) can be arbitrary, so just set it as \\(\\lVert \\boldsymbol \\beta\\rVert = 1\\):\n\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta, \\beta_0}{\\text{max}} \\quad & M \\\\\n\\text{subject to}\n\\quad & \\lVert \\boldsymbol \\beta\\lVert = 1, \\\\\n\\quad &  y_i(\\mathbf{x}' \\boldsymbol \\beta+ \\beta_0) \\geq M, \\,\\, i = 1, \\ldots, n.\n\\end{align}\\]\n\n\nHow to solve it? Learn it in MSSC 5650."
+  },
+  {
+    "objectID": "slides/13-svm.html#linearly-non-separable-svm-with-slack-variables",
+    "href": "slides/13-svm.html#linearly-non-separable-svm-with-slack-variables",
+    "title": "Support Vector Machines \n",
+    "section": "Linearly Non-separable SVM with Slack Variables",
+    "text": "Linearly Non-separable SVM with Slack Variables\n\nOften, no separating hyperplane exists, so there is no maximal margin classifier.\nThe previous optimization problem has no solution with \\(M > 0\\).\nIdea: develop a hyperplane that almost separates the classes, using a so-called soft margin: soft margin classifier."
+  },
+  {
+    "objectID": "slides/13-svm.html#why-linearly-non-separable-support-vector-classifier",
+    "href": "slides/13-svm.html#why-linearly-non-separable-support-vector-classifier",
+    "title": "Support Vector Machines \n",
+    "section": "Why Linearly Non-separable Support Vector Classifier",
+    "text": "Why Linearly Non-separable Support Vector Classifier\n\nEven if a separating hyperplane does exist, the maximum-margin classifier might not be desirable.\nThe maximal margin hyperplane is extremely sensitive to a change in a single observation: it may overfit the training data.\n\n\nSource: ISL Fig. 9.5"
+  },
+  {
+    "objectID": "slides/13-svm.html#soft-margin-classifier",
+    "href": "slides/13-svm.html#soft-margin-classifier",
+    "title": "Support Vector Machines \n",
+    "section": "Soft Margin Classifier",
+    "text": "Soft Margin Classifier\n\n\nConsider a classifier based on a hyperplane that does NOT perfectly separate the two classes, but\n\nGreater robustness to individual observations\nBetter classification of most of the training observations.\n\n\nIt could be worthwhile to misclassify a few training observations in order to do a better job in classifying the remaining observations.\nAllow some observations to be on the incorrect side of the margin, or even the incorrect side of the hyperplane (training points misclassified by the classifier).\n\n\nSource: ISL Fig. 9.6"
+  },
+  {
+    "objectID": "slides/13-svm.html#optimization-for-soft-margin-classifier",
+    "href": "slides/13-svm.html#optimization-for-soft-margin-classifier",
+    "title": "Support Vector Machines \n",
+    "section": "Optimization for Soft Margin Classifier",
+    "text": "Optimization for Soft Margin Classifier\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta, \\beta_0, \\epsilon_1, \\dots, \\epsilon_n}{\\text{max}} \\quad & M \\\\\n\\text{subject to}\n\\quad & \\lVert \\boldsymbol \\beta\\lVert = 1, \\\\\n\\quad &  y_i(\\mathbf{x}' \\boldsymbol \\beta+ \\beta_0) \\geq M(1 - \\epsilon_i), \\\\\n  \\quad & \\epsilon_i \\ge 0, \\sum_{i=1}^n\\epsilon_i \\le B, \\,\\, i = 1, \\ldots, n,\n\\end{align}\\] where \\(B > 0\\) is a tuning parameter.\n\n\n\\(\\epsilon_1, \\dots, \\epsilon_n\\) are slack variables that allow individual observations to be on slack the wrong side of the margin or the hyperplane.\n\n\n\\(\\epsilon_i = 0\\): the \\(i\\)th observation is on the correct side of the margin.\n\n\\(\\epsilon_i > 0\\): the \\(i\\)th observation is on the wrong side of the margin.\n\n\\(\\epsilon_i > 1\\): the \\(i\\)th observation is on the wrong side of the hyperplane.\n\n\n\n\ntells us where the \\(i\\)th observation is located, relative to the hyperplane and relative to the margin."
+  },
+  {
+    "objectID": "slides/13-svm.html#optimization-for-soft-margin-classifier-1",
+    "href": "slides/13-svm.html#optimization-for-soft-margin-classifier-1",
+    "title": "Support Vector Machines \n",
+    "section": "Optimization for Soft Margin Classifier",
+    "text": "Optimization for Soft Margin Classifier\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta, \\beta_0, \\epsilon_1, \\dots, \\epsilon_n}{\\text{max}} \\quad & M \\\\\n\\text{subject to}\n\\quad & \\lVert \\boldsymbol \\beta\\lVert = 1, \\\\\n\\quad &  y_i(\\mathbf{x}' \\boldsymbol \\beta+ \\beta_0) \\geq M(1 - \\epsilon_i), \\\\\n  \\quad & \\epsilon_i \\ge 0, \\sum_{i=1}^n\\epsilon_i \\le B, \\,\\, i = 1, \\ldots, n,\n\\end{align}\\] where \\(B > 0\\) is a tuning parameter.\n\n\n\\(B\\) determines the number and severity of the violations to the margin/hyperplane that we will tolerate.\n\n\n\\(B = 0\\): no budget for violations (\\(\\epsilon_1 = \\cdots = \\epsilon_n = 0\\))\n\n\\(B > 0\\): no more than \\(B\\) observations can be on the wrong side of the hyperplane. (\\(\\epsilon_i > 1\\))\nAs \\(B\\) increases, more violations and wider margin. (more bias less variance)\nChoose \\(B\\) via cross-validation.\n\n\n\nB as a budget for the amount that the margin can be violated by the n observations"
+  },
+  {
+    "objectID": "slides/13-svm.html#optimization-for-soft-margin-classifier-2",
+    "href": "slides/13-svm.html#optimization-for-soft-margin-classifier-2",
+    "title": "Support Vector Machines \n",
+    "section": "Optimization for Soft Margin Classifier",
+    "text": "Optimization for Soft Margin Classifier"
+  },
+  {
+    "objectID": "slides/13-svm.html#optimization-for-soft-margin-classifier-3",
+    "href": "slides/13-svm.html#optimization-for-soft-margin-classifier-3",
+    "title": "Support Vector Machines \n",
+    "section": "Optimization for Soft Margin Classifier",
+    "text": "Optimization for Soft Margin Classifier\n\n\n\n\n\n\nWarning\n\n\n\nThe argument cost in e1071::svm() is the \\(C\\) defined in the primal form \\[\\begin{align}\n\\text{min} \\quad & \\frac{1}{2}\\lVert \\boldsymbol \\beta\\rVert^2 + C \\sum_{i=1}^n \\epsilon_i \\\\\n\\text{s.t} \\quad & y_i (\\mathbf{x}_i' \\boldsymbol \\beta+ \\beta_0) \\geq (1 - \\epsilon_i), \\\\\n\\text{and} \\quad & \\epsilon_i \\geq 0, \\,\\, i = 1, \\ldots, n,\n\\end{align}\\]\n\nso small cost \\(C\\) means larger budget \\(B\\)."
+  },
+  {
+    "objectID": "slides/13-svm.html#svm-lda-and-logistic-regression",
+    "href": "slides/13-svm.html#svm-lda-and-logistic-regression",
+    "title": "Support Vector Machines \n",
+    "section": "SVM, LDA and Logistic Regression",
+    "text": "SVM, LDA and Logistic Regression\n\n\n\n\n\n\nNote\n\n\n\n\nSVM decision rule is based only on a small subset of the training observations (robust to the behavior of observations that are far away from the hyperplane.)\nLDA classification rule depends on the mean of all of the observations within each class, and within-class covariance matrix computed using all of the observations.\nLogistic regression, unlike LDA, has very low sensitivity to observations far from the decision boundary too."
+  },
+  {
+    "objectID": "slides/13-svm.html#classification-with-non-linear-decision-boundaries",
+    "href": "slides/13-svm.html#classification-with-non-linear-decision-boundaries",
+    "title": "Support Vector Machines \n",
+    "section": "Classification with Non-Linear Decision Boundaries",
+    "text": "Classification with Non-Linear Decision Boundaries\n\nThe soft margin classifier is a natural approach for classification in the two-class setting, if the boundary between the two classes is linear.\nIn practice we are often faced with non-linear class boundaries."
+  },
+  {
+    "objectID": "slides/13-svm.html#classification-with-non-linear-decision-boundaries-1",
+    "href": "slides/13-svm.html#classification-with-non-linear-decision-boundaries-1",
+    "title": "Support Vector Machines \n",
+    "section": "Classification with Non-Linear Decision Boundaries",
+    "text": "Classification with Non-Linear Decision Boundaries\n\nIn regression, we enlarge the feature space using functions of the predictors to address this non-linearity.\nIn SVM, we could address non-linear boundaries by enlarging the feature space.\nFor example, rather than fitting a support vector classifier using \\(p\\) features, \\(X_1, \\dots, X_p\\), we could instead fit a support vector classifier using \\(2p\\) features \\(X_1,X_1^2,X_2,X_2^2, \\dots , X_p, X_p^2\\).\n\n\n\n\\[\\begin{align}\n\\underset{\\beta_0, \\beta_{11}, \\beta_{12}, \\dots, \\beta_{p1}, \\beta_{p2}, \\epsilon_1, \\dots, \\epsilon_n}{\\text{max}} \\quad & M \\\\\n\\text{s.t.}\n\\quad &  y_i\\left(\\beta_0 + \\sum_{i = 1}^n \\beta_{j1}x_{ij} + \\sum_{i = 1}^n \\beta_{j2}x_{ij}^2\\right) \\geq M(1 - \\epsilon_i), \\\\\n  \\quad & \\epsilon_i \\ge 0, \\sum_{i=1}^n\\epsilon_i \\le B, \\,\\, i = 1, \\ldots, n,\\\\\n  \\quad & \\sum_{j=1}^p\\sum_{k=1}^2\\beta_{jk}^2 = 1.\n\\end{align}\\]\n\nIn the enlarged feature space, the decision boundary that results from (9.16) is in fact linear. But in the original feature space, the decision boundary is of the form q(x) = 0, where q is a quadratic polynomial, and its solutions are generally non-linear.\nThe support vector machine, which we present next, allows us to enlarge the feature space used by the support vector classifier in a way that leads to efficient computations"
+  },
+  {
+    "objectID": "slides/13-svm.html#nonlinear-svm-via-kernel-trick",
+    "href": "slides/13-svm.html#nonlinear-svm-via-kernel-trick",
+    "title": "Support Vector Machines \n",
+    "section": "Nonlinear SVM via Kernel Trick",
+    "text": "Nonlinear SVM via Kernel Trick\n\nThe support vector machine (SVM) is an extension of the support vector classifier that results from enlarging the feature space in a specific way, using kernels.\nThe kernel approach is an efficient computational approach for enlarging our feature space and non-linear boundary.\n\n\n\nThe solution to the support vector classifier optimization involves only the inner products of the observations: \\(\\langle \\mathbf{x}_i, \\mathbf{x}_{i'} \\rangle = \\sum_{j=1}^px_{ij}x_{i'j}\\)\nThe linear support vector classifier can be represented as \\[f(\\mathbf{x}) = \\beta_0 + \\sum_{i=1}^n\\alpha_i\\langle \\mathbf{x}, \\mathbf{x}_{i} \\rangle\\]\n\n\n\n\nTo train the parameters \\(\\alpha_i\\)s and \\(\\beta_0\\), all we need are the \\(n \\choose 2\\) inner products \\(\\langle \\mathbf{x}_i, \\mathbf{x}_{i'} \\rangle\\) between all pairs of training observations.\nTo evaluate the function \\(f(\\mathbf{x}_0)\\), we compute \\(\\langle \\mathbf{x}_0, \\mathbf{x}_{i} \\rangle\\)."
+  },
+  {
+    "objectID": "slides/13-svm.html#nonlinear-svm-via-kernel-trick-1",
+    "href": "slides/13-svm.html#nonlinear-svm-via-kernel-trick-1",
+    "title": "Support Vector Machines \n",
+    "section": "Nonlinear SVM via Kernel Trick",
+    "text": "Nonlinear SVM via Kernel Trick\n\n\n\\(\\alpha_i\\) is nonzero only for the support vectors in the solution\n\n\\[f(\\mathbf{x}) = \\beta_0 + \\sum_{i\\in \\mathcal{S}}\\alpha_i\\langle \\mathbf{x}, \\mathbf{x}_{i} \\rangle\\] where \\(\\mathcal{S}\\) is the collection of indices of these support points.\n\n\nKernel Trick:\n\n\\[f(\\mathbf{x}) = \\beta_0 + \\sum_{i\\in \\mathcal{S}}\\alpha_i K\\left(\\mathbf{x}, \\mathbf{x}_{i}\\right) \\]\n\nLinear kernel: \\(K\\left(\\mathbf{x}_0, \\mathbf{x}_{i}\\right) = \\langle \\mathbf{x}_0, \\mathbf{x}_{i'} \\rangle = \\sum_{j=1}^px_{0j}x_{i'j}\\)\nPolynomial kernel: \\(K\\left(\\mathbf{x}_0, \\mathbf{x}_{i}\\right) = \\left(1 + \\sum_{j=1}^px_{0j}x_{i'j}\\right)^d\\)\nRadial kernel: \\(K\\left(\\mathbf{x}_0, \\mathbf{x}_{i'}\\right) = \\exp \\left(-\\gamma\\sum_{j=1}^p (x_{0j}-x_{i'j})^2 \\right)\\)"
+  },
+  {
+    "objectID": "slides/13-svm.html#radial-kernel-decision-doundary",
+    "href": "slides/13-svm.html#radial-kernel-decision-doundary",
+    "title": "Support Vector Machines \n",
+    "section": "Radial Kernel Decision Doundary",
+    "text": "Radial Kernel Decision Doundary"
+  },
+  {
+    "objectID": "slides/13-svm.html#svm-as-a-penalized-model",
+    "href": "slides/13-svm.html#svm-as-a-penalized-model",
+    "title": "Support Vector Machines \n",
+    "section": "SVM as a Penalized Model",
+    "text": "SVM as a Penalized Model\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta, \\beta_0, \\epsilon_1, \\dots, \\epsilon_n}{\\text{max}} \\quad & M \\\\\n\\text{subject to}\n\\quad & \\lVert \\boldsymbol \\beta\\lVert = 1, \\\\\n\\quad &  y_i(\\mathbf{x}_i' \\boldsymbol \\beta+ \\beta_0) \\geq M(1 - \\epsilon_i), \\\\\n  \\quad & \\epsilon_i \\ge 0, \\sum_{i=1}^n\\epsilon_i \\le B, \\,\\, i = 1, \\ldots, n,\n\\end{align}\\]\n\n\\[\\begin{align}\n\\underset{\\boldsymbol \\beta, \\beta_0}{\\text{min}} \\left\\{ \\sum_{i=1}^n  \\max \\left[ 0, 1 - y_i (\\mathbf{x}_i' \\boldsymbol \\beta+ \\beta_0) \\right] + \\lambda \\lVert \\boldsymbol \\beta\\lVert ^ 2 \\right\\}\n\\end{align}\\] where \\(\\sum_{i=1}^n \\max \\left[ 0, 1 - y_i (\\mathbf{x}' \\boldsymbol \\beta+ \\beta_0) \\right]\\) is known as hinge loss.\n\nLarge \\(\\lambda\\) (large \\(B\\)): small \\(\\beta_j\\)s, high-bias and low-variance.\nSmall \\(\\lambda\\) (small \\(B\\)): low-bias and high-variance."
+  },
+  {
+    "objectID": "slides/13-svm.html#loss-functions",
+    "href": "slides/13-svm.html#loss-functions",
+    "title": "Support Vector Machines \n",
+    "section": "Loss Functions",
+    "text": "Loss Functions\n\n\n\nThe hinge loss is zero for observations for which \\(y_i (\\mathbf{x}' \\boldsymbol \\beta+ \\beta_0) \\ge 1\\) (correct side of the margin).\nThe logistic loss is not zero anywhere.\nSVM is better when classes are well separated.\nLogistic regression is preferred in more overlapping regimes.\n\n\n\n\n\n\n\n\n\n\n\n\n, but small for points far from the boundary.\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "slides/03-bias-var.html#supervised-learning-1",
@@ -2525,6 +3281,202 @@
     "title": "Generalized Linear Models \n",
     "section": "Other Topics",
     "text": "Other Topics\n\nRepeated measures and binomial logistic regression (MSSC 5780)\nRegression diagnostics for binary data\nPenalized logistic regression\nExponential family\nPoisson regression\n\nhttps://grodri.github.io/glms/\nhttps://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/\nhttps://glmnet.stanford.edu/articles/glmnet.html\n\n\n\nmssc6250-s24.github.io/website"
+  },
+  {
+    "objectID": "slides/12-gp.html#univariate-guassian",
+    "href": "slides/12-gp.html#univariate-guassian",
+    "title": "Gaussian Processes ♾️",
+    "section": "Univariate Guassian",
+    "text": "Univariate Guassian\n\n\\(Y \\sim N(\\mu, \\sigma^2)\\)"
+  },
+  {
+    "objectID": "slides/12-gp.html#multivariate-guassian",
+    "href": "slides/12-gp.html#multivariate-guassian",
+    "title": "Gaussian Processes ♾️",
+    "section": "Multivariate Guassian",
+    "text": "Multivariate Guassian\n\n“Multivariate” \\(=\\) two or more random variables\n\\(\\mathbf{Y}\\in \\mathbb{R}^d \\sim N_d\\left(\\boldsymbol \\mu, \\boldsymbol \\Sigma\\right)\\)\n\n\n\nBivariate Gaussian (\\(d=2\\)):\n\n\\[\\mathbf{Y}= \\begin{pmatrix} Y_1 \\\\ Y_2 \\end{pmatrix}\\] \\[\\boldsymbol \\mu= \\begin{pmatrix} \\mu_1 \\\\ \\mu_2 \\end{pmatrix}\\] \\[\\boldsymbol \\Sigma= \\begin{pmatrix} \\sigma_1^2  & \\rho_{12}\\sigma_1\\sigma_2\\\\ \\rho_{12}\\sigma_1\\sigma_2 & \\sigma_2^2 \\end{pmatrix}\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#section-1",
+    "href": "slides/12-gp.html#section-1",
+    "title": "Gaussian Processes ♾️",
+    "section": "",
+    "text": "\\[\\boldsymbol \\mu= \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}\\] \\[\\boldsymbol \\Sigma= \\begin{pmatrix}1 & 0\\\\ 0 & 1 \\end{pmatrix}\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#section-2",
+    "href": "slides/12-gp.html#section-2",
+    "title": "Gaussian Processes ♾️",
+    "section": "",
+    "text": "\\[\\boldsymbol \\mu= \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\] \\[\\boldsymbol \\Sigma= \\begin{pmatrix}1 & 0\\\\ 0 & 0.2 \\end{pmatrix}\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#section-3",
+    "href": "slides/12-gp.html#section-3",
+    "title": "Gaussian Processes ♾️",
+    "section": "",
+    "text": "\\[\\boldsymbol \\mu= \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}\\] \\[\\boldsymbol \\Sigma= \\begin{pmatrix}1 & 0.9\\\\ 0.9 & 1 \\end{pmatrix}\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#three-or-more-variables",
+    "href": "slides/12-gp.html#three-or-more-variables",
+    "title": "Gaussian Processes ♾️",
+    "section": "Three or More Variables",
+    "text": "Three or More Variables\n\nHard to visualize in dimensions \\(> 2\\), so stack points next to each other.\n\n\ny1 and y2 are highly correlated, y1 and y2 have similar values, and so when we put them next to each other, the lines do not go up or down that much. Instead, the lines are quite horizontal."
+  },
+  {
+    "objectID": "slides/12-gp.html#section-4",
+    "href": "slides/12-gp.html#section-4",
+    "title": "Gaussian Processes ♾️",
+    "section": "",
+    "text": "\\(d = 5\\)\n\n\\[\\boldsymbol \\mu= \\begin{pmatrix} 0 \\\\ 0 \\\\ 0\\\\0\\\\0\\end{pmatrix} \\quad \\quad \\boldsymbol \\Sigma= \\begin{pmatrix}1 & 0.99 & 0.98 & 0.97 & 0.96\\\\ 0.99 & 1 & 0.99 & 0.98 & 0.97 \\\\ 0.98 & 0.99 & 1 & 0.99 & 0.98 \\\\ 0.97 & 0.98 & 0.97 & 1 & 0.99\\\\0.96 & 0.97 & 0.98 & 0.99 & 1\n\\end{pmatrix}\\]\n\n\nEach line is one sample (path)."
+  },
+  {
+    "objectID": "slides/12-gp.html#section-5",
+    "href": "slides/12-gp.html#section-5",
+    "title": "Gaussian Processes ♾️",
+    "section": "",
+    "text": "\\(d = 50\\)\n\n\\[\\boldsymbol \\mu= \\begin{pmatrix} 0 \\\\ 0 \\\\ \\vdots \\\\0\\\\0\\end{pmatrix} \\quad \\quad \\boldsymbol \\Sigma= \\begin{pmatrix}\n1 & 0.99 & 0.98 & 0.97 & 0.96 & \\cdots \\\\\n0.99 & 1 & 0.99 & 0.98 & 0.97 & \\cdots\\\\\n0.98 & 0.99 & 1 & 0.99 & 0.98 & \\cdots\\\\\n0.97 & 0.98 & 0.97 & 1 & 0.99 & \\cdots\\\\\n0.96 & 0.97 & 0.98 & 0.99 & 1 & \\cdots \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots &  \\vdots &\n\\end{pmatrix}\\]\n\n\nEach line is one sample (path).\n\nThink of Gaussian processes as an infinite dimensional distribution over functions\n\nall we need to do is change notation"
+  },
+  {
+    "objectID": "slides/12-gp.html#gaussian-processes-1",
+    "href": "slides/12-gp.html#gaussian-processes-1",
+    "title": "Gaussian Processes ♾️",
+    "section": "Gaussian Processes",
+    "text": "Gaussian Processes\n\nA stochastic process \\(f(x), x \\in \\mathcal{X} \\subset \\mathbb{R}^D\\), is a function whose values are random variables, for any value of \\(x\\).\nUsually for \\(D = 1\\), the process is a temporal process, and for \\(D > 1\\), it is referred to as a spatial process.\n\n\n\nA Gaussian process (GP) is a process where all finite-dimensional distributions are multivariate Gaussian, for any choice of \\(n\\) and \\(x_1\\dots, x_n \\in \\mathbb{R}^D\\):\n\n\\[f(x_1), \\dots, f(x_n) \\sim N_n\\left(\\boldsymbol \\mu, \\boldsymbol \\Sigma\\right)\\]\n\nWrite \\(Y(\\cdot) \\sim GP\\) to denote that the function \\(Y\\) is a GP."
+  },
+  {
+    "objectID": "slides/12-gp.html#mean-and-covariance-function",
+    "href": "slides/12-gp.html#mean-and-covariance-function",
+    "title": "Gaussian Processes ♾️",
+    "section": "Mean and Covariance Function",
+    "text": "Mean and Covariance Function\n\nTo fully specify a Gaussian distribution we need the mean and covariance, \\(Y \\sim N(\\mu, \\Sigma)\\)\n\n\n\n\nTo fully specify a Gaussian process we need the mean and covariance function, \\[f(\\cdot) \\sim GP\\left(m(\\cdot), k(\\cdot, \\cdot)\\right)\\] where\n\n\\[\\text{E}(f(x)) = m(x)\\] \\[\\text{Cov}(f(x), f(x')) = k(x, x')\\]\n\n\n\nPopular choices of \\(m(\\cdot)\\) are \\(m(x) = 0\\) or \\(m(x) = \\text{const}\\) for all \\(x\\), or \\(m(x) = \\beta'x\\)\nCare more about the covariance function or kernel function as it governs the how the process looks like by defining the similarity between data points."
+  },
+  {
+    "objectID": "slides/12-gp.html#covariance-function-kernel",
+    "href": "slides/12-gp.html#covariance-function-kernel",
+    "title": "Gaussian Processes ♾️",
+    "section": "Covariance Function Kernel",
+    "text": "Covariance Function Kernel\n\\[\\text{Cov}(f(x), f(x')) = k(x, x')\\]\n\n\n\\(k(x, x')\\) must be a positive semi-definite function, leading to valid covariance matrices:\n\nGiven locations \\(x_1, \\dots, x_n\\), the \\(n \\times n\\) Gram matrix \\(K\\) with \\(K_{ij} = k(x_i, x_j)\\) must be a positive semi-definite matrix.\n\n\n\n\n\n\n\nOften assume \\(k(x, x')\\) is a function of only the distance between locations: \\[\\text{Cov}(f(x), f(x')) = k(\\|x-x'\\|) = k(r)\\]\n\nthe GP is a stationary process.\nthe covariance function is isotropic.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe covariance function determines the nature of the GP, hypothesis space of functions."
+  },
+  {
+    "objectID": "slides/12-gp.html#squared-exponential-se-kernel",
+    "href": "slides/12-gp.html#squared-exponential-se-kernel",
+    "title": "Gaussian Processes ♾️",
+    "section": "Squared Exponential (SE) Kernel",
+    "text": "Squared Exponential (SE) Kernel\n\\[k(x, x' \\mid \\tau, h) = \\tau^2 \\exp\\left(-\\frac{(x - x')^2}{2h^2} \\right)\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\[k(x, x') = \\exp\\left(-\\frac{1}{2}(x - x')^2 \\right)\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#squared-exponential-se-kernel-1",
+    "href": "slides/12-gp.html#squared-exponential-se-kernel-1",
+    "title": "Gaussian Processes ♾️",
+    "section": "Squared Exponential (SE) Kernel",
+    "text": "Squared Exponential (SE) Kernel\n\n\n\n\n\n\n\n\n\n\n\n\\[k(x, x') = \\exp\\left(-\\frac{1}{2}\\frac{(x - x')^2}{ {\\color{red}{0.25}}^2} \\right)\\]\n\nThe parameter \\(h\\) is the characteristic length-scale that controls the number of level-zero upcrossings."
+  },
+  {
+    "objectID": "slides/12-gp.html#squared-exponential-se-kernel-2",
+    "href": "slides/12-gp.html#squared-exponential-se-kernel-2",
+    "title": "Gaussian Processes ♾️",
+    "section": "Squared Exponential (SE) Kernel",
+    "text": "Squared Exponential (SE) Kernel\n\n\n\n\n\n\n\n\n\n\n\n\\[k(x, x') = \\exp\\left(-\\frac{1}{2}\\frac{(x - x')^2}{ {\\color{red}{4}}^2} \\right)\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#squared-exponential-se-kernel-3",
+    "href": "slides/12-gp.html#squared-exponential-se-kernel-3",
+    "title": "Gaussian Processes ♾️",
+    "section": "Squared Exponential (SE) Kernel",
+    "text": "Squared Exponential (SE) Kernel\n\n\n\n\n\n\n\n\n\n\n\n\\[k(x, x') = {\\color{red}{10^2}}\\exp\\left(-\\frac{1}{2}(x - x')^2 \\right)\\]\n\nThe parameter \\(\\tau\\) is the variance of \\(f(x)\\) that controls the vertical variation of the process."
+  },
+  {
+    "objectID": "slides/12-gp.html#exponential-kernel",
+    "href": "slides/12-gp.html#exponential-kernel",
+    "title": "Gaussian Processes ♾️",
+    "section": "Exponential Kernel",
+    "text": "Exponential Kernel\n\\[k(x, x' \\mid \\tau, h) = \\tau^2 \\exp\\left(-\\frac{|x - x'|}{h} \\right)\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#brownian-motion",
+    "href": "slides/12-gp.html#brownian-motion",
+    "title": "Gaussian Processes ♾️",
+    "section": "Brownian Motion",
+    "text": "Brownian Motion\n\\[k(x, x') = \\min(x, x')\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#white-noise",
+    "href": "slides/12-gp.html#white-noise",
+    "title": "Gaussian Processes ♾️",
+    "section": "White Noise",
+    "text": "White Noise\n\\[k(x, x') = \\begin{cases} 1 & \\quad \\text{if } x = x' \\\\\n0 & \\quad \\text{otherwise}\n\\end{cases}\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#why-gp",
+    "href": "slides/12-gp.html#why-gp",
+    "title": "Gaussian Processes ♾️",
+    "section": "Why GP?",
+    "text": "Why GP?\n\nThe GP inherits its properties primarily from the covariance function \\(k\\):\n\nSmoothness\nDifferentiability\nVariance\n\n\n\n\n\nSums of Gaussians are Gaussian.\n\n\n\n\nMarginal distributions of multivariate Gaussians are still Gaussian.\n\n\n\n\nAny affine transformation of a Gaussian is a Gaussian.\n\n\n\n\nConditional distributions are still Gaussian.\n\n\n\\[\\mathbf{Y}= \\begin{pmatrix} \\mathbf{Y}_1 \\\\ \\mathbf{Y}_2 \\end{pmatrix} \\sim N\\left(\\boldsymbol \\mu,  \\boldsymbol \\Sigma\\right), \\quad \\boldsymbol \\mu= \\begin{pmatrix} \\boldsymbol \\mu_1 \\\\ \\boldsymbol \\mu_2 \\end{pmatrix},  \\quad \\boldsymbol \\Sigma= \\begin{pmatrix} \\Sigma_{11}  & \\Sigma_{12}\\\\ \\Sigma_{21} & \\Sigma_{22} \\end{pmatrix}\\] \\[(\\mathbf{Y}_2 \\mid \\mathbf{y}_1 = \\mathbf{y}_1) \\sim N\\left(\\boldsymbol \\mu_2 + \\Sigma_{21} \\Sigma_{11}^{-1} (\\mathbf{y}_1 - \\boldsymbol \\mu_1), \\Sigma_{22} - \\Sigma_{21}\\Sigma_{11}^{-1}\\Sigma_{12}\\right)\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#conditional-updates-of-gaussian-processes",
+    "href": "slides/12-gp.html#conditional-updates-of-gaussian-processes",
+    "title": "Gaussian Processes ♾️",
+    "section": "Conditional Updates of Gaussian Processes",
+    "text": "Conditional Updates of Gaussian Processes\n\nIf \\(f(\\cdot) \\sim GP\\),\n\n\\[f(x_1), \\dots, f(x_n), f(x) \\sim N(\\boldsymbol \\mu, \\boldsymbol \\Sigma)\\]\n\nIf we observe its value at \\(x_1, \\dots, x_n\\), then\n\n\\[f(x) \\mid f(x_1), \\dots, f(x_n) \\sim N(\\boldsymbol \\mu^*, \\boldsymbol \\Sigma^*)\\] where \\(\\boldsymbol \\mu^*\\) and \\(\\boldsymbol \\Sigma^*\\) are as on the previous slide.\n\nWe still believe \\(f\\) is a GP even we’ve observed its value at a number of locations."
+  },
+  {
+    "objectID": "slides/12-gp.html#bayesian-conditioning-updates-of-gp-prior",
+    "href": "slides/12-gp.html#bayesian-conditioning-updates-of-gp-prior",
+    "title": "Gaussian Processes ♾️",
+    "section": "Bayesian Conditioning Updates of GP: Prior",
+    "text": "Bayesian Conditioning Updates of GP: Prior\n\nInstead of assigning priors to parameters in the regression function, we assign a function prior to the regression function:\n\n\\[f(\\cdot) \\sim GP(0, k(\\cdot, \\cdot))\\]\n\nFor any points \\(x_1, \\dots, x_n, x^*\\),\n\n\\[f(x_1), \\dots, f(x_n), f(x^*) \\sim N\\left(0, \\boldsymbol \\Sigma\\right)\\]\n\\[\\boldsymbol \\Sigma= \\left(\\begin{array}{ccc|c}\nk(x_1, x_1) & \\cdots & k(x_1, x_n) & k(x_1, x^*) \\\\\n\\vdots &  & \\vdots & \\vdots \\\\\nk(x_n, x_1) & \\cdots & k(x_n, x_n) & k(x_n, x^*) \\\\\n\\hline\nk(x^*, x_1) & \\cdots & k(x^*, x_n) & k(x^*, x^*)\n\\end{array} \\right) =\n\\left(\\begin{array}{ccc|c}\n&  &  &  \\\\\n& K &  & K_* \\\\\n&  &  &  \\\\\n\\hline\n& K_*^T &  & K_{**}\n\\end{array} \\right) \\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#bayesian-conditioning-updates-of-gp-posterior",
+    "href": "slides/12-gp.html#bayesian-conditioning-updates-of-gp-posterior",
+    "title": "Gaussian Processes ♾️",
+    "section": "Bayesian Conditioning Updates of GP: Posterior",
+    "text": "Bayesian Conditioning Updates of GP: Posterior\n\nGiven observed information \\(f(x_1), \\dots, f(x_n)\\)\n\n\n\\[f(x^*) \\mid f(x_1), \\dots, f(x_n) \\sim N\\left( \\boldsymbol \\mu^*, \\boldsymbol \\Sigma^*\\right)\\] where\n\\[\\boldsymbol \\mu^* = K_{*}^TK^{-1}{\\bf f}\\] with \\({\\bf f} = \\left(f(x_1), \\dots, f(x_n)\\right)^T\\)\n\\[\\boldsymbol \\Sigma^* = K_{**} - K_{*}^TK^{-1}K_{*}\\]"
+  },
+  {
+    "objectID": "slides/12-gp.html#no-noisenugget---interpolation",
+    "href": "slides/12-gp.html#no-noisenugget---interpolation",
+    "title": "Gaussian Processes ♾️",
+    "section": "No Noise/Nugget - Interpolation",
+    "text": "No Noise/Nugget - Interpolation\n\n\n—–: posterior mean \\(\\boldsymbol \\mu^*\\)\n—–: 95% posterior predictive interval \\(\\boldsymbol \\mu^* \\pm 1.96 \\boldsymbol \\Sigma^*\\)\nSo far we treat \\(f(x)\\), the function values as data points.\nThere is no noise, and every posterior curve interpolates data points."
+  },
+  {
+    "objectID": "slides/12-gp.html#noisy-observationswith-nugget---gp-regression-gpr",
+    "href": "slides/12-gp.html#noisy-observationswith-nugget---gp-regression-gpr",
+    "title": "Gaussian Processes ♾️",
+    "section": "Noisy Observations/with Nugget - GP Regression (GPR)",
+    "text": "Noisy Observations/with Nugget - GP Regression (GPR)\n\nIn reality, we don’t or can’t observe \\(f(x)\\) and like to estimate it.\n\n\\[\\begin{align} y_i &= f(x_i) + \\epsilon_i, \\quad \\epsilon_i\\sim N(0, \\sigma^2) \\\\\nf(\\cdot) &\\sim GP(0, k(\\cdot, \\cdot; \\theta))\\end{align}\\]\n\n$$$$\n\\[y_1, \\dots, y_n, f(x^*) \\sim N\\left(0, \\boldsymbol \\Sigma\\right), \\quad \\boldsymbol \\Sigma=\n\\left(\\begin{array}{ccc|c}\n&  &  &  \\\\\n& K + \\sigma^2I &  & K_* \\\\\n&  &  &  \\\\\n\\hline\n& K_*^T &  & K_{**}\n\\end{array} \\right) \\]\n\n\n\\[f(x^*) \\mid y_1, \\dots, y_n \\sim N\\left( \\boldsymbol \\mu^*, \\boldsymbol \\Sigma^*\\right), \\quad \\boldsymbol \\mu^* = K_{*}^T{\\color{red}{(K + \\sigma^2I)^{-1}}}{\\bf y}, \\quad \\boldsymbol \\Sigma^* = K_{**} - K_{*}^T{\\color{red}{(K + \\sigma^2I)^{-1}}}K_{*}\\] with \\({\\bf y} = \\left(y_1, \\dots, y_n\\right)^T\\)"
+  },
+  {
+    "objectID": "slides/12-gp.html#noisy-observationswith-nugget---gp-regression-gpr-1",
+    "href": "slides/12-gp.html#noisy-observationswith-nugget---gp-regression-gpr-1",
+    "title": "Gaussian Processes ♾️",
+    "section": "Noisy Observations/with Nugget - GP Regression (GPR)",
+    "text": "Noisy Observations/with Nugget - GP Regression (GPR)"
+  },
+  {
+    "objectID": "slides/12-gp.html#hyperparameter-tuning",
+    "href": "slides/12-gp.html#hyperparameter-tuning",
+    "title": "Gaussian Processes ♾️",
+    "section": "Hyperparameter Tuning",
+    "text": "Hyperparameter Tuning"
+  },
+  {
+    "objectID": "slides/12-gp.html#empirical-bayes",
+    "href": "slides/12-gp.html#empirical-bayes",
+    "title": "Gaussian Processes ♾️",
+    "section": "Empirical Bayes",
+    "text": "Empirical Bayes\n\nUses the observed data to estimate parameters \\(\\theta = (\\sigma^2, \\tau^2, h)\\)\nFind an empirical Bayes estimate for \\(\\theta\\) from the marginal likelihood\n\n\\[ p\\left( \\mathbf{y}\\mid \\theta \\right) = \\int p\\left( \\mathbf{y}\\mid {\\bf f} \\right) p\\left( {\\bf f} \\mid \\theta \\right) \\, d {\\bf f} = N\\left(\\mathbf{0}, K(\\tau, h)+\\sigma^2I \\right)\\]\n\n\n\\(\\hat{\\theta}_{EB} = \\mathop{\\mathrm{arg\\,max}}_{\\theta}\\log p\\left( \\mathbf{y}\\mid \\theta \\right)\\)."
+  },
+  {
+    "objectID": "slides/12-gp.html#full-bayesian-inference",
+    "href": "slides/12-gp.html#full-bayesian-inference",
+    "title": "Gaussian Processes ♾️",
+    "section": "Full Bayesian Inference",
+    "text": "Full Bayesian Inference\n\\[\\begin{align}\ny_i &= f(x_i) + \\epsilon_i, \\, \\, \\epsilon_i \\stackrel{\\rm iid}{\\sim} N(0, \\sigma^2), \\quad i = 1, \\dots, n,\\\\\nf(\\cdot) &\\sim GP\\left(\\mu, k(\\cdot, \\cdot)\\right),\\,\\, \\text{Cov}(f(x_i), f(x_j)) = k(x_i, x_j)\\\\\n\\sigma^2 &\\sim IG(a_{\\sigma}, b_{\\sigma})\\\\\n\\tau^2 &\\sim IG(a_{\\tau}, b_{\\tau})\\\\\nh &\\sim Ga(a_{h}, b_{h})\\\\\n\\mu & \\sim N(0, b_{\\mu})\n\\end{align}\\]\n\nThe model is Gibbsable, or the Metropolis-Hastings algorithm can be used when \\({\\bf f}\\) is integrated out."
   },
   {
     "objectID": "slides/05-ridge-cv.html#when-ordinary-least-squares-ols-doesnt-work-well-collinearity",
