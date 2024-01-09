@@ -1,6 +1,6 @@
 ---
 title: "Week 8"
-subtitle: "Data Wrangling"
+subtitle: "Generative Models"
 editor: visual
 ---
 
@@ -9,46 +9,27 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Data Wrangling - two data frames](/slides/13-dplyr-2.html)
+🖥️ [Slides - Generative Models](/slides/10-generative.html)
 
-🖥️ [Slides - Tidying Data](/slides/14-tidyr.html)
-
-`r fontawesome::fa("table")` Data - Pop_x and elec_vote_y
-
-```{r}
-#| eval: false
-library(tidyverse)
-library(dslabs)
-pop_x <- murders |> 
-    slice(1:6) |>
-    select(state, population)
-
-elec_vote_y <- results_us_election_2016 |> 
-    filter(state %in% c("Alabama", "Alaska", "Arizona", 
-                        "California", "Connecticut", "Delaware")) |> 
-    select(state, electoral_votes) |> 
-    rename(elec_vote = electoral_votes)
-```
-
-`r fontawesome::fa("table")` [Data - Customers](/slides/data/sales/customers.csv)
+`r fontawesome::fa("table")` ISLR2::Default
 
 ## Reading and Resources
 
-📖 [R for Data Science - Joins](https://r4ds.hadley.nz/joins)
+📖 [ISL Ch 4.4, 4.5](https://www.statlearning.com/)
 
-📖 [R for Data Science - Data tidying](https://r4ds.hadley.nz/data-tidy)
+
 
 ## Exercise
 
-📋 [Lab-16 Joining tables](/exercise/lab16-join.html)
+<!-- 📋 [Lab-16 Joining tables](/exercise/lab16-join.html) -->
 
-`r fontawesome::fa("table")` <https://www.jaredlander.com/data/DiamondColors.csv>
+<!-- `r fontawesome::fa("table")` <https://www.jaredlander.com/data/DiamondColors.csv> -->
 
-`r fontawesome::fa("table")` **`ggplot2::diamonds`**
+<!-- `r fontawesome::fa("table")` **`ggplot2::diamonds`** -->
 
-📋 [Lab-17 tidyr](/exercise/lab17-tidyr.html)
+<!-- 📋 [Lab-17 tidyr](/exercise/lab17-tidyr.html) -->
 
-`r fontawesome::fa("table")` [trump.csv](/slides/data/trump.csv)
+<!-- `r fontawesome::fa("table")` [trump.csv](/slides/data/trump.csv) -->
 
 <br><br>
 

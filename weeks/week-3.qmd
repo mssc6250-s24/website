@@ -1,20 +1,19 @@
 ---
 title: "Week 3"
-subtitle: "R/Python Syntax"
+subtitle: "Ridge Regression and Cross-Validation"
 editor: visual
 ---
 
 ::: callout-important
--   Presenting Lab 07-Plotting for extra points!
 :::
 
 ## Participate
 
-<!-- 🖥️ [Slides - R/Python Syntax](/slides/06-syntax.html) -->
+🖥️ [Slides - Ridge Regression and Cross Validation](/slides/05-ridge-cv.html)
 
 ## Reading and Resources
 
-<!-- 📖 [The R Graph Gallery](https://www.r-graph-gallery.com/) -->
+📖 [ISL Ch 5.1, 6.2.1](https://www.statlearning.com/)
 
 <!-- 📖 [matplotlib](https://matplotlib.org/stable/plot_types/index.html) -->
 

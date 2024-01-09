@@ -884,8 +884,9 @@ $$\pi_{ik} = \dfrac{e^{\eta_{ik}}}{\sum_{l=1}^{K}e^{\eta_{il}}};  \left(\pi_{iK}
 
 
 
-## Multinomial Data `multino_data`
+## Multinomial Data `hsbdemo.dta`
 ```{r}
+#| echo: true
 multino_data <- foreign::read.dta("./data/hsbdemo.dta")
 glimpse(as_tibble(multino_data) |> select(prog, ses, write))
 ```

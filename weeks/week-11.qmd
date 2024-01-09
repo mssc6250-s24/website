@@ -1,6 +1,6 @@
 ---
 title: "Week 11"
-subtitle: "Linear Regression"
+subtitle: "Gaussian Processes"
 editor: visual
 ---
 
@@ -9,13 +9,21 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Linear Regression](/slides/16-linear-reg.html)
+🖥️ [Slides - Gaussian Processes](/slides/12-gp.html)
 
-`r fontawesome::fa("table")` `ggplot2::mpg`
+
+## Reading and Resources
+
+📖 [Gaussian Processes for Machine Learning (GPML) Ch 2](https://gaussianprocess.org/gpml/chapters/)
+
+📖 [Surrogates Ch 5](https://bookdown.org/rbg/surrogates/chap5.html)
+
+📖 [PMLI Ch 17.2](https://probml.github.io/pml-book/book1.html)
+
 
 ## Exercise
 
-📋 [Lab-20 Simple Linear Regression](/exercise/lab20-slr.html)
+<!-- 📋 [Lab-20 Simple Linear Regression](/exercise/lab20-slr.html) -->
 
 <br><br>
 

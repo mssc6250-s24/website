@@ -1,6 +1,6 @@
 ---
-title: "Week 15"
-subtitle: "Clustering"
+title: "Week 16"
+subtitle: "Neural Networks"
 editor: visual
 ---
 
@@ -9,18 +9,13 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - K-Means Clustering](/slides/20-kmeans.html)
+🖥️ [Slides - Neural Networks](/slides/17-neural-net.html)
 
 `r fontawesome::fa("table")` `R::iris`
 
 ## Reading and Resources
 
-📖 [A quick tour of mclust](https://cran.r-project.org/web/packages/mclust/vignettes/mclust.html)
-
-📖 [mclust5 Clustering, Classification and  Density Estimation Using Gaussian Finite Mixture Models](https://journal.r-project.org/archive/2016/RJ-2016-021/RJ-2016-021.pdf)
-
-📖 [PMLI Ch 3.5, 21.4](https://probml.github.io/pml-book/book1.html)
-
+📖 [ISL Ch 10](https://www.statlearning.com/)
 
 ## Exercise
 

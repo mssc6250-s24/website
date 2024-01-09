@@ -1,6 +1,6 @@
 ---
 title: "Week 7"
-subtitle: "Interactive Visualization and Data Wrangling (one data frame)"
+subtitle: "Logistic Regression and Generalized Linear Model"
 editor: visual
 ---
 
@@ -9,25 +9,25 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Interactive Data Vaisualization](/slides/11-interactive-viz.html)
+🖥️ [Slides - Logistic Regression and Generalized Linear Model](/slides/09-class-glm.html)
 
-🖥️ [Slides - Data Wrangling (one data frame)](/slides/12-dplyr-1.html)
+`r fontawesome::fa("table")` ISLR2::Default
 
-`r fontawesome::fa("table")` [Data - loans](/slides/data/loans.csv)
-
-`r fontawesome::fa("table")` [Data - Murders](/slides/data/murders.csv)
+`r fontawesome::fa("table")` [hsbdemo.dta](https://stats.idre.ucla.edu/stat/data/hsbdemo.dta)
 
 ## Reading and Resources
 
-📖 [R for Data Science  - Data Transformation](https://r4ds.hadley.nz/data-transform)
+📖 [ISL Ch 4.1 - 4.3, 4.6](https://www.statlearning.com/)
+
+📖 [UCLA MULTINOMIAL LOGISTIC REGRESSION](https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/)
 
 ## Exercise
 
-📋 [Lab-14 Interactive Visualization](/exercise/lab14-interactive.html) (Present)
+<!-- 📋 [Lab-14 Interactive Visualization](/exercise/lab14-interactive.html) (Present) -->
 
-📋 [Lab-15 dplyr](/exercise/lab15-dplyr.html)
+<!-- 📋 [Lab-15 dplyr](/exercise/lab15-dplyr.html) -->
 
-`r fontawesome::fa("table")` [Data - Murders](/slides/data/murders.csv)
+<!-- `r fontawesome::fa("table")` [Data - Murders](/slides/data/murders.csv) -->
 
 <br><br>
 

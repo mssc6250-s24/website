@@ -1,6 +1,6 @@
 ---
 title: "Week 4"
-subtitle: "R/Python Data Frames for Data Science"
+subtitle: "Feature Selection and LASSO"
 editor: visual
 ---
 
@@ -9,17 +9,13 @@ editor: visual
 
 ## Participate
 
-<!-- 🖥️ [Slides - R/Python Data Frames for Data Science](/slides/07-package.html) -->
+🖥️ [Slides - Lasso](/slides/06-lasso-cv.html)
 
 ## Reading and Resources
 
-<!-- 📖 [tibble](https://tibble.tidyverse.org/) -->
+📖 [ISL Ch 6.1, 6.2](https://www.statlearning.com/)
 
-<!-- 📖 [pipes](https://r4ds.hadley.nz/data-transform.html#sec-the-pipe) -->
 
-<!-- 📖 [NumPy](https://numpy.org/doc/stable/user/index.html) -->
-
-<!-- 📖 [pandas](https://pandas.pydata.org/docs/user_guide/index.html) -->
 
 ## Perform
 

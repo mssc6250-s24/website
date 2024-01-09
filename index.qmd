@@ -6,40 +6,40 @@ tbl-colwidths: [5,10,30,5,5,5,5,5]
 This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.
 
 ::: column-screen-inset-right
-| Week | Date        | Topic                                     | To Do |                                      Slides                                      | In-class Activities | Homework | Project |
+| Week | Date        | Topic                                     |          To Do           |                                      Slides                                      | In-class Activities | Homework | Project |
 |:-------:|---------|---------|:-------:|:-------:|:-------:|:-------:|:-------:|
-|  1   | Tue, Jan 16 | Syllabus/Overview of Statistical Learning |  📖   | [🖥️](slides/01-syllabus.html "Syllabus")[🖥️](slides/02-overview.html "Overview") |                     |          |         |
-|      | Thu, Jan 18 | Bias-variance trade-off                   |       |                [🖥️](slides/03-bias-var.html "bias-var-tradeoff")                 |                     |          |         |
-|  2   | Tue, Jan 23 | Linear Regression (review)                |  📖   |               [🖥️](slides/04-linear-reg.html "Linear regression")                |                     |          |         |
-|      | Thu, Jan 25 | Linear Regression (optimization)          |       |                                                                                  |                     |          |         |
-|  3   | Tue, Jan 30 | Ridge Regression                          |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Feb 1  | Cross-Validation                          |       |                                                                                  |                     |          |         |
-|  4   | Tue, Feb 6  | Feature Selection                         |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Feb 8  | LASSO                                     |       |                                                                                  |                     |          |         |
-|  5   | Tue, Feb 13 | Splines                                   |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Feb 15 | Generalized Additive Models               |       |                                                                                  |                     |          |         |
-|  6   | Tue, Feb 20 | Bayesian Linear Regression                |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Feb 22 | Bayesian Linear Regression                |       |                                                                                  |                     |          |         |
-|  7   | Tue, Feb 27 | Logistic Regression                       |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Feb 29 | Poisson Regression                        |       |                                                                                  |                     |          |         |
-|  8   | Tue, Mar 5  | Discriminant Analysis                     |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Mar 7  | Naive Bayes                               |       |                                                                                  |                     |          |         |
-|  9   | Tue, Mar 12 | ***NO CLASS: Spring break***              |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Mar 14 | ***NO CLASS: Spring break***              |       |                                                                                  |                     |          |         |
-|  10  | Tue, Mar 19 | K-Nearest Neighbors Regression            |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Mar 21 | K-Nearest Neighbors Classification        |       |                                                                                  |                     |          |         |
-|  11  | Tue, Mar 26 | Gaussian Process Regression               |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Mar 28 | ***NO CLASS: Easter break***              |       |                                                                                  |                     |          |         |
-|  12  | Tue, Apr 2  | Support Vector Machine                    |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Apr 4  | Support Vector Machine                    |       |                                                                                  |                     |          |         |
-|  13  | Tue, Apr 9  | CART and Bagging                          |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Apr 11 | Random Forests and Boosting               |       |                                                                                  |                     |          |         |
-|  14  | Tue, Apr 16 | Principal Component Analysis              |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Apr 18 | Recommender Systems                       |       |                                                                                  |                     |          |         |
-|  15  | Tue, Apr 23 | K-Means Clustering                        |  📖   |                                        🖥️                                        |                     |          |         |
-|      | Thu, Apr 25 | Model-based Clustering                    |       |                                                                                  |                     |          |         |
-|  16  | Tue, Apr 30 | Neural Networks                           |  📖   |                                        🖥️                                        |                     |          |         |
-|  16  | Thu, May 2  | Deep Learning                             |       |                                                                                  |                     |          |         |
+|  1   | Tue, Jan 16 | Syllabus/Overview of Statistical Learning | [📖](/weeks/week-1.html) | [🖥️](slides/01-syllabus.html "Syllabus")[🖥️](slides/02-overview.html "Overview") |                     |          |         |
+|      | Thu, Jan 18 | Bias-variance tradeoff                    |                          |                [🖥️](slides/03-bias-var.html "bias-var-tradeoff")                 |                     |          |         |
+|  2   | Tue, Jan 23 | Linear Regression (review)                |            📖            |               [🖥️](slides/04-linear-reg.html "Linear regression")                |                     |          |         |
+|      | Thu, Jan 25 | Linear Regression (optimization)          |                          |                                                                                  |                     |          |         |
+|  3   | Tue, Jan 30 | Ridge Regression                          |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Feb 1  | Cross-Validation                          |                          |                                                                                  |                     |          |         |
+|  4   | Tue, Feb 6  | Feature Selection                         |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Feb 8  | LASSO                                     |                          |                                                                                  |                     |          |         |
+|  5   | Tue, Feb 13 | Splines                                   |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Feb 15 | Generalized Additive Models               |                          |                                                                                  |                     |          |         |
+|  6   | Tue, Feb 20 | Bayesian Linear Regression                |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Feb 22 | Bayesian Linear Regression                |                          |                                                                                  |                     |          |         |
+|  7   | Tue, Feb 27 | Logistic Regression                       |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Feb 29 | Poisson Regression                        |                          |                                                                                  |                     |          |         |
+|  8   | Tue, Mar 5  | Discriminant Analysis                     |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Mar 7  | Naive Bayes                               |                          |                                                                                  |                     |          |         |
+|  9   | Tue, Mar 12 | ***NO CLASS: Spring break***              |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Mar 14 | ***NO CLASS: Spring break***              |                          |                                                                                  |                     |          |         |
+|  10  | Tue, Mar 19 | K-Nearest Neighbors Regression            |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Mar 21 | K-Nearest Neighbors Classification        |                          |                                                                                  |                     |          |         |
+|  11  | Tue, Mar 26 | Gaussian Process Regression               |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Mar 28 | ***NO CLASS: Easter break***              |                          |                                                                                  |                     |          |         |
+|  12  | Tue, Apr 2  | Support Vector Machine                    |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Apr 4  | Support Vector Machine                    |                          |                                                                                  |                     |          |         |
+|  13  | Tue, Apr 9  | CART and Bagging                          |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Apr 11 | Random Forests and Boosting               |                          |                                                                                  |                     |          |         |
+|  14  | Tue, Apr 16 | Principal Component Analysis              |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Apr 18 | Recommender Systems                       |                          |                                                                                  |                     |          |         |
+|  15  | Tue, Apr 23 | K-Means Clustering                        |            📖            |                                        🖥️                                        |                     |          |         |
+|      | Thu, Apr 25 | Model-based Clustering                    |                          |                                                                                  |                     |          |         |
+|  16  | Tue, Apr 30 | Neural Networks                           |            📖            |                                        🖥️                                        |                     |          |         |
+|  16  | Thu, May 2  | Deep Learning                             |                          |                                                                                  |                     |          |         |
 :::
 
 I reserve the right to make changes to the schedule.

@@ -1,6 +1,6 @@
 ---
 title: "Week 10"
-subtitle: "Probabilistic and Statistical Simulation and Linear Regression"
+subtitle: "K-Nearest Neighbors Regression and Classification"
 editor: visual
 ---
 
@@ -9,17 +9,23 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Probability and Statistics](/slides/15-probstat.html)
+🖥️ [Slides - K-Nearest Neighbors](/slides/11-knn.html)
 
-🖥️ [Slides - Linear Regression](/slides/16-linear-reg.html)
+`r fontawesome::fa("table")` [Mixture Simulation Data](https://hastie.su.domains/ElemStatLearn/)
 
-`r fontawesome::fa("table")` **`ggplot2::mpg`**
+`r fontawesome::fa("table")` [ZIP code Training and Test data](https://hastie.su.domains/ElemStatLearn/)
+
+## Reading and Resources
+
+📖 [ISL Ch 3.5, 4.5](https://www.statlearning.com/)
+📖 [PMLI Ch 16.1](https://probml.github.io/pml-book/book1.html)
+
 
 ## Exercise
 
-📋 [Lab-18 Probability](/exercise/lab18-prob.html)
+<!-- 📋 [Lab-18 Probability](/exercise/lab18-prob.html) -->
 
-📋 [Lab-19 Confidence Interval](/exercise/lab19-ci.html)
+<!-- 📋 [Lab-19 Confidence Interval](/exercise/lab19-ci.html) -->
 
 <br><br>
 

@@ -1,6 +1,6 @@
 ---
 title: "Week 12"
-subtitle: "Logistic Regression"
+subtitle: "Support Vector Machines"
 editor: visual
 ---
 
@@ -9,17 +9,17 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Logistic Regression](/slides/17-logistic-reg.html)
-
-`r fontawesome::fa("table")` [Data - body](/slides/data/body.csv)
+🖥️ [Slides - Support Vector Machines](/slides/13-svm.html)
 
 ## Reading
 
-📖
+📖 [ISL Ch 9](https://www.statlearning.com/)
+
+
 
 ## Exercise
 
-📋 [Lab-21 Logistic Regression](/exercise/lab21-logistic.html)
+<!-- 📋 [Lab-21 Logistic Regression](/exercise/lab21-logistic.html) -->
 
 <br><br>
 

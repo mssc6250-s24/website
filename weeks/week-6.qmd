@@ -1,6 +1,6 @@
 ---
 title: "Week 6"
-subtitle: "Data Visualization"
+subtitle: "Bayesian Linear Regression"
 editor: visual
 ---
 
@@ -9,25 +9,25 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides -Visualizing Data](/slides/10-viz.html)
+🖥️ [Slides - Bayesian Linear Regression](/slides/08-bayes.html)
 
-`r fontawesome::fa("table")` `openintro::loans_full_schema`
+`r fontawesome::fa("table")` bayesrules::bikes
 
 ## Reading and Resources
 
-📖 More add-on `r emo::ji("package")`: [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/)
+📖 [Bayes Rules! An Introduction to Applied Bayesian Modeling](https://www.bayesrulesbook.com/)
 
-📖 [The R Graph Gallery](https://www.r-graph-gallery.com/index.html)
+📖 [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)
 
-📖 [R Graphics Cookbook](https://r-graphics.org/)
+📖 [A Student’s Guide to Bayesian Statistics](https://uk.sagepub.com/en-gb/eur/book/student%E2%80%99s-guide-bayesian-statistics)
 
-📖 [R CHARTS](https://r-charts.com/)
+📖 [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/)
 
 ## Exercise
 
-📋 [Lab-13 Visualization](/exercise/lab13-visualization.html)
+<!-- 📋 [Lab-13 Visualization](/exercise/lab13-visualization.html) -->
 
-`r fontawesome::fa("table")` [penguins.csv](/slides/data/penguins.csv)
+<!-- `r fontawesome::fa("table")` [penguins.csv](/slides/data/penguins.csv) -->
 
 <br><br>
 

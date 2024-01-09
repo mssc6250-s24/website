@@ -1,13 +1,13 @@
 ---
 title: "Week 9"
-subtitle: "NO CLASS: Spring break"
+subtitle: "NO CLASS: Spring Break"
 editor: visual
 ---
 
 ::: callout-important
 :::
 
-Happy spring break!
+Happy Spring Break!
 
 <br><br>
 

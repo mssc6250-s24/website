@@ -828,13 +828,11 @@ $$f(X) = \sum_{j=1}^J \hat{y}_{R_j}\mathbf{1}(\bX \in R_j)$$
 
 ## Trees v.s. Linear Models
 
-::: small
 ```{r}
 #| out-width: "80%"
 #| fig-cap: "Source: ISL Fig 8.7"
 knitr::include_graphics("./images/14-tree/8_7-1.png")
 ```
-:::
 
 <!-- # Bagging {background-color="#447099"} -->
 

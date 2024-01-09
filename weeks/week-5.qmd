@@ -1,6 +1,6 @@
 ---
 title: "Week 5"
-subtitle: "Data Importing and ggplot2"
+subtitle: "Splines and Generalized Additive Models"
 editor: visual
 ---
 
@@ -9,25 +9,21 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Data Importing](/slides/08-import.html)
-
-🖥️ [Slides - ggplot2](/slides/09-ggplot2.html)
+🖥️ [Slides - Splines and Generalized Additive Models](/slides/07-splines.html)
 
 ## Reading and Resources
 
-📖 [R for Data Science - Data Import](https://r4ds.hadley.nz/data-import)
-
-📖 [R for Data Science - Data Visualization](https://r4ds.hadley.nz/data-visualize)
+📖 [ISL Ch 7](https://www.statlearning.com/)
 
 ## Exercise
 
-📋 [Lab-10 Data Importing](/exercise/lab10-import.html)
+<!-- 📋 [Lab-10 Data Importing](/exercise/lab10-import.html) -->
 
-📋 [Lab-11 ggplot2](/exercise/lab11-ggplot2.html)
+<!-- 📋 [Lab-11 ggplot2](/exercise/lab11-ggplot2.html) -->
 
-📋 [Lab-12 Faceting](/exercise/lab12-facet.html)
+<!-- 📋 [Lab-12 Faceting](/exercise/lab12-facet.html) -->
 
-`r fontawesome::fa("table")` [penguins.csv](/slides/data/penguins.csv)
+<!-- `r fontawesome::fa("table")` [penguins.csv](/slides/data/penguins.csv) -->
 
 <br><br>
 
