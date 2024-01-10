@@ -11,7 +11,7 @@ editor: visual
 
 🖥️ [Slides - Bayesian Linear Regression](/slides/08-bayes.html)
 
-`r fontawesome::fa("table")` bayesrules::bikes
+`r fontawesome::fa("table")` `bayesrules::bikes`
 
 ## Reading and Resources
 
