@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 - Spring 2024 - Week 15</title>
+<title>MSSC 6250 - Spring 2024 - Week 16</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../weeks/week-16.html" rel="next">
-<link href="../weeks/week-14.html" rel="prev">
+<link href="../weeks/week-15.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -63,8 +62,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="MSSC 6250 - Spring 2024 - Week 15">
-<meta property="og:description" content="Clustering">
+<meta property="og:title" content="MSSC 6250 - Spring 2024 - Week 16">
+<meta property="og:description" content="Neural Networks">
 <meta property="og:site-name" content="MSSC 6250 - Spring 2024">
 </head>
 
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Week 15</h1>
+      <h1 class="quarto-secondary-nav-title">Week 16</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -247,12 +246,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-15.html" class="sidebar-item-text sidebar-link active">Week 15</a>
+  <a href="../weeks/week-15.html" class="sidebar-item-text sidebar-link">Week 15</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-16.html" class="sidebar-item-text sidebar-link">Week 16</a>
+  <a href="../weeks/week-16.html" class="sidebar-item-text sidebar-link active">Week 16</a>
   </div>
 </li>
       </ul>
@@ -270,15 +269,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#reading-and-resources" id="toc-reading-and-resources" class="nav-link" data-scroll-target="#reading-and-resources">Reading and Resources</a></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mssc6250-s24/website/edit/main/weeks/week-15.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mssc6250-s24/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mssc6250-s24/website/edit/main/weeks/week-16.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mssc6250-s24/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Week 15</h1>
-<p class="subtitle lead">Clustering</p>
+<h1 class="title d-none d-lg-block">Week 16</h1>
+<p class="subtitle lead">Neural Networks</p>
 </div>
 
 
@@ -308,14 +307,12 @@ Important
 </div>
 <section id="participate" class="level2">
 <h2 class="anchored" data-anchor-id="participate">Participate</h2>
-<p>🖥️ <a href="../slides/20-kmeans.html">Slides - K-Means Clustering</a></p>
+<p>🖥️ <a href="../slides/17-neural-net.html">Slides - Neural Networks</a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> <code>R::iris</code></p>
 </section>
 <section id="reading-and-resources" class="level2">
 <h2 class="anchored" data-anchor-id="reading-and-resources">Reading and Resources</h2>
-<p>📖 <a href="https://cran.r-project.org/web/packages/mclust/vignettes/mclust.html">A quick tour of mclust</a></p>
-<p>📖 <a href="https://journal.r-project.org/archive/2016/RJ-2016-021/RJ-2016-021.pdf">mclust5 Clustering, Classification and Density Estimation Using Gaussian Finite Mixture Models</a></p>
-<p>📖 <a href="https://probml.github.io/pml-book/book1.html">PMLI Ch 3.5, 21.4</a></p>
+<p>📖 <a href="https://www.statlearning.com/">ISL Ch 10</a></p>
 </section>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
@@ -586,14 +583,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../weeks/week-14.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 14</span>
+      <a href="../weeks/week-15.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 15</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../weeks/week-16.html" class="pagination-link">
-        <span class="nav-page-text">Week 16</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

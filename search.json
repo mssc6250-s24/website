@@ -7,13 +7,6 @@
     "text": "Here shows group project’s proposal.\n\nGroup 1:\nGroup 2:\nGroup 3:\nGroup 4:"
   },
   {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nDiscussion forum\n🔗 on Sakai\n\n\nLecture streaming and recordings\n🔗 on Panopto\n\n\nGradebook\n🔗 on Sakai\n\n\nVirtual meetings\n🔗 on Sakai"
-  },
-  {
     "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
     "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
     "title": "MSSC 6250 - Spring 2024",
@@ -67,21 +60,21 @@
     "href": "weeks/week-6.html#participate",
     "title": "Week 6",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides -Visualizing Data\n openintro::loans_full_schema"
+    "text": "Participate\n🖥️ Slides - Bayesian Linear Regression\n bayesrules::bikes"
   },
   {
     "objectID": "weeks/week-6.html#reading-and-resources",
     "href": "weeks/week-6.html#reading-and-resources",
     "title": "Week 6",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 More add-on 📦: ggplot2 extensions\n📖 The R Graph Gallery\n📖 R Graphics Cookbook\n📖 R CHARTS"
+    "text": "Reading and Resources\n📖 Bayes Rules! An Introduction to Applied Bayesian Modeling\n📖 Statistical Rethinking\n📖 A Student’s Guide to Bayesian Statistics\n📖 Bayesian Data Analysis"
   },
   {
     "objectID": "weeks/week-6.html#exercise",
     "href": "weeks/week-6.html#exercise",
     "title": "Week 6",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-13 Visualization\n penguins.csv\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-7.html",
@@ -95,21 +88,21 @@
     "href": "weeks/week-7.html#participate",
     "title": "Week 7",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Interactive Data Vaisualization\n🖥️ Slides - Data Wrangling (one data frame)\n Data - loans\n Data - Murders"
+    "text": "Participate\n🖥️ Slides - Logistic Regression and Generalized Linear Model\n ISLR2::Default\n hsbdemo.dta"
   },
   {
     "objectID": "weeks/week-7.html#reading-and-resources",
     "href": "weeks/week-7.html#reading-and-resources",
     "title": "Week 7",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Data Transformation"
+    "text": "Reading and Resources\n📖 ISL Ch 4.1 - 4.3, 4.6\n📖 UCLA MULTINOMIAL LOGISTIC REGRESSION"
   },
   {
     "objectID": "weeks/week-7.html#exercise",
     "href": "weeks/week-7.html#exercise",
     "title": "Week 7",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-14 Interactive Visualization (Present)\n📋 Lab-15 dplyr\n Data - Murders\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-5.html",
@@ -123,21 +116,21 @@
     "href": "weeks/week-5.html#participate",
     "title": "Week 5",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Data Importing\n🖥️ Slides - ggplot2"
+    "text": "Participate\n🖥️ Slides - Splines and Generalized Additive Models"
   },
   {
     "objectID": "weeks/week-5.html#reading-and-resources",
     "href": "weeks/week-5.html#reading-and-resources",
     "title": "Week 5",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Data Import\n📖 R for Data Science - Data Visualization"
+    "text": "Reading and Resources\n📖 ISL Ch 7"
   },
   {
     "objectID": "weeks/week-5.html#exercise",
     "href": "weeks/week-5.html#exercise",
     "title": "Week 5",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-10 Data Importing\n📋 Lab-11 ggplot2\n📋 Lab-12 Faceting\n penguins.csv\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-4.html",
@@ -151,14 +144,14 @@
     "href": "weeks/week-4.html#participate",
     "title": "Week 4",
     "section": "Participate",
-    "text": "Participate"
+    "text": "Participate\n🖥️ Slides - Lasso"
   },
   {
     "objectID": "weeks/week-4.html#reading-and-resources",
     "href": "weeks/week-4.html#reading-and-resources",
     "title": "Week 4",
     "section": "Reading and Resources",
-    "text": "Reading and Resources"
+    "text": "Reading and Resources\n📖 ISL Ch 6.1, 6.2"
   },
   {
     "objectID": "weeks/week-4.html#perform",
@@ -175,18 +168,18 @@
     "text": "📖 Read the syllabus\n📖 Get your laptop and computing environment ready!"
   },
   {
-    "objectID": "weeks/week-1.html#reading-and-resources",
-    "href": "weeks/week-1.html#reading-and-resources",
-    "title": "Week 1",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources"
-  },
-  {
     "objectID": "weeks/week-1.html#participate",
     "href": "weeks/week-1.html#participate",
     "title": "Week 1",
     "section": "Participate",
-    "text": "Participate"
+    "text": "Participate\n🖥️ Slides - Welcome to MSSC 6250\n🖥️ Slides - Overview of Machine Learning\n🖥️ Slides - Bias-variance Tradeoff"
+  },
+  {
+    "objectID": "weeks/week-1.html#reading-and-resources",
+    "href": "weeks/week-1.html#reading-and-resources",
+    "title": "Week 1",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 ISL Ch 1 and 2\n📖 Dr. Yu MSSC 5780 Probability and Statistics Review\n📖 Dr. Yu MSSC 5780 Linear Algebra Review"
   },
   {
     "objectID": "weeks/week-1.html#perform",
@@ -200,21 +193,21 @@
     "href": "weeks/week-3.html",
     "title": "Week 3",
     "section": "",
-    "text": "Important\n\n\n\n\nPresenting Lab 07-Plotting for extra points!"
+    "text": "Important"
   },
   {
     "objectID": "weeks/week-3.html#participate",
     "href": "weeks/week-3.html#participate",
     "title": "Week 3",
     "section": "Participate",
-    "text": "Participate"
+    "text": "Participate\n🖥️ Slides - Ridge Regression and Cross Validation"
   },
   {
     "objectID": "weeks/week-3.html#reading-and-resources",
     "href": "weeks/week-3.html#reading-and-resources",
     "title": "Week 3",
     "section": "Reading and Resources",
-    "text": "Reading and Resources"
+    "text": "Reading and Resources\n📖 ISL Ch 5.1, 6.2.1"
   },
   {
     "objectID": "weeks/week-3.html#exercise",
@@ -231,18 +224,18 @@
     "text": "Important"
   },
   {
-    "objectID": "weeks/week-2.html#reading-and-resources",
-    "href": "weeks/week-2.html#reading-and-resources",
-    "title": "Week 2",
-    "section": "Reading and Resources",
-    "text": "Reading and Resources"
-  },
-  {
     "objectID": "weeks/week-2.html#participate",
     "href": "weeks/week-2.html#participate",
     "title": "Week 2",
     "section": "Participate",
-    "text": "Participate"
+    "text": "Participate\n🖥️ Slides - Linear Regression\n Data Sets - Advertising.csv"
+  },
+  {
+    "objectID": "weeks/week-2.html#reading-and-resources",
+    "href": "weeks/week-2.html#reading-and-resources",
+    "title": "Week 2",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 ISL Ch 3 Linear Regression\n📖 Dr. Yu MSSC 5780 Regression Analysis materials\n📖 Nocedal, Jorge, and Stephen Wright. 2006. Numerical Optimization"
   },
   {
     "objectID": "weeks/week-2.html#perform",
@@ -263,14 +256,21 @@
     "href": "weeks/week-10.html#participate",
     "title": "Week 10",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Probability and Statistics\n🖥️ Slides - Linear Regression\n ggplot2::mpg"
+    "text": "Participate\n🖥️ Slides - K-Nearest Neighbors\n Mixture Simulation Data\n ZIP code Training and Test data"
+  },
+  {
+    "objectID": "weeks/week-10.html#reading-and-resources",
+    "href": "weeks/week-10.html#reading-and-resources",
+    "title": "Week 10",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 ISL Ch 3.5, 4.5 📖 PMLI Ch 16.1"
   },
   {
     "objectID": "weeks/week-10.html#exercise",
     "href": "weeks/week-10.html#exercise",
     "title": "Week 10",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-18 Probability\n📋 Lab-19 Confidence Interval\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-11.html",
@@ -284,14 +284,21 @@
     "href": "weeks/week-11.html#participate",
     "title": "Week 11",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Linear Regression\n ggplot2::mpg"
+    "text": "Participate\n🖥️ Slides - Gaussian Processes"
+  },
+  {
+    "objectID": "weeks/week-11.html#reading-and-resources",
+    "href": "weeks/week-11.html#reading-and-resources",
+    "title": "Week 11",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 Gaussian Processes for Machine Learning (GPML) Ch 2\n📖 Surrogates Ch 5\n📖 PMLI Ch 17.2"
   },
   {
     "objectID": "weeks/week-11.html#exercise",
     "href": "weeks/week-11.html#exercise",
     "title": "Week 11",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-20 Simple Linear Regression\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-13.html",
@@ -305,21 +312,21 @@
     "href": "weeks/week-13.html#participate",
     "title": "Week 13",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - K Nearest Neighbors\n Data - body"
+    "text": "Participate\n🖥️ Slides - Tree-based Methods"
   },
   {
     "objectID": "weeks/week-13.html#reading",
     "href": "weeks/week-13.html#reading",
     "title": "Week 13",
     "section": "Reading",
-    "text": "Reading\n📖"
+    "text": "Reading\n📖 ISL Ch 8"
   },
   {
     "objectID": "weeks/week-13.html#exercise",
     "href": "weeks/week-13.html#exercise",
     "title": "Week 13",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-22 K Nearest Neighbors\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-12.html",
@@ -333,28 +340,56 @@
     "href": "weeks/week-12.html#participate",
     "title": "Week 12",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Logistic Regression\n Data - body"
+    "text": "Participate\n🖥️ Slides - Support Vector Machines"
   },
   {
     "objectID": "weeks/week-12.html#reading",
     "href": "weeks/week-12.html#reading",
     "title": "Week 12",
     "section": "Reading",
-    "text": "Reading\n📖"
+    "text": "Reading\n📖 ISL Ch 9"
   },
   {
     "objectID": "weeks/week-12.html#exercise",
     "href": "weeks/week-12.html#exercise",
     "title": "Week 12",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-21 Logistic Regression\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-9.html",
     "href": "weeks/week-9.html",
     "title": "Week 9",
     "section": "",
-    "text": "Important\n\n\n\n\n\n\nHappy spring break!\n\n\nBack to course schedule ⏎"
+    "text": "Important\n\n\n\n\n\n\nHappy Spring Break!\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-16.html",
+    "href": "weeks/week-16.html",
+    "title": "Week 16",
+    "section": "",
+    "text": "Important"
+  },
+  {
+    "objectID": "weeks/week-16.html#participate",
+    "href": "weeks/week-16.html#participate",
+    "title": "Week 16",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Slides - Neural Networks\n R::iris"
+  },
+  {
+    "objectID": "weeks/week-16.html#reading-and-resources",
+    "href": "weeks/week-16.html#reading-and-resources",
+    "title": "Week 16",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 ISL Ch 10"
+  },
+  {
+    "objectID": "weeks/week-16.html#exercise",
+    "href": "weeks/week-16.html#exercise",
+    "title": "Week 16",
+    "section": "Exercise",
+    "text": "Exercise\n\n\n\n\n\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-8.html",
@@ -368,21 +403,21 @@
     "href": "weeks/week-8.html#participate",
     "title": "Week 8",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Data Wrangling - two data frames\n🖥️ Slides - Tidying Data\n Data - Pop_x and elec_vote_y\n\nlibrary(tidyverse)\nlibrary(dslabs)\npop_x <- murders |> \n    slice(1:6) |>\n    select(state, population)\n\nelec_vote_y <- results_us_election_2016 |> \n    filter(state %in% c(\"Alabama\", \"Alaska\", \"Arizona\", \n                        \"California\", \"Connecticut\", \"Delaware\")) |> \n    select(state, electoral_votes) |> \n    rename(elec_vote = electoral_votes)\n\n Data - Customers"
+    "text": "Participate\n🖥️ Slides - Generative Models\n ISLR2::Default"
   },
   {
     "objectID": "weeks/week-8.html#reading-and-resources",
     "href": "weeks/week-8.html#reading-and-resources",
     "title": "Week 8",
     "section": "Reading and Resources",
-    "text": "Reading and Resources\n📖 R for Data Science - Joins\n📖 R for Data Science - Data tidying"
+    "text": "Reading and Resources\n📖 ISL Ch 4.4, 4.5"
   },
   {
     "objectID": "weeks/week-8.html#exercise",
     "href": "weeks/week-8.html#exercise",
     "title": "Week 8",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-16 Joining tables\n https://www.jaredlander.com/data/DiamondColors.csv\n ggplot2::diamonds\n📋 Lab-17 tidyr\n trump.csv\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-15.html",
@@ -396,21 +431,21 @@
     "href": "weeks/week-15.html#participate",
     "title": "Week 15",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - K-Means Clustering\n Data - clus_data"
+    "text": "Participate\n🖥️ Slides - K-Means Clustering\n R::iris"
   },
   {
-    "objectID": "weeks/week-15.html#reading",
-    "href": "weeks/week-15.html#reading",
+    "objectID": "weeks/week-15.html#reading-and-resources",
+    "href": "weeks/week-15.html#reading-and-resources",
     "title": "Week 15",
-    "section": "Reading",
-    "text": "Reading\n📖"
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n📖 A quick tour of mclust\n📖 mclust5 Clustering, Classification and Density Estimation Using Gaussian Finite Mixture Models\n📖 PMLI Ch 3.5, 21.4"
   },
   {
     "objectID": "weeks/week-15.html#exercise",
     "href": "weeks/week-15.html#exercise",
     "title": "Week 15",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-24 K-Means Clustering\n palmerpenguins::penguins\n\nlibrary(palmerpenguins)\npeng <- penguins[complete.cases(penguins), ] |> \n    select(flipper_length_mm, bill_length_mm)\n\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n\n\n\n\n\n\n\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-14.html",
@@ -424,21 +459,21 @@
     "href": "weeks/week-14.html#participate",
     "title": "Week 14",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Principal Component Analysis\n USArrests"
+    "text": "Participate\n🖥️ Slides - Principal Component Analysis\n R::USArrests"
   },
   {
     "objectID": "weeks/week-14.html#reading",
     "href": "weeks/week-14.html#reading",
     "title": "Week 14",
     "section": "Reading",
-    "text": "Reading\n📖"
+    "text": "Reading\n📖 ISL Ch 12.1-12.2"
   },
   {
     "objectID": "weeks/week-14.html#exercise",
     "href": "weeks/week-14.html#exercise",
     "title": "Week 14",
     "section": "Exercise",
-    "text": "Exercise\n📋 Lab-23 Principal Component Analysis\n iris\n\n\nBack to course schedule ⏎"
+    "text": "Exercise\n\n iris\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "activity-work.html#class-activity-2",
@@ -490,13 +525,6 @@
     "text": "Evaluation"
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA210 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA210 under My reservations to access the RStudio instance you’ll use for the course."
-  },
-  {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
     "title": "MSSC 6250: Statistical Machine Learning",
@@ -508,21 +536,7 @@
     "href": "index.html",
     "title": "MSSC 6250 - Statistical Machine Learning",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance trade-off\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
-  },
-  {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "Teaching team",
-    "section": "",
-    "text": "Dr. Mine Çetinkaya-Rundel (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine’s work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine also works with RStudio as a Developer Educator.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMondays 10:30 am - 11:30 am\nZoom\n\n\nThursdays 11:00 am - 12:00 pm\nOld Chem 213\n\n\n\nIf these times don’t work for you or you’d like to schedule a one-on-one meeting, you can do so at bit.ly/meet-mine."
-  },
-  {
-    "objectID": "course-team.html#teaching-assistants",
-    "href": "course-team.html#teaching-assistants",
-    "title": "Teaching team",
-    "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nMartha Aboagye\nThursday 7 - 9 pm\nZoom\n\n\n\nRichard Fremgen\nLead TA for Section 3 (5:15 pm)\nTues 7 - 9 pm\nZoom\n\n\n\nEmily Gentles\nLead TA for Section 1 (1:45pm)\nWednesday 1 - 3 pm\nOld Chem 203B (On Zoom until January 18)\n\n\n\nSara Mehta\nMon 2 - 4 pm\nZoom\n\n\n\nRick Presman\nHead TA\nLead TA for Section 2 (3:30pm)\nThursday 3:30 - 4:30 pm\nFri 9 - 10 am\nZoom\n\n\n\nShari Tian\nTue 8 - 10 am\nZoom\n\n\n\nAaditya Warrier\nMon 12pm - 1pm\nFri 1:30 - 2:30 pm\nZoom"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance tradeoff\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
     "objectID": "slides/17-neural-net.html#neural-networks",
@@ -4137,41 +4151,6 @@
     "text": "Accuracy and Interpretability Trade-Off\n\n\n\n\nSource: ISL Fig. 2.7\n\n\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
-    "objectID": "computing-pipelines.html",
-    "href": "computing-pipelines.html",
-    "title": "Pipelines",
-    "section": "",
-    "text": "library(palmerpenguins)\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✓ ggplot2 3.3.5     ✓ purrr   0.3.4\n✓ tibble  3.1.6     ✓ dplyr   1.0.7\n✓ tidyr   1.1.4     ✓ stringr 1.4.0\n✓ readr   2.1.1     ✓ forcats 0.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\nx dplyr::filter() masks stats::filter()\nx dplyr::lag()    masks stats::lag()\n\nlibrary(tidymodels)\n\nRegistered S3 method overwritten by 'tune':\n  method                   from   \n  required_pkgs.model_spec parsnip\n\n\n── Attaching packages ────────────────────────────────────── tidymodels 0.1.4 ──\n\n\n✓ broom        0.7.10         ✓ rsample      0.1.1     \n✓ dials        0.0.10         ✓ tune         0.1.6     \n✓ infer        1.0.1.9000     ✓ workflows    0.2.4     \n✓ modeldata    0.1.1          ✓ workflowsets 0.1.0     \n✓ parsnip      0.1.7          ✓ yardstick    0.0.9     \n✓ recipes      0.2.0          \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\nx scales::discard() masks purrr::discard()\nx dplyr::filter()   masks stats::filter()\nx recipes::fixed()  masks stringr::fixed()\nx dplyr::lag()      masks stats::lag()\nx yardstick::spec() masks readr::spec()\nx recipes::step()   masks stats::step()\n• Search for functions across packages at https://www.tidymodels.org/find/\n\nlibrary(knitr)"
-  },
-  {
-    "objectID": "computing-pipelines.html#simple-linear-regression",
-    "href": "computing-pipelines.html#simple-linear-regression",
-    "title": "Pipelines",
-    "section": "Simple linear regression",
-    "text": "Simple linear regression\n\nModel fitting\nFit model:\n\npenguins_fit <- linear_reg() %>%\n  set_engine(\"lm\") %>%\n  fit(body_mass_g ~ flipper_length_mm, data = penguins)\n\nTidy model output:\n\ntidy(penguins_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        -5781.     306.       -18.9 5.59e- 55\n2 flipper_length_mm     49.7      1.52      32.7 4.37e-107\n\n\nFormat model output as table:\n\ntidy(penguins_fit) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-5780.831\n305.815\n-18.903\n0\n\n\nflipper_length_mm\n49.686\n1.518\n32.722\n0\n\n\n\n\n\nAugment data with model:\n\naugment(penguins_fit$fit)\n\n# A tibble: 342 × 9\n   .rownames body_mass_g flipper_length_… .fitted  .resid    .hat .sigma .cooksd\n   <chr>           <int>            <int>   <dbl>   <dbl>   <dbl>  <dbl>   <dbl>\n 1 1                3750              181   3212.  538.   0.00881   394. 8.34e-3\n 2 2                3800              186   3461.  339.   0.00622   394. 2.33e-3\n 3 3                3250              195   3908. -658.   0.00344   393. 4.83e-3\n 4 5                3450              193   3808. -358.   0.00385   394. 1.60e-3\n 5 6                3650              190   3659.   -9.43 0.00469   395. 1.35e-6\n 6 7                3625              181   3212.  413.   0.00881   394. 4.91e-3\n 7 8                4675              195   3908.  767.   0.00344   393. 6.56e-3\n 8 9                3475              193   3808. -333.   0.00385   394. 1.39e-3\n 9 10               4250              190   3659.  591.   0.00469   394. 5.31e-3\n10 11               3300              186   3461. -161.   0.00622   395. 5.23e-4\n# … with 332 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\nStatistical inference"
-  },
-  {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
-  },
-  {
-    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
-  },
-  {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "title": "FAQ",
-    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
-    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.1.2: https://cran.r-project.org/\nDownload and install a daily build of RStudio: https://dailies.rstudio.com/\nInstall Quarto CLI: https://quarto.org/docs/getting-started/installation.html\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
-  },
-  {
     "objectID": "project-description-4780.html",
     "href": "project-description-4780.html",
     "title": "MATH 4780 Project Description",
@@ -4380,12 +4359,5 @@
     "title": "Syllabus",
     "section": "Important dates",
     "text": "Important dates\n\nJan 24: Last day to add/swap/drop\nMar 10-16: Spring break\nMar 12: Midterm grade submission\nMar 28 - Apr 1: Easter break\nApr 12: Withdrawal deadline\nMay 4: Last day of class\nMay 9: Final project presentation/report submission\nMay 14: Final grade submission\n\nClick here for the full Marquette academic calendar."
-  },
-  {
-    "objectID": "computing-troubleshooting.html",
-    "href": "computing-troubleshooting.html",
-    "title": "Computing troubleshooting",
-    "section": "",
-    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\nEither way you can also fill out the form here, which will notify our the R TA for the department as well as our undergraduate coordinator. They’ll be able to help diagnose the issue."
   }
 ]
