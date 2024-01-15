@@ -13,6 +13,7 @@ format:
     incremental: false
     width: 1800
     height: 1000
+    margin: 0.05
     logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
     footer: "[mssc6250-s24.github.io/website](https://mssc6250-s24.github.io/website/)"
     theme: ["simple", "styles.scss"]

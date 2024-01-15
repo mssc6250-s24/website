@@ -43,6 +43,8 @@ website:
     contents:
       - section: "Course information"
         contents:
+          - href: course-news.qmd
+            text: News/Annoucements
           - href: course-overview.qmd
             text: Overview
           - href: course-syllabus.qmd

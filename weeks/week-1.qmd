@@ -10,7 +10,6 @@ editor: visual
 
 📖 Get your laptop and computing environment ready!
 
-
 ## Participate
 
 🖥️ [Slides - Welcome to MSSC 6250](/slides/01-syllabus.html)
@@ -19,7 +18,6 @@ editor: visual
 
 🖥️ [Slides - Bias-variance Tradeoff](/slides/03-bias-var.html)
 
-
 ## Reading and Resources
 
 📖 [ISL Ch 1 and 2](https://www.statlearning.com/)
@@ -27,7 +25,6 @@ editor: visual
 📖 [Dr. Yu MSSC 5780 Probability and Statistics Review](https://math4780-f23.github.io/website/slides/03-prob-stat.html#/title-slide)
 
 📖 [Dr. Yu MSSC 5780 Linear Algebra Review](https://math4780-f23.github.io/website/slides/06-mat.html#/title-slide)
-
 
 ## Perform
 
