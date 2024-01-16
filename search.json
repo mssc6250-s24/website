@@ -2762,7 +2762,7 @@
     "href": "slides/01-syllabus.html#my-journey",
     "title": "Welcome Aboard 🙌",
     "section": "My Journey",
-    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics"
+    "text": "My Journey\n\nAssistant Professor (2020/08 - )\n\n\n\n\n\n\n\n\n\n\nPostdoctoral Fellow\n\n\n\n\n\n\n\n\n\n\nPhD in Statistics\n\n\n\n\n\n\n\n\n\n\nMA in Economics/PhD program in Statistics\n\n\n\n\n\n\n\n\n\nAfter college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics.\n\nI got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies.\nThen I spent two years doing my postdoctoral research at Rice University in Houston, Texas.\nFinally, in fall 2020, I came to Marquette as an assistant professor.\nMidwest/Indiana-West/California-South/Texas-Midwest/Wisconsin\nBeen to any one of these universities/cities?\nThe most beautiful campus.\nWho are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.\nPoor listening and speaking skills. I was shy.\nOK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything,\nI have the class list. I’d like to learn your face and remember your name. You know, you all wear a mask. It’s hard to recognize you and connect your name and your face.\nWhen I call your name, you can say something about yourself. No need to be long, couple of seconds are good."
   },
   {
     "objectID": "slides/01-syllabus.html#my-research",
@@ -2776,21 +2776,21 @@
     "href": "slides/01-syllabus.html#how-to-reach-me",
     "title": "Welcome Aboard 🙌",
     "section": "How to Reach Me",
-    "text": "How to Reach Me\n\nOffice hours TuTh 4:50 - 5:50 PM and W 12 - 1 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [mssc6250] followed by a clear description of your question.\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
+    "text": "How to Reach Me\n\nOffice hours TuTh 4:50 - 5:50 PM and Wed 12 - 1 PM in Cudahy Hall 353.\n📧 cheng-han.yu@marquette.edu\n\nAnswer your question within 24 hours.\nExpect a reply on Monday if shoot me a message on weekends.\nStart your subject line with [mssc6250] followed by a clear description of your question.\n\n\n\n\n\nI will NOT reply your e-mail if … Check the email policy in the syllabus!"
   },
   {
     "objectID": "slides/01-syllabus.html#prerequisites",
     "href": "slides/01-syllabus.html#prerequisites",
     "title": "Welcome Aboard 🙌",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nOn bulletin: MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MATH 4780 (Regression Analysis)\nProgramming experience (Who does machine learning without coding?)\n\n\n\nHaving taken MATH 5700 (Probability) and MATH 5710 (Stats Inference) or other math and statistics courses (Stats Computing, etc) is recommended."
+    "text": "Prerequisites\n\nOn bulletin: MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MSSC 5780 (Regression Analysis)\nProgramming experience (Who does machine learning without coding?)\n\n\n\nHaving taken MSSC 5700 (Probability) and MSSC 5710 (Stats Inference) or other math and statistics courses (Stats Computing, etc) is recommended."
   },
   {
     "objectID": "slides/01-syllabus.html#textbook",
     "href": "slides/01-syllabus.html#textbook",
     "title": "Welcome Aboard 🙌",
     "section": "Textbook",
-    "text": "Textbook\n\n\n\n\n(ISL) An Introduction to Statistical Learning, 2nd edition, by James et al. Publisher: Springer. \n\nDiscuss all chapters except Chapter 11 (survival analysis) and 13 (multiple testing).\nR and Python code\n\nIn the Preface,\n\n… for advanced undergraduates or master’s students in Statistics or related quantitative fields,\n\n\n… concentrate more on the applications of the methods and less on the mathematical details."
+    "text": "Textbook\n\n\n\n\n(ISL) An Introduction to Statistical Learning, by James et al. Publisher: Springer. \n\nDiscuss all chapters except Chapter 11 (survival analysis) and 13 (multiple testing).\nR and Python code\n\nIn the Preface,\n\n… for advanced undergraduates or master’s students in Statistics or related quantitative fields,\n\n\n… concentrate more on the applications of the methods and less on the mathematical details."
   },
   {
     "objectID": "slides/01-syllabus.html#optional-references-1",
@@ -2825,7 +2825,7 @@
     "href": "slides/01-syllabus.html#learning-management-system-d2l",
     "title": "Welcome Aboard 🙌",
     "section": "Learning Management System (D2L)",
-    "text": "Learning Management System (D2L)\n\n\nAny new announcement will be posted in News in Course Home.  \nSubmit your homework Assessments > Dropbox.\nCheck your grade Assessments > Grades.\nGo to https://www.marquette.edu/remote-learning/d2l.php to learn more about D2L."
+    "text": "Learning Management System (D2L)\n\n\n\n\n\nNews\nSubmit your homework Assessments > Dropbox.\nCheck your grade Assessments > Grades."
   },
   {
     "objectID": "slides/01-syllabus.html#grading-policy",
@@ -3987,7 +3987,7 @@
     "href": "slides/02-overview.html#machine-learning-vs.-statistical-learning",
     "title": "Overview of Statistical Machine Learning 💻",
     "section": "Machine Learning vs. Statistical Learning",
-    "text": "Machine Learning vs. Statistical Learning\n\n\nMachine learning (ML) is a field in Computer Science (CS).\n\n\n“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell, Professor of ML at Carnegie Mellon University\n\n\ncomputer programs = software and algorithms\nexperience = data\ntasks = problems\n\n\n\nThe ML algorithms are mainly for predictive modeling problems, and many have been borrowed from Statistics, for example, linear regression.\nML is a CS perspective on modeling data with a focus on algorithmic methods.\n\n\n\n\nWait, I am a statistical modeler (computational statistician), and this is exactly what I am doing!"
+    "text": "Machine Learning vs. Statistical Learning\n\n\nMachine learning (ML) is a field in Computer Science (CS).\n\n\n“A computer program is said to learn from experience (E) with respect to some class of tasks (T) and performance measure (P) if its performance at tasks in T, as measured by P, improves with experience E.” – Tom Mitchell, Professor of ML at Carnegie Mellon University\n\n\ncomputer programs = software and algorithms\nexperience = data\ntasks = problems\n\n\n\nThe ML algorithms are mainly for predictive modeling problems, and many have been borrowed from Statistics, for example, linear regression.\nML is a CS perspective on modeling data with a focus on algorithmic methods.\n\n\n\n\nWait, I am a statistical modeler (computational statistician), and this is exactly what I am doing!"
   },
   {
     "objectID": "slides/02-overview.html#machine-learning-vs.-statistical-learning-1",
