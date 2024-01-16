@@ -124,6 +124,14 @@ knitr::knit_hooks$set(output = function(x, options) {
 ![](images/01-syllabus/taiwan.svg){width="500" fig-alt="Taiwan location"}
 :::
 
+::: notes
+- Hello everyone, how are you? I hope you have a great winter break. Welcome to 6250 Statistical Machine Learning course. I am your instructor Cheng-Han Yu.  
+
+- First thing first. Get to know each other. Let me first introduce my self. I was born and grew up in Taipei, Taiwan, my home country, which is a island right next to China. Taipei is a big city in terms of population. It is about the same population size as Chicago. This building is called Taipei 101, which is the tallest building in Taiwan.
+:::
+
+
+
 ## My Journey {background-image="images/01-syllabus/sample_gate.png" background-size="cover" background-position="50% 50%" background-opacity="0.3"}
 
 -   Assistant Professor (2020/08 - )
@@ -158,6 +166,25 @@ knitr::include_graphics("./images/01-syllabus/ucsc.png")
 knitr::include_graphics("./images/01-syllabus/iub.png")
 ```
 
+
+::: notes
+After college, working and doing military service for several years, I came to the US for my PhD degree. Originally I would like to study economics, but then I switched my major to statistics. 
+
+- I got my master degree in economics from Indiana University Bloomington, then I transferred to UC Santa Cruz to finish my PhD studies. 
+- Then I spent two years doing my postdoctoral research at Rice University in Houston, Texas.
+- Finally, in fall 2020, I came to Marquette as an assistant professor.
+- Midwest/Indiana-West/California-South/Texas-Midwest/Wisconsin
+- Been to any one of these universities/cities? 
+- The most beautiful campus.
+- Who are international students? I can totally understand how hard studying and living in another country. Feel free to share your stories or difficulties, and I am more than happy to help you if you have any questions.
+- Poor listening and speaking skills. I was shy. 
+- OK so, this is my background. How about you introducing yourself as well. You can share anything, your major, hobbies, your favorite food, what do you want to do after graduation, anything, 
+- I have the class list. I'd like to learn your face and remember your name. You know, you all wear a mask. It's hard to recognize you and connect your name and your face. 
+- When I call your name, you can say something about yourself. No need to be long, couple of seconds are good.
+:::
+
+
+
 ## My Research
 
 -   Bayesian spatio-temporal modeling and machine learning algorithms in neuroimaging
@@ -191,7 +218,7 @@ knitr::include_graphics("./images/01-syllabus/eeg.png")
 
 ## How to Reach Me
 
-- Office hours **TuTh 4:50 - 5:50 PM** and **W 12 - 1 PM** in **Cudahy Hall 353**.
+- Office hours **TuTh 4:50 - 5:50 PM** and **Wed 12 - 1 PM** in **Cudahy Hall 353**.
 - `r emo::ji('e-mail')`  <cheng-han.yu@marquette.edu> 
   + Answer your question within 24 hours. 
   + Expect a reply on **Monday** if shoot me a message **on weekends**.
@@ -208,18 +235,18 @@ knitr::include_graphics("./images/01-syllabus/email6250.png")
   
 
 ## Prerequisites
-- On bulletin: MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MATH 4780 (Regression Analysis)
+- On bulletin: MATH 4720 (Intro to Statistics), MATH 3100 (Linear Algebra) and MSSC 5780 (Regression Analysis)
 
 - Programming experience (Who does machine learning without coding?)
 
 . . .
 
-- Having taken MATH 5700 (Probability) and MATH 5710 (Stats Inference) or other math and statistics courses (Stats Computing, etc) is recommended.
+- Having taken MSSC 5700 (Probability) and MSSC 5710 (Stats Inference) or other math and statistics courses (Stats Computing, etc) is recommended.
 
 ## Textbook
 ::: columns
 ::: column
-- [(**ISL**) *An Introduction to Statistical Learning, 2nd edition*](https://www.statlearning.com/), by James et al. Publisher: Springer. 
+- [(**ISL**) *An Introduction to Statistical Learning*](https://www.statlearning.com/), by James et al. Publisher: Springer. 
 <!-- - The 5th edition is sufficient. -->
 - Discuss all chapters except Chapter 11 (survival analysis) and 13 (multiple testing).
 - R and Python code
@@ -336,14 +363,18 @@ knitr::include_graphics("./images/01-syllabus/website.png")
 knitr::include_graphics("./images/01-syllabus/d2l_6250.png")
 ```
 
-- Any new announcement will be posted in **News** in **Course Home**.
+<!-- - Any new announcement will be posted in **News** in **Course Home**. -->
 <!-- - **Content > Start Here: Course Information** includes syllabus and other useful information. -->
 <!-- - Week modules (**Content > Week 1 to Week 15**) include course materials. -->
+
+
+- **News**
+
 - Submit your homework **Assessments > Dropbox**.
 
 - Check your grade **Assessments > Grades**.
 
-- Go to <https://www.marquette.edu/remote-learning/d2l.php> to learn more about D2L.
+<!-- - Go to <https://www.marquette.edu/remote-learning/d2l.php> to learn more about D2L. -->
 
 
 ## Grading Policy &#x2728;

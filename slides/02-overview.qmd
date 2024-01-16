@@ -205,7 +205,7 @@ knitr::include_graphics("./images/02-overview/cancer-risk.webp")
 ## Machine Learning vs. Statistical Learning
 - **Machine learning** (ML) is a field in Computer Science (CS).
 
-> _"A **computer program** is said to learn from **experience** *E* with respect to some class of tasks *T* and performance measure *P* if its performance at tasks in *T*, as measured by *P*, [improves with experience]{style="color: red;"} *E*."_
+> _"A **computer program** is said to learn from **experience** [(*E*)]{.red} with respect to some class of tasks [(*T*)]{.red} and performance measure [(*P*)]{.red} if its performance at tasks in *T*, as measured by *P*, [improves with experience]{style="color: red;"} *E*."_
 -- [Tom Mitchell](http://www.cs.cmu.edu/~tom/mlbook.html), Professor of ML at Carnegie Mellon University
 
 - *computer programs = software and algorithms*
