@@ -345,8 +345,8 @@ segments(orig$x, orig$y, plane$x, plane$y, col = 1, lty = c(2, 1)[i.negpos],
 
 ## Least-squares Normal Equations
 $$\begin{align*}
-\left.\frac{\partial SS_{res}}{\partial\alpha_0}\right\vert_{b_0, b_1, \dots, b_k} &= -2 \sum_{i=1}^n\left(y_i - b_0 - \sum_{j=1}^k b_j x_{ij}\right) = 0\\
-\left.\frac{\partial SS_{res}}{\partial\alpha_j}\right\vert_{b_0, b_1, \dots, b_k} &= -2 \sum_{i=1}^n\left(y_i - b_0 - \sum_{j=1}^k b_j x_{ij}\right)x_{ij} = 0, \quad j = 1, 2, \dots, k
+\left.\frac{\partial SS_{res}}{\partial\alpha_0}\right\vert_{b_0, b_1, \dots, b_k} &= -2 \sum_{i=1}^n\left(y_i - \alpha_0 - \sum_{j=1}^k \alpha_j x_{ij}\right) = 0\\
+\left.\frac{\partial SS_{res}}{\partial\alpha_j}\right\vert_{b_0, b_1, \dots, b_k} &= -2 \sum_{i=1}^n\left(y_i - \alpha_0 - \sum_{j=1}^k \alpha_j x_{ij}\right)x_{ij} = 0, \quad j = 1, 2, \dots, k
 \end{align*}$$
 
 - $k + 1$ equations with $k + 1$ unknown parameters.
@@ -913,13 +913,13 @@ Where to learn these stuff?
 # Numerical Optimization for Linear Regression {background-color="#447099"}
 
 ## Basic Concepts
-- Although we have the closed form for ${\bf b} = ({\bf X}' {\bf X}) ^ {-1} \bf X' \bf y$, we can solve for $\bf b$ numerically.
+- Although we have the closed form for ${\bf b} = ({\bf X}' {\bf X}) ^ {-1} {\bf X}' {\bf y}$, we can solve for $\bf b$ numerically.
 
 $$\begin{align}
 \underset{\bbeta}{\text{min}} \quad \ell(\bbeta) = \frac{1}{n} \sum_i (y_i - \beta_0 - x_i\beta_1)^2 \\
 \end{align}$$
 
-- $\ell(\bbeta)$, in machine learning, is called the (squared) **loss function**.
+- $\ell(\bbeta)$, the $\text{MSE}_{\texttt{Tr}}$, is called the (squared) **loss function**.
 
 
 
@@ -934,10 +934,10 @@ y <- 0.5 + x + rnorm(n)
 ```
 
 
-- Start with an initial value of $\bbeta$, say $\widehat{\bbeta} = (0.3, 1.5)$, we compute the $SS_{res}$
+- Start with an initial value of $\bbeta$, say $\widehat{\bbeta} = (0.3, 1.5)$, we compute the $\text{MSE}_{\texttt{Tr}}$
 
 $$\begin{align}
-\sum_i \left( y_i - 0.3 - 1.5 x_i \right)^2 \\
+\frac{1}{n}\sum_i \left( y_i - 0.3 - 1.5 x_i \right)^2 \\
 \end{align}$$
 
 
@@ -951,8 +951,8 @@ Let's first generate a set of data. We have two parameters, an intercept $\beta_
 ```{r}
 #| echo: true
 # calculate the residual sum of squares for a grid of beta values
-rss <- function(b, trainx, trainy) mean((trainy - b[1] - trainx * b[2]) ^ 2)
-rss(b = c(0.3, 1.5), trainx = x, trainy = y)
+mse <- function(b, trainx, trainy) mean((trainy - b[1] - trainx * b[2]) ^ 2)
+mse(b = c(0.3, 1.5), trainx = x, trainy = y)
 ```
 
 - The initial point $(0.3, 1.5)$ is not at the bottom of the surface. 
@@ -961,18 +961,19 @@ rss(b = c(0.3, 1.5), trainx = x, trainy = y)
 #| out-width: "100%"
   # create a grid of beta values and the corresponding RSS
   b0 <- b1 <- seq(0, 2, length = 20)
-  z <- matrix(apply(expand.grid(b0, b1), 1, rss, x, y), 20, 20)
-  onepoint <- data.frame("x" = 0.3, "y" = 1.5, "z" = rss(c(0.3, 1.5), x, y))
+  z <- matrix(apply(expand.grid(b0, b1), 1, mse, x, y), 20, 20)
+  onepoint <- data.frame("x" = 0.3, "y" = 1.5, "z" = mse(c(0.3, 1.5), x, y))
   
   # 3d plot of RSS using `plotly`
   plot_ly(x = b0, y = b1) |> 
       layout(plot_bgcolor='rgb(254, 247, 234)') |> 
       layout(paper_bgcolor='transparent') |>  
       add_surface(z = t(z), 
-                  colorscale = 'Viridis') |>  
+                  colorscale = 'Viridis',
+                  opacity = 0.6) |>  
       layout(scene = list(xaxis = list(title = "beta0"), 
              yaxis = list(title = "beta1"),
-             zaxis = list(title = "RSS"))) |>  
+             zaxis = list(title = "MSE"))) |>  
       add_markers(data = onepoint, 
                 x = ~x, y = ~y, z = ~z, 
                 marker = list(size = 6, color = "red", symbol = 104))
@@ -992,8 +993,10 @@ Numerical optimization is a research field that investigates such problems and t
 ```{r}
 #| echo: true
 #| class-output: "my_class600"
-(lm_optim <- optim(par = c(0.3, 1.5), fn = rss, trainx = x, trainy = y))
+(lm_optim <- optim(par = c(0.3, 1.5), fn = mse, trainx = x, trainy = y))
 ```
+
+. . .
 
 ```{r}
 #| echo: true
@@ -1002,10 +1005,9 @@ lm(y ~ x)$coef
 ```
 
 ::: notes
-
   * The `par` argument specifies an initial value. In this case, it is $\beta_0 = \beta_1 = 2$. 
-  * The `fn` argument specifies the name of a function (`rss` in this case) that can calculate the objective function. This function may have multiple arguments. However, the first argument has to be the parameter(s) that is being optimized. In addition, the parameters need to be supplied to the function as a vector, but not matrix, list or other formats. 
-  * The arguments `trainx = x`, `trainy = y` specifies any additional arguments that the objective function `fn` (`rss`) needs. It behaves the same as if you are supplying this to the function `rss` it self.
+  * The `fn` argument specifies the name of a function (`mse` in this case) that can calculate the objective function. This function may have multiple arguments. However, the first argument has to be the parameter(s) that is being optimized. In addition, the parameters need to be supplied to the function as a vector, but not matrix, list or other formats. 
+  * The arguments `trainx = x`, `trainy = y` specifies any additional arguments that the objective function `fn` (`mse`) needs. It behaves the same as if you are supplying this to the function `mse` it self.
 :::
 
 
@@ -1039,11 +1041,16 @@ For a general function $f(\bx)$ to be minimized with respect to (w.r.t.) $\bx \i
 ```
 
 
+
+
+
+
+
 ## Taylor Expansion
 
 $$f(\bx^\text{new}) \approx f(\bx) + \nabla f(\bx) (\bx^\text{new} - \bx)$$
 
-- Whether $\nabla f(\bx)$ is positive or negative, we can always find a new point $\bx^\text{new}$ that makes $\nabla f(\bx) (\bx^\text{new} - \bx)$ less than 0, so that $\bx^\text{new}$ has a smaller functional value than $\bx$. 
+- Whether $\nabla f(\bx)$ is positive or negative, we can always find a new point $\bx^\text{new}$ that makes $\nabla f(\bx) (\bx^\text{new} - \bx)$ less than 0, so that $f(\bx^\text{new}) < f(\bx)$. 
 
 ```{r, ref.label="fcnplot"}
 #| out-width: "70%"
@@ -1067,11 +1074,11 @@ On the left hand side, we have a __convex function__, which looks like a bowl. T
 
 __Second-order *Sufficient* Condition__: 
 
-> $f$ is twice continuously differentiable in an open neighborhood of $\bx^\ast$. If $\nabla f(\bx^\ast) = \mathbf{0}$ and $\nabla^2 f(\bx^\ast)$ , the __Hessian matrix__, is positive definite, i.e.,
+> $f$ is twice continuously differentiable in an open neighborhood of $\bx^\ast$. If $\nabla f(\bx^\ast) = \mathbf{0}$ and $\nabla^2 f(\bx^\ast)$ , the __Hessian matrix__, is [*positive definite*]{.green}, i.e.,
 $$
 \nabla^2 f(\bx) = \left(\frac{\partial^2 f(\bx)}{\partial x_i \partial x_j}\right) = \bH(\bx) \succeq 0
 $$
-then $\bx^\ast$ is a strict local minimizer of $f$. 
+then $\bx^\ast$ is a [*strict local minimizer*]{.green} of $f$. 
 
 <!-- - $\bH(\bx)$ is called the __Hessian matrix__ -->
 
@@ -1081,7 +1088,7 @@ then $\bx^\ast$ is a strict local minimizer of $f$.
 \end{align}
 
 - For $f_1$, $\bH(\bx) \succeq 0$, and the solution is a minimizer. 
-- For $f_2$, $\nabla^2 f_2(-2.5) = 35$, $\nabla^2 f_2(0) = -10$ and $\nabla^2 f_2(1) = 14$. So $-2.5$ and $1$ are local minimizers and $0$ is a local maximizer. 
+- For $f_2$, $\nabla^2 f_2(-2.5) = 35$, $\nabla^2 f_2(0) = -10$ and $\nabla^2 f_2(1) = 14$. So $x = -2.5$ and $1$ are local minimizers and $0$ is a local maximizer. 
 
 
 ::: notes
@@ -1100,18 +1107,19 @@ These conditions are sufficient, but again, they only discuss local properties, 
 
 :::
 
+. . .
+
 - Stopping criterion:
   - Gradient of the objective function: $\lVert \nabla f(\bx^{(i)}) \rVert < \epsilon$
-  - (Relative) change of distance: $\lVert \bx^{(i)} - \bx^{(i-1)} \rVert / \lVert \bx^{(i-1)}\rVert< \epsilon$ or $\lVert \bx^{(i)} - \bx^{(i-1)} \rVert < \epsilon$
-  - (Relative) change of functional value: $| f(\bx^{(i)}) - f(\bx^{(i-1)})| / |f(\bx^{(i)})| < \epsilon$ or $| f(\bx^{(i)}) - f(\bx^{(i-1)})| < \epsilon$
+  - (Relative) change of distance: $\frac{\lVert \bx^{(i)} - \bx^{(i-1)} \rVert} {\lVert \bx^{(i-1)}\rVert}< \epsilon$ or $\lVert \bx^{(i)} - \bx^{(i-1)} \rVert < \epsilon$
+  - (Relative) change of functional value: $\frac{| f(\bx^{(i)}) - f(\bx^{(i-1)})|}{|f(\bx^{(i)})|} < \epsilon$ or $| f(\bx^{(i)}) - f(\bx^{(i-1)})| < \epsilon$
   - Stop at a pre-specified number of iterations
 
 . . .
 
 ```r
 optim(par, fn, gr = NULL, ...,
-      method = c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN",
-                 "Brent"),
+      method = c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN", "Brent"),
       lower = -Inf, upper = Inf,
       control = list(), hessian = FALSE)
 
@@ -1350,8 +1358,7 @@ The descent path is very smooth because we choose a very small step size. Howeve
 
 ```r
 optim(par, fn, gr = NULL, ...,
-      method = c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN",
-                 "Brent"),
+      method = c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN", "Brent"),
       lower = -Inf, upper = Inf,
       control = list(), hessian = FALSE)
 ```
