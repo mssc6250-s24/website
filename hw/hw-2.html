@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MATH/COSC 3570 - Spring 2024 - Homework 2 - Simple linear regression</title>
+<title>MSSC 6250 - Spring 2024 - Homework 2 - Ridge, Lasso, and Splines</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,72 +17,9 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -119,26 +56,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="MATH/COSC 3570 - Spring 2024 - Homework 2 - Simple linear regression">
-<meta property="og:description" content="Due Friday, September 22, 11:59 PM on D2L">
-<meta property="og:site-name" content="MATH/COSC 3570 - Spring 2024">
+<meta property="og:title" content="MSSC 6250 - Spring 2024 - Homework 2 - Ridge, Lasso, and Splines">
+<meta property="og:description" content="Due Friday, Mar 1 11:59 PM">
+<meta property="og:site-name" content="MSSC 6250 - Spring 2024">
 </head>
 
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Homework 2 - Simple linear regression</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Homework 2 - Ridge, Lasso, and Splines</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -146,150 +90,208 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/math3570-s24" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="https://d2l.mu.edu/d2l/home/545777" title="D2L" class="sidebar-tool px-1"><i class="bi bi-person-fill"></i></a>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <a href="https://github.com/mssc6250-s24/website" rel="" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://d2l.mu.edu/d2l/home/544009" rel="" title="D2L" class="quarto-navigation-tool px-1" aria-label="D2L"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Course information</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
+  <a href="../course-news.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">News/Annoucements</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">Syllabus</a>
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">Schedule</a>
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Project</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-description.html" class="sidebar-item-text sidebar-link">Guideline and Policy</a>
+  <a href="../project-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guideline and Policy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-work.html" class="sidebar-item-text sidebar-link">Project Group and Proposal</a>
+  <a href="../project-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Group and Proposal</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Weekly materials</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Class Activities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-1.html" class="sidebar-item-text sidebar-link">Week 1</a>
+  <a href="../activity-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Description</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-2.html" class="sidebar-item-text sidebar-link">Week 2</a>
+  <a href="../activity-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Weekly materials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/week-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-3.html" class="sidebar-item-text sidebar-link">Week 3</a>
+  <a href="../weeks/week-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-4.html" class="sidebar-item-text sidebar-link">Week 4</a>
+  <a href="../weeks/week-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-5.html" class="sidebar-item-text sidebar-link">Week 5</a>
+  <a href="../weeks/week-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-6.html" class="sidebar-item-text sidebar-link">Week 6</a>
+  <a href="../weeks/week-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-7.html" class="sidebar-item-text sidebar-link">Week 7</a>
+  <a href="../weeks/week-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-8.html" class="sidebar-item-text sidebar-link">Week 8</a>
+  <a href="../weeks/week-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-9.html" class="sidebar-item-text sidebar-link">Week 9</a>
+  <a href="../weeks/week-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-10.html" class="sidebar-item-text sidebar-link">Week 10</a>
+  <a href="../weeks/week-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-11.html" class="sidebar-item-text sidebar-link">Week 11</a>
+  <a href="../weeks/week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-12.html" class="sidebar-item-text sidebar-link">Week 12</a>
+  <a href="../weeks/week-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-13.html" class="sidebar-item-text sidebar-link">Week 13</a>
+  <a href="../weeks/week-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-14.html" class="sidebar-item-text sidebar-link">Week 14</a>
+  <a href="../weeks/week-13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-15.html" class="sidebar-item-text sidebar-link">Week 15</a>
+  <a href="../weeks/week-14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 14</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/week-15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 15</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/week-16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 16</span></a>
   </div>
 </li>
       </ul>
@@ -297,28 +299,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#homework-instruction-and-requirement" id="toc-homework-instruction-and-requirement" class="nav-link active" data-scroll-target="#homework-instruction-and-requirement">Homework Instruction and Requirement</a></li>
-  <li><a href="#mathematical-derivation-and-reasoning" id="toc-mathematical-derivation-and-reasoning" class="nav-link" data-scroll-target="#mathematical-derivation-and-reasoning">Mathematical Derivation and Reasoning</a></li>
-  <li><a href="#statistical-computing-and-data-analysis" id="toc-statistical-computing-and-data-analysis" class="nav-link" data-scroll-target="#statistical-computing-and-data-analysis">Statistical Computing and Data Analysis</a>
-  <ul class="collapse">
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a></li>
-  </ul></li>
+  <li><a href="#homework-questions" id="toc-homework-questions" class="nav-link active" data-scroll-target="#homework-questions">Homework Questions</a></li>
+  <li><a href="#exercises-required-for-mssc-phd-students" id="toc-exercises-required-for-mssc-phd-students" class="nav-link" data-scroll-target="#exercises-required-for-mssc-phd-students">Exercises required for MSSC PhD students</a></li>
+  <li><a href="#optional-exercises" id="toc-optional-exercises" class="nav-link" data-scroll-target="#optional-exercises">Optional Exercises</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/math3570-s24/website/edit/main/hw/hw-2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/math3570-s24/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mssc6250-s24/website/edit/main/hw/hw-2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mssc6250-s24/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Homework 2 - Simple linear regression</h1>
-<p class="subtitle lead">Due Friday, September 22, 11:59 PM on D2L</p>
+<h1 class="title">Homework 2 - Ridge, Lasso, and Splines</h1>
+<p class="subtitle lead">Due Friday, Mar 1 11:59 PM</p>
 </div>
 
 
@@ -333,119 +333,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="homework-instruction-and-requirement" class="level1">
-<h1>Homework Instruction and Requirement</h1>
+<div class="hidden">
+<!-- \DeclareMathOperator*{\argmin}{arg\,min} -->
+</div>
 <ul>
-<li><p>Homework 2 covers course materials of Week 1 to 4.</p></li>
-<li><p>Please submit your work in <strong>one</strong> <strong>PDF</strong> file including all parts to <strong>D2L &gt; Assessments &gt; Dropbox</strong>. <em>Multiple files or a file that is not in pdf format are not allowed.</em></p></li>
-<li><p>In your homework, please number and answer questions <strong>in order</strong>.</p></li>
-<li><p>Your answers may be handwritten on the Mathematical Derivation and Reasoning part. However, you need to scan your paper and make it a PDF file.</p></li>
-<li><p>Your entire work on Statistical Computing and Data Analysis should be completed by any word processing software (Microsoft Word, Google Docs, <a href="https://rmarkdown.rstudio.com/">(R)Markdown</a>, <a href="https://quarto.org/">Quarto</a>, <a href="https://www.latex-project.org/">LaTex</a>, etc) and your preferred programming language. Your document should be a PDF file.</p></li>
-<li><p>Questions starting with <strong>(MSSC)</strong> are for MSSC 5780 students. MATH 4780 students could possibly earn extra points from them.</p></li>
-<li><p>It is your responsibility to let me understand what you try to show. If you type your answers, make sure there are no typos. I grade your work based on <em>what you show, not what you want to show</em>. If you choose to handwrite your answers, write them neatly. If I can’t read your sloppy handwriting, your answer is judged as wrong.</p></li>
+<li><p>Please submit your work in <strong>one</strong> <strong>PDF</strong> file to <strong>D2L &gt; Assessments &gt; Dropbox</strong>. <em>Multiple files or a file that is not in pdf format are not allowed.</em></p></li>
+<li><p>Any relevant code should be attached.</p></li>
+<li><p>Read <strong>ISL</strong> Chapter 5.1, 6.2, and 7.</p></li>
 </ul>
-</section>
-<section id="mathematical-derivation-and-reasoning" class="level1">
-<h1>Mathematical Derivation and Reasoning</h1>
-<p>The following questions are based on the population and sample linear regression model defined in our course slides and textbook.</p>
+<section id="homework-questions" class="level2">
+<h2 class="anchored" data-anchor-id="homework-questions">Homework Questions</h2>
 <ol type="1">
-<li><strong>(MSSC)</strong> Find the least squares estimator <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> such that <span class="math display">\[(b_0, b_1) = \arg\min_{\beta_0, \beta_1} \sum_{i=1}^n(y_i - \beta_0 - \beta_1x_i)^2.\]</span></li>
+<li><p><strong>ISL</strong> Sec. 5.4: 3</p></li>
+<li><p><strong>ISL</strong> Sec. 6.6: 3</p></li>
+<li><p><strong>ISL</strong> Sec. 6.6: 4</p></li>
+<li><p><strong>ISL</strong> Sec. 6.6: 6</p></li>
+<li><p><strong>ISL</strong> Sec. 6.6: 9 (a)-(d)</p></li>
+<li><p><strong>ISL</strong> Sec. 7.9: 9</p></li>
+<li><p>Suppose for a linear regression problem with <span class="math inline">\(n = p\)</span>, <span class="math inline">\({\bf X} = {\bf I}\)</span> and no intercept. Show that</p>
+<ol type="a">
+<li><p>The least squares problem can be simplified to finding <span class="math inline">\(\beta_1, \dots, \beta_p\)</span> that minimize <span class="math inline">\(\sum_{j=1}^p\left(y_j - \beta_j\right)^2\)</span>. What is least squares estimator <span class="math inline">\(b_j\)</span>?</p></li>
+<li><p>The ridge estimator is <span class="math inline">\(\hat{\beta}_j^r = \frac{y_j}{1+\lambda} = \arg\min \sum_{j=1}^p\left(y_j - \beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2\)</span>.</p></li>
+<li><p>The Lasso solution of <span class="math inline">\(\sum_{j=1}^p\left(y_j - \beta_j\right)^2 + \lambda \sum_{j=1}^p | \beta_j |\)</span> is <span class="math display">\[\hat{\beta}_j^l =
+  \begin{cases}
+y_j - \lambda/2       &amp; \quad \text{if } y_j &gt; \lambda/2\\
+y_j + \lambda/2       &amp; \quad \text{if } y_j &lt; -\lambda/2 \\
+0  &amp; \quad \text{if } |y_j| \le \lambda/2
+  \end{cases}\]</span></p></li>
+</ol></li>
 </ol>
-<!-- 2. **(MSSC)** Show that $\hat{y}_i = \sum_{j=1}^n h_{ij}y_j$ where $h_{ij} = \frac{1}{n} + \frac{(x_i-\overline{x})(x_j-\overline{x})}{S_{xx}}$.  -->
-<!-- 1. The least squares approach chooses $b_0$ and $b_1$ to minimize the $SS_{res}$, i.e., $$(b_0, b_1) = \arg\min_{\beta_0, \beta_1} \sum_{i=1}^n(y_i - \beta_0 - \beta_1x_i)^2.$$ Show that $$b_0 = \overline{y} - b_1\overline{x}$$ and $$b_1 = \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i - \overline{y})}{\sum_{i=1}^n(x_i - \overline{x})^2} := \frac{S_{xy}}{S_{xx}}.$$ -->
-<ol start="2" type="1">
-<li><p><strong>(MSSC)</strong> Remember that before training sample is collected, <span class="math inline">\(y_i\)</span> are assumed random variables. Show that <span class="math inline">\(b_0\)</span> is an unbiased estimator for <span class="math inline">\(\beta_0\)</span>, i.e., <span class="math inline">\(E(b_0) = \beta_0\)</span>.</p></li>
-<li><p><strong>(MSSC)</strong> Show that <span class="math inline">\(\sum_{i=1}^n(y_i - \overline{y})^2 = \sum_{i=1}^n(\hat{y}_i - \overline{y})^2 + \sum_{i=1}^n(y_i - \hat{y}_i)^2\)</span>, i.e., <span class="math inline">\(SS_T = SS_R + SS_{res}\)</span>.</p></li>
-</ol>
-<!-- 5.  **(MSSC)** Show that $SS_{res} = SS_T - b_1S_{xy}$, i.e., $SS_R = b_1S_{xy}$. This proof tells us that $SS_{res}$ is the variation with all variation explained by the association of $x$ and $y$ removed. -->
-<!-- 6.  **(MSSC)** Show that $E(MS_{res}) = \sigma^2$ and $E(MS_R) = \sigma^2 + \beta_1^2S_{xx}$. [*Hint:* Use the fact that a $\chi^2_{k}$ random variable has the mean value $k$.] This proof tells us that $MS_R$ is also an estimator for $\sigma^2$. Although it is usually biased, it is unbiased when $\beta_1 = 0$. Would $MS_R \ge MS_{res}$ always hold? Why or why not? Please explain. -->
 </section>
-<section id="statistical-computing-and-data-analysis" class="level1">
-<h1>Statistical Computing and Data Analysis</h1>
-<p>Please perform a data analysis using <span class="math inline">\(\texttt{R}\)</span> or your preferred language. <strong>Any results should be generated by computer outputs, and your work should be done entirely by your computer</strong>. <strong>Handwriting is not allowed</strong>. <strong>Relevant code should be attached.</strong></p>
-<!-- ## Simulation -->
-<!-- 1. Generate a simulated data of size $n = 100$ from the regression  -->
-<!-- $$y_i = 10 + 5x_i + \epsilon_i, ~~ \epsilon_i \stackrel{iid}{\sim} N(0, 2)$$ -->
-<!-- by completing the code -->
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- x <- runif(_____) -->
-<!-- y <- ____ + ____ * ____ + r____(_____, sd = _____) -->
-<!-- ``` -->
-<!-- Fit a simple linear regression model to the data, then check whether the true slope is captured by the 90% confidence interval for the slope. -->
-<section id="data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
-<p>The data set <a href="./data/mpg.csv"><code>mpg.csv</code></a> presents data on the gasoline mileage performance of 32 different automobiles. (Table B.3 in the textbook LRA)</p>
-<p>To import the data set into your R session, use <code>read.csv()</code> like</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_name_you_like <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"the_path_that_saves_your_data/mpg.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Once you load the data set, type its name on the R console. The data should be a data frame with 32 rows and 12 columns that looks like</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>      y  x1  x2  x3   x4   x5 x6 x7    x8   x9  x10 x11
-1 18.90 350 165 260 8.00 2.56  4  3 200.3 69.9 3910   1
-2 17.00 350 170 275 8.50 2.56  4  3 199.6 72.9 3860   1
-3 20.00 250 105 185 8.25 2.73  1  3 196.7 72.2 3510   1
-4 18.25 351 143 255 8.00 3.00  2  3 199.9 74.0 3890   1
-5 20.07 225  95 170 8.40 2.76  1  3 194.1 71.8 3365   0
-6 11.20 440 215 330 8.20 2.88  4  3 184.5 69.0 4215   1</code></pre>
-</div>
-</div>
-<p>If this is what you get, you are good to start!</p>
-<p>The variables are</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><span class="math inline">\(y\)</span>: Miles per gallon</li>
-<li><span class="math inline">\(x_1\)</span>: Displacement (cubic in.)</li>
-<li><span class="math inline">\(x_2\)</span>: Horsepower (ft-lb)</li>
-<li><span class="math inline">\(x_3\)</span>: Torque (ft-lb)</li>
-<li><span class="math inline">\(x_4\)</span>: Compression ratio</li>
-<li><span class="math inline">\(x_5\)</span>: Rear axle ratio</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><span class="math inline">\(x_6\)</span>: Carburetor (barrels)</li>
-<li><span class="math inline">\(x_7\)</span>: No.&nbsp;of transmission speeds</li>
-<li><span class="math inline">\(x_8\)</span>: Overall length (in.)</li>
-<li><span class="math inline">\(x_9\)</span>: Width (in.)</li>
-<li><span class="math inline">\(x_{10}\)</span>: Weight (lb)</li>
-<li><span class="math inline">\(x_{11}\)</span>: Type of transmission (A automatic; M manual)</li>
-</ul>
-</div>
-</div>
+<section id="exercises-required-for-mssc-phd-students" class="level2">
+<h2 class="anchored" data-anchor-id="exercises-required-for-mssc-phd-students">Exercises required for MSSC PhD students</h2>
 <ol type="1">
-<li><p>Fit a simple linear regression model relating gasoline mileage <span class="math inline">\(y\)</span> (miles per gallon) to engine displacement <span class="math inline">\(x_1\)</span> (cubic inches). Explain your coefficients. Any potential concern?</p></li>
-<li><p>Provide the <span class="math inline">\(95\%\)</span> CI for <span class="math inline">\(\beta_0\)</span>, <span class="math inline">\(\beta_1\)</span> and <span class="math inline">\(\sigma^2\)</span>.</p></li>
-<li><p>With <span class="math inline">\(\alpha = 0.05\)</span>, test if <span class="math inline">\(\beta_1\)</span> is significantly different from 0. Provide procedure and steps, for example, <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_1\)</span>, the test statistic or <span class="math inline">\(p\)</span>-value, and decision rule.</p></li>
-<li><p>Construct the ANOVA table and test for significance of regression.</p></li>
-<li><p>What percent of the total variability in gasoline mileage is accounted for by the linear relationship with engine displacement?</p></li>
-<li><p>Find a <span class="math inline">\(95\%\)</span> CI on the mean gasoline mileage if the engine displacement is 275 in<span class="math inline">\(^3\)</span> engine.</p></li>
-<li><p>Suppose that we wish to predict the gasoline mileage obtained from a car with a 275 in<span class="math inline">\(^3\)</span> engine. Give a point estimate of mileage. Find a 95% prediction interval (PI) on the mileage. Compare the PI with the CI in 6. Explain the difference between them. Which one is wider, and why?</p></li>
-<li><p>Plot data <span class="math inline">\(\{(x_{1i}, y_i)\}_{i=1}^{32}\)</span>, the fitted regression line, CI for <span class="math inline">\(\mu_{Y|X}\)</span> and PI for <span class="math inline">\(y\)</span> in one figure. Add appropriate labels of axes, title, and legend. [<em>Hint:</em> Create a sequence of values of <span class="math inline">\(x\)</span>, and obtain CI and PI for each value of <span class="math inline">\(x\)</span>. Use <code>legend()</code> to add legends to a plot.]</p></li>
-<li><p>Use the data and your fitted result to verify that</p>
-<ul>
-<li><ol type="a">
-<li><span class="math inline">\(\scriptstyle \sum_{i=1}^{32}(y_i - \hat{y}_i) = \sum_{i=1}^ne_i = 0\)</span></li>
-</ol></li>
-<li><ol start="2" type="a">
-<li><span class="math inline">\(\scriptstyle \sum_{i=1}^{32}y_i = \sum_{i=1}^{32}\hat{y}_i\)</span></li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>The LS regression line passes through the centroid <span class="math inline">\((\overline{x}, \overline{y})\)</span></li>
-</ol></li>
-<li><ol start="4" type="a">
-<li><span class="math inline">\(\scriptstyle \sum_{i=1}^{32}x_ie_i = 0\)</span></li>
-</ol></li>
-<li><ol start="5" type="a">
-<li><span class="math inline">\(\scriptstyle \sum_{i=1}^{32}\hat{y}_ie_i = 0\)</span></li>
-</ol></li>
-</ul></li>
+<li><p><strong>ISL</strong> Sec. 6.6: 5</p></li>
+<li><p><strong>ISL</strong> Sec. 7.9: 11</p></li>
+<li><p>Define the objective of the <strong>elastic net</strong> problem <span class="math inline">\(J_1(\boldsymbol \beta) = \|\mathbf{y}- \mathbf{X}\boldsymbol \beta\| ^2 + \lambda_2 \|\boldsymbol \beta\|_2^2 + \lambda_1 \|\boldsymbol \beta\|_1\)</span> and the objective of Lasso <span class="math inline">\(J_2(\boldsymbol \beta) = \|\tilde{\mathbf{y}} - \tilde{\mathbf{X}}\boldsymbol \beta\| ^2 + c\lambda_1 \|\boldsymbol \beta\|_1\)</span> where <span class="math inline">\(c = (1+\lambda_2)^{-1/2}\)</span>, and <span class="math display">\[\tilde{\mathbf{X}} = c \begin{pmatrix} \mathbf{X}\\
+\sqrt{\lambda_2}\mathbf{I}_p \end{pmatrix}, \quad \tilde{\mathbf{y}} = \begin{pmatrix} \mathbf{y}\\ \mathbf{0}_{p\times 1} \end{pmatrix}.\]</span> Show that <span class="math inline">\(J_1(c\boldsymbol \beta) = J_2(\boldsymbol \beta)\)</span>. Therefore the elastic net problem can be solved using algorithms for Lasso on modified data.</p></li>
+</ol>
+</section>
+<section id="optional-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="optional-exercises">Optional Exercises</h2>
+<p>Let the ridge estimator be <span class="math inline">\(\hat{\boldsymbol \beta}^r = (\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}\mathbf{X}' \mathbf{y}\)</span>. Show that</p>
+<ol type="1">
+<li><p><span class="math inline">\(\hat{\boldsymbol \beta}^r = (\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}(\mathbf{X}'\mathbf{X})\mathbf{b}\)</span>, and hence <span class="math inline">\(\hat{\beta}_j^r = \frac{b_j}{1+\lambda}\)</span> is a special case when <span class="math inline">\(\mathbf{X}'\mathbf{X}= \mathbf{I}\)</span>.</p></li>
+<li><p>The bias <span class="math inline">\(\mathrm{E}\left( \hat{\boldsymbol \beta}^r \right) - \boldsymbol \beta= \left[ (\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}(\mathbf{X}'\mathbf{X}) - \mathbf{I}\right]\boldsymbol \beta\)</span>, and hence <span class="math inline">\(\text{Bias}(\hat{\beta}_j^r) = \frac{-\lambda}{1+\lambda}\beta_j\)</span> when <span class="math inline">\(\mathbf{X}'\mathbf{X}= \mathbf{I}\)</span>.</p></li>
+<li><p><span class="math inline">\(\sum_{j=1}^p \left( \hat{\beta}_j^r - \beta_j\right)^2 = \lambda^2 \boldsymbol \beta' \left( \mathbf{X}'\mathbf{X}+ \lambda \mathbf{I}\right)^{-2}\boldsymbol \beta= \sum_{j=1}^p \frac{\lambda^2}{(d_j^2 + \lambda)^2}\beta_j^2\)</span>.</p></li>
+<li><p><span class="math inline">\(\mathrm{Var}\left( \hat{\beta}_j^r \right) = \sigma^2\frac{d_j^2}{\left(d_j^2+\lambda\right)^2}\)</span> where <span class="math inline">\(d_j\)</span> is the <span class="math inline">\(j\)</span>-th singular value of <span class="math inline">\(\mathbf{X}\)</span>. Hence <span class="math inline">\(\mathrm{Var}\left( \hat{\beta}_j^r \right) = \sigma^2\frac{1}{\left(1+\lambda\right)^2}\)</span> when <span class="math inline">\(\mathbf{X}'\mathbf{X}= \mathbf{I}\)</span>.</p></li>
+<li><p><span class="math inline">\(\hat{\mathbf{y}}^r = \mathbf{X}\hat{\boldsymbol \beta}^r = \mathbf{X}(\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}\mathbf{X}' \mathbf{y}= \sum_{j=1}^p \mathbf{u}_j \left( \frac{d_j^2}{d_j^2+\lambda}\mathbf{u}_j'\mathbf{y}\right)\)</span> where <span class="math inline">\(\mathbf{u}_j\)</span> is the <span class="math inline">\(j\)</span>-th column of the SVD of <span class="math inline">\(\mathbf{X}= \mathbf{U}\mathbf{D}\mathbf{V}'\)</span>. Hence, a greater amount of shrinkage is applied to the coordinates of basis vectors with smaller <span class="math inline">\(d_j^2\)</span>.</p></li>
+<li><p>The trace of the projection matrix <span class="math inline">\(\mathbf{H}_{\lambda} = \mathbf{X}(\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}\mathbf{X}'\)</span> defines the <strong>effective degrees of freedom</strong>. In general, <span class="math inline">\(\text{tr}(H) = \sum_{j=1}^p \frac{d_j^2}{d_j^2+\lambda}\)</span>. For linear regression where <span class="math inline">\(\lambda = 0\)</span>, <span class="math inline">\(\text{tr}(H) = p\)</span>.</p></li>
 </ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -591,9 +530,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -658,6 +611,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -701,6 +740,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2024, Cheng-Han Yu</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
