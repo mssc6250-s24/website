@@ -5,15 +5,14 @@ editor: visual
 ---
 
 ::: callout-important
+<!-- Homework 1 released. -->
 :::
-
 
 ## Participate
 
 🖥️ [Slides - Linear Regression](/slides/03-linear-reg.html)
 
 `r fontawesome::fa("table")` [Data Sets - Advertising.csv](https://www.statlearning.com/resources-second-edition)
-
 
 ## Reading and Resources
 
@@ -23,12 +22,9 @@ editor: visual
 
 📖 [Nocedal, Jorge, and Stephen Wright. 2006. *Numerical Optimization*](https://www.math.uci.edu/~qnie/Publications/NumericalOptimization.pdf)
 
-
-
-
 ## Perform
 
-<!-- 📋 [Lab-00 Git/GitHub](/exercise/lab00-git.html) -->
+<!-- 📋 [Homework 1](/hw/hw-1.html) -->
 
 <!-- 📋 [Lab-02 Quarto File](/exercise/lab02-quarto.html) -->
 

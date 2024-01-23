@@ -7,28 +7,66 @@ date-modified: last-modified
 
 ## Date
 
-<!-- There are six in-class activities on **Tuesdays 09/19, 09/26, 10/10, 10/24, 11/14, and 12/05**. -->
+There will be four in-class activities on **Thursdays on 2/15, 3/7, 4/11 and 5/2**.
 
 ## Format
 
-<!-- On each class activity day, -->
+On each class activity day, students are learning from each other through discussion.
 
-<!-- -   [**Two assigned MSSC 5780**](activity-work.html) students are presenting the regression problems assigned two days before the presentation date. -->
+-   The students will be randomly divided into **two** groups.
 
-<!-- -   Each presentation including Q & A is about <span style="color:blue"> **7 to 8 minute** </span> long. You will be forced to end your presentation if it is too long. -->
+-   For each group, **two** students will be assigned as a discussion leader.
+
+-   The assigned discussion leaders need to
+
+    -   prepare the discussion materials
+    -   present and teach the topic to the group
+    -   prepare at least one learning activity for the topic (e.g. Q & A, little games, coding practice, etc)
+    -   nominate **two** students that are mostly engaged
+
+-   The group members need to
+
+    -   learn the topic being discussed
+    -   participate the learning activities designed by the leaders
+    -   evaluate the leaders' performance
 
 <!-- -   Each presenter should prepare *at least* **two non-Yes-No** questions for all participants to answer. -->
 
 <!-- -   **Each of the [three assigned MATH 4780](activity-work.html)** students should ask either one or both presenters *at least one* **non-Yes-No** question. -->
 
-## Presentation Materials
+-   The discussion is about **40 minutes** long, followed by a knowledge check.
 
-<!-- -   No specific presentation style/format/materials are required. You, the presenter, decide how you present your work. -->
+## Discussion Materials
 
-<!-- -   The presenters should send the presentation materials, PDF, slides for example, to Dr. Yu *before* the class begins on the class activity day. -->
+-   The leaders will get a discussion topic **as least one week** before the class activity.
 
-<!-- -   Your presentation materials will be posted on [Activity work](activity-work.html) page. -->
+-   No specific discussion or presentation style/format/materials are required. The leaders decide how they present their work, and lead the discussion.
+
+-   The leaders should send their materials, PDF, slides for example, to Dr. Yu **before** the class begins on the class activity day.
+
+-   Your discussion materials will be posted on [Activity work](activity-work.html) page.
+
+## Knowledge Check
+
+-   Dr. Yu will ask questions about the topic being discussed.
+
+-   Every student needs to answer the questions that are worth 25 pts in total.
+
 
 ## Evaluation
 
-<!-- There are 60 points for class participation in the final grade calculation. Dr. Yu is the only one who evaluates your participation. Your goal is to convince Dr. Yu that you understand your work well and get engaged in the class activity. -->
+There are 200 points for class participation in the final grade calculation. Every student will serve as a discussion leader one time, and a group member three times.
+
+-   Discussion leaders (80 pts)
+
+    -   Knowledge check performance (25 pts)
+    
+    The followings are evaluated by the group members
+    -   Quality of discussion materials (25 pts)
+    -   Oral presentation and communication skills (20 pts)
+    -   Learning activity design (10 pts)
+    
+-   Group members (40 pts)
+
+    -   Knowledge check performance (25 pts)
+    -   Activity engagement (15 pts): The most engaged members get 15 pts. Others get 12 pts.
