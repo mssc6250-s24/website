@@ -5,7 +5,7 @@ editor: visual
 ---
 
 ::: callout-important
-<!-- Homework 1 released. -->
+Homework 1 released.
 :::
 
 ## Participate
@@ -24,7 +24,7 @@ editor: visual
 
 ## Perform
 
-<!-- 📋 [Homework 1](/hw/hw-1.html) -->
+📋 [Homework 1](/hw/hw-1.html)
 
 <!-- 📋 [Lab-02 Quarto File](/exercise/lab02-quarto.html) -->
 

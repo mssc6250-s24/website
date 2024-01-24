@@ -38,23 +38,23 @@ editor: source
 
 ## Homework Questions
 
-1. **ISL** Sec. 2.4: 1
+<!-- (@) **ISL** Sec. 2.4: 1 -->
 
-2. **ISL** Sec. 2.4: 3
+(@) **ISL** Sec. 2.4: 3
 
-3. **ISL** Sec. 2.4: 5
+<!-- (@) **ISL** Sec. 2.4: 5 -->
 
-4. **ISL** Sec. 2.4: 6
+(@) **ISL** Sec. 2.4: 6
 
-5. **ISL** Sec. 3.7: 4
+(@) **ISL** Sec. 3.7: 4
 
-6. **ISL** Sec. 3.7: 5
+(@) **ISL** Sec. 3.7: 5
 
-7. **ISL** Sec. 3.7: 6
+(@) **ISL** Sec. 3.7: 6
 
-8. **ISL** Sec. 3.7: 14
+(@) **ISL** Sec. 3.7: 14
 
-9. __Simulation of bias-variance tradeoff.__ Let $f(x) = x ^ 2$ be the true regression function. Simulate the data using $y_i = f(x_i) + \epsilon_i, i = 1, \dots, 100$, where $x_i = 0.01i$ and $\epsilon_i \stackrel{iid} \sim N(0, 0.3^2).$ 
+(@) __Simulation of bias-variance tradeoff.__ Let $f(x) = x ^ 2$ be the true regression function. Simulate the data using $y_i = f(x_i) + \epsilon_i, i = 1, \dots, 100$, where $x_i = 0.01i$ and $\epsilon_i \stackrel{iid} \sim N(0, 0.3^2).$ 
 
     (a) Generate 250 training data sets.
     (b) For each data set, fit the following three models:
@@ -62,11 +62,12 @@ editor: source
       - Model 2: $y = \beta_0+\beta_1x+ \beta_2x^2 + \epsilon$
       - Model 3: $y = \beta_0+\beta_1x+ \beta_2x^2 + \cdots + \beta_9x^9 + \epsilon$
     (c) Calculate empirical MSE of $\hat{f}$, bias of $\hat{f}$ and variance of $\hat{f}$. Then show that $$\text{MSE}_{\hat{f}} = \text{Bias}^2(\hat{f}) + \var(\hat{f}).$$
-    (d) For each model, plot first ten estimated $f$, $\hat{f}_{1}(x), \dots, \hat{f}_{10}(x)$, and the average of $\hat{f}$, $\frac{1}{250}\sum_{k=1}^{250}\hat{f}_{k}(x)$ in one figure, as Figure 1 below. What's your finding?
+    (d) For each model, plot first ten estimated $f$, $\hat{f}_{1}(x), \dots, \hat{f}_{10}(x)$, and the average of $\hat{f}$, $\frac{1}{250}\sum_{k=1}^{250}\hat{f}_{k}(x)$ in one figure, as @fig-trainedf below. What's your finding?
     (e) Generate one more data set and use it as the test data. Calculate the training MSE and test MSE for each model. 
     
 
 ```{r}
+#| label: fig-trainedf
 #| out-width: "100%"
 #| echo: false
 #| fig-cap: "Trained $f$"
@@ -74,7 +75,7 @@ editor: source
 knitr::include_graphics("../slides/images/03-bias-var/mse-var.png")
 ```
 
-10. __Gradient descent.__ Write your own gradient descent algorithm for linear regression. Implement it and compare with the built-in function such as `optim()` to make sure that it converges correctly.
+(@) __Gradient descent.__ Write your own gradient descent algorithm for linear regression. Implement it and compare with the built-in function such as `optim()` to make sure that it converges correctly.
 
 
 
