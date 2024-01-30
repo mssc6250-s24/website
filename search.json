@@ -158,7 +158,7 @@
     "href": "weeks/week-3.html",
     "title": "Week 3",
     "section": "",
-    "text": "Important"
+    "text": "Important\n\n\n\nHomework 1 due Friday, Feb 2, 11:59 PM"
   },
   {
     "objectID": "weeks/week-3.html#participate",
@@ -550,7 +550,7 @@
     "href": "index.html",
     "title": "MSSC 6250 - Statistical Machine Learning",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance tradeoff\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n✍️\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance tradeoff\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n✍️\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n✅\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n✅\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n✅\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n✅\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
     "objectID": "slides/17-neural-net.html#neural-networks",
@@ -3826,7 +3826,7 @@
     "href": "slides/05-ridge-cv.html#when-ordinary-least-squares-ols-doesnt-work-well-collinearity",
     "title": "Ridge Regression and Cross Validation \n",
     "section": "When Ordinary Least Squares (OLS) Doesn’t Work Well: Collinearity",
-    "text": "When Ordinary Least Squares (OLS) Doesn’t Work Well: Collinearity\n\nWhen predictors are highly correlated, \\(\\mathrm{Var}(b_j)\\) is much inflated.1\n\nA tiny change in the training data causes a large change in \\(b_j\\), leading to unreliable estimation and prediction.\n\n\n\n\n\n\\({\\bf X'X} = \\begin{bmatrix} 1 & 0.99 \\\\ 0.99 & 1 \\end{bmatrix}\\) \\(\\quad ({\\bf X'X})^{-1} = \\begin{bmatrix} 50.3 & -49.7 \\\\ -49.7 & 50.3 \\end{bmatrix}\\)\n\n\\(\\mathrm{Var}(b_j) = 50.3\\sigma^2\\)\n\nAn increase in 50-fold over the ideal case when the two regressors are orthogonal.\n\n\n\n\nsolve(matrix(c(1, 0.99, 0.99, 1), 2, 2))\n\n      [,1]  [,2]\n[1,]  50.3 -49.7\n[2,] -49.7  50.3\n\n\nthe eigen vector direction with the smallest eigen value\n\n\nAlthough \\(\\mathrm{Var}(b_j)\\) is still the smallest among all linear unbiased estimators."
+    "text": "When Ordinary Least Squares (OLS) Doesn’t Work Well: Collinearity\n\nWhen predictors are highly correlated, \\(\\mathrm{Var}(b_j)\\) is much inflated.1\n\nA tiny change in the training data causes a large change in \\(b_j\\), leading to unreliable estimation and prediction.\n\n\n\n\n\n\\({\\bf X'X} = \\begin{bmatrix} 1 & 0.99 \\\\ 0.99 & 1 \\end{bmatrix}\\) \\(\\quad ({\\bf X'X})^{-1} = \\begin{bmatrix} 50.3 & -49.7 \\\\ -49.7 & 50.3 \\end{bmatrix}\\)\n\n\\(\\mathrm{Var}(b_j) = 50.3\\sigma^2\\)\n\nAn increase in 50-fold over the ideal case when the two regressors are orthogonal.\n\n\n\n\nsolve(matrix(c(1, 0.99, 0.99, 1), 2, 2))\n\n      [,1]  [,2]\n[1,]  50.3 -49.7\n[2,] -49.7  50.3\n\n\nthe eigen vector direction with the smallest eigen value https://online.stat.psu.edu/stat857/node/155/ https://robjhyndman.com/hyndsight/loocv-linear-models/\n\n\nAlthough \\(\\mathrm{Var}(b_j)\\) is still the smallest among all linear unbiased estimators."
   },
   {
     "objectID": "slides/05-ridge-cv.html#when-ols-doesnt-work-well-optimization-perspective",
@@ -3882,7 +3882,14 @@
     "href": "slides/05-ridge-cv.html#ridge-penalty",
     "title": "Ridge Regression and Cross Validation \n",
     "section": "Ridge Penalty",
-    "text": "Ridge Penalty\n\\[\\lambda \\lVert \\boldsymbol \\beta\\rVert^2_2 = \\lambda \\boldsymbol \\beta' \\mathbf{I}\\boldsymbol \\beta\\]\n\nThe penalty contour is circle-shaped, forcing the objective function to be more convex, leading to a more stable or less varying solution."
+    "text": "Ridge Penalty\n\n\n\\[\\lambda \\lVert \\boldsymbol \\beta\\rVert^2_2 = \\lambda \\boldsymbol \\beta' \\mathbf{I}\\boldsymbol \\beta\\]\n\nThe penalty contour is circle-shaped\nForce the objective function to be more convex\nA more stable or less varying solution"
+  },
+  {
+    "objectID": "slides/05-ridge-cv.html#geometrical-meaning-of-ridge-regression",
+    "href": "slides/05-ridge-cv.html#geometrical-meaning-of-ridge-regression",
+    "title": "Ridge Regression and Cross Validation \n",
+    "section": "Geometrical Meaning of Ridge Regression",
+    "text": "Geometrical Meaning of Ridge Regression\n\n\nPerform PCA of X\nProject y onto the PCs\nShrinks the projection\nReassemble the PCs using all the shrunken length"
   },
   {
     "objectID": "slides/05-ridge-cv.html#more-convex-loss-function",
@@ -3892,25 +3899,25 @@
     "text": "More Convex Loss Function\n\nAdding a ridge penalty forces the objective to be more convex due to the added eigenvalues.\n\n\neigen(matrix(c(1, 0.99, 0.99, 1), 2, 2) + diag(2))[1]\n\n$values\n[1] 2.99 1.01\n\n\n\nHence, by adding this to the OLS objective function, the solution is more stable, in the sense that each time we observe a new set of data, this contour looks pretty much the same. This may be interpreted in several different ways such as: 1) the objective function is more convex and less affected by the random samples; 2) the variance of the estimator is smaller because the eigenvalues of \\(\\mathbf{X}^\\text{T}\\mathbf{X}+ n \\lambda \\mathbf{I}\\) are large."
   },
   {
-    "objectID": "slides/05-ridge-cv.html#the-bias-variance-trade-off",
-    "href": "slides/05-ridge-cv.html#the-bias-variance-trade-off",
+    "objectID": "slides/05-ridge-cv.html#the-bias-variance-tradeoff",
+    "href": "slides/05-ridge-cv.html#the-bias-variance-tradeoff",
     "title": "Ridge Regression and Cross Validation \n",
-    "section": "The Bias-variance Trade-off",
-    "text": "The Bias-variance Trade-off\n\nAs \\(\\lambda \\downarrow\\), bias \\(\\downarrow\\) and variance \\(\\uparrow\\)\n\nAs \\(\\lambda \\uparrow\\), bias \\(\\uparrow\\) and variance \\(\\downarrow\\)\n\n\n\nThis effect is gradually changing as we increase the penalty level. The following simulation shows how the variation of \\(\\boldsymbol \\beta\\) changes. We show this with two penalty values, and see how the estimated parameters are away from the truth.\nNow, we may ask the question: is it worth it? In fact, this bias and variance will be then carried to the predicted values \\(x^\\text{T}\\widehat{\\boldsymbol \\beta}^\\text{ridge}\\). Hence, we can judge if this is beneficial from the prediction accuracy. And we need some procedure to do this.\nRemark: The bias-variance trade-off will appear frequently in this course. And the way to evaluate the benefit of this is to see if it eventually reduces the prediction error (\\(\\text{Bias}^2 + \\text{Variance}\\) plus a term called irreducible error, which will be introduced in later chapter)."
+    "section": "The Bias-variance Tradeoff",
+    "text": "The Bias-variance Tradeoff\n\nAs \\(\\lambda \\downarrow\\), bias \\(\\downarrow\\) and variance \\(\\uparrow\\)\n\nAs \\(\\lambda \\uparrow\\), bias \\(\\uparrow\\) and variance \\(\\downarrow\\)\n\n\n\nThis effect is gradually changing as we increase the penalty level. The following simulation shows how the variation of \\(\\boldsymbol \\beta\\) changes. We show this with two penalty values, and see how the estimated parameters are away from the truth.\nNow, we may ask the question: is it worth it? In fact, this bias and variance will be then carried to the predicted values \\(x^\\text{T}\\widehat{\\boldsymbol \\beta}^\\text{ridge}\\). Hence, we can judge if this is beneficial from the prediction accuracy. And we need some procedure to do this.\nRemark: The bias-variance trade-off will appear frequently in this course. And the way to evaluate the benefit of this is to see if it eventually reduces the prediction error (\\(\\text{Bias}^2 + \\text{Variance}\\) plus a term called irreducible error, which will be introduced in later chapter)."
   },
   {
     "objectID": "slides/05-ridge-cv.html#lower-test-mse",
     "href": "slides/05-ridge-cv.html#lower-test-mse",
     "title": "Ridge Regression and Cross Validation \n",
     "section": "Lower Test MSE",
-    "text": "Lower Test MSE\n\n\n\nWhen LS \\(b_j\\) are variable or \\(p > n\\), ridge regression could have lower test MSE and better predictive performance.\nSquared bias (black)\nVariance (green)\n\\(\\text{MSE}_{\\texttt{Tr}}\\) (purple)\n\n\n\n\n\n\n\nSource: ISL Figure 6.5"
+    "text": "Lower Test MSE\n\n\n\nWhen \\(b_j\\) are variable or \\(p > n\\), ridge regression could have lower test MSE and better predictive performance.\nSquared bias (black)\nVariance (green)\n\\(\\text{MSE}_{\\texttt{Tr}}\\) (purple)\n\n\n\n\n\n\n\nSource: ISL Figure 6.5"
   },
   {
     "objectID": "slides/05-ridge-cv.html#masslm.ridge",
     "href": "slides/05-ridge-cv.html#masslm.ridge",
     "title": "Ridge Regression and Cross Validation \n",
     "section": "MASS::lm.ridge()",
-    "text": "MASS::lm.ridge()\n\nThe lambda parameter lm.ridge() actually specifies the \\(n\\lambda\\) in our notation.\nOLS is scale equivalent: \\(X_jb_j\\) remains the same regardless of how the \\(j\\)-th predictor is scaled.\nRidge coefficient estimates can change substantially when multiplying a given predictor by a constant. \\(X_j\\hat{\\beta}^{r}_{j, \\lambda}\\) depends on \\(\\lambda\\), the scaling of \\(X_j\\), and even the scaling of other predictors.\nStandardize all predictors!1\n\n\n\nhead(mtcars, 3)\n\n               mpg cyl disp  hp drat   wt qsec vs am gear carb\nMazda RX4     21.0   6  160 110 3.90 2.62 16.5  0  1    4    4\nMazda RX4 Wag 21.0   6  160 110 3.90 2.88 17.0  0  1    4    4\nDatsun 710    22.8   4  108  93 3.85 2.32 18.6  1  1    4    1\n\n(fit <- MASS::lm.ridge(mpg ~ ., data = mtcars, lambda = 1)) ## ridge fit\n\n              cyl     disp       hp     drat       wt     qsec       vs \n16.53766 -0.16240  0.00233 -0.01493  0.92463 -2.46115  0.49259  0.37465 \n      am     gear     carb \n 2.30838  0.68572 -0.57579 \n\n\n\n\nIn practice, if the intercept is not our interest, we also standardize the response."
+    "text": "MASS::lm.ridge()\n\nThe lambda parameter lm.ridge() actually specifies the \\(n\\lambda\\) in our notation.\nOLS is scale equivalent: \\(X_jb_j\\) remains the same regardless of how \\(X_j\\) is scaled.\nRidge coefficient estimates can change substantially when multiplying a given predictor by a constant. \\(X_j\\hat{\\beta}^{r}_{j, \\lambda}\\) depends on \\(\\lambda\\), the scaling of \\(X_j\\), and even the scaling of other predictors.\nStandardize all predictors!1\n\n\n\nhead(mtcars, 3)\n\n               mpg cyl disp  hp drat   wt qsec vs am gear carb\nMazda RX4     21.0   6  160 110 3.90 2.62 16.5  0  1    4    4\nMazda RX4 Wag 21.0   6  160 110 3.90 2.88 17.0  0  1    4    4\nDatsun 710    22.8   4  108  93 3.85 2.32 18.6  1  1    4    1\n\n(fit <- MASS::lm.ridge(mpg ~ ., data = mtcars, lambda = 1)) ## ridge fit\n\n              cyl     disp       hp     drat       wt     qsec       vs \n16.53766 -0.16240  0.00233 -0.01493  0.92463 -2.46115  0.49259  0.37465 \n      am     gear     carb \n 2.30838  0.68572 -0.57579 \n\n\n\n\nIn practice, if the intercept is not our interest, we also standardize the response."
   },
   {
     "objectID": "slides/05-ridge-cv.html#scaling-issues-of-lm.ridge",
@@ -3959,7 +3966,7 @@
     "href": "slides/05-ridge-cv.html#k-fold-cross-validation",
     "title": "Ridge Regression and Cross Validation \n",
     "section": "\n\\(k\\)-Fold Cross Validation",
-    "text": "\\(k\\)-Fold Cross Validation\n\nRandomly divide the training data into \\(k\\) folds, of approximately equal size.\nUse 1 fold for validation to compute MSE, and the remaining \\(k - 1\\) partitions for training.\nRepeat \\(k\\) times. Each time a different fold is treated as a validation set.\nAverage \\(k\\) metrics, \\(\\text{MSE}_{CV} = \\frac{1}{k}\\sum_{i=1}^k\\text{MSE}_i\\).\nUse the CV estimate \\(\\text{MSE}_{CV}\\) to select the “best” tuning parameter.\n\n\nFive-fold cross validation. Source: Data science in a boxCan compute other performance measures."
+    "text": "\\(k\\)-Fold Cross Validation\n\nRandomly divide the training data into \\(k\\) folds, of approximately equal size.\nUse 1 fold for validation to compute MSE, and the remaining \\(k - 1\\) partitions for training.\nRepeat \\(k\\) times. Each time a different fold is treated as a validation set.\nAverage \\(k\\) metrics, \\(\\text{MSE}_{CV} = \\frac{1}{k}\\sum_{i=1}^k\\text{MSE}_i\\).\nUse the CV estimate \\(\\text{MSE}_{CV}\\) to select the “best” tuning parameter.\n\n\n\n\n\n\nFive-fold cross validation. Source: Data science in a box\n\n\n\n\n\nCan compute other performance measures."
   },
   {
     "objectID": "slides/05-ridge-cv.html#glmnet-package",
@@ -3987,7 +3994,7 @@
     "href": "slides/05-ridge-cv.html#generalized-cross-validation",
     "title": "Ridge Regression and Cross Validation \n",
     "section": "Generalized Cross-Validation",
-    "text": "Generalized Cross-Validation\n\nThe generalized cross-validation (GCV) is a modified version of the leave-one-out CV (\\(n\\)-fold CV).\nThe GCV criterion is given by \\[\\text{GCV}(\\lambda) = \\frac{1}{n}\\sum_{i=1}^n \\left[ \\frac{y_i - x_i' \\widehat{\\boldsymbol \\beta}^\\text{r}_\\lambda}{1 - \\text{Trace}(\\mathbf{S}_\\lambda)/n} \\right]^2\\]\n\nwhere \\(\\mathbf{S}_\\lambda\\) is the hat matrix corresponding to the ridge regression:\n\\[\\mathbf{S}_\\lambda = \\mathbf{X}(\\mathbf{X}' \\mathbf{X}+ n\\lambda \\mathbf{I})^{-1} \\mathbf{X}'\\]\nThe interesting fact about leave-one-out CV in the linear regression setting is that we do not need to explicitly fit all leave-one-out models.\n\nESL p. 244\nlm.ridge code"
+    "text": "Generalized Cross-Validation\n\nThe generalized cross-validation (GCV) is a modified version of the leave-one-out CV (\\(n\\)-fold CV).\nThe GCV criterion is given by \\[\\text{GCV}(\\lambda) = \\frac{1}{n}\\sum_{i=1}^n \\left[ \\frac{y_i - x_i' \\widehat{\\boldsymbol \\beta}^\\text{r}_\\lambda}{1 - \\frac{\\text{Trace}(\\mathbf{S}_\\lambda)}{n}} \\right]^2\\]\n\nwhere \\(\\mathbf{S}_\\lambda\\) is the hat matrix corresponding to the ridge regression:\n\\[\\mathbf{S}_\\lambda = \\mathbf{X}(\\mathbf{X}' \\mathbf{X}+ n\\lambda \\mathbf{I})^{-1} \\mathbf{X}'\\]\nThe interesting fact about leave-one-out CV in the linear regression setting is that we do not need to explicitly fit all leave-one-out models.\n\nESL p. 244\nlm.ridge code"
   },
   {
     "objectID": "slides/05-ridge-cv.html#generalized-cross-validation-1",
