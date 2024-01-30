@@ -147,6 +147,8 @@ solve(matrix(c(1, 0.99, 0.99, 1), 2, 2))
 
 ::: notes
 the eigen vector direction with the smallest eigen value
+https://online.stat.psu.edu/stat857/node/155/
+https://robjhyndman.com/hyndsight/loocv-linear-models/
 :::
 
 ## When OLS Doesn't Work Well: Optimization Perspective
@@ -175,7 +177,7 @@ rss <- matrix(apply(allbeta, 1, function(b, X, y) sum((y - X %*% b)^2), X, y),
 quanlvl = c(0.01, 0.025, 0.05, 0.2, 0.5, 0.75)
 par(mar = c(3, 3, 0, 0))
 # plot the contour
-contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,
+contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,lwd = 3, 
         xlab = "beta 1", ylab = "beta 2")
 box()
   
@@ -338,14 +340,16 @@ par(mar = c(2, 0, 2, 0), mgp = c(0.5, 0.5, 0), las = 1)
 x <- seq(-6, 6, by = 0.1)
 plot(x, dnorm(x), type = "l", lwd = 3, axes = F, xlab = "", ylab = "",
      xlim = c(-8, 8))
-title(main = expression(paste("Sampling distribution a biased estimator ", hat(beta))))
+title(main = list(expression(paste("Sampling distribution a biased estimator ", hat(beta))), cex = 2))
 axis(1, at = c(-8, -1, 0, 8), 
      labels = c("", expression(bold(beta)), expression(E(hat(beta))), ""), 
-     tick = T, tck = -0.01)
+     tick = T, tck = -0.01, cex.axis=1.5)
 segments(x0 = 0, y0 = 0, x1 = 0, y1 = dnorm(0), lty = 2)
 segments(x0 = -1, y0 = 0, x1 = -1, y1 = dnorm(-1), lty = 2)
-text(3.5, dnorm(1), expression(paste(E(hat(beta)) != bold(beta), " (biased)")))
-text(4, dnorm(1.5), expression(paste(Var(hat(beta)), " small")))
+text(3.5, dnorm(1), expression(paste(E(hat(beta)) != bold(beta), " (biased)")),
+     cex = 1.5)
+text(4, dnorm(1.5), expression(paste(Var(hat(beta)), " small")),
+     cex = 1.5)
 ```
 :::
 
@@ -356,12 +360,13 @@ text(4, dnorm(1.5), expression(paste(Var(hat(beta)), " small")))
 par(mar = c(2, 0, 2, 0), mgp = c(0.5, 0.5, 0), las = 1)
 x <- seq(-3, 3, by = 0.1)
 plot(x, dnorm(x), type = "l", lwd = 3, axes = F, xlab = "", ylab = "")
-title(main = "Sampling distribution of LSE b")
+title(main = list("Sampling distribution of LSE b", cex = 2))
 axis(1, at = c(-3, 0.1, 3), labels = c("", expression(bold(beta) == E(b)), ""), 
-     tick = T, tck = -0.01)
+     tick = T, tck = -0.01, cex.axis=1.5)
 segments(x0 = 0, y0 = 0, x1 = 0, y1 = dnorm(0), lty = 2)
-text(2, dnorm(1), expression(paste("E(b) = ", bold(beta), " (unbiased)")))
-text(2.5, dnorm(1.5), paste("Var(b) large"))
+text(2, dnorm(1), expression(paste("E(b) = ", bold(beta), " (unbiased)")),
+     cex = 1.5)
+text(2.5, dnorm(1.5), paste("Var(b) large"), cex = 1.5)
 ```
 :::
 ::::
@@ -414,24 +419,55 @@ Properties of ridge regression:
   
 ## Ridge Penalty
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
 $$\lambda \lVert \bbeta \rVert^2_2 = \lambda \bbeta' \bI \bbeta$$
 
-- The penalty contour is circle-shaped, forcing the objective function to be more convex, leading to a more stable or less varying solution.
+- The penalty contour is circle-shaped
 
+- Force the objective function to be more convex
+
+- A more stable or less varying solution
+:::
+
+::: {.column width="50%"}
 ```{r}
 #| fig-asp: 1
-#| out-width: "60%"
 pen <- matrix(apply(allbeta, 1, function(b) 3 * b %*% b),
               length(beta1), length(beta2))
-  
-contour(beta1, beta2, pen, levels = quantile(pen, quanlvl), las = 1)
-points(1, 1, pch = 19, col = "red", cex = 2)
+par(mar = c(5, 5, 0, 0))
+contour(beta1, beta2, pen, levels = quantile(pen, quanlvl), las = 1, lwd = 3, 
+        xlab = "Beta 1", ylab = "Beta 2", cex.lab = 3, cex.axis = 3)
+points(1, 1, pch = 19, col = "red", cex = 3)
 box()
+```
+:::
+
+::::
+
+
+
+
+
+
+## Geometrical Meaning of Ridge Regression
+
+```{r}
+#| out-width: 52%
+knitr::include_graphics("./images/05-ridge-cv/ridge_pc.png")
 ```
 
 
 
-
+::: notes
+- Perform PCA of X
+- Project y onto the PCs
+- Shrinks the projection
+- Reassemble the PCs using all the shrunken length
+:::
 
 
 ## More Convex Loss Function
@@ -463,16 +499,16 @@ rss <- matrix(apply(allbeta, 1, function(b, X, y) sum((y - X %*% b)^2), X, y),
 quanlvl = c(0.01, 0.025, 0.05, 0.2, 0.5, 0.75)
 par(mar = c(2, 2, 2, 0))
 # plot the contour
-contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,
+contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,lwd = 3, 
         xlab = "beta 1", ylab = "beta 2", main = "Lambda = 0 OLS", cex.main = 3)
 box()
   
 # the truth
-points(1, 1, pch = 19, col = "red", cex = 2)
+points(1, 1, pch = 19, col = "red", cex = 3)
   
 # the data 
 betahat <- coef(lm(y~X-1))
-points(betahat[1], betahat[2], pch = 19, col = "blue", cex = 2)
+points(betahat[1], betahat[2], pch = 19, col = "blue", cex = 3)
 
     # adding a L2 penalty to the objective function
     rss <- matrix(apply(allbeta, 1, function(b, X, y) sum((y - X %*% b)^2) + b %*% b, X, y),
@@ -481,10 +517,10 @@ points(betahat[1], betahat[2], pch = 19, col = "blue", cex = 2)
     # the ridge solution
     bh = solve(t(X) %*% X + diag(2)) %*% t(X) %*% y
     
-    contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,
+    contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,lwd = 3, 
             main = "Lambda = 1", cex.main = 3)
-    points(1, 1, pch = 19, col = "red", cex = 2)
-    points(bh[1], bh[2], pch = 19, col = "blue", cex = 2)
+    points(1, 1, pch = 19, col = "red", cex = 3)
+    points(bh[1], bh[2], pch = 19, col = "blue", cex = 3)
     box()
     
     # adding a larger penalty
@@ -494,10 +530,10 @@ points(betahat[1], betahat[2], pch = 19, col = "blue", cex = 2)
     bh = solve(t(X) %*% X + 10*diag(2)) %*% t(X) %*% y
     
     # the ridge solution
-    contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,
+    contour(beta1, beta2, rss, levels = quantile(rss, quanlvl), las = 1,lwd = 3, 
             main = "Lambda = 10", cex.main = 3)
-    points(1, 1, pch = 19, col = "red", cex = 2)
-    points(bh[1], bh[2], pch = 19, col = "blue", cex = 2)
+    points(1, 1, pch = 19, col = "red", cex = 3)
+    points(bh[1], bh[2], pch = 19, col = "blue", cex = 3)
     box()
 ```
 
@@ -559,7 +595,7 @@ We will set up a simulation study with the following steps, with both $\widehat{
 
 
 
-## The Bias-variance Trade-off
+## The Bias-variance Tradeoff
   * As $\lambda \downarrow$, bias $\downarrow$ and variance $\uparrow$
   * As $\lambda \uparrow$, bias $\uparrow$ and variance $\downarrow$
 
@@ -639,9 +675,9 @@ __Remark__: The bias-variance trade-off will appear frequently in this course. A
 
 :::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="38%"}
 
-- When LS $b_j$ are variable or $p > n$, ridge regression could have lower test MSE and better predictive performance.
+- When $b_j$ are variable or $p > n$, ridge regression could have lower test MSE and better predictive performance.
 
 - Squared bias (black)
 
@@ -651,7 +687,7 @@ __Remark__: The bias-variance trade-off will appear frequently in this course. A
 
 :::
 
-::: {.column width="65%"}
+::: {.column width="62%"}
 ::: small
 
 ```{r}
@@ -670,7 +706,7 @@ knitr::include_graphics("./images/05-ridge-cv/6_5.png")
 
 - The `lambda` parameter `lm.ridge()` actually specifies the $n\lambda$ in our notation.
 
-- OLS is *scale equivalent*: $X_jb_j$ remains the same regardless of how the $j$-th predictor is scaled.
+- OLS is *scale equivalent*: $X_jb_j$ remains the same regardless of how $X_j$ is scaled.
 
 - Ridge coefficient estimates can change *substantially* when multiplying a given predictor by a constant. $X_j\hat{\beta}^{r}_{j, \lambda}$ depends on $\lambda$, the scaling of $X_j$, and even the scaling of *other* predictors.
 
@@ -827,12 +863,16 @@ Hence, by adding this to the OLS objective function, the solution is more stable
 
 5. Use the CV estimate $\text{MSE}_{CV}$ to select the "best" tuning parameter.
 
+
+::: small
+
 ```{r}
 #| out-width: "50%"
 #| fig-cap: "Five-fold cross validation. Source: Data science in a box"
 knitr::include_graphics("./images/05-ridge-cv/cross-validation.png")
 ```
 
+:::
 
 ::: notes
 Can compute other performance measures.
@@ -1019,7 +1059,7 @@ coef(fit2, s = "lambda.1se")
 ## Generalized Cross-Validation
 - The generalized cross-validation (GCV) is a modified version of the **leave-one-out CV** ($n$-fold CV).
 
-- The GCV criterion is given by $$\text{GCV}(\lambda) = \frac{1}{n}\sum_{i=1}^n \left[ \frac{y_i - x_i' \widehat{\bbeta}^\text{r}_\lambda}{1 - \Trace(\bS_\lambda)/n} \right]^2$$
+- The GCV criterion is given by $$\text{GCV}(\lambda) = \frac{1}{n}\sum_{i=1}^n \left[ \frac{y_i - x_i' \widehat{\bbeta}^\text{r}_\lambda}{1 - \frac{\Trace(\bS_\lambda)}{n}} \right]^2$$
 
 where $\bS_\lambda$ is the _hat matrix_ corresponding to the ridge regression:
 
@@ -1077,4 +1117,6 @@ You can clearly see that the GCV decreases initially, as $\lambda$ increases, th
   mean((pred1 - mtcars$mpg)^2)
 ```
 :::
+
+
 

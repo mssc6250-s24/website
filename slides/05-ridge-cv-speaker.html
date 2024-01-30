@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.335">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MSSC 6250 - Spring 2024 - Ridge Regression and Cross Validation r fontawesome::fa("wave-square")</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -430,7 +430,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 [2,] -49.7  50.3</code></pre>
 </div>
 </div>
-<aside class="notes"><p>the eigen vector direction with the smallest eigen value</p>
+<aside class="notes"><p>the eigen vector direction with the smallest eigen value https://online.stat.psu.edu/stat857/node/155/ https://robjhyndman.com/hyndsight/loocv-linear-models/</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -608,12 +608,43 @@ $vectors
 </ul>
 </div>
 </section><section id="ridge-penalty" class="slide level2"><h2>Ridge Penalty</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><span class="math display">\[\lambda \lVert \boldsymbol \beta\rVert^2_2 = \lambda \boldsymbol \beta' \mathbf{I}\boldsymbol \beta\]</span></p>
 <ul>
-<li>The penalty contour is circle-shaped, forcing the objective function to be more convex, leading to a more stable or less varying solution.</li>
+<li><p>The penalty contour is circle-shaped</p></li>
+<li><p>Force the objective function to be more convex</p></li>
+<li><p>A more stable or less varying solution</p></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-10-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="geometrical-meaning-of-ridge-regression" class="slide level2"><h2>Geometrical Meaning of Ridge Regression</h2>
 
-<img data-src="images/05-ridge-cv/unnamed-chunk-10-1.png" style="width:60.0%" class="r-stretch quarto-figure-center"></section><section id="more-convex-loss-function" class="slide level2"><h2>More Convex Loss Function</h2>
+<img data-src="./images/05-ridge-cv/ridge_pc.png" style="width:52.0%" class="r-stretch quarto-figure-center"><aside class="notes"><ul>
+<li>Perform PCA of X</li>
+<li>Project y onto the PCs</li>
+<li>Shrinks the projection</li>
+<li>Reassemble the PCs using all the shrunken length</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="more-convex-loss-function" class="slide level2"><h2>More Convex Loss Function</h2>
 <ul>
 <li>Adding a ridge penalty forces the objective to be more convex due to the added eigenvalues.</li>
 </ul>
@@ -625,7 +656,7 @@ $vectors
 </div>
 </div>
 
-<img data-src="images/05-ridge-cv/unnamed-chunk-12-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>Hence, by adding this to the OLS objective function, the solution is more stable, in the sense that each time we observe a new set of data, this contour looks pretty much the same. This may be interpreted in several different ways such as: 1) the objective function is more convex and less affected by the random samples; 2) the variance of the estimator is smaller because the eigenvalues of <span class="math inline">\(\mathbf{X}^\text{T}\mathbf{X}+ n \lambda \mathbf{I}\)</span> are large.</p>
+<img data-src="images/05-ridge-cv/unnamed-chunk-13-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>Hence, by adding this to the OLS objective function, the solution is more stable, in the sense that each time we observe a new set of data, this contour looks pretty much the same. This may be interpreted in several different ways such as: 1) the objective function is more convex and less affected by the random samples; 2) the variance of the estimator is smaller because the eigenvalues of <span class="math inline">\(\mathbf{X}^\text{T}\mathbf{X}+ n \lambda \mathbf{I}\)</span> are large.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -636,7 +667,7 @@ $vectors
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="the-bias-variance-trade-off" class="slide level2"><h2>The Bias-variance Trade-off</h2>
+      }</style></aside></section><section id="the-bias-variance-tradeoff" class="slide level2"><h2>The Bias-variance Tradeoff</h2>
 <ul>
 <li>As <span class="math inline">\(\lambda \downarrow\)</span>, bias <span class="math inline">\(\downarrow\)</span> and variance <span class="math inline">\(\uparrow\)</span>
 </li>
@@ -644,7 +675,7 @@ $vectors
 </li>
 </ul>
 
-<img data-src="images/05-ridge-cv/unnamed-chunk-14-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>This effect is gradually changing as we increase the penalty level. The following simulation shows how the variation of <span class="math inline">\(\boldsymbol \beta\)</span> changes. We show this with two penalty values, and see how the estimated parameters are away from the truth.</p>
+<img data-src="images/05-ridge-cv/unnamed-chunk-15-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>This effect is gradually changing as we increase the penalty level. The following simulation shows how the variation of <span class="math inline">\(\boldsymbol \beta\)</span> changes. We show this with two penalty values, and see how the estimated parameters are away from the truth.</p>
 <p>Now, we may ask the question: is it worth it? In fact, this bias and variance will be then carried to the predicted values <span class="math inline">\(x^\text{T}\widehat{\boldsymbol \beta}^\text{ridge}\)</span>. Hence, we can judge if this is beneficial from the prediction accuracy. And we need some procedure to do this.</p>
 <p><strong>Remark</strong>: The bias-variance trade-off will appear frequently in this course. And the way to evaluate the benefit of this is to see if it eventually reduces the prediction error (<span class="math inline">\(\text{Bias}^2 + \text{Variance}\)</span> plus a term called <strong>irreducible error</strong>, which will be introduced in later chapter).</p>
 <style type="text/css">
@@ -659,14 +690,14 @@ $vectors
           display:block!important;
       }</style></aside></section><section id="lower-test-mse" class="slide level2"><h2>Lower Test MSE</h2>
 <div class="columns">
-<div class="column" style="width:35%;">
+<div class="column" style="width:38%;">
 <ul>
-<li><p>When LS <span class="math inline">\(b_j\)</span> are variable or <span class="math inline">\(p &gt; n\)</span>, ridge regression could have lower test MSE and better predictive performance.</p></li>
+<li><p>When <span class="math inline">\(b_j\)</span> are variable or <span class="math inline">\(p &gt; n\)</span>, ridge regression could have lower test MSE and better predictive performance.</p></li>
 <li><p>Squared bias (black)</p></li>
 <li><p><span class="green">Variance (green)</span></p></li>
 <li><p><span class="purple"><span class="math inline">\(\text{MSE}_{\texttt{Tr}}\)</span> (purple)</span></p></li>
 </ul>
-</div><div class="column" style="width:65%;">
+</div><div class="column" style="width:62%;">
 <div class="small">
 <div class="cell" data-layout-align="left">
 <div class="cell-output-display">
@@ -683,7 +714,7 @@ $vectors
 </section><section id="masslm.ridge" class="slide level2"><h2><code>MASS::lm.ridge()</code></h2>
 <ul>
 <li><p>The <code>lambda</code> parameter <code>lm.ridge()</code> actually specifies the <span class="math inline">\(n\lambda\)</span> in our notation.</p></li>
-<li><p>OLS is <em>scale equivalent</em>: <span class="math inline">\(X_jb_j\)</span> remains the same regardless of how the <span class="math inline">\(j\)</span>-th predictor is scaled.</p></li>
+<li><p>OLS is <em>scale equivalent</em>: <span class="math inline">\(X_jb_j\)</span> remains the same regardless of how <span class="math inline">\(X_j\)</span> is scaled.</p></li>
 <li><p>Ridge coefficient estimates can change <em>substantially</em> when multiplying a given predictor by a constant. <span class="math inline">\(X_j\hat{\beta}^{r}_{j, \lambda}\)</span> depends on <span class="math inline">\(\lambda\)</span>, the scaling of <span class="math inline">\(X_j\)</span>, and even the scaling of <em>other</em> predictors.</p></li>
 <li><p><span class="green"><strong>Standardize all predictors!</strong></span><sup>1</sup></p></li>
 </ul>
@@ -804,7 +835,7 @@ Datsun 710    22.8   4  108  93 3.85 2.32 18.6  1  1    4    1</code></pre>
 <span id="cb24-3"><a href="#cb24-3"></a><span class="fu">text</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="fu">coef</span>(ridge_fit)[<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>], <span class="fu">colnames</span>(mtcars)[<span class="dv">2</span><span class="sc">:</span><span class="dv">11</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="images/05-ridge-cv/unnamed-chunk-24-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><ul>
+<img data-src="images/05-ridge-cv/unnamed-chunk-25-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><ul>
 <li>Select a value of <span class="math inline">\(\lambda\)</span> at which the ridge estimates are stable.</li>
 </ul>
 <aside class="notes"><style type="text/css">
@@ -865,8 +896,18 @@ smallest value of GCV  at 15 </code></pre>
 <li><p>Average <span class="math inline">\(k\)</span> metrics, <span class="math inline">\(\text{MSE}_{CV} = \frac{1}{k}\sum_{i=1}^k\text{MSE}_i\)</span>.</p></li>
 <li><p>Use the CV estimate <span class="math inline">\(\text{MSE}_{CV}\)</span> to select the “best” tuning parameter.</p></li>
 </ol>
-
-<img data-src="./images/05-ridge-cv/cross-validation.png" style="width:50.0%" class="r-stretch quarto-figure-center"><p class="caption">Five-fold cross validation. Source: Data science in a box</p><aside class="notes"><p>Can compute other performance measures.</p>
+<div class="small">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="./images/05-ridge-cv/cross-validation.png" style="width:50.0%"></p>
+<p></p><figcaption>Five-fold cross validation. Source: Data science in a box</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes"><p>Can compute other performance measures.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -932,9 +973,9 @@ smallest value of GCV  at 15 </code></pre>
           display:block!important;
       }</style></aside></section><section id="section-1" class="slide level2"><h2></h2>
 
-<img data-src="images/05-ridge-cv/unnamed-chunk-30-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="section-2" class="slide level2"><h2></h2>
+<img data-src="images/05-ridge-cv/unnamed-chunk-31-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="section-2" class="slide level2"><h2></h2>
 
-<img data-src="images/05-ridge-cv/unnamed-chunk-31-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="k-fold-cross-validation-using-cv.glmnet" class="slide level2"><h2>
+<img data-src="images/05-ridge-cv/unnamed-chunk-32-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="k-fold-cross-validation-using-cv.glmnet" class="slide level2"><h2>
 <span class="math inline">\(k\)</span>-Fold Cross Validation using <code>cv.glmnet()</code><sup>1</sup>
 </h2>
 <ul>
@@ -946,7 +987,7 @@ smallest value of GCV  at 15 </code></pre>
 <span id="cb29-3"><a href="#cb29-3"></a><span class="fu">plot</span>(ridge_cv_fit<span class="sc">$</span>glmnet.fit, <span class="st">"lambda"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-32-1.png" style="width:50.0%"></p>
+<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-33-1.png" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
@@ -971,7 +1012,7 @@ smallest value of GCV  at 15 </code></pre>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">plot</span>(ridge_cv_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-33-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-34-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -1020,7 +1061,7 @@ carb        -0.54742</code></pre>
       }</style></aside></section><section id="generalized-cross-validation" class="slide level2"><h2>Generalized Cross-Validation</h2>
 <ul>
 <li><p>The generalized cross-validation (GCV) is a modified version of the <strong>leave-one-out CV</strong> (<span class="math inline">\(n\)</span>-fold CV).</p></li>
-<li><p>The GCV criterion is given by <span class="math display">\[\text{GCV}(\lambda) = \frac{1}{n}\sum_{i=1}^n \left[ \frac{y_i - x_i' \widehat{\boldsymbol \beta}^\text{r}_\lambda}{1 - \text{Trace}(\mathbf{S}_\lambda)/n} \right]^2\]</span></p></li>
+<li><p>The GCV criterion is given by <span class="math display">\[\text{GCV}(\lambda) = \frac{1}{n}\sum_{i=1}^n \left[ \frac{y_i - x_i' \widehat{\boldsymbol \beta}^\text{r}_\lambda}{1 - \frac{\text{Trace}(\mathbf{S}_\lambda)}{n}} \right]^2\]</span></p></li>
 </ul>
 <p>where <span class="math inline">\(\mathbf{S}_\lambda\)</span> is the <em>hat matrix</em> corresponding to the ridge regression:</p>
 <p><span class="math display">\[\mathbf{S}_\lambda = \mathbf{X}(\mathbf{X}' \mathbf{X}+ n\lambda \mathbf{I})^{-1} \mathbf{X}'\]</span></p>
@@ -1049,7 +1090,7 @@ carb        -0.54742</code></pre>
 <span id="cb37-5"><a href="#cb37-5"></a>     <span class="at">lwd =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-35-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/05-ridge-cv/unnamed-chunk-36-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
