@@ -29,30 +29,30 @@ generate_group <- function(all, leader_can, seed,
 }
 ```
 
-# Class activity 1
+## Class activity 1
 
-## Topic: Bootstrapping
+### Topic: Bootstrapping
 
 What is bootstrapping? Why do we use bootstrapping? How can it be used in regression? Please explain it using a simple linear regression example, including code demo.
 
-## Knowledge Check
+### Knowledge Check
 
 Please answer the questions at [Link will be provided].
 
-## Group 1
+### Group 1
 
 ```{r}
 act1 <- generate_group(all = students, leader_can = students, seed = 6250)
 ```
 
-### Leaders:
+#### Leaders:
 
 ```{r}
 #| echo: false
 act1$G1_leader
 ```
 
-### Members:
+#### Members:
 ```{r}
 #| echo: false
 act1$G1_member
@@ -60,28 +60,28 @@ act1$G1_member
 
 
 
-## Group 2
+### Group 2
 
-### Leaders:
+#### Leaders:
 
 ```{r}
 #| echo: false
 act1$G2_leader
 ```
 
-### Members:
+#### Members:
 ```{r}
 #| echo: false
 act1$G2_member
 ```
 
 
-# Class activity 2
+## Class activity 2
 
 
 
 
 
-# Class activity 3
+## Class activity 3
 
-# Class activity 4
+## Class activity 4
