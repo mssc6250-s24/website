@@ -102,7 +102,7 @@
     "href": "weeks/week-4.html",
     "title": "Week 4",
     "section": "",
-    "text": "Important"
+    "text": "Important\n\n\n\nHomework 1 due Friday, Feb 9, 11:59 PM"
   },
   {
     "objectID": "weeks/week-4.html#participate",
@@ -158,7 +158,7 @@
     "href": "weeks/week-3.html",
     "title": "Week 3",
     "section": "",
-    "text": "Important\n\n\n\nHomework 1 due Friday, Feb 2, 11:59 PM"
+    "text": "Important\n\n\n\nHomework 1 due Friday, Feb 9, 11:59 PM"
   },
   {
     "objectID": "weeks/week-3.html#participate",
@@ -441,6 +441,20 @@
     "text": "Exercise\n\n iris\n\n\nBack to course schedule ⏎"
   },
   {
+    "objectID": "activity-work.html",
+    "href": "activity-work.html",
+    "title": "Class activity work",
+    "section": "",
+    "text": "Code\nstudents <- c(\"David\", \"Dibaloke\", \"Emily\", \"Tedi\", \"Alberto\", \n              \"Caldwell\", \"Eimienwanlan\", \"Edward\", \"Mark\", \"Adam\", \n              \"Jennifer\", \"Josh\", \"Kathryn\", \"Clint\", \"Brigida\")\ngenerate_group <- function(all, leader_can, seed, \n                           no_lead1 = 2, no_lead2 = 2, no_mem1 = 6) {\n    students <- all\n    set.seed(seed)\n    lead1 <- sample(leader_can, no_lead1)\n    students <- setdiff(students, lead1)\n    leader <- setdiff(leader_can, lead1)\n    set.seed(seed)\n    member1 <- sample(students, no_mem1)\n    students <- setdiff(students, member1)\n    leader <- setdiff(leader, member1)\n    set.seed(seed)\n    lead2 <- sample(leader, no_lead2)\n    member2 <- setdiff(students, lead2)\n    return(list(\"G1_leader\" = lead1,\n                \"G1_member\" = member1,\n                \"G2_leader\" = lead2,\n                \"G2_member\" = member2,\n                \"leader_can\" = setdiff(leader_can, c(lead1, lead2))))\n}"
+  },
+  {
+    "objectID": "activity-work.html#class-activity-1",
+    "href": "activity-work.html#class-activity-1",
+    "title": "Class activity work",
+    "section": "Class activity 1",
+    "text": "Class activity 1\n\nTopic: Bootstrapping\nWhat is bootstrapping? Why do we use bootstrapping? How can it be used in regression? Please explain it using a simple linear regression example, including code demo.\n\n\nKnowledge Check\nPlease answer the questions at [Link will be provided].\n\n\nGroup 1\n\n\nCode\nact1 <- generate_group(all = students, leader_can = students, seed = 6250)\n\n\n\nLeaders:\n\n\n[1] \"Dibaloke\" \"Mark\"    \n\n\n\n\nMembers:\n\n\n[1] \"Emily\"    \"Jennifer\" \"Alberto\"  \"Clint\"    \"Kathryn\"  \"David\"   \n\n\n\n\n\nGroup 2\n\nLeaders:\n\n\n[1] \"Caldwell\" \"Tedi\"    \n\n\n\n\nMembers:\n\n\n[1] \"Eimienwanlan\" \"Edward\"       \"Adam\"         \"Josh\"         \"Brigida\""
+  },
+  {
     "objectID": "activity-work.html#class-activity-2",
     "href": "activity-work.html#class-activity-2",
     "title": "Class activity work",
@@ -553,6 +567,13 @@
     "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance tradeoff\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n✍️\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n✅\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n✅\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n✅\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n✅\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
+    "objectID": "course-news.html",
+    "href": "course-news.html",
+    "title": "News/Announcements",
+    "section": "",
+    "text": "Homework 1 is now due Feb 9, Friday, 11:59 PM."
+  },
+  {
     "objectID": "slides/17-neural-net.html#neural-networks",
     "href": "slides/17-neural-net.html#neural-networks",
     "title": "Artificial Neural Networks 🙌",
@@ -651,13 +672,6 @@
     "text": "When OLS Doesn’t Work Well\nWhen \\(p \\gg n\\), it is often that many of the features in the model are not associated with the response.\n\nModel Interpretability: By removing irrelevant features \\(X_j\\)s, i.e., setting the corresponding \\(\\beta_j\\)s to zero, we can obtain a model that is more easily interpreted. (Feature/Variable selection)\nLeast squares is unlikely to yield any coefficient estimates that are exactly zero."
   },
   {
-    "objectID": "slides/06-lasso-vs.html#three-classes-of-methods",
-    "href": "slides/06-lasso-vs.html#three-classes-of-methods",
-    "title": "Feature Selection and LASSO \n",
-    "section": "Three Classes of Methods",
-    "text": "Three Classes of Methods\n\n\nSubset Selection. Identify a subset of all the candidate predictors with the best OLS performance.\n\n\nAll possible selection olsrr::ols_step_all_possible()\n\nBest subset olsrr::ols_step_best_subset()\n\nForward stepwise selection olsrr::ols_step_forward_p()\n\nBackward stepwise elimination olsrr::ols_step_backward_p()\n\nHybrid stepwise selection olsrr::ols_step_both_p()\n\n\n\n\n\n\n\nShrinkage. Fit a model that forces some coefficients to be shrunk to zero.\n\n\nLasso glmnet::glmnet()\n\n\n\n\n\n\n\n\nDimension Reduction. Find \\(m\\) representative features that are linear combinations of the \\(p\\) original predictors (\\(m \\ll p\\)), then fit least squares.\n\n\nPrincipal component regression (Unsupervised) pls::pcr()\n\nPartial least squares (Supervised) pls::plsr()\n\n\n\n\nWe then fit a model using least squares on the reduced set of variables."
-  },
-  {
     "objectID": "slides/06-lasso-vs.html#variable-selection",
     "href": "slides/06-lasso-vs.html#variable-selection",
     "title": "Feature Selection and LASSO \n",
@@ -665,67 +679,32 @@
     "text": "Variable Selection\n\nWe have a large pool of candidate regressors, of which only a few are likely to be important.\n\nTwo “conflicting” goals in model building:\n\nas many features as possible for better predictive performance on new data (smaller bias).\n\nas few regressors as possible because as the number of regressors increases,\n\n\n\\(\\mathrm{Var}(\\hat{y})\\) will increase (larger variance)\ncost more in data collecting and maintaining\nmore model complexity\n\n\n\nA compromise between the two hopefully leads to the “best” regression equation.\n\nWhat does best mean?\n\n\nThere is no unique definition of “best”, and different methods specify different subsets of the candidate regressors as best."
   },
   {
-    "objectID": "slides/06-lasso-vs.html#model-selection-criteria",
-    "href": "slides/06-lasso-vs.html#model-selection-criteria",
+    "objectID": "slides/06-lasso-vs.html#three-classes-of-methods",
+    "href": "slides/06-lasso-vs.html#three-classes-of-methods",
     "title": "Feature Selection and LASSO \n",
-    "section": "Model Selection Criteria",
-    "text": "Model Selection Criteria\n\nThe full (largest) model has \\(M\\) candidate regressors.\nThere are \\(M \\choose d\\) possible subset models of \\(d\\) coefficients.\nThere are totally \\(2^M\\) possible subset models.\nAn evaluation metric should consider Goodness of Fit and Model Complexity:\n\n\nGoodness of Fit: The more regressors, the better\n\n\nComplexity Penalty: The less regressors, the better\n\n\n\nEvaluate subset models:\n\n\n\\(R_{adj}^2\\) \\(\\uparrow\\)\n\nMallow’s \\(C_p\\) \\(\\downarrow\\)\n\nInformation Criterion (AIC, BIC) \\(\\downarrow\\)\n\n\nPREdiction Sum of Squares (PRESS) \\(\\downarrow\\) (Allen, D.M. (1974))\n\n\n\n\n\n\n\n\n\nNote\n\n\nAll the measures are not appropriate in the high-dimensional (\\(n \\ll p\\)) setting."
+    "section": "Three Classes of Methods",
+    "text": "Three Classes of Methods\n\n\nSubset Selection (ISL Sec. 6.1) Identify a subset of the \\(p\\) predictors that we believe to be related to the response.\n\nNeed a selection method and a selection criterion.\n\n\n\nShrinkage (ISL Sec. 6.2) Fit a model that forces some coefficients to be shrunk to zero.\n\n\nLasso glmnet::glmnet()\n\n\n\n\nDimension Reduction (ISL Sec. 6.3) Find \\(m\\) representative features that are linear combinations of the \\(p\\) original predictors (\\(m \\ll p\\)), then fit least squares.\n\nPrincipal component regression (Unsupervised) pls::pcr()\n\nPartial least squares (Supervised) pls::plsr()"
   },
   {
-    "objectID": "slides/06-lasso-vs.html#selection-criteria-mallows-c_p-statistic-downarrow",
-    "href": "slides/06-lasso-vs.html#selection-criteria-mallows-c_p-statistic-downarrow",
+    "objectID": "slides/06-lasso-vs.html#subset-selection",
+    "href": "slides/06-lasso-vs.html#subset-selection",
     "title": "Feature Selection and LASSO \n",
-    "section": "Selection Criteria: Mallow’s \\(C_p\\) Statistic \\(\\downarrow\\)\n",
-    "text": "Selection Criteria: Mallow’s \\(C_p\\) Statistic \\(\\downarrow\\)\n\nFor a model with \\(d\\) predictors,\n\\[\\begin{align} C_p &= \\frac{SS_{res}(d)}{\\hat{\\sigma}^2} - n + 2d \\\\ &= d + \\frac{(s^2 - \\hat{\\sigma}^2)(n-d)}{\\hat{\\sigma}^2} \\end{align}\\]\n\n\\(\\hat{\\sigma}^2\\) is the variance estimate from the full model, i.e., \\(\\hat{\\sigma}^2 = MS_{res}(M)\\).\n\\(s^2\\) is the variance estimate from the model with \\(d\\) coefficients, i.e., \\(s^2 = MS_{res}(d)\\).\nFavors the candidate model with the smallest \\(C_p\\).\n\nFor unbiased models that \\(E[\\hat{y}_i] = E[y_i]\\), \\(C_p = d\\).\n\nAll of the errors in \\(\\hat{y}_i\\) is variance, and the model is not underfitted.\n\n\n\n\n\n\\(C_p\\) in ISL is defined as \\(C_p = \\frac{1}{n}(SS_{res} + 2d\\hat{\\sigma}^2)\\) which is equivalent to the definition given above."
+    "section": "Subset Selection",
+    "text": "Subset Selection\n\n\nMSSC 5780 slides and ISL Sec. 6.1\n\n\n\n\nIdentify a subset of all the candidate predictors with the best OLS performance.\n\nBest subset selection olsrr::ols_step_best_subset()\n\nForward stepwise selection olsrr::ols_step_forward_p()\n\nBackward stepwise elimination olsrr::ols_step_backward_p()\n\nHybrid stepwise selection olsrr::ols_step_both_p()\n\n\n\n\n\n\n\n\n\n\n\nWe then fit a model using least squares on the reduced set of variables."
   },
   {
-    "objectID": "slides/06-lasso-vs.html#mallows-c_p-plot",
-    "href": "slides/06-lasso-vs.html#mallows-c_p-plot",
+    "objectID": "slides/06-lasso-vs.html#selection-criteria",
+    "href": "slides/06-lasso-vs.html#selection-criteria",
     "title": "Feature Selection and LASSO \n",
-    "section": "Mallow’s \\(C_p\\) Plot",
-    "text": "Mallow’s \\(C_p\\) Plot\n\n\n\n\n\n\n\n\n\n\n\n\nModel A is a heavily biased model.\nModel D is the poorest performer.\nModel B and C are reasonable.\nModel C has \\(C_p < 3\\) which implies \\(MS_{res}(3) < MS_{res}(M)\\)"
-  },
-  {
-    "objectID": "slides/06-lasso-vs.html#selection-criteria-information-criterion-downarrow",
-    "href": "slides/06-lasso-vs.html#selection-criteria-information-criterion-downarrow",
-    "title": "Feature Selection and LASSO \n",
-    "section": "Selection Criteria: Information Criterion \\(\\downarrow\\)\n",
-    "text": "Selection Criteria: Information Criterion \\(\\downarrow\\)\n\nFor a model with \\(d\\) predictors,\n\nAkaike information criterion (AIC) is \\[\\text{AIC} = n \\ln \\left( \\frac{SS_{res}(d)}{n} \\right) + 2d\\]\nBayesian information criterion (BIC) is \\[\\text{BIC} = n \\ln \\left( \\frac{SS_{res}(d)}{n} \\right) + d \\ln (n)\\]\nBIC penalizes more when adding more variables as the sample size increases.\nBIC tends to choose models with less features.\n\n\n\n\\(\\text{AIC}\\) is proportional to \\(C_p\\)."
-  },
-  {
-    "objectID": "slides/06-lasso-vs.html#selection-criteria-press-downarrow",
-    "href": "slides/06-lasso-vs.html#selection-criteria-press-downarrow",
-    "title": "Feature Selection and LASSO \n",
-    "section": "Selection Criteria: PRESS \\(\\downarrow\\)\n",
-    "text": "Selection Criteria: PRESS \\(\\downarrow\\)\n\n\nPREdiction Sum of Squares (PRESS)\n\\(\\text{PRESS}_d = \\sum_{i=1}^n[y_i - \\hat{y}_{(i)}]^2 = \\sum_{i=1}^n\\left( \\frac{e_i}{1-h_{ii}}\\right)^2\\) where \\(e_i = y_i - \\hat{y}_i\\).1\nPRESS is in fact the LOOCV estimate of test MSE!\n\\(R_{pred, d}^2 = 1 - \\frac{PRESS_d}{SS_T}\\)\n\\(\\text{Absolute PRESS}_p = \\sum_{i=1}^n|y_i - \\hat{y}_{(i)}|\\) can also be considered when some large prediction errors are too influential."
-  },
-  {
-    "objectID": "slides/06-lasso-vs.html#selection-methods-all-possible-selection",
-    "href": "slides/06-lasso-vs.html#selection-methods-all-possible-selection",
-    "title": "Feature Selection and LASSO \n",
-    "section": "Selection Methods: All Possible Selection",
-    "text": "Selection Methods: All Possible Selection\n\nAssume the intercept is in all models.\nIf there are \\(M\\) possible regressors, we investigate all \\(2^M - 1\\) possible regression equations.\nUse the selection criteria to determine some candidate models and complete regression analysis on them.\n\n\n\n\nmanpower <- read.csv(file = \"./data/manpower.csv\", header = TRUE)\nlm_full <- lm(y ~ ., data = manpower)\nolsrr_all <- olsrr::ols_step_all_possible(lm_full)\nnames(olsrr_all)\n\n [1] \"mindex\"     \"n\"          \"predictors\" \"rsquare\"    \"adjr\"      \n [6] \"predrsq\"    \"cp\"         \"aic\"        \"sbic\"       \"sbc\"       \n[11] \"msep\"       \"fpe\"        \"apc\"        \"hsp\"       \n\n\n\n\n\n\n\n\n\n\n\nn: number of predictors\n\npredictors: predictors in the model\n\nrsquare: R-square of the model\n\nadjr: adjusted R-square of the model\n\npredrsq: predicted R-square of the model\n\ncp: Mallow’s Cp\n\naic: AIC\n\nsbic: Sawa BIC\n\nsbc: Schwarz BIC (the one we defined)"
-  },
-  {
-    "objectID": "slides/06-lasso-vs.html#section-1",
-    "href": "slides/06-lasso-vs.html#section-1",
-    "title": "Feature Selection and LASSO \n",
-    "section": "",
-    "text": "Index N     Predictors R-Square Adj. R-Square Mallow's Cp\n3      1 1             x3    0.972         0.970       20.38\n1      2 1             x1    0.971         0.970       21.20\n2      3 1             x2    0.893         0.886      114.97\n4      4 1             x4    0.884         0.877      125.87\n5      5 1             x5    0.335         0.290      785.26\n10     6 2          x2 x3    0.987         0.985        4.94\n6      7 2          x1 x2    0.986         0.984        5.66\n14     8 2          x3 x5    0.985         0.983        7.29\n9      9 2          x1 x5    0.984         0.982        8.16\n13    10 2          x3 x4    0.975         0.972       18.57\n8     11 2          x1 x4    0.974         0.970       20.04\n7     12 2          x1 x3    0.973         0.969       21.99\n11    13 2          x2 x4    0.931         0.921       72.29\n12    14 2          x2 x5    0.924         0.913       80.30\n15    15 2          x4 x5    0.910         0.898       96.50\n23    16 3       x2 x3 x5    0.990         0.988        2.92\n18    17 3       x1 x2 x5    0.989         0.987        3.71\n16    18 3       x1 x2 x3    0.987         0.984        6.21\n22    19 3       x2 x3 x4    0.987         0.984        6.90\n17    20 3       x1 x2 x4    0.986         0.983        7.66\n20    21 3       x1 x3 x5    0.985         0.982        8.97\n25    22 3       x3 x4 x5    0.985         0.982        9.00\n21    23 3       x1 x4 x5    0.985         0.981        9.41\n19    24 3       x1 x3 x4    0.978         0.974       16.80\n24    25 3       x2 x4 x5    0.952         0.941       48.28\n30    26 4    x2 x3 x4 x5    0.991         0.988        4.03\n28    27 4    x1 x2 x4 x5    0.991         0.987        4.26\n27    28 4    x1 x2 x3 x5    0.991         0.987        4.35\n26    29 4    x1 x2 x3 x4    0.988         0.984        7.54\n29    30 4    x1 x3 x4 x5    0.985         0.980       10.92\n31    31 5 x1 x2 x3 x4 x5    0.991         0.987        6.00"
-  },
-  {
-    "objectID": "slides/06-lasso-vs.html#other-subset-selection-methods",
-    "href": "slides/06-lasso-vs.html#other-subset-selection-methods",
-    "title": "Feature Selection and LASSO \n",
-    "section": "Other Subset Selection Methods",
-    "text": "Other Subset Selection Methods\n\n\nAll possible selection olsrr::ols_step_all_possible()\n\nConsider all possible subsets of regressors.\n\n\n\nBest subset olsrr::ols_step_best_subset()\n\nIdentify the best model of each model size.\n\n\n\nForward selection olsrr::ols_step_forward_p()\n\nBegins with no regressors, and insert regressors into the model one at a time.\n\n\n\nBackward elimination olsrr::ols_step_backward_p()\n\nBegin with the full model with all possible regressors, then remove regressors from the model one at a time.\n\n\n\nStepwise regression olsrr::ols_step_both_p()\n\nDo forward selection, but refit the model when a new predictor is inserted. Remove a predictor that becomes redundant from the refit model.\n\n\nCheck Variable Selection Methods"
+    "section": "Selection Criteria",
+    "text": "Selection Criteria\n\nAn evaluation metric should consider Goodness of Fit and Model Complexity:\n\n\nGoodness of Fit: The more regressors, the better\n\n\nComplexity Penalty: The less regressors, the better\n\n\n\nEvaluate subset models:\n\n\n\\(R_{adj}^2\\) \\(\\uparrow\\)\n\nMallow’s \\(C_p\\) \\(\\downarrow\\)\n\nInformation Criterion (AIC, BIC) \\(\\downarrow\\)\n\n\nPREdiction Sum of Squares (PRESS) \\(\\downarrow\\) (Allen, D.M. (1974))\n\n\n\n\n\n\n\n\n\nNote\n\n\nAll the measures are not appropriate in the high-dimensional (\\(n \\ll p\\)) setting. - Indirectly estimate test error by making adjustment to the training error to account for the bias due to overfitting. - Directly estimate test error using CV."
   },
   {
     "objectID": "slides/06-lasso-vs.html#why-lasso",
     "href": "slides/06-lasso-vs.html#why-lasso",
     "title": "Feature Selection and LASSO \n",
     "section": "Why Lasso?",
-    "text": "Why Lasso?\n\nAll possible selection may be computationally infeasible.\nOther subset selection methods do not explore all possible subset models. (No global solution)\nRidge regression does shrink coefficients, but still include all predictors.\nLasso regularizes coefficients so that some coefficients are shrunk to zero, doing feature selection.\nLike ridge regression, for a given \\(\\lambda\\), Lasso only fits a single model."
+    "text": "Why Lasso?\n\n\nSubset selection methods\n\nmay be computationally infeasible (fit OLS over millions of times)\ndo not explore all possible subset models (no global solution)\n\n\n\n\nRidge regression does shrink coefficients, but still include all predictors.\nLasso regularizes coefficients so that some coefficients are shrunk to zero, doing feature selection.\nLike ridge regression, for a given \\(\\lambda\\), Lasso only fits a single model.\n\nRidge OK for prediction, but bad at interpretation"
   },
   {
     "objectID": "slides/06-lasso-vs.html#what-is-lasso",
@@ -760,7 +739,7 @@
     "href": "slides/06-lasso-vs.html#lasso-coefficients",
     "title": "Feature Selection and LASSO \n",
     "section": "Lasso Coefficients",
-    "text": "Lasso Coefficients\n\nlambda.min contains more nonzero parameters.\nLarger penalty \\(\\lambda\\) forces more parameters to be zero, and the model is more “sparse”.\n\n\n\n\ncoef(lasso_fit, s = \"lambda.min\")\n\n9 x 1 sparse Matrix of class \"dgCMatrix\"\n                  s1\n(Intercept)  0.17999\nlcavol       0.56099\nlweight      0.61908\nage         -0.02069\nlbph         0.09531\nsvi          0.75180\nlcp         -0.09912\ngleason      0.04745\npgg45        0.00432\n\n\n\n\ncoef(lasso_fit, s = \"lambda.1se\")\n\n9 x 1 sparse Matrix of class \"dgCMatrix\"\n               s1\n(Intercept) 1.101\nlcavol      0.433\nlweight     0.202\nage         .    \nlbph        .    \nsvi         0.271\nlcp         .    \ngleason     .    \npgg45       ."
+    "text": "Lasso Coefficients\n\nlambda.min contains more nonzero coefficients.\nLarger penalty \\(\\lambda\\) forces more coefficients to be zero, and the model is more “sparse”.\n\n\n\n\ncoef(lasso_fit, s = \"lambda.min\")\n\n9 x 1 sparse Matrix of class \"dgCMatrix\"\n                  s1\n(Intercept)  0.17999\nlcavol       0.56099\nlweight      0.61908\nage         -0.02069\nlbph         0.09531\nsvi          0.75180\nlcp         -0.09912\ngleason      0.04745\npgg45        0.00432\n\n\n\n\ncoef(lasso_fit, s = \"lambda.1se\")\n\n9 x 1 sparse Matrix of class \"dgCMatrix\"\n               s1\n(Intercept) 0.644\nlcavol      0.455\nlweight     0.314\nage         .    \nlbph        .    \nsvi         0.367\nlcp         .    \ngleason     .    \npgg45       ."
   },
   {
     "objectID": "slides/06-lasso-vs.html#one-variable-lasso-and-shrinkage-concept",
@@ -795,7 +774,7 @@
     "href": "slides/06-lasso-vs.html#variable-selection-property-and-shrinkage",
     "title": "Feature Selection and LASSO \n",
     "section": "Variable Selection Property and Shrinkage",
-    "text": "Variable Selection Property and Shrinkage\n\nThe proportion of times a variable has a non-zero parameter estimation.\n\\(\\mathbf{y}= \\mathbf{X}' \\boldsymbol \\beta + \\epsilon = \\sum_{j = 1}^p X_j \\times 0.4^{\\sqrt{j}} + \\epsilon\\)\n\\(p = 20\\), \\(\\epsilon \\sim N(0, 1)\\) and replicate 100 times.\n\n\n\nSince Lasso shrinks some parameter to exactly zero, it has the variable selection property — the ones that are nonzero are the ones being selected. This is a very nice properly in high-dimensional data analysis, where we cannot estimate the effects of all variables.\nWe can then look at the proportion of times a variable has a non-zero parameter estimation"
+    "text": "Variable Selection Property and Shrinkage\n\nThe proportion of times a variable has a non-zero parameter estimation.\n\\(\\mathbf{y}= \\mathbf{X}\\boldsymbol \\beta + \\epsilon = \\sum_{j = 1}^p X_j \\times 0.4^{\\sqrt{j}} + \\epsilon\\)\n\\(p = 20\\), \\(\\epsilon \\sim N(0, 1)\\) and replicate 100 times.\n\n\n\nSince Lasso shrinks some parameter to exactly zero, it has the variable selection property — the ones that are nonzero are the ones being selected. This is a very nice properly in high-dimensional data analysis, where we cannot estimate the effects of all variables.\nWe can then look at the proportion of times a variable has a non-zero parameter estimation"
   },
   {
     "objectID": "slides/06-lasso-vs.html#bias-variance-trade-off",
@@ -830,14 +809,7 @@
     "href": "slides/06-lasso-vs.html#predictive-performance",
     "title": "Feature Selection and LASSO \n",
     "section": "Predictive Performance",
-    "text": "Predictive Performance\nPerform well (lower test MSE) when\n\n\nLasso (—)\n\nA relatively small number of \\(\\beta_j\\)s are substantially large, and the remaining \\(\\beta_k\\)s are small or equal to zero.\nReduce more bias\n\n\n\n\n\nISL Fig. 6.9\n\n\n\n\n\nRidge (…)\n\nThe response is a function of many predictors, all with coefficients of roughly equal size.\nReduce more variance\n\n\n\n\n\nISL Fig. 6.8\n\n\n\n\n\n\nRidge focus more on variance stablization Lasso focus more on model selection and interpretbility higher R^2 (larger lambda), more overfitting, so low bias high variance"
-  },
-  {
-    "objectID": "slides/06-lasso-vs.html#bayesian-interpretation",
-    "href": "slides/06-lasso-vs.html#bayesian-interpretation",
-    "title": "Feature Selection and LASSO \n",
-    "section": "Bayesian Interpretation",
-    "text": "Bayesian Interpretation\n\n\nLasso\n\nRidge\n\n\n\n\nLet’s wait until we discuss Bayesian Regression!"
+    "text": "Predictive Performance\nPerform well (lower test MSE) when\n\n\nLasso (—)\n\nA relatively small number of \\(\\beta_j\\)s are substantially large, and the remaining \\(\\beta_k\\)s are small or equal to zero.\nReduce more bias\n\n\n\n\n\nISL Fig. 6.9\n\n\n\n\n\nRidge (\\(\\cdots\\cdots\\))\n\nThe response is a function of many predictors, all with coefficients of roughly equal size.\nReduce more variance\n\n\n\n\n\nISL Fig. 6.8\n\n\n\n\n\n\nRidge focus more on variance stablization Lasso focus more on model selection and interpretbility higher R^2 (larger lambda), more overfitting, so low bias high variance"
   },
   {
     "objectID": "slides/06-lasso-vs.html#notes-of-lasso",

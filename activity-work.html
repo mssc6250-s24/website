@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -270,7 +333,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#class-activity-1" id="toc-class-activity-1" class="nav-link active" data-scroll-target="#class-activity-1">Class activity 1</a></li>
+  <li><a href="#class-activity-1" id="toc-class-activity-1" class="nav-link active" data-scroll-target="#class-activity-1">Class activity 1</a>
+  <ul class="collapse">
+  <li><a href="#topic-bootstrapping" id="toc-topic-bootstrapping" class="nav-link" data-scroll-target="#topic-bootstrapping">Topic: Bootstrapping</a></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge Check</a></li>
+  <li><a href="#group-1" id="toc-group-1" class="nav-link" data-scroll-target="#group-1">Group 1</a></li>
+  <li><a href="#group-2" id="toc-group-2" class="nav-link" data-scroll-target="#group-2">Group 2</a></li>
+  </ul></li>
   <li><a href="#class-activity-2" id="toc-class-activity-2" class="nav-link" data-scroll-target="#class-activity-2">Class activity 2</a></li>
   <li><a href="#class-activity-3" id="toc-class-activity-3" class="nav-link" data-scroll-target="#class-activity-3">Class activity 3</a></li>
   <li><a href="#class-activity-4" id="toc-class-activity-4" class="nav-link" data-scroll-target="#class-activity-4">Class activity 4</a></li>
@@ -297,8 +366,88 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>students <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"David"</span>, <span class="st">"Dibaloke"</span>, <span class="st">"Emily"</span>, <span class="st">"Tedi"</span>, <span class="st">"Alberto"</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Caldwell"</span>, <span class="st">"Eimienwanlan"</span>, <span class="st">"Edward"</span>, <span class="st">"Mark"</span>, <span class="st">"Adam"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              <span class="st">"Jennifer"</span>, <span class="st">"Josh"</span>, <span class="st">"Kathryn"</span>, <span class="st">"Clint"</span>, <span class="st">"Brigida"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>generate_group <span class="ot">&lt;-</span> <span class="cf">function</span>(all, leader_can, seed, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">no_lead1 =</span> <span class="dv">2</span>, <span class="at">no_lead2 =</span> <span class="dv">2</span>, <span class="at">no_mem1 =</span> <span class="dv">6</span>) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    students <span class="ot">&lt;-</span> all</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set.seed</span>(seed)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    lead1 <span class="ot">&lt;-</span> <span class="fu">sample</span>(leader_can, no_lead1)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    students <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(students, lead1)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    leader <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(leader_can, lead1)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set.seed</span>(seed)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    member1 <span class="ot">&lt;-</span> <span class="fu">sample</span>(students, no_mem1)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    students <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(students, member1)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    leader <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(leader, member1)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set.seed</span>(seed)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    lead2 <span class="ot">&lt;-</span> <span class="fu">sample</span>(leader, no_lead2)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    member2 <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(students, lead2)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="st">"G1_leader"</span> <span class="ot">=</span> lead1,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                <span class="st">"G1_member"</span> <span class="ot">=</span> member1,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                <span class="st">"G2_leader"</span> <span class="ot">=</span> lead2,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                <span class="st">"G2_member"</span> <span class="ot">=</span> member2,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                <span class="st">"leader_can"</span> <span class="ot">=</span> <span class="fu">setdiff</span>(leader_can, <span class="fu">c</span>(lead1, lead2))))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <section id="class-activity-1" class="level2">
 <h2 class="anchored" data-anchor-id="class-activity-1">Class activity 1</h2>
+<section id="topic-bootstrapping" class="level3">
+<h3 class="anchored" data-anchor-id="topic-bootstrapping">Topic: Bootstrapping</h3>
+<p>What is bootstrapping? Why do we use bootstrapping? How can it be used in regression? Please explain it using a simple linear regression example, including code demo.</p>
+</section>
+<section id="knowledge-check" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge-check">Knowledge Check</h3>
+<p>Please answer the questions at [Link will be provided].</p>
+</section>
+<section id="group-1" class="level3">
+<h3 class="anchored" data-anchor-id="group-1">Group 1</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>act1 <span class="ot">&lt;-</span> <span class="fu">generate_group</span>(<span class="at">all =</span> students, <span class="at">leader_can =</span> students, <span class="at">seed =</span> <span class="dv">6250</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="leaders" class="level4">
+<h4 class="anchored" data-anchor-id="leaders">Leaders:</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Dibaloke" "Mark"    </code></pre>
+</div>
+</div>
+</section>
+<section id="members" class="level4">
+<h4 class="anchored" data-anchor-id="members">Members:</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Emily"    "Jennifer" "Alberto"  "Clint"    "Kathryn"  "David"   </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="group-2" class="level3">
+<h3 class="anchored" data-anchor-id="group-2">Group 2</h3>
+<section id="leaders-1" class="level4">
+<h4 class="anchored" data-anchor-id="leaders-1">Leaders:</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Caldwell" "Tedi"    </code></pre>
+</div>
+</div>
+</section>
+<section id="members-1" class="level4">
+<h4 class="anchored" data-anchor-id="members-1">Members:</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Eimienwanlan" "Edward"       "Adam"         "Josh"         "Brigida"     </code></pre>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="class-activity-2" class="level2">
 <h2 class="anchored" data-anchor-id="class-activity-2">Class activity 2</h2>
