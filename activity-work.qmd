@@ -33,11 +33,17 @@ generate_group <- function(all, leader_can, seed,
 
 ### Topic: Bootstrapping
 
-What is bootstrapping? Why do we use bootstrapping? How can it be used in regression? Please explain it using a simple linear regression example, including code demo.
+What is bootstrapping? Why do we use bootstrapping? Please explain it and show how it can be used in simple linear regression, including code demo.
+
+### Resources
+
+Course slides [Simulation-based Inference](https://math4780-f23.github.io/website/slides/11-bootstrap.html#/title-slide) could be helpful. Please collect and prepare your own materials.
 
 ### Knowledge Check
 
-Please answer the questions at [Link will be provided].
+Please answer the questions at \[Link will be provided\].
+
+<https://forms.office.com/r/q7MXBw3raw>
 
 ### Group 1
 
@@ -53,12 +59,11 @@ act1$G1_leader
 ```
 
 #### Members:
+
 ```{r}
 #| echo: false
 act1$G1_member
 ```
-
-
 
 ### Group 2
 
@@ -70,17 +75,13 @@ act1$G2_leader
 ```
 
 #### Members:
+
 ```{r}
 #| echo: false
 act1$G2_member
 ```
 
-
 ## Class activity 2
-
-
-
-
 
 ## Class activity 3
 
