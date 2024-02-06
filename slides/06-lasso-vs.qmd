@@ -123,8 +123,6 @@ knitr::knit_hooks$set(output = function(x, options) {
 # Feature/Variable Selection
 
 
-
-
 ## When OLS Doesn't Work Well
 
 When $p \gg n$, it is often that many of the features in the model are not associated with the response.
@@ -134,34 +132,6 @@ When $p \gg n$, it is often that many of the features in the model are not assoc
 - Least squares is unlikely to yield any coefficient estimates that are exactly zero.
 
 
-## Three Classes of Methods
-
-- [**Subset Selection**.]{.green} Identify a subset of all the candidate predictors with the *best* OLS performance.
-  + *All possible selection* `olsrr::ols_step_all_possible()`
-  + Best subset `olsrr::ols_step_best_subset()`
-  + Forward stepwise selection `olsrr::ols_step_forward_p()`
-  + Backward stepwise elimination `olsrr::ols_step_backward_p()`
-  + Hybrid stepwise selection `olsrr::ols_step_both_p()`
-
-
-. . .
-
-- [**Shrinkage**.]{.green} Fit a model that forces some coefficients to be shrunk to zero.
-  + *Lasso* `glmnet::glmnet()`
-
-. . .
-
-- [**Dimension Reduction**.]{.green} Find $m$ representative features that are linear combinations of the $p$ original predictors ($m \ll p$), then fit least squares. 
-  + *Principal component regression* (Unsupervised) `pls::pcr()`
-  + Partial least squares (Supervised) `pls::plsr()`
-
-::: notes
-We then fit a model using least squares on the reduced set of variables.
-:::
-
-
-
-# Subset Selection Method
 
 ## Variable Selection
 - We have a *large pool of __candidate regressors__*, of which only a few are likely to be important. 
@@ -185,18 +155,55 @@ What does **best** mean?
 
 There is **no unique definition of "best"**, and different methods specify **different subsets of the candidate regressors as best**.
 
+## Three Classes of Methods
 
-## Model Selection Criteria
-- The full (largest) model has $M$ candidate regressors.
-- There are $M \choose d$ possible subset models of $d$ coefficients.
-- There are totally $2^M$ possible subset models.
+- [**Subset Selection (ISL Sec. 6.1)**]{.green} Identify a subset of the $p$ predictors that we believe to be related to the response.
+  + Need a selection method and a selection criterion.
 
-- An evaluation metric should consider **Goodness of Fit** and **Model Complexity**:
+
+- [**Shrinkage (ISL Sec. 6.2)**]{.green} Fit a model that forces some coefficients to be shrunk to zero.
+  + *Lasso* `glmnet::glmnet()`
+
+
+- [**Dimension Reduction (ISL Sec. 6.3)**]{.green} Find $m$ representative features that are linear combinations of the $p$ original predictors ($m \ll p$), then fit least squares. 
+  + Principal component regression (Unsupervised) `pls::pcr()`
+  + Partial least squares (Supervised) `pls::plsr()`
+
+
+## Subset Selection
+
+- [MSSC 5780 slides](https://math4780-f23.github.io/website/slides/15-var-select.html#/title-slide) and ISL Sec. 6.1
+
+:::: columns
+:::{.column width="75%"}
+
+- Identify a subset of all the candidate predictors with the *best* OLS performance.
+  + Best subset selection `olsrr::ols_step_best_subset()`
+  + Forward stepwise selection `olsrr::ols_step_forward_p()`
+  + Backward stepwise elimination `olsrr::ols_step_backward_p()`
+  + Hybrid stepwise selection `olsrr::ols_step_both_p()`
+  
+:::
+
+::: {.column width="25%"}
+[![](./images/06-lasso-vs/hex_olsrr.png)](https://olsrr.rsquaredacademy.com/)
+:::
+
+::::
+
+::: notes
+We then fit a model using least squares on the reduced set of variables.
+:::
+
+  
+## Selection Criteria
+
++ An evaluation metric should consider **Goodness of Fit** and **Model Complexity**:
 
 > **Goodness of Fit**: The more regressors, the better
 
 > **Complexity Penalty**: The less regressors, the better
-
+    
 . . .
 
 - Evaluate subset models:
@@ -209,163 +216,222 @@ There is **no unique definition of "best"**, and different methods specify **dif
 ::: notes
 ::: {.callout-note style="font-size: 1.5em"}
 All the measures are not appropriate in the high-dimensional ($n \ll p$) setting.
+- Indirectly estimate test error by making adjustment to the training error to account for the bias due to overfitting.
+- Directly estimate test error using CV.
 :::
 :::
-  
-## Selection Criteria: Mallow's $C_p$ Statistic $\downarrow$
-For a model with $d$ predictors,
 
-$$\begin{align} C_p &= \frac{SS_{res}(d)}{\hat{\sigma}^2} - n + 2d \\ &= d + \frac{(s^2 - \hat{\sigma}^2)(n-d)}{\hat{\sigma}^2} \end{align}$$
 
-- $\hat{\sigma}^2$ is the variance estimate from the *full* model, i.e., $\hat{\sigma}^2 = MS_{res}(M)$.
+<!-- ## Three Classes of Methods - Subset Selection -->
 
-- $s^2$ is the variance estimate from the model with $d$ coefficients, i.e., $s^2 = MS_{res}(d)$.
+<!-- - [**Shrinkage (ISL Sec. 6.2)**]{.green} Fit a model that forces some coefficients to be shrunk to zero. -->
+<!--   + *Lasso* `glmnet::glmnet()` -->
 
-- Favors the candidate model with the **smallest $C_p$**.
+<!-- . . . -->
 
-- For unbiased models that $E[\hat{y}_i] = E[y_i]$, $C_p = d$.
-  + All of the errors in $\hat{y}_i$ is variance, and the model is not underfitted. 
-  
-::: aside
-$C_p$ in ISL is defined as $C_p = \frac{1}{n}(SS_{res} + 2d\hat{\sigma}^2)$ which is equivalent to the definition given above.
-:::
+<!-- - [**Dimension Reduction (ISL Sec. 6.3)**]{.green} Find $m$ representative features that are linear combinations of the $p$ original predictors ($m \ll p$), then fit least squares.  -->
+<!--   + *Principal component regression* (Unsupervised) `pls::pcr()` -->
+<!--   + Partial least squares (Supervised) `pls::plsr()` -->
 
 
 
-## Mallow's $C_p$ Plot
-
-:::: columns
-::: {.column width="55%"}
-```{r}
-#| out-width: "90%"
-#| fig-asp: 1
-par(mar = c(3, 3, 0, 0), mgp = c(2, 0.5, 0), las = 1)
-x <- 1:4
-y <- c(2.5, 2.2, 2.2, 4.3)
-plot(x, y, col = 4, axes = F, xlab = "d", ylab = "Cp", pch = 19, cex = 2,
-     xlim = c(0, 5), ylim = c(0, 5))
-axis(1, 0:5)
-axis(2, 0:5)
-text(x[1], y[1]+0.4, "A", cex = 1.3)
-text(x[2], y[2]+0.4, "B", cex = 1.3)
-text(x[3], y[3]+0.4, "C", cex = 1.3)
-text(x[4], y[4]+0.4, "D", cex = 1.3)
-abline(a = 0, b = 1, lwd = 2, col = "#003366")
-text(c(0.1), c(0.4), "Cp = d", srt = 45, font = 3, cex = 1.5)
-```
-:::
-
-::: {.column width="45%"}
-- Model A is a heavily biased model.
-- Model D is the poorest performer.
-- Model B and C are reasonable.
-- Model C has $C_p < 3$ which implies $MS_{res}(3) < MS_{res}(M)$
-:::
-::::
 
 
-## Selection Criteria: Information Criterion $\downarrow$
-For a model with $d$ predictors,
-
-- Akaike information criterion (AIC) is $$\text{AIC} = n \ln \left( \frac{SS_{res}(d)}{n} \right) + 2d$$
-
-- Bayesian information criterion (BIC) is $$\text{BIC} = n \ln \left( \frac{SS_{res}(d)}{n} \right) + d \ln (n)$$
-
-- BIC penalizes more when adding more variables as the sample size increases. 
-
-- BIC tends to choose models with less features.
-
-::: aside
-$\text{AIC}$ is proportional to $C_p$.
-:::
+<!-- # Subset Selection Method -->
 
 
-## Selection Criteria: PRESS $\downarrow$
-- **PRE**diction **S**um of **S**quares (PRESS)
+<!-- ## Model Selection Criteria -->
+<!-- - The full (largest) model has $M$ candidate regressors. -->
+<!-- - There are $M \choose d$ possible subset models of $d$ coefficients. -->
+<!-- - There are totally $2^M$ possible subset models. -->
 
-- $\text{PRESS}_d = \sum_{i=1}^n[y_i - \hat{y}_{(i)}]^2 = \sum_{i=1}^n\left( \frac{e_i}{1-h_{ii}}\right)^2$ where $e_i = y_i - \hat{y}_i$.^[$\text{Absolute PRESS}_p = \sum_{i=1}^n|y_i - \hat{y}_{(i)}|$ can also be considered when some large prediction errors are too influential.]
+<!-- - An evaluation metric should consider **Goodness of Fit** and **Model Complexity**: -->
 
-- PRESS is in fact the LOOCV estimate of test MSE!
+<!-- > **Goodness of Fit**: The more regressors, the better -->
 
-- $R_{pred, d}^2 = 1 - \frac{PRESS_d}{SS_T}$
+<!-- > **Complexity Penalty**: The less regressors, the better -->
 
+<!-- . . . -->
 
-## Selection Methods: All Possible Selection
-- Assume the intercept is in all models.
-
-- If there are $M$ possible regressors, we investigate all $2^M - 1$ possible regression equations.
-
-- Use the selection criteria to determine some candidate models and complete regression analysis on them.
-
-:::: columns
-:::{.column width="80%"}
-
-```{r}
-#| echo: true
-manpower <- read.csv(file = "./data/manpower.csv", header = TRUE)
-lm_full <- lm(y ~ ., data = manpower)
-olsrr_all <- olsrr::ols_step_all_possible(lm_full)
-names(olsrr_all)
-```
-:::
-
-::: {.column width="20%"}
-[![](./images/06-lasso-vs/hex_olsrr.png)](https://olsrr.rsquaredacademy.com/)
-:::
-
-::::
+<!-- - Evaluate subset models: -->
+<!--   + $R_{adj}^2$ $\uparrow$ -->
+<!--   + Mallow's $C_p$  $\downarrow$ -->
+<!--   + Information Criterion (AIC, BIC)  $\downarrow$ -->
+<!--   + **PRE**diction **S**um of **S**quares (PRESS) $\downarrow$ (Allen, D.M. (1974)) -->
 
 
-::: notes
-- `n`: number of predictors
-- `predictors`: predictors in the model
-- `rsquare`: R-square of the model
-- `adjr`: adjusted R-square of the model
-- `predrsq`: predicted R-square of the model
-- `cp`: Mallow’s Cp
-- `aic`: AIC
-- `sbic`: Sawa BIC
-- `sbc`: Schwarz BIC (the one we defined)
-:::
+<!-- ::: notes -->
+<!-- ::: {.callout-note style="font-size: 1.5em"} -->
+<!-- All the measures are not appropriate in the high-dimensional ($n \ll p$) setting. -->
+<!-- - Indirectly estimate test error by making adjustment to the training error to account for the bias due to overfitting. -->
+<!-- - Directly estimate test error using CV. -->
+<!-- ::: -->
+<!-- ::: -->
 
-##
+<!-- ## Selection Criteria: Mallow's $C_p$ Statistic $\downarrow$ -->
+<!-- For a model with $d$ predictors, -->
 
-::: {style="font-size: 0.78em;"}
-```{r, highlight.output = 17, highlight=TRUE}
-#| class-output: my_classfull
-print(olsrr_all, row.names = FALSE)
-```
-:::
+<!-- $$\begin{align} C_p &= \frac{SS_{res}(d)}{\hat{\sigma}^2} - n + 2d \\ &= d + \frac{(s^2 - \hat{\sigma}^2)(n-d)}{\hat{\sigma}^2} \end{align}$$ -->
+
+<!-- - $\hat{\sigma}^2$ is the variance estimate from the *full* model, i.e., $\hat{\sigma}^2 = MS_{res}(M)$. -->
+
+<!-- - $s^2$ is the variance estimate from the model with $d$ coefficients, i.e., $s^2 = MS_{res}(d)$. -->
+
+<!-- - Favors the candidate model with the **smallest $C_p$**. -->
+
+<!-- - For unbiased models that $E[\hat{y}_i] = E[y_i]$, $C_p = d$. -->
+<!--   + All of the errors in $\hat{y}_i$ is variance, and the model is not underfitted.  -->
+
+<!-- ::: aside -->
+<!-- $C_p$ in ISL is defined as $C_p = \frac{1}{n}(SS_{res} + 2d\hat{\sigma}^2)$ which is equivalent to the definition given above. -->
+<!-- ::: -->
+
+<!-- ::: notes -->
+
+<!-- If $\hat{\sigma}^2$ is unbiased, Cp is unbiased for test MSE. -->
+<!-- ::: -->
 
 
 
-## Other Subset Selection Methods
+<!-- ## Mallow's $C_p$ Plot -->
 
-- [All possible selection]{.green} `olsrr::ols_step_all_possible()`
-  + Consider all possible subsets of regressors.
-  
-- [Best subset]{.green} `olsrr::ols_step_best_subset()`
-  + Identify the best model of each model size.
-  
-- [Forward selection]{.green} `olsrr::ols_step_forward_p()`
-  + Begins with no regressors, and insert regressors into the model one at a time.
-  
-- [Backward elimination]{.green} `olsrr::ols_step_backward_p()`
-  + Begin with the full model with all possible regressors, then remove regressors from the model one at a time.
-  
-- [Stepwise regression]{.green} `olsrr::ols_step_both_p()`
-  + Do forward selection, but refit the model when a new predictor is inserted. Remove a predictor that becomes redundant from the refit model.
+<!-- :::: columns -->
+<!-- ::: {.column width="55%"} -->
+<!-- ```{r} -->
+<!-- #| out-width: "90%" -->
+<!-- #| fig-asp: 1 -->
+<!-- par(mar = c(3, 3, 0, 0), mgp = c(2, 0.5, 0), las = 1) -->
+<!-- x <- 1:4 -->
+<!-- y <- c(2.5, 2.2, 2.2, 4.3) -->
+<!-- plot(x, y, col = 4, axes = F, xlab = "d", ylab = "Cp", pch = 19, cex = 2, -->
+<!--      xlim = c(0, 5), ylim = c(0, 5)) -->
+<!-- axis(1, 0:5) -->
+<!-- axis(2, 0:5) -->
+<!-- text(x[1], y[1]+0.4, "A", cex = 1.3) -->
+<!-- text(x[2], y[2]+0.4, "B", cex = 1.3) -->
+<!-- text(x[3], y[3]+0.4, "C", cex = 1.3) -->
+<!-- text(x[4], y[4]+0.4, "D", cex = 1.3) -->
+<!-- abline(a = 0, b = 1, lwd = 2, col = "#003366") -->
+<!-- text(c(0.1), c(0.4), "Cp = d", srt = 45, font = 3, cex = 1.5) -->
+<!-- ``` -->
+<!-- ::: -->
 
-- Check [Variable Selection Methods](https://olsrr.rsquaredacademy.com/articles/variable_selection.html)
+<!-- ::: {.column width="45%"} -->
+<!-- - Model A is a heavily biased model. -->
+<!-- - Model D is the poorest performer. -->
+<!-- - Model B and C are reasonable. -->
+<!-- - Model C has $C_p < 3$ which implies $MS_{res}(3) < MS_{res}(M)$ -->
+<!-- ::: -->
+<!-- :::: -->
+
+
+<!-- ## Selection Criteria: Information Criterion $\downarrow$ -->
+<!-- For a model with $d$ predictors, -->
+
+<!-- - Akaike information criterion (AIC)^[For least squares models, $\text{AIC}$ is proportional to $C_p$.] is $$\text{AIC} = n \ln \left( \frac{SS_{res}(d)}{n} \right) + 2d$$ -->
+
+<!-- - Bayesian information criterion (BIC) is $$\text{BIC} = n \ln \left( \frac{SS_{res}(d)}{n} \right) + d \ln (n)$$ -->
+
+<!-- - BIC penalizes more when adding more variables as the sample size increases.  -->
+
+<!-- - BIC tends to choose models with less features. -->
+
+
+<!-- ::: aside -->
+<!-- Some use $2(d+1)$ to consider the additional parameter $\sigma$. -->
+<!-- ::: -->
+
+
+<!-- ## Selection Criteria: PRESS $\downarrow$ -->
+<!-- - **PRE**diction **S**um of **S**quares (PRESS) -->
+
+<!-- - $\text{PRESS}_d = \sum_{i=1}^n[y_i - \hat{y}_{(i)}]^2 = \sum_{i=1}^n\left( \frac{e_i}{1-h_{ii}}\right)^2$ where $e_i = y_i - \hat{y}_i$.^[$\text{Absolute PRESS}_p = \sum_{i=1}^n|y_i - \hat{y}_{(i)}|$ can also be considered when some large prediction errors are too influential.] -->
+
+<!-- - PRESS is in fact the Leave-One-Out CV estimate of test MSE! -->
+
+<!-- - $R_{pred, d}^2 = 1 - \frac{PRESS_d}{SS_T}$ -->
+
+
+<!-- ## Selection Methods: All Possible Selection -->
+<!-- - Assume the intercept is in all models. -->
+
+<!-- - If there are $M$ possible regressors, we investigate all $2^M - 1$ possible regression equations. -->
+
+<!-- - Use the selection criteria to determine some candidate models and complete regression analysis on them. -->
+
+<!-- :::: columns -->
+<!-- :::{.column width="80%"} -->
+
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- manpower <- read.csv(file = "./data/manpower.csv", header = TRUE) -->
+<!-- lm_full <- lm(y ~ ., data = manpower) -->
+<!-- olsrr_all <- olsrr::ols_step_all_possible(lm_full) -->
+<!-- names(olsrr_all) -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- ::: {.column width="20%"} -->
+<!-- [![](./images/06-lasso-vs/hex_olsrr.png)](https://olsrr.rsquaredacademy.com/) -->
+<!-- ::: -->
+
+<!-- :::: -->
+
+
+<!-- ::: notes -->
+<!-- - `n`: number of predictors -->
+<!-- - `predictors`: predictors in the model -->
+<!-- - `rsquare`: R-square of the model -->
+<!-- - `adjr`: adjusted R-square of the model -->
+<!-- - `predrsq`: predicted R-square of the model -->
+<!-- - `cp`: Mallow’s Cp -->
+<!-- - `aic`: AIC -->
+<!-- - `sbic`: Sawa BIC -->
+<!-- - `sbc`: Schwarz BIC (the one we defined) -->
+<!-- ::: -->
+
+<!-- ## -->
+
+<!-- ::: {style="font-size: 0.78em;"} -->
+<!-- ```{r, highlight.output = 17, highlight=TRUE} -->
+<!-- #| class-output: my_classfull -->
+<!-- print(olsrr_all, row.names = FALSE) -->
+<!-- ``` -->
+<!-- ::: -->
+
+
+
+<!-- ## Other Subset Selection Methods {visibility="hidden"} -->
+
+<!-- - [All possible selection]{.green} `olsrr::ols_step_all_possible()` -->
+<!--   + Consider all possible subsets of regressors. -->
+
+<!-- - [Best subset]{.green} `olsrr::ols_step_best_subset()` -->
+<!--   + Identify the best model of each model size. -->
+
+<!-- - [Forward selection]{.green} `olsrr::ols_step_forward_p()` -->
+<!--   + Begins with no regressors, and insert regressors into the model one at a time. -->
+
+<!-- - [Backward elimination]{.green} `olsrr::ols_step_backward_p()` -->
+<!--   + Begin with the full model with all possible regressors, then remove regressors from the model one at a time. -->
+
+<!-- - [Stepwise regression]{.green} `olsrr::ols_step_both_p()` -->
+<!--   + Do forward selection, but refit the model when a new predictor is inserted. Remove a predictor that becomes redundant from the refit model. -->
+
+<!-- - Check [Variable Selection Methods](https://olsrr.rsquaredacademy.com/articles/variable_selection.html) -->
+
 
 # Lasso (Least Absolute Shrinkage and Selection Operator) ![](./images/06-lasso-vs/lasso.png){width='100px'}
 
 
 ## Why Lasso?
 
-- All possible selection may be computationally infeasible.
+- Subset selection methods 
 
-- Other subset selection methods do not explore all possible subset models. (No global solution)
+  + may be computationally infeasible (fit OLS over millions of times)
+  + do not explore all possible subset models (no global solution)
+
+<!-- - Other subset selection methods .  -->
 
 - Ridge regression does shrink coefficients, but still include all predictors. 
 
@@ -373,6 +439,10 @@ print(olsrr_all, row.names = FALSE)
 
 - Like ridge regression, for a given $\lambda$, Lasso only fits a single model.
 
+
+::: notes
+Ridge OK for prediction, but bad at interpretation
+:::
 
 ## What is Lasso?
 
@@ -441,9 +511,9 @@ lasso_fit <- cv.glmnet(x = data.matrix(prostate[, 1:8]), y = prostate$lpsa, nfol
 
 ## Lasso Coefficients
 
-- `lambda.min` contains more nonzero parameters. 
+- `lambda.min` contains more nonzero coefficients. 
 
-- Larger penalty $\lambda$ forces more parameters to be zero, and the model is more "sparse".
+- Larger penalty $\lambda$ forces more coefficients to be zero, and the model is more "sparse".
 
 
 :::: columns
@@ -593,7 +663,7 @@ Based on our analysis, once the penalty is larger than 2, the optimizer would st
 ## Variable Selection Property and Shrinkage
 - The proportion of times a variable has a non-zero parameter estimation.
 
-- $\by = \bX' \boldsymbol \beta + \epsilon = \sum_{j = 1}^p X_j \times 0.4^{\sqrt{j}} + \epsilon$
+- $\by = \bX \boldsymbol \beta + \epsilon = \sum_{j = 1}^p X_j \times 0.4^{\sqrt{j}} + \epsilon$
 
 - $p = 20$, $\epsilon \sim N(0, 1)$ and replicate 100 times.
 
@@ -761,8 +831,9 @@ $$\begin{align}
 #| out-width: "100%"
 beta <- seq(-2.1, 2.1, length = 10000)
 lambda <- 0.5
-par(mar = c(3.9, 3.9, 0, 0))
-plot(beta, beta, xlab = "beta", ylab = "Cofficient estimates", 
+par(mar = c(4, 4, 0, 0), mgp = c(2, 0.8, 0))
+plot(beta, beta, xlab = "beta", ylab = "Cofficient estimates",  cex.lab = 2,
+     cex.axis = 1.5,
      type = "l", lty = 2, lwd = 2, xlim = c(-2, 2), ylim = c(-2, 2), las = 1)
 abline(v = 0, lwd = 0.5, lty = 3)
 abline(h = 0, lwd = 0.5, lty = 3)
@@ -772,7 +843,7 @@ lines(beta[(-lambda/2) < beta & beta < (lambda/2)],
       lty = 1, lwd = 3, col = "red")
 lines(beta[beta < -lambda/2], (beta + lambda/2)[beta < -lambda/2], lty = 1, lwd = 3, col = "red")
 legend("topleft", c("Lasso", "OLS"), lty = c(1, 2), lwd = c(3, 2), 
-       col = c("red", 1), bty = "n")
+       col = c("red", 1), bty = "n", cex = 2)
 ```
 
 :::
@@ -785,19 +856,23 @@ $$\begin{align}
 
 ```{r}
 #| out-width: "100%"
-par(mar = c(3.9, 3.9, 0, 0))
-plot(beta, beta, xlab = "beta", ylab = "Cofficient estimates", 
+par(mar = c(4, 4, 0, 0), mgp = c(2, 0.8, 0))
+plot(beta, beta, xlab = "beta", ylab = "Cofficient estimates", cex.lab = 2,
+     cex.axis = 1.5,
      type = "l", lty = 2, lwd = 2, xlim = c(-2, 2), ylim = c(-2, 2), las = 1)
 abline(v = 0, lwd = 0.5, lty = 3)
 abline(h = 0, lwd = 0.5, lty = 3)
 lines(beta, beta/(1 + lambda), lty = 1, lwd = 3, col = "red")
 legend("topleft", c("Ridge", "OLS"), lty = c(1, 2), lwd = c(3, 2), 
-       col = c("red", 1), bty = "n")
+       col = c("red", 1), bty = "n", cex = 2)
 ```
 :::
 
 
 ::::
+
+
+
 
 
 ## Predictive Performance
@@ -821,7 +896,7 @@ knitr::include_graphics("./images/06-lasso-vs/6_9.png")
 :::
 
 ::: column
-[**Ridge**]{.green}  (**...**)
+[**Ridge**]{.green}  ($\cdots\cdots$)
 
 
 - The response is a function of many predictors, all with coefficients of roughly equal size.
@@ -847,7 +922,7 @@ higher R^2 (larger lambda), more overfitting, so low bias high variance
 
 
 
-## Bayesian Interpretation
+## Bayesian Interpretation {visibility="hidden"}
 
 :::: columns
 

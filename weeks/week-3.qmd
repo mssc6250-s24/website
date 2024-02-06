@@ -5,7 +5,7 @@ editor: visual
 ---
 
 ::: callout-important
-**Homework 1 due Friday, Feb 2, 11:59 PM**
+**Homework 1 due Friday, Feb 9, 11:59 PM**
 :::
 
 ## Participate

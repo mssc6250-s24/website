@@ -1,11 +1,87 @@
 ---
 title: "Class activity work"
+code-fold: true
 ---
 
-## Class activity 1
+```{r}
+students <- c("David", "Dibaloke", "Emily", "Tedi", "Alberto", 
+              "Caldwell", "Eimienwanlan", "Edward", "Mark", "Adam", 
+              "Jennifer", "Josh", "Kathryn", "Clint", "Brigida")
+generate_group <- function(all, leader_can, seed, 
+                           no_lead1 = 2, no_lead2 = 2, no_mem1 = 6) {
+    students <- all
+    set.seed(seed)
+    lead1 <- sample(leader_can, no_lead1)
+    students <- setdiff(students, lead1)
+    leader <- setdiff(leader_can, lead1)
+    set.seed(seed)
+    member1 <- sample(students, no_mem1)
+    students <- setdiff(students, member1)
+    leader <- setdiff(leader, member1)
+    set.seed(seed)
+    lead2 <- sample(leader, no_lead2)
+    member2 <- setdiff(students, lead2)
+    return(list("G1_leader" = lead1,
+                "G1_member" = member1,
+                "G2_leader" = lead2,
+                "G2_member" = member2,
+                "leader_can" = setdiff(leader_can, c(lead1, lead2))))
+}
+```
 
-## Class activity 2
+# Class activity 1
 
-## Class activity 3
+## Topic: Bootstrapping
 
-## Class activity 4
+What is bootstrapping? Why do we use bootstrapping? How can it be used in regression? Please explain it using a simple linear regression example, including code demo.
+
+## Knowledge Check
+
+Please answer the questions at [Link will be provided].
+
+## Group 1
+
+```{r}
+act1 <- generate_group(all = students, leader_can = students, seed = 6250)
+```
+
+### Leaders:
+
+```{r}
+#| echo: false
+act1$G1_leader
+```
+
+### Members:
+```{r}
+#| echo: false
+act1$G1_member
+```
+
+
+
+## Group 2
+
+### Leaders:
+
+```{r}
+#| echo: false
+act1$G2_leader
+```
+
+### Members:
+```{r}
+#| echo: false
+act1$G2_member
+```
+
+
+# Class activity 2
+
+
+
+
+
+# Class activity 3
+
+# Class activity 4

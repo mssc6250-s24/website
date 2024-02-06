@@ -48,16 +48,16 @@ On each class activity day, students are learning from each other through discus
 
 ## Knowledge Check
 
--   Dr. Yu will ask questions about the topic being discussed.
+-   **Dr. Yu will ask questions about the topic being discussed.**
 
--   Every student needs to answer the questions that are worth 25 pts in total.
+-   **Every student** needs to answer the questions that are worth 25 pts in total.
 
 
 ## Evaluation
 
 There are 200 points for class participation in the final grade calculation. Every student will serve as a discussion leader one time, and a group member three times.
 
--   Discussion leaders (80 pts)
+-   **Discussion leaders** (**80 pts**)
 
     -   Knowledge check performance (25 pts)
     
@@ -66,7 +66,7 @@ There are 200 points for class participation in the final grade calculation. Eve
     -   Oral presentation and communication skills (20 pts)
     -   Learning activity design (10 pts)
     
--   Group members (40 pts)
+-   **Group members** (**40 pts**)
 
     -   Knowledge check performance (25 pts)
     -   Activity engagement (15 pts): The most engaged members get 15 pts. Others get 12 pts.
