@@ -12,7 +12,7 @@ Homework 1 released.
 
 🖥️ [Slides - Linear Regression](/slides/03-linear-reg.html)
 
-`r fontawesome::fa("table")` [Data Sets - Advertising.csv](https://www.statlearning.com/resources-second-edition)
+`r fontawesome::fa("table")` [Data Set - Advertising.csv](/slides/data/advertising.csv)
 
 ## Reading and Resources
 

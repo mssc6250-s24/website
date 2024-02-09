@@ -12,6 +12,8 @@ editor: visual
 
 🖥️ [Slides - Lasso](/slides/06-lasso-cv.html)
 
+`r fontawesome::fa("table")` [Data set - Prostate](https://hastie.su.domains/ElemStatLearn/)
+
 ## Reading and Resources
 
 📖 [ISL Ch 6.1, 6.2](https://www.statlearning.com/)

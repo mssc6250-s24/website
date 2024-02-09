@@ -11,6 +11,8 @@ editor: visual
 
 🖥️ [Slides - Splines and Generalized Additive Models](/slides/07-splines.html)
 
+`r fontawesome::fa("table")` [Data set - birthrates](/slides/data/birthrates.Rda)
+
 ## Reading and Resources
 
 📖 [ISL Ch 7](https://www.statlearning.com/)

@@ -127,14 +127,14 @@ knitr::knit_hooks$set(output = function(x, options) {
 
 - Linear models can describe *non-linear* relationship.
 
-- **Feature engineering**: When $y$ and $x$ are not linearly associated, we *transform $x$ (sometimes also $y$) so that $y$ and the transformed $x$ become linearly related*.
+- [**Feature engineering**](https://math4780-f23.github.io/website/slides/10-diag-linearity.html#/title-slide): When $y$ and $x$ are not linearly associated, we *transform $x$ (sometimes also $y$) so that $y$ and the transformed $x$ become linearly related*. 
 
 . . .
 
 - Popular methods
-  + Polynominal regression (MSSC 5780)
-  + Piecewise regression (MSSC 5780)
-  + Local regression (MSSC 5780)
+  + [Polynominal regression (MSSC 5780, ISL  7.1)](https://math4780-f23.github.io/website/slides/11-poly-reg.html#/title-slide)
+  + [Piecewise regression (MSSC 5780, ISL 7.3, 7.4)](https://math4780-f23.github.io/website/slides/11-poly-reg.html#/piecewise-polynomial-regression)
+  + [Local regression (MSSC 5780, ISL 7.6)](https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/title-slide)
   + Basis function approach
   + [__Regression splines__]{.green}
   + [__Smoothing splines__]{.green}
@@ -300,12 +300,13 @@ lines(birthrates$Year, lmfit5$fitted.values, lty = 1,
 
 
 ::: {.column width="40%"}
-::: {.small}
+
+::: midi
 $$y=\begin{cases}
-    \beta_{01} + \beta_{11}x+ \epsilon & \quad \text{if } x < 1936\\
-    \beta_{02} + \beta_{12}x+\epsilon  & \quad \text{if } 1936 \le x < 1960 \\
-    \beta_{03} + \beta_{13}x+\epsilon  & \quad \text{if } 1960 \le x < 1978 \\
-    \beta_{04} + \beta_{14}x+\epsilon  & \quad \text{if } 1978 \le x
+    \beta_{01} + \beta_{11}x+ \epsilon & \text{if } x < 1936\\
+    \beta_{02} + \beta_{12}x+\epsilon  & \text{if } 1936 \le x < 1960 \\
+    \beta_{03} + \beta_{13}x+\epsilon  & \text{if } 1960 \le x < 1978 \\
+    \beta_{04} + \beta_{14}x+\epsilon  & \text{if } 1978 \le x
   \end{cases}$$
 :::
 :::
@@ -425,7 +426,7 @@ lines(birthrates$Year, lin_sp$fitted.values, lty = 1, col = 2, lwd = 3)
 
 - Has a different slope for each region.
 
-## Splines as Adaptive Basis Function Model
+## Splines as Adaptive Basis Function Model {#sec-linearspline}
 
 For linear splines with 3 knots,
 
@@ -439,7 +440,7 @@ where
 
 <!-- - $\xi_k, k = 1, 2, 3$ are knots -->
 
-- $(x - \xi_k)_+$ denotes the positive part:
+- $(x - \xi_k)_+$ is a *truncated power basis function* (of power one) such that
 
 $$(x - \xi_k)_+=\begin{cases}
     x - \xi_k & \quad \text{if }x > \xi_k\\
@@ -455,8 +456,8 @@ $$\begin{align} y &= \beta_0 + \beta_1 b_1(x) + \beta_2 b_2(x) + \beta_3 b_3(x) 
 ## Linear Splines Basis Functions
 
 ```{r}
-par(mfrow=c(1,1))
-pos <- function(x) x*(x>0)
+par(mfrow = c(1, 1))
+pos <- function(x) x * (x > 0)
 mybasis = cbind("int" = 1, "x_1" = birthrates$Year, 
                 "x_2" = pos(birthrates$Year - myknots[1])+0.1, 
                 "x_3" = pos(birthrates$Year - myknots[2])+0.2,
@@ -465,12 +466,12 @@ mybasis = cbind("int" = 1, "x_1" = birthrates$Year,
 par(mar = c(2,0,2,0))
 matplot(birthrates$Year, mybasis[, -1], type = "l", lty = 1, 
         yaxt = 'n', ylim = c(0, 50), lwd = 3, col = scales::alpha(2:4, 0.8))
-title("Linear Spline Basis Functions")
+title("Linear Spline Basis Functions b2(x), b3(x), and b4(x)")
 ```
 
 
 
-## Splines as Adaptive Basis Function Model
+## Splines as Adaptive Basis Function Model^[Besides truncated power basis, we can represent the splines using another set of basis functions, for example [B-Splines](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.) which is more computationally convenient and numerically accurate.]
 
 With degree $d$ and $K$ knots, the regression spline with _first $d-1$ derivatives being continuous_ at the knots can be represented as 
 
@@ -480,11 +481,11 @@ where
 
 - $b_j(x) = x^j, j = 1, 2, \dots, d$
 
-- $b_{d+s} = (x - \xi_s)^{d}_+, s = 1, \dots, K$ (truncated power basis function)
+- $b_{d+k} = (x - \xi_k)^{d}_+, k = 1, \dots, K$
 
 
 ::: {.question}
-Can you write the model with $d = 2$ and $k = 3$?
+Can you write the model with $d = 2$ and $K = 3$?
 :::
 
 
@@ -501,7 +502,7 @@ $$\begin{align} y &= \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3 + \sum_{k =
   + $f(\xi_k^-) = f(\xi_k^+)$
   + $f'(\xi_k^-) = f'(\xi_k^+)$
   + $f''(\xi_k^-) = f''(\xi_k^+)$
-  + $f^{(3)}(\xi_k^-) \ne f^{(3)}(\xi_k^+)$
+  + But $f^{(3)}(\xi_k^-) \ne f^{(3)}(\xi_k^+)$
 
 
 
@@ -531,7 +532,7 @@ $$y=\begin{cases}
 . . .
 
 
-- [*Linear splines*]{.green} (continuous piecewise linear): *8 - 3 constraints = 5 dfs.*
+- [*Linear splines*]{.green} (continuous piecewise linear): *8 - 3 constraints = 5 dfs.* (Check its [basis representation](#sec-linearspline))
 
 ::: {.small}
 $$\begin{align} 
@@ -546,6 +547,21 @@ $$\begin{align}
 
 ## Degrees of Freedom
 
+- With degree $d$ and $K$ knots,
+
+$$\text{df} = K + d + 1$$
+
+<!-- - This leads to a total of [(4 + # knots)]{.green} degrees of freedom. -->
+
+. . .
+
+:::{.question}
+So what is the degrees of freedom of cubic splines?
+:::
+
+
+
+::: notes
 - With degree $d$ and $K$ knots,
 
 $$\begin{align} \text{df} &= \text{(# regions)} \times \text{(# coefficients)} - \text{(# constraints)} \times \text{(# knots)}\\
@@ -566,6 +582,8 @@ We have 3 constraints:
   + 2nd derivative $f''(\xi ^ {-}) = f''(\xi ^ {+})$
 
 $\text{df} = \text{(# regions)} \times \text{(# coef)} - \text{(# constraints)} \times \text{(# knots)} = (K + 1)4 - 3K = 4 + K$
+:::
+
 
 
 ## Cubic Splines
@@ -587,7 +605,7 @@ lines(birthrates$Year, cub_sp$fitted.values, lty = 1, col = 2, lwd = 3)
 . . .
 
 - A **natural spline** is a regression spline with additional *boundary constraints*: 
-  + The natural function is *linear at the boundary* (in the region where $X$ is smaller than the smallest knot, or larger than the largest knot).
+  + The spline function is *linear at the boundary* (in the region where $X$ is smaller than the smallest knot, or larger than the largest knot).
   
   <!-- + $f^{(k)}(x) = 0$ for $x < \xi_1$ and $x > \xi_K$ where $f^{(k)}(\cdot)$ is the $k$-th derivative of the spline function $f$. -->
   
@@ -631,7 +649,7 @@ fit.ns = lm(Birthrate ~ ns(Year, df=6), data=birthrates)
 ```
 
 
-## [B-Splines](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.) Basis Functions
+## [B-Splines](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.) Basis Functions {visibility="hidden"}
 
 - B-splines use a different basis representation for regression splines.
 
@@ -708,7 +726,7 @@ B-splines is more computationally efficient
   
 . . .
 
-- [What is the degree of functions in each region]{.green}
+- [Degree of functions in each region]{.green}
   + *Use $d < 4$ to avoid overly flexible curve fitting*
   + *Cubic spline is popular*
   
@@ -747,7 +765,7 @@ data at each $x_i$. ([Goodness-of-fit]{.green})
 
 . . .
 
-:::{.r-fit-text}
+:::{style="font-size: 4em;"}
 :::{style="text-align: center;"}
 
 > **Loss + Penalty**
@@ -778,6 +796,7 @@ interpolating $y_i$ when $\lambda = 0$.
 - The solution $\hat{g}$ is a [natural cubic spline]{.green}, with knots at $x_1, x_2, \dots , x_n$!
 - But, it is not the same NCS gotten from the basis function approach.
 - It is a *shrunken* version where $\lambda$ controls the level of shrinkage.
+- Its *effective* df is less than $n$.
 :::
 
 :::
@@ -809,7 +828,7 @@ $$\begin{align} PRESS &= \sum_{i = 1}^n \left( y_i - \hat{y}_i^{(-i)}\right)^2 \
 
 - $\hat{\bg}_{\lambda} = {\bf S}_{\lambda} \by$ where $\bf {\bf S}_{\lambda}$ is the **smoother matrix**.
 
-- The effective degrees of freedom $(\text{# coef})$ is $$df_{\lambda} = \sum_{i=1}^n \{{\bf S}_{\lambda}\}_{ii} \in (0, n)$$
+- The effective degrees of freedom $(\text{# coef})$ is $$df_{\lambda} = \sum_{i=1}^n \{{\bf S}_{\lambda}\}_{ii} \in [2, n]$$
 
 - LOOCV for choosing $\lambda$^[GCV can be used too.]
 
@@ -933,25 +952,8 @@ holding age and education fixed, wage tends to increase slightly with year;
 this may be due to inflation. The center panel indicates that holding education
 and year fixed, wage tends to be highest for intermediate values of age, and
 lowest for the very young and very old.
-:::
 
-
-## GAM fitting
-
-- Natural splines `lm(wage ~ ns(year, df = 5) + ns(age, df = 5) + education)`
-
-- Can mix terms, e.g., smoothing splines and local regression
-
-`gam(wage ~ s(year, df = 5) + lo(age, span = .5) + education)`
-
-- Can add interactions, e.g. `ns(age, df = 5):ns(year, df = 5)`
-
-- Use `anova()` to compare models.
-
-
-
-
-## Summary of GAMs
+- Because the model is additive, we can examine the effect of each $X_j$ on $Y$ individually while holding all of the other variables fixed.
 
 - Allow to fit a non-linear $f_j$ to each $X_j$, so that we can
 automatically model non-linear relationships that standard linear regression will miss.
@@ -964,32 +966,63 @@ automatically model non-linear relationships that standard linear regression wil
 
 - The model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting.
 
-
-::: notes
-- Because the model is additive, we can examine the effect of each $X_j$ on $Y$ individually while holding all of the other variables fixed.
-
-- The smoothness of the function $f_j$ for the variable $X_j$ can be summarized via degrees of freedom.
-
 :::
 
 
+<!-- ## GAM fitting {visibility="hidden"} -->
 
-## Other Topics
+<!-- - Natural splines `lm(wage ~ ns(year, df = 5) + ns(age, df = 5) + education)` -->
 
-- [Basis spline (B-spline) definition (de Boor, 1978)](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.): more computationally efficient
+<!-- - Can mix terms, e.g., smoothing splines and local regression -->
 
-- Algorithms for fitting GAMs using smoothing splines: [Backfitting](https://en.wikipedia.org/wiki/Backfitting_algorithm), ISL Sec 7.9 Exercise 11.
+<!-- `gam(wage ~ s(year, df = 5) + lo(age, span = .5) + education)` -->
 
-- GAMs for binary response and classification.
+<!-- - Can add interactions, e.g. `ns(age, df = 5):ns(year, df = 5)` -->
 
-- [Multivariate Adaptive Regression Splines (MARS)](https://en.wikipedia.org/wiki/Multivariate_adaptive_regression_spline#:~:text=In%20statistics%2C%20multivariate%20adaptive%20regression,nonlinearities%20and%20interactions%20between%20variables.)
+<!-- - Use `anova()` to compare models. -->
 
 
-::: notes
-How many knots should be used
-Where to place the knots
-What is the degree of functions in each region
 
-we can control that using the df parameter. We use a total of 6 parameters, chosen by the function automatically. However, this does not seems to perform better than the knots we implemented. The choice of knots can be crucial.
-:::
+
+<!-- ## Summary of GAMs {visibility="hidden"} -->
+
+<!-- - Allow to fit a non-linear $f_j$ to each $X_j$, so that we can -->
+<!-- automatically model non-linear relationships that standard linear regression will miss. -->
+
+<!-- - No need to manually try out many different transformations on each variable individually. -->
+
+<!-- - The non-linear fits can potentially make more accurate predictions for the response. -->
+
+<!-- - The smoothness of the function $f_j$ for the variable $X_j$ can be summarized via degrees of freedom. -->
+
+<!-- - The model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting. -->
+
+
+<!-- ::: notes -->
+<!-- - Because the model is additive, we can examine the effect of each $X_j$ on $Y$ individually while holding all of the other variables fixed. -->
+
+<!-- - The smoothness of the function $f_j$ for the variable $X_j$ can be summarized via degrees of freedom. -->
+
+<!-- ::: -->
+
+
+
+<!-- ## Other Topics -->
+
+<!-- - [Basis spline (B-spline) definition (de Boor, 1978)](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.): more computationally efficient -->
+
+<!-- - Algorithms for fitting GAMs using smoothing splines: [Backfitting](https://en.wikipedia.org/wiki/Backfitting_algorithm), ISL Sec 7.9 Exercise 11. -->
+
+<!-- - GAMs for binary response and classification. -->
+
+<!-- - [Multivariate Adaptive Regression Splines (MARS)](https://en.wikipedia.org/wiki/Multivariate_adaptive_regression_spline#:~:text=In%20statistics%2C%20multivariate%20adaptive%20regression,nonlinearities%20and%20interactions%20between%20variables.) -->
+
+
+<!-- ::: notes -->
+<!-- How many knots should be used -->
+<!-- Where to place the knots -->
+<!-- What is the degree of functions in each region -->
+
+<!-- we can control that using the df parameter. We use a total of 6 parameters, chosen by the function automatically. However, this does not seems to perform better than the knots we implemented. The choice of knots can be crucial. -->
+<!-- ::: -->
 
