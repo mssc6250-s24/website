@@ -271,8 +271,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#homework-questions" id="toc-homework-questions" class="nav-link active" data-scroll-target="#homework-questions">Homework Questions</a></li>
-  <li><a href="#exercises-required-for-mssc-phd-students" id="toc-exercises-required-for-mssc-phd-students" class="nav-link" data-scroll-target="#exercises-required-for-mssc-phd-students">Exercises required for MSSC PhD students</a></li>
-  <li><a href="#optional-exercises" id="toc-optional-exercises" class="nav-link" data-scroll-target="#optional-exercises">Optional Exercises</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/mssc6250-s24/website/edit/main/hw/hw-2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/mssc6250-s24/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -307,46 +305,51 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="homework-questions" class="level2">
 <h2 class="anchored" data-anchor-id="homework-questions">Homework Questions</h2>
-<ol type="1">
-<li><p><strong>ISL</strong> Sec. 5.4: 3</p></li>
-<li><p><strong>ISL</strong> Sec. 6.6: 3</p></li>
+<!-- (@) **ISL** Sec. 5.4: 3 -->
+<ol class="example" type="1">
 <li><p><strong>ISL</strong> Sec. 6.6: 4</p></li>
 <li><p><strong>ISL</strong> Sec. 6.6: 6</p></li>
 <li><p><strong>ISL</strong> Sec. 6.6: 9 (a)-(d)</p></li>
 <li><p><strong>ISL</strong> Sec. 7.9: 9</p></li>
-<li><p>Suppose for a linear regression problem with <span class="math inline">\(n = p\)</span>, <span class="math inline">\({\bf X} = {\bf I}\)</span> and no intercept. Show that</p>
+<li><p><strong>[Special Case for Ridge and Lasso]</strong> Suppose for a linear regression problem with <span class="math inline">\(n = p\)</span>, <span class="math inline">\({\bf X} = {\bf I}\)</span> and no intercept. Show that</p>
 <ol type="a">
 <li><p>The least squares problem can be simplified to finding <span class="math inline">\(\beta_1, \dots, \beta_p\)</span> that minimize <span class="math inline">\(\sum_{j=1}^p\left(y_j - \beta_j\right)^2\)</span>. What is least squares estimator <span class="math inline">\(b_j\)</span>?</p></li>
-<li><p>The ridge estimator is <span class="math inline">\(\hat{\beta}_j^r = \frac{y_j}{1+\lambda} = \arg\min \sum_{j=1}^p\left(y_j - \beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2\)</span>.</p></li>
-<li><p>The Lasso solution of <span class="math inline">\(\sum_{j=1}^p\left(y_j - \beta_j\right)^2 + \lambda \sum_{j=1}^p | \beta_j |\)</span> is <span class="math display">\[\hat{\beta}_j^l =
+<li><p>The ridge estimator is <span class="math inline">\(\hat{\beta}_j^r = \frac{y_j}{1+\lambda} = \underset{\beta_j}{\arg\min} \sum_{j=1}^p\left(y_j - \beta_j\right)^2 + \lambda \sum_{j=1}^p \beta_j^2\)</span>.</p></li>
+<li><p>The lasso solution of <span class="math inline">\(\sum_{j=1}^p\left(y_j - \beta_j\right)^2 + \lambda \sum_{j=1}^p | \beta_j |\)</span> is <span class="math display">\[\hat{\beta}_j^l =
   \begin{cases}
 y_j - \lambda/2       &amp; \quad \text{if } y_j &gt; \lambda/2\\
 y_j + \lambda/2       &amp; \quad \text{if } y_j &lt; -\lambda/2 \\
 0  &amp; \quad \text{if } |y_j| \le \lambda/2
   \end{cases}\]</span></p></li>
+<li><p>Describe the ridge and lasso shrinkage behavior.</p></li>
+</ol></li>
+<li><p><strong>[Lasso with Correlated Variables]</strong></p>
+<p>Consider the linear regression</p>
+<p><span class="math display">\[ \mathbf{y}= \mathbf{X}\boldsymbol \beta+ \boldsymbol \epsilon\]</span></p>
+<p>where <span class="math inline">\(\boldsymbol \beta= (\beta_1, \beta_2, \ldots, \beta_{20})'\)</span> with <span class="math inline">\(\beta_1 = \beta_{2} = \beta_{3} = 0.5\)</span> and all other <span class="math inline">\(\beta_j = 0, j = 4, \dots, 20\)</span>. No intercept <span class="math inline">\(\beta_0\)</span>. The input vector <span class="math inline">\(\mathbf{x}= (x_1, x_2, \dots, x_{20})'\)</span> follows a multivariate Gaussian distribution</p>
+<p><span class="math display">\[\mathbf{x}\sim N\left(\mathbf{0}, \Sigma_{20 \times 20}\right)\]</span></p>
+<p>In <span class="math inline">\(\Sigma\)</span>, all diagonal elements are 1, and all off-diagonal elements are <span class="math inline">\(\rho\)</span> which measures the correlation between any two predictors.</p>
+<ol type="a">
+<li><p>Generate training data of size 400 and test data of size 100 independently from the above model with <span class="math inline">\(\rho = 0.1\)</span> and <span class="math inline">\(\epsilon_i \stackrel{iid} \sim N(0, 1)\)</span>.</p></li>
+<li><p>Fit a Lasso model on the training data with 10-fold cross-validation (CV).</p></li>
+<li><p>Compute test MSE with the optimal <span class="math inline">\(\lambda\)</span> selected by CV in (b). Does Lasso select the correct variables?</p></li>
+<li><p>Repeat (a)-(c) 100 times. That is, generate 100 different training and test data sets. For each run, record the test MSE and whether or not the true model is correctly selected. Then compute the average test MSE and the proportion of runs where the correct model was selected.</p></li>
+<li><p>Redo (a)-(d) with <span class="math inline">\(\rho = 0.6\)</span>. Compare the two average test MSEs and the proportions. Comment the result.</p></li>
 </ol></li>
 </ol>
-</section>
-<section id="exercises-required-for-mssc-phd-students" class="level2">
-<h2 class="anchored" data-anchor-id="exercises-required-for-mssc-phd-students">Exercises required for MSSC PhD students</h2>
-<ol type="1">
-<li><p><strong>ISL</strong> Sec. 6.6: 5</p></li>
-<li><p><strong>ISL</strong> Sec. 7.9: 11</p></li>
-<li><p>Define the objective of the <strong>elastic net</strong> problem <span class="math inline">\(J_1(\boldsymbol \beta) = \|\mathbf{y}- \mathbf{X}\boldsymbol \beta\| ^2 + \lambda_2 \|\boldsymbol \beta\|_2^2 + \lambda_1 \|\boldsymbol \beta\|_1\)</span> and the objective of Lasso <span class="math inline">\(J_2(\boldsymbol \beta) = \|\tilde{\mathbf{y}} - \tilde{\mathbf{X}}\boldsymbol \beta\| ^2 + c\lambda_1 \|\boldsymbol \beta\|_1\)</span> where <span class="math inline">\(c = (1+\lambda_2)^{-1/2}\)</span>, and <span class="math display">\[\tilde{\mathbf{X}} = c \begin{pmatrix} \mathbf{X}\\
-\sqrt{\lambda_2}\mathbf{I}_p \end{pmatrix}, \quad \tilde{\mathbf{y}} = \begin{pmatrix} \mathbf{y}\\ \mathbf{0}_{p\times 1} \end{pmatrix}.\]</span> Show that <span class="math inline">\(J_1(c\boldsymbol \beta) = J_2(\boldsymbol \beta)\)</span>. Therefore the elastic net problem can be solved using algorithms for Lasso on modified data.</p></li>
-</ol>
-</section>
-<section id="optional-exercises" class="level2">
-<h2 class="anchored" data-anchor-id="optional-exercises">Optional Exercises</h2>
-<p>Let the ridge estimator be <span class="math inline">\(\hat{\boldsymbol \beta}^r = (\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}\mathbf{X}' \mathbf{y}\)</span>. Show that</p>
-<ol type="1">
-<li><p><span class="math inline">\(\hat{\boldsymbol \beta}^r = (\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}(\mathbf{X}'\mathbf{X})\mathbf{b}\)</span>, and hence <span class="math inline">\(\hat{\beta}_j^r = \frac{b_j}{1+\lambda}\)</span> is a special case when <span class="math inline">\(\mathbf{X}'\mathbf{X}= \mathbf{I}\)</span>.</p></li>
-<li><p>The bias <span class="math inline">\(\mathrm{E}\left( \hat{\boldsymbol \beta}^r \right) - \boldsymbol \beta= \left[ (\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}(\mathbf{X}'\mathbf{X}) - \mathbf{I}\right]\boldsymbol \beta\)</span>, and hence <span class="math inline">\(\text{Bias}(\hat{\beta}_j^r) = \frac{-\lambda}{1+\lambda}\beta_j\)</span> when <span class="math inline">\(\mathbf{X}'\mathbf{X}= \mathbf{I}\)</span>.</p></li>
-<li><p><span class="math inline">\(\sum_{j=1}^p \left( \hat{\beta}_j^r - \beta_j\right)^2 = \lambda^2 \boldsymbol \beta' \left( \mathbf{X}'\mathbf{X}+ \lambda \mathbf{I}\right)^{-2}\boldsymbol \beta= \sum_{j=1}^p \frac{\lambda^2}{(d_j^2 + \lambda)^2}\beta_j^2\)</span>.</p></li>
-<li><p><span class="math inline">\(\mathrm{Var}\left( \hat{\beta}_j^r \right) = \sigma^2\frac{d_j^2}{\left(d_j^2+\lambda\right)^2}\)</span> where <span class="math inline">\(d_j\)</span> is the <span class="math inline">\(j\)</span>-th singular value of <span class="math inline">\(\mathbf{X}\)</span>. Hence <span class="math inline">\(\mathrm{Var}\left( \hat{\beta}_j^r \right) = \sigma^2\frac{1}{\left(1+\lambda\right)^2}\)</span> when <span class="math inline">\(\mathbf{X}'\mathbf{X}= \mathbf{I}\)</span>.</p></li>
-<li><p><span class="math inline">\(\hat{\mathbf{y}}^r = \mathbf{X}\hat{\boldsymbol \beta}^r = \mathbf{X}(\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}\mathbf{X}' \mathbf{y}= \sum_{j=1}^p \mathbf{u}_j \left( \frac{d_j^2}{d_j^2+\lambda}\mathbf{u}_j'\mathbf{y}\right)\)</span> where <span class="math inline">\(\mathbf{u}_j\)</span> is the <span class="math inline">\(j\)</span>-th column of the SVD of <span class="math inline">\(\mathbf{X}= \mathbf{U}\mathbf{D}\mathbf{V}'\)</span>. Hence, a greater amount of shrinkage is applied to the coordinates of basis vectors with smaller <span class="math inline">\(d_j^2\)</span>.</p></li>
-<li><p>The trace of the projection matrix <span class="math inline">\(\mathbf{H}_{\lambda} = \mathbf{X}(\mathbf{X}'\mathbf{X}+ \lambda \mathbf{I})^{-1}\mathbf{X}'\)</span> defines the <strong>effective degrees of freedom</strong>. In general, <span class="math inline">\(\text{tr}(H) = \sum_{j=1}^p \frac{d_j^2}{d_j^2+\lambda}\)</span>. For linear regression where <span class="math inline">\(\lambda = 0\)</span>, <span class="math inline">\(\text{tr}(H) = p\)</span>.</p></li>
-</ol>
+<!-- ## Exercises required for MSSC PhD students -->
+<!-- 1. **ISL** Sec. 6.6: 5 -->
+<!-- 2. **ISL** Sec. 7.9: 11 -->
+<!-- 3. Define the objective of the **elastic net** problem $J_1(\bbeta) = \|\by - \bX\bbeta \| ^2 + \lambda_2 \|\bbeta\|_2^2  + \lambda_1 \|\bbeta\|_1$ and the objective of Lasso $J_2(\bbeta) = \|\tilde{\by} - \tilde{\bX}\bbeta \| ^2 + c\lambda_1 \|\bbeta\|_1$ where $c = (1+\lambda_2)^{-1/2}$, and $$\tilde{\bX} = c \begin{pmatrix} \bX \\ -->
+<!-- \sqrt{\lambda_2}\bI_p \end{pmatrix}, \quad \tilde{\by} = \begin{pmatrix} \by \\ \mathbf{0}_{p\times 1} \end{pmatrix}.$$ Show that $J_1(c\bbeta) = J_2(\bbeta)$. Therefore the elastic net problem can be solved using algorithms for Lasso on modified data. -->
+<!-- ## Optional Exercises -->
+<!-- Let the ridge estimator be $\hat{\bbeta}^r = (\bX'\bX + \lambda \bI)^{-1}\bX' \by$. Show that  -->
+<!-- 1. $\hat{\bbeta}^r = (\bX'\bX + \lambda \bI)^{-1}(\bX'\bX)\bb$, and hence $\hat{\beta}_j^r = \frac{b_j}{1+\lambda}$ is a special case when $\bX'\bX = \bI$.  -->
+<!-- 2. The bias $\E\left( \hat{\bbeta}^r \right) - \bbeta = \left[ (\bX'\bX + \lambda \bI)^{-1}(\bX'\bX) - \bI\right]\bbeta$, and hence $\text{Bias}(\hat{\beta}_j^r) = \frac{-\lambda}{1+\lambda}\beta_j$ when $\bX'\bX = \bI$.  -->
+<!-- 3. $\sum_{j=1}^p \left( \hat{\beta}_j^r - \beta_j\right)^2 = \lambda^2 \bbeta' \left( \bX'\bX + \lambda \bI \right)^{-2}\bbeta = \sum_{j=1}^p \frac{\lambda^2}{(d_j^2 + \lambda)^2}\beta_j^2$. -->
+<!-- 4. $\var\left( \hat{\beta}_j^r \right) = \sigma^2\frac{d_j^2}{\left(d_j^2+\lambda\right)^2}$ where $d_j$ is the $j$-th singular value of $\bX$. Hence $\var\left( \hat{\beta}_j^r \right) = \sigma^2\frac{1}{\left(1+\lambda\right)^2}$ when $\bX'\bX = \bI$.  -->
+<!-- 5. $\hat{\by}^r = \bX \hat{\bbeta}^r = \bX (\bX'\bX + \lambda \bI)^{-1}\bX' \by = \sum_{j=1}^p \bu_j \left( \frac{d_j^2}{d_j^2+\lambda}\bu_j'\by\right)$ where $\bu_j$ is the $j$-th column of the SVD of $\bX = \bU\bD\bV'$. Hence, a greater amount of shrinkage is applied to the coordinates of basis vectors with smaller $d_j^2$. -->
+<!-- 6. The trace of the projection matrix $\bH_{\lambda} = \bX (\bX'\bX + \lambda \bI)^{-1}\bX'$ defines the **effective degrees of freedom**. In general, $\text{tr}(H) = \sum_{j=1}^p \frac{d_j^2}{d_j^2+\lambda}$. For linear regression where $\lambda = 0$, $\text{tr}(H) = p$.  -->
 
 
 </section>

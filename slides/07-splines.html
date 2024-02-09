@@ -406,15 +406,15 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 </section><section id="when-y-and-x-are-not-linearly-associated" class="slide level2"><h2>When <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are Not Linearly Associated</h2>
 <ul>
 <li><p>Linear models can describe <em>non-linear</em> relationship.</p></li>
-<li><p><strong>Feature engineering</strong>: When <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are not linearly associated, we <em>transform <span class="math inline">\(x\)</span> (sometimes also <span class="math inline">\(y\)</span>) so that <span class="math inline">\(y\)</span> and the transformed <span class="math inline">\(x\)</span> become linearly related</em>.</p></li>
+<li><p><a href="https://math4780-f23.github.io/website/slides/10-diag-linearity.html#/title-slide"><strong>Feature engineering</strong></a>: When <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are not linearly associated, we <em>transform <span class="math inline">\(x\)</span> (sometimes also <span class="math inline">\(y\)</span>) so that <span class="math inline">\(y\)</span> and the transformed <span class="math inline">\(x\)</span> become linearly related</em>.</p></li>
 </ul>
 <div class="fragment">
 <ul>
 <li>Popular methods
 <ul>
-<li>Polynominal regression (MSSC 5780)</li>
-<li>Piecewise regression (MSSC 5780)</li>
-<li>Local regression (MSSC 5780)</li>
+<li><a href="https://math4780-f23.github.io/website/slides/11-poly-reg.html#/title-slide">Polynominal regression (MSSC 5780, ISL 7.1)</a></li>
+<li><a href="https://math4780-f23.github.io/website/slides/11-poly-reg.html#/piecewise-polynomial-regression">Piecewise regression (MSSC 5780, ISL 7.3, 7.4)</a></li>
+<li><a href="https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/title-slide">Local regression (MSSC 5780, ISL 7.6)</a></li>
 <li>Basis function approach</li>
 <li><span class="green"><strong>Regression splines</strong></span></li>
 <li><span class="green"><strong>Smoothing splines</strong></span></li>
@@ -606,12 +606,12 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
       }</style></aside></section><section id="piecewise-polynomials-3-knots-at-1936-60-78" class="slide level2"><h2>Piecewise Polynomials: 3 knots at 1936, 60, 78</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div class="small">
+<div class="midi">
 <p><span class="math display">\[y=\begin{cases}
-    \beta_{01} + \beta_{11}x+ \epsilon &amp; \quad \text{if } x &lt; 1936\\
-    \beta_{02} + \beta_{12}x+\epsilon  &amp; \quad \text{if } 1936 \le x &lt; 1960 \\
-    \beta_{03} + \beta_{13}x+\epsilon  &amp; \quad \text{if } 1960 \le x &lt; 1978 \\
-    \beta_{04} + \beta_{14}x+\epsilon  &amp; \quad \text{if } 1978 \le x
+    \beta_{01} + \beta_{11}x+ \epsilon &amp; \text{if } x &lt; 1936\\
+    \beta_{02} + \beta_{12}x+\epsilon  &amp; \text{if } 1936 \le x &lt; 1960 \\
+    \beta_{03} + \beta_{13}x+\epsilon  &amp; \text{if } 1960 \le x &lt; 1978 \\
+    \beta_{04} + \beta_{14}x+\epsilon  &amp; \text{if } 1978 \le x
   \end{cases}\]</span></p>
 </div>
 </div><div class="column" style="width:60%;">
@@ -675,7 +675,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li><p>The function is continuous everywhere, also at knots <span class="math inline">\(\xi_1, \xi_2,\)</span> and <span class="math inline">\(\xi_3\)</span>, i.e.&nbsp;<span class="math inline">\(f_{k}(\xi_k^-) = f_{k+1}(\xi_k^+)\)</span>.</p></li>
 <li><p>Linear everywhere except <span class="math inline">\(\xi_1, \xi_2,\)</span> and <span class="math inline">\(\xi_3\)</span>.</p></li>
 <li><p>Has a different slope for each region.</p></li>
-</ul></section><section id="splines-as-adaptive-basis-function-model" class="slide level2"><h2>Splines as Adaptive Basis Function Model</h2>
+</ul></section><section id="sec-linearspline" class="slide level2"><h2>Splines as Adaptive Basis Function Model</h2>
 <p>For linear splines with 3 knots,</p>
 <p><span class="math display">\[\begin{align}
 b_1(x) &amp;= x\\
@@ -686,7 +686,7 @@ b_4(x) &amp;= (x - \xi_3)_+
 <!-- - $\xi_k, k = 1, 2, 3$ are knots -->
 <ul>
 <li>
-<span class="math inline">\((x - \xi_k)_+\)</span> denotes the positive part:</li>
+<span class="math inline">\((x - \xi_k)_+\)</span> is a <em>truncated power basis function</em> (of power one) such that</li>
 </ul>
 <p><span class="math display">\[(x - \xi_k)_+=\begin{cases}
     x - \xi_k &amp; \quad \text{if }x &gt; \xi_k\\
@@ -697,18 +697,19 @@ b_4(x) &amp;= (x - \xi_3)_+
 \end{align}\]</span></p>
 </section><section id="linear-splines-basis-functions" class="slide level2"><h2>Linear Splines Basis Functions</h2>
 
-<img data-src="images/07-splines/unnamed-chunk-11-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="splines-as-adaptive-basis-function-model-1" class="slide level2"><h2>Splines as Adaptive Basis Function Model</h2>
+<img data-src="images/07-splines/unnamed-chunk-11-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="splines-as-adaptive-basis-function-model" class="slide level2"><h2>Splines as Adaptive Basis Function Model<sup>1</sup>
+</h2>
 <p>With degree <span class="math inline">\(d\)</span> and <span class="math inline">\(K\)</span> knots, the regression spline with <em>first <span class="math inline">\(d-1\)</span> derivatives being continuous</em> at the knots can be represented as</p>
 <p><span class="math display">\[\begin{align} y &amp;= \beta_0 + \beta_1 b_1(x) + \beta_2 b_2(x) + \dots + \beta_d b_d(x) + \beta_{d+1}b_{d+1}(x) + \dots + \beta_{d+K}b_{d+K}(x) + \epsilon
 \end{align}\]</span> where</p>
 <ul>
 <li><p><span class="math inline">\(b_j(x) = x^j, j = 1, 2, \dots, d\)</span></p></li>
-<li><p><span class="math inline">\(b_{d+s} = (x - \xi_s)^{d}_+, s = 1, \dots, K\)</span> (truncated power basis function)</p></li>
+<li><p><span class="math inline">\(b_{d+k} = (x - \xi_k)^{d}_+, k = 1, \dots, K\)</span></p></li>
 </ul>
 <div class="question">
-<p>Can you write the model with <span class="math inline">\(d = 2\)</span> and <span class="math inline">\(k = 3\)</span>?</p>
+<p>Can you write the model with <span class="math inline">\(d = 2\)</span> and <span class="math inline">\(K = 3\)</span>?</p>
 </div>
-</section><section id="cubic-splines" class="slide level2"><h2>Cubic Splines<sup>1</sup>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Besides truncated power basis, we can represent the splines using another set of basis functions, for example <a href="https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.">B-Splines</a> which is more computationally convenient and numerically accurate.</p></li></ol></aside></section><section id="cubic-splines" class="slide level2"><h2>Cubic Splines<sup>1</sup>
 </h2>
 <ul>
 <li>The <strong>cubic spline</strong> is a spline of <em>degree 3</em> with <em>first 2 derivatives are continuous at the knots</em>.</li>
@@ -721,10 +722,11 @@ b_4(x) &amp;= (x - \xi_3)_+
 <li><span class="math inline">\(f(\xi_k^-) = f(\xi_k^+)\)</span></li>
 <li><span class="math inline">\(f'(\xi_k^-) = f'(\xi_k^+)\)</span></li>
 <li><span class="math inline">\(f''(\xi_k^-) = f''(\xi_k^+)\)</span></li>
-<li><span class="math inline">\(f^{(3)}(\xi_k^-) \ne f^{(3)}(\xi_k^+)\)</span></li>
+<li>But <span class="math inline">\(f^{(3)}(\xi_k^-) \ne f^{(3)}(\xi_k^+)\)</span>
+</li>
 </ul>
 </li>
-</ul><aside><ol class="aside-footnotes"><li id="fn2"><p>Cubic splines are popular because most human eyes cannot detect the discontinuity at the knots.</p></li></ol></aside></section><section id="degrees-of-freedom" class="slide level2"><h2>Degrees of Freedom</h2>
+</ul><aside><ol class="aside-footnotes"><li id="fn3"><p>Cubic splines are popular because most human eyes cannot detect the discontinuity at the knots.</p></li></ol></aside></section><section id="degrees-of-freedom" class="slide level2"><h2>Degrees of Freedom</h2>
 <ul>
 <li><p>In regression, <strong>(effective) degrees of freedom (df)</strong> can be viewed as <em>the number of regression coeffcients that are freely to move.</em></p></li>
 <li><p>It measures the model complexity/flexiblity. The larger df is, the more flexible the model is.</p></li>
@@ -747,8 +749,7 @@ b_4(x) &amp;= (x - \xi_3)_+
 <div class="fragment">
 <ul>
 <li>
-<span class="green"><em>Linear splines</em></span> (continuous piecewise linear): <em>8 - 3 constraints = 5 dfs.</em>
-</li>
+<span class="green"><em>Linear splines</em></span> (continuous piecewise linear): <em>8 - 3 constraints = 5 dfs.</em> (Check its <a href="#/sec-linearspline">basis representation</a>)</li>
 </ul>
 <div class="small">
 <p><span class="math display">\[\begin{align}
@@ -762,11 +763,20 @@ b_4(x) &amp;= (x - \xi_3)_+
 <ul>
 <li>With degree <span class="math inline">\(d\)</span> and <span class="math inline">\(K\)</span> knots,</li>
 </ul>
+<p><span class="math display">\[\text{df} = K + d + 1\]</span></p>
+<!-- - This leads to a total of [(4 + # knots)]{.green} degrees of freedom. -->
+<div class="fragment">
+<div class="question">
+<p>So what is the degrees of freedom of cubic splines?</p>
+</div>
+<aside class="notes"><ul>
+<li>With degree <span class="math inline">\(d\)</span> and <span class="math inline">\(K\)</span> knots,</li>
+</ul>
 <p><span class="math display">\[\begin{align} \text{df} &amp;= \text{(# regions)} \times \text{(# coefficients)} - \text{(# constraints)} \times \text{(# knots)}\\
 &amp;=(K + 1)(d + 1) - dK\\
 &amp;= K + d + 1 \end{align} \]</span></p>
 <!-- - This leads to a total of [(4 + # knots)]{.green} degrees of freedom. -->
-<div class="fragment">
+<p>. . .</p>
 <ul>
 <li>
 <span class="green"><em>Cubic splines</em></span>:</li>
@@ -781,6 +791,17 @@ b_4(x) &amp;= (x - \xi_3)_+
 </li>
 </ul>
 <p><span class="math inline">\(\text{df} = \text{(# regions)} \times \text{(# coef)} - \text{(# constraints)} \times \text{(# knots)} = (K + 1)4 - 3K = 4 + K\)</span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 </section><section id="cubic-splines-1" class="slide level2"><h2>Cubic Splines</h2>
 <div class="cell" data-layout-align="center">
@@ -796,7 +817,7 @@ b_4(x) &amp;= (x - \xi_3)_+
 <ul>
 <li>A <strong>natural spline</strong> is a regression spline with additional <em>boundary constraints</em>:
 <ul>
-<li>The natural function is <em>linear at the boundary</em> (in the region where <span class="math inline">\(X\)</span> is smaller than the smallest knot, or larger than the largest knot).</li>
+<li>The spline function is <em>linear at the boundary</em> (in the region where <span class="math inline">\(X\)</span> is smaller than the smallest knot, or larger than the largest knot).</li>
 </ul>
 <!-- + $f^{(k)}(x) = 0$ for $x < \xi_1$ and $x > \xi_K$ where $f^{(k)}(\cdot)$ is the $k$-th derivative of the spline function $f$. -->
 </li>
@@ -818,71 +839,12 @@ b_4(x) &amp;= (x - \xi_3)_+
 <li><p>The df of NCS is <span class="math inline">\(K\)</span>.</p></li>
 </ul>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Especially for high-degree polynomials.</p></li></ol></aside></section><section id="spline-and-natural-spline-comparison" class="slide level2"><h2>Spline and Natural Spline Comparison</h2>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Especially for high-degree polynomials.</p></li></ol></aside></section><section id="spline-and-natural-spline-comparison" class="slide level2"><h2>Spline and Natural Spline Comparison</h2>
 <ul>
 <li>Cubic Spline vs.&nbsp;Natural Cubic Spline with the same degrees of freedom 6.</li>
 </ul>
 
-<img data-src="images/07-splines/unnamed-chunk-13-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="b-splines-basis-functions" class="slide level2"><h2>
-<a href="https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.">B-Splines</a> Basis Functions</h2>
-<ul>
-<li>B-splines use a different basis representation for regression splines.</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">bs</span>(x, <span class="at">df =</span> <span class="cn">NULL</span>, <span class="at">knots =</span> <span class="cn">NULL</span>, </span>
-<span id="cb5-2"><a href="#cb5-2"></a>   <span class="at">degree =</span> <span class="dv">3</span>, <span class="at">intercept =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>
-<code>df</code>: the number of basis</li>
-<li>
-<code>knots</code>: the quantiles of <span class="math inline">\(x\)</span>
-</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/07-splines/unnamed-chunk-15-1.png" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ns</span>(x, <span class="at">df =</span> <span class="cn">NULL</span>, <span class="at">knots =</span> <span class="cn">NULL</span>, </span>
-<span id="cb6-2"><a href="#cb6-2"></a>   <span class="at">degree =</span> <span class="dv">3</span>, <span class="at">intercept =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>
-<code>df</code>: the number of basis</li>
-<li>
-<code>knots</code>: the quantiles of <span class="math inline">\(x\)</span>
-</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/07-splines/unnamed-chunk-17-1.png" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes"><p>B-splines is more computationally efficient</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="practical-issues" class="slide level2"><h2>Practical Issues</h2>
+<img data-src="images/07-splines/unnamed-chunk-13-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="practical-issues" class="slide level2"><h2>Practical Issues</h2>
 <ul>
 <li>
 <span class="green">How many knots should we use</span>
@@ -913,7 +875,7 @@ b_4(x) &amp;= (x - \xi_3)_+
 <div class="fragment">
 <ul>
 <li>
-<span class="green">What is the degree of functions in each region</span>
+<span class="green">Degree of functions in each region</span>
 <ul>
 <li><em>Use <span class="math inline">\(d &lt; 4\)</span> to avoid overly flexible curve fitting</em></li>
 <li><em>Cubic spline is popular</em></li>
@@ -947,7 +909,7 @@ b_4(x) &amp;= (x - \xi_3)_+
 <li><p>The second term with <span class="math inline">\(\lambda \ge 0\)</span> is a <span class="green"><em>roughness penalty</em></span> and controls how wiggly <span class="math inline">\(g(x)\)</span> is.</p></li>
 </ul>
 <!-- - The tuning parameter $\lambda \ge 0$. --><div class="fragment">
-<div class="r-fit-text">
+<div style="font-size: 4em;">
 <div style="text-align: center;">
 <blockquote>
 <p><strong>Loss + Penalty</strong></p>
@@ -980,6 +942,7 @@ b_4(x) &amp;= (x - \xi_3)_+
 <li>The solution <span class="math inline">\(\hat{g}\)</span> is a <span class="green">natural cubic spline</span>, with knots at <span class="math inline">\(x_1, x_2, \dots , x_n\)</span>!</li>
 <li>But, it is not the same NCS gotten from the basis function approach.</li>
 <li>It is a <em>shrunken</em> version where <span class="math inline">\(\lambda\)</span> controls the level of shrinkage.</li>
+<li>Its <em>effective</em> df is less than <span class="math inline">\(n\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -1004,14 +967,14 @@ b_4(x) &amp;= (x - \xi_3)_+
 <p><span class="green"><strong>Smoothing splines</strong></span></p>
 <ul>
 <li><p><span class="math inline">\(\hat{\mathbf{g}}_{\lambda} = {\bf S}_{\lambda} \mathbf{y}\)</span> where <span class="math inline">\(\bf {\bf S}_{\lambda}\)</span> is the <strong>smoother matrix</strong>.</p></li>
-<li><p>The effective degrees of freedom <span class="math inline">\((\text{# coef})\)</span> is <span class="math display">\[df_{\lambda} = \sum_{i=1}^n \{{\bf S}_{\lambda}\}_{ii} \in (0, n)\]</span></p></li>
+<li><p>The effective degrees of freedom <span class="math inline">\((\text{# coef})\)</span> is <span class="math display">\[df_{\lambda} = \sum_{i=1}^n \{{\bf S}_{\lambda}\}_{ii} \in [2, n]\]</span></p></li>
 <li><p>LOOCV for choosing <span class="math inline">\(\lambda\)</span><sup>1</sup></p></li>
 </ul>
 <p><span class="math display">\[\begin{align} (SS_{res})_{CV}(\lambda) &amp;= \sum_{i = 1}^n \left( y_i - \hat{g}_{\lambda}^{(-i)}(x_i)\right)^2 \\
 &amp;= \sum_{i = 1}^n \left[ \frac{y_i - \hat{g}_{\lambda}(x_i)}{1 - \{{\bf S}_{\lambda}\}_{ii}}\right]^2 \end{align}\]</span></p>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>GCV can be used too.</p></li></ol></aside></section><section id="smooth.spline" class="slide level2"><h2><code>smooth.spline()</code></h2>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>GCV can be used too.</p></li></ol></aside></section><section id="smooth.spline" class="slide level2"><h2><code>smooth.spline()</code></h2>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">smooth.spline</span>(x, y, df, lambda, <span class="at">cv =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1103,39 +1066,23 @@ b_4(x) &amp;= (x - \xi_3)_+
 <li><p><code>s()</code> for smoothing splines</p></li>
 <li><p>Coefficients not that interesting; fitted functions are.</p></li>
 </ul>
-
-<img data-src="images/07-splines/unnamed-chunk-24-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>upper and lower pointwise twice-standard-error curves are included</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/07-splines/unnamed-chunk-24-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes"><p>upper and lower pointwise twice-standard-error curves are included</p>
 <p>The left-hand panel indicates that holding age and education fixed, wage tends to increase slightly with year; this may be due to inflation. The center panel indicates that holding education and year fixed, wage tends to be highest for intermediate values of age, and lowest for the very young and very old.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside></section><section id="gam-fitting" class="slide level2"><h2>GAM fitting</h2>
 <ul>
-<li><p>Natural splines <code>lm(wage ~ ns(year, df = 5) + ns(age, df = 5) + education)</code></p></li>
-<li><p>Can mix terms, e.g., smoothing splines and local regression</p></li>
-</ul>
-<p><code>gam(wage ~ s(year, df = 5) + lo(age, span = .5) + education)</code></p>
-<ul>
-<li><p>Can add interactions, e.g.&nbsp;<code>ns(age, df = 5):ns(year, df = 5)</code></p></li>
-<li><p>Use <code><a href="https://rdrr.io/r/stats/anova.html">anova()</a></code> to compare models.</p></li>
-</ul></section><section id="summary-of-gams" class="slide level2"><h2>Summary of GAMs</h2>
-<ul>
+<li><p>Because the model is additive, we can examine the effect of each <span class="math inline">\(X_j\)</span> on <span class="math inline">\(Y\)</span> individually while holding all of the other variables fixed.</p></li>
 <li><p>Allow to fit a non-linear <span class="math inline">\(f_j\)</span> to each <span class="math inline">\(X_j\)</span>, so that we can automatically model non-linear relationships that standard linear regression will miss.</p></li>
 <li><p>No need to manually try out many different transformations on each variable individually.</p></li>
 <li><p>The non-linear fits can potentially make more accurate predictions for the response.</p></li>
 <li><p>The smoothness of the function <span class="math inline">\(f_j\)</span> for the variable <span class="math inline">\(X_j\)</span> can be summarized via degrees of freedom.</p></li>
 <li><p>The model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting.</p></li>
-</ul>
-<aside class="notes"><ul>
-<li><p>Because the model is additive, we can examine the effect of each <span class="math inline">\(X_j\)</span> on <span class="math inline">\(Y\)</span> individually while holding all of the other variables fixed.</p></li>
-<li><p>The smoothness of the function <span class="math inline">\(f_j\)</span> for the variable <span class="math inline">\(X_j\)</span> can be summarized via degrees of freedom.</p></li>
 </ul><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1146,28 +1093,9 @@ b_4(x) &amp;= (x - \xi_3)_+
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section id="other-topics" class="slide level2"><h2>Other Topics</h2>
-<ul>
-<li><p><a href="https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.">Basis spline (B-spline) definition (de Boor, 1978)</a>: more computationally efficient</p></li>
-<li><p>Algorithms for fitting GAMs using smoothing splines: <a href="https://en.wikipedia.org/wiki/Backfitting_algorithm">Backfitting</a>, ISL Sec 7.9 Exercise 11.</p></li>
-<li><p>GAMs for binary response and classification.</p></li>
-<li><p><a href="https://en.wikipedia.org/wiki/Multivariate_adaptive_regression_spline#:~:text=In%20statistics%2C%20multivariate%20adaptive%20regression,nonlinearities%20and%20interactions%20between%20variables.">Multivariate Adaptive Regression Splines (MARS)</a></p></li>
-</ul>
-<aside class="notes"><p>How many knots should be used Where to place the knots What is the degree of functions in each region</p>
-<p>we can control that using the df parameter. We use a total of 6 parameters, chosen by the function automatically. However, this does not seems to perform better than the knots we implemented. The choice of knots can be crucial.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg" class="slide-logo r-stretch"><div class="footer footer-default">
+      }</style></aside><!-- ## GAM fitting {visibility="hidden"} --><!-- - Natural splines `lm(wage ~ ns(year, df = 5) + ns(age, df = 5) + education)` --><!-- - Can mix terms, e.g., smoothing splines and local regression --><!-- `gam(wage ~ s(year, df = 5) + lo(age, span = .5) + education)` --><!-- - Can add interactions, e.g. `ns(age, df = 5):ns(year, df = 5)` --><!-- - Use `anova()` to compare models. --><!-- ## Summary of GAMs {visibility="hidden"} --><!-- - Allow to fit a non-linear $f_j$ to each $X_j$, so that we can --><!-- automatically model non-linear relationships that standard linear regression will miss. --><!-- - No need to manually try out many different transformations on each variable individually. --><!-- - The non-linear fits can potentially make more accurate predictions for the response. --><!-- - The smoothness of the function $f_j$ for the variable $X_j$ can be summarized via degrees of freedom. --><!-- - The model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting. --><!-- ::: notes --><!-- - Because the model is additive, we can examine the effect of each $X_j$ on $Y$ individually while holding all of the other variables fixed. --><!-- - The smoothness of the function $f_j$ for the variable $X_j$ can be summarized via degrees of freedom. --><!-- ::: --><!-- ## Other Topics --><!-- - [Basis spline (B-spline) definition (de Boor, 1978)](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.): more computationally efficient --><!-- - Algorithms for fitting GAMs using smoothing splines: [Backfitting](https://en.wikipedia.org/wiki/Backfitting_algorithm), ISL Sec 7.9 Exercise 11. --><!-- - GAMs for binary response and classification. --><!-- - [Multivariate Adaptive Regression Splines (MARS)](https://en.wikipedia.org/wiki/Multivariate_adaptive_regression_spline#:~:text=In%20statistics%2C%20multivariate%20adaptive%20regression,nonlinearities%20and%20interactions%20between%20variables.) --><!-- ::: notes --><!-- How many knots should be used --><!-- Where to place the knots --><!-- What is the degree of functions in each region --><!-- we can control that using the df parameter. We use a total of 6 parameters, chosen by the function automatically. However, this does not seems to perform better than the knots we implemented. The choice of knots can be crucial. --><!-- ::: -->
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://mssc6250-s24.github.io/website/">mssc6250-s24.github.io/website</a></p>
 </div>
 </section></section>

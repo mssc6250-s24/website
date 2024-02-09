@@ -81,7 +81,7 @@
     "href": "weeks/week-5.html#participate",
     "title": "Week 5",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Splines and Generalized Additive Models"
+    "text": "Participate\n🖥️ Slides - Splines and Generalized Additive Models\n Data set - birthrates"
   },
   {
     "objectID": "weeks/week-5.html#reading-and-resources",
@@ -109,7 +109,7 @@
     "href": "weeks/week-4.html#participate",
     "title": "Week 4",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Lasso"
+    "text": "Participate\n🖥️ Slides - Lasso\n Data set - Prostate"
   },
   {
     "objectID": "weeks/week-4.html#reading-and-resources",
@@ -193,7 +193,7 @@
     "href": "weeks/week-2.html#participate",
     "title": "Week 2",
     "section": "Participate",
-    "text": "Participate\n🖥️ Slides - Linear Regression\n Data Sets - Advertising.csv"
+    "text": "Participate\n🖥️ Slides - Linear Regression\n Data Set - Advertising.csv"
   },
   {
     "objectID": "weeks/week-2.html#reading-and-resources",
@@ -494,21 +494,7 @@
     "href": "hw/hw-2.html#homework-questions",
     "title": "Homework 2 - Ridge, Lasso, and Splines",
     "section": "Homework Questions",
-    "text": "Homework Questions\n\nISL Sec. 5.4: 3\nISL Sec. 6.6: 3\nISL Sec. 6.6: 4\nISL Sec. 6.6: 6\nISL Sec. 6.6: 9 (a)-(d)\nISL Sec. 7.9: 9\nSuppose for a linear regression problem with \\(n = p\\), \\({\\bf X} = {\\bf I}\\) and no intercept. Show that\n\nThe least squares problem can be simplified to finding \\(\\beta_1, \\dots, \\beta_p\\) that minimize \\(\\sum_{j=1}^p\\left(y_j - \\beta_j\\right)^2\\). What is least squares estimator \\(b_j\\)?\nThe ridge estimator is \\(\\hat{\\beta}_j^r = \\frac{y_j}{1+\\lambda} = \\arg\\min \\sum_{j=1}^p\\left(y_j - \\beta_j\\right)^2 + \\lambda \\sum_{j=1}^p \\beta_j^2\\).\nThe Lasso solution of \\(\\sum_{j=1}^p\\left(y_j - \\beta_j\\right)^2 + \\lambda \\sum_{j=1}^p | \\beta_j |\\) is \\[\\hat{\\beta}_j^l =\n  \\begin{cases}\ny_j - \\lambda/2       & \\quad \\text{if } y_j > \\lambda/2\\\\\ny_j + \\lambda/2       & \\quad \\text{if } y_j < -\\lambda/2 \\\\\n0  & \\quad \\text{if } |y_j| \\le \\lambda/2\n  \\end{cases}\\]"
-  },
-  {
-    "objectID": "hw/hw-2.html#exercises-required-for-mssc-phd-students",
-    "href": "hw/hw-2.html#exercises-required-for-mssc-phd-students",
-    "title": "Homework 2 - Ridge, Lasso, and Splines",
-    "section": "Exercises required for MSSC PhD students",
-    "text": "Exercises required for MSSC PhD students\n\nISL Sec. 6.6: 5\nISL Sec. 7.9: 11\nDefine the objective of the elastic net problem \\(J_1(\\boldsymbol \\beta) = \\|\\mathbf{y}- \\mathbf{X}\\boldsymbol \\beta\\| ^2 + \\lambda_2 \\|\\boldsymbol \\beta\\|_2^2 + \\lambda_1 \\|\\boldsymbol \\beta\\|_1\\) and the objective of Lasso \\(J_2(\\boldsymbol \\beta) = \\|\\tilde{\\mathbf{y}} - \\tilde{\\mathbf{X}}\\boldsymbol \\beta\\| ^2 + c\\lambda_1 \\|\\boldsymbol \\beta\\|_1\\) where \\(c = (1+\\lambda_2)^{-1/2}\\), and \\[\\tilde{\\mathbf{X}} = c \\begin{pmatrix} \\mathbf{X}\\\\\n\\sqrt{\\lambda_2}\\mathbf{I}_p \\end{pmatrix}, \\quad \\tilde{\\mathbf{y}} = \\begin{pmatrix} \\mathbf{y}\\\\ \\mathbf{0}_{p\\times 1} \\end{pmatrix}.\\] Show that \\(J_1(c\\boldsymbol \\beta) = J_2(\\boldsymbol \\beta)\\). Therefore the elastic net problem can be solved using algorithms for Lasso on modified data."
-  },
-  {
-    "objectID": "hw/hw-2.html#optional-exercises",
-    "href": "hw/hw-2.html#optional-exercises",
-    "title": "Homework 2 - Ridge, Lasso, and Splines",
-    "section": "Optional Exercises",
-    "text": "Optional Exercises\nLet the ridge estimator be \\(\\hat{\\boldsymbol \\beta}^r = (\\mathbf{X}'\\mathbf{X}+ \\lambda \\mathbf{I})^{-1}\\mathbf{X}' \\mathbf{y}\\). Show that\n\n\\(\\hat{\\boldsymbol \\beta}^r = (\\mathbf{X}'\\mathbf{X}+ \\lambda \\mathbf{I})^{-1}(\\mathbf{X}'\\mathbf{X})\\mathbf{b}\\), and hence \\(\\hat{\\beta}_j^r = \\frac{b_j}{1+\\lambda}\\) is a special case when \\(\\mathbf{X}'\\mathbf{X}= \\mathbf{I}\\).\nThe bias \\(\\mathrm{E}\\left( \\hat{\\boldsymbol \\beta}^r \\right) - \\boldsymbol \\beta= \\left[ (\\mathbf{X}'\\mathbf{X}+ \\lambda \\mathbf{I})^{-1}(\\mathbf{X}'\\mathbf{X}) - \\mathbf{I}\\right]\\boldsymbol \\beta\\), and hence \\(\\text{Bias}(\\hat{\\beta}_j^r) = \\frac{-\\lambda}{1+\\lambda}\\beta_j\\) when \\(\\mathbf{X}'\\mathbf{X}= \\mathbf{I}\\).\n\\(\\sum_{j=1}^p \\left( \\hat{\\beta}_j^r - \\beta_j\\right)^2 = \\lambda^2 \\boldsymbol \\beta' \\left( \\mathbf{X}'\\mathbf{X}+ \\lambda \\mathbf{I}\\right)^{-2}\\boldsymbol \\beta= \\sum_{j=1}^p \\frac{\\lambda^2}{(d_j^2 + \\lambda)^2}\\beta_j^2\\).\n\\(\\mathrm{Var}\\left( \\hat{\\beta}_j^r \\right) = \\sigma^2\\frac{d_j^2}{\\left(d_j^2+\\lambda\\right)^2}\\) where \\(d_j\\) is the \\(j\\)-th singular value of \\(\\mathbf{X}\\). Hence \\(\\mathrm{Var}\\left( \\hat{\\beta}_j^r \\right) = \\sigma^2\\frac{1}{\\left(1+\\lambda\\right)^2}\\) when \\(\\mathbf{X}'\\mathbf{X}= \\mathbf{I}\\).\n\\(\\hat{\\mathbf{y}}^r = \\mathbf{X}\\hat{\\boldsymbol \\beta}^r = \\mathbf{X}(\\mathbf{X}'\\mathbf{X}+ \\lambda \\mathbf{I})^{-1}\\mathbf{X}' \\mathbf{y}= \\sum_{j=1}^p \\mathbf{u}_j \\left( \\frac{d_j^2}{d_j^2+\\lambda}\\mathbf{u}_j'\\mathbf{y}\\right)\\) where \\(\\mathbf{u}_j\\) is the \\(j\\)-th column of the SVD of \\(\\mathbf{X}= \\mathbf{U}\\mathbf{D}\\mathbf{V}'\\). Hence, a greater amount of shrinkage is applied to the coordinates of basis vectors with smaller \\(d_j^2\\).\nThe trace of the projection matrix \\(\\mathbf{H}_{\\lambda} = \\mathbf{X}(\\mathbf{X}'\\mathbf{X}+ \\lambda \\mathbf{I})^{-1}\\mathbf{X}'\\) defines the effective degrees of freedom. In general, \\(\\text{tr}(H) = \\sum_{j=1}^p \\frac{d_j^2}{d_j^2+\\lambda}\\). For linear regression where \\(\\lambda = 0\\), \\(\\text{tr}(H) = p\\)."
+    "text": "Homework Questions\n\n\nISL Sec. 6.6: 4\nISL Sec. 6.6: 6\nISL Sec. 6.6: 9 (a)-(d)\nISL Sec. 7.9: 9\n[Special Case for Ridge and Lasso] Suppose for a linear regression problem with \\(n = p\\), \\({\\bf X} = {\\bf I}\\) and no intercept. Show that\n\nThe least squares problem can be simplified to finding \\(\\beta_1, \\dots, \\beta_p\\) that minimize \\(\\sum_{j=1}^p\\left(y_j - \\beta_j\\right)^2\\). What is least squares estimator \\(b_j\\)?\nThe ridge estimator is \\(\\hat{\\beta}_j^r = \\frac{y_j}{1+\\lambda} = \\underset{\\beta_j}{\\arg\\min} \\sum_{j=1}^p\\left(y_j - \\beta_j\\right)^2 + \\lambda \\sum_{j=1}^p \\beta_j^2\\).\nThe lasso solution of \\(\\sum_{j=1}^p\\left(y_j - \\beta_j\\right)^2 + \\lambda \\sum_{j=1}^p | \\beta_j |\\) is \\[\\hat{\\beta}_j^l =\n  \\begin{cases}\ny_j - \\lambda/2       & \\quad \\text{if } y_j > \\lambda/2\\\\\ny_j + \\lambda/2       & \\quad \\text{if } y_j < -\\lambda/2 \\\\\n0  & \\quad \\text{if } |y_j| \\le \\lambda/2\n  \\end{cases}\\]\nDescribe the ridge and lasso shrinkage behavior.\n\n[Lasso with Correlated Variables]\nConsider the linear regression\n\\[ \\mathbf{y}= \\mathbf{X}\\boldsymbol \\beta+ \\boldsymbol \\epsilon\\]\nwhere \\(\\boldsymbol \\beta= (\\beta_1, \\beta_2, \\ldots, \\beta_{20})'\\) with \\(\\beta_1 = \\beta_{2} = \\beta_{3} = 0.5\\) and all other \\(\\beta_j = 0, j = 4, \\dots, 20\\). No intercept \\(\\beta_0\\). The input vector \\(\\mathbf{x}= (x_1, x_2, \\dots, x_{20})'\\) follows a multivariate Gaussian distribution\n\\[\\mathbf{x}\\sim N\\left(\\mathbf{0}, \\Sigma_{20 \\times 20}\\right)\\]\nIn \\(\\Sigma\\), all diagonal elements are 1, and all off-diagonal elements are \\(\\rho\\) which measures the correlation between any two predictors.\n\nGenerate training data of size 400 and test data of size 100 independently from the above model with \\(\\rho = 0.1\\) and \\(\\epsilon_i \\stackrel{iid} \\sim N(0, 1)\\).\nFit a Lasso model on the training data with 10-fold cross-validation (CV).\nCompute test MSE with the optimal \\(\\lambda\\) selected by CV in (b). Does Lasso select the correct variables?\nRepeat (a)-(c) 100 times. That is, generate 100 different training and test data sets. For each run, record the test MSE and whether or not the true model is correctly selected. Then compute the average test MSE and the proportion of runs where the correct model was selected.\nRedo (a)-(d) with \\(\\rho = 0.6\\). Compare the two average test MSEs and the proportions. Comment the result."
   },
   {
     "objectID": "hw/hw-1.html#homework-questions",
@@ -564,7 +550,7 @@
     "href": "index.html",
     "title": "MSSC 6250 - Statistical Machine Learning",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance tradeoff\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n✍️\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models\n\n\n✅\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n✅\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n✅\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n✅\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nTo Do\nSlides\nIn-class Activities\nHomework\nProject\n\n\n\n\n1\nTue, Jan 16\nSyllabus/Overview of Statistical Learning\n📖\n🖥️🖥️\n\n\n\n\n\n\nThu, Jan 18\nBias-variance tradeoff\n\n🖥️\n\n\n\n\n\n2\nTue, Jan 23\nLinear Regression (review)\n📖\n🖥️\n\n✍️\n\n\n\n\nThu, Jan 25\nLinear Regression (optimization)\n\n\n\n\n\n\n\n3\nTue, Jan 30\nRidge Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 1\nCross-Validation\n\n\n\n\n\n\n\n4\nTue, Feb 6\nFeature Selection\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 8\nLASSO\n\n\n\n✍️\n\n\n\n5\nTue, Feb 13\nSplines\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 15\nGeneralized Additive Models/In-class Activity: Bootstrapping\n\n\n✅\n\n\n\n\n6\nTue, Feb 20\nBayesian Linear Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 22\nBayesian Linear Regression\n\n\n\n\n\n\n\n7\nTue, Feb 27\nLogistic Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Feb 29\nPoisson Regression\n\n\n\n\n\n\n\n8\nTue, Mar 5\nDiscriminant Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 7\nNaive Bayes\n\n\n✅\n\n\n\n\n9\nTue, Mar 12\nNO CLASS: Spring break\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 14\nNO CLASS: Spring break\n\n\n\n\n\n\n\n10\nTue, Mar 19\nK-Nearest Neighbors Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 21\nK-Nearest Neighbors Classification\n\n\n\n\n\n\n\n11\nTue, Mar 26\nGaussian Process Regression\n📖\n🖥️\n\n\n\n\n\n\nThu, Mar 28\nNO CLASS: Easter break\n\n\n\n\n\n\n\n12\nTue, Apr 2\nSupport Vector Machine\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 4\nSupport Vector Machine\n\n\n\n\n\n\n\n13\nTue, Apr 9\nCART and Bagging\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 11\nRandom Forests and Boosting\n\n\n✅\n\n\n\n\n14\nTue, Apr 16\nPrincipal Component Analysis\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 18\nRecommender Systems\n\n\n\n\n\n\n\n15\nTue, Apr 23\nK-Means Clustering\n📖\n🖥️\n\n\n\n\n\n\nThu, Apr 25\nModel-based Clustering\n\n\n\n\n\n\n\n16\nTue, Apr 30\nNeural Networks\n📖\n🖥️\n\n\n\n\n\n16\nThu, May 2\nDeep Learning\n\n\n✅\n\n\n\n\n\n\nI reserve the right to make changes to the schedule."
   },
   {
     "objectID": "course-news.html",
@@ -2041,7 +2027,7 @@
     "href": "slides/07-splines.html#when-y-and-x-are-not-linearly-associated",
     "title": "Splines and General Additive Models 〰️",
     "section": "When \\(y\\) and \\(x\\) are Not Linearly Associated",
-    "text": "When \\(y\\) and \\(x\\) are Not Linearly Associated\n\nLinear models can describe non-linear relationship.\nFeature engineering: When \\(y\\) and \\(x\\) are not linearly associated, we transform \\(x\\) (sometimes also \\(y\\)) so that \\(y\\) and the transformed \\(x\\) become linearly related.\n\n\n\nPopular methods\n\nPolynominal regression (MSSC 5780)\nPiecewise regression (MSSC 5780)\nLocal regression (MSSC 5780)\nBasis function approach\nRegression splines\nSmoothing splines\nGeneral additive models (GAMs)"
+    "text": "When \\(y\\) and \\(x\\) are Not Linearly Associated\n\nLinear models can describe non-linear relationship.\nFeature engineering: When \\(y\\) and \\(x\\) are not linearly associated, we transform \\(x\\) (sometimes also \\(y\\)) so that \\(y\\) and the transformed \\(x\\) become linearly related.\n\n\n\nPopular methods\n\nPolynominal regression (MSSC 5780, ISL 7.1)\nPiecewise regression (MSSC 5780, ISL 7.3, 7.4)\nLocal regression (MSSC 5780, ISL 7.6)\nBasis function approach\nRegression splines\nSmoothing splines\nGeneral additive models (GAMs)"
   },
   {
     "objectID": "slides/07-splines.html#polynomial-regression",
@@ -2083,7 +2069,7 @@
     "href": "slides/07-splines.html#piecewise-polynomials-3-knots-at-1936-60-78",
     "title": "Splines and General Additive Models 〰️",
     "section": "Piecewise Polynomials: 3 knots at 1936, 60, 78",
-    "text": "Piecewise Polynomials: 3 knots at 1936, 60, 78\n\n\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\quad \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\quad \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\quad \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\quad \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nAny issue of piecewise polynomials?"
+    "text": "Piecewise Polynomials: 3 knots at 1936, 60, 78\n\n\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\nAny issue of piecewise polynomials?"
   },
   {
     "objectID": "slides/07-splines.html#splines",
@@ -2100,11 +2086,11 @@
     "text": "splines::bs()\n\npar(mar = c(2,2,2,0))\n\n\n\nThe function is continuous everywhere, also at knots \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\), i.e. \\(f_{k}(\\xi_k^-) = f_{k+1}(\\xi_k^+)\\).\nLinear everywhere except \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\).\nHas a different slope for each region."
   },
   {
-    "objectID": "slides/07-splines.html#splines-as-adaptive-basis-function-model",
-    "href": "slides/07-splines.html#splines-as-adaptive-basis-function-model",
+    "objectID": "slides/07-splines.html#sec-linearspline",
+    "href": "slides/07-splines.html#sec-linearspline",
     "title": "Splines and General Additive Models 〰️",
     "section": "Splines as Adaptive Basis Function Model",
-    "text": "Splines as Adaptive Basis Function Model\nFor linear splines with 3 knots,\n\\[\\begin{align}\nb_1(x) &= x\\\\\nb_2(x) &= (x - \\xi_1)_+\\\\\nb_3(x) &= (x - \\xi_2)_+\\\\\nb_4(x) &= (x - \\xi_3)_+\n\\end{align}\\] where\n\n\n\n\\((x - \\xi_k)_+\\) denotes the positive part:\n\n\\[(x - \\xi_k)_+=\\begin{cases}\n    x - \\xi_k & \\quad \\text{if }x > \\xi_k\\\\\n    0  & \\quad \\text{otherwise}\n  \\end{cases}\\]\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\beta_3 b_3(x) + \\beta_4 b_4(x) + \\epsilon\\\\\n&=\\beta_0 + \\beta_1 x + \\beta_2 (x - \\xi_1)_+ + \\beta_3 (x - \\xi_2)_+ + \\beta_4 (x - \\xi_3)_+ + \\epsilon\n\\end{align}\\]"
+    "text": "Splines as Adaptive Basis Function Model\nFor linear splines with 3 knots,\n\\[\\begin{align}\nb_1(x) &= x\\\\\nb_2(x) &= (x - \\xi_1)_+\\\\\nb_3(x) &= (x - \\xi_2)_+\\\\\nb_4(x) &= (x - \\xi_3)_+\n\\end{align}\\] where\n\n\n\n\\((x - \\xi_k)_+\\) is a truncated power basis function (of power one) such that\n\n\\[(x - \\xi_k)_+=\\begin{cases}\n    x - \\xi_k & \\quad \\text{if }x > \\xi_k\\\\\n    0  & \\quad \\text{otherwise}\n  \\end{cases}\\]\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\beta_3 b_3(x) + \\beta_4 b_4(x) + \\epsilon\\\\\n&=\\beta_0 + \\beta_1 x + \\beta_2 (x - \\xi_1)_+ + \\beta_3 (x - \\xi_2)_+ + \\beta_4 (x - \\xi_3)_+ + \\epsilon\n\\end{align}\\]"
   },
   {
     "objectID": "slides/07-splines.html#linear-splines-basis-functions",
@@ -2114,32 +2100,32 @@
     "text": "Linear Splines Basis Functions"
   },
   {
-    "objectID": "slides/07-splines.html#splines-as-adaptive-basis-function-model-1",
-    "href": "slides/07-splines.html#splines-as-adaptive-basis-function-model-1",
+    "objectID": "slides/07-splines.html#splines-as-adaptive-basis-function-model",
+    "href": "slides/07-splines.html#splines-as-adaptive-basis-function-model",
     "title": "Splines and General Additive Models 〰️",
-    "section": "Splines as Adaptive Basis Function Model",
-    "text": "Splines as Adaptive Basis Function Model\nWith degree \\(d\\) and \\(K\\) knots, the regression spline with first \\(d-1\\) derivatives being continuous at the knots can be represented as\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\dots + \\beta_d b_d(x) + \\beta_{d+1}b_{d+1}(x) + \\dots + \\beta_{d+K}b_{d+K}(x) + \\epsilon\n\\end{align}\\] where\n\n\\(b_j(x) = x^j, j = 1, 2, \\dots, d\\)\n\\(b_{d+s} = (x - \\xi_s)^{d}_+, s = 1, \\dots, K\\) (truncated power basis function)\n\n\nCan you write the model with \\(d = 2\\) and \\(k = 3\\)?"
+    "section": "Splines as Adaptive Basis Function Model1\n",
+    "text": "Splines as Adaptive Basis Function Model1\n\nWith degree \\(d\\) and \\(K\\) knots, the regression spline with first \\(d-1\\) derivatives being continuous at the knots can be represented as\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 b_1(x) + \\beta_2 b_2(x) + \\dots + \\beta_d b_d(x) + \\beta_{d+1}b_{d+1}(x) + \\dots + \\beta_{d+K}b_{d+K}(x) + \\epsilon\n\\end{align}\\] where\n\n\\(b_j(x) = x^j, j = 1, 2, \\dots, d\\)\n\\(b_{d+k} = (x - \\xi_k)^{d}_+, k = 1, \\dots, K\\)\n\n\nCan you write the model with \\(d = 2\\) and \\(K = 3\\)?\n\nBesides truncated power basis, we can represent the splines using another set of basis functions, for example B-Splines which is more computationally convenient and numerically accurate."
   },
   {
     "objectID": "slides/07-splines.html#cubic-splines",
     "href": "slides/07-splines.html#cubic-splines",
     "title": "Splines and General Additive Models 〰️",
     "section": "Cubic Splines1\n",
-    "text": "Cubic Splines1\n\n\nThe cubic spline is a spline of degree 3 with first 2 derivatives are continuous at the knots.\n\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 x + \\beta_2 x^2 + \\beta_3 x^3 + \\sum_{k = 1}^K \\beta_{k+3} (x - \\xi_k)_+^3 + \\epsilon\n\\end{align}\\]\n\nSmooth at knots because\n\n\\(f(\\xi_k^-) = f(\\xi_k^+)\\)\n\\(f'(\\xi_k^-) = f'(\\xi_k^+)\\)\n\\(f''(\\xi_k^-) = f''(\\xi_k^+)\\)\n\\(f^{(3)}(\\xi_k^-) \\ne f^{(3)}(\\xi_k^+)\\)\n\n\nCubic splines are popular because most human eyes cannot detect the discontinuity at the knots."
+    "text": "Cubic Splines1\n\n\nThe cubic spline is a spline of degree 3 with first 2 derivatives are continuous at the knots.\n\n\\[\\begin{align} y &= \\beta_0 + \\beta_1 x + \\beta_2 x^2 + \\beta_3 x^3 + \\sum_{k = 1}^K \\beta_{k+3} (x - \\xi_k)_+^3 + \\epsilon\n\\end{align}\\]\n\nSmooth at knots because\n\n\\(f(\\xi_k^-) = f(\\xi_k^+)\\)\n\\(f'(\\xi_k^-) = f'(\\xi_k^+)\\)\n\\(f''(\\xi_k^-) = f''(\\xi_k^+)\\)\nBut \\(f^{(3)}(\\xi_k^-) \\ne f^{(3)}(\\xi_k^+)\\)\n\n\n\nCubic splines are popular because most human eyes cannot detect the discontinuity at the knots."
   },
   {
     "objectID": "slides/07-splines.html#degrees-of-freedom",
     "href": "slides/07-splines.html#degrees-of-freedom",
     "title": "Splines and General Additive Models 〰️",
     "section": "Degrees of Freedom",
-    "text": "Degrees of Freedom\n\nIn regression, (effective) degrees of freedom (df) can be viewed as the number of regression coeffcients that are freely to move.\nIt measures the model complexity/flexiblity. The larger df is, the more flexible the model is.\n\n\n\n\nPiecewise linear: 3 knots, 4 linear regressions, and 8 dfs.\n\n\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\quad \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\quad \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\quad \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\quad \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\n\nLinear splines (continuous piecewise linear): 8 - 3 constraints = 5 dfs.\n\n\n\n\\[\\begin{align}\n\\beta_{01} + \\beta_{11}1936 &= \\beta_{02} + \\beta_{12}1936\\\\\n\\beta_{02} + \\beta_{12}1960 &= \\beta_{03} + \\beta_{13}1960\\\\\n\\beta_{03} + \\beta_{13}1978 &= \\beta_{04} + \\beta_{14}1978\n\\end{align}\\]"
+    "text": "Degrees of Freedom\n\nIn regression, (effective) degrees of freedom (df) can be viewed as the number of regression coeffcients that are freely to move.\nIt measures the model complexity/flexiblity. The larger df is, the more flexible the model is.\n\n\n\n\nPiecewise linear: 3 knots, 4 linear regressions, and 8 dfs.\n\n\n\n\\[y=\\begin{cases}\n    \\beta_{01} + \\beta_{11}x+ \\epsilon & \\quad \\text{if } x < 1936\\\\\n    \\beta_{02} + \\beta_{12}x+\\epsilon  & \\quad \\text{if } 1936 \\le x < 1960 \\\\\n    \\beta_{03} + \\beta_{13}x+\\epsilon  & \\quad \\text{if } 1960 \\le x < 1978 \\\\\n    \\beta_{04} + \\beta_{14}x+\\epsilon  & \\quad \\text{if } 1978 \\le x\n  \\end{cases}\\]\n\n\n\n\n\nLinear splines (continuous piecewise linear): 8 - 3 constraints = 5 dfs. (Check its basis representation)\n\n\n\\[\\begin{align}\n\\beta_{01} + \\beta_{11}1936 &= \\beta_{02} + \\beta_{12}1936\\\\\n\\beta_{02} + \\beta_{12}1960 &= \\beta_{03} + \\beta_{13}1960\\\\\n\\beta_{03} + \\beta_{13}1978 &= \\beta_{04} + \\beta_{14}1978\n\\end{align}\\]"
   },
   {
     "objectID": "slides/07-splines.html#degrees-of-freedom-1",
     "href": "slides/07-splines.html#degrees-of-freedom-1",
     "title": "Splines and General Additive Models 〰️",
     "section": "Degrees of Freedom",
-    "text": "Degrees of Freedom\n\nWith degree \\(d\\) and \\(K\\) knots,\n\n\\[\\begin{align} \\text{df} &= \\text{(# regions)} \\times \\text{(# coefficients)} - \\text{(# constraints)} \\times \\text{(# knots)}\\\\\n&=(K + 1)(d + 1) - dK\\\\\n&= K + d + 1 \\end{align} \\]\n\n\n\n\nCubic splines:\n\nWe have 3 constraints:\n\ncontinuity \\(f(\\xi ^ {-}) = f(\\xi ^ {+})\\)\n\n1st derivative \\(f'(\\xi ^ {-}) = f'(\\xi ^ {+})\\)\n\n2nd derivative \\(f''(\\xi ^ {-}) = f''(\\xi ^ {+})\\)\n\n\n\\(\\text{df} = \\text{(# regions)} \\times \\text{(# coef)} - \\text{(# constraints)} \\times \\text{(# knots)} = (K + 1)4 - 3K = 4 + K\\)"
+    "text": "Degrees of Freedom\n\nWith degree \\(d\\) and \\(K\\) knots,\n\n\\[\\text{df} = K + d + 1\\]\n\n\n\nSo what is the degrees of freedom of cubic splines?\n\n\nWith degree \\(d\\) and \\(K\\) knots,\n\n\\[\\begin{align} \\text{df} &= \\text{(# regions)} \\times \\text{(# coefficients)} - \\text{(# constraints)} \\times \\text{(# knots)}\\\\\n&=(K + 1)(d + 1) - dK\\\\\n&= K + d + 1 \\end{align} \\]\n\n. . .\n\n\nCubic splines:\n\nWe have 3 constraints:\n\ncontinuity \\(f(\\xi ^ {-}) = f(\\xi ^ {+})\\)\n\n1st derivative \\(f'(\\xi ^ {-}) = f'(\\xi ^ {+})\\)\n\n2nd derivative \\(f''(\\xi ^ {-}) = f''(\\xi ^ {+})\\)\n\n\n\\(\\text{df} = \\text{(# regions)} \\times \\text{(# coef)} - \\text{(# constraints)} \\times \\text{(# knots)} = (K + 1)4 - 3K = 4 + K\\)"
   },
   {
     "objectID": "slides/07-splines.html#cubic-splines-1",
@@ -2153,7 +2139,7 @@
     "href": "slides/07-splines.html#natural-splines",
     "title": "Splines and General Additive Models 〰️",
     "section": "Natural Splines",
-    "text": "Natural Splines\n\nSplines1 tends to produce erratic and undesirable results near the boundaries, and huge variance at the outer range of the predictors.\n\n\n\nA natural spline is a regression spline with additional boundary constraints:\n\nThe natural function is linear at the boundary (in the region where \\(X\\) is smaller than the smallest knot, or larger than the largest knot).\n\n\n\n\n\n\n\nNatural splines generally produce more stable estimates at the boundaries.\nAssuming linearity near the boundary is reasonable since there is less information available there.\n\n\nsplines::ns()\n\n\n\n\nNatural Cubic Spline (NCS) forces the 2nd and 3rd derivatives to be zero at the boundaries.\nThe constraints frees up 4 dfs.\nThe df of NCS is \\(K\\).\n\n\nEspecially for high-degree polynomials."
+    "text": "Natural Splines\n\nSplines1 tends to produce erratic and undesirable results near the boundaries, and huge variance at the outer range of the predictors.\n\n\n\nA natural spline is a regression spline with additional boundary constraints:\n\nThe spline function is linear at the boundary (in the region where \\(X\\) is smaller than the smallest knot, or larger than the largest knot).\n\n\n\n\n\n\n\nNatural splines generally produce more stable estimates at the boundaries.\nAssuming linearity near the boundary is reasonable since there is less information available there.\n\n\nsplines::ns()\n\n\n\n\nNatural Cubic Spline (NCS) forces the 2nd and 3rd derivatives to be zero at the boundaries.\nThe constraints frees up 4 dfs.\nThe df of NCS is \\(K\\).\n\n\nEspecially for high-degree polynomials."
   },
   {
     "objectID": "slides/07-splines.html#spline-and-natural-spline-comparison",
@@ -2163,18 +2149,11 @@
     "text": "Spline and Natural Spline Comparison\n\nCubic Spline vs. Natural Cubic Spline with the same degrees of freedom 6."
   },
   {
-    "objectID": "slides/07-splines.html#b-splines-basis-functions",
-    "href": "slides/07-splines.html#b-splines-basis-functions",
-    "title": "Splines and General Additive Models 〰️",
-    "section": "\nB-Splines Basis Functions",
-    "text": "B-Splines Basis Functions\n\nB-splines use a different basis representation for regression splines.\n\n\n\n\nbs(x, df = NULL, knots = NULL, \n   degree = 3, intercept = FALSE)\n\n\n\ndf: the number of basis\n\nknots: the quantiles of \\(x\\)\n\n\n\n\n\n\n\n\n\n\n\n\nns(x, df = NULL, knots = NULL, \n   degree = 3, intercept = FALSE)\n\n\n\ndf: the number of basis\n\nknots: the quantiles of \\(x\\)\n\n\n\n\n\n\n\n\n\n\n\n\nB-splines is more computationally efficient"
-  },
-  {
     "objectID": "slides/07-splines.html#practical-issues",
     "href": "slides/07-splines.html#practical-issues",
     "title": "Splines and General Additive Models 〰️",
     "section": "Practical Issues",
-    "text": "Practical Issues\n\n\nHow many knots should we use\n\n\nAs few knots as possible, with at least 5 data points per segment (Wold, 1974)\nCross-validation: e.g., choose the \\(K\\) giving the smallest \\(MSE_{CV}\\)\n\n\n\n\n\n\nWhere to place the knots\n\n\nNo more than one extreme or inflection point per segment (Wold, 1974)\nIf possible, the extreme points should be centered in the segment\n\nMore knots in places where the function might vary most rapidly, and fewer knots where it seems more stable\nPlace knots in a uniform fashion\n\nSpecify the desired df, and have the software place the corresponding number of knots at uniform quantiles of the data (bs(), ns())\n\n\n\n\n\n\n\nWhat is the degree of functions in each region\n\nUse \\(d < 4\\) to avoid overly flexible curve fitting\nCubic spline is popular\n\n\n\nToo many knots can overfit Regression splines often give superior results to polynomial regression"
+    "text": "Practical Issues\n\n\nHow many knots should we use\n\n\nAs few knots as possible, with at least 5 data points per segment (Wold, 1974)\nCross-validation: e.g., choose the \\(K\\) giving the smallest \\(MSE_{CV}\\)\n\n\n\n\n\n\nWhere to place the knots\n\n\nNo more than one extreme or inflection point per segment (Wold, 1974)\nIf possible, the extreme points should be centered in the segment\n\nMore knots in places where the function might vary most rapidly, and fewer knots where it seems more stable\nPlace knots in a uniform fashion\n\nSpecify the desired df, and have the software place the corresponding number of knots at uniform quantiles of the data (bs(), ns())\n\n\n\n\n\n\n\nDegree of functions in each region\n\nUse \\(d < 4\\) to avoid overly flexible curve fitting\nCubic spline is popular\n\n\n\nToo many knots can overfit Regression splines often give superior results to polynomial regression"
   },
   {
     "objectID": "slides/07-splines.html#roughness-penalty-approach",
@@ -2188,14 +2167,14 @@
     "href": "slides/07-splines.html#roughness-penalty-approach-1",
     "title": "Splines and General Additive Models 〰️",
     "section": "Roughness Penalty Approach",
-    "text": "Roughness Penalty Approach\n\\[\\begin{equation} \\min_{g} \\sum_{i=1}^n \\left( y_i - g(x_i) \\right)^2 + \\lambda \\int g''(t)^2 \\, dt \\end{equation}\\]\n\nHow \\(\\lambda\\) affects the shape of \\(g(x)\\)?\n\n\nThe smaller \\(\\lambda\\) is, the more wiggly \\(g(x)\\) is, eventually interpolating \\(y_i\\) when \\(\\lambda = 0\\).\nAs \\(\\lambda \\rightarrow \\infty\\), \\(g(x)\\) becomes linear.\nThe function \\(g\\) that minimizes the objective is known as a smoothing spline.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe solution \\(\\hat{g}\\) is a natural cubic spline, with knots at \\(x_1, x_2, \\dots , x_n\\)!\nBut, it is not the same NCS gotten from the basis function approach.\nIt is a shrunken version where \\(\\lambda\\) controls the level of shrinkage."
+    "text": "Roughness Penalty Approach\n\\[\\begin{equation} \\min_{g} \\sum_{i=1}^n \\left( y_i - g(x_i) \\right)^2 + \\lambda \\int g''(t)^2 \\, dt \\end{equation}\\]\n\nHow \\(\\lambda\\) affects the shape of \\(g(x)\\)?\n\n\nThe smaller \\(\\lambda\\) is, the more wiggly \\(g(x)\\) is, eventually interpolating \\(y_i\\) when \\(\\lambda = 0\\).\nAs \\(\\lambda \\rightarrow \\infty\\), \\(g(x)\\) becomes linear.\nThe function \\(g\\) that minimizes the objective is known as a smoothing spline.\n\n\n\n\n\n\n\n\nNote\n\n\n\n\nThe solution \\(\\hat{g}\\) is a natural cubic spline, with knots at \\(x_1, x_2, \\dots , x_n\\)!\nBut, it is not the same NCS gotten from the basis function approach.\nIt is a shrunken version where \\(\\lambda\\) controls the level of shrinkage.\nIts effective df is less than \\(n\\)."
   },
   {
     "objectID": "slides/07-splines.html#properties-of-smoothing-splines",
     "href": "slides/07-splines.html#properties-of-smoothing-splines",
     "title": "Splines and General Additive Models 〰️",
     "section": "Properties of Smoothing splines",
-    "text": "Properties of Smoothing splines\n\nSmoothing splines avoid the knot-selection issue, leaving a single \\(\\lambda\\) to be chosen.\n\n\n\nLinear regression\n\n\\(\\hat{\\mathbf{y}} = \\bf H \\mathbf{y}\\) where \\(\\bf H\\) is the hat matrix\nThe degrees of freedom \\((\\text{# coef})\\) is \\[p = \\sum_{i=1}^n {\\bf H}_{ii}\\]\nPRESS for model selection\n\n\\[\\begin{align} PRESS &= \\sum_{i = 1}^n \\left( y_i - \\hat{y}_i^{(-i)}\\right)^2 \\\\\n&= \\sum_{i = 1}^n \\left[ \\frac{y_i - \\hat{y}_i}{1 - {\\bf H}_{ii}}\\right]^2\\end{align}\\]\n\nSmoothing splines\n\n\\(\\hat{\\mathbf{g}}_{\\lambda} = {\\bf S}_{\\lambda} \\mathbf{y}\\) where \\(\\bf {\\bf S}_{\\lambda}\\) is the smoother matrix.\nThe effective degrees of freedom \\((\\text{# coef})\\) is \\[df_{\\lambda} = \\sum_{i=1}^n \\{{\\bf S}_{\\lambda}\\}_{ii} \\in (0, n)\\]\nLOOCV for choosing \\(\\lambda\\)1\n\n\\[\\begin{align} (SS_{res})_{CV}(\\lambda) &= \\sum_{i = 1}^n \\left( y_i - \\hat{g}_{\\lambda}^{(-i)}(x_i)\\right)^2 \\\\\n&= \\sum_{i = 1}^n \\left[ \\frac{y_i - \\hat{g}_{\\lambda}(x_i)}{1 - \\{{\\bf S}_{\\lambda}\\}_{ii}}\\right]^2 \\end{align}\\]\n\n\nGCV can be used too."
+    "text": "Properties of Smoothing splines\n\nSmoothing splines avoid the knot-selection issue, leaving a single \\(\\lambda\\) to be chosen.\n\n\n\nLinear regression\n\n\\(\\hat{\\mathbf{y}} = \\bf H \\mathbf{y}\\) where \\(\\bf H\\) is the hat matrix\nThe degrees of freedom \\((\\text{# coef})\\) is \\[p = \\sum_{i=1}^n {\\bf H}_{ii}\\]\nPRESS for model selection\n\n\\[\\begin{align} PRESS &= \\sum_{i = 1}^n \\left( y_i - \\hat{y}_i^{(-i)}\\right)^2 \\\\\n&= \\sum_{i = 1}^n \\left[ \\frac{y_i - \\hat{y}_i}{1 - {\\bf H}_{ii}}\\right]^2\\end{align}\\]\n\nSmoothing splines\n\n\\(\\hat{\\mathbf{g}}_{\\lambda} = {\\bf S}_{\\lambda} \\mathbf{y}\\) where \\(\\bf {\\bf S}_{\\lambda}\\) is the smoother matrix.\nThe effective degrees of freedom \\((\\text{# coef})\\) is \\[df_{\\lambda} = \\sum_{i=1}^n \\{{\\bf S}_{\\lambda}\\}_{ii} \\in [2, n]\\]\nLOOCV for choosing \\(\\lambda\\)1\n\n\\[\\begin{align} (SS_{res})_{CV}(\\lambda) &= \\sum_{i = 1}^n \\left( y_i - \\hat{g}_{\\lambda}^{(-i)}(x_i)\\right)^2 \\\\\n&= \\sum_{i = 1}^n \\left[ \\frac{y_i - \\hat{g}_{\\lambda}(x_i)}{1 - \\{{\\bf S}_{\\lambda}\\}_{ii}}\\right]^2 \\end{align}\\]\n\n\nGCV can be used too."
   },
   {
     "objectID": "slides/07-splines.html#smooth.spline",
@@ -2230,28 +2209,7 @@
     "href": "slides/07-splines.html#gamgam",
     "title": "Splines and General Additive Models 〰️",
     "section": "gam::gam()",
-    "text": "gam::gam()\n\nlibrary(gam)\ngam.m3 <- gam(wage ~ s(year, df = 4) + s(age , df = 5) + education,\n              data = Wage)\n\n\ns() for smoothing splines\nCoefficients not that interesting; fitted functions are.\n\n\nupper and lower pointwise twice-standard-error curves are included\nThe left-hand panel indicates that holding age and education fixed, wage tends to increase slightly with year; this may be due to inflation. The center panel indicates that holding education and year fixed, wage tends to be highest for intermediate values of age, and lowest for the very young and very old."
-  },
-  {
-    "objectID": "slides/07-splines.html#gam-fitting",
-    "href": "slides/07-splines.html#gam-fitting",
-    "title": "Splines and General Additive Models 〰️",
-    "section": "GAM fitting",
-    "text": "GAM fitting\n\nNatural splines lm(wage ~ ns(year, df = 5) + ns(age, df = 5) + education)\nCan mix terms, e.g., smoothing splines and local regression\n\ngam(wage ~ s(year, df = 5) + lo(age, span = .5) + education)\n\nCan add interactions, e.g. ns(age, df = 5):ns(year, df = 5)\nUse anova() to compare models."
-  },
-  {
-    "objectID": "slides/07-splines.html#summary-of-gams",
-    "href": "slides/07-splines.html#summary-of-gams",
-    "title": "Splines and General Additive Models 〰️",
-    "section": "Summary of GAMs",
-    "text": "Summary of GAMs\n\nAllow to fit a non-linear \\(f_j\\) to each \\(X_j\\), so that we can automatically model non-linear relationships that standard linear regression will miss.\nNo need to manually try out many different transformations on each variable individually.\nThe non-linear fits can potentially make more accurate predictions for the response.\nThe smoothness of the function \\(f_j\\) for the variable \\(X_j\\) can be summarized via degrees of freedom.\nThe model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting.\n\n\nBecause the model is additive, we can examine the effect of each \\(X_j\\) on \\(Y\\) individually while holding all of the other variables fixed.\nThe smoothness of the function \\(f_j\\) for the variable \\(X_j\\) can be summarized via degrees of freedom."
-  },
-  {
-    "objectID": "slides/07-splines.html#other-topics",
-    "href": "slides/07-splines.html#other-topics",
-    "title": "Splines and General Additive Models 〰️",
-    "section": "Other Topics",
-    "text": "Other Topics\n\nBasis spline (B-spline) definition (de Boor, 1978): more computationally efficient\nAlgorithms for fitting GAMs using smoothing splines: Backfitting, ISL Sec 7.9 Exercise 11.\nGAMs for binary response and classification.\nMultivariate Adaptive Regression Splines (MARS)\n\nHow many knots should be used Where to place the knots What is the degree of functions in each region\nwe can control that using the df parameter. We use a total of 6 parameters, chosen by the function automatically. However, this does not seems to perform better than the knots we implemented. The choice of knots can be crucial.\n\n\n\nmssc6250-s24.github.io/website"
+    "text": "gam::gam()\n\nlibrary(gam)\ngam.m3 <- gam(wage ~ s(year, df = 4) + s(age , df = 5) + education,\n              data = Wage)\n\n\ns() for smoothing splines\nCoefficients not that interesting; fitted functions are.\n\n\n\n\n\n\n\n\n\nupper and lower pointwise twice-standard-error curves are included\nThe left-hand panel indicates that holding age and education fixed, wage tends to increase slightly with year; this may be due to inflation. The center panel indicates that holding education and year fixed, wage tends to be highest for intermediate values of age, and lowest for the very young and very old.\n\nBecause the model is additive, we can examine the effect of each \\(X_j\\) on \\(Y\\) individually while holding all of the other variables fixed.\nAllow to fit a non-linear \\(f_j\\) to each \\(X_j\\), so that we can automatically model non-linear relationships that standard linear regression will miss.\nNo need to manually try out many different transformations on each variable individually.\nThe non-linear fits can potentially make more accurate predictions for the response.\nThe smoothness of the function \\(f_j\\) for the variable \\(X_j\\) can be summarized via degrees of freedom.\nThe model is additive. For fully general models, we look for more flexible approaches such as random forests and boosting.\n\n\n\nmssc6250-s24.github.io/website"
   },
   {
     "objectID": "slides/04-linear-reg.html#linear-regression",
