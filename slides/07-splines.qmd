@@ -132,11 +132,11 @@ knitr::knit_hooks$set(output = function(x, options) {
 . . .
 
 - Popular methods
-  + [Polynominal regression (MSSC 5780, ISL  7.1)](https://math4780-f23.github.io/website/slides/11-poly-reg.html#/title-slide)
-  + [Piecewise regression (MSSC 5780, ISL 7.3, 7.4)](https://math4780-f23.github.io/website/slides/11-poly-reg.html#/piecewise-polynomial-regression)
-  + [Local regression (MSSC 5780, ISL 7.6)](https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/title-slide)
   + Basis function approach
-  + [__Regression splines__]{.green}
+    * [Polynominal regression (MSSC 5780, ISL  7.1)](https://math4780-f23.github.io/website/slides/11-poly-reg.html#/title-slide)
+    * [Piecewise regression (MSSC 5780, ISL 7.3, 7.4)](https://math4780-f23.github.io/website/slides/11-poly-reg.html#/piecewise-polynomial-regression)
+    * [__Regression splines__]{.green}
+  + [Local regression (MSSC 5780, ISL 7.6)](https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/title-slide)
   + [__Smoothing splines__]{.green}
   + [__General additive models (GAMs)__]{.green}
   
@@ -167,13 +167,16 @@ lines(x, 1 + x - x ^ 2 + 5 * x ^ 3, col = 2, lwd = 3)
 ::: notes
 - *"Bayesian Deep Learning and a Probabilistic Perspective of Generalization"* Wilson and Izmailov (2020) for the rationale of choosing a super high-order polynomial as the regression model.
 - Extra flexibility produces undesirable results at the boundaries.
+Generally speaking, it is unusual to use d greater than 3 or 4 because for large values of d, the polynomial curve can become overly flexible and can take on some very strange shapes.
+This is especially true near the boundary of the X variable.
+- centering, collinearity
 :::
 
 
 ## [Basis Function Approach](https://www.cs.princeton.edu/courses/archive/fall18/cos324/files/basis-functions.pdf)
 
 - A set of **basis functions** or transformations that can be applied to a variable $x$:$$[b_1(x), b_2(x), \dots , b_K(x)]$$
-- **Adaptive basis function model**:
+- **(Adaptive) basis function model**:
 $$y = \beta_0 + \beta_1 b_1(x) + \beta_2 b_2(x) + \cdots + \beta_K b_K(x) + \epsilon$$
 
 :::{.question}
@@ -362,10 +365,21 @@ points(c(bounds[k], bounds[k+1]),
 Any issue of piecewise polynomials?
 :::
 
+::: notes
+- Discontinuity at knots.
+- Because the regression is too flexible in some sense, allowing two different estimates at knots.
 
+:::
 
 
 # Regression Splines
+
+
+:::{style="font-size: 1.5em;"}
+
+Piecewise polynomials + Continuity/Differentiability at knots
+
+:::
 
 
 ## Splines
@@ -426,7 +440,7 @@ lines(birthrates$Year, lin_sp$fitted.values, lty = 1, col = 2, lwd = 3)
 
 - Has a different slope for each region.
 
-## Splines as Adaptive Basis Function Model {#sec-linearspline}
+## Splines as Basis Function Model {#sec-linearspline}
 
 For linear splines with 3 knots,
 
@@ -471,7 +485,7 @@ title("Linear Spline Basis Functions b2(x), b3(x), and b4(x)")
 
 
 
-## Splines as Adaptive Basis Function Model^[Besides truncated power basis, we can represent the splines using another set of basis functions, for example [B-Splines](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.) which is more computationally convenient and numerically accurate.]
+## Splines as Basis Function Model^[Besides truncated power basis, we can represent the splines using another set of basis functions, for example [B-Splines](https://en.wikipedia.org/wiki/B-spline#:~:text=A%20B%2Dspline%20function%20is,using%20a%20number%20of%20points.) which is more computationally convenient and numerically accurate.]
 
 With degree $d$ and $K$ knots, the regression spline with _first $d-1$ derivatives being continuous_ at the knots can be represented as 
 
@@ -481,7 +495,11 @@ where
 
 - $b_j(x) = x^j, j = 1, 2, \dots, d$
 
-- $b_{d+k} = (x - \xi_k)^{d}_+, k = 1, \dots, K$
+- $b_{d+k} = (x - \xi_k)^{d}_+, k = 1, \dots, K$ where 
+$$(x - \xi_k)^d_+=\begin{cases}
+    (x - \xi_k)^d & \quad \text{if }x > \xi_k\\
+    0  & \quad \text{otherwise} 
+  \end{cases}$$
 
 
 ::: {.question}
@@ -543,7 +561,9 @@ $$\begin{align}
 :::
 
 
-
+::: notes
+talk about effective df, so that we know the model flexibility and complexity of a regression spline model
+:::
 
 ## Degrees of Freedom
 

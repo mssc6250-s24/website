@@ -412,11 +412,14 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <ul>
 <li>Popular methods
 <ul>
+<li>Basis function approach
+<ul>
 <li><a href="https://math4780-f23.github.io/website/slides/11-poly-reg.html#/title-slide">Polynominal regression (MSSC 5780, ISL 7.1)</a></li>
 <li><a href="https://math4780-f23.github.io/website/slides/11-poly-reg.html#/piecewise-polynomial-regression">Piecewise regression (MSSC 5780, ISL 7.3, 7.4)</a></li>
-<li><a href="https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/title-slide">Local regression (MSSC 5780, ISL 7.6)</a></li>
-<li>Basis function approach</li>
 <li><span class="green"><strong>Regression splines</strong></span></li>
+</ul>
+</li>
+<li><a href="https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/title-slide">Local regression (MSSC 5780, ISL 7.6)</a></li>
 <li><span class="green"><strong>Smoothing splines</strong></span></li>
 <li><span class="green"><strong>General additive models (GAMs)</strong></span></li>
 </ul>
@@ -435,7 +438,8 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <aside class="notes"><ul>
 <li>
 <em>“Bayesian Deep Learning and a Probabilistic Perspective of Generalization”</em> Wilson and Izmailov (2020) for the rationale of choosing a super high-order polynomial as the regression model.</li>
-<li>Extra flexibility produces undesirable results at the boundaries.</li>
+<li>Extra flexibility produces undesirable results at the boundaries. Generally speaking, it is unusual to use d greater than 3 or 4 because for large values of d, the polynomial curve can become overly flexible and can take on some very strange shapes. This is especially true near the boundary of the X variable.</li>
+<li>centering, collinearity</li>
 </ul><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -451,7 +455,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li>A set of <strong>basis functions</strong> or transformations that can be applied to a variable <span class="math inline">\(x\)</span>:<span class="math display">\[[b_1(x), b_2(x), \dots , b_K(x)]\]</span>
 </li>
 <li>
-<strong>Adaptive basis function model</strong>: <span class="math display">\[y = \beta_0 + \beta_1 b_1(x) + \beta_2 b_2(x) + \cdots + \beta_K b_K(x) + \epsilon\]</span>
+<strong>(Adaptive) basis function model</strong>: <span class="math display">\[y = \beta_0 + \beta_1 b_1(x) + \beta_2 b_2(x) + \cdots + \beta_K b_K(x) + \epsilon\]</span>
 </li>
 </ul>
 <div class="question">
@@ -628,8 +632,23 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="question">
 <p>Any issue of piecewise polynomials?</p>
 </div>
-</section></section><section><section id="regression-splines" class="title-slide slide level1 center"><h1>Regression Splines</h1>
-
+<aside class="notes"><ul>
+<li>Discontinuity at knots.</li>
+<li>Because the regression is too flexible in some sense, allowing two different estimates at knots.</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section></section><section><section id="regression-splines" class="title-slide slide level1 center"><h1>Regression Splines</h1>
+<div style="font-size: 1.5em;">
+<p>Piecewise polynomials + Continuity/Differentiability at knots</p>
+</div>
 </section><section id="splines" class="slide level2"><h2>Splines</h2>
 <p><strong>Splines</strong> of degree <span class="math inline">\(d\)</span> are <em>smooth piecewise polynomials</em> of degree <span class="math inline">\(d\)</span> with <strong>continuity in derivatives</strong> (smoothing) up to degree <span class="math inline">\(d-1\)</span> <em>at each knot</em>.</p>
 <div class="fragment">
@@ -675,7 +694,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li><p>The function is continuous everywhere, also at knots <span class="math inline">\(\xi_1, \xi_2,\)</span> and <span class="math inline">\(\xi_3\)</span>, i.e.&nbsp;<span class="math inline">\(f_{k}(\xi_k^-) = f_{k+1}(\xi_k^+)\)</span>.</p></li>
 <li><p>Linear everywhere except <span class="math inline">\(\xi_1, \xi_2,\)</span> and <span class="math inline">\(\xi_3\)</span>.</p></li>
 <li><p>Has a different slope for each region.</p></li>
-</ul></section><section id="sec-linearspline" class="slide level2"><h2>Splines as Adaptive Basis Function Model</h2>
+</ul></section><section id="sec-linearspline" class="slide level2"><h2>Splines as Basis Function Model</h2>
 <p>For linear splines with 3 knots,</p>
 <p><span class="math display">\[\begin{align}
 b_1(x) &amp;= x\\
@@ -697,14 +716,17 @@ b_4(x) &amp;= (x - \xi_3)_+
 \end{align}\]</span></p>
 </section><section id="linear-splines-basis-functions" class="slide level2"><h2>Linear Splines Basis Functions</h2>
 
-<img data-src="images/07-splines/unnamed-chunk-11-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="splines-as-adaptive-basis-function-model" class="slide level2"><h2>Splines as Adaptive Basis Function Model<sup>1</sup>
+<img data-src="images/07-splines/unnamed-chunk-11-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="splines-as-basis-function-model" class="slide level2"><h2>Splines as Basis Function Model<sup>1</sup>
 </h2>
 <p>With degree <span class="math inline">\(d\)</span> and <span class="math inline">\(K\)</span> knots, the regression spline with <em>first <span class="math inline">\(d-1\)</span> derivatives being continuous</em> at the knots can be represented as</p>
 <p><span class="math display">\[\begin{align} y &amp;= \beta_0 + \beta_1 b_1(x) + \beta_2 b_2(x) + \dots + \beta_d b_d(x) + \beta_{d+1}b_{d+1}(x) + \dots + \beta_{d+K}b_{d+K}(x) + \epsilon
 \end{align}\]</span> where</p>
 <ul>
 <li><p><span class="math inline">\(b_j(x) = x^j, j = 1, 2, \dots, d\)</span></p></li>
-<li><p><span class="math inline">\(b_{d+k} = (x - \xi_k)^{d}_+, k = 1, \dots, K\)</span></p></li>
+<li><p><span class="math inline">\(b_{d+k} = (x - \xi_k)^{d}_+, k = 1, \dots, K\)</span> where <span class="math display">\[(x - \xi_k)^d_+=\begin{cases}
+  (x - \xi_k)^d &amp; \quad \text{if }x &gt; \xi_k\\
+  0  &amp; \quad \text{otherwise}
+\end{cases}\]</span></p></li>
 </ul>
 <div class="question">
 <p>Can you write the model with <span class="math inline">\(d = 2\)</span> and <span class="math inline">\(K = 3\)</span>?</p>
@@ -758,6 +780,18 @@ b_4(x) &amp;= (x - \xi_3)_+
 \beta_{03} + \beta_{13}1978 &amp;= \beta_{04} + \beta_{14}1978
 \end{align}\]</span></p>
 </div>
+<aside class="notes"><p>talk about effective df, so that we know the model flexibility and complexity of a regression spline model</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 </section><section id="degrees-of-freedom-1" class="slide level2"><h2>Degrees of Freedom</h2>
 <ul>
