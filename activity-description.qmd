@@ -3,7 +3,7 @@ title: "Class activity description"
 date-modified: last-modified
 ---
 
-<!-- This class activity guideline was last updated on {{< meta date-modified >}} -->
+This class activity guideline was last updated on {{< meta date-modified >}}. The revised parts are colored in [blue]{.blue}.
 
 ## Date
 
@@ -22,14 +22,16 @@ On each class activity day, students are learning from each other through discus
     -   prepare the discussion materials
     -   present and teach the topic to the group
     -   prepare at least one learning activity for the topic (e.g. Q & A, little games, coding practice, etc)
-    -   nominate **two** students that are mostly engaged
+    -   [**(optional)** nominate **one** to **three** students that are most engaged. Note that you two leaders **make one single decision and jointly nominate members**.]{.blue}
 
 -   The group members need to
 
     -   learn the topic being discussed
     -   participate the learning activities designed by the leaders
     -   evaluate the leaders' performance
-
+    -   [nominate the best leader]{.blue}
+    
+    
 <!-- -   Each presenter should prepare *at least* **two non-Yes-No** questions for all participants to answer. -->
 
 <!-- -   **Each of the [three assigned MATH 4780](activity-work.html)** students should ask either one or both presenters *at least one* **non-Yes-No** question. -->
@@ -62,11 +64,16 @@ There are 200 points for class participation in the final grade calculation. Eve
     -   Knowledge check performance (25 pts)
     
     The followings are evaluated by the group members
-    -   Quality of discussion materials (25 pts)
+    -   Quality of discussion materials (20 pts)
     -   Oral presentation and communication skills (20 pts)
     -   Learning activity design (10 pts)
+    -   [Individual performance (5 pts)]{.blue}
+        * [The nomineed best leader receives 5 pts. The other receives 3 pts.]{.blue}
+        * [If there is tie, both receive 4 pts.]{.blue}
     
 -   **Group members** (**40 pts**)
 
     -   Knowledge check performance (25 pts)
-    -   Activity engagement (15 pts): The most engaged members get 15 pts. Others get 12 pts.
+    -   Activity engagement (15 pts)
+        * The most engaged nominees get 15 pts. Others get 12 pts.
+        * [If there is no nomination, all memebers receive 14 pts.]{.blue}

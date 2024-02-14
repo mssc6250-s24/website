@@ -39,11 +39,6 @@ What is bootstrapping? Why do we use bootstrapping? Please explain it and show h
 
 Course slides [Simulation-based Inference](https://math4780-f23.github.io/website/slides/11-bootstrap.html#/title-slide) could be helpful. Please collect and prepare your own materials.
 
-### Knowledge Check
-
-Please answer the questions at \[Link will be provided\].
-
-
 ### Group 1
 
 ```{r}
@@ -79,6 +74,18 @@ act1$G2_leader
 #| echo: false
 act1$G2_member
 ```
+
+
+### Knowledge Check
+
+Please go to [link] to answer the knowledge check questions.
+
+### Evaluation
+
+For *leaders*, please go to <https://forms.office.com/r/D2RPbi5VK2> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
+
+For *group members*, please go to <https://forms.office.com/r/WUCKQNJ3Sd> to evaluate your leaders' performance.
+
 
 ## Class activity 2
 
