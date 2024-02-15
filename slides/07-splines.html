@@ -687,7 +687,8 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 </div>
 </section><section id="splinesbs" class="slide level2"><h2><code>splines::bs()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>lin_sp <span class="ot">&lt;-</span> <span class="fu">lm</span>(Birthrate <span class="sc">~</span> splines<span class="sc">::</span><span class="fu">bs</span>(Year, <span class="at">degree =</span> <span class="dv">1</span>, <span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">1936</span>, <span class="dv">1960</span>, <span class="dv">1978</span>)), </span>
+<span id="cb3-2"><a href="#cb3-2"></a>             <span class="at">data =</span> birthrates)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="images/07-splines/unnamed-chunk-10-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><ul>
@@ -950,6 +951,21 @@ b_4(x) &amp;= (x - \xi_3)_+
 </blockquote>
 </div>
 </div>
+<aside class="notes"><ul>
+<li>2nd term: penalizes the variability in g</li>
+<li>the second derivative of a function is a measure of its roughness</li>
+<li>the integral simply a measure of the total change in the function g′(t), over its entire range</li>
+</ul><style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 </section><section id="roughness-penalty-approach-1" class="slide level2"><h2>Roughness Penalty Approach</h2>
 <p><span class="math display">\[\begin{equation} \min_{g} \sum_{i=1}^n \left( y_i - g(x_i) \right)^2 + \lambda \int g''(t)^2 \, dt \end{equation}\]</span></p>
@@ -1039,7 +1055,8 @@ b_4(x) &amp;= (x - \xi_3)_+
           display:block!important;
       }</style></aside></section><section id="smooth.spline-1" class="slide level2"><h2><code>smooth.spline()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">smooth.spline</span>(birthrates<span class="sc">$</span>Year, birthrates<span class="sc">$</span>Birthrate,</span>
+<span id="cb11-2"><a href="#cb11-2"></a>                     <span class="at">df =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="images/07-splines/unnamed-chunk-21-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section></section><section><section id="generalized-additive-models" class="title-slide slide level1 center"><h1>Generalized Additive Models</h1>

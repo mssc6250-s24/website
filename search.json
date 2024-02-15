@@ -452,7 +452,7 @@
     "href": "activity-work.html#class-activity-1",
     "title": "Class activity work",
     "section": "Class activity 1",
-    "text": "Class activity 1\n\nTopic: Bootstrapping\nWhat is bootstrapping? Why do we use bootstrapping? Please explain it and show how it can be used in simple linear regression, including code demo.\n\n\nResources\nCourse slides Simulation-based Inference could be helpful. Please collect and prepare your own materials.\n\n\nGroup 1\n\n\nCode\nact1 <- generate_group(all = students, leader_can = students, seed = 6250)\n\n\n\nLeaders:\n\n\n[1] \"Dibaloke\" \"Mark\"    \n\n\n\n\nMembers:\n\n\n[1] \"Emily\"    \"Jennifer\" \"Alberto\"  \"Clint\"    \"Kathryn\"  \"David\"   \n\n\n\n\n\nGroup 2\n\nLeaders:\n\n\n[1] \"Caldwell\" \"Tedi\"    \n\n\n\n\nMembers:\n\n\n[1] \"Eimienwanlan\" \"Edward\"       \"Adam\"         \"Josh\"         \"Brigida\"     \n\n\n\n\n\nKnowledge Check\nPlease go to [link] to answer the knowledge check questions.\n\n\nEvaluation\nFor leaders, please go to https://forms.office.com/r/D2RPbi5VK2 to nominate most engaged members. Note that you two leaders make one single decision and nominate members jointly.\nFor group members, please go to https://forms.office.com/r/WUCKQNJ3Sd to evaluate your leaders’ performance."
+    "text": "Class activity 1\n\nTopic: Bootstrapping\nWhat is bootstrapping? Why do we use bootstrapping? Please explain it and show how it can be used in simple linear regression, including code demo.\n\n\nResources\nCourse slides Simulation-based Inference could be helpful. Please collect and prepare your own materials.\n\n\nGroup 1\n\n\nCode\nact1 <- generate_group(all = students, leader_can = students, seed = 6250)\n\n\n\nLeaders:\n\n\n[1] \"Dibaloke\" \"Mark\"    \n\n\n\n\nMembers:\n\n\n[1] \"Emily\"    \"Jennifer\" \"Alberto\"  \"Clint\"    \"Kathryn\"  \"David\"   \n\n\n\n\n\nGroup 2\n\nLeaders:\n\n\n[1] \"Caldwell\" \"Tedi\"    \n\n\n\n\nMembers:\n\n\n[1] \"Eimienwanlan\" \"Edward\"       \"Adam\"         \"Josh\"         \"Brigida\"     \n\n\n\n\n\nKnowledge Check\nPlease go to [link] to answer the knowledge check questions.\n\n\n\nEvaluation\nFor leaders, please go to https://forms.office.com/r/D2RPbi5VK2 to nominate most engaged members. Note that you two leaders make one single decision and nominate members jointly.\nFor group members, please go to https://forms.office.com/r/WUCKQNJ3Sd to evaluate your leaders’ performance."
   },
   {
     "objectID": "activity-work.html#class-activity-2",
@@ -508,7 +508,7 @@
     "href": "activity-description.html",
     "title": "Class activity description",
     "section": "",
-    "text": "This class activity guideline was last updated on February 14, 2024. The revised parts are colored in blue."
+    "text": "This class activity guideline was last updated on February 15, 2024. The revised parts are colored in blue."
   },
   {
     "objectID": "activity-description.html#date",
@@ -543,7 +543,7 @@
     "href": "activity-description.html#evaluation",
     "title": "Class activity description",
     "section": "Evaluation",
-    "text": "Evaluation\nThere are 200 points for class participation in the final grade calculation. Every student will serve as a discussion leader one time, and a group member three times.\n\nDiscussion leaders (80 pts)\n\nKnowledge check performance (25 pts)\n\nThe followings are evaluated by the group members\n\nQuality of discussion materials (20 pts)\nOral presentation and communication skills (20 pts)\nLearning activity design (10 pts)\nIndividual performance (5 pts)\n\nThe nomineed best leader receives 5 pts. The other receives 3 pts.\nIf there is tie, both receive 4 pts.\n\n\nGroup members (40 pts)\n\nKnowledge check performance (25 pts)\nActivity engagement (15 pts)\n\nThe most engaged nominees get 15 pts. Others get 12 pts.\nIf there is no nomination, all memebers receive 14 pts."
+    "text": "Evaluation\nThere are 200 points for class participation in the final grade calculation. Every student will serve as a discussion leader one time, and a group member three times.\n\nDiscussion leaders (80 pts)\n\nKnowledge check performance (25 pts)\n\nThe followings are evaluated by the group members and Dr. Yu.\n\nQuality of discussion materials (20 pts)\nOral presentation and communication skills (20 pts)\nLearning activity design (10 pts)\nIndividual performance (5 pts)\n\nThe nomineed best leader receives 5 pts. The other receives 3 pts.\nIf there is tie, both receive 4 pts.\n\n\nGroup members (40 pts)\n\nKnowledge check performance (25 pts)\nActivity engagement (15 pts)\n\nThe most engaged nominees get 15 pts. Others get 12 pts.\nIf there is no nomination, all memebers receive 14 pts."
   },
   {
     "objectID": "course-overview.html",
@@ -2090,7 +2090,7 @@
     "href": "slides/07-splines.html#splinesbs",
     "title": "Splines and General Additive Models 〰️",
     "section": "splines::bs()",
-    "text": "splines::bs()\n\npar(mar = c(2,2,2,0))\n\n\n\nThe function is continuous everywhere, also at knots \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\), i.e. \\(f_{k}(\\xi_k^-) = f_{k+1}(\\xi_k^+)\\).\nLinear everywhere except \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\).\nHas a different slope for each region."
+    "text": "splines::bs()\n\nlin_sp <- lm(Birthrate ~ splines::bs(Year, degree = 1, knots = c(1936, 1960, 1978)), \n             data = birthrates)\n\n\n\nThe function is continuous everywhere, also at knots \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\), i.e. \\(f_{k}(\\xi_k^-) = f_{k+1}(\\xi_k^+)\\).\nLinear everywhere except \\(\\xi_1, \\xi_2,\\) and \\(\\xi_3\\).\nHas a different slope for each region."
   },
   {
     "objectID": "slides/07-splines.html#sec-linearspline",
@@ -2167,7 +2167,7 @@
     "href": "slides/07-splines.html#roughness-penalty-approach",
     "title": "Splines and General Additive Models 〰️",
     "section": "Roughness Penalty Approach",
-    "text": "Roughness Penalty Approach\n\nOur goal is inference or curve fitting rather than out of range prediction or forecasting.\nIs there a method that we can select the number and location of knots automatically?\n\nConsider this criterion for fitting a smooth function \\(g(x)\\) to some data:\n\\[\\begin{equation} \\min_{g} \\sum_{i=1}^n \\left( y_i - g(x_i) \\right)^2 + \\lambda \\int g''(t)^2 \\, dt \\end{equation}\\]\n\nThe first term is \\(SS_{res}\\), and tries to make \\(g(x)\\) match the data at each \\(x_i\\). (Goodness-of-fit)\nThe second term with \\(\\lambda \\ge 0\\) is a roughness penalty and controls how wiggly \\(g(x)\\) is.\n\n\n\n\n\nLoss + Penalty"
+    "text": "Roughness Penalty Approach\n\nOur goal is inference or curve fitting rather than out of range prediction or forecasting.\nIs there a method that we can select the number and location of knots automatically?\n\nConsider this criterion for fitting a smooth function \\(g(x)\\) to some data:\n\\[\\begin{equation} \\min_{g} \\sum_{i=1}^n \\left( y_i - g(x_i) \\right)^2 + \\lambda \\int g''(t)^2 \\, dt \\end{equation}\\]\n\nThe first term is \\(SS_{res}\\), and tries to make \\(g(x)\\) match the data at each \\(x_i\\). (Goodness-of-fit)\nThe second term with \\(\\lambda \\ge 0\\) is a roughness penalty and controls how wiggly \\(g(x)\\) is.\n\n\n\n\n\nLoss + Penalty\n\n\n\n\n2nd term: penalizes the variability in g\nthe second derivative of a function is a measure of its roughness\nthe integral simply a measure of the total change in the function g′(t), over its entire range"
   },
   {
     "objectID": "slides/07-splines.html#roughness-penalty-approach-1",
@@ -2195,7 +2195,7 @@
     "href": "slides/07-splines.html#smooth.spline-1",
     "title": "Splines and General Additive Models 〰️",
     "section": "smooth.spline()",
-    "text": "smooth.spline()\n\npar(mar = c(2, 2, 0, 0))"
+    "text": "smooth.spline()\n\nfit <- smooth.spline(birthrates$Year, birthrates$Birthrate,\n                     df = 15)"
   },
   {
     "objectID": "slides/07-splines.html#extending-splines-to-multiple-variables",
