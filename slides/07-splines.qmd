@@ -427,7 +427,6 @@ abline(v = myknots, lty = 2)
 
 ## `splines::bs()`
 ```{r, echo=2}
-
 par(mar = c(2,2,2,0))
 lin_sp <- lm(Birthrate ~ splines::bs(Year, degree = 1, knots = c(1936, 1960, 1978)), 
              data = birthrates)
@@ -793,6 +792,14 @@ data at each $x_i$. ([Goodness-of-fit]{.green})
 :::
 :::
 
+
+::: notes
+- 2nd term: penalizes the variability in g
+- the second derivative of a function is a measure of its roughness
+- the integral simply a measure of the total change in the function g′(t), over its entire range
+:::
+
+
 ## Roughness Penalty Approach
 $$\begin{equation} \min_{g} \sum_{i=1}^n \left( y_i - g(x_i) \right)^2 + \lambda \int g''(t)^2 \, dt \end{equation}$$
 
@@ -894,7 +901,6 @@ overfitting since the birthrate data has little variation in adjacent years
 ## `smooth.spline()`
 
 ```{r, echo=2}
-
 par(mar = c(2, 2, 0, 0))
 fit <- smooth.spline(birthrates$Year, birthrates$Birthrate,
                      df = 15)
