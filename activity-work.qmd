@@ -31,7 +31,7 @@ generate_group <- function(all, leader_can, seed,
 
 ## Class activity 1
 
-<!-- ::: {.callout collapse="true"} -->
+::: {.callout collapse="true"}
 ### Topic: Bootstrapping
 
 What is bootstrapping? Why do we use bootstrapping? Please explain it and show how it can be used in simple linear regression, including code demo.
@@ -40,11 +40,17 @@ What is bootstrapping? Why do we use bootstrapping? Please explain it and show h
 
 Course slides [Simulation-based Inference](https://math4780-f23.github.io/website/slides/11-bootstrap.html#/title-slide) could be helpful. Please collect and prepare your own materials.
 
-### Group 1
-
 ```{r}
 act1 <- generate_group(all = students, leader_can = students, seed = 6250)
 ```
+
+
+### Group 1
+
+#### [Slides](https://marq-my.sharepoint.com/:p:/g/personal/dibaloke_chanda_marquette_edu/EV8jl0O2x25Pq4WqvR11mjIBmmV04Vtigs7ygbiGlfpclg?e=8cPsz3)
+
+#### R code [example-1](./documents/act/act1_g1_ex1.R) [example-2](./documents/act/act1_g1_ex2.R)
+
 
 #### Leaders:
 
@@ -61,6 +67,8 @@ act1$G1_member
 ```
 
 ### Group 2
+
+#### [Slides](./documents/act1_g2.pdf)
 
 #### Leaders:
 
@@ -87,23 +95,77 @@ Please go to <https://forms.office.com/r/q7MXBw3raw> to answer the knowledge che
 For *leaders*, please go to <https://forms.office.com/r/D2RPbi5VK2> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
 
 For *group members*, please go to <https://forms.office.com/r/WUCKQNJ3Sd> to evaluate your leaders' performance.
-<!-- ::: -->
+:::
 
 ## Class activity 2
 
-<!-- ### Topic: Generalized Additive Models and Generalized Linear Models -->
+### Topic: Generalized Linear Models and Generalized Additive Models
 
-<!-- 1. Define Generalized Additive Models (GAMs) and Generalized Linear Models (GLMs).  -->
+::: {.callout-tip}
+Focus on the concepts and ideas, and avoid mathematical details.
+:::
 
-<!-- 2. Why consider using these models? What are the main properties of the two models? What can they do but multiple linear regression can't? -->
+1. Define Generalized Linear Models (GLMs) and Generalized Additive Models (GAMs). What are their similarities and differences?
 
-<!-- 3. Provide an example or special case of GAM and GLM. -->
+2. Why using these models? What are the main properties of the two models? What can they do but multiple linear regression can't?
 
-<!-- 4. Code demo how to run a GAM and GLM. -->
+3. Provide an example or special case of GLM and GAM.
+
+4. Code demo how to run a GLM and GAM.
+
+
+```{r}
+#| echo: false
+# leader_can <- setdiff(students, c(act1$G1_leader, act1$G2_leader))
+# act2 <- generate_group(all = students, leader_can = leader_can, seed)
+```
+
+
+
+### Group 1
+
+#### Slides
+
+#### R code
+
+#### Leaders:
+
+```{r}
+#| echo: false
+# act2$G1_leader
+```
+
+#### Members:
+
+```{r}
+#| echo: false
+# act2$G1_member
+```
+
+### Group 2
+
+#### Slides
+
+#### Leaders:
+
+```{r}
+#| echo: false
+# act2$G2_leader
+```
+
+#### Members:
+
+```{r}
+#| echo: false
+# act2$G2_member
+```
+
 
 ## Class activity 3
 
-### Topic:
+### Topic: Gaussian Process Classification
+
+
 
 ## Class activity 4
 

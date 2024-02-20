@@ -178,11 +178,11 @@ plot_beta_binomial <- function (alpha, beta, y = NULL, n = NULL, prior = TRUE, l
   
 . . .
 
-2. [An election is coming up and a pollster claims that candidate A has a 0.9 probability of winning. How do you interpret this probability?]{.green}
+2. [An election is coming up and a pollster claims that candidate Yu has a 0.9 probability of winning. How do you interpret this probability?]{.green}
 
-    a. If we observe the election over and over, candidate A will win roughly 90% of the time. 
-    b. Candidate A is much more likely to win than to lose.
-    c. The pollster’s calculation is wrong. Candidate A will either win or lose, thus their probability of winning can only be 0 or 1.
+    a. If we observe the election over and over, candidate Yu will win roughly 90% of the time. 
+    b. Candidate Yu is much more likely to win than to lose.
+    c. The pollster’s calculation is wrong. Candidate Yu will either win or lose, thus their probability of winning can only be 0 or 1.
 
 . . .
 
@@ -194,14 +194,14 @@ plot_beta_binomial <- function (alpha, beta, y = NULL, n = NULL, prior = TRUE, l
 
 3. [Two claims.]{.green}
 
-    [(1) Ben claims he can predict the coin flip outcome. To test his claim, you flip a fair coin 5 times and he correctly predicts all.]{.green} 
+    [(1) Ben claims he can predict the coin flip outcome. To test his claim, you flip a fair coin 8 times and he correctly predicts all.]{.green} 
     
-    [(2) Emily claims she can distinguish natural and artificial sweeteners. To test her claim, you give her 5 samples and she correctly identifies each.]{.green} 
+    [(2) Emma claims she can distinguish natural and artificial sweeteners. To test her claim, you give her 8 samples and she correctly identifies each.]{.green} 
     
     [In light of these experiments, what do you conclude?]{.green}
 
-    a. You're more confident in Emily's claim than Ben's claim.
-    b. The evidence supporting Ben's claim is just as strong as the evidence supporting Emily's claim.
+    a. You're more confident in Emma's claim than Ben's claim.
+    b. The evidence supporting Ben's claim is just as strong as the evidence supporting Emma's claim.
 
 . . .
 
@@ -252,11 +252,13 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/d/d4/Tho
 
 
 ## The Meaning of Probability: **Relative Frequency**
-- The *frequentist* philosophy interprets probability as the [*long-run* relative frequency of a *repeatable* experiment]{.green}.
+- The *frequentist* interprets probability as the [*long-run* relative frequency of a *repeatable* experiment]{.green}.
 
 . . .
 
-- The probability that some outcome of a process will be obtained is defined as the **relative frequency** with which that outcome would be obtained _if the process were repeated **a large number of times** independently under **similar conditions**._
+The probability that some outcome of a process will be obtained is defined as 
+
+> the **relative frequency** with which that outcome would be obtained _if the process were repeated **a large number of times** independently under **similar conditions**._
 
 . . .
 
@@ -360,6 +362,13 @@ knitr::include_graphics("./images/08-bayes/winning.jpeg")
 
 ## Everybody Changes Their Mind
 
+> How can we live if we don’t change? 
+> - Beyoncé. Lyric from “Satellites.”
+
+
+- Using **data** and **prior beliefs** to update our knowledge (**posterior**), and repeating.
+
+
 - We continuously update our knowledge about the world as we accumulate lived experiences, or *collect data*.
 
 ```{r}
@@ -370,9 +379,14 @@ knitr::include_graphics("./images/08-bayes/winning.jpeg")
 knitr::include_graphics("./images/08-bayes/restaurant_diagram.png")
 ```
 
-## Bayesian Knowledge-building Process
 
-- Using **data** and **prior beliefs** to update our knowledge (**Posterior**), and repeating.
+::: notes
+Everybody changes their mind. You likely even changed your mind in the last minute.
+For example, suppose there’s a new Italian restaurant in your town. It has a 5-star online rating and you love Italian food! Thus, prior to ever stepping foot in the restaurant, you anticipate that it will be quite delicious. On your first visit, you collect some edible data: your pasta dish arrives a soggy mess. Weighing the stellar online rating against your own terrible meal (which might have just been a fluke), you update your knowledge: this is a 3-star not 5-star restaurant. Willing to give the restaurant another chance, you make a second trip. On this visit, you’re pleased with your Alfredo and increase the restaurant’s rating to 4 stars. You continue to visit the restaurant, collecting edible data and updating your knowledge each time.
+:::
+
+
+## Bayesian Knowledge-building Process
 
 
 ```{r}
@@ -383,11 +397,15 @@ knitr::include_graphics("./images/08-bayes/bayes_diagram.png")
 ```
 
 
+::: notes
+If you’re an environmental scientist, yours might be an analysis of the human role in climate change. You don’t walk into such an inquiry without context – you carry a degree of incoming or prior information based on previous research and experience. Naturally, it’s in light of this information that you interpret new data, weighing both in developing your updated or posterior information.
+:::
+
 
 ## Frequentist Relys on (Limited) Data Only
 
-- In Question 3, in a frequentist analysis, "5 out of 5" is "5 out of 5" no matter if it's in the context of Ben's coins or Emily's sweeteners.
-  + *Equally confident* conclusions that Ben can predict coin flips and Emily can distinguish between natural and artificial sweeteners.
+- In Question 3, in a frequentist analysis, "8 out of 8" is "8 out of 8" no matter if it's in the context of Ben's coins or Emma's sweeteners.
+  + *Equally confident* conclusions that Ben can predict coin flips and Emma can distinguish between natural and artificial sweeteners.
 
 ```{r}
 #| out-width: "30%"
@@ -402,16 +420,20 @@ knitr::include_graphics("./images/08-bayes/freq_diagram.png")
 
 . . .
 
+
 - In fact, we judge their claim before evidence are collected, don't we? `r emo::ji('thinking')`
 
 . . .
 
-- Frequentist throws out all prior knowledge in favor of a mere 5 data points.
+- You probably think Ben overstates his ability but Emma's claim sounds relatively reasonable, right?
+
+
 
 
 
 ## The Bayesian Balancing
-- Ben probably overstates his ability but Emily's claim is reasonable, right?
+
+- Frequentist throws out all prior knowledge in favor of a mere 8 data points.
 
 . . .
 
@@ -429,7 +451,7 @@ knitr::include_graphics("./images/08-bayes/bayes-balance-1.png")
 :::: {.columns}
 
 ::: {.column width="80%"}
-- [*We are not stubborn!*]{.green} If Ben had correctly predicted the outcome of *1 million* coin flips, the strength of this data would far surpass that of our prior, leading to a posterior conclusion that perhaps Ben is psychic!
+- [*We are not stubborn!*]{.green} If Ben had correctly predicted the outcome of *1 million* coin flips, the strength of this data would far surpass that of our prior judgement, leading to a posterior conclusion that perhaps Ben is psychic!
 :::
 
 
@@ -454,8 +476,8 @@ knitr::include_graphics("./images/08-bayes/psychic.jpeg")
 
 In Question 4,
 
-- A Bayesian answer (a) *what's the chance that I actually have COVID?*
-- A frequentist answer (b) *if in fact I do not have COVID, what's the chance that I would’ve gotten this positive test result?*
+- Bayesians answer (a) *what's the chance that I actually have COVID?*
+- Frequentists answer (b) *if in fact I do not have COVID, what's the chance that I would’ve gotten this positive test result?*
 :::
 
 
@@ -467,27 +489,26 @@ knitr::include_graphics("./images/08-bayes/covid.jpeg")
 :::
 ::::
 
-
-. . .
-
-- $H_0$: Do not have COVID vs. $H_1$: Have COVID
-
-- A frequestist assesses *the uncertainty of the observed data in light of an assumed hypothesis* $P(Data \mid H_0)$
-
-- A Bayesian assesses *the uncertainty of the hypothesis in light of the observed data* $P(H_0 \mid Data)$
-
-
 . . .
 
 +---------------+---------------+----------------------+-------------+
 |               | Test Positive | Test Negative        | Total       |
 +===============+===============+======================+=============+
-| disease       | 3             | 1                    | 4           |
+| COVID         | 3             | 1                    | 4           |
 +---------------+---------------+----------------------+-------------+
-| no disease    | 9             | 87                   |  96         |
+| No COVID      | 9             | 87                   |  96         |
 +---------------+---------------+----------------------+-------------+
 | Total         | 12            | 88                   | 100         |
 +---------------+---------------+----------------------+-------------+
+
+
+- $H_0$: Do not have COVID vs. $H_1$: Have COVID
+
+- A frequestist assesses *the uncertainty of the observed data in light of an assumed hypothesis* $P(Data \mid H_0) = 9/96$
+
+- A Bayesian assesses *the uncertainty of the hypothesis in light of the observed data* $P(H_0 \mid Data) = 9/12$
+
+
 
 
 
@@ -520,7 +541,7 @@ data(fake_news)
 ```
 
 
-- [**Prior info**:]{.green} Our prior information suggested that 40% of the articles are fake, 
+- [**Prior info**:]{.green} 40% of the articles are fake
 
 ```{r}
 fake_news |>  
@@ -540,7 +561,7 @@ knitr::include_graphics("./images/08-bayes/fake_news.jpeg")
 
 . . .
 
-- [**Data come in**:]{.green} The usage of an `!` might seem odd for a real article. The exclamation point data is more consistent with fake news.
+- [**Data come in**:]{.green} Check several fake and real articles, and found `!` is more consistent with fake news.
 
 ```{r}
 # Tabulate exclamation usage and article type
@@ -549,6 +570,10 @@ fake_news |>
   adorn_totals("row")
 ```
 
+
+::: notes
+The usage of an `!` might seem odd for a real article. The exclamation point data is more consistent with fake news.
+:::
 
 ## Bayesian Updating Rule
 
@@ -559,7 +584,7 @@ fake_news |>
 knitr::include_graphics("./images/08-bayes/fake_news_diagram.png")
 ```
 
-- Let $F$ denote the event that *an article is fake*.
+- $F$: *an article is fake*.
 
 - The **prior probability model**
 
@@ -583,22 +608,32 @@ fake_news |>
   adorn_totals("row")
 ```
 
-- Let $D$ be the event that *an article title has exclamation mark*.
+- $D$: *an article title has exclamation mark*.
 
-- Conditional probability: $P(D \mid F) = 0.27$; $P(D \mid F^c) = 0.02$.
+- Conditional probability: $P(D \mid F) = 16/60 = 0.27$; $P(D \mid F^c) = 2/90 = 0.02$.
 
 . . .
 
-- *Opposite position*: We know the incoming article used `!` (data); we don't know whether or not the article is fake (what we want to decide).
+- [ *Opposite position*]{.green}: 
+    + Know the incoming article used `!` (observed data)
+    + Don't know whether or not the article is fake (what we want to decide).
 
 . . .
 
 - Compare $P(D \mid F)$ and $P(D \mid F^c)$ to ascertain the relative **likelihoods** of *observed data* $D$ under different scenarios of the *uncertain* article status.
 
 
+::: notes
+Since exclamation point usage is so much more likely among fake news than real news, this data provides some evidence that the article is fake
+To help distinguish this application of conditional probability calculations from that when  
+D is uncertain and F is known, we’ll utilize the following likelihood function notation.
+:::
+
+
+
 ## Likelihood Function
 ::: {.midi}
-- **Likelihood function** notation $L(\cdot\mid D)$:
+- **Likelihood function** $L(\cdot\mid D)$:
 
 
 $$L(F \mid D) = P(D \mid F) \text{ and } L(F^c \mid D) = P(D \mid F^c)$$
@@ -607,18 +642,14 @@ $$L(F \mid D) = P(D \mid F) \text{ and } L(F^c \mid D) = P(D \mid F^c)$$
 . . .
 
 ::: {.midi}
-- When $F$ is known, the *conditional probability* function $P(\cdot \mid F)$ allows us to compare the probabilities of an unknown event $D$, $D^c$, occurring with $F$: 
-
-
+- When $F$ is known, the *conditional probability* function $P(\cdot \mid F)$ compares the probabilities of an unknown event $D$, $D^c$, occurring with $F$: 
 $$P(D \mid F) \text{  vs. } P(D^c \mid F)$$
 :::
 
 . . .
 
 ::: {.midi}
-- When $D$ is known, the *likelihood function* $L(\cdot \mid D) = P(D \mid \cdot)$ allows us to evaluate the *relative compatibility* of data $D$ with $F$ or $F^c$: 
-
-
+- When $D$ is known, the *likelihood function* $L(\cdot \mid D) = P(D \mid \cdot)$ evaluates the *relative compatibility* of data $D$ with $F$ or $F^c$: 
 $$L(F \mid D) \text{  vs. } L(F^c \mid D)$$
 :::
 
@@ -641,9 +672,14 @@ $$L(F \mid D) \text{  vs. } L(F^c \mid D)$$
 - [_The likelihood function is not a probability function!_]{.green}
 
 
+
+
+
+
+
 ## Bayes' Rule
 
-$$\begin{align*} P(F \mid D) &= \frac{P(F \cap D)}{P(D)}\\ &= \frac{P(D \mid F)P(F)}{P(D)} \\ &= \frac{P(D \mid F)P(F)}{P(D \mid F)P(F) + P(D \mid F^c)P(F^c)}\\ &= \frac{L(F \mid D)P(F)}{L(F \mid D)P(F) + L(F^c \mid D)P(F^c)}\end{align*}$$
+$$\begin{align*} P(F \mid D) &= \frac{P(F \cap D)}{P(D)}\\ &= \frac{L(F \mid D)P(F)}{P(D)}\end{align*}$$
 
 . . .
 
@@ -652,9 +688,17 @@ $$\text{posterior = } \frac{\text{likelihood} \cdot \text{prior }}{ \text{normal
 - The normalizing constant $P(D)$ is known as **marginal likelihood** or **evidence**.
 
 
+:::notes
+$$\begin{align*} P(F \mid D) &= \frac{P(F \cap D)}{P(D)}\\ &= \frac{P(D \mid F)P(F)}{P(D)} \\ &= \frac{P(D \mid F)P(F)}{P(D \mid F)P(F) + P(D \mid F^c)P(F^c)}\\ &= \frac{L(F \mid D)P(F)}{L(F \mid D)P(F) + L(F^c \mid D)P(F^c)}\end{align*}$$
+:::
+
+
 ## Posterior
 
-- Started with a prior understanding that there's a 40% chance that the incoming article would be fake. 
+- Started with a prior understanding that there's a 40% chance that the incoming article would be fake.
+
+. . .
+
 - Yet upon observing the use of an exclamation point in the title 
 
 ::: {.center}
@@ -663,9 +707,9 @@ $$\text{posterior = } \frac{\text{likelihood} \cdot \text{prior }}{ \text{normal
 
 :::
 
-a feature that's more common to fake news
+a feature that's more common to fake news.
 
-- Our posterior understanding evolved quite a bit – the chance that the article is fake jumped to 88.9%.
+- Our posterior understanding evolved quite a bit – the chance that the article is fake jumped to 89%.
 
 
 +-------------------------------------+---------------+----------------------+-------------+
@@ -678,11 +722,11 @@ a feature that's more common to fake news
 
 ## Bayesian Inference for Random Variables
 
-For any random variables parameter $\theta$ and sample data ${\bf Y} = (Y_1, \dots, Y_n)$, 
+For any random variables parameter $\theta$ and data ${\bf Y} = (Y_1, \dots, Y_n)$, 
 
 - $\pi(\theta)$: the prior pmf/pdf of $\theta$
 
-- $L(\theta \mid y_1,\dots, y_n)$: the likelihood function of $\theta$ given observed data $\by = \{y_i \}_{i = 1}^n$. 
+- $L(\theta \mid y_1,\dots, y_n)$: the likelihood of $\theta$ given observed data $\by = \{y_i \}_{i = 1}^n$. 
 
 - The posterior distribution of $\theta$ given $\by$ is
 
@@ -708,9 +752,11 @@ $$\text{posterior } \propto \text{ likelihood } \cdot \text{ prior } $$
 
 <!-- - You've conducted 30 different polls throughout the election season. -->
 
-- According to previous 30 polls, Michelle's support is centered round 45%, and she polled at around 35% in the dreariest days and around 55% in the best days.
+- According to *previous* 30 polls, 
+  + Michelle's support is centered round 45%
+  + she polled at around 35% in the dreariest days and around 55% in the best days
 
-- With this prior information, we'd like to estimate/update Michelle's support by conducting a new poll.
+- With this prior information, we'd like to estimate/update Michelle's support by *conducting a new poll*.
 :::
 
 
@@ -732,7 +778,7 @@ Key: Describe prior and data information using probabilistic models.
 
 ## Prior Distribution
 
-- A popular probability distribution for probability is **beta distribution**, denoted as $\text{Beta}(\alpha, \beta)$, where $\alpha > 0$ and $\beta > 0$ are shape parameters.
+- A popular probability distribution for probability is **beta distribution**, $\text{beta}(\alpha, \beta)$, where $\alpha > 0$ and $\beta > 0$ are shape parameters.
 
 $$\pi(\theta \mid \alpha, \beta) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\theta^{\alpha - 1}(1-\theta)^{\beta-1}$$
 
@@ -765,7 +811,7 @@ par(mar = c(3, 3, 2, 0), mgp = c(2, 0.6, 0))
 x <- seq(0, 1, by = 0.0001)
 plot(x, dbeta(x, 45, 55), type = "l", lwd = 3, col = 2, las = 1,
      xlab = expression(theta), ylab = expression(pi(theta)))
-title(main = "Prior Distribtuion: Beta(45, 55)")
+title(main = "Prior Distribtuion: beta(45, 55)")
 ```
 
 
@@ -855,7 +901,7 @@ library(broom.mixed)
 
 ## Normal Data Model
 
-In simple linear regression, we have
+In simple linear regression,
 
 $$Y_i \mid \beta_0, \beta_1, \sigma \stackrel{ind}{\sim}  N\left(\mu_i, \sigma^2 \right) \quad \text{with} \quad \mu_i = \beta_0 + \beta_1 X_i$$
 
@@ -867,11 +913,11 @@ To be a Bayesian, what do we do next?
 
 . . .
 
-- We just assign priors to the unknown parameters, then do the posterior inference using Bayes' rule!
+- Assign priors to the unknown parameters, then do the posterior inference using Bayes' rule!
 
 . . .
 
-- The big question is how?
+- Big question is how?
 
 
 
@@ -912,7 +958,7 @@ $$\begin{align} Y_i \mid \beta_0, \beta_1, \sigma &\stackrel{ind}{\sim}  N\left(
 \sigma &\sim \text{Exp}(\lambda) \end{align}$$
 
 
-## Capital Bikeshare `bikes` Data in the *Washington, D.C.* Area.
+## Capital Bikeshare [`bayesrules::bikes`](https://cran.r-project.org/web/packages/bayesrules/bayesrules.pdf) Data in *Washington, D.C.*
 
 ```{r}
 data(bikes)
@@ -935,7 +981,7 @@ abline(lm(rides ~ temp_feel, data = bikes), col = 2, lwd = 2)
 $\beta_{0c} \sim N(5000, 1000^2)$
 
 ```{r}
-#| out-width: "45%"
+#| out-width: "40%"
 par(mar = c(4, 4, 0, 0), mgp = c(2.8, 0.6, 0))
 x <- runif(100, 43, 95)
 y <- -2000 + 100 * x + rnorm(100, 0, sd = 1250)
@@ -1060,12 +1106,12 @@ bike_model <- rstanarm::stan_glm(rides ~ temp_feel, data = bikes,
                                  prior_intercept = normal(5000, 1000),
                                  prior = normal(100, 40), 
                                  prior_aux = exponential(0.0008),
-                                 chains = 4, iter = 5000*2, seed = 84735)
+                                 chains = 4, iter = 5000*2, seed = 2024)
 ```
 
 - Generate 4 Monte Carlo chains (`chains = 4`), each having 10000 iterations (`iter = 5000*2`).
 
-- Each iteration draw a posterior sample of the parameters $\beta_0$, $\beta_1$, and $\sigma$.
+- Each iteration draw a posterior sample of the $\beta_0$, $\beta_1$, and $\sigma$.
 
 - After tossing out the first half of Markov chain values from the **warm-up** or **burn-in** phase, `stan_glm()` simulation produces four parallel chains of length 5000 for each model parameter:
 
