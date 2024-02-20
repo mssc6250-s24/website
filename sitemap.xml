@@ -1,191 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mssc6250-s24.github.io/website/course-syllabus.html</loc>
-    <lastmod>2024-01-06T21:35:18.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/02-overview.html</loc>
-    <lastmod>2024-01-16T18:57:18.259Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/12-gp.html</loc>
-    <lastmod>2024-01-08T22:31:08.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/08-bayes.html</loc>
-    <lastmod>2024-01-08T19:41:42.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/01-syllabus.html</loc>
-    <lastmod>2024-01-16T18:56:56.968Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/04-linear-reg.html</loc>
-    <lastmod>2024-01-22T17:14:14.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/10-generative.html</loc>
-    <lastmod>2024-01-08T21:32:15.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/13-svm.html</loc>
-    <lastmod>2024-01-09T00:29:59.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/11-knn.html</loc>
-    <lastmod>2024-01-08T21:51:22.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/slides/06-lasso-vs.html</loc>
-    <lastmod>2024-02-05T20:56:59.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/course-news.html</loc>
-    <lastmod>2024-01-31T01:47:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/course-overview.html</loc>
-    <lastmod>2024-01-06T21:00:24.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/hw/hw-2.html</loc>
-    <lastmod>2024-02-09T02:38:46.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/hw/hw-4.html</loc>
-    <lastmod>2024-01-22T19:01:06.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-14.html</loc>
-    <lastmod>2024-01-09T21:33:36.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-8.html</loc>
-    <lastmod>2024-01-09T20:57:44.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-9.html</loc>
-    <lastmod>2024-01-09T20:58:59.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-13.html</loc>
-    <lastmod>2024-01-09T21:28:45.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-10.html</loc>
-    <lastmod>2024-01-09T21:15:33.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-3.html</loc>
-    <lastmod>2024-01-31T01:48:00.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-4.html</loc>
-    <lastmod>2024-02-09T02:50:09.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/weeks/week-7.html</loc>
-    <lastmod>2024-01-09T17:18:55.000Z</lastmod>
+    <loc>https://mssc6250-s24.github.io/website/project-work.html</loc>
+    <lastmod>2024-02-20T16:26:55.246Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/LICENSE.html</loc>
-    <lastmod>2023-12-17T23:43:10.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mssc6250-s24.github.io/website/project-work.html</loc>
-    <lastmod>2024-01-06T22:02:55.000Z</lastmod>
+    <lastmod>2024-02-20T16:26:55.895Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-6.html</loc>
-    <lastmod>2024-01-09T22:21:18.000Z</lastmod>
+    <lastmod>2024-02-20T16:26:56.366Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-7.html</loc>
+    <lastmod>2024-02-20T16:26:56.802Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-5.html</loc>
-    <lastmod>2024-02-08T00:04:04.000Z</lastmod>
+    <lastmod>2024-02-20T16:26:57.219Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-4.html</loc>
+    <lastmod>2024-02-20T16:26:57.623Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-1.html</loc>
-    <lastmod>2024-01-15T21:15:13.000Z</lastmod>
+    <lastmod>2024-02-20T16:26:57.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-3.html</loc>
+    <lastmod>2024-02-20T16:26:58.361Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-2.html</loc>
-    <lastmod>2024-02-08T00:04:38.000Z</lastmod>
+    <lastmod>2024-02-20T16:26:58.742Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-10.html</loc>
+    <lastmod>2024-02-20T16:26:59.124Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-11.html</loc>
-    <lastmod>2024-01-09T21:23:31.000Z</lastmod>
+    <lastmod>2024-02-20T16:26:59.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-13.html</loc>
+    <lastmod>2024-02-20T16:26:59.839Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-12.html</loc>
-    <lastmod>2024-01-09T21:25:01.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:00.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-9.html</loc>
+    <lastmod>2024-02-20T16:27:00.516Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-16.html</loc>
-    <lastmod>2024-01-09T21:58:37.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:00.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-8.html</loc>
+    <lastmod>2024-02-20T16:27:01.272Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/weeks/week-15.html</loc>
-    <lastmod>2024-01-09T21:58:35.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:01.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/weeks/week-14.html</loc>
+    <lastmod>2024-02-20T16:27:02.069Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/activity-work.html</loc>
-    <lastmod>2024-02-15T22:07:41.218Z</lastmod>
+    <lastmod>2024-02-20T16:27:02.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/hw/hw-4.html</loc>
+    <lastmod>2024-02-20T16:27:03.087Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/hw/hw-3.html</loc>
-    <lastmod>2024-01-22T18:57:53.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:03.455Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/hw/hw-2.html</loc>
+    <lastmod>2024-02-20T16:27:03.836Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/hw/hw-1.html</loc>
-    <lastmod>2024-02-07T22:01:19.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:04.299Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/activity-description.html</loc>
-    <lastmod>2024-02-15T16:02:58.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:05.092Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/course-overview.html</loc>
+    <lastmod>2024-02-20T16:27:05.430Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/index.html</loc>
-    <lastmod>2024-02-15T18:58:46.855Z</lastmod>
+    <lastmod>2024-02-20T16:27:05.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/course-news.html</loc>
+    <lastmod>2024-02-20T16:27:06.289Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/17-neural-net.html</loc>
-    <lastmod>2024-01-09T03:01:37.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:07.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/06-lasso-vs.html</loc>
+    <lastmod>2024-02-20T16:27:11.693Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/15-pca.html</loc>
-    <lastmod>2024-01-09T02:13:49.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:13.488Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/11-knn.html</loc>
+    <lastmod>2024-02-20T16:27:15.629Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/14-tree.html</loc>
-    <lastmod>2024-01-09T21:30:35.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:16.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/13-svm.html</loc>
+    <lastmod>2024-02-20T16:27:18.046Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/03-bias-var.html</loc>
-    <lastmod>2024-01-07T21:55:44.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:19.120Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/10-generative.html</loc>
+    <lastmod>2024-02-20T16:27:20.514Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/07-splines.html</loc>
-    <lastmod>2024-02-15T15:53:18.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:21.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/04-linear-reg.html</loc>
+    <lastmod>2024-02-20T16:27:23.328Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/16-clustering.html</loc>
-    <lastmod>2024-01-09T02:41:03.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:24.703Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/01-syllabus.html</loc>
+    <lastmod>2024-02-20T16:27:25.668Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/setup.html</loc>
-    <lastmod>2022-12-31T02:32:53.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:26.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/08-bayes.html</loc>
+    <lastmod>2024-02-20T16:27:27.645Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/09-class-glm.html</loc>
-    <lastmod>2024-01-09T20:53:48.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:29.007Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/12-gp.html</loc>
+    <lastmod>2024-02-20T16:27:29.866Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/slides/05-ridge-cv.html</loc>
-    <lastmod>2024-01-30T15:35:35.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:32.256Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/slides/02-overview.html</loc>
+    <lastmod>2024-02-20T16:27:33.166Z</lastmod>
   </url>
   <url>
     <loc>https://mssc6250-s24.github.io/website/project-description.html</loc>
-    <lastmod>2024-01-06T22:02:05.000Z</lastmod>
+    <lastmod>2024-02-20T16:27:33.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mssc6250-s24.github.io/website/course-syllabus.html</loc>
+    <lastmod>2024-02-20T16:27:34.180Z</lastmod>
   </url>
 </urlset>
