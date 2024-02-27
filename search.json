@@ -2888,14 +2888,14 @@
     "href": "slides/08-bayes.html#thinking-like-a-bayesian",
     "title": "Bayesian Linear Regression \n",
     "section": "Thinking like a Bayesian",
-    "text": "Thinking like a Bayesian\n\n\nWhen flipping a fair coin, we say that “the probability of flipping Heads is 0.5.” How do you interpret this probability?\n\nIf I flip this coin over and over, roughly 50% will be Heads.\nHeads and Tails are equally plausible.\nBoth a. and b. make sense.\n\n\n\n\n\n\nAn election is coming up and a pollster claims that candidate A has a 0.9 probability of winning. How do you interpret this probability?\n\nIf we observe the election over and over, candidate A will win roughly 90% of the time.\nCandidate A is much more likely to win than to lose.\nThe pollster’s calculation is wrong. Candidate A will either win or lose, thus their probability of winning can only be 0 or 1.\n\n\n\n\n\n\n\n1. a = 1 pt, b = 3 pts, c = 2 pts\n\n2. a = 1 pt, b = 3 pts, c = 1 pt"
+    "text": "Thinking like a Bayesian\n\n\nWhen flipping a fair coin, we say that “the probability of flipping Heads is 0.5.” How do you interpret this probability?\n\nIf I flip this coin over and over, roughly 50% will be Heads.\nHeads and Tails are equally plausible.\nBoth a. and b. make sense.\n\n\n\n\n\n\nAn election is coming up and a pollster claims that candidate Yu has a 0.9 probability of winning. How do you interpret this probability?\n\nIf we observe the election over and over, candidate Yu will win roughly 90% of the time.\nCandidate Yu is much more likely to win than to lose.\nThe pollster’s calculation is wrong. Candidate Yu will either win or lose, thus their probability of winning can only be 0 or 1.\n\n\n\n\n\n\n\n1. a = 1 pt, b = 3 pts, c = 2 pts\n\n2. a = 1 pt, b = 3 pts, c = 1 pt"
   },
   {
     "objectID": "slides/08-bayes.html#thinking-like-a-bayesian-1",
     "href": "slides/08-bayes.html#thinking-like-a-bayesian-1",
     "title": "Bayesian Linear Regression \n",
     "section": "Thinking like a Bayesian",
-    "text": "Thinking like a Bayesian\n\n\nTwo claims.\n(1) Ben claims he can predict the coin flip outcome. To test his claim, you flip a fair coin 5 times and he correctly predicts all.\n(2) Emily claims she can distinguish natural and artificial sweeteners. To test her claim, you give her 5 samples and she correctly identifies each.\nIn light of these experiments, what do you conclude?\n\nYou’re more confident in Emily’s claim than Ben’s claim.\nThe evidence supporting Ben’s claim is just as strong as the evidence supporting Emily’s claim.\n\n\n\n\n\n\nSuppose that during a doctor’s visit, you tested positive for COVID. If you only get to ask the doctor one question, which would it be?\n\nWhat’s the chance that I actually have COVID?\nIf in fact I don’t have COVID, what’s the chance that I would’ve gotten this positive test result?\n\n\n\n\n\n\n\n3. a = 3 pts, b = 1 pt\n\n4. a = 3 pts, b = 1 pt\n\nTotals from 4–5 indicate that your current thinking is fairly frequentist, whereas totals from 9–12 indicate alignment with the Bayesian philosophy. In between these extremes, totals from 6–8 indicate that you see strengths in both philosophies."
+    "text": "Thinking like a Bayesian\n\n\nTwo claims.\n(1) Ben claims he can predict the coin flip outcome. To test his claim, you flip a fair coin 8 times and he correctly predicts all.\n(2) Emma claims she can distinguish natural and artificial sweeteners. To test her claim, you give her 8 samples and she correctly identifies each.\nIn light of these experiments, what do you conclude?\n\nYou’re more confident in Emma’s claim than Ben’s claim.\nThe evidence supporting Ben’s claim is just as strong as the evidence supporting Emma’s claim.\n\n\n\n\n\n\nSuppose that during a doctor’s visit, you tested positive for COVID. If you only get to ask the doctor one question, which would it be?\n\nWhat’s the chance that I actually have COVID?\nIf in fact I don’t have COVID, what’s the chance that I would’ve gotten this positive test result?\n\n\n\n\n\n\n\n3. a = 3 pts, b = 1 pt\n\n4. a = 3 pts, b = 1 pt\n\nTotals from 4–5 indicate that your current thinking is fairly frequentist, whereas totals from 9–12 indicate alignment with the Bayesian philosophy. In between these extremes, totals from 6–8 indicate that you see strengths in both philosophies."
   },
   {
     "objectID": "slides/08-bayes.html#frequentist-or-bayesian",
@@ -2909,7 +2909,7 @@
     "href": "slides/08-bayes.html#the-meaning-of-probability-relative-frequency",
     "title": "Bayesian Linear Regression \n",
     "section": "The Meaning of Probability: Relative Frequency\n",
-    "text": "The Meaning of Probability: Relative Frequency\n\n\nThe frequentist philosophy interprets probability as the long-run relative frequency of a repeatable experiment.\n\n\n\nThe probability that some outcome of a process will be obtained is defined as the relative frequency with which that outcome would be obtained if the process were repeated a large number of times independently under similar conditions.\n\n\n\n\n\n\n\n\n      Frequency Relative Frequency\nHeads         4                0.4\nTails         6                0.6\nTotal        10                1.0\n---------------------\n      Frequency Relative Frequency\nHeads       512              0.512\nTails       488              0.488\nTotal      1000              1.000\n---------------------\n\n\n\nIf we repeat tossing the coin 10 times, the probability of obtaining heads is 40%.\nIf 1000 times, the probability is 51.2%.\n\n\n\n\n\n\n\n\n\n\n\n\nsource: usplash"
+    "text": "The Meaning of Probability: Relative Frequency\n\n\nThe frequentist interprets probability as the long-run relative frequency of a repeatable experiment.\n\n\nThe probability that some outcome of a process will be obtained is defined as\n\nthe relative frequency with which that outcome would be obtained if the process were repeated a large number of times independently under similar conditions.\n\n\n\n\n\n\n\n      Frequency Relative Frequency\nHeads         4                0.4\nTails         6                0.6\nTotal        10                1.0\n---------------------\n      Frequency Relative Frequency\nHeads       512              0.512\nTails       488              0.488\nTotal      1000              1.000\n---------------------\n\n\n\nIf we repeat tossing the coin 10 times, the probability of obtaining heads is 40%.\nIf 1000 times, the probability is 51.2%.\n\n\n\n\n\n\n\n\n\n\n\n\nsource: usplash"
   },
   {
     "objectID": "slides/08-bayes.html#issues-of-relative-frequency",
@@ -2930,84 +2930,84 @@
     "href": "slides/08-bayes.html#everybody-changes-their-mind",
     "title": "Bayesian Linear Regression \n",
     "section": "Everybody Changes Their Mind",
-    "text": "Everybody Changes Their Mind\n\nWe continuously update our knowledge about the world as we accumulate lived experiences, or collect data.\n\n\nFig 1.1 of https://www.bayesrulesbook.com/. The figures not being sourced come from this book too."
+    "text": "Everybody Changes Their Mind\n\nHow can we live if we don’t change? - Beyoncé. Lyric from “Satellites.”\n\n\nUsing data and prior beliefs to update our knowledge (posterior), and repeating.\nWe continuously update our knowledge about the world as we accumulate lived experiences, or collect data.\n\n\nFig 1.1 of https://www.bayesrulesbook.com/. The figures not being sourced come from this book too.Everybody changes their mind. You likely even changed your mind in the last minute. For example, suppose there’s a new Italian restaurant in your town. It has a 5-star online rating and you love Italian food! Thus, prior to ever stepping foot in the restaurant, you anticipate that it will be quite delicious. On your first visit, you collect some edible data: your pasta dish arrives a soggy mess. Weighing the stellar online rating against your own terrible meal (which might have just been a fluke), you update your knowledge: this is a 3-star not 5-star restaurant. Willing to give the restaurant another chance, you make a second trip. On this visit, you’re pleased with your Alfredo and increase the restaurant’s rating to 4 stars. You continue to visit the restaurant, collecting edible data and updating your knowledge each time."
   },
   {
     "objectID": "slides/08-bayes.html#bayesian-knowledge-building-process",
     "href": "slides/08-bayes.html#bayesian-knowledge-building-process",
     "title": "Bayesian Linear Regression \n",
     "section": "Bayesian Knowledge-building Process",
-    "text": "Bayesian Knowledge-building Process\n\nUsing data and prior beliefs to update our knowledge (Posterior), and repeating."
+    "text": "Bayesian Knowledge-building Process\n\nIf you’re an environmental scientist, yours might be an analysis of the human role in climate change. You don’t walk into such an inquiry without context – you carry a degree of incoming or prior information based on previous research and experience. Naturally, it’s in light of this information that you interpret new data, weighing both in developing your updated or posterior information."
   },
   {
     "objectID": "slides/08-bayes.html#frequentist-relys-on-limited-data-only",
     "href": "slides/08-bayes.html#frequentist-relys-on-limited-data-only",
     "title": "Bayesian Linear Regression \n",
     "section": "Frequentist Relys on (Limited) Data Only",
-    "text": "Frequentist Relys on (Limited) Data Only\n\nIn Question 3, in a frequentist analysis, “5 out of 5” is “5 out of 5” no matter if it’s in the context of Ben’s coins or Emily’s sweeteners.\n\n\nEqually confident conclusions that Ben can predict coin flips and Emily can distinguish between natural and artificial sweeteners.\n\n\n\n\n\n\nBut do you really believe Ben’s claim 100%? 🤔 😕\n\n\n\n\nIn fact, we judge their claim before evidence are collected, don’t we? 🤔\n\n\n\n\nFrequentist throws out all prior knowledge in favor of a mere 5 data points."
+    "text": "Frequentist Relys on (Limited) Data Only\n\nIn Question 3, in a frequentist analysis, “8 out of 8” is “8 out of 8” no matter if it’s in the context of Ben’s coins or Emma’s sweeteners.\n\n\nEqually confident conclusions that Ben can predict coin flips and Emma can distinguish between natural and artificial sweeteners.\n\n\n\n\n\n\nBut do you really believe Ben’s claim 100%? 🤔 😕\n\n\n\n\nIn fact, we judge their claim before evidence are collected, don’t we? 🤔\n\n\n\n\nYou probably think Ben overstates his ability but Emma’s claim sounds relatively reasonable, right?"
   },
   {
     "objectID": "slides/08-bayes.html#the-bayesian-balancing",
     "href": "slides/08-bayes.html#the-bayesian-balancing",
     "title": "Bayesian Linear Regression \n",
     "section": "The Bayesian Balancing",
-    "text": "The Bayesian Balancing\n\nBen probably overstates his ability but Emily’s claim is reasonable, right?\n\n\n\nBayesian analyses balance and weight our prior experience/knowledge/belief and new data/evidence to judge a claim or make a conclusion.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe are not stubborn! If Ben had correctly predicted the outcome of 1 million coin flips, the strength of this data would far surpass that of our prior, leading to a posterior conclusion that perhaps Ben is psychic!"
+    "text": "The Bayesian Balancing\n\nFrequentist throws out all prior knowledge in favor of a mere 8 data points.\n\n\n\nBayesian analyses balance and weight our prior experience/knowledge/belief and new data/evidence to judge a claim or make a conclusion.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe are not stubborn! If Ben had correctly predicted the outcome of 1 million coin flips, the strength of this data would far surpass that of our prior judgement, leading to a posterior conclusion that perhaps Ben is psychic!"
   },
   {
     "objectID": "slides/08-bayes.html#asking-different-questions",
     "href": "slides/08-bayes.html#asking-different-questions",
     "title": "Bayesian Linear Regression \n",
     "section": "Asking Different Questions",
-    "text": "Asking Different Questions\n\n\nIn Question 4,\n\nA Bayesian answer (a) what’s the chance that I actually have COVID?\n\nA frequentist answer (b) if in fact I do not have COVID, what’s the chance that I would’ve gotten this positive test result?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(H_0\\): Do not have COVID vs. \\(H_1\\): Have COVID\nA frequestist assesses the uncertainty of the observed data in light of an assumed hypothesis \\(P(Data \\mid H_0)\\)\nA Bayesian assesses the uncertainty of the hypothesis in light of the observed data \\(P(H_0 \\mid Data)\\)\n\n\n\n\n\n\n\n\n\n\n\n\nTest Positive\nTest Negative\nTotal\n\n\n\ndisease\n3\n1\n4\n\n\nno disease\n9\n87\n96\n\n\nTotal\n12\n88\n100\n\n\n\na Bayesian analysis would ask: Given my positive test result, what’s the chance that I actually have the disease? Since only 3 of the 12 people that tested positive have the disease (Table 1.1), there’s only a 25% chance that you have the disease. Thus, when we take into account the disease’s rarity and the relatively high false positive rate, it’s relatively unlikely that you actually have the disease. What a relief.\nsince disease status isn’t repeatable, the probability you have the disease is either 1 or 0 – you have it or you don’t. To the contrary, medical testing (and data collection in general) is repeatable. You can get tested for the disease over and over and over. Thus, a frequentist analysis would ask: If I don’t actually have the disease, what’s the chance that I would’ve tested positive? Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive even if you didn’t have the disease."
+    "text": "Asking Different Questions\n\n\nIn Question 4,\n\nBayesians answer (a) what’s the chance that I actually have COVID?\n\nFrequentists answer (b) if in fact I do not have COVID, what’s the chance that I would’ve gotten this positive test result?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest Positive\nTest Negative\nTotal\n\n\n\nCOVID\n3\n1\n4\n\n\nNo COVID\n9\n87\n96\n\n\nTotal\n12\n88\n100\n\n\n\n\n\\(H_0\\): Do not have COVID vs. \\(H_1\\): Have COVID\nA frequestist assesses the uncertainty of the observed data in light of an assumed hypothesis \\(P(Data \\mid H_0) = 9/96\\)\nA Bayesian assesses the uncertainty of the hypothesis in light of the observed data \\(P(H_0 \\mid Data) = 9/12\\)\n\na Bayesian analysis would ask: Given my positive test result, what’s the chance that I actually have the disease? Since only 3 of the 12 people that tested positive have the disease (Table 1.1), there’s only a 25% chance that you have the disease. Thus, when we take into account the disease’s rarity and the relatively high false positive rate, it’s relatively unlikely that you actually have the disease. What a relief.\nsince disease status isn’t repeatable, the probability you have the disease is either 1 or 0 – you have it or you don’t. To the contrary, medical testing (and data collection in general) is repeatable. You can get tested for the disease over and over and over. Thus, a frequentist analysis would ask: If I don’t actually have the disease, what’s the chance that I would’ve tested positive? Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive even if you didn’t have the disease."
   },
   {
     "objectID": "slides/08-bayes.html#fake-news",
     "href": "slides/08-bayes.html#fake-news",
     "title": "Bayesian Linear Regression \n",
     "section": "Fake News",
-    "text": "Fake News\n\n\n\nTell if an incoming article is fake.\n\n\n\n\n\n\nPrior info: Our prior information suggested that 40% of the articles are fake,\n\n\n\n  type   n percent\n  fake  60     0.4\n  real  90     0.6\n Total 150     1.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData come in: The usage of an ! might seem odd for a real article. The exclamation point data is more consistent with fake news.\n\n\n\n title_has_excl fake real\n          FALSE   44   88\n           TRUE   16    2\n          Total   60   90"
+    "text": "Fake News\n\n\n\nTell if an incoming article is fake.\n\n\n\n\n\n\nPrior info: 40% of the articles are fake\n\n\n\n  type   n percent\n  fake  60     0.4\n  real  90     0.6\n Total 150     1.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData come in: Check several fake and real articles, and found ! is more consistent with fake news.\n\n\n\n title_has_excl fake real\n          FALSE   44   88\n           TRUE   16    2\n          Total   60   90\n\n\nThe usage of an ! might seem odd for a real article. The exclamation point data is more consistent with fake news."
   },
   {
     "objectID": "slides/08-bayes.html#bayesian-updating-rule",
     "href": "slides/08-bayes.html#bayesian-updating-rule",
     "title": "Bayesian Linear Regression \n",
     "section": "Bayesian Updating Rule",
-    "text": "Bayesian Updating Rule\n\n\nLet \\(F\\) denote the event that an article is fake.\nThe prior probability model\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\nProbability \\(P(\\cdot)\\)\n\n0.4\n0.6\n1"
+    "text": "Bayesian Updating Rule\n\n\n\\(F\\): an article is fake.\nThe prior probability model\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\nProbability \\(P(\\cdot)\\)\n\n0.4\n0.6\n1"
   },
   {
     "objectID": "slides/08-bayes.html#bayesian-model-for-events",
     "href": "slides/08-bayes.html#bayesian-model-for-events",
     "title": "Bayesian Linear Regression \n",
     "section": "Bayesian Model for Events",
-    "text": "Bayesian Model for Events\n\n\n\n title_has_excl fake real\n          FALSE   44   88\n           TRUE   16    2\n          Total   60   90\n\n\n\nLet \\(D\\) be the event that an article title has exclamation mark.\nConditional probability: \\(P(D \\mid F) = 0.27\\); \\(P(D \\mid F^c) = 0.02\\).\n\n\n\n\nOpposite position: We know the incoming article used ! (data); we don’t know whether or not the article is fake (what we want to decide).\n\n\n\n\nCompare \\(P(D \\mid F)\\) and \\(P(D \\mid F^c)\\) to ascertain the relative likelihoods of observed data \\(D\\) under different scenarios of the uncertain article status."
+    "text": "Bayesian Model for Events\n\n\n\n title_has_excl fake real\n          FALSE   44   88\n           TRUE   16    2\n          Total   60   90\n\n\n\n\\(D\\): an article title has exclamation mark.\nConditional probability: \\(P(D \\mid F) = 16/60 = 0.27\\); \\(P(D \\mid F^c) = 2/90 = 0.02\\).\n\n\n\n\nOpposite position:\n\nKnow the incoming article used ! (observed data)\nDon’t know whether or not the article is fake (what we want to decide).\n\n\n\n\n\n\nCompare \\(P(D \\mid F)\\) and \\(P(D \\mid F^c)\\) to ascertain the relative likelihoods of observed data \\(D\\) under different scenarios of the uncertain article status.\n\nSince exclamation point usage is so much more likely among fake news than real news, this data provides some evidence that the article is fake To help distinguish this application of conditional probability calculations from that when\nD is uncertain and F is known, we’ll utilize the following likelihood function notation."
   },
   {
     "objectID": "slides/08-bayes.html#likelihood-function",
     "href": "slides/08-bayes.html#likelihood-function",
     "title": "Bayesian Linear Regression \n",
     "section": "Likelihood Function",
-    "text": "Likelihood Function\n\n\n\nLikelihood function notation \\(L(\\cdot\\mid D)\\):\n\n\\[L(F \\mid D) = P(D \\mid F) \\text{ and } L(F^c \\mid D) = P(D \\mid F^c)\\]\n\n\n\n\nWhen \\(F\\) is known, the conditional probability function \\(P(\\cdot \\mid F)\\) allows us to compare the probabilities of an unknown event \\(D\\), \\(D^c\\), occurring with \\(F\\):\n\n\\[P(D \\mid F) \\text{  vs. } P(D^c \\mid F)\\]\n\n\n\n\n\nWhen \\(D\\) is known, the likelihood function \\(L(\\cdot \\mid D) = P(D \\mid \\cdot)\\) allows us to evaluate the relative compatibility of data \\(D\\) with \\(F\\) or \\(F^c\\):\n\n\\[L(F \\mid D) \\text{  vs. } L(F^c \\mid D)\\]\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\n\nProbability \\(P(\\cdot)\\)\n\n0.4\n0.6\n1\n\n\nLikelihood \\(L(\\cdot \\mid D)\\)\n\n0.27\n0.02\n0.29\n\n\n\n\n\n\n\nThe likelihood function is not a probability function!"
+    "text": "Likelihood Function\n\n\n\nLikelihood function \\(L(\\cdot\\mid D)\\):\n\n\\[L(F \\mid D) = P(D \\mid F) \\text{ and } L(F^c \\mid D) = P(D \\mid F^c)\\]\n\n\n\n\nWhen \\(F\\) is known, the conditional probability function \\(P(\\cdot \\mid F)\\) compares the probabilities of an unknown event \\(D\\), \\(D^c\\), occurring with \\(F\\): \\[P(D \\mid F) \\text{  vs. } P(D^c \\mid F)\\]\n\n\n\n\n\n\n\nWhen \\(D\\) is known, the likelihood function \\(L(\\cdot \\mid D) = P(D \\mid \\cdot)\\) evaluates the relative compatibility of data \\(D\\) with \\(F\\) or \\(F^c\\): \\[L(F \\mid D) \\text{  vs. } L(F^c \\mid D)\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\n\nProbability \\(P(\\cdot)\\)\n\n0.4\n0.6\n1\n\n\nLikelihood \\(L(\\cdot \\mid D)\\)\n\n0.27\n0.02\n0.29\n\n\n\n\n\n\n\nThe likelihood function is not a probability function!"
   },
   {
     "objectID": "slides/08-bayes.html#bayes-rule",
     "href": "slides/08-bayes.html#bayes-rule",
     "title": "Bayesian Linear Regression \n",
     "section": "Bayes’ Rule",
-    "text": "Bayes’ Rule\n\\[\\begin{align*} P(F \\mid D) &= \\frac{P(F \\cap D)}{P(D)}\\\\ &= \\frac{P(D \\mid F)P(F)}{P(D)} \\\\ &= \\frac{P(D \\mid F)P(F)}{P(D \\mid F)P(F) + P(D \\mid F^c)P(F^c)}\\\\ &= \\frac{L(F \\mid D)P(F)}{L(F \\mid D)P(F) + L(F^c \\mid D)P(F^c)}\\end{align*}\\]\n\n\\[\\text{posterior = } \\frac{\\text{likelihood} \\cdot \\text{prior }}{ \\text{normalizing constant}} \\]\n\nThe normalizing constant \\(P(D)\\) is known as marginal likelihood or evidence."
+    "text": "Bayes’ Rule\n\\[\\begin{align*} P(F \\mid D) &= \\frac{P(F \\cap D)}{P(D)}\\\\ &= \\frac{L(F \\mid D)P(F)}{P(D)}\\end{align*}\\]\n\n\\[\\text{posterior = } \\frac{\\text{likelihood} \\cdot \\text{prior }}{ \\text{normalizing constant}} \\]\n\nThe normalizing constant \\(P(D)\\) is known as marginal likelihood or evidence.\n\n\\[\\begin{align*} P(F \\mid D) &= \\frac{P(F \\cap D)}{P(D)}\\\\ &= \\frac{P(D \\mid F)P(F)}{P(D)} \\\\ &= \\frac{P(D \\mid F)P(F)}{P(D \\mid F)P(F) + P(D \\mid F^c)P(F^c)}\\\\ &= \\frac{L(F \\mid D)P(F)}{L(F \\mid D)P(F) + L(F^c \\mid D)P(F^c)}\\end{align*}\\]"
   },
   {
     "objectID": "slides/08-bayes.html#posterior",
     "href": "slides/08-bayes.html#posterior",
     "title": "Bayesian Linear Regression \n",
     "section": "Posterior",
-    "text": "Posterior\n\nStarted with a prior understanding that there’s a 40% chance that the incoming article would be fake.\nYet upon observing the use of an exclamation point in the title\n\n\n\n“The president has a funny secret!”\n\n\na feature that’s more common to fake news\n\nOur posterior understanding evolved quite a bit – the chance that the article is fake jumped to 88.9%.\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\n\nPrior prob \\(P(\\cdot)\\)\n\n0.4\n0.6\n1\n\n\nPosterior prob \\(P(\\cdot \\mid D)\\)\n\n0.89\n0.11\n1"
+    "text": "Posterior\n\nStarted with a prior understanding that there’s a 40% chance that the incoming article would be fake.\n\n\n\nYet upon observing the use of an exclamation point in the title\n\n\n\n“The president has a funny secret!”\n\n\na feature that’s more common to fake news.\n\nOur posterior understanding evolved quite a bit – the chance that the article is fake jumped to 89%.\n\n\n\n\n\n\n\n\n\nEvent\n\\(F\\)\n\\(F^c\\)\nTotal\n\n\n\nPrior prob \\(P(\\cdot)\\)\n\n0.4\n0.6\n1\n\n\nPosterior prob \\(P(\\cdot \\mid D)\\)\n\n0.89\n0.11\n1"
   },
   {
     "objectID": "slides/08-bayes.html#bayesian-inference-for-random-variables",
     "href": "slides/08-bayes.html#bayesian-inference-for-random-variables",
     "title": "Bayesian Linear Regression \n",
     "section": "Bayesian Inference for Random Variables",
-    "text": "Bayesian Inference for Random Variables\nFor any random variables parameter \\(\\theta\\) and sample data \\({\\bf Y} = (Y_1, \\dots, Y_n)\\),\n\n\\(\\pi(\\theta)\\): the prior pmf/pdf of \\(\\theta\\)\n\\(L(\\theta \\mid y_1,\\dots, y_n)\\): the likelihood function of \\(\\theta\\) given observed data \\(\\mathbf{y}= \\{y_i \\}_{i = 1}^n\\).\nThe posterior distribution of \\(\\theta\\) given \\(\\mathbf{y}\\) is\n\n\\[\\pi(\\theta \\mid \\mathbf{y}) = \\frac{L(\\theta \\mid \\mathbf{y})\\pi(\\theta)}{p(\\mathbf{y})}\\] where \\[p(\\mathbf{y}) = \\begin{cases} \\int_{\\Theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta) ~ d\\theta & \\text{if } \\theta \\text{ is continuous }\\\\\n\\sum_{\\theta \\in \\Theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta) & \\text{if } \\theta \\text{ is discrete }\n\\end{cases}\\]"
+    "text": "Bayesian Inference for Random Variables\nFor any random variables parameter \\(\\theta\\) and data \\({\\bf Y} = (Y_1, \\dots, Y_n)\\),\n\n\\(\\pi(\\theta)\\): the prior pmf/pdf of \\(\\theta\\)\n\\(L(\\theta \\mid y_1,\\dots, y_n)\\): the likelihood of \\(\\theta\\) given observed data \\(\\mathbf{y}= \\{y_i \\}_{i = 1}^n\\).\nThe posterior distribution of \\(\\theta\\) given \\(\\mathbf{y}\\) is\n\n\\[\\pi(\\theta \\mid \\mathbf{y}) = \\frac{L(\\theta \\mid \\mathbf{y})\\pi(\\theta)}{p(\\mathbf{y})}\\] where \\[p(\\mathbf{y}) = \\begin{cases} \\int_{\\Theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta) ~ d\\theta & \\text{if } \\theta \\text{ is continuous }\\\\\n\\sum_{\\theta \\in \\Theta} L(\\theta \\mid \\mathbf{y})\\pi(\\theta) & \\text{if } \\theta \\text{ is discrete }\n\\end{cases}\\]"
   },
   {
     "objectID": "slides/08-bayes.html#proportionality",
@@ -3021,14 +3021,14 @@
     "href": "slides/08-bayes.html#motivation-example",
     "title": "Bayesian Linear Regression \n",
     "section": "Motivation Example",
-    "text": "Motivation Example\n\n\n\nMichelle has decided to run for governor of Wisconsin.\n\n\nAccording to previous 30 polls, Michelle’s support is centered round 45%, and she polled at around 35% in the dreariest days and around 55% in the best days.\nWith this prior information, we’d like to estimate/update Michelle’s support by conducting a new poll.\n\n\n\n\n\n\n\n\n\n\n\n\nKey: Describe prior and data information using probabilistic models.\n\n\nThe parameter to be estimated is \\(\\theta\\), the Michelle’s support, which is between 0 and 1."
+    "text": "Motivation Example\n\n\n\nMichelle has decided to run for governor of Wisconsin.\n\n\nAccording to previous 30 polls,\n\nMichelle’s support is centered round 45%\nshe polled at around 35% in the dreariest days and around 55% in the best days\n\n\nWith this prior information, we’d like to estimate/update Michelle’s support by conducting a new poll.\n\n\n\n\n\n\n\n\n\n\n\n\nKey: Describe prior and data information using probabilistic models.\n\n\nThe parameter to be estimated is \\(\\theta\\), the Michelle’s support, which is between 0 and 1."
   },
   {
     "objectID": "slides/08-bayes.html#prior-distribution",
     "href": "slides/08-bayes.html#prior-distribution",
     "title": "Bayesian Linear Regression \n",
     "section": "Prior Distribution",
-    "text": "Prior Distribution\n\nA popular probability distribution for probability is beta distribution, denoted as \\(\\text{Beta}(\\alpha, \\beta)\\), where \\(\\alpha > 0\\) and \\(\\beta > 0\\) are shape parameters.\n\n\\[\\pi(\\theta \\mid \\alpha, \\beta) = \\frac{\\Gamma(\\alpha+\\beta)}{\\Gamma(\\alpha)\\Gamma(\\beta)}\\theta^{\\alpha - 1}(1-\\theta)^{\\beta-1}\\]"
+    "text": "Prior Distribution\n\nA popular probability distribution for probability is beta distribution, \\(\\text{beta}(\\alpha, \\beta)\\), where \\(\\alpha > 0\\) and \\(\\beta > 0\\) are shape parameters.\n\n\\[\\pi(\\theta \\mid \\alpha, \\beta) = \\frac{\\Gamma(\\alpha+\\beta)}{\\Gamma(\\alpha)\\Gamma(\\beta)}\\theta^{\\alpha - 1}(1-\\theta)^{\\beta-1}\\]"
   },
   {
     "objectID": "slides/08-bayes.html#prior-distribution-1",
@@ -3084,7 +3084,7 @@
     "href": "slides/08-bayes.html#normal-data-model",
     "title": "Bayesian Linear Regression \n",
     "section": "Normal Data Model",
-    "text": "Normal Data Model\nIn simple linear regression, we have\n\\[Y_i \\mid \\beta_0, \\beta_1, \\sigma \\stackrel{ind}{\\sim}  N\\left(\\mu_i, \\sigma^2 \\right) \\quad \\text{with} \\quad \\mu_i = \\beta_0 + \\beta_1 X_i\\]\nThis normal data model is our likelihood \\(L(\\boldsymbol \\theta= (\\beta_0, \\beta_1, \\sigma) \\mid \\mathcal{D} = \\{\\mathbf{y}, \\mathbf{x}\\})\\), as it evaluates how the data are compatible with different possible values of parameters.\n\nTo be a Bayesian, what do we do next?\n\n\n\nWe just assign priors to the unknown parameters, then do the posterior inference using Bayes’ rule!\n\n\n\n\nThe big question is how?"
+    "text": "Normal Data Model\nIn simple linear regression,\n\\[Y_i \\mid \\beta_0, \\beta_1, \\sigma \\stackrel{ind}{\\sim}  N\\left(\\mu_i, \\sigma^2 \\right) \\quad \\text{with} \\quad \\mu_i = \\beta_0 + \\beta_1 X_i\\]\nThis normal data model is our likelihood \\(L(\\boldsymbol \\theta= (\\beta_0, \\beta_1, \\sigma) \\mid \\mathcal{D} = \\{\\mathbf{y}, \\mathbf{x}\\})\\), as it evaluates how the data are compatible with different possible values of parameters.\n\nTo be a Bayesian, what do we do next?\n\n\n\nAssign priors to the unknown parameters, then do the posterior inference using Bayes’ rule!\n\n\n\n\nBig question is how?"
   },
   {
     "objectID": "slides/08-bayes.html#prior-models",
@@ -3101,11 +3101,11 @@
     "text": "Bayesian Simple Linear Regression Model\n\\[\\begin{align} Y_i \\mid \\beta_0, \\beta_1, \\sigma &\\stackrel{ind}{\\sim}  N\\left(\\mu_i, \\sigma^2 \\right) \\quad \\text{with} \\quad \\mu_i = \\beta_0 + \\beta_1 X_i \\\\\n\\beta_0 &\\sim N(m_0, s_0^2) \\\\\n\\beta_1 &\\sim N(m_1, s_1^2) \\\\\n\\sigma &\\sim \\text{Exp}(\\lambda) \\end{align}\\]"
   },
   {
-    "objectID": "slides/08-bayes.html#capital-bikeshare-bikes-data-in-the-washington-d.c.-area.",
-    "href": "slides/08-bayes.html#capital-bikeshare-bikes-data-in-the-washington-d.c.-area.",
+    "objectID": "slides/08-bayes.html#capital-bikeshare-bayesrulesbikes-data-in-washington-d.c.",
+    "href": "slides/08-bayes.html#capital-bikeshare-bayesrulesbikes-data-in-washington-d.c.",
     "title": "Bayesian Linear Regression \n",
-    "section": "Capital Bikeshare bikes Data in the Washington, D.C. Area.",
-    "text": "Capital Bikeshare bikes Data in the Washington, D.C. Area.\n\n\nRows: 500\nColumns: 2\n$ rides     <int> 654, 1229, 1454, 1518, 1362, 891, 1280, 1220, 1137, 1368, 13…\n$ temp_feel <dbl> 64.7, 49.0, 51.1, 52.6, 50.8, 46.6, 45.6, 49.2, 46.4, 45.6, …"
+    "section": "Capital Bikeshare bayesrules::bikes Data in Washington, D.C.\n",
+    "text": "Capital Bikeshare bayesrules::bikes Data in Washington, D.C.\n\n\n\nRows: 500\nColumns: 2\n$ rides     <int> 654, 1229, 1454, 1518, 1362, 891, 1280, 1220, 1137, 1368, 13…\n$ temp_feel <dbl> 64.7, 49.0, 51.1, 52.6, 50.8, 46.6, 45.6, 49.2, 46.4, 45.6, …"
   },
   {
     "objectID": "slides/08-bayes.html#tuning-prior-models",
@@ -3147,7 +3147,7 @@
     "href": "slides/08-bayes.html#rstanarmstan_glm",
     "title": "Bayesian Linear Regression \n",
     "section": "rstanarm::stan_glm()",
-    "text": "rstanarm::stan_glm()\n\n\nrstanarm uses RStan syntax1 to do Bayesian inference for applied regression models (arm).\n\n\nbike_model <- rstanarm::stan_glm(rides ~ temp_feel, data = bikes,\n                                 family = gaussian,\n                                 prior_intercept = normal(5000, 1000),\n                                 prior = normal(100, 40), \n                                 prior_aux = exponential(0.0008),\n                                 chains = 4, iter = 5000*2, seed = 84735)\n\n\nGenerate 4 Monte Carlo chains (chains = 4), each having 10000 iterations (iter = 5000*2).\nEach iteration draw a posterior sample of the parameters \\(\\beta_0\\), \\(\\beta_1\\), and \\(\\sigma\\).\nAfter tossing out the first half of Markov chain values from the warm-up or burn-in phase, stan_glm() simulation produces four parallel chains of length 5000 for each model parameter:\n\n\\(\\{ \\beta_0^{(1)}, \\beta_0^{(2)}, \\dots, \\beta_0^{(5000)} \\}\\), \\(\\{ \\beta_1^{(1)}, \\beta_1^{(2)}, \\dots, \\beta_1^{(5000)} \\}\\), \\(\\{ \\sigma^{(1)}, \\sigma^{(2)}, \\dots, \\sigma^{(5000)} \\}\\)\nRStan is the R interface to Stan."
+    "text": "rstanarm::stan_glm()\n\n\nrstanarm uses RStan syntax1 to do Bayesian inference for applied regression models (arm).\n\n\nbike_model <- rstanarm::stan_glm(rides ~ temp_feel, data = bikes,\n                                 family = gaussian,\n                                 prior_intercept = normal(5000, 1000),\n                                 prior = normal(100, 40), \n                                 prior_aux = exponential(0.0008),\n                                 chains = 4, iter = 5000*2, seed = 2024)\n\n\nGenerate 4 Monte Carlo chains (chains = 4), each having 10000 iterations (iter = 5000*2).\nEach iteration draw a posterior sample of the \\(\\beta_0\\), \\(\\beta_1\\), and \\(\\sigma\\).\nAfter tossing out the first half of Markov chain values from the warm-up or burn-in phase, stan_glm() simulation produces four parallel chains of length 5000 for each model parameter:\n\n\\(\\{ \\beta_0^{(1)}, \\beta_0^{(2)}, \\dots, \\beta_0^{(5000)} \\}\\), \\(\\{ \\beta_1^{(1)}, \\beta_1^{(2)}, \\dots, \\beta_1^{(5000)} \\}\\), \\(\\{ \\sigma^{(1)}, \\sigma^{(2)}, \\dots, \\sigma^{(5000)} \\}\\)\nRStan is the R interface to Stan."
   },
   {
     "objectID": "slides/08-bayes.html#convergence-diagnostics",
@@ -3161,14 +3161,28 @@
     "href": "slides/08-bayes.html#convergence-diagnostics-1",
     "title": "Bayesian Linear Regression \n",
     "section": "Convergence Diagnostics",
-    "text": "Convergence Diagnostics\n\n# Density plots of parallel chains\nbayesplot::mcmc_dens_overlay(bike_model)\n\n\n\nquantifies the number of independent samples it would take to produce an equivalently accurate posterior approximation.\nwe observe that these four chains produce nearly indistinguishable posterior approximations. This provides evidence that our simulation is stable and sufficiently long – running the chains for more iterations likely wouldn’t produce drastically different or improved posterior approximations."
+    "text": "Convergence Diagnostics\n\nSource: https://blog.stata.com/2016/11/15/introduction-to-bayesian-statistics-part-2-mcmc-and-the-metropolis-hastings-algorithm/"
   },
   {
     "objectID": "slides/08-bayes.html#convergence-diagnostics-2",
     "href": "slides/08-bayes.html#convergence-diagnostics-2",
     "title": "Bayesian Linear Regression \n",
     "section": "Convergence Diagnostics",
-    "text": "Convergence Diagnostics\n\n# Effective sample size ratio\nbayesplot::neff_ratio(bike_model)\n\n(Intercept)   temp_feel       sigma \n      1.006       0.997       1.017 \n\n# Rhat\nbayesplot::rhat(bike_model)\n\n(Intercept)   temp_feel       sigma \n          1           1           1 \n\n\n\nBoth effective sample size and R-hat are close to 1, indicating that the chains are stable, mixing quickly, and behaving much like an independent sample.\n\n\nThere’s no magic rule for interpreting this ratio, and it should be utilized alongside other diagnostics such as the trace plot. That said, we might be suspicious of a Markov chain for which the effective sample size ratio is less than 0.1, i.e., the effective sample size is less than 10% of the actual sample size.\nan R-hat ratio greater than 1.05 raises some red flags about the stability of the simulation."
+    "text": "Convergence Diagnostics"
+  },
+  {
+    "objectID": "slides/08-bayes.html#convergence-diagnostics-3",
+    "href": "slides/08-bayes.html#convergence-diagnostics-3",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Convergence Diagnostics",
+    "text": "Convergence Diagnostics\n\n# Density plots of parallel chains\nbayesplot::mcmc_dens_overlay(bike_model)\n\n\n\nquantifies the number of independent samples it would take to produce an equivalently accurate posterior approximation.\nwe observe that these four chains produce nearly indistinguishable posterior approximations. This provides evidence that our simulation is stable and sufficiently long – running the chains for more iterations likely wouldn’t produce drastically different or improved posterior approximations."
+  },
+  {
+    "objectID": "slides/08-bayes.html#convergence-diagnostics-4",
+    "href": "slides/08-bayes.html#convergence-diagnostics-4",
+    "title": "Bayesian Linear Regression \n",
+    "section": "Convergence Diagnostics",
+    "text": "Convergence Diagnostics\n\n# Effective sample size ratio\nbayesplot::neff_ratio(bike_model)\n\n(Intercept)   temp_feel       sigma \n       1.01        1.02        1.01 \n\n# Rhat\nbayesplot::rhat(bike_model)\n\n(Intercept)   temp_feel       sigma \n          1           1           1 \n\n\n\nBoth effective sample size and R-hat are close to 1, indicating that the chains are stable, mixing quickly, and behaving much like an independent sample.\n\n\nThere’s no magic rule for interpreting this ratio, and it should be utilized alongside other diagnostics such as the trace plot. That said, we might be suspicious of a Markov chain for which the effective sample size ratio is less than 0.1, i.e., the effective sample size is less than 10% of the actual sample size.\nan R-hat ratio greater than 1.05 raises some red flags about the stability of the simulation."
   },
   {
     "objectID": "slides/08-bayes.html#convergence-issues",
@@ -3182,14 +3196,14 @@
     "href": "slides/08-bayes.html#interpreting-the-posterior",
     "title": "Bayesian Linear Regression \n",
     "section": "Interpreting the Posterior",
-    "text": "Interpreting the Posterior\n\n# Posterior summary statistics\ntidy(bike_model, effects = c(\"fixed\", \"aux\"),\n     conf.int = TRUE, conf.level = 0.80)\n\n# A tibble: 4 × 5\n  term        estimate std.error conf.low conf.high\n  <chr>          <dbl>     <dbl>    <dbl>     <dbl>\n1 (Intercept)  -2196.     356.    -2643.    -1738. \n2 temp_feel       82.2      5.10     75.7      88.5\n3 sigma         1282.      40.9    1231.     1336. \n4 mean_PPD      3487.      81.2    3382.     3591. \n\n\n\nThe posterior relationship is\n\n\\[-2196 + 82.2 X\\]\n\nThe 80% credible interval for \\(\\beta_1\\) is \\((75.7, 88.5)\\).\nGiven the data, the probability that \\(\\beta_1\\) is between 75.7 and 88.5 is 80%., i.e., \\(P(\\beta_1 \\in(75.7, 88.5) \\mid \\mathbf{y}, \\mathbf{x}) = 80\\%\\)."
+    "text": "Interpreting the Posterior\n\n# Posterior summary statistics\ntidy(bike_model, effects = c(\"fixed\", \"aux\"),\n     conf.int = TRUE, conf.level = 0.80)\n\n# A tibble: 4 × 5\n  term        estimate std.error conf.low conf.high\n  <chr>          <dbl>     <dbl>    <dbl>     <dbl>\n1 (Intercept)  -2194.     351.    -2648.    -1743. \n2 temp_feel       82.2      5.04     75.7      88.7\n3 sigma         1282.      40.9    1231.     1336. \n4 mean_PPD      3487.      81.1    3384.     3592. \n\n\n\nThe posterior relationship is\n\n\\[-2196 + 82.2 X\\]\n\nThe 80% credible interval for \\(\\beta_1\\) is \\((75.7, 88.5)\\).\nGiven the data, the probability that \\(\\beta_1\\) is between 75.7 and 88.5 is 80%., i.e., \\(P(\\beta_1 \\in(75.7, 88.5) \\mid \\mathbf{y}, \\mathbf{x}) = 80\\%\\)."
   },
   {
     "objectID": "slides/08-bayes.html#posterior-samples",
     "href": "slides/08-bayes.html#posterior-samples",
     "title": "Bayesian Linear Regression \n",
     "section": "Posterior Samples",
-    "text": "Posterior Samples\n\n# Store the 4 chains for each parameter in 1 data frame\nbike_model_df <- as.data.frame(bike_model)\nnrow(bike_model_df)\n\n[1] 20000\n\nhead(bike_model_df)\n\n  (Intercept) temp_feel sigma\n1       -2316      84.2  1245\n2       -2489      87.1  1306\n3       -2491      86.3  1295\n4       -2853      91.6  1298\n5       -2379      85.9  1319\n6       -2277      82.7  1278\n\n\nHow to obtain \\(P(\\beta_1 > 0 \\mid \\mathbf{y}, \\mathbf{x})\\)?\n\n\\(P(\\beta_1 > 0 \\mid \\mathbf{y}, \\mathbf{x}) \\approx \\frac{1}{20000}\\sum_{t=1}^{20000} \\mathbf{1}\\left(\\beta_1^{(t)} > 0\\right)\\)\n\nsum(bike_model_df$temp_feel > 0) / nrow(bike_model_df)\n\n[1] 1"
+    "text": "Posterior Samples\n\n# Store the 4 chains for each parameter in 1 data frame\nbike_model_df <- as.data.frame(bike_model)\nnrow(bike_model_df)\n\n[1] 20000\n\nhead(bike_model_df)\n\n  (Intercept) temp_feel sigma\n1       -2303      83.7  1294\n2       -2483      86.5  1332\n3       -1998      78.0  1236\n4       -2240      81.2  1281\n5       -2252      82.3  1309\n6       -2272      83.9  1272\n\n\nHow to obtain \\(P(\\beta_1 > 0 \\mid \\mathbf{y}, \\mathbf{x})\\)?\n\n\\(P(\\beta_1 > 0 \\mid \\mathbf{y}, \\mathbf{x}) \\approx \\frac{1}{20000}\\sum_{t=1}^{20000} \\mathbf{1}\\left(\\beta_1^{(t)} > 0\\right)\\)\n\nsum(bike_model_df$temp_feel > 0) / nrow(bike_model_df)\n\n[1] 1"
   },
   {
     "objectID": "slides/08-bayes.html#posterior-regression-lines",
