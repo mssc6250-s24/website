@@ -19,7 +19,7 @@ editor: visual
 
 📖 [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)
 
-📖 [A Student’s Guide to Bayesian Statistics](https://uk.sagepub.com/en-gb/eur/book/student%E2%80%99s-guide-bayesian-statistics)
+📖 [A Student's Guide to Bayesian Statistics](https://uk.sagepub.com/en-gb/eur/book/student%E2%80%99s-guide-bayesian-statistics)
 
 📖 [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/)
 

@@ -1,15 +1,16 @@
 ---
 title: "Week 7"
-subtitle: "Logistic Regression and Generalized Linear Model"
+subtitle: "Binary and Multinomial Logistic Regression"
 editor: visual
 ---
 
 ::: callout-important
+Homework due Firday, Mar 1 11:59 PM.
 :::
 
 ## Participate
 
-🖥️ [Slides - Logistic Regression and Generalized Linear Model](/slides/09-class-glm.html)
+🖥️ [Slides - Logistic Regressiol](/slides/09-class-glm.html)
 
 `r fontawesome::fa("table")` ISLR2::Default
 

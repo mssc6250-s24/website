@@ -94,7 +94,6 @@ $$\hat{\beta}_j^l =
     (e) Redo (a)-(d) with $\rho = 0.6$. Compare the two average test MSEs and the proportions. Comment the result.
 
 
-
 <!-- ## Exercises required for MSSC PhD students -->
 
 <!-- 1. **ISL** Sec. 6.6: 5 -->

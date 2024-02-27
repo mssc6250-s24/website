@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.335">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
-<title>MSSC 6250 - Spring 2024 - Generalized Linear Models r fontawesome::fa("0") r fontawesome::fa("1")</title>
+<title>MSSC 6250 - Spring 2024 - Logistic Regression r fontawesome::fa("0") r fontawesome::fa("1")</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -382,7 +382,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="MSSC 6250 - Spring 2024 - Generalized Linear Models r fontawesome::fa(&quot;0&quot;) r fontawesome::fa(&quot;1&quot;)">
+<meta property="og:title" content="MSSC 6250 - Spring 2024 - Logistic Regression r fontawesome::fa(&quot;0&quot;) r fontawesome::fa(&quot;1&quot;)">
 <meta property="og:description" content="MSSC 6250 Statistical Machine Learning">
 <meta property="og:site-name" content="MSSC 6250 - Spring 2024">
 </head>
@@ -390,7 +390,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#447099" class="quarto-title-block center"><h1 class="title">Generalized Linear Models <svg aria-hidden="true" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 192C0 103.6 71.6 32 160 32s160 71.6 160 160V320c0 88.4-71.6 160-160 160S0 408.4 0 320V192zM160 96c-53 0-96 43-96 96V320c0 53 43 96 96 96s96-43 96-96V192c0-53-43-96-96-96z"></path></svg><svg aria-hidden="true" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8 1.6l-96 64C-.5 111.2-4.4 131 5.4 145.8s29.7 18.7 44.4 8.9L96 123.8V416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160V64z"></path></svg>
+<section id="title-slide" data-background-color="#447099" class="quarto-title-block center"><h1 class="title">Logistic Regression <svg aria-hidden="true" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 192C0 103.6 71.6 32 160 32s160 71.6 160 160V320c0 88.4-71.6 160-160 160S0 408.4 0 320V192zM160 96c-53 0-96 43-96 96V320c0 53 43 96 96 96s96-43 96-96V192c0-53-43-96-96-96z"></path></svg><svg aria-hidden="true" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8 1.6l-96 64C-.5 111.2-4.4 131 5.4 145.8s29.7 18.7 44.4 8.9L96 123.8V416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160V64z"></path></svg>
 </h1>
   <p class="subtitle">MSSC 6250 Statistical Machine Learning</p>
 
@@ -429,6 +429,9 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li>In many situations, <span class="math inline">\(Y\)</span> is <strong>categorical</strong>.</li>
 </ul>
 <div class="fragment">
+<ul>
+<li>A process of predicting categorical response is known as <strong>classification</strong>.</li>
+</ul>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Normal vs.&nbsp;COVID vs.&nbsp;Smoking</strong></p>
@@ -452,9 +455,6 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 </div>
 </div>
 </div>
-<ul>
-<li>A process of predicting categorical response is known as <strong>classification</strong>.</li>
-</ul>
 </div>
 </section><section id="regression-function-fx-vs.-classifier-cx" class="slide level2"><h2>Regression Function <span class="math inline">\(f(x)\)</span> vs.&nbsp;Classifier <span class="math inline">\(C(x)\)</span>
 </h2>
@@ -585,7 +585,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li>The probability of “success” <span class="math inline">\(\pi\)</span> is not constant but <em>varies with predictor values!</em>
 </li>
 </ul>
-<p><span class="math display">\[ y_i \mid x_i \stackrel{indep}{\sim} \text{Bernoulli}(\pi = \pi_i = \pi(x_i)) = \text{binomial}(m=1,\pi = \pi_i) \]</span></p>
+<p><span class="math display">\[ y_i \mid x_i \stackrel{indep}{\sim} \text{Bernoulli}(\pi_i = \pi(x_i)) = \text{binomial}(m=1,\pi = \pi_i) \]</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -708,14 +708,14 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb5" data-code-line-numbers="1-3|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>logit_fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(default <span class="sc">~</span> balance, <span class="at">data =</span> Default, </span>
 <span id="cb5-2"><a href="#cb5-2"></a>                 <span class="at">family =</span> binomial)</span>
-<span id="cb5-3"><a href="#cb5-3"></a>summ_logit_fit <span class="ot">&lt;-</span> <span class="fu">summary</span>(logit_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">coef</span>(<span class="fu">summary</span>(logit_fit))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Estimate Std. Error z value Pr(&gt;|z|)
-(Intercept) -10.6513     0.3612   -29.5        0
-balance       0.0055     0.0002    25.0        0</code></pre>
+(Intercept) -10.6513    0.36116     -29 3.6e-191
+balance       0.0055    0.00022      25 2.0e-137</code></pre>
 </div>
 </div>
-<p><span class="math inline">\(\hat{\eta} = \text{logit}(\hat{\pi}) = \ln \left( \frac{\hat{\pi}}{1 - \hat{\pi}}\right) = -10.651 + 0.0055 \times \text{balance}\)</span></p>
+<p><span class="math inline">\(\hat{\eta} = \text{logit}(\hat{\pi}) = \ln \left( \frac{\hat{\pi}}{1 - \hat{\pi}}\right) = -10.65 + 0.0055 \times \text{balance}\)</span></p>
 </section><section id="interpretation-of-coefficients" class="slide level2"><h2>Interpretation of Coefficients</h2>
 <p>The ratio <span class="math inline">\(\frac{\pi}{1-\pi} \in (0, \infty)\)</span> is called the <strong>odds</strong> of some event.</p>
 <ul>
@@ -744,38 +744,38 @@ balance       0.0055     0.0002    25.0        0</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
 <pre><code>            Estimate Std. Error z value Pr(&gt;|z|)
-(Intercept) -10.6513     0.3612   -29.5        0
-balance       0.0055     0.0002    25.0        0</code></pre>
+(Intercept)  -10.651       0.36     -29        0
+balance        0.005       0.00      25        0</code></pre>
 </div>
 </div>
 <ul>
-<li><span class="math inline">\(\hat{\eta} = \text{logit}(\hat{\pi}) = \ln \left( \frac{\hat{\pi}}{1 - \hat{\pi}}\right) = -10.651 + 0.0055 \times \text{balance}\)</span></li>
+<li><span class="math inline">\(\hat{\eta} = \text{logit}(\hat{\pi}) = \ln \left( \frac{\hat{\pi}}{1 - \hat{\pi}}\right) = -10.65 + 0.0055 \times \text{balance}\)</span></li>
 </ul>
 <div class="fragment">
 <ul>
 <li><span class="math inline">\(\hat{\eta}(x) = \hat{\beta}_0 + \hat{\beta}_1x\)</span></li>
 <li><span class="math inline">\(\hat{\eta}(x+1) = \hat{\beta}_0 + \hat{\beta}_1(x+1)\)</span></li>
 <li><span class="math inline">\(\hat{\eta}(x+1) - \hat{\eta}(x) = \hat{\beta}_1 = \ln(\text{odds}_{x+1}) - \ln(\text{odds}_{x})\)</span></li>
-<li>One-unit increase in <code>balance</code> increases the <em>log odds</em> of <code>default</code> by 0.0055 units.</li>
+<li>One-unit increase in <code>balance</code> increases the <em>log odds</em> of <code>default</code> by 0.005 units.</li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
 <li>The <strong>odds ratio</strong>, <span class="math inline">\(\widehat{OR} = \frac{\text{odds}_{x+1}}{\text{odds}_{x}} = e^{\hat{\beta}_1} = e^{0.0055} = 1.005515\)</span>.</li>
-<li>The odds of <code>default</code> increases by 0.55% with additional one unit of credit card <code>balance</code>.</li>
+<li>The odds of <code>default</code> increases by 0.5% with additional one unit of credit card <code>balance</code>.</li>
 </ul>
 </div>
 </section><section id="prdefault-when-balance-is-2000" class="slide level2"><h2>Pr(default) When Balance is 2000</h2>
-<p><span class="math display">\[\log\left(\frac{\hat{\pi}}{1-\hat{\pi}}\right) = -10.651+0.0055\times 2000\]</span></p>
-<p><span class="math display">\[ \hat{\pi} = \frac{1}{1+\exp(-(-10.651+0.0055 \times 2000)} = 0.586\]</span></p>
+<p><span class="math display">\[\log\left(\frac{\hat{\pi}}{1-\hat{\pi}}\right) = -10.65+0.0055\times 2000\]</span></p>
+<p><span class="math display">\[ \hat{\pi} = \frac{1}{1+\exp(-(-10.65+0.0055 \times 2000)} = 0.586\]</span></p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>pi_hat <span class="ot">&lt;-</span> <span class="fu">predict</span>(logit_fit, <span class="at">type =</span> <span class="st">"response"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2"></a>eta_hat <span class="ot">&lt;-</span> <span class="fu">predict</span>(logit_fit, <span class="at">type =</span> <span class="st">"link"</span>)  <span class="do">## default gives us b0 + b1*x</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="fu">predict</span>(logit_fit, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">balance =</span> <span class="dv">2000</span>), <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    1 
-0.586 </code></pre>
+<pre><code>   1 
+0.59 </code></pre>
 </div>
 </div>
 </div>
@@ -952,7 +952,7 @@ balance       0.0055     0.0002    25.0        0</code></pre>
 <span id="cb17-5"><a href="#cb17-5"></a>auc<span class="sc">@</span>y.values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-[1] 0.948</code></pre>
+[1] 0.95</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1065,8 +1065,7 @@ balance       0.0055     0.0002    25.0        0</code></pre>
 <p>For <span class="math inline">\(k = 1, \dots, K\)</span>,</p>
 <p><span class="math display">\[\pi_{ik} = \dfrac{e^{\eta_{ik}}}{\sum_{l=1}^{K}e^{\eta_{il}}};  \left(\pi_{iK} = \dfrac{1}{\sum_{l=1}^{K}e^{\eta_{il}}} \right)\]</span></p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>The coefficient estimates will differ if a different baseline is used. But the fitted values, predictions, log odds between any pair of classes remain the same.</p></li></ol></aside></section><section id="multinomial-data-multino_data" class="slide level2"><h2>Multinomial Data <code>multino_data</code>
-</h2>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>The coefficient estimates will differ if a different baseline is used. But the fitted values, predictions, log odds between any pair of classes remain the same.</p></li></ol></aside></section><section id="multinomial-data" class="slide level2"><h2><a href="https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/">Multinomial Data</a></h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 200
@@ -1109,10 +1108,10 @@ ses      general academic vocation
 <div style="font-size: 1.2em">
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
-<pre><code>            M   SD
-general  51.3 9.40
-academic 56.3 7.94
-vocation 46.8 9.32</code></pre>
+<pre><code>          M  SD
+general  51 9.4
+academic 56 7.9
+vocation 47 9.3</code></pre>
 </div>
 </div>
 </div>
@@ -1161,68 +1160,31 @@ vocation 46.8 9.32</code></pre>
           display:block!important;
       }</style></aside>
 </div>
-</section><section id="multinomial-logit---nnetmultinom" class="slide level2"><h2>Multinomial Logit - <code>nnet::multinom()</code>
+</section><section id="multinomial-logit---nnetmultinom" class="slide level2"><h2>Multinomial Logit - <a href="https://cran.r-project.org/web/packages/nnet/nnet.pdf"><code>nnet::multinom()</code></a>
 </h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>multino_fit <span class="ot">&lt;-</span> nnet<span class="sc">::</span><span class="fu">multinom</span>(prog2 <span class="sc">~</span> ses <span class="sc">+</span> write, </span>
-<span id="cb25-2"><a href="#cb25-2"></a>                              <span class="at">data =</span> multino_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>multino_fit <span class="ot">&lt;-</span> nnet<span class="sc">::</span><span class="fu">multinom</span>(prog2 <span class="sc">~</span> ses <span class="sc">+</span> write, <span class="at">data =</span> multino_data, <span class="at">trace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb25-2"><a href="#cb25-2"></a>summ <span class="ot">&lt;-</span> <span class="fu">summary</span>(multino_fit)</span>
+<span id="cb25-3"><a href="#cb25-3"></a>summ<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># weights:  15 (8 variable)
-initial  value 219.722458 
-iter  10 value 179.982880
-final  value 179.981726 
-converged</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>summ <span class="ot">&lt;-</span> <span class="fu">summary</span>(multino_fit)</span>
-<span id="cb27-2"><a href="#cb27-2"></a>summ<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>         (Intercept) sesmiddle seshigh   write
-general         2.85    -0.533  -1.163 -0.0579
-vocation        5.22     0.291  -0.983 -0.1136</code></pre>
+<pre><code>         (Intercept) sesmiddle seshigh  write
+general          2.9     -0.53   -1.16 -0.058
+vocation         5.2      0.29   -0.98 -0.114</code></pre>
 </div>
 </div>
-</section><section id="multinomial-logit---estimated-probability" class="slide level2"><h2>Multinomial Logit - Estimated Probability</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">head</span>(<span class="fu">fitted</span>(multino_fit))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  academic general vocation
-1    0.148   0.338    0.513
-2    0.120   0.181    0.699
-3    0.419   0.237    0.345
-4    0.173   0.351    0.476
-5    0.100   0.169    0.731
-6    0.353   0.238    0.409</code></pre>
-</div>
-</div>
+<div class="fragment">
+<p><br></p>
 <ul>
-<li>Hold <code>write</code> at its <em>mean</em> and examine the predicted probabilities for each level of <code>ses</code>.</li>
+<li><p><code>glmnet()</code> uses the <strong>softmax coding</strong> that treats <em>all</em> <span class="math inline">\(K\)</span> classes <em>symmetrically</em>, and coefficients have a different meaning. (ISL eq. (4.13), (4.14))</p></li>
+<li><p>The fitted values, predictions, log odds between any pair of classes, and other key model outputs remain the same.</p></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>dses <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ses =</span> <span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"middle"</span>, <span class="st">"high"</span>), </span>
-<span id="cb32-2"><a href="#cb32-2"></a>                   <span class="at">write =</span> <span class="fu">mean</span>(multino_data<span class="sc">$</span>write))</span>
-<span id="cb32-3"><a href="#cb32-3"></a><span class="fu">predict</span>(multino_fit, <span class="at">newdata =</span> dses, <span class="at">type =</span> <span class="st">"probs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  academic general vocation
-1    0.440   0.358    0.202
-2    0.478   0.228    0.294
-3    0.701   0.178    0.121</code></pre>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">glmnet</span>(<span class="at">x =</span> input_matrix, <span class="at">y =</span> categorical_vector, <span class="at">family =</span> <span class="st">"multinom"</span>, </span>
+<span id="cb27-2"><a href="#cb27-2"></a>       <span class="at">family =</span> <span class="st">"multinomial"</span>, <span class="at">lambda =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</section><section id="multinomial-logit---probability-curve" class="slide level2"><h2>Multinomial Logit - Probability Curve</h2>
-
-<img data-src="images/09-class-glm/unnamed-chunk-39-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="softmax-coding" class="slide level2"><h2>Softmax Coding<sup>1</sup>
-</h2>
-<ul>
-<li>Treat <em>all</em> <span class="math inline">\(K\)</span> classes <em>symmetrically</em>,</li>
-</ul>
-<p><span class="math display">\[\pi_{ik} = Pr(Y_i = k \mid {\bf x}) = \dfrac{e^{\beta_{k0}+\beta_{k1}x_{i1} + \cdots + \beta_{kp}x_{ip}}}{ \sum_{l=1}^{K}e^{\beta_{l0}+\beta_{l1}x_{i1} + \cdots + \beta_{lp}x_{ip}}}; \quad \pi_{iK} \ne \dfrac{1}{ \sum_{l=1}^{K}e^{\beta_{l0}+\beta_{l1}x_{i1} + \cdots + \beta_{lp}x_{ip}}}\]</span></p>
-<p>For any classes <span class="math inline">\(k\)</span> and <span class="math inline">\(k' \in\{1, 2, \dots, K \}\)</span>, <span class="math display">\[\eta_{ikk'} = \log\left( \frac{\pi_{ik}}{\pi_{ik'}} \right) = (\beta_{k0} - \beta_{k'0}) + (\beta_{k1} - \beta_{k'1}) x_{i1} + \cdots + (\beta_{kp} - \beta_{k'p})x_{ip}\]</span></p>
-<ul>
-<li>
-<code>glmnet()</code> uses the softmax coding.</li>
-</ul>
 <aside class="notes"><ul>
 <li>Estimate coefficients for all <span class="math inline">\(K\)</span> classes.</li>
+<li>The fitted values, predictions, log odds between any pair of classes, and other key model outputs remain the same.</li>
 </ul><style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1233,7 +1195,49 @@ vocation        5.22     0.291  -0.983 -0.1136</code></pre>
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside><aside><ol class="aside-footnotes"><li id="fn5"><p>The fitted values, predictions, log odds between any pair of classes, and other key model outputs remain the same.</p></li></ol></aside></section></section><section><section id="generalized-linear-models" class="title-slide slide level1 center"><h1>Generalized Linear Models</h1>
+      }</style></aside>
+</div>
+</section><section id="multinomial-logit---estimated-probability" class="slide level2"><h2>Multinomial Logit - Estimated Probability</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">head</span>(<span class="fu">fitted</span>(multino_fit))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  academic general vocation
+1     0.15    0.34     0.51
+2     0.12    0.18     0.70
+3     0.42    0.24     0.34
+4     0.17    0.35     0.48
+5     0.10    0.17     0.73
+6     0.35    0.24     0.41</code></pre>
+</div>
+</div>
+<ul>
+<li>Hold <code>write</code> at its <em>mean</em> and examine the predicted probabilities for each level of <code>ses</code>.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>dses <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ses =</span> <span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"middle"</span>, <span class="st">"high"</span>), </span>
+<span id="cb31-2"><a href="#cb31-2"></a>                   <span class="at">write =</span> <span class="fu">mean</span>(multino_data<span class="sc">$</span>write))</span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="fu">predict</span>(multino_fit, <span class="at">newdata =</span> dses, <span class="at">type =</span> <span class="st">"probs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  academic general vocation
+1     0.44    0.36     0.20
+2     0.48    0.23     0.29
+3     0.70    0.18     0.12</code></pre>
+</div>
+</div>
+<aside class="notes"><p>https://stackoverflow.com/questions/22905807/how-does-the-function-multinom-from-r-package-nnet-compute-the-multinomial-proba</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside></section><section id="multinomial-logit---probability-curve" class="slide level2"><h2>Multinomial Logit - Probability Curve</h2>
+
+<img data-src="images/09-class-glm/unnamed-chunk-40-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section></section><section><section id="generalized-linear-models" class="title-slide slide level1 center"><h1>Generalized Linear Models</h1>
 
 </section><section id="generalized-linear-models-in-greater-generality" class="slide level2"><h2>
 <a href="https://en.wikipedia.org/wiki/Generalized_linear_model">Generalized Linear Models</a> in Greater Generality</h2>
@@ -1374,17 +1378,17 @@ vocation        5.22     0.291  -0.983 -0.1136</code></pre>
 <li>Normal and logistic density are symmetric, while Gumbel is right skewed.</li>
 </ul>
 
-<img data-src="images/09-class-glm/unnamed-chunk-40-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="probability-curve-1" class="slide level2"><h2>Probability Curve</h2>
+<img data-src="images/09-class-glm/unnamed-chunk-41-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="probability-curve-1" class="slide level2"><h2>Probability Curve</h2>
 
-<img data-src="images/09-class-glm/unnamed-chunk-41-1.png" style="width:60.0%" class="r-stretch quarto-figure-center"></section><section id="probit-and-complementary-log-log-links" class="slide level2"><h2>Probit and Complementary log-log Links</h2>
+<img data-src="images/09-class-glm/unnamed-chunk-42-1.png" style="width:60.0%" class="r-stretch quarto-figure-center"></section><section id="probit-and-complementary-log-log-links" class="slide level2"><h2>Probit and Complementary log-log Links</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>probit_fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(default <span class="sc">~</span> balance, <span class="at">data =</span> Default, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"probit"</span>))</span>
-<span id="cb35-2"><a href="#cb35-2"></a>cloglog_fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(default <span class="sc">~</span> balance, <span class="at">data =</span> Default, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"cloglog"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>probit_fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(default <span class="sc">~</span> balance, <span class="at">data =</span> Default, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"probit"</span>))</span>
+<span id="cb34-2"><a href="#cb34-2"></a>cloglog_fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(default <span class="sc">~</span> balance, <span class="at">data =</span> Default, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"cloglog"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-<img data-src="images/09-class-glm/unnamed-chunk-43-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="other-topics" class="slide level2"><h2>Other Topics</h2>
+<img data-src="images/09-class-glm/unnamed-chunk-44-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="other-topics" class="slide level2"><h2>Other Topics</h2>
 <ul>
-<li><p>Repeated measures and binomial logistic regression (MSSC 5780)</p></li>
+<li><p>Repeated measures and binomial logistic regression</p></li>
 <li><p>Regression diagnostics for binary data</p></li>
 <li><p>Penalized logistic regression</p></li>
 <li><p>Exponential family</p></li>

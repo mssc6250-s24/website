@@ -115,58 +115,52 @@ Focus on the concepts and ideas, and avoid mathematical details.
 
 
 ```{r}
-#| echo: false
-# leader_can <- setdiff(students, c(act1$G1_leader, act1$G2_leader))
-# act2 <- generate_group(all = students, leader_can = leader_can, seed)
+#| echo: true
+leader_can <- setdiff(students, c(act1$G1_leader, act1$G2_leader))
+act2 <- generate_group(all = students, leader_can = leader_can, seed = 6250)
 ```
 
 
 
 ### Group 1
 
-#### Slides
-
-#### R code
-
 #### Leaders:
 
 ```{r}
 #| echo: false
-# act2$G1_leader
+act2$G1_leader
 ```
 
 #### Members:
 
 ```{r}
 #| echo: false
-# act2$G1_member
+act2$G1_member
 ```
 
 ### Group 2
 
-#### Slides
-
 #### Leaders:
 
 ```{r}
 #| echo: false
-# act2$G2_leader
+act2$G2_leader
 ```
 
 #### Members:
 
 ```{r}
 #| echo: false
-# act2$G2_member
+act2$G2_member
 ```
 
 
 ## Class activity 3
 
-### Topic: Gaussian Process Classification
+<!-- ### Topic: Gaussian Process Classification -->
 
 
 
 ## Class activity 4
 
-### Topic:
+<!-- ### Topic: -->
