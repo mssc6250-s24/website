@@ -1133,6 +1133,22 @@ bayesplot::mcmc_trace(bike_model, size = 0.1)
 ## Convergence Diagnostics
 
 ```{r}
+#| fig-cap: "Source: https://blog.stata.com/2016/11/15/introduction-to-bayesian-statistics-part-2-mcmc-and-the-metropolis-hastings-algorithm/"
+knitr::include_graphics("https://blog.stata.com/wp-content/uploads/2016/11/animation3.gif")
+```
+
+
+## Convergence Diagnostics
+
+```{r}
+#| out-width: 100%
+knitr::include_graphics("./images/08-bayes/metropolis_hastings_animation.gif")
+```
+
+
+## Convergence Diagnostics
+
+```{r}
 #| echo: true
 # Density plots of parallel chains
 bayesplot::mcmc_dens_overlay(bike_model)
