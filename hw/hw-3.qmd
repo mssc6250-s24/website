@@ -98,6 +98,6 @@ You are encouraged to do both, but to complete the homework, you only need to do
 
 (@) Watch the talk [All About that Bayes: Probability, Statistics, and the Quest to Quantify Uncertainty](https://www.youtube.com/watch?v=eDMGDhyDxuY) by Dr. Kristin Lennox. In 250 words, summarize your thoughts and what you learn from the talk.
 
-{{< video https://shorturl.at/agqtM >}}
+<!-- {{< video https://shorturl.at/agqtM >}} -->
 
 (@) In 250 words, summarize your thoughts and what you learned from the [deep learning workshop](https://web.cvent.com/event/f07d37c8-0972-4577-93b0-2ade9b142c65/summary).
