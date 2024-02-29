@@ -40,6 +40,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -63,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="MSSC 6250 - Spring 2024 - Homework 3 - Bayesian Statistics, Logistic Regression, Generative Models, and K-Nearest Neighbors">
-<meta property="og:description" content="Due Friday, April 5 11:59 PM">
+<meta property="og:description" content="Due date TBD">
 <meta property="og:site-name" content="MSSC 6250 - Spring 2024">
 </head>
 
@@ -284,7 +286,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">Homework 3 - Bayesian Statistics, Logistic Regression, Generative Models, and K-Nearest Neighbors</h1>
-<p class="subtitle lead">Due Friday, April 5 11:59 PM</p>
+<p class="subtitle lead">Due date TBD</p>
 </div>
 
 
@@ -293,6 +295,12 @@ ul.task-list li input[type="checkbox"] {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 29, 2024</p>
+    </div>
+  </div>
     
   </div>
   
@@ -330,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
 </ol></li>
 <li><p><strong>[MNIST Handwritten Digits Image]</strong></p>
 <ol type="a">
-<li><p>Load the prepared MNIST data <code>mnist_train.csv</code>. Print some images.</p></li>
+<li><p>Load the prepared MNIST data <code>mnist.csv</code>. Print some images.</p></li>
 <li><p>Use the first 1000 observations as the training data and the second half as the test data.</p></li>
 <li><p>Training with KNN and predicting on the test data with the best <span class="math inline">\(K\)</span> selected from the training.</p>
 <ul>
@@ -349,8 +357,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="do-one-of-the-followings">Do one of the followings</h3>
 <p>You are encouraged to do both, but to complete the homework, you only need to do one of the two assignments.</p>
 <ol start="7" class="example" type="1">
-<li><p>Watch the talk <a href="https://www.youtube.com/watch?v=eDMGDhyDxuY">All About that Bayes: Probability, Statistics, and the Quest to Quantify Uncertainty</a> by Dr.&nbsp;Kristin Lennox. In 250 words, summarize your thoughts and what you learn from the talk.</p></li>
-<li><p>In 250 words, summarize your thoughts and what you learned from the <a href="https://web.cvent.com/event/f07d37c8-0972-4577-93b0-2ade9b142c65/summary">deep learning workshop</a>.</p></li>
+<li>Watch the talk <a href="https://www.youtube.com/watch?v=eDMGDhyDxuY">All About that Bayes: Probability, Statistics, and the Quest to Quantify Uncertainty</a> by Dr.&nbsp;Kristin Lennox. In 250 words, summarize your thoughts and what you learn from the talk.</li>
+</ol>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://shorturl.at/agqtM"></video></div>
+<ol start="8" class="example" type="1">
+<li>In 250 words, summarize your thoughts and what you learned from the <a href="https://web.cvent.com/event/f07d37c8-0972-4577-93b0-2ade9b142c65/summary">deep learning workshop</a>.</li>
 </ol>
 
 
@@ -613,6 +624,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
