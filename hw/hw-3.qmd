@@ -77,7 +77,7 @@ format:
     
 (@) **[MNIST Handwritten Digits Image]**
 
-    (a) Load the prepared MNIST data `mnist.csv`. Print some images.
+    (a) Load the prepared MNIST data [`mnist.csv`](./mnist.csv). Print some images.
     
     (b) Use the first 1000 observations as the training data and the second half as the test data.
     
