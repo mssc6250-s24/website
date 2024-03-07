@@ -155,11 +155,53 @@ act2$G2_member
 ```
 
 
+### Knowledge Check
+
+Please go to <https://forms.office.com/r/Bt5rVJ5igB> to answer the knowledge check questions.
+
+### Evaluation
+
+For *leaders*, please go to <https://forms.office.com/r/Ys2rAFW8pe> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
+
+For *group members*, please go to <https://forms.office.com/r/tk9FrnV9ZM> to evaluate your leaders' performance.
+
+
+
+
 ## Class activity 3
 
 <!-- ### Topic: Gaussian Process Classification -->
 
+<!-- ### Topic: Artificial Neural Networks -->
 
+<!-- ::: {.callout-tip} -->
+<!-- Focus on the concepts and ideas, and avoid mathematical details. -->
+<!-- ::: -->
+
+<!-- 1. Define a single layer (feed-forward) neural network. -->
+
+<!-- 2. Define a multi-layer (feed-forward) neural network. -->
+
+<!-- 3.  -->
+
+
+<!-- ### Topic: Entropy (in Information Theory) -->
+
+<!-- ::: {.callout-tip} -->
+<!-- Focus on the concepts and ideas, and avoid mathematical details. -->
+<!-- ::: -->
+
+<!-- 1. Define the entropy of a random variable. What does it measure? -->
+
+
+
+<!-- ### Topic:  -->
+
+<!-- ::: {.callout-tip} -->
+<!-- Focus on the concepts and ideas, and avoid mathematical details. -->
+<!-- ::: -->
+
+<!-- 1. Define the entropy of a random variable. What does it measure? -->
 
 ## Class activity 4
 

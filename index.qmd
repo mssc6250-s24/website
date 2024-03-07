@@ -39,7 +39,7 @@ This page contains an outline of the topics, content, and assignments for the se
 |  15  | Tue, Apr 23 | Principal Component Analysis              |                📖                 |                                        🖥️                                        |                                                              |                                  |              |
 |      | Thu, Apr 25 | Recommender Systems                       |                                   |                                                                                  |                                                              |                                  | Proposal 📂  |
 |  16  | Tue, Apr 30 | K-Means Clustering                        |                📖                 |                                        🖥️                                        |                                                              |                                  |              |
-|  16  | Thu, May 2  | Model-based Clustering                    |                                   |                                                                                  |                              ✅                              |                                  |              |
+|      | Thu, May 2  | Model-based Clustering                    |                                   |                                                                                  |                              ✅                              |                                  |              |
 :::
 
 I reserve the right to make changes to the schedule.
