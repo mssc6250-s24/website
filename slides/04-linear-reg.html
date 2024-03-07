@@ -5,10 +5,11 @@
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MSSC 6250 - Spring 2024 - Linear Regression r emo::ji('chart_with_upwards_trend')</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,11 +26,12 @@
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
       width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -93,7 +95,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -136,44 +138,44 @@
     font-weight: 400;
   }
 
-  .callout.callout-captioned.callout-style-simple .callout-body {
+  .callout.callout-titled.callout-style-simple .callout-body {
     margin-top: 0.2em;
   }
 
-  .callout:not(.callout-captioned) .callout-body {
+  .callout:not(.callout-titled) .callout-body {
       display: flex;
   }
 
-  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
     padding-left: 1.6em;
   }
 
-  .callout.callout-captioned .callout-header {
+  .callout.callout-titled .callout-header {
     padding-top: 0.2em;
     margin-bottom: -0.2em;
   }
 
-  .callout.callout-captioned .callout-caption  p {
+  .callout.callout-titled .callout-title  p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
     
-  .callout.callout-captioned.callout-style-simple .callout-content  p {
+  .callout.callout-titled.callout-style-simple .callout-content  p {
     margin-top: 0;
   }
 
-  .callout.callout-captioned.callout-style-default .callout-content  p {
+  .callout.callout-titled.callout-style-default .callout-content  p {
     margin-top: 0.7em;
   }
 
-  .callout.callout-style-simple div.callout-caption {
+  .callout.callout-style-simple div.callout-title {
     border-bottom: none;
     font-size: .9rem;
     font-weight: 600;
     opacity: 75%;
   }
 
-  .callout.callout-style-default  div.callout-caption {
+  .callout.callout-style-default  div.callout-title {
     border-bottom: none;
     font-weight: 600;
     opacity: 85%;
@@ -205,7 +207,7 @@
     background-size: 0.9rem 0.9rem;
   }
 
-  .callout-caption {
+  .callout-title {
     display: flex
   }
     
@@ -218,16 +220,17 @@
     display: none !important;
   }
 
-  .callout.callout-captioned .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
-  .callout.callout-captioned .callout-icon::before {
+  .callout.callout-titled .callout-icon::before {
     margin-top: .5rem;
     padding-right: .5rem;
   }
 
-  .callout:not(.callout-captioned) .callout-icon::before {
+  .callout:not(.callout-titled) .callout-icon::before {
     margin-top: 1rem;
     padding-right: .5rem;
   }
@@ -242,7 +245,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
   }
 
-  div.callout-note.callout-style-default .callout-caption {
+  div.callout-note.callout-style-default .callout-title {
     background-color: #dae6fb
   }
 
@@ -254,7 +257,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
   }
 
-  div.callout-important.callout-style-default .callout-caption {
+  div.callout-important.callout-style-default .callout-title {
     background-color: #f7dddc
   }
 
@@ -266,7 +269,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
   }
 
-  div.callout-warning.callout-style-default .callout-caption {
+  div.callout-warning.callout-style-default .callout-title {
     background-color: #fcefdc
   }
 
@@ -278,7 +281,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
   }
 
-  div.callout-tip.callout-style-default .callout-caption {
+  div.callout-tip.callout-style-default .callout-title {
     background-color: #ccf1e3
   }
 
@@ -290,7 +293,7 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
   }
 
-  div.callout-caution.callout-style-default .callout-caption {
+  div.callout-caution.callout-style-default .callout-title {
     background-color: #ffe5d0
   }
 
@@ -387,7 +390,7 @@
 <script src="../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 <meta property="og:title" content="MSSC 6250 - Spring 2024 - Linear Regression r emo::ji('chart_with_upwards_trend')">
 <meta property="og:description" content="MSSC 6250 Statistical Machine Learning">
-<meta property="og:site-name" content="MSSC 6250 - Spring 2024">
+<meta property="og:site_name" content="MSSC 6250 - Spring 2024">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -435,7 +438,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/04-linear-reg/yt.svg" style="width:100.0%"></p>
+<figure><p><img data-src="./images/04-linear-reg/yt.svg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -444,7 +447,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/04-linear-reg/fb.jpeg" style="width:100.0%"></p>
+<figure><p><img data-src="./images/04-linear-reg/fb.jpeg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -453,7 +456,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/04-linear-reg/ig.jpeg" style="width:100.0%"></p>
+<figure><p><img data-src="./images/04-linear-reg/ig.jpeg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -465,7 +468,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 </ul><aside><ol class="aside-footnotes"><li id="fn2"><p>In ISL, the predictors are <code>TV</code>, <code>radio</code> and <code>newspaper</code>.</p></li></ol></aside></section><section id="fit-separate-simple-linear-regression-slr-models" class="slide level2"><h2>Fit Separate Simple Linear Regression (SLR) Models</h2>
 <!-- Fit three separate independent SLR models: -->
 
-<img data-src="images/04-linear-reg/unnamed-chunk-5-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="fragment">
+<img data-src="images/04-linear-reg/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="fragment">
 <p>❌ Fitting a separate SLR model for each predictor is not satisfactory.</p>
 </div>
 </section><section id="dont-fit-a-separate-simple-linear-regression" class="slide level2"><h2>Don’t Fit a Separate Simple Linear Regression</h2>
@@ -526,15 +529,12 @@ y_i &amp;= \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \dots + \beta_k x_{ik} + \e
 <li><span class="math inline">\(y = \beta_0 + \beta_1x_1 + \beta_{2}x_2 + \epsilon\)</span></li>
 <li><span class="math inline">\(E(y \mid x_1, x_2) = 50 + 10x_1 + 7x_2\)</span></li>
 </ul>
-<div class="cell" data-layout-align="center">
-
-</div>
 <div class="columns">
 <div class="column">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-8-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -543,7 +543,7 @@ y_i &amp;= \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \dots + \beta_k x_{ik} + \e
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-9-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -561,7 +561,7 @@ y_i &amp;= \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \dots + \beta_k x_{ik} + \e
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-10-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -570,7 +570,7 @@ y_i &amp;= \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \dots + \beta_k x_{ik} + \e
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-11-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -590,7 +590,7 @@ y_i &amp;= \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \dots + \beta_k x_{ik} + \e
 </li>
 </ul><aside><ol class="aside-footnotes"><li id="fn3"><p>In ISL, RSS is used for Residual Sum of Squares.</p></li></ol></aside></section><section id="geometry-of-least-squares-estimation" class="slide level2"><h2>Geometry of Least Squares Estimation</h2>
 
-<img data-src="images/04-linear-reg/unnamed-chunk-12-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="least-squares-normal-equations" class="slide level2"><h2>Least-squares Normal Equations</h2>
+<img data-src="images/04-linear-reg/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="least-squares-normal-equations" class="slide level2"><h2>Least-squares Normal Equations</h2>
 <p><span class="math display">\[\begin{align*}
 \left.\frac{\partial SS_{res}}{\partial\alpha_0}\right\vert_{b_0, b_1, \dots, b_k} &amp;= -2 \sum_{i=1}^n\left(y_i - \alpha_0 - \sum_{j=1}^k \alpha_j x_{ij}\right) = 0\\
 \left.\frac{\partial SS_{res}}{\partial\alpha_j}\right\vert_{b_0, b_1, \dots, b_k} &amp;= -2 \sum_{i=1}^n\left(y_i - \alpha_0 - \sum_{j=1}^k \alpha_j x_{ij}\right)x_{ij} = 0, \quad j = 1, 2, \dots, k
@@ -646,9 +646,9 @@ instagram   -0.01   0.01</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
-<div class="callout-caption">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -681,9 +681,9 @@ instagram   -0.01   0.01</code></pre>
 </ul>
 </li>
 </ul>
-<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
-<div class="callout-caption">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -705,7 +705,7 @@ instagram   -0.01   0.01</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-15-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -714,7 +714,7 @@ instagram   -0.01   0.01</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-16-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -722,9 +722,9 @@ instagram   -0.01   0.01</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
-<div class="callout-caption">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -744,7 +744,7 @@ instagram   -0.01   0.01</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/04-linear-reg/icecream.jpeg" style="width:60.0%"></p>
+<figure><p><img data-src="./images/04-linear-reg/icecream.jpeg" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -752,7 +752,7 @@ instagram   -0.01   0.01</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-18-1.png" style="width:90.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -761,7 +761,7 @@ instagram   -0.01   0.01</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/04-linear-reg/drowning.jpeg" style="width:60.0%"></p>
+<figure><p><img data-src="./images/04-linear-reg/drowning.jpeg" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -769,7 +769,7 @@ instagram   -0.01   0.01</code></pre>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-20-1.png" style="width:90.0%"></p>
+<figure><p><img data-src="images/04-linear-reg/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -790,9 +790,9 @@ instagram   -0.01   0.01</code></pre>
           overflow: hidden!important;
           display:block!important;
       }</style></aside></section><section id="practical-significance-vs.-statisical-significance" class="slide level2"><h2>Practical Significance vs.&nbsp;Statisical Significance</h2>
-<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
-<div class="callout-caption">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -814,9 +814,9 @@ instagram   -0.01   0.01</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
-<div class="callout-caption">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -856,7 +856,7 @@ instagram   -0.01   0.01</code></pre>
 <li><p><span style="color:blue"> <span class="math inline">\(H_0: \beta_1 = \beta_2 = \cdots = \beta_k = 0 \quad H_1: \beta_j \ne 0 \text{ for at least one } j\)</span> </span></p></li>
 </ul>
 
-<img data-src="./images/04-linear-reg/anova_mlr.png" style="width:100.0%" class="r-stretch quarto-figure-center"><ul>
+<img data-src="./images/04-linear-reg/anova_mlr.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><ul>
 <li><p><span class="math inline">\(\sum_{i=1}^n(y_i - \overline{y})^2 = \sum_{i=1}^n(\hat{y}_i - \overline{y})^2 + \sum_{i=1}^n(y_i - \hat{y}_i)^2\)</span></p></li>
 <li><p>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(F_{test} &gt; F_{\alpha, k, n - k - 1}\)</span>.</p></li>
 </ul>
@@ -971,7 +971,7 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 </section><section id="normal-equations" class="slide level2"><h2>Normal Equations</h2>
 <p><span class="math inline">\((\bf X' \bf X) \bf b = \bf X' \bf y\)</span></p>
 
-<img data-src="./images/04-linear-reg/normal_eqn.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="hat-matrix" class="slide level2"><h2>Hat Matrix</h2>
+<img data-src="./images/04-linear-reg/normal_eqn.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="hat-matrix" class="slide level2"><h2>Hat Matrix</h2>
 <p><span class="math display">\[\hat{\bf y} = {\bf X} {\bf b} = {\bf X} ({\bf X}' {\bf X}) ^{-1} \bf X' \bf y = \bf H \bf y\]</span></p>
 <ul>
 <li><p>The <strong>hat matrix</strong> <span class="math inline">\({\bf H}_{n \times n} = {\bf X} ({\bf X}' {\bf X}) ^{-1} \bf X'\)</span></p></li>
@@ -1002,9 +1002,8 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/04-linear-reg/ols_geom.png" style="width:100.0%"></p>
-<p></p><figcaption>https://commons.wikimedia.org/wiki/File:OLS_geometric_interpretation.svg</figcaption><p></p>
-</figure>
+<figure><p><img data-src="./images/04-linear-reg/ols_geom.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figcaption>https://commons.wikimedia.org/wiki/File:OLS_geometric_interpretation.svg</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1111,11 +1110,11 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <span class="math inline">\(\ell(\boldsymbol \beta)\)</span>, the <span class="math inline">\(\text{MSE}_{\texttt{Tr}}\)</span>, is called the (squared) <strong>loss function</strong>.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># generate data from a simple linear regression beta0 = 0.5, beta1 = 1</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
-<span id="cb3-3"><a href="#cb3-3"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>y <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">+</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># generate data from a simple linear regression beta0 = 0.5, beta1 = 1</span></span>
+<span id="cb3-2"><a></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb3-3"><a></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb3-4"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
+<span id="cb3-5"><a></a>y <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="sc">+</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Start with an initial value of <span class="math inline">\(\boldsymbol \beta\)</span>, say <span class="math inline">\(\widehat{\boldsymbol \beta} = (0.3, 1.5)\)</span>, we compute the <span class="math inline">\(\text{MSE}_{\texttt{Tr}}\)</span>
@@ -1137,9 +1136,9 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
           display:block!important;
       }</style></aside></section><section id="basic-concepts-1" class="slide level2"><h2>Basic Concepts</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># calculate the residual sum of squares for a grid of beta values</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>mse <span class="ot">&lt;-</span> <span class="cf">function</span>(b, trainx, trainy) <span class="fu">mean</span>((trainy <span class="sc">-</span> b[<span class="dv">1</span>] <span class="sc">-</span> trainx <span class="sc">*</span> b[<span class="dv">2</span>]) <span class="sc">^</span> <span class="dv">2</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">mse</span>(<span class="at">b =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">1.5</span>), <span class="at">trainx =</span> x, <span class="at">trainy =</span> y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># calculate the residual sum of squares for a grid of beta values</span></span>
+<span id="cb4-2"><a></a>mse <span class="ot">&lt;-</span> <span class="cf">function</span>(b, trainx, trainy) <span class="fu">mean</span>((trainy <span class="sc">-</span> b[<span class="dv">1</span>] <span class="sc">-</span> trainx <span class="sc">*</span> b[<span class="dv">2</span>]) <span class="sc">^</span> <span class="dv">2</span>)</span>
+<span id="cb4-3"><a></a><span class="fu">mse</span>(<span class="at">b =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">1.5</span>), <span class="at">trainx =</span> x, <span class="at">trainy =</span> y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.250039</code></pre>
 </div>
@@ -1168,31 +1167,31 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <code>optim()</code><sup>1</sup>
 </h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>(lm_optim <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">1.5</span>), <span class="at">fn =</span> mse, <span class="at">trainx =</span> x, <span class="at">trainy =</span> y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>(lm_optim <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">1.5</span>), <span class="at">fn =</span> mse, <span class="at">trainx =</span> x, <span class="at">trainy =</span> y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource my_class600 number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>$par</span>
-<span id="cb7-2"><a href="#cb7-2"></a>[1] 0.5258467 0.9857827</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a>$value</span>
-<span id="cb7-5"><a href="#cb7-5"></a>[1] 0.9449767</span>
-<span id="cb7-6"><a href="#cb7-6"></a></span>
-<span id="cb7-7"><a href="#cb7-7"></a>$counts</span>
-<span id="cb7-8"><a href="#cb7-8"></a>function gradient </span>
-<span id="cb7-9"><a href="#cb7-9"></a>      55       NA </span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a>$convergence</span>
-<span id="cb7-12"><a href="#cb7-12"></a>[1] 0</span>
-<span id="cb7-13"><a href="#cb7-13"></a></span>
-<span id="cb7-14"><a href="#cb7-14"></a>$message</span>
-<span id="cb7-15"><a href="#cb7-15"></a>NULL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource my_class600 number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>$par</span>
+<span id="cb7-2"><a></a>[1] 0.5258467 0.9857827</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a>$value</span>
+<span id="cb7-5"><a></a>[1] 0.9449767</span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a>$counts</span>
+<span id="cb7-8"><a></a>function gradient </span>
+<span id="cb7-9"><a></a>      55       NA </span>
+<span id="cb7-10"><a></a></span>
+<span id="cb7-11"><a></a>$convergence</span>
+<span id="cb7-12"><a></a>[1] 0</span>
+<span id="cb7-13"><a></a></span>
+<span id="cb7-14"><a></a>$message</span>
+<span id="cb7-15"><a></a>NULL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">lm</span>(y <span class="sc">~</span> x)<span class="sc">$</span>coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">lm</span>(y <span class="sc">~</span> x)<span class="sc">$</span>coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource my_class200 number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>(Intercept)           x </span>
-<span id="cb9-2"><a href="#cb9-2"></a>  0.5257906   0.9857546 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource my_class200 number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>(Intercept)           x </span>
+<span id="cb9-2"><a></a>  0.5257906   0.9857546 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <aside class="notes"><ul>
@@ -1221,14 +1220,14 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <p>If <span class="math inline">\(f\)</span> is continuously differentiable in an open neighborhood of local minimum <span class="math inline">\(\mathbf{x}^\ast\)</span>, then <span class="math inline">\(\nabla f(\mathbf{x}^\ast) = \mathbf{0}\)</span>.</p>
 </blockquote>
 
-<img data-src="images/04-linear-reg/fcnplot-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="taylor-expansion" class="slide level2"><h2>Taylor Expansion</h2>
+<img data-src="images/04-linear-reg/fcnplot-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section><section id="taylor-expansion" class="slide level2"><h2>Taylor Expansion</h2>
 <p><span class="math display">\[f(\mathbf{x}^\text{new}) \approx f(\mathbf{x}) + \nabla f(\mathbf{x}) (\mathbf{x}^\text{new} - \mathbf{x})\]</span></p>
 <ul>
 <li>Whether <span class="math inline">\(\nabla f(\mathbf{x})\)</span> is positive or negative, we can always find a new point <span class="math inline">\(\mathbf{x}^\text{new}\)</span> that makes <span class="math inline">\(\nabla f(\mathbf{x}) (\mathbf{x}^\text{new} - \mathbf{x})\)</span> less than 0, so that <span class="math inline">\(f(\mathbf{x}^\text{new}) &lt; f(\mathbf{x})\)</span>.</li>
 </ul>
 
 <!-- - For the nonconvex function, $x = 0$ is a maximizer rather than a minimizer.  -->
-<img data-src="images/04-linear-reg/unnamed-chunk-31-1.png" style="width:70.0%" class="r-stretch quarto-figure-center"><ul>
+<img data-src="images/04-linear-reg/unnamed-chunk-31-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><ul>
 <li><p><span class="math inline">\(\nabla f(\mathbf{x}^\ast) = \mathbf{0}\)</span> is <strong>only a necessary condition, not a sufficient condition</strong>.</p></li>
 <li><p><span class="math inline">\(x = 1\)</span> is a <strong>local minimizer</strong>, not a global one.</p></li>
 </ul>
@@ -1296,10 +1295,10 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 </ul>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">optim</span>(par, fn, <span class="at">gr =</span> <span class="cn">NULL</span>, ...,</span>
-<span id="cb10-2"><a href="#cb10-2"></a>      <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"Nelder-Mead"</span>, <span class="st">"BFGS"</span>, <span class="st">"CG"</span>, <span class="st">"L-BFGS-B"</span>, <span class="st">"SANN"</span>, <span class="st">"Brent"</span>),</span>
-<span id="cb10-3"><a href="#cb10-3"></a>      <span class="at">lower =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">upper =</span> <span class="cn">Inf</span>,</span>
-<span id="cb10-4"><a href="#cb10-4"></a>      <span class="at">control =</span> <span class="fu">list</span>(), <span class="at">hessian =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">optim</span>(par, fn, <span class="at">gr =</span> <span class="cn">NULL</span>, ...,</span>
+<span id="cb10-2"><a></a>      <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"Nelder-Mead"</span>, <span class="st">"BFGS"</span>, <span class="st">"CG"</span>, <span class="st">"L-BFGS-B"</span>, <span class="st">"SANN"</span>, <span class="st">"Brent"</span>),</span>
+<span id="cb10-3"><a></a>      <span class="at">lower =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">upper =</span> <span class="cn">Inf</span>,</span>
+<span id="cb10-4"><a></a>      <span class="at">control =</span> <span class="fu">list</span>(), <span class="at">hessian =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes"><p>Most optimization algorithms follow the same idea: starting from a point x(0) (which is usually specified by the user) and move to a new point x(1) that improves the objective function value. Repeatedly performing this to get a sequence of points x(0),x(1),x(2),x(3),… until the certain stopping criterion is reached. Most algorithms differ in terms of how to move from the current point x(k) to the next, better target point x(k+1). This may depend on the smoothness or structure of f, constrains on the domain, computational complexity, memory limitation, and many others.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1318,52 +1317,52 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <div class="columns">
 <div class="column">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>f1 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>f2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb11-3"><a href="#cb11-3"></a>    x <span class="sc">^</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">^</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">5</span> <span class="sc">*</span> x <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>}</span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">3</span>, <span class="at">fn =</span> f1, <span class="at">method =</span> <span class="st">"BFGS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>f1 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb11-2"><a></a>f2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb11-3"><a></a>    x <span class="sc">^</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">^</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">5</span> <span class="sc">*</span> x <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb11-4"><a></a>}</span>
+<span id="cb11-5"><a></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">3</span>, <span class="at">fn =</span> f1, <span class="at">method =</span> <span class="st">"BFGS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource my_class500 number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>$par</span>
-<span id="cb12-2"><a href="#cb12-2"></a>[1] -8.384004e-16</span>
-<span id="cb12-3"><a href="#cb12-3"></a></span>
-<span id="cb12-4"><a href="#cb12-4"></a>$value</span>
-<span id="cb12-5"><a href="#cb12-5"></a>[1] 1.75742e-29</span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a>$counts</span>
-<span id="cb12-8"><a href="#cb12-8"></a>function gradient </span>
-<span id="cb12-9"><a href="#cb12-9"></a>       8        3 </span>
-<span id="cb12-10"><a href="#cb12-10"></a></span>
-<span id="cb12-11"><a href="#cb12-11"></a>$convergence</span>
-<span id="cb12-12"><a href="#cb12-12"></a>[1] 0</span>
-<span id="cb12-13"><a href="#cb12-13"></a></span>
-<span id="cb12-14"><a href="#cb12-14"></a>$message</span>
-<span id="cb12-15"><a href="#cb12-15"></a>NULL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource my_class500 number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>$par</span>
+<span id="cb12-2"><a></a>[1] -8.384004e-16</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a>$value</span>
+<span id="cb12-5"><a></a>[1] 1.75742e-29</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a>$counts</span>
+<span id="cb12-8"><a></a>function gradient </span>
+<span id="cb12-9"><a></a>       8        3 </span>
+<span id="cb12-10"><a></a></span>
+<span id="cb12-11"><a></a>$convergence</span>
+<span id="cb12-12"><a></a>[1] 0</span>
+<span id="cb12-13"><a></a></span>
+<span id="cb12-14"><a></a>$message</span>
+<span id="cb12-15"><a></a>NULL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div><div class="column">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">10</span>, <span class="at">fn =</span> f2, <span class="at">method =</span> <span class="st">"BFGS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">10</span>, <span class="at">fn =</span> f2, <span class="at">method =</span> <span class="st">"BFGS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource my_class500 number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>$par</span>
-<span id="cb14-2"><a href="#cb14-2"></a>[1] 0.9999996</span>
-<span id="cb14-3"><a href="#cb14-3"></a></span>
-<span id="cb14-4"><a href="#cb14-4"></a>$value</span>
-<span id="cb14-5"><a href="#cb14-5"></a>[1] -2</span>
-<span id="cb14-6"><a href="#cb14-6"></a></span>
-<span id="cb14-7"><a href="#cb14-7"></a>$counts</span>
-<span id="cb14-8"><a href="#cb14-8"></a>function gradient </span>
-<span id="cb14-9"><a href="#cb14-9"></a>      37       12 </span>
-<span id="cb14-10"><a href="#cb14-10"></a></span>
-<span id="cb14-11"><a href="#cb14-11"></a>$convergence</span>
-<span id="cb14-12"><a href="#cb14-12"></a>[1] 0</span>
-<span id="cb14-13"><a href="#cb14-13"></a></span>
-<span id="cb14-14"><a href="#cb14-14"></a>$message</span>
-<span id="cb14-15"><a href="#cb14-15"></a>NULL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource my_class500 number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>$par</span>
+<span id="cb14-2"><a></a>[1] 0.9999996</span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a>$value</span>
+<span id="cb14-5"><a></a>[1] -2</span>
+<span id="cb14-6"><a></a></span>
+<span id="cb14-7"><a></a>$counts</span>
+<span id="cb14-8"><a></a>function gradient </span>
+<span id="cb14-9"><a></a>      37       12 </span>
+<span id="cb14-10"><a></a></span>
+<span id="cb14-11"><a></a>$convergence</span>
+<span id="cb14-12"><a></a>[1] 0</span>
+<span id="cb14-13"><a></a></span>
+<span id="cb14-14"><a></a>$message</span>
+<span id="cb14-15"><a></a>NULL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">3</span>, <span class="at">fn =</span> f2, <span class="at">method =</span> <span class="st">"BFGS"</span>)<span class="sc">$</span>par</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">optim</span>(<span class="at">par =</span> <span class="dv">3</span>, <span class="at">fn =</span> f2, <span class="at">method =</span> <span class="st">"BFGS"</span>)<span class="sc">$</span>par</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -2.5</code></pre>
 </div>
@@ -1393,9 +1392,9 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
           display:block!important;
       }</style></aside></section><section id="first-order-gradient-descent" class="slide level2"><h2>First-Order <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a>
 </h2>
-<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
-<div class="callout-caption">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1437,33 +1436,33 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <span class="pink">Demo</span> <span class="math inline">\(SS_{res}\)</span> Contour</h2>
 <p>The objective function is <span class="math inline">\(\ell(\boldsymbol \beta) = \frac{1}{2n}||\mathbf{y} - \mathbf{X} \boldsymbol \beta ||^2\)</span> with solution <span class="math inline">\({\bf b} = \left(\mathbf{X}'\mathbf{X}\right)^{-1} \mathbf{X}'\mathbf{y}\)</span>.</p>
 <div class="cell" data-layout-align="center" data-fig.dim="[4,4]">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
-<span id="cb17-2"><a href="#cb17-2"></a>n <span class="ot">&lt;-</span> <span class="dv">200</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># create some data with linear model</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a>X <span class="ot">&lt;-</span> MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(n, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.7</span>, <span class="fl">0.7</span>, <span class="dv">1</span>), <span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb17-6"><a href="#cb17-6"></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">2</span> <span class="sc">*</span> X[, <span class="dv">1</span>] <span class="sc">+</span> X[, <span class="dv">2</span>])</span>
-<span id="cb17-7"><a href="#cb17-7"></a>  </span>
-<span id="cb17-8"><a href="#cb17-8"></a>beta1 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="fl">0.005</span>)</span>
-<span id="cb17-9"><a href="#cb17-9"></a>beta2 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="fl">0.005</span>)</span>
-<span id="cb17-10"><a href="#cb17-10"></a>allbeta <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(<span class="fu">expand.grid</span>(beta1, beta2))</span>
-<span id="cb17-11"><a href="#cb17-11"></a>rss <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">apply</span>(allbeta, <span class="dv">1</span>, </span>
-<span id="cb17-12"><a href="#cb17-12"></a>                    <span class="cf">function</span>(b, X, y) <span class="fu">sum</span>((y <span class="sc">-</span> X <span class="sc">%*%</span> b) <span class="sc">^</span> <span class="dv">2</span>), X, y),</span>
-<span id="cb17-13"><a href="#cb17-13"></a>              <span class="fu">length</span>(beta1), <span class="fu">length</span>(beta2))</span>
-<span id="cb17-14"><a href="#cb17-14"></a>  </span>
-<span id="cb17-15"><a href="#cb17-15"></a><span class="co"># quantile levels for drawing contour</span></span>
-<span id="cb17-16"><a href="#cb17-16"></a>quanlvl <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.025</span>, <span class="fl">0.05</span>, <span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>)</span>
-<span id="cb17-17"><a href="#cb17-17"></a>  </span>
-<span id="cb17-18"><a href="#cb17-18"></a><span class="co"># plot the contour</span></span>
-<span id="cb17-19"><a href="#cb17-19"></a><span class="fu">contour</span>(beta1, beta2, rss, <span class="at">levels =</span> <span class="fu">quantile</span>(rss, quanlvl), <span class="at">las =</span> <span class="dv">1</span>)</span>
-<span id="cb17-20"><a href="#cb17-20"></a><span class="fu">box</span>()</span>
-<span id="cb17-21"><a href="#cb17-21"></a>  </span>
-<span id="cb17-22"><a href="#cb17-22"></a><span class="co"># the truth</span></span>
-<span id="cb17-23"><a href="#cb17-23"></a>b <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> X) <span class="sc">%*%</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> y</span>
-<span id="cb17-24"><a href="#cb17-24"></a><span class="fu">points</span>(b[<span class="dv">1</span>], b[<span class="dv">2</span>], <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">cex =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb17-2"><a></a>n <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb17-3"><a></a></span>
+<span id="cb17-4"><a></a><span class="co"># create some data with linear model</span></span>
+<span id="cb17-5"><a></a>X <span class="ot">&lt;-</span> MASS<span class="sc">::</span><span class="fu">mvrnorm</span>(n, <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.7</span>, <span class="fl">0.7</span>, <span class="dv">1</span>), <span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb17-6"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">2</span> <span class="sc">*</span> X[, <span class="dv">1</span>] <span class="sc">+</span> X[, <span class="dv">2</span>])</span>
+<span id="cb17-7"><a></a>  </span>
+<span id="cb17-8"><a></a>beta1 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="fl">0.005</span>)</span>
+<span id="cb17-9"><a></a>beta2 <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="fl">0.005</span>)</span>
+<span id="cb17-10"><a></a>allbeta <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(<span class="fu">expand.grid</span>(beta1, beta2))</span>
+<span id="cb17-11"><a></a>rss <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">apply</span>(allbeta, <span class="dv">1</span>, </span>
+<span id="cb17-12"><a></a>                    <span class="cf">function</span>(b, X, y) <span class="fu">sum</span>((y <span class="sc">-</span> X <span class="sc">%*%</span> b) <span class="sc">^</span> <span class="dv">2</span>), X, y),</span>
+<span id="cb17-13"><a></a>              <span class="fu">length</span>(beta1), <span class="fu">length</span>(beta2))</span>
+<span id="cb17-14"><a></a>  </span>
+<span id="cb17-15"><a></a><span class="co"># quantile levels for drawing contour</span></span>
+<span id="cb17-16"><a></a>quanlvl <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.025</span>, <span class="fl">0.05</span>, <span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>)</span>
+<span id="cb17-17"><a></a>  </span>
+<span id="cb17-18"><a></a><span class="co"># plot the contour</span></span>
+<span id="cb17-19"><a></a><span class="fu">contour</span>(beta1, beta2, rss, <span class="at">levels =</span> <span class="fu">quantile</span>(rss, quanlvl), <span class="at">las =</span> <span class="dv">1</span>)</span>
+<span id="cb17-20"><a></a><span class="fu">box</span>()</span>
+<span id="cb17-21"><a></a>  </span>
+<span id="cb17-22"><a></a><span class="co"># the truth</span></span>
+<span id="cb17-23"><a></a>b <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> X) <span class="sc">%*%</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> y</span>
+<span id="cb17-24"><a></a><span class="fu">points</span>(b[<span class="dv">1</span>], b[<span class="dv">2</span>], <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">cex =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<img data-src="images/04-linear-reg/unnamed-chunk-35-1.png" style="width:45.0%" class="r-stretch quarto-figure-center"></section><section id="demo-gradient-descent" class="slide level2"><h2>
+<img data-src="images/04-linear-reg/unnamed-chunk-35-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section><section id="demo-gradient-descent" class="slide level2"><h2>
 <span class="pink">Demo</span> Gradient Descent</h2>
 <p><span class="math display">\[
 \begin{align}
@@ -1480,15 +1479,12 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 <li>Set <span class="math inline">\(\boldsymbol{\beta}^{(0)} = \mathbf{0}\)</span>, <span class="math inline">\(\delta = 0.2\)</span>
 </li>
 </ul>
-<div class="cell" data-layout-align="center">
 
-</div>
-
-<img data-src="images/04-linear-reg/unnamed-chunk-37-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="demo-effect-of-delta" class="slide level2"><h2>
+<img data-src="images/04-linear-reg/unnamed-chunk-37-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="demo-effect-of-delta" class="slide level2"><h2>
 <span class="pink">Demo</span> Effect of <span class="math inline">\(\delta\)</span>
 </h2>
 
-<img data-src="images/04-linear-reg/unnamed-chunk-38-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><aside class="notes"><p>The descent path is very smooth because we choose a very small step size. However, if the step size is too large, we may observe unstable results or even unable to converge. For example, if We set <span class="math inline">\(\delta = 1\)</span> or <span class="math inline">\(\delta = 1.5\)</span>.</p>
+<img data-src="images/04-linear-reg/unnamed-chunk-38-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><aside class="notes"><p>The descent path is very smooth because we choose a very small step size. However, if the step size is too large, we may observe unstable results or even unable to converge. For example, if We set <span class="math inline">\(\delta = 1\)</span> or <span class="math inline">\(\delta = 1.5\)</span>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1501,10 +1497,10 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
           display:block!important;
       }</style></aside></section><section id="revisit-optim" class="slide level2"><h2>Revisit <code>optim()</code>
 </h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">optim</span>(par, fn, <span class="at">gr =</span> <span class="cn">NULL</span>, ...,</span>
-<span id="cb18-2"><a href="#cb18-2"></a>      <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"Nelder-Mead"</span>, <span class="st">"BFGS"</span>, <span class="st">"CG"</span>, <span class="st">"L-BFGS-B"</span>, <span class="st">"SANN"</span>, <span class="st">"Brent"</span>),</span>
-<span id="cb18-3"><a href="#cb18-3"></a>      <span class="at">lower =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">upper =</span> <span class="cn">Inf</span>,</span>
-<span id="cb18-4"><a href="#cb18-4"></a>      <span class="at">control =</span> <span class="fu">list</span>(), <span class="at">hessian =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">optim</span>(par, fn, <span class="at">gr =</span> <span class="cn">NULL</span>, ...,</span>
+<span id="cb18-2"><a></a>      <span class="at">method =</span> <span class="fu">c</span>(<span class="st">"Nelder-Mead"</span>, <span class="st">"BFGS"</span>, <span class="st">"CG"</span>, <span class="st">"L-BFGS-B"</span>, <span class="st">"SANN"</span>, <span class="st">"Brent"</span>),</span>
+<span id="cb18-3"><a></a>      <span class="at">lower =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">upper =</span> <span class="cn">Inf</span>,</span>
+<span id="cb18-4"><a></a>      <span class="at">control =</span> <span class="fu">list</span>(), <span class="at">hessian =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>If gradient is known, we provide this information in the argument <code>gr =</code> to avoid numerically approximating the gradient.
 <ul>
@@ -1513,9 +1509,6 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
 </ul>
 </li>
 </ul>
-<div class="cell" data-layout-align="center">
-
-</div>
 <aside class="notes"><p>When we only supply the <code><a href="https://rdrr.io/r/stats/optim.html">optim()</a></code> function the objective function definition <code>fn =</code>, it will internally numerically approximate the gradient. Sometimes this is not preferred due to computational reasons. And when you do have the theoretical gradient, it is likely to be more accurate than numerically approximated values. Hence, as long as the gradient itself does not cost too much compute, we may take advantage of it. We could supply the <code><a href="https://rdrr.io/r/stats/optim.html">optim()</a></code> function using the gradient <code>gr =</code>. This is the example we used previously:</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1528,9 +1521,11 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
           overflow: hidden!important;
           display:block!important;
       }</style></aside><!-- ## text text text text text --><!-- ::: columns  --><!-- ::: {.column width="50%"} --><!-- #### larger height and samller width --><!-- ```{r} --><!-- #| eval: false --><!-- #| echo: true --><!-- #| class-source: my_class1 --><!-- #| classes: my_class1 --><!-- "some code here" --><!-- ``` --><!-- #### samller height with larger width --><!-- ```{r} --><!-- #| eval: false --><!-- #| echo: true --><!-- #| class-source: my_class2 --><!-- #| classes: my_class2 --><!-- "some more code here" --><!-- "some more code here" --><!-- ``` --><!-- ::: --><!-- ::: {.column width="50%"} --><!-- ```{r} --><!-- a = 1 --><!-- b = 2 --><!-- plot(a, b) --><!-- ``` --><!-- ```{r} --><!-- a = 1 --><!-- b = 2 --><!-- plot(a, b) --><!-- ``` --><!-- ::: --><!-- ::: -->
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg" class="slide-logo r-stretch"><div class="footer footer-default">
+<div class="quarto-auto-generated-content">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://mssc6250-s24.github.io/website/">mssc6250-s24.github.io/website</a></p>
+</div>
 </div>
 </section></section>
 </div>
@@ -1543,12 +1538,11 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'multiplex': {"secret":null,"id":"4fbb89dc7c731187","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
@@ -1787,9 +1781,23 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
       });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
       const clipboard = new window.ClipboardJS('.code-copy-button', {
-        target: function(trigger) {
-          return trigger.previousElementSibling;
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
         }
       });
       clipboard.on('success', function(e) {
@@ -1825,10 +1833,9 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1837,9 +1844,18 @@ S(\boldsymbol{\beta}) = \sum_{i=1}^n\epsilon_i^2 = \boldsymbol{\epsilon}'\boldsy
           },
           interactive: true,
           interactiveBorder: 10,
-          theme: 'quarto-reveal',
-          placement: 'bottom-start'
+          theme: 'light-border',
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
