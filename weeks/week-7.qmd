@@ -1,11 +1,11 @@
 ---
 title: "Week 7"
-subtitle: "Binary and Multinomial Logistic Regression"
+subtitle: "Binary Logistic Regression"
 editor: visual
 ---
 
 ::: callout-important
-Homework due Firday, Mar 1 11:59 PM.
+Homework due Friday, Mar 1 11:59 PM.
 :::
 
 ## Participate
@@ -14,13 +14,9 @@ Homework due Firday, Mar 1 11:59 PM.
 
 `r fontawesome::fa("table")` ISLR2::Default
 
-`r fontawesome::fa("table")` [hsbdemo.dta](https://stats.idre.ucla.edu/stat/data/hsbdemo.dta)
-
 ## Reading and Resources
 
 📖 [ISL Ch 4.1 - 4.3, 4.6](https://www.statlearning.com/)
-
-📖 [UCLA MULTINOMIAL LOGISTIC REGRESSION](https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/)
 
 ## Exercise
 

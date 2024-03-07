@@ -161,9 +161,9 @@ Please go to <https://forms.office.com/r/Bt5rVJ5igB> to answer the knowledge che
 
 ### Evaluation
 
-For *leaders*, please go to <https://forms.office.com/r/Ys2rAFW8pe> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
+For [*leaders*]{.red}, please go to <https://forms.office.com/r/Ys2rAFW8pe> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
 
-For *group members*, please go to <https://forms.office.com/r/tk9FrnV9ZM> to evaluate your leaders' performance.
+For [*group members*]{.red}, please go to <https://forms.office.com/r/tk9FrnV9ZM> to evaluate your leaders' performance.
 
 
 

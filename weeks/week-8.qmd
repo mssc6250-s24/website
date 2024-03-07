@@ -1,6 +1,6 @@
 ---
 title: "Week 8"
-subtitle: "Generative Models"
+subtitle: "Multinomial Logistic Regression"
 editor: visual
 ---
 
@@ -9,15 +9,15 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Generative Models](/slides/10-generative.html)
+🖥️ [Slides - Logistic Regressiol](/slides/09-class-glm.html)
 
-`r fontawesome::fa("table")` ISLR2::Default
+`r fontawesome::fa("table")` [hsbdemo.dta](https://stats.idre.ucla.edu/stat/data/hsbdemo.dta)
 
 ## Reading and Resources
 
 📖 [ISL Ch 4.4, 4.5](https://www.statlearning.com/)
 
-
+📖 [UCLA MULTINOMIAL LOGISTIC REGRESSION](https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/)
 
 ## Exercise
 

@@ -1,6 +1,6 @@
 ---
 title: "Week 10"
-subtitle: "K-Nearest Neighbors Regression and Classification"
+subtitle: "Generative Models K-Nearest Neighbors Regression and Classification"
 editor: visual
 ---
 
@@ -8,6 +8,8 @@ editor: visual
 :::
 
 ## Participate
+
+🖥️ [Slides - Generative Models](/slides/10-generative.html)
 
 🖥️ [Slides - K-Nearest Neighbors](/slides/11-knn.html)
 
@@ -17,9 +19,7 @@ editor: visual
 
 ## Reading and Resources
 
-📖 [ISL Ch 3.5, 4.5](https://www.statlearning.com/)
-📖 [PMLI Ch 16.1](https://probml.github.io/pml-book/book1.html)
-
+📖 [ISL Ch 3.5, 4.5](https://www.statlearning.com/) 📖 [PMLI Ch 16.1](https://probml.github.io/pml-book/book1.html)
 
 ## Exercise
 
