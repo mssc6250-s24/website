@@ -1,6 +1,6 @@
 ---
 title: "Week 15"
-subtitle: "Clustering"
+subtitle: "Dimension Reduction"
 editor: visual
 ---
 
@@ -9,18 +9,13 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - K-Means Clustering](/slides/20-kmeans.html)
+🖥️ [Slides - Principal Component Analysis](slides/15-var-select.html)
 
-`r fontawesome::fa("table")` `R::iris`
+`r fontawesome::fa("table")` `R::USArrests`
 
 ## Reading and Resources
 
-📖 [A quick tour of mclust](https://cran.r-project.org/web/packages/mclust/vignettes/mclust.html)
-
-📖 [mclust5 Clustering, Classification and  Density Estimation Using Gaussian Finite Mixture Models](https://journal.r-project.org/archive/2016/RJ-2016-021/RJ-2016-021.pdf)
-
-📖 [PMLI Ch 3.5, 21.4](https://probml.github.io/pml-book/book1.html)
-
+📖 [ISL Ch 12.1-12.2](https://www.statlearning.com/)
 
 ## Exercise
 
@@ -29,10 +24,15 @@ editor: visual
 <!-- `r fontawesome::fa("table")` [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/)`::penguins` -->
 
 <!-- ```{r} -->
+
 <!-- #| eval: false -->
+
 <!-- library(palmerpenguins) -->
+
 <!-- peng <- penguins[complete.cases(penguins), ] |>  -->
+
 <!--     select(flipper_length_mm, bill_length_mm) -->
+
 <!-- ``` -->
 
 <br><br>

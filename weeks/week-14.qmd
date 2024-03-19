@@ -1,6 +1,6 @@
 ---
 title: "Week 14"
-subtitle: "Dimension Reduction"
+subtitle: "Tree-based Methods"
 editor: visual
 ---
 
@@ -9,13 +9,11 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Principal Component Analysis](slides/15-var-select.html)
-
-`r fontawesome::fa("table")` `R::USArrests`
+🖥️ [Slides - Tree-based Methods](/slides/14-tree.html)
 
 ## Reading
 
-📖 [ISL Ch 12.1-12.2](https://www.statlearning.com/)
+📖 [ISL Ch 8](https://www.statlearning.com/)
 
 ## Exercise
 

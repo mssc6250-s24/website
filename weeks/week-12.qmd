@@ -1,6 +1,6 @@
 ---
 title: "Week 12"
-subtitle: "Support Vector Machines"
+subtitle: "Gaussian Processes"
 editor: visual
 ---
 
@@ -9,13 +9,15 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Support Vector Machines](/slides/13-svm.html)
+🖥️ [Slides - Gaussian Processes](/slides/12-gp.html)
 
 ## Reading
 
-📖 [ISL Ch 9](https://www.statlearning.com/)
+📖 [Gaussian Processes for Machine Learning (GPML) Ch 2](https://gaussianprocess.org/gpml/chapters/)
 
+📖 [Surrogates Ch 5](https://bookdown.org/rbg/surrogates/chap5.html)
 
+📖 [PMLI Ch 17.2](https://probml.github.io/pml-book/book1.html)
 
 ## Exercise
 

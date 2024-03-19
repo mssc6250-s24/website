@@ -99,6 +99,7 @@ For *group members*, please go to <https://forms.office.com/r/WUCKQNJ3Sd> to eva
 
 ## Class activity 2
 
+::: {.callout collapse="true"}
 ### Topic: Generalized Linear Models and Generalized Additive Models
 
 ::: {.callout-tip}
@@ -124,6 +125,12 @@ act2 <- generate_group(all = students, leader_can = leader_can, seed = 6250)
 
 ### Group 1
 
+#### [Slides](./documents/act/act2_g1.pdf)
+
+#### R code [GLM](./documents/act/6250_classactivity2.R) [GAM](./documents/act/GAM_6250inclass.R)
+
+
+
 #### Leaders:
 
 ```{r}
@@ -139,6 +146,11 @@ act2$G1_member
 ```
 
 ### Group 2
+
+#### [Slides](./documents/act/act2_g2.pptx)
+
+#### R code [GLM](./documents/act/act2_glmdemo_g2.R) [GAM](./documents/act/act2_gamdemo_g2.R)
+
 
 #### Leaders:
 
@@ -165,10 +177,76 @@ For [*leaders*]{.red}, please go to <https://forms.office.com/r/Ys2rAFW8pe> to n
 
 For [*group members*]{.red}, please go to <https://forms.office.com/r/tk9FrnV9ZM> to evaluate your leaders' performance.
 
-
+:::
 
 
 ## Class activity 3
+
+### Topic: Loss Functions for Regression and Classification
+
+::: {.callout-tip}
+Focus on the concepts and ideas, and avoid mathematical details.
+:::
+
+1. Define and explain the meaning of a loss function in machine learning.
+
+2. Compare loss functions used in regression, including mean square error (MSE, L2 loss), mean absolute error (MAE, L1 loss), and Huber loss. What are their properties? Use simulated data with outliers to explain why the fitting with L1 loss or Huber loss is more **robust** than OLS with the L2 loss.
+
+3. Explain the log loss used for the binary logistic regression. Define and explain the meaning of maximum likelihood estimation. Define and explain the meaning of cross entropy. How is the log loss related to the maximum likelihood and cross-entropy?
+
+
+<!-- 4. (Optional) Compare loss functions used in binary classification, including log loss (cross-entropy) (with $y$ label $0, 1$) and hinge loss (with $y$ label $-1, 1$). Explain the functions using binary logistic regression and support vector classifier. -->
+
+<!-- 4. Code demo how to run a GLM and GAM. -->
+
+
+```{r}
+#| echo: true
+leader_can <- setdiff(students, 
+                      c(act1$G1_leader, act1$G2_leader,
+                        act2$G1_leader, act2$G2_leader))
+act3 <- generate_group(all = students, 
+                       leader_can = leader_can, 
+                       seed = 6250)
+```
+
+
+
+
+### Group 1
+
+#### Leaders:
+
+```{r}
+#| echo: false
+act3$G1_leader
+```
+
+#### Members:
+
+```{r}
+#| echo: false
+act3$G1_member
+```
+
+### Group 2
+
+#### Leaders:
+
+```{r}
+#| echo: false
+act3$G2_leader
+```
+
+#### Members:
+
+```{r}
+#| echo: false
+act3$G2_member
+```
+
+
+
 
 <!-- ### Topic: Gaussian Process Classification -->
 
@@ -205,4 +283,14 @@ For [*group members*]{.red}, please go to <https://forms.office.com/r/tk9FrnV9ZM
 
 ## Class activity 4
 
-<!-- ### Topic: -->
+### Topic: Principal Component Regression and Partial Least Squares
+
+::: {.callout-tip}
+Focus on the concepts and ideas, and avoid mathematical details.
+:::
+
+1. First explain the two methods principal component regression (PCR) and partial least squares (PLS). Why and when do we use them? Discuss their similarities and differences.
+
+2. Code demo of the two methods.
+
+3. 

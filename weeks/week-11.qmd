@@ -1,6 +1,6 @@
 ---
 title: "Week 11"
-subtitle: "Gaussian Processes"
+subtitle: "K-Nearest Neighbors"
 editor: visual
 ---
 
@@ -9,17 +9,15 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Gaussian Processes](/slides/12-gp.html)
+🖥️ [Slides - K-Nearest Neighbors](/slides/11-knn.html)
 
+`r fontawesome::fa("table")` [Mixture Simulation Data](https://hastie.su.domains/ElemStatLearn/)
+
+`r fontawesome::fa("table")` [ZIP code Training and Test data](https://hastie.su.domains/ElemStatLearn/)
 
 ## Reading and Resources
 
-📖 [Gaussian Processes for Machine Learning (GPML) Ch 2](https://gaussianprocess.org/gpml/chapters/)
-
-📖 [Surrogates Ch 5](https://bookdown.org/rbg/surrogates/chap5.html)
-
-📖 [PMLI Ch 17.2](https://probml.github.io/pml-book/book1.html)
-
+📖 [PMLI Ch 16.1](https://probml.github.io/pml-book/book1.html)
 
 ## Exercise
 

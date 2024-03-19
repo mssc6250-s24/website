@@ -146,7 +146,9 @@ The problem is
 
 $$ \widehat{\pi}(\bx) = \widehat{P}(Y = 1 \mid \bx) = \frac{1}{1+e^{-\bx'\widehat{\bbeta}}}$$
 
-
+::: notes
+[What is ``Bayes regression function"? In statistics, it is called *oracle* when a method/model has access to the ground truth.]
+:::
 
 # Generative Models
 
@@ -155,7 +157,7 @@ $$ \widehat{\pi}(\bx) = \widehat{P}(Y = 1 \mid \bx) = \frac{1}{1+e^{-\bx'\wideha
 
 ## What is a Generative Model?
 
-- We assume predictors are *fixed* and *known*, and we care about the distribution of the response conditional on the predictors, $p(y \mid \bx)$
+- So far predictors are assumed *fixed* and *known*, and we care about the conditional distribution, $p(y \mid \bx)$
   + [Logistic regression (LR)]{.green}
 
 . . .
@@ -171,7 +173,7 @@ Why not just logistic regression?
 
 - When the classes are *substaintially separated*, the parameter estimates for the logistic regression are unstable.
 
-- If the distribution of the predictors is approximately _normal_ in each of the classes and the _sample size is small_, the generative models could perform better and more stable again.
+- If the distribution of the predictors is approximately _normal_ in each of the classes and the _sample size is small_, the generative models could perform better and more stable.
 
 
 ::: notes
@@ -183,7 +185,7 @@ $\bx$ is variable whose value is generated from some distribution given a value 
 
 ## Generative Modeling
 
-- To infer $p(y \mid \bx)$ from a generative model, Bayes theorem comes into play:
+- To infer/predict $p(y = k \mid \bx)$ from a generative model, Bayes theorem comes into play:
 
 :::{style="font-size: 0.8em;"}
 $$\begin{align} p(y = k \mid \bx) &= \frac{p(y = k, \bx)}{p(\bx)} = \frac{p(y = k)p(\bx \mid y = k) }{p(\bx)} = \frac{p(y = k)p(\bx \mid y = k)}{\sum_{l=1}^K p(y = k)p(\bx \mid y = l)}\\
@@ -197,7 +199,7 @@ $$\begin{align} p(y = k \mid \bx) &= \frac{p(y = k, \bx)}{p(\bx)} = \frac{p(y = 
 :::{.callout-note}
 
 :::{style="font-size: 1.3em;"}
-Different generative models use different priors and likelihood functions, resulting in different strengths and weakness.
+Different generative models use different priors and likelihoods, resulting in different strengths and weakness.
 :::
 
 :::
@@ -334,7 +336,7 @@ $\color{blue}{(\bx \mid y = k) \sim N_p\left(\bmu_k, \Sigma \right)}$
 
 ::: {.column width="70%"}
 
-- Centroids: $\widehat{\bmu}_k = n_k^{-1} \sum_{i: \,y_i = k} \bx_i$
+- Centroid/sample mean: $\widehat{\bmu}_k = \frac{1}{n_k} \sum_{i: \,y_i = k} \bx_i$
 - Pooled covariance matrix:
     $$\widehat \Sigma = \frac{1}{n-K} \sum_{k=1}^K \sum_{i : \, y_i = k} (\bx_i - \widehat{\bmu}_k) (\bx_i - \widehat{\bmu}_k)' = \sum_{k=1}^K \frac{n_k-1}{n-K}\widehat \Sigma_k$$
     where $\widehat \Sigma_k = \frac{1}{n_k-1}\sum_{i : \, y_i = k} (\bx_i - \widehat{\bmu}_k) (\bx_i - \widehat{\bmu}_k)'$
@@ -447,15 +449,21 @@ $$\begin{align}
 \end{align}$$
 
 - $(\bx - \bmu_k)' \Sigma^{-1} (\bx - \bmu_k)$ is the **Mahalanobis distance** between $\bx$ and the centroid $\bmu_k$.
-  + [Classify $y$ so that its $\bx$ and the centroid of the labeled class is the closest.]{.green}
-
+- [Classify $y$ so that its $\bx$ and the centroid of the labeled class is the closest (after adjusting the for prior).]{.green}
 $$\begin{align}
 & - \frac{1}{2} (\bx - \bmu_k)' \Sigma^{-1} (\bx - \bmu_k) + \log(\pi_k)\\
-&=~ \bx' \underbrace{\Sigma^{-1} \bmu_k}_{\bw_k} \underbrace{- \frac{1}{2}\bmu_k' \Sigma^{-1} \bmu_k + \log(\pi_k)}_{b_k} + \text{irrelevant terms} \\
-&=~ \bx' \bw_k + b_k + \text{irrelevant terms}\\
-&=~ \delta_k(\bx) + \text{irrelevant terms}
+&=~ \bx' \underbrace{\Sigma^{-1} \bmu_k}_{\bw_k} \underbrace{- \frac{1}{2}\bmu_k' \Sigma^{-1} \bmu_k + \log(\pi_k)}_{b_k} + \text{const of } k \\
+&=~ \bx' \bw_k + b_k + \text{const of } k\\
+&=~ \delta_k(\bx) + \text{const of } k
 \end{align}$$
 where $\delta_k(\bx)$ the **discriminant function** which is [*linear*]{.green} in $\bx$.
+
+
+
+::: notes
+by incorporating the covariance matrix and adjusting the for prior. 
+Note that anything that does not depends on the class index $k$ is irrelevant to the decision. 
+:::
 
 
 ## Discriminant Function
@@ -466,7 +474,7 @@ where $\delta_k(\bx)$ the **discriminant function** which is [*linear*]{.green} 
 
 - The decision boundary of LDA is a [*linear*]{.green} function of $\bx$.
 
-- The boundary between two classes $k$ and $l$ is where they have the *same density value*.
+- The boundary between two classes $k$ and $l$ is where they have the [*same density value*]{.green}.
 
 $$\begin{align}
 \delta_k(\bx) &= \delta_l(\bx) \\
@@ -524,12 +532,8 @@ $$\begin{align}
 ::::
 
 
-::: notes
- by incorporating the covariance matrix and adjusting the for prior. 
-Note that anything that does not depends on the class index $k$ is irrelevant to the decision. 
-:::
 
-## Test Data
+## Test Data {visibility="hidden"}
 
 ```{r}
     # calculating Wk
@@ -592,26 +596,32 @@ to the decomposition due to Fisher.
 
 ## `MASS::lda()`
 
-**Logistic Regression**
-```{r}
-#| echo: false
-logit_fit <- glm(default ~ balance, data = Default, family = "binomial")
-logit_pred <- predict(logit_fit, type = "response")
-table(logit_pred > 0.5, Default$default)
-```
-
-
 **LDA**
 ```{r}
 #| echo: true
 lda_fit <- MASS::lda(default ~ balance, data = Default)
 lda_pred <- predict(lda_fit, data = Default)
-table(lda_pred$class, Default$default)
+(lda_conf <- table(lda_pred$class, Default$default))
 ```
 
-- Logistic regression training accuracy is `r round(sum(diag(table(logit_pred > 0.5, Default$default)))/nrow(Default), 3)`
+  + training accuracy is `r round(sum(diag(table(lda_pred$class, Default$default)))/nrow(Default), 3)`
+  + sensitivity is `r lda_conf[2, 2]/sum(lda_conf[, 2])`
 
-- LDA training accuracy is `r round(sum(diag(table(lda_pred$class, Default$default)))/nrow(Default), 3)`
+
+**Logistic Regression**
+
+```{r}
+#| echo: false
+logit_fit <- glm(default ~ balance, data = Default, family = "binomial")
+logit_pred <- predict(logit_fit, type = "response")
+conf_mat_logi <- table(logit_pred > 0.5, Default$default)
+conf_mat_logi
+```
+
+  + training accuracy is `r round(sum(diag(table(logit_pred > 0.5, Default$default)))/nrow(Default), 3)`
+  + sensitivity is `r conf_mat_logi[2, 2]/sum(conf_mat_logi[, 2])`
+  
+
 
 
 
@@ -654,7 +664,7 @@ The estimation procedure is almost the same as LDA.
 
 - $\hat{\pi}_k = n_k / n$
 
-- Centroids: $\widehat{\bmu}_k = n_k^{-1} \sum_{i: \,y_i = k} \bx_i$
+- Centroids: $\widehat{\bmu}_k = \frac{1}{n_k} \sum_{i: \,y_i = k} \bx_i$
 
 - *Individual* covariance matrix:
     $$\widehat \Sigma_k = \frac{1}{n_k-1}\sum_{i : \, y_i = k} (\bx_i - \widehat{\bmu}_k) (\bx_i - \widehat{\bmu}_k)'$$
@@ -839,12 +849,14 @@ table(lda_pred$class, Default$default)
 #| echo: true
 qda_fit <- MASS::qda(default ~ balance, data = Default)
 qda_pred <- predict(qda_fit, data = Default)
-table(qda_pred$class, Default$default)
+(qda_conf <- table(qda_pred$class, Default$default))
 ```
 
-- QDA training accuracy is `r round(sum(diag(table(qda_pred$class, Default$default)))/nrow(Default), 3)`
-
-
+  + training accuracy is `r round(sum(diag(table(qda_pred$class, Default$default)))/nrow(Default), 3)`
+  + sensitivity is `r qda_conf[2, 2]/sum(qda_conf[, 2])`
+  
+  
+  
 ## Naive Bayes (NB)
 :::::{style="font-size: 0.9em;"}
 
@@ -863,7 +875,7 @@ table(qda_pred$class, Default$default)
 
 ::: {.column width="40%"}
 - [**NB assumption for $f_k(\bx)$**]{.green}: 
-  + features are [independent]{.green} in each class!
+  + features within each class are [independent]{.green}!
   + $f_k(\bx) = f_{k1}(x_1) \times f_{k2}(x_2) \times \cdots \times f_{kp}(x_p)$
 :::
 ::::
@@ -873,11 +885,9 @@ table(qda_pred$class, Default$default)
 
 . . .
 
-- Condsidering the *joint distribution* of predictors is a pain when $p$ is large.
+- Considering the *joint distribution* of predictors is a pain when $p$ is large.
 
-- We don't believe $p$ predictors are not associated at all, but 
-
-this "naive" assumption leads to decent results when *$n$ is not large enough relative to $p$*.
+- We don't believe $p$ predictors are not associated at all, but this "naive" assumption leads to decent results when *$n$ is not large enough relative to $p$*.
 
 - The naive independence assumption *introduces some bias, but reduces variance*.
 
@@ -913,13 +923,37 @@ $$(X_j \mid Y = k) \sim N\left(\mu_{jk}, \sigma_{jk}^2 \right).$$ It's QDA with 
 
 
 
+##
+
+::: center
+**Class 1**
+:::
+
+```{r}
+#| eval: true
+#| out-width: 55%
+knitr::include_graphics("./images/10-generative/4_10a.png")
+```
+
+::: center
+**Class 2**
+:::
+
+```{r}
+#| eval: true
+#| out-width: 55%
+#| fig-cap: "ISL Fig. 4.10. Left to right: estimated density of $x_1$, $x_2$ and estimated probability of $x_3$."
+knitr::include_graphics("./images/10-generative/4_10b.png")
+```
+
+
 
 ## `e1071::naiveBayes()`
 
 **QDA**
 ```{r}
 #| echo: false
-qda_fit <- MASS::lda(default ~ balance, data = Default)
+qda_fit <- MASS::qda(default ~ balance, data = Default)
 qda_pred <- predict(qda_fit, data = Default)
 table(qda_pred$class, Default$default)
 ```
@@ -932,11 +966,11 @@ table(qda_pred$class, Default$default)
 #| echo: true
 nb_fit <- e1071::naiveBayes(default ~ balance, data = Default)
 nb_pred <- predict(nb_fit, Default)
-table(nb_pred, Default$default)
+(nb_conf <- table(nb_pred, Default$default))
 ```
 
-
-- Naive Bayes training accuracy is `r round(sum(diag(table(nb_pred, Default$default)))/nrow(Default), 3)`
+  + training accuracy is `r round(sum(diag(table(nb_pred, Default$default)))/nrow(Default), 3)`
+  + sensitivity is `r nb_conf[2, 2]/sum(nb_conf[, 2])`
 
 
 
@@ -964,26 +998,27 @@ Both log odds are [_linear_]{.green} in $\bx$.
 - [**QDA**]{.green}
 
 $$\log \left( \frac{P(Y = k \mid \bx)}{P(Y = K \mid \bx)}\right) = a_k + \sum_{j=1}^pc_{kj}x_j + \sum_{j=1}^p\sum_{l=1}^p d_{kjl}x_jx_l$$
-The log odds is _quadratic_ in $\bx$, where $a_k$, $c_{kj}$ and $d_{kjl}$ are functions of $\pi_k$, $\pi_K$, $\bmu_k$, $\bmu_K$, $\Sigma_k$ and $\Sigma_K$.
+The log odds is [_quadratic_]{.green} in $\bx$, where $a_k$, $c_{kj}$ and $d_{kjl}$ are functions of $\pi_k$, $\pi_K$, $\bmu_k$, $\bmu_K$, $\Sigma_k$ and $\Sigma_K$.
 
 - [**NB**]{.green}
 
 $$\log \left( \frac{P(Y = k \mid \bx)}{P(Y = K \mid \bx)}\right) = a_k + \sum_{j=1}^pg_{kj}(x_j)$$ where $a_k = \log(\pi_k / \pi_K)$ and $g_{kj}(x_j) = \log\left( \frac{f_{kj}(x_j)}{f_{Kj}(x_j)}\right)$.
 
-The log odds takes the form of a _generalized additive model_!
+The log odds takes the form of a [_generalized additive model_]{.green}!
 
 
 ## Comparison of Log Odds
 - [_LDA is a special case of QDA_]{.green} with $d_{kjl} = 0$ for all $k, j$ and $l$. $(\Sigma_1 = \cdots = \Sigma_k = \Sigma)$
 
 - [_Any classifier with a linear decision boundary is a special case of NB_]{.green} with $g_{kj}(x_j) = c_{kj}x_j.$
-  + LDA is a special case of NB
+  + LDA is a special case of NB. Really !? 😲
 
 - [_NB is a special case of LDA_]{.green} if $f_{kj}(x_j) = N\left(\mu_{jk}, \sigma_{j}^2 \right)$. $(\Sigma = \text{diag}(\sigma_1^2, \dots, \sigma_p^2))$
 
 - [_Neither QDA nor NB is a special case of the other_]{.green}
-  + NB is more _flexible_ for any transformation of $x_j$, $g_{kj}(x_j)$.
-  + NB is more _restrictive_ because of its pure _additive_ fit with no quadratic interactions $d_{kjl}x_jx_l$.
+  + NB is more 
+    * _flexible_ for any transformation of $x_j$, $g_{kj}(x_j)$.
+    * _restrictive_ because of its pure _additive_ fit with no quadratic interactions $d_{kjl}x_jx_l$.
 
 
 ## Which Method to Use
@@ -996,7 +1031,7 @@ The log odds takes the form of a _generalized additive model_!
 
 . . .
 
-- _LDA outperforms LR when predictors are approximately normal, but use LR when data are away from normal_.
+- _LDA outperforms LR when predictors are approximately normal, but use LR when inputs are away from normal_.
 
 - _Use LDA but not QDA when variability of predictors are similar among all $K$ classes._
 
@@ -1024,9 +1059,9 @@ The log odds takes the form of a _generalized additive model_!
 
 - QDA is more flexible than LDA (more parameters to be estimated), and hence low bias and high variance.
 
-- LDA tends to be better than QDA if $n$ is small, and so reducing variance is crucial.
+- LDA tends to be better than QDA if $n$ is relatively small, and so reducing variance is crucial.
 
-- QDA is recommended if $n$ is large so that the variance of the classifier is not a major concern.
+- QDA is recommended if $n$ is relatively large so that the variance of the classifier is not a major concern.
 
 - Naive Bayes works when $n$ is not large enough relative to $p$.
 

@@ -1,6 +1,6 @@
 ---
 title: "Week 13"
-subtitle: "Tree-based Methods"
+subtitle: "Support Vector Machines"
 editor: visual
 ---
 
@@ -9,11 +9,11 @@ editor: visual
 
 ## Participate
 
-🖥️ [Slides - Tree-based Methods](/slides/14-tree.html)
+🖥️ [Slides - Support Vector Machines](/slides/13-svm.html)
 
 ## Reading
 
-📖 [ISL Ch 8](https://www.statlearning.com/)
+📖 [ISL Ch 9](https://www.statlearning.com/)
 
 ## Exercise
 
