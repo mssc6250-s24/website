@@ -1,8 +1,8 @@
 ---
 title: "Homework 3 - Bayesian Statistics, Logistic Regression, Generative Models, and K-Nearest Neighbors"
-subtitle: "Due date TBD"
+subtitle: "Due Friday, April 5 11:59 PM"
 editor: source
-date-modified: today
+# date-modified: today
 format: 
   html:
     toc: true
