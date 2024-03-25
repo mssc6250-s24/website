@@ -135,8 +135,8 @@ knitr::knit_hooks$set(output = function(x, options) {
 
 - The nonparametric models that *keep the training data around at the test time* are called **examplar-based models**, **instance-based learning** or **memory-based learning**.
   + *K-nearest neighbors classification and regression*
-  + Kernel regression
-  + Local regression (LOESS)
+  + [Kernel regression](https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/nonparametric-regression-1)
+  + [Local regression, e.g., LOESS](https://math4780-f23.github.io/website/slides/12-nonpara-reg.html#/local-regression)
   + Kernel density estimation
 
 . . .
@@ -153,9 +153,9 @@ knitr::knit_hooks$set(output = function(x, options) {
 
 - It can be used for both regression and classification.
 
-- In KNN, we don't have parameters $\bbeta$, and $f(\bx_0) = \bx_0'\bbeta$ in regression.
+- In KNN, we don't have parameters $\bbeta$, and $f(\bx_0) = \bx_0'\bbeta$ in regression.^[$\widehat{y}_0 = \widehat{f}(x_0)$.]
 
-- We directly estimate $f(\bx_0)$ using our *examples* or *memory*.^[$\widehat{y}_0 = \widehat{f}(x_0)$.]
+- We directly estimate $f(\bx_0)$ using our *examples* or *memory*.
 
 $$ \widehat{y}_0 = \frac{1}{k} \sum_{x_i \in N_k(x_0)} y_i,$$ 
 where the neighborhood of $x_0$, $N_k(x_0)$, defines the *$k$ training data points that are closest to $x_0$*.
@@ -326,11 +326,11 @@ $$\text{df}(\hat{f}) = \frac{1}{\sigma^2}\text{Trace}\left( \cov(\hat{\by}, \by)
 
 :::{.center}
 ```{r}
-#| out-width: "70%"
+#| out-width: 70%
 #| fig-align: center
   # knn for classification: 
   library(class)
-  par(mfrow=c(1,2))
+  par(mfrow = c(1,2))
   par(mar = c(2, 2, 0, 2))
   
   # generate 20 random observations, with random class 1/0
@@ -370,13 +370,13 @@ $$\text{df}(\hat{f}) = \frac{1}{\sigma^2}\text{Trace}\left( \cov(\hat{\by}, \by)
 :::
 
 
-## Example
+## Example: [ESL.mixture.rda](./data/ESL.mixture.rda)
 
 <!-- - An artificial data with 200 binary labels. -->
 
 - The KNN decision boundary is nonlinear.
 
-- R: `class::knn()`, [`kknn::kknn()`](https://github.com/KlausVigo/kknn), [`parsnip::nearest_neighbor()`](https://parsnip.tidymodels.org/reference/nearest_neighbor.html)
+- R: `class::knn()`, [`kknn::kknn()`](https://github.com/KlausVigo/kknn), [`FNN::knn()`](https://cran.r-project.org/web/packages/FNN/index.html), [`parsnip::nearest_neighbor()`](https://parsnip.tidymodels.org/reference/nearest_neighbor.html)
 
 - Python: [`from sklearn.neighbors import KNeighborsClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)
 
@@ -432,7 +432,7 @@ $$\text{df}(\hat{f}) = \frac{1}{\sigma^2}\text{Trace}\left( \cov(\hat{\by}, \by)
 ::::
 
 
-## Example
+## Example: [ESL.mixture.rda](./data/ESL.mixture.rda)
 
 
 :::: {.columns}
@@ -510,7 +510,7 @@ $$\text{df}(\hat{f}) = \frac{1}{\sigma^2}\text{Trace}\left( \cov(\hat{\by}, \by)
 
 ```{r message=FALSE}
 #| echo: true
-#| class-output: "my_class800"
+#| class-output: "my_classfull"
   knn_fit <- class::knn(train = x, test = x, cl = y, k = 15)
   caret::confusionMatrix(table(knn_fit, y))
 ```
@@ -520,7 +520,7 @@ $$\text{df}(\hat{f}) = \frac{1}{\sigma^2}\text{Trace}\left( \cov(\hat{\by}, \by)
 ```{r}  
 #| echo: true
 #| code-fold: true
-set.seed(2023)
+set.seed(2024)
 library(caret)
 control <- trainControl(method = "cv", number = 10)
 knn_cvfit <- train(y ~ ., method = "knn", 
