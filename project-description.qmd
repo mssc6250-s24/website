@@ -63,13 +63,15 @@ If you choose to do **ML**, your report should include the following sections:
 - **References/Bibliography**: Include a detailed list of references, including papers, books, websites, code, and any idea/work that is not produced by yourself.
 
 
-### Format
+### Format and Layout
 
 -  Your written report is save as [**one PDF**]{.red}.
 
-- Except the project title and section title, the font size is **12 pt**.
-
 - Your paper should have your **project title** and **your name** on the first page. Date, Abstract, Keywords are optional.
+
+- Except the first title page, the margins should be no larger than **one inch.**
+
+- Except the project title and section title, the font size is **12 pt**.
 
 - Please use **1.5** or **double** line spacing.
 
