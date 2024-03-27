@@ -4587,9 +4587,20 @@
   {
     "objectID": "project-description.html",
     "href": "project-description.html",
-    "title": "MSSC 6250 Project Competition",
+    "title": "Final Project Report Guidelines",
     "section": "",
-    "text": "Team up! You will be working as a group of 3. One of you, please email me\n\nyour team member list\nyour team name\n\nby Friday, 4/5 11:59 PM.\nProposal. Please send me a one-page PDF describing what you are going to do for your project (no word limit) with your project title by Friday, 4/26 11:59 PM.\nPresentation. You will be presenting your project on Thursday, 5/9 8 - 10 AM.\nMaterials. Please share your entire work (slides, code, data, etc) by Thursday, 5/9 11:59 PM.",
+    "text": "Please send me your entire work (written report, code, data, etc) by May 9, 2024 10 AM.\nYou receive 0 point if you miss the deadline.",
+    "crumbs": [
+      "Project",
+      "Guideline and Policy"
+    ]
+  },
+  {
+    "objectID": "project-description.html#deadline",
+    "href": "project-description.html#deadline",
+    "title": "Final Project Report Guidelines",
+    "section": "",
+    "text": "Please send me your entire work (written report, code, data, etc) by May 9, 2024 10 AM.\nYou receive 0 point if you miss the deadline.",
     "crumbs": [
       "Project",
       "Guideline and Policy"
@@ -4598,86 +4609,31 @@
   {
     "objectID": "project-description.html#team-up",
     "href": "project-description.html#team-up",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Team up!",
-    "text": "Team up!\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou will be randomly assigned to a group if you do not belong to any group before the deadline.",
+    "title": "Final Project Report Guidelines",
+    "section": "Team up",
+    "text": "Team up\n\nYou will be working as a group of 3. Each of you should send me a list describing your teammate’s and your work duty and contribution to your project before the deadline.\nYou lose 20 points if you don’t meet the requirement or miss the deadline.",
     "crumbs": [
       "Project",
       "Guideline and Policy"
     ]
   },
   {
-    "objectID": "project-description.html#proposal",
-    "href": "project-description.html#proposal",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Proposal",
-    "text": "Proposal\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYour proposal (in PDF) should include three parts:\n\nProject title\nThe goal of your project. For example, what is the research question you’d like to answer? What are the machine learning models and algorithms you’d like to use?\nThe description of the data set (simulated or real) you use in your project. For example, where is the data set from, how large is the data, the variables you use for your project, etc.\n\nAlthough it is risky, you can change your project topic after you submit your proposal if you decide to do something else.",
+    "objectID": "project-description.html#project-writing",
+    "href": "project-description.html#project-writing",
+    "title": "Final Project Report Guidelines",
+    "section": "Project Writing",
+    "text": "Project Writing\nYour project can be in either of the following categories:\n\nData Analysis (DA) using one or more machine learning methods learned in class.\nIntroduce a new machine learning model/method/algorithm (ML) and compare it with the model/method/algorithms learned in class.\n\n\nStructure\nIf you choose to do DA, your report should include the following sections:\n\nIntroduction: State why you think the questions you would like to answer are important or interesting, and why you think the method(s) you consider is an appropriate one to answer your questions.\nData: Describe the selected data set. Perform a thorough exploratory data analysis.\nAnalysis:\n\nExplain the chosen model/method.\nShow why the chosen model(s) is appropriate and better than others.\nAnswer your research questions by the analysis result.\n\nConclusion: Restate your research question, and summarize how you learn from data to answer your questions. What is the contribution of this project? Discuss any limitation of your model/method, and how it could be improved for better inference or prediction results.\nReferences/Bibliography: Include a detailed list of references, including papers, books, websites, code, and any idea/work that is not produced by yourself.\n\nIf you choose to do ML, your report should include the following sections:\n\nIntroduction: State why you choose to learn this new method. Provide an overview and little history of the method. Describe the intuition and idea of the method. What are the pros and cons of the method?\nModel/Method: Provide the mathematical expression of the model. Explain the model and its properties, and how we do the supervised or unsupervised learning with the model.\nSimulation: Do a simulation study, and compare the chosen method with other methods learned in class. Determine which method performs better under what conditions.\nDiscussion: Based on the simulation results, discuss the advantages and disadvantages of the chosen method. Discuss any variants of the chosen method.\nReferences/Bibliography: Include a detailed list of references, including papers, books, websites, code, and any idea/work that is not produced by yourself.\n\n\n\nFormat\n\nYour written report is save as one PDF.\nExcept the project title and section title, the font size is 12 pt.\nYour paper should have your project title and your name on the first page. Date, Abstract, Keywords are optional.\nPlease use 1.5 or double line spacing.\nYour report, including everything, should have at least 12 pages, but no more than 15 pages.\nYour code should NOT be included in the paper.\n\n\n\nCode\n\nYour code should be able to reproduce all the numerical results, outputs, tables, and figures shown in the report, including the source of the raw data (where you find and load the data) if the project is about data analysis.",
     "crumbs": [
       "Project",
       "Guideline and Policy"
     ]
   },
   {
-    "objectID": "project-description.html#presentation",
-    "href": "project-description.html#presentation",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Presentation",
-    "text": "Presentation\n\nEvery student has to participate (in-person) in the final presentation in order to pass the course.\nEach group presentation should be between 19 and 20 minute long, followed by 2 to 3 minute Q&A. If your presentation is too short or too long, every one of you loses 3 points of your project grade.\nEvery group member has to present some part of the group work. The one who does not present receives no point.\n\n\n\nQuestions are encouraged during Q&A. Everyone is welcome to ask any questions about the projects. It helps everyone evaluate every group’s project and presentation performance. See Section 4 for grading policy.\nEach group is required to ask as least one question.\n\nThe \\(k\\)-th group should ask at least one question to the \\((k-1)\\)-th group in Q&A, \\(k = 2, \\dots, 5\\).\nThe 1st group will ask the last (5th) group questions about their project.\n\nIf you, as a group, don’t ask a question when you should, every one of you loses 3 points of your project grade.",
-    "crumbs": [
-      "Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "project-description.html#materials",
-    "href": "project-description.html#materials",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Materials",
-    "text": "Materials\n\nEach one of you loses 3 points of your project grade if you don’t meet the requirement or miss the deadline.\nYou need to share your entire work, including slides, code, and data if applicable.\nYour code should be able to reproduce all the numerical results, outputs, tables, and figures shown in the slides, including the source of the raw data (where you find and load the data) if your project involves data analysis.",
-    "crumbs": [
-      "Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "project-description.html#data-analysis",
-    "href": "project-description.html#data-analysis",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Data Analysis",
-    "text": "Data Analysis\nFor your DA project, you need to\n\nState why you think the questions you would like to answer are important or interesting, and why you think the method(s) you consider is an appropriate one to answer your questions.\nDescribe the selected data set. Perform a thorough exploratory data analysis.\nExplain the chosen model/method(s).\nShow why the chosen model(s) is appropriate and better than others.\nAnswer your research questions by your analysis result.",
-    "crumbs": [
-      "Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "project-description.html#new-machine-learning-modelmethodalgorithm",
-    "href": "project-description.html#new-machine-learning-modelmethodalgorithm",
-    "title": "MSSC 6250 Project Competition",
-    "section": "New Machine Learning Model/Method/Algorithm",
-    "text": "New Machine Learning Model/Method/Algorithm\nFor your ML project, you need to\n\nState why you choose to learn this new method. Provide an overview and little history of the method. Describe the intuition and idea of the method. What are the pros and cons of the method?\nProvide the mathematical expression of the model. Explain the model and its properties, and how we do the supervised or unsupervised learning with the model.\nDo a simulation study, and compare the chosen method with other methods learned in class. Determine which method performs better under what conditions.\nBased on the simulation results, discuss the advantages and disadvantages of the chosen method. Discuss any variants of the chosen method.",
-    "crumbs": [
-      "Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "project-description.html#group-performance-evaluation",
-    "href": "project-description.html#group-performance-evaluation",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Group Performance Evaluation",
-    "text": "Group Performance Evaluation\n\nYou will need to evaluate all group projects except the one you work on.\nYou evaluate group performance based on the rubric attached. Four evaluation criteria are considered:\n\nProject Content and Organization (8 pts)\nSlides Quality (4 pts)\nOral Presentation Skill and Delivery (4 pts)\nInteractions and Q&A (4 pts)\n\nThe total points of a project presentation is 20 points.\nEvaluation sheets will be provided on the presentation day.\nHow do you get the full points for each category? Check the requirements below. Note that for Content and Organization, data analysis and package projects have different requirements.\nContent and Organization (DA)\n\nBeautiful visualization helps find out relationship of variables and specification of models\nAll questions are answered accurately by the models\nDiscuss how and why the models are chosen\nDetailed analysis\nAll ideas are presented in logical order\n\nContent and Organization (ML)\n\nClearly descibe the introduced method.\nClear explanation on the pros and cons of the method.\nDetailed comparison between the method and other methods via simulation study.\nAll ideas are presented in logical order\n\nSlides Quality\n\nSlides show code and output beautifully\nSlides clearly aid the speaker in telling a coherent story\nAll tables and graphics are informative and related to the topic and make it easier to understand\nAttractive design, layout, and neatness.\n\nOral Presentation Skill\n\nGood volume and energy\nProper pace and diction\nAvoidance of distracting gestures\n\nInteractions and Q&A\n\nGood eye contact with audience\nExcellent listening skills\nAnswers audience questions with authority and accuracy\n\nAfter you evaluate 4 group project presentations, you rank them from 1st to 4th based on their earned points.\nNo two groups receive the same ranking. If you give two or more groups some points, you still need to give them a different ranking, deciding which teams deserve a higher ranking according to your preference.",
-    "crumbs": [
-      "Project",
-      "Guideline and Policy"
-    ]
-  },
-  {
-    "objectID": "project-description.html#individual-performance-evaluation",
-    "href": "project-description.html#individual-performance-evaluation",
-    "title": "MSSC 6250 Project Competition",
-    "section": "Individual Performance Evaluation",
-    "text": "Individual Performance Evaluation\n\n\nYou choose one single person who you think contributes the most to your group project.\nYou cannot vote for yourself, and you can only vote for one of your teammates.\nIf you don’t vote, you can’t be the best contributor even if you obtain the most votes. The person with the second highest votes wins the best contribution reward.\nIf there is no one single person who gets the most votes, every team member remains the same grade. For example, if your group finish in third place, and there is no best contributor, all members receive 265 points (See Table 1).",
+    "objectID": "project-description.html#project-evaluation",
+    "href": "project-description.html#project-evaluation",
+    "title": "Final Project Report Guidelines",
+    "section": "Project Evaluation",
+    "text": "Project Evaluation\nYour project will be evaluated soley by Dr. Yu based on\n\nContent:\n\nThe quality of research question and relevancy of data to those questions? For example, the relationship between human height and weight is a BAD question. An elementary-school height and weight data set is a BAD data set.\nThe quality of the chosen model. For example, one-way ANOVA is a BAD model.\n\nCorrectness, Completeness and Complexity:\n\nAre machine learning methods carried out and explained correctly?\nDoes project include rigorous analysis and models? Simple linear regression model lacks complexity.\n\nWriting: What is the quality of the machine learning model/method presentation, visualization, writing, and explanations.\nFormat: Does the report follow the required format?\nCreativity and Critical Thought: Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project?\nReproducibility: Can your code reproduce what you show in the paper?\nReference: Do you cite others work properly?",
     "crumbs": [
       "Project",
       "Guideline and Policy"
