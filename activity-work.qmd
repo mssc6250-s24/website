@@ -44,13 +44,11 @@ Course slides [Simulation-based Inference](https://math4780-f23.github.io/websit
 act1 <- generate_group(all = students, leader_can = students, seed = 6250)
 ```
 
-
 ### Group 1
 
 #### [Slides](https://marq-my.sharepoint.com/:p:/g/personal/dibaloke_chanda_marquette_edu/EV8jl0O2x25Pq4WqvR11mjIBmmV04Vtigs7ygbiGlfpclg?e=8cPsz3)
 
 #### R code [example-1](./documents/act/act1_g1_ex1.R) [example-2](./documents/act/act1_g1_ex2.R)
-
 
 #### Leaders:
 
@@ -102,18 +100,17 @@ For *group members*, please go to <https://forms.office.com/r/WUCKQNJ3Sd> to eva
 ::: {.callout collapse="true"}
 ### Topic: Generalized Linear Models and Generalized Additive Models
 
-::: {.callout-tip}
+::: callout-tip
 Focus on the concepts and ideas, and avoid mathematical details.
 :::
 
-1. Define Generalized Linear Models (GLMs) and Generalized Additive Models (GAMs). What are their similarities and differences?
+1.  Define Generalized Linear Models (GLMs) and Generalized Additive Models (GAMs). What are their similarities and differences?
 
-2. Why using these models? What are the main properties of the two models? What can they do but multiple linear regression can't?
+2.  Why using these models? What are the main properties of the two models? What can they do but multiple linear regression can't?
 
-3. Provide an example or special case of GLM and GAM.
+3.  Provide an example or special case of GLM and GAM.
 
-4. Code demo how to run a GLM and GAM.
-
+4.  Code demo how to run a GLM and GAM.
 
 ```{r}
 #| echo: true
@@ -121,15 +118,11 @@ leader_can <- setdiff(students, c(act1$G1_leader, act1$G2_leader))
 act2 <- generate_group(all = students, leader_can = leader_can, seed = 6250)
 ```
 
-
-
 ### Group 1
 
 #### [Slides](./documents/act/act2_g1.pdf)
 
 #### R code [GLM](./documents/act/6250_classactivity2.R) [GAM](./documents/act/GAM_6250inclass.R)
-
-
 
 #### Leaders:
 
@@ -151,7 +144,6 @@ act2$G1_member
 
 #### R code [GLM](./documents/act/act2_glmdemo_g2.R) [GAM](./documents/act/act2_gamdemo_g2.R)
 
-
 #### Leaders:
 
 ```{r}
@@ -166,7 +158,6 @@ act2$G2_leader
 act2$G2_member
 ```
 
-
 ### Knowledge Check
 
 Please go to <https://forms.office.com/r/Bt5rVJ5igB> to answer the knowledge check questions.
@@ -176,29 +167,25 @@ Please go to <https://forms.office.com/r/Bt5rVJ5igB> to answer the knowledge che
 For [*leaders*]{.red}, please go to <https://forms.office.com/r/Ys2rAFW8pe> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
 
 For [*group members*]{.red}, please go to <https://forms.office.com/r/tk9FrnV9ZM> to evaluate your leaders' performance.
-
 :::
-
 
 ## Class activity 3
 
 ### Topic: Loss Functions for Regression and Classification
 
-::: {.callout-tip}
+::: callout-tip
 Focus on the concepts and ideas, and avoid mathematical details.
 :::
 
-1. Define and explain the meaning of a loss function in machine learning.
+1.  Define and explain the meaning of a loss function in machine learning.
 
-2. Compare loss functions used in regression, including mean square error (MSE, L2 loss), mean absolute error (MAE, L1 loss), and Huber loss. What are their properties? Use simulated data with outliers to explain why the fitting with L1 loss or Huber loss is more **robust** than OLS with the L2 loss.
+2.  Compare loss functions used in regression, including mean square error (MSE, L2 loss), mean absolute error (MAE, L1 loss), and Huber loss. What are their properties? Use simulated data with outliers to explain why the fitting with L1 loss or Huber loss is more **robust** than OLS with the L2 loss.
 
-3. Explain the log loss used for the binary logistic regression. Define and explain the meaning of maximum likelihood estimation. Define and explain the meaning of cross entropy. How is the log loss related to the maximum likelihood and cross-entropy?
-
+3.  Explain the log loss used for the binary logistic regression. Define and explain the meaning of maximum likelihood estimation. Define and explain the meaning of cross entropy. How is the log loss related to the maximum likelihood and cross-entropy?
 
 <!-- 4. (Optional) Compare loss functions used in binary classification, including log loss (cross-entropy) (with $y$ label $0, 1$) and hinge loss (with $y$ label $-1, 1$). Explain the functions using binary logistic regression and support vector classifier. -->
 
 <!-- 4. Code demo how to run a GLM and GAM. -->
-
 
 ```{r}
 #| echo: true
@@ -209,9 +196,6 @@ act3 <- generate_group(all = students,
                        leader_can = leader_can, 
                        seed = 6250)
 ```
-
-
-
 
 ### Group 1
 
@@ -245,15 +229,14 @@ act3$G2_leader
 act3$G2_member
 ```
 
-
-
-
 <!-- ### Topic: Gaussian Process Classification -->
 
 <!-- ### Topic: Artificial Neural Networks -->
 
 <!-- ::: {.callout-tip} -->
+
 <!-- Focus on the concepts and ideas, and avoid mathematical details. -->
+
 <!-- ::: -->
 
 <!-- 1. Define a single layer (feed-forward) neural network. -->
@@ -262,35 +245,80 @@ act3$G2_member
 
 <!-- 3.  -->
 
-
 <!-- ### Topic: Entropy (in Information Theory) -->
 
 <!-- ::: {.callout-tip} -->
+
 <!-- Focus on the concepts and ideas, and avoid mathematical details. -->
+
 <!-- ::: -->
 
 <!-- 1. Define the entropy of a random variable. What does it measure? -->
 
-
-
 <!-- ### Topic:  -->
 
 <!-- ::: {.callout-tip} -->
+
 <!-- Focus on the concepts and ideas, and avoid mathematical details. -->
+
 <!-- ::: -->
 
 <!-- 1. Define the entropy of a random variable. What does it measure? -->
 
 ## Class activity 4
 
+
+
 ### Topic: Principal Component Regression and Partial Least Squares
 
-::: {.callout-tip}
+::: callout-tip
 Focus on the concepts and ideas, and avoid mathematical details.
 :::
 
-1. First explain the two methods principal component regression (PCR) and partial least squares (PLS). Why and when do we use them? Discuss their similarities and differences.
+1.  First explain the two methods principal component regression (PCR) and partial least squares (PLS). Why and when do we use them? Discuss their similarities and differences.
 
-2. Code demo of the two methods.
+<!-- 2. How the two methods related to ridge regression and lasso. -->
 
-3. 
+2.  Code demo of the two methods.
+
+
+### Group 1
+
+#### Leaders:
+
+```{r}
+#| echo: false
+leader_can <- setdiff(students, 
+                      c(act1$G1_leader, act1$G2_leader,
+                        act2$G1_leader, act2$G2_leader,
+                        act3$G1_leader, act3$G2_leader))
+
+c("Jennifer", "Brigida")
+```
+
+#### Members:
+
+```{r}
+#| echo: false
+student_set <- setdiff(students, leader_can)
+set.seed(6250)
+g1_mem <- sample(student_set, 6)
+g1_mem
+```
+
+### Group 2
+
+#### Leaders:
+
+```{r}
+#| echo: false
+c("Clint")
+```
+
+#### Members:
+
+```{r}
+#| echo: false
+
+setdiff(student_set, g1_mem)
+```

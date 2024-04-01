@@ -65,7 +65,7 @@ If you choose to do **ML**, your report should include the following sections:
 
 ### Format and Layout
 
--  Your written report is save as [**one PDF**]{.red}.
+-  Your written report is saved as [**one PDF**]{.red}.
 
 - Your paper should have your **project title** and **your name** on the first page. Date, Abstract, Keywords are optional.
 
