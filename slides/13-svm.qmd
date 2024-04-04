@@ -280,14 +280,13 @@ svm_fit <- svm(y ~ ., data = data.frame(x, y), type = 'C-classification',
 
 ::: {.column width="50%"}
 
-- Hope the classifier will also have a large margin on the test data.
+- The training points lied on the dashed lines are **support vectors**:
+  + if they were moved, the maximal margin hyperplane would move too.
+  + the hyperplane depends directly on the support vectors, but not on the other observations, provided that their movement does not cause it to cross the boundary.
 
 - It can lead to overfitting when $p$ is large.
 
-- The training points lied on the dashed lines are **support vectors**:
-  + if they were moved, then the maximal margin hyperplane would move too.
-  + the maximal margin hyperplane depends directly on the support vectors, but not on the other observations.
-
+- Hope the classifier will also have a large margin on the test data.
 
 :::
 
@@ -402,16 +401,16 @@ For $p = 2$, and the plane $\beta_0 + \beta_1 X_1 + \beta_2X_2 = 0$, the distanc
 
 \begin{align}
 \underset{\bbeta, \beta_0}{\text{max}} \quad & M \\
-\text{subject to} \quad & \frac{1}{\lVert \bbeta \lVert} y_i(\bx' \bbeta + \beta_0) \geq M, \,\, i = 1, \ldots, n.
+\text{s.t.} \quad & \frac{1}{\lVert \bbeta \lVert} y_i(\bx' \bbeta + \beta_0) \geq M, \,\, i = 1, \ldots, n.
 \end{align}
 
 - The constraint requires that each point be on the correct side of the hyperplane, with some cushion.
 
-- Note that the scale of $\bbeta$ can be arbitrary, so just set it as $\lVert \bbeta \rVert = 1$:
+- The scale of $\bbeta$ can be arbitrary, so just set it as $\lVert \bbeta \rVert = 1$:
 
 \begin{align}
 \underset{\bbeta, \beta_0}{\text{max}} \quad & M \\
-\text{subject to}
+\text{s.t.}
  \quad & \lVert \bbeta \lVert = 1, \\
  \quad &  y_i(\bx' \bbeta + \beta_0) \geq M, \,\, i = 1, \ldots, n.
 \end{align}
@@ -466,7 +465,7 @@ margin classifier.
 
 - Even if a separating hyperplane does exist, the maximum-margin classifier might not be desirable.
 
-- The maximal margin hyperplane is extremely sensitive to a change in a single observation: it may overfit the training data.
+- The maximal margin hyperplane is extremely sensitive to a change in a single observation: it may overfit the training data. ([*low-bias high-variance*]{.green})
 
 ```{r}
 #| fig-cap: "Source: ISL Fig. 9.5"
@@ -479,10 +478,10 @@ knitr::include_graphics("./images/13-svm/fig9-5.png")
   + [Greater robustness to individual observations]{.green}
   + [Better classification of _most_ of the training observations.]{.green}
   
-- It could be worthwhile to misclassify a few training observations
+- It could be worthwhile to misclassify a few training points
 in order to do a better job in classifying the remaining observations.
 
-- Allow some observations to be on the incorrect side of the margin, or even the incorrect side of the hyperplane (training points misclassified by the classifier).
+- Allow some points to be on the incorrect side of the margin, or even the incorrect side of the hyperplane (training points misclassified by the classifier).
 
 ```{r}
 #| fig-cap: "Source: ISL Fig. 9.6"
@@ -493,17 +492,19 @@ knitr::include_graphics("./images/13-svm/9-6.png")
 
 \begin{align}
 \underset{\bbeta, \beta_0, \epsilon_1, \dots, \epsilon_n}{\text{max}} \quad & M \\
-\text{subject to}
+\text{s.t.}
  \quad & \lVert \bbeta \lVert = 1, \\
  \quad &  y_i(\bx' \bbeta + \beta_0) \geq M(1 - \epsilon_i), \\
   \quad & \epsilon_i \ge 0, \sum_{i=1}^n\epsilon_i \le B, \,\, i = 1, \ldots, n,
 \end{align}
 where $B > 0$ is a tuning parameter. 
 
-- $\epsilon_1, \dots, \epsilon_n$ are **slack variables** that allow individual observations to be on slack the wrong side of the margin or the hyperplane.
-  + $\epsilon_i = 0$: the $i$th observation is on the correct side of the margin.
-  + $\epsilon_i > 0$: the $i$th observation is on the wrong side of the margin.
-  + $\epsilon_i > 1$: the $i$th observation is on the wrong side of the hyperplane.
+- $\epsilon_1, \dots, \epsilon_n$ are **slack variables** that allow individual points to be on slack the wrong side of the margin or the hyperplane.
+
+- The $i$th point is on the
+  + *correct* side of the margin when $\epsilon_i = 0$
+  + *[wrong]{.blue} side of the [margin]{.blue}* when $\epsilon_i > 0$
+  + *[wrong]{.blue} side of the [hyperplane]{.blue}* when $\epsilon_i > 1$
 
 
 ::: notes
@@ -515,7 +516,7 @@ where $B > 0$ is a tuning parameter.
 
 \begin{align}
 \underset{\bbeta, \beta_0, \epsilon_1, \dots, \epsilon_n}{\text{max}} \quad & M \\
-\text{subject to}
+\text{s.t.}
  \quad & \lVert \bbeta \lVert = 1, \\
  \quad &  y_i(\bx' \bbeta + \beta_0) \geq M(1 - \epsilon_i), \\
   \quad & \epsilon_i \ge 0, \sum_{i=1}^n\epsilon_i \le B, \,\, i = 1, \ldots, n,
@@ -523,9 +524,9 @@ where $B > 0$ is a tuning parameter.
 where $B > 0$ is a tuning parameter. 
 
 - $B$ determines the number and severity of the violations
-to the margin/hyperplane that we will tolerate.
-  + $B = 0$: no budget for violations ($\epsilon_1 = \cdots = \epsilon_n = 0$)
-  + $B > 0$: no more than $B$ observations can be on the wrong side of the hyperplane. ($\epsilon_i > 1$)
+to the margin/hyperplane we tolerate.
+  + $B = 0$: *no budget* for violations ($\epsilon_1 = \cdots = \epsilon_n = 0$)
+  + $B > 0$: *no more than $B$ points* can be on the wrong side of the hyperplane. ($\epsilon_i > 1$)
   + As $B$ increases, more violations and wider margin. (more bias less variance)
   + Choose $B$ via cross-validation.
 
@@ -656,9 +657,9 @@ by the n observations
 :::{style="font-size: 1.1em;"}
 The argument `cost` in `e1071::svm()` is the $C$ defined in the **primal form** 
 \begin{align}
-\text{min} \quad & \frac{1}{2}\lVert \bbeta \rVert^2 + C \sum_{i=1}^n \epsilon_i \\
+\underset{\bbeta, \beta_0}{\text{min}} \quad & \frac{1}{2}\lVert \bbeta \rVert^2 + C \sum_{i=1}^n \epsilon_i \\
 \text{s.t} \quad & y_i (\bx_i' \bbeta + \beta_0) \geq (1 - \epsilon_i), \\
-\text{and} \quad & \epsilon_i \geq 0, \,\, i = 1, \ldots, n,
+\text{} \quad & \epsilon_i \geq 0, \,\, i = 1, \ldots, n,
 \end{align}
 :::
 so small cost $C$ means larger budget $B$.
@@ -670,11 +671,11 @@ so small cost $C$ means larger budget $B$.
 
 :::{style="font-size: 1.3em;"}
 
-- SVM decision rule is based only on a small subset of the training observations (robust to the behavior of observations that are far away from the hyperplane.)
+- **SVM** decision rule is based only on a subset of the training data (robust to the behavior of data that are far away from the hyperplane.)
 
-- LDA classification rule depends on the mean of _all_ of the observations within each class, and within-class covariance matrix computed using *all* of the observations.
+- **LDA** depends on the mean of [_all_]{.blue} of the observations within each class, and within-class covariance matrix computed using *all* of the data.
 
-- Logistic regression, unlike LDA, has very low sensitivity to observations far from the decision boundary too.
+- **Logistic regression**, unlike LDA, is insensitive to observations far from the decision boundary too.
 :::
 :::
 
@@ -738,7 +739,7 @@ so small cost $C$ means larger budget $B$.
 
 - In regression, we enlarge the feature space using functions of the predictors to address this non-linearity.
 
-- In SVM, we could address non-linear boundaries by enlarging the feature space.
+- In SVM (logistic regression too!), we could address non-linear boundaries by enlarging the feature space.
 
 - For example, rather than fitting a support vector classifier using $p$ features, $X_1, \dots, X_p$, we could instead fit a support vector classifier using $2p$ features $X_1,X_1^2,X_2,X_2^2, \dots , X_p, X_p^2$.
 
@@ -768,8 +769,33 @@ vector classifier in a way that leads to efficient computations
 :::
 
 
+<!-- $$f(\bx) = \beta_0 + \sum_{i=1}^n\alpha_i\langle \bx, \bx_{i} \rangle = \beta_0 + \sum_{i\in \mathcal{S}}\alpha_i\langle \bx, \bx_{i} \rangle$$ -->
+
+## Solution to Support Vector Classifier
+
+- The solution to the support vector classifier optimization involves only the *inner products of the observations*: $\langle \bx_i, \bx_{i'} \rangle = \sum_{j=1}^px_{ij}x_{i'j}$
+
+- The linear support vector classifier can be represented as
+$$f(\bx) = \beta_0 + \sum_{i\in \mathcal{S}}\alpha_i\langle \bx, \bx_{i} \rangle$$
+where $\mathcal{S}$ is the collection of indices of the support points.
+
+- $\alpha_i$ is nonzero only for the support vectors in the solution
+
+. . .
+
+<!-- - To train the parameters $\alpha_i$s and $\beta_0$, all we need are the $n \choose 2$ inner products $\langle \bx_i, \bx_{i'} \rangle$ between all pairs of training observations. -->
+
+- To evaluate the function $f(\bx_0)$, we compute $\langle \bx_0, \bx_{i} \rangle$.
 
 ## Nonlinear SVM via Kernel Trick
+
+<!-- - $\alpha_i$ is nonzero only for the support vectors in the solution -->
+
+<!-- $$f(\bx) = \beta_0 + \sum_{i\in \mathcal{S}}\alpha_i\langle \bx, \bx_{i} \rangle$$ -->
+<!-- where $\mathcal{S}$ is the collection of indices of these support points. -->
+
+<!-- . . . -->
+
 
 - The support vector machine (SVM) is an extension of the support vector classifier that results from enlarging the feature space in a specific way, using **kernels**.
 
@@ -777,35 +803,15 @@ vector classifier in a way that leads to efficient computations
 
 . . .
 
-- The solution to the support vector classifier optimization involves only the *inner products of the observations*: $\langle \bx_i, \bx_{i'} \rangle = \sum_{j=1}^px_{ij}x_{i'j}$
-
-- The linear support vector classifier can be represented as
-$$f(\bx) = \beta_0 + \sum_{i=1}^n\alpha_i\langle \bx, \bx_{i} \rangle$$
-
-. . .
-
-- To train the parameters $\alpha_i$s and $\beta_0$, all we need are the $n \choose 2$ inner products $\langle \bx_i, \bx_{i'} \rangle$ between all pairs of training observations.
-
-- To evaluate the function $f(\bx_0)$, we compute $\langle \bx_0, \bx_{i} \rangle$.
-
-## Nonlinear SVM via Kernel Trick
-
-- $\alpha_i$ is nonzero only for the support vectors in the solution
-
-$$f(\bx) = \beta_0 + \sum_{i\in \mathcal{S}}\alpha_i\langle \bx, \bx_{i} \rangle$$
-where $\mathcal{S}$ is the collection of indices of these support points.
-
-. . .
 
 - Kernel Trick:
-
 $$f(\bx) = \beta_0 + \sum_{i\in \mathcal{S}}\alpha_i K\left(\bx, \bx_{i}\right) $$
 
-- **Linear kernel**: $K\left(\bx_0, \bx_{i}\right) = \langle \bx_0, \bx_{i'} \rangle = \sum_{j=1}^px_{0j}x_{i'j}$
+- **Linear kernel**: $K\left(\bx_0, \bx_{i}\right) = \langle \bx_0, \bx_{i'} \rangle = \sum_{j=1}^px_{0j}x_{ij}$
 
-- **Polynomial kernel**: $K\left(\bx_0, \bx_{i}\right) = \left(1 + \sum_{j=1}^px_{0j}x_{i'j}\right)^d$
+- **Polynomial kernel**: $K\left(\bx_0, \bx_{i}\right) = \left(1 + \sum_{j=1}^px_{0j}x_{ij}\right)^d$
 
-- **Radial kernel**: $K\left(\bx_0, \bx_{i'}\right) = \exp \left(-\gamma\sum_{j=1}^p (x_{0j}-x_{i'j})^2 \right)$
+- **Radial kernel**: $K\left(\bx_0, \bx_{i'}\right) = \exp \left(-\gamma\sum_{j=1}^p (x_{0j}-x_{ij})^2 \right)$
 
 
 ## Radial Kernel Decision Doundary
@@ -841,7 +847,7 @@ $$f(\bx) = \beta_0 + \sum_{i\in \mathcal{S}}\alpha_i K\left(\bx, \bx_{i}\right) 
 
 \begin{align}
 \underset{\bbeta, \beta_0, \epsilon_1, \dots, \epsilon_n}{\text{max}} \quad & M \\
-\text{subject to}
+\text{s.t.}
  \quad & \lVert \bbeta \lVert = 1, \\
  \quad &  y_i(\bx_i' \bbeta + \beta_0) \geq M(1 - \epsilon_i), \\
   \quad & \epsilon_i \ge 0, \sum_{i=1}^n\epsilon_i \le B, \,\, i = 1, \ldots, n,
