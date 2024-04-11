@@ -229,6 +229,24 @@ act3$G2_leader
 act3$G2_member
 ```
 
+### Knowledge Check
+
+Please go to  to answer the knowledge check questions.
+
+<!-- <https://forms.office.com/r/WhjhuJ781U> -->
+
+### Evaluation
+
+For [*leaders*]{.red}, please go to  to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
+
+<!-- <https://forms.office.com/r/ZYt35Czaxr> -->
+
+For [*group members*]{.red}, please go to  to evaluate your leaders' performance.
+
+<!-- <https://forms.office.com/r/uC8wJMSEtn> -->
+
+
+
 <!-- ### Topic: Gaussian Process Classification -->
 
 <!-- ### Topic: Artificial Neural Networks -->
@@ -267,8 +285,6 @@ act3$G2_member
 
 ## Class activity 4
 
-
-
 ### Topic: Principal Component Regression and Partial Least Squares
 
 ::: callout-tip
@@ -280,7 +296,6 @@ Focus on the concepts and ideas, and avoid mathematical details.
 <!-- 2. How the two methods related to ridge regression and lasso. -->
 
 2.  Code demo of the two methods.
-
 
 ### Group 1
 
