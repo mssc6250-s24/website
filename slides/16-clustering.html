@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MSSC 6250 - Spring 2024 - Clustering r fontawesome::fa("circle-nodes")</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -429,7 +429,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/16-clustering/clustering.png" class="quarto-figure quarto-figure-center" style="width:38.0%"></p>
+<figure><p><img data-src="./images/16-clustering/clustering.png" style="width:38.0%"></p>
 <figcaption>Source: https://shopup.me/blog/customer-segmentation-definition/</figcaption></figure>
 </div>
 </div>
@@ -456,7 +456,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/16-clustering/kmeans.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+<figure><p><img data-src="./images/16-clustering/kmeans.png" style="width:85.0%"></p>
 <figcaption>Source: Fig. 12.7 of ISL</figcaption></figure>
 </div>
 </div>
@@ -484,7 +484,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/16-clustering/12_10-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="./images/16-clustering/12_10-1.png" style="width:100.0%"></p>
 <figcaption>Source: ISL Fig. 12.10</figcaption></figure>
 </div>
 </div>
@@ -507,7 +507,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/16-clustering/12_10-1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="./images/16-clustering/12_10-1.png" style="width:100.0%"></p>
 <figcaption>Source: ISL Fig. 12.10</figcaption></figure>
 </div>
 </div>
@@ -696,7 +696,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 </div>
 </section><section id="section-1" class="slide level2"><h2></h2>
 
-<img data-src="./images/16-clustering/kmeans_algo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p class="caption">Source: ISL Figure 12.8</p></section><section id="k-means-algorithm-issues" class="slide level2"><h2>K-Means Algorithm Issues</h2>
+<img data-src="./images/16-clustering/kmeans_algo.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: ISL Figure 12.8</p></section><section id="k-means-algorithm-issues" class="slide level2"><h2>K-Means Algorithm Issues</h2>
 <ul>
 <li><p>The algorithm finds a <em>local</em> rather than a global optimum.</p></li>
 <li>
@@ -726,7 +726,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 </div>
 </section><section id="section-2" class="slide level2"><h2></h2>
 
-<img data-src="./images/16-clustering/kmeans_local.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p class="caption">Source: ISL Figure 12.9</p></section><section id="k-mediods" class="slide level2"><h2>K-Mediods</h2>
+<img data-src="./images/16-clustering/kmeans_local.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: ISL Figure 12.9</p></section><section id="k-mediods" class="slide level2"><h2>K-Mediods</h2>
 <ul>
 <li><p>K-medoids is an alternative of K-means.</p></li>
 <li><p>Seek one observation that minimizes the distance to all others in the cluster <span class="math display">\[i^*_k = \mathop{\mathrm{arg\,min}}_{i:C(i)=k}\sum_{C(i')=k}d(\mathbf{x}_i, \mathbf{x}_{i'})\]</span></p></li>
@@ -1294,6 +1294,24 @@ z_i &amp;\sim \text{Categorical}(p_1, \dots, p_K)\end{align},\]</span> where <sp
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/mssc6250-s24\.github\.io\/website\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1330,7 +1348,11 @@ z_i &amp;\sim \text{Categorical}(p_1, \dots, p_K)\end{align},\]</span> where <sp
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
