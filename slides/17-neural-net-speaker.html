@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MSSC 6250 - Spring 2024 - Artificial Neural Networks r emo::ji('raised_hands')</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -361,12 +361,12 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li><p>A neural network with several hidden layers is called a deep neural network, or <strong>deep learning</strong>.</p></li>
 </ul>
 
-<img data-src="./images/17-neural-net/deeplearning.png" width="1600" class="r-stretch quarto-figure-center"><p class="caption">Source: ISL Ch 10</p></section><section id="section-1" class="slide level2"><h2></h2>
+<img data-src="./images/17-neural-net/deeplearning.png" class="quarto-figure quarto-figure-center r-stretch" width="1600"><p class="caption">Source: ISL Ch 10</p></section><section id="section-1" class="slide level2"><h2></h2>
 <!-- <center> -->
 <!-- [<img src="neural-network-banner.gif" height="250"/>](http://brainstormingbox.org/a-beginners-guide-to-neural-networks/){target='_blank'} -->
 <!-- </center> -->
 
-<img data-src="http://brainstormingbox.org/wp-content/uploads/2020/08/nural-network-banner.gif" style="width:90.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: http://brainstormingbox.org/a-beginners-guide-to-neural-networks/</p></section><section id="single-hidden-layer-neural-network-with-one-output" class="slide level2"><h2>Single (Hidden) Layer Neural Network with One Output</h2>
+<img data-src="http://brainstormingbox.org/wp-content/uploads/2020/08/nural-network-banner.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p class="caption">Source: http://brainstormingbox.org/a-beginners-guide-to-neural-networks/</p></section><section id="single-hidden-layer-neural-network-with-one-output" class="slide level2"><h2>Single (Hidden) Layer Neural Network with One Output</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <p>Starts from inputs <span class="math inline">\(X\)</span>, for each <strong>hidden neuron</strong> <span class="math inline">\(A_k\)</span>, <span class="math inline">\(k = 1, \dots, K\)</span>,</p>
@@ -383,7 +383,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/17-neural-net/10_1.png" style="width:100.0%"></p>
+<figure><p><img data-src="./images/17-neural-net/10_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 <figcaption>Source: ISL Fig. 10.1</figcaption></figure>
 </div>
 </div>
@@ -516,7 +516,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/17-neural-net/10_1.png" style="width:100.0%"></p>
+<figure><p><img data-src="./images/17-neural-net/10_1.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 <figcaption>Source: ISL Fig. 10.1</figcaption></figure>
 </div>
 </div>
@@ -891,24 +891,6 @@ R(\theta) \overset{\triangle}{=} \sum_{i=1}^nR_i(\theta) =&amp; \frac{1}{2}\sum_
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/mssc6250-s24\.github\.io\/website\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -945,11 +927,7 @@ R(\theta) \overset{\triangle}{=} \sum_{i=1}^nR_i(\theta) =&amp; \frac{1}{2}\sum_
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
