@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.551">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MSSC 6250 - Spring 2024 - Bayesian Linear Regression r fontawesome::fa("scale-unbalanced")</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -632,7 +632,7 @@ Total      1000              1.000
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="./images/08-bayes/winning.jpeg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+<figure><p><img data-src="./images/08-bayes/winning.jpeg" style="width:100.0%"></p>
 <figcaption>Source: https://twitter.com/nytgraphics/status/796195155158171648/photo/1</figcaption></figure>
 </div>
 </div>
@@ -668,7 +668,7 @@ Total      1000              1.000
 <li><p>We continuously update our knowledge about the world as we accumulate lived experiences, or <em>collect data</em>.</p></li>
 </ul>
 
-<img data-src="./images/08-bayes/restaurant_diagram.png" class="quarto-figure quarto-figure-center r-stretch" style="width:30.0%"><p class="caption">Fig 1.1 of https://www.bayesrulesbook.com/. The figures not being sourced come from this book too.</p><aside class="notes"><p>Everybody changes their mind. You likely even changed your mind in the last minute. For example, suppose there’s a new Italian restaurant in your town. It has a 5-star online rating and you love Italian food! Thus, prior to ever stepping foot in the restaurant, you anticipate that it will be quite delicious. On your first visit, you collect some edible data: your pasta dish arrives a soggy mess. Weighing the stellar online rating against your own terrible meal (which might have just been a fluke), you update your knowledge: this is a 3-star not 5-star restaurant. Willing to give the restaurant another chance, you make a second trip. On this visit, you’re pleased with your Alfredo and increase the restaurant’s rating to 4 stars. You continue to visit the restaurant, collecting edible data and updating your knowledge each time.</p>
+<img data-src="./images/08-bayes/restaurant_diagram.png" style="width:30.0%" class="r-stretch quarto-figure-center"><p class="caption">Fig 1.1 of https://www.bayesrulesbook.com/. The figures not being sourced come from this book too.</p><aside class="notes"><p>Everybody changes their mind. You likely even changed your mind in the last minute. For example, suppose there’s a new Italian restaurant in your town. It has a 5-star online rating and you love Italian food! Thus, prior to ever stepping foot in the restaurant, you anticipate that it will be quite delicious. On your first visit, you collect some edible data: your pasta dish arrives a soggy mess. Weighing the stellar online rating against your own terrible meal (which might have just been a fluke), you update your knowledge: this is a 3-star not 5-star restaurant. Willing to give the restaurant another chance, you make a second trip. On this visit, you’re pleased with your Alfredo and increase the restaurant’s rating to 4 stars. You continue to visit the restaurant, collecting edible data and updating your knowledge each time.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1375,7 +1375,7 @@ $ temp_feel &lt;dbl&gt; 64.7, 49.0, 51.1, 52.6, 50.8, 46.6, 45.6, 49.2, 46.4, 45
 </div>
 <img data-src="images/08-bayes/unnamed-chunk-34-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="convergence-diagnostics-1" class="slide level2"><h2>Convergence Diagnostics</h2>
 
-<img data-src="https://blog.stata.com/wp-content/uploads/2016/11/animation3.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p class="caption">Source: https://blog.stata.com/2016/11/15/introduction-to-bayesian-statistics-part-2-mcmc-and-the-metropolis-hastings-algorithm/</p></section><section id="convergence-diagnostics-2" class="slide level2"><h2>Convergence Diagnostics</h2>
+<img data-src="https://blog.stata.com/wp-content/uploads/2016/11/animation3.gif" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: https://blog.stata.com/2016/11/15/introduction-to-bayesian-statistics-part-2-mcmc-and-the-metropolis-hastings-algorithm/</p></section><section id="convergence-diagnostics-2" class="slide level2"><h2>Convergence Diagnostics</h2>
 
 <img data-src="./images/08-bayes/metropolis_hastings_animation.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="convergence-diagnostics-3" class="slide level2"><h2>Convergence Diagnostics</h2>
 <div class="cell" data-layout-align="center">
@@ -1894,6 +1894,24 @@ $ temp_feel &lt;dbl&gt; 64.7, 49.0, 51.1, 52.6, 50.8, 46.6, 45.6, 49.2, 46.4, 45
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/mssc6250-s24\.github\.io\/website\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1930,7 +1948,11 @@ $ temp_feel &lt;dbl&gt; 64.7, 49.0, 51.1, 52.6, 50.8, 46.6, 45.6, 49.2, 46.4, 45
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

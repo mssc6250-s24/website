@@ -1007,19 +1007,36 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/4/4a/Ens
 :::
 
 ## Random Forests
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
 - **Random forests** improve bagged trees by *decorrelating* the trees.
 
 - *$m$ predictors are randomly sampled as split candidates from the $p$ predictors.*
 
 <!-- - The split is allowed to use only one of those $m$ predictors. -->
+:::
 
+::: {.column width="60%"}
 ::: small
+<!-- # ```{r} -->
+<!-- # #| fig-cap: "Source: Misra and Li in Machine Learning for Subsurface Characterization (2020)" -->
+<!-- # #| out-width: 50% -->
+<!-- # knitr::include_graphics("./images/14-tree/rf.jpg") -->
+<!-- # ``` -->
+
 ```{r}
-#| fig-cap: "Source: Misra and Li in Machine Learning for Subsurface Characterization (2020)"
-#| out-width: 50%
-knitr::include_graphics("./images/14-tree/rf.jpg")
+#| fig-cap: "Source: Multivariate Statistical Machine Learning Methods for Genomic Prediction, Lopez et al. (2022)"
+#| out-width: 90%
+knitr::include_graphics("./images/14-tree/rf1.png")
 ```
 :::
+:::
+::::
+
+
 
 ::: notes
 - When building decision trees, each time a split in a tree is considered, *a random sample of $m$ predictors is chosen as split candidates from the full set of $p$ predictors.*
@@ -1030,6 +1047,9 @@ knitr::include_graphics("./images/14-tree/rf.jpg")
 
 
 ## Random Forests
+
+
+
 
 - $m \approx \sqrt{p}$ for classification; $m \approx p/3$ for regression.
 
