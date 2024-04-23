@@ -1725,17 +1725,19 @@ Wyoming   -0.62  0.32 -0.24  0.16</code></pre>
 <li><p><span class="math inline">\((\phi_{1k}, \phi_{2k}, \dots, \phi_{pk})'\)</span> is the PC <strong>loading vector</strong>.</p></li>
 <li><p>The PC1 loading vector solves</p></li>
 </ul>
-<p><span class="math display">\[\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{j1} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{j1}^2 = 1\]</span></p>
+<p><span class="math display">\[\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n z_{i1}^2\right\} = \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{j1} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{j1}^2 = 1\]</span></p>
+<!-- $$\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{j1} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{j1}^2 = 1$$ -->
 <ul>
-<li><p>We maximize the sample variance of the projected points, or the <strong>scores</strong> <span class="math inline">\(z_{11}, z_{21}, \dots, z_{n1}\)</span>.</p></li>
+<li><p>Maximize the sample variance of the projected points, or the <strong>scores</strong> <span class="math inline">\(z_{11}, z_{21}, \dots, z_{n1}\)</span>.</p></li>
 <li><p>The PC <strong>loading vector</strong> defines a direction in feature space along which the data vary the most.</p></li>
 </ul></section><section id="principal-components-1" class="slide level2"><h2>Principal Components</h2>
 <p>For <span class="math inline">\(k\)</span>th PC, <span class="math inline">\(k &gt; 1\)</span>,</p>
-<p><span class="math display">\[\max_{\phi_{1k}, \phi_{2k}, \dots, \phi_{pk}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{jk} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{jk}^2 = 1, \text{ and } {\mathbf{z}_m}'\mathbf{z}_k = 0, \, m = 1, \dots, k-1\]</span> where</p>
+<p><span class="math display">\[\max_{\phi_{1k}, \phi_{2k}, \dots, \phi_{pk}} \left\{ \frac{1}{n}\sum_{i=1}^n z_{ik}^2\right\} = \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{jk} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{jk}^2 = 1, \text{ and } {\mathbf{z}_m}'\mathbf{z}_k = 0, \, m = 1, \dots, k-1\]</span> where</p>
 <p><span class="math inline">\(\mathbf{z}_l = (z_{1l}, z_{2l}, \dots, z_{nl})'\)</span></p>
+<!-- $$\max_{\phi_{1k}, \phi_{2k}, \dots, \phi_{pk}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{jk} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{jk}^2 = 1, \text{ and } {\bz_m}'\bz_k = 0, \, m = 1, \dots, k-1$$ -->
 </section><section id="low-rank-approximation" class="slide level2"><h2>Low-Rank Approximation</h2>
 <ul>
-<li><p>PCs provide low-dimensional linear surfaces that are <em>closest</em> to the observations.</p></li>
+<li><p>PCs provide low-dimensional planes that are <em>closest</em> to the observations.</p></li>
 <li><p><span class="math inline">\(x_{ij} \approx \sum_{m=1}^M z_{im}\phi_{jm}\)</span> with equality when <span class="math inline">\(M = \min(n-1, p)\)</span></p></li>
 </ul>
 <div class="small">

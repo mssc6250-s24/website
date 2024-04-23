@@ -1353,9 +1353,11 @@ where $\sum_{j=1}^p\phi_{jk}^2=1$.
 
 - The PC1 loading vector solves
 
-$$\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{j1} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{j1}^2 = 1$$
+$$\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n z_{i1}^2\right\} = \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{j1} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{j1}^2 = 1$$
 
-- We maximize the sample variance of the projected points, or the **scores** $z_{11}, z_{21}, \dots, z_{n1}$.
+<!-- $$\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{j1} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{j1}^2 = 1$$ -->
+
+- Maximize the sample variance of the projected points, or the **scores** $z_{11}, z_{21}, \dots, z_{n1}$.
 
 - The PC **loading vector** defines a direction in feature space along which the data vary the most.
 
@@ -1365,14 +1367,14 @@ $$\max_{\phi_{11}, \phi_{21}, \dots, \phi_{p1}} \left\{ \frac{1}{n}\sum_{i=1}^n 
 
 For $k$th PC, $k > 1$,
 
-$$\max_{\phi_{1k}, \phi_{2k}, \dots, \phi_{pk}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{jk} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{jk}^2 = 1, \text{ and } {\bz_m}'\bz_k = 0, \, m = 1, \dots, k-1$$ where 
+$$\max_{\phi_{1k}, \phi_{2k}, \dots, \phi_{pk}} \left\{ \frac{1}{n}\sum_{i=1}^n z_{ik}^2\right\} = \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{jk} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{jk}^2 = 1, \text{ and } {\bz_m}'\bz_k = 0, \, m = 1, \dots, k-1$$ where 
 
 $\bz_l = (z_{1l}, z_{2l}, \dots, z_{nl})'$
 
-
+<!-- $$\max_{\phi_{1k}, \phi_{2k}, \dots, \phi_{pk}} \left\{ \frac{1}{n}\sum_{i=1}^n \left( \sum_{j=1}^p  \phi_{jk} x_{ij}\right)^2\right\} \quad \text{s.t.} \quad \sum_{j=1}^p\phi_{jk}^2 = 1, \text{ and } {\bz_m}'\bz_k = 0, \, m = 1, \dots, k-1$$ -->
 
 ## Low-Rank Approximation
-- PCs provide low-dimensional linear surfaces that are *closest* to the observations.
+- PCs provide low-dimensional planes that are *closest* to the observations.
 
 - $x_{ij} \approx \sum_{m=1}^M z_{im}\phi_{jm}$ with equality when $M = \min(n-1, p)$
 
