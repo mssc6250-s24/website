@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="author" content="Dr.&nbsp;Cheng-Han Yu   Department of Mathematical and Statistical Sciences   Marquette University">
 <title>MSSC 6250 - Spring 2024 - Support Vector Machines r fontawesome::fa("percent")</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -550,7 +550,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li><p>The maximal margin hyperplane is extremely sensitive to a change in a single observation: it may overfit the training data. (<span class="green"><em>low-bias high-variance</em></span>)</p></li>
 </ul>
 
-<img data-src="./images/13-svm/fig9-5.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: ISL Fig. 9.5</p></section><section id="soft-margin-classifier" class="slide level2"><h2>Soft Margin Classifier</h2>
+<img data-src="./images/13-svm/fig9-5.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p class="caption">Source: ISL Fig. 9.5</p></section><section id="soft-margin-classifier" class="slide level2"><h2>Soft Margin Classifier</h2>
 <ul>
 <li>
 <p>Consider a classifier based on a hyperplane that does <em>NOT</em> perfectly separate the two classes, but</p>
@@ -563,7 +563,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
 <li><p>Allow some points to be on the incorrect side of the margin, or even the incorrect side of the hyperplane (training points misclassified by the classifier).</p></li>
 </ul>
 
-<img data-src="./images/13-svm/9-6.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: ISL Fig. 9.6</p></section><section id="optimization-for-soft-margin-classifier" class="slide level2"><h2>Optimization for Soft Margin Classifier</h2>
+<img data-src="./images/13-svm/9-6.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p class="caption">Source: ISL Fig. 9.6</p></section><section id="optimization-for-soft-margin-classifier" class="slide level2"><h2>Optimization for Soft Margin Classifier</h2>
 <p><span class="math display">\[\begin{align}
 \underset{\boldsymbol \beta, \beta_0, \epsilon_1, \dots, \epsilon_n}{\text{max}} \quad &amp; M \\
 \text{s.t.}
@@ -1132,24 +1132,6 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/mssc6250-s24\.github\.io\/website\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1186,11 +1168,7 @@ Dr.&nbsp;Cheng-Han Yu <br> Department of Mathematical and Statistical Sciences <
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
