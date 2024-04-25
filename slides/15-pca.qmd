@@ -1112,7 +1112,7 @@ $\text{PC1} = 0.54 \times \text{Murder} + 0.58 \times \text{Assault} + 0.28 \tim
 
 <br>
 
-$\text{PC2} = -0.42 \times \text{Murder} - 0.19 \times \text{Assault} + 0.87 \times \text{UrbanPop} + 0.17 \times \text{Rape}$
+$\text{PC2} = 0.42 \times \text{Murder} + 0.19 \times \text{Assault} - 0.87 \times \text{UrbanPop} - 0.17 \times \text{Rape}$
 
 . . .
 
@@ -1263,7 +1263,7 @@ biplot(pca_output, xlabs = state.abb,
 ```
 - Top axis: PC1 loadings
 - Right axis: PC2 loadings
-- Red arrows: PC1 and PC2 loading vector, e.g., (0.28, 0.87) for `UrbanPop`.
+- Red arrows: PC1 and PC2 loading vector, e.g., (0.28, -0.87) for `UrbanPop`.
 - Crime-related variables (`Assualt`, `Murder` and `Rape`) are located close to each other.
 - `UrbanPop` is far from the other three.
 - `Assualt`, `Murder` and `Rape` are more correlated, and `UrbanPop` is less correlated with the other three.
