@@ -934,7 +934,7 @@
     "href": "slides/01-syllabus.html#grade-percentage-conversion",
     "title": "Welcome Aboard 🙌",
     "section": "Grade-Percentage Conversion",
-    "text": "Grade-Percentage Conversion\n\nYour final grade is based on your percentage of pts earned out of 1000 pts.\n\n[x, y) means greater than or equal to x and less than y.\n\n\n\n\n\nGrade\nPercentage\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[70, 77)\n\n\nF\n[0, 70)"
+    "text": "Grade-Percentage Conversion\n\nYour final grade is based on your percentage of pts earned out of 1000 pts.\n\n[x, y) means greater than or equal to x and less than y.\n\n\n\n\n\n\nGrade\nPercentage\n\n\n\nA\n[94, 100]\n\n\nA-\n[90, 94)\n\n\nB+\n[87, 90)\n\n\nB\n[83, 87)\n\n\nB-\n[80, 83)\n\n\nC+\n[77, 80)\n\n\nC\n[70, 77)\n\n\nF\n[0, 70)"
   },
   {
     "objectID": "slides/01-syllabus.html#homework-500-pts",
@@ -1823,7 +1823,7 @@
     "href": "slides/06-lasso-vs.html#elemstatlearnprostate-data",
     "title": "Feature Selection and LASSO \n",
     "section": "\nElemStatLearn::prostate Data",
-    "text": "ElemStatLearn::prostate Data\n\n\n\n\n\n\n\nlcavol\nlweight\nage\nlbph\nsvi\nlcp\ngleason\npgg45\nlpsa\ntrain\n\n\n\n-0.580\n2.77\n50\n-1.386\n0\n-1.39\n6\n0\n-0.431\nTRUE\n\n\n-0.994\n3.32\n58\n-1.386\n0\n-1.39\n6\n0\n-0.163\nTRUE\n\n\n-0.511\n2.69\n74\n-1.386\n0\n-1.39\n7\n20\n-0.163\nTRUE\n\n\n-1.204\n3.28\n58\n-1.386\n0\n-1.39\n6\n0\n-0.163\nTRUE\n\n\n0.751\n3.43\n62\n-1.386\n0\n-1.39\n6\n0\n0.372\nTRUE\n\n\n-1.050\n3.23\n50\n-1.386\n0\n-1.39\n6\n0\n0.765\nTRUE\n\n\n0.737\n3.47\n64\n0.615\n0\n-1.39\n6\n0\n0.765\nFALSE\n\n\n0.693\n3.54\n58\n1.537\n0\n-1.39\n6\n0\n0.854\nTRUE"
+    "text": "ElemStatLearn::prostate Data\n\n\n\n\n\n\n\n\nlcavol\nlweight\nage\nlbph\nsvi\nlcp\ngleason\npgg45\nlpsa\ntrain\n\n\n\n-0.580\n2.77\n50\n-1.386\n0\n-1.39\n6\n0\n-0.431\nTRUE\n\n\n-0.994\n3.32\n58\n-1.386\n0\n-1.39\n6\n0\n-0.163\nTRUE\n\n\n-0.511\n2.69\n74\n-1.386\n0\n-1.39\n7\n20\n-0.163\nTRUE\n\n\n-1.204\n3.28\n58\n-1.386\n0\n-1.39\n6\n0\n-0.163\nTRUE\n\n\n0.751\n3.43\n62\n-1.386\n0\n-1.39\n6\n0\n0.372\nTRUE\n\n\n-1.050\n3.23\n50\n-1.386\n0\n-1.39\n6\n0\n0.765\nTRUE\n\n\n0.737\n3.47\n64\n0.615\n0\n-1.39\n6\n0\n0.765\nFALSE\n\n\n0.693\n3.54\n58\n1.537\n0\n-1.39\n6\n0\n0.854\nTRUE"
   },
   {
     "objectID": "slides/06-lasso-vs.html#cv.glmnetalpha-1",
@@ -3847,7 +3847,7 @@
     "href": "slides/16-clustering.html#clustering-methods",
     "title": "Clustering \n",
     "section": "Clustering Methods",
-    "text": "Clustering Methods\n\n\nClustering: techniques for finding subgroups, or clusters, in a data set.\n\nGoal: Homogeneous within groups; heterogeneous between groups\n\n\nCustomer/Marketing Segmentation\n\nDivide customers into clusters on age, income, etc.\nEach subgroup might be more receptive to a particular form of advertising, or more likely to purchase a particular product.\n\n\n\n\n\n\n\n\nSource: https://shopup.me/blog/customer-segmentation-definition/"
+    "text": "Clustering Methods\n\n\nClustering: techniques for finding subgroups, or clusters, in a data set.\n\nGoal: Homogeneous within groups; heterogeneous between groups\n\n\nCustomer/Marketing Segmentation\n\nDivide customers into clusters on age, income, etc.\nEach subgroup might be more receptive to a particular form of advertising, or more likely to purchase a particular product.\n\n\n\n\nSource: https://shopup.me/blog/customer-segmentation-definition/"
   },
   {
     "objectID": "slides/16-clustering.html#clustering-methods-1",
@@ -3861,28 +3861,7 @@
     "href": "slides/16-clustering.html#k-means-clustering-1",
     "title": "Clustering \n",
     "section": "K-Means Clustering",
-    "text": "K-Means Clustering\n\nPartition observations into \\(K\\) distinct, non-overlapping clusters: assign each to exactly one of the \\(K\\) clusters.\nMust pre-specify the number of clusters \\(K \\ll n\\).\n\n\n\n\n\n\nSource: Fig. 12.7 of ISL"
-  },
-  {
-    "objectID": "slides/16-clustering.html#clustering-mathematical-formulation",
-    "href": "slides/16-clustering.html#clustering-mathematical-formulation",
-    "title": "Clustering \n",
-    "section": "Clustering Mathematical Formulation",
-    "text": "Clustering Mathematical Formulation\n\n\n\\(C(\\cdot): \\{1, \\ldots, n\\} \\rightarrow \\{1, \\ldots, K\\}\\) is a cluster assignment function or encoder that assigns the \\(i\\)th observation to the \\(k\\)th cluster, \\(i \\in  \\{1, \\ldots, n\\}\\), \\(k \\in \\{1, \\ldots, K\\}\\), or \\(C(i) = k\\).\n\n\n\n\nSeek a \\(C(\\cdot)\\) that minimizes the within-cluster distance \\(W(C)\\)\n\n\n\\[ W(C) = \\frac{1}{2}\\sum_{k=1}^K\\sum_{(i, i'): C(i), C(i')=k} d(\\mathbf{x}_i, \\mathbf{x}_{i'})\\]\n\nThis is equivalent to maximizing the between cluster distance\n\n\n\\[B(C) = \\frac{1}{2}\\sum_{k=1}^K\\sum_{(i, i'): C(i)=k}\\sum_{, C(i')\\ne k} d(\\mathbf{x}_i, \\mathbf{x}_{i'})\\]\n\n\n\n\n\n\nSource: ISL Fig. 12.10"
-  },
-  {
-    "objectID": "slides/16-clustering.html#clustering-mathematical-formulation-1",
-    "href": "slides/16-clustering.html#clustering-mathematical-formulation-1",
-    "title": "Clustering \n",
-    "section": "Clustering Mathematical Formulation",
-    "text": "Clustering Mathematical Formulation\n\n\n\nThe total distance is\n\n\\[T = \\frac{1}{2}\\sum_{i=1}^n \\sum_{i'=1}^nd(\\mathbf{x}_i, \\mathbf{x}_{i'}) = W(C) + B(C)\\]\n\n\\[\\min_{C} W(C) \\iff \\max_{C} B(C)\\]\n\n\n\n\n\n\nSource: ISL Fig. 12.10\n\n\n\n\n\n\n\nThe within-cluster variation for the \\(k\\)th cluster is the sum of all of pairwise squared Euclidean distances between the observation in the \\(k\\)th cluster, divided by the total number of observations in the \\(k\\)th cluster."
-  },
-  {
-    "objectID": "slides/16-clustering.html#k-means-clustering-2",
-    "href": "slides/16-clustering.html#k-means-clustering-2",
-    "title": "Clustering \n",
-    "section": "K-Means Clustering",
-    "text": "K-Means Clustering\n\nK-Means clustering use an iterative algorithm to solve the enlarged optimization problem:\n\n\\[ \\underset{C, \\, \\{m_k\\}_{k=1}^K} \\min \\sum_{k=1}^K \\sum_{C(i) = k} \\lVert \\mathbf{x}_i - m_k \\rVert^2, \\]\nwhere \\(m_k = (\\bar{x}_{1k}, \\dots, \\bar{x}_{pk})\\) is the mean vector of \\(k\\)th cluster.1\nThis problem is NP-hard for ≥ 2 dimensions. There are K^n ways to partition n observations into K clusters!\nK-means is for situations in which all variables are continuous."
+    "text": "K-Means Clustering\n\nPartition observations into \\(K\\) distinct, non-overlapping clusters: assign each to exactly one of the \\(K\\) clusters.\nMust pre-specify the number of clusters \\(K \\ll n\\).\n\n\nSource: Fig. 12.7 of ISL"
   },
   {
     "objectID": "slides/16-clustering.html#k-means-illustration",
@@ -3896,28 +3875,28 @@
     "href": "slides/16-clustering.html#k-means-illustration-1",
     "title": "Clustering \n",
     "section": "K-Means Illustration",
-    "text": "K-Means Illustration\n\n\nRandom assignment \\(C(\\cdot)\\)\n\n\n\n\n\n\n\n\n\n\nK-Means Algorithm\n\nChoose a value of \\(K\\).\nRandomly assign a number, from 1 to \\(K\\), to each of the observations.\nIterate until the cluster assignments stop changing:\n\n\n[1] For each of the \\(K\\) clusters, compute its cluster centroid.\n\n[2] Assign each observation to the cluster whose centroid is closest."
+    "text": "K-Means Illustration\n\n\nRandom assignment\n\n\n\n\n\n\n\n\n\n\nK-Means Algorithm\n\nChoose a value of \\(K\\).\nRandomly assign a number, from 1 to \\(K\\), to each of the observations.\nIterate until the cluster assignments stop changing:\n\n\n[1] For each of the \\(K\\) clusters, compute its cluster centroid.\n\n[2] Assign each observation to the cluster whose centroid is closest."
   },
   {
     "objectID": "slides/16-clustering.html#k-means-illustration-2",
     "href": "slides/16-clustering.html#k-means-illustration-2",
     "title": "Clustering \n",
     "section": "K-Means Illustration",
-    "text": "K-Means Illustration\n\n\nGiven \\(C(\\cdot)\\), compute the cluster centroid \\(m_k\\)\n\n\n\n\n\n\n\n\n\n\nK-Means Algorithm\n\nChoose a value of \\(K\\).\n\nRandomly assign a number, from 1 to \\(K\\), to each of the observations.\nIterate until the cluster assignments stop changing:\n\n\n[1] For each of the \\(K\\) clusters, compute its cluster centroid.\n\n\n[2] Assign each observation to the cluster whose centroid is closest."
+    "text": "K-Means Illustration\n\n\nCompute the cluster centroid\n\n\n\n\n\n\n\n\n\n\nK-Means Algorithm\n\nChoose a value of \\(K\\).\n\nRandomly assign a number, from 1 to \\(K\\), to each of the observations.\nIterate until the cluster assignments stop changing:\n\n\n[1] For each of the \\(K\\) clusters, compute its cluster centroid.\n\n\n[2] Assign each observation to the cluster whose centroid is closest."
   },
   {
     "objectID": "slides/16-clustering.html#k-means-illustration-3",
     "href": "slides/16-clustering.html#k-means-illustration-3",
     "title": "Clustering \n",
     "section": "K-Means Illustration",
-    "text": "K-Means Illustration\n\n\nGiven \\(m_k\\), do new assignment \\(C(\\cdot)\\)\n\n\n\n\n\n\n\n\n\n\nK-Means Algorithm\n\nChoose a value of \\(K\\).\n\nRandomly assign a number, from 1 to \\(K\\), to each of the observations.\nIterate until the cluster assignments stop changing:\n\n\n[1] For each of the \\(K\\) clusters, compute its cluster centroid.\n\n[2] Assign each observation to the cluster whose centroid is closest."
+    "text": "K-Means Illustration\n\n\nDo a new assignment\n\n\n\n\n\n\n\n\n\n\nK-Means Algorithm\n\nChoose a value of \\(K\\).\n\nRandomly assign a number, from 1 to \\(K\\), to each of the observations.\nIterate until the cluster assignments stop changing:\n\n\n[1] For each of the \\(K\\) clusters, compute its cluster centroid.\n\n[2] Assign each observation to the cluster whose centroid is closest."
   },
   {
     "objectID": "slides/16-clustering.html#k-means-illustration-4",
     "href": "slides/16-clustering.html#k-means-illustration-4",
     "title": "Clustering \n",
     "section": "K-Means Illustration",
-    "text": "K-Means Illustration\n\n\nGiven \\(m_k\\), do new assignment \\(C(\\cdot)\\)\n\n\n\n\n\n\n\n\n\nGiven \\(C(\\cdot)\\), compute the cluster centroid \\(m_k\\)"
+    "text": "K-Means Illustration\n\n\nDo a new assignment\n\n\n\n\n\n\n\n\n\nCompute the cluster centroid"
   },
   {
     "objectID": "slides/16-clustering.html#section-1",
@@ -3927,18 +3906,39 @@
     "text": "Source: ISL Figure 12.8"
   },
   {
+    "objectID": "slides/16-clustering.html#clustering-mathematical-formulation",
+    "href": "slides/16-clustering.html#clustering-mathematical-formulation",
+    "title": "Clustering \n",
+    "section": "Clustering Mathematical Formulation",
+    "text": "Clustering Mathematical Formulation\n\n\n\\(C(\\cdot): \\{1, \\ldots, n\\} \\rightarrow \\{1, \\ldots, K\\}\\) is a cluster assignment function or encoder that assigns the \\(i\\)th observation to the \\(k\\)th cluster, \\(i \\in  \\{1, \\ldots, n\\}\\), \\(k \\in \\{1, \\ldots, K\\}\\), or \\(C(i) = k\\).\n\n\n\nSeek a \\(C(\\cdot)\\) that minimizes the within-cluster distance \\[\n\\begin{align} W(C) = \\frac{1}{2}\\sum_{k=1}^K\\sum_{(i, i'): C(i), C(i')=k} d(\\mathbf{x}_i, \\mathbf{x}_{i'})\n\\end{align}\n\\]\nIf \\(d(\\cdot, \\cdot)\\) is the Euclidean distance, \\[W(C) =\\sum_{k=1}^K n_k \\sum_{C(i) = k} \\lVert \\mathbf{x}_i - m_k \\rVert^2,\\]\nwhere \\(m_k = (\\bar{x}_{1k}, \\dots, \\bar{x}_{pk})\\) is the mean vector of \\(k\\)th cluster.\n\n\n\n\n\nSource: ISL Fig. 12.10"
+  },
+  {
+    "objectID": "slides/16-clustering.html#clustering-mathematical-formulation-1",
+    "href": "slides/16-clustering.html#clustering-mathematical-formulation-1",
+    "title": "Clustering \n",
+    "section": "Clustering Mathematical Formulation",
+    "text": "Clustering Mathematical Formulation\n\n\n\nThis is equivalent to maximizing the between cluster distance\n\n\n\\[B(C) = \\frac{1}{2}\\sum_{k=1}^K\\sum_{(i, i'): C(i)=k}\\sum_{, C(i')\\ne k} d(\\mathbf{x}_i, \\mathbf{x}_{i'})\\]\n\nThe total distance is\n\n\\[T = \\frac{1}{2}\\sum_{i=1}^n \\sum_{i'=1}^nd(\\mathbf{x}_i, \\mathbf{x}_{i'}) = W(C) + B(C)\\]\n\n\\[\\min_{C} W(C) \\iff \\max_{C} B(C)\\]\n\n\n\n\n\nSource: ISL Fig. 12.10\n\n\n\n\n\n\nThe within-cluster variation for the \\(k\\)th cluster is the sum of all of pairwise squared Euclidean distances between the observation in the \\(k\\)th cluster, divided by the total number of observations in the \\(k\\)th cluster."
+  },
+  {
+    "objectID": "slides/16-clustering.html#k-means-clustering-2",
+    "href": "slides/16-clustering.html#k-means-clustering-2",
+    "title": "Clustering \n",
+    "section": "K-Means Clustering",
+    "text": "K-Means Clustering\n\nK-Means clustering use an iterative algorithm to solve the enlarged optimization problem:\n\n\\[ \\underset{C, \\, \\{m_k\\}_{k=1}^K} \\min \\sum_{k=1}^K n_k \\sum_{C(i) = k} \\lVert \\mathbf{x}_i - m_k \\rVert^2, \\]\nwhere \\(m_k = (\\bar{x}_{1k}, \\dots, \\bar{x}_{pk})\\) is the mean vector of \\(k\\)th cluster.1\nThis problem is NP-hard for ≥ 2 dimensions. There are K^n ways to partition n observations into K clusters!\nK-means is for situations in which all variables are continuous."
+  },
+  {
     "objectID": "slides/16-clustering.html#k-means-algorithm-issues",
     "href": "slides/16-clustering.html#k-means-algorithm-issues",
     "title": "Clustering \n",
     "section": "K-Means Algorithm Issues",
-    "text": "K-Means Algorithm Issues\n\nThe algorithm finds a local rather than a global optimum.\n\nThe results will depend on the initial (random) cluster assignment.\n\nRun the algorithm multiple times, then select the one producing the smallest \\(W(C)\\)\n\n\n\nStandardize the data so that distance is not affected by variable unit.\n\n\n# some random data\nset.seed(1)\nmat = matrix(rnorm(1000), 50, 20)\n\n# if we use only one starting point\nkmeans(mat, centers = 3, nstart = 1)$tot.withinss\n\n[1] 886\n\n# if we use multiple starting point and pick the best one\nkmeans(mat, centers = 3, nstart = 100)$tot.withinss\n\n[1] 884"
+    "text": "K-Means Algorithm Issues\n\nThe algorithm finds a local rather than a global optimum.\n\nThe results will depend on the initial (random) cluster assignment.\n\nRun the algorithm multiple times, then select the one producing the smallest \\(W(C)\\)\n\n\n\nStandardize the data so that distance is not affected by variable unit.\n\n\n# some random data\nset.seed(2024)\nmat = matrix(rnorm(1000), 50, 20)\n\n# if we use only one starting point\nkmeans(mat, centers = 3, nstart = 1)$tot.withinss\n\n[1] 821\n\n# if we use multiple starting point and pick the best one\nkmeans(mat, centers = 3, nstart = 100)$tot.withinss\n\n[1] 789"
   },
   {
     "objectID": "slides/16-clustering.html#section-2",
     "href": "slides/16-clustering.html#section-2",
     "title": "Clustering \n",
     "section": "",
-    "text": "Source: ISL Figure 12.9"
+    "text": "Source: ISL Figure 12.8"
   },
   {
     "objectID": "slides/16-clustering.html#k-mediods",
@@ -4036,14 +4036,14 @@
     "href": "slides/16-clustering.html#em-for-gmm",
     "title": "Clustering \n",
     "section": "EM for GMM",
-    "text": "EM for GMM\n\\[\\begin{align} Q\\left(\\boldsymbol \\theta, \\boldsymbol \\theta^{(t-1)} \\right) &= \\text{E}\\left[\\ell(\\boldsymbol \\theta) \\mid \\mathbf{x}, \\boldsymbol \\theta^{(t-1)} \\right] \\\\\n&=\\sum_{i=1}^n \\text{E}\\left[ \\log \\left[ \\prod_{k=1}^K p_kp(\\mathbf{x}_i \\mid \\boldsymbol \\theta)^{I(z_i = k)}\\right]\\right]\\\\\n&=\\sum_{i=1}^n \\sum_{k=1}^K \\text{E}(I(z_i=k)) \\log \\left[p_kp(\\mathbf{x}_i \\mid \\boldsymbol \\theta) \\right]\\\\\n&=\\sum_{i=1}^n \\sum_{k=1}^K p\\left(z_i = k \\mid \\mathbf{x}_i, \\boldsymbol \\theta\\right) \\log \\left[p_kp(\\mathbf{x}_i \\mid \\boldsymbol \\theta) \\right]\\\\\n&=\\sum_{i=1}^n \\sum_{k=1}^K r_{ik} \\log p_k + \\sum_{i=1}^n \\sum_{k=1}^K r_{ik}  \\log p(\\mathbf{x}_i \\mid \\boldsymbol \\theta)\\end{align}\\]"
+    "text": "EM for GMM\n\\[\\begin{align} Q\\left(\\boldsymbol \\theta, \\boldsymbol \\theta^{(t-1)} \\right) &= \\text{E}\\left[\\ell(\\boldsymbol \\theta) \\mid \\mathbf{x}, \\boldsymbol \\theta^{(t-1)} \\right] \\\\\n&=\\sum_{i=1}^n \\text{E}\\left[ \\log \\left[ \\prod_{k=1}^K p_kp(\\mathbf{x}_i \\mid z_i, \\boldsymbol \\theta)^{I(z_i = k)}\\right]\\right]\\\\\n&=\\sum_{i=1}^n \\sum_{k=1}^K \\text{E}(I(z_i=k)) \\log \\left[p_kp(\\mathbf{x}_i \\mid z_i=k, \\boldsymbol \\theta) \\right]\\\\\n&=\\sum_{i=1}^n \\sum_{k=1}^K p\\left(z_i = k \\mid \\mathbf{x}_i, \\boldsymbol \\theta\\right) \\log \\left[p_kp(\\mathbf{x}_i \\mid z_i=k, \\boldsymbol \\theta) \\right]\\\\\n&=\\sum_{i=1}^n \\sum_{k=1}^K r_{ik} \\log p_k + \\sum_{i=1}^n \\sum_{k=1}^K r_{ik}  \\log p(\\mathbf{x}_i \\mid z_i=k, \\boldsymbol \\theta)\\end{align}\\]"
   },
   {
     "objectID": "slides/16-clustering.html#em-for-gmm-1",
     "href": "slides/16-clustering.html#em-for-gmm-1",
     "title": "Clustering \n",
     "section": "EM for GMM",
-    "text": "EM for GMM\n\n\\(\\begin{align} Q\\left(\\boldsymbol \\theta, \\boldsymbol \\theta^{(t-1)} \\right)=\\sum_{i=1}^n \\sum_{k=1}^K r_{ik} \\log p_k + \\sum_{i=1}^n \\sum_{k=1}^K r_{ik}  \\log p(\\mathbf{x}_i \\mid \\boldsymbol \\theta)\\end{align}\\)\n\n\n\nE-step:\n\n\n\\(r_{ik} = \\frac{p_kN\\left(\\mathbf{x}_i \\mid \\boldsymbol \\mu_{k}^{(t-1)}, \\boldsymbol \\Sigma_{k}^{(t-1)}\\right)}{\\sum_{k'=1}^Kp_{k'}N\\left(\\mathbf{x}_i \\mid \\boldsymbol \\mu_{k'}^{(t-1)}, \\boldsymbol \\Sigma_{k'}^{(t-1)}\\right)}\\)\n\n\n\nM-step:\n\n\n\n\\(p_k = \\frac{\\sum_{i=1}^n r_{ik}}{n}\\)\n\n\n\n\n\\(\\boldsymbol \\mu_k = \\frac{\\sum_{i=1}^n r_{ik}\\mathbf{x}_i}{\\sum_{i=1}^n r_{ik}}\\)\n\n\n\n\n\\(\\boldsymbol \\Sigma_k = \\frac{\\sum_{i=1}^n r_{ik}(\\mathbf{x}_i - \\boldsymbol \\mu_k)(\\mathbf{x}_i - \\boldsymbol \\mu_k)'}{\\sum_{i=1}^n r_{ik}}\\)\n\n\nSet \\(\\boldsymbol \\theta^{(t)} = \\left(p_k, \\boldsymbol \\mu_k, \\boldsymbol \\Sigma_k \\right)_{k=1}^K\\) and return to the E-step."
+    "text": "EM for GMM\n\n\\(\\begin{align} Q\\left(\\boldsymbol \\theta, \\boldsymbol \\theta^{(t-1)} \\right)=\\sum_{i=1}^n \\sum_{k=1}^K r_{ik} \\log p_k + \\sum_{i=1}^n \\sum_{k=1}^K r_{ik}  \\log p(\\mathbf{x}_i \\mid z_i=k, \\boldsymbol \\theta)\\end{align}\\)\n\n\n\nE-step:\n\n\n\\(r_{ik} = \\frac{p_kN\\left(\\mathbf{x}_i \\mid \\boldsymbol \\mu_{k}^{(t-1)}, \\boldsymbol \\Sigma_{k}^{(t-1)}\\right)}{\\sum_{k'=1}^Kp_{k'}N\\left(\\mathbf{x}_i \\mid \\boldsymbol \\mu_{k'}^{(t-1)}, \\boldsymbol \\Sigma_{k'}^{(t-1)}\\right)}\\)\n\n\n\nM-step:\n\n\n\n\\(p_k = \\frac{\\sum_{i=1}^n r_{ik}}{n}\\)\n\n\n\n\n\\(\\boldsymbol \\mu_k = \\frac{\\sum_{i=1}^n r_{ik}\\mathbf{x}_i}{\\sum_{i=1}^n r_{ik}}\\)\n\n\n\n\n\\(\\boldsymbol \\Sigma_k = \\frac{\\sum_{i=1}^n r_{ik}(\\mathbf{x}_i - \\boldsymbol \\mu_k)(\\mathbf{x}_i - \\boldsymbol \\mu_k)'}{\\sum_{i=1}^n r_{ik}}\\)\n\n\nSet \\(\\boldsymbol \\theta^{(t)} = \\left(p_k, \\boldsymbol \\mu_k, \\boldsymbol \\Sigma_k \\right)_{k=1}^K\\) and return to the E-step."
   },
   {
     "objectID": "slides/16-clustering.html#em-and-k-means",
@@ -4064,7 +4064,7 @@
     "href": "slides/16-clustering.html#other-topics",
     "title": "Clustering \n",
     "section": "Other Topics",
-    "text": "Other Topics\n\nHierarchical Clustering\nSpectral Clustering\nDirichlet Process Mixture Models\n\n\nPML Ch. 21, ESL Ch 14\nK-Medoids Clustering*\n\nhttps://www.google.com/search?q=k-medoids+clustering+in+r&oq=K-medoi&aqs=chrome.3.69i57j0i512l2j0i20i263i512l2j0i512l5.6754j0j7&sourceid=chrome&ie=UTF-8\n\n\n\n\nmssc6250-s24.github.io/website"
+    "text": "Other Topics\n\nHierarchical Clustering\nSpectral Clustering\nDirichlet Process Mixture Models\n\n\nPML Ch. 21, ESL Ch 14\nK-Medoids Clustering*\n\nhttps://www.google.com/search?q=k-medoids+clustering+in+r&oq=K-medoi&aqs=chrome.3.69i57j0i512l2j0i20i263i512l2j0i512l5.6754j0j7&sourceid=chrome&ie=UTF-8"
   },
   {
     "objectID": "slides/09-class-glm.html#non-gaussian-and-non-continuous-response",
