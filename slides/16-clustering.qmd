@@ -20,7 +20,7 @@ format:
     height: 1000
     margin: 0.05
     logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Marquette_Golden_Eagles_logo.svg"
-    footer: "[mssc6250-s24.github.io/website](https://mssc6250-s24.github.io/website/)"
+    # footer: "[mssc6250-s23.github.io/website](https://mssc6250-s23.github.io/website/)"
     theme: ["simple", "styles.scss"]
     echo: false
     multiplex: true
@@ -36,7 +36,6 @@ format:
 editor: source
 execute:
   freeze: true
-  echo: false
 ---
 
 
@@ -114,7 +113,7 @@ knitr::opts_chunk$set(
     fig.align = "center",
     out.width = "100%",
     fig.retina = 10,
-    fig.path = "images/16-clustering/",
+    # fig.path = "images/04-linear-reg/",
     message = FALSE,
     global.par = TRUE
 )
@@ -152,24 +151,17 @@ theme_set(theme_minimal(base_size = 20))
 
 
 
-
-# K-Means Clustering
-
-
 ## Clustering Methods
 - **Clustering**: techniques for finding **subgroups**, or **clusters**, in a data set.
 - **Goal**: [**Homogeneous within groups; heterogeneous between groups**]{.blue}
 - [Customer/Marketing Segmentation]{.green}
     + Divide customers into clusters on age, income, etc.
     + Each subgroup might be more receptive to a particular form of advertising, or more likely to purchase a particular product.
-
-::: small
-```{r}
+    
+```{r, echo=FALSE, out.width="38%"}
 #| fig-cap: "Source: https://shopup.me/blog/customer-segmentation-definition/"
-#| out-width: 38%
 knitr::include_graphics("./images/16-clustering/clustering.png")
 ```
-:::
 
 
 ## Clustering Methods
@@ -190,107 +182,22 @@ knitr::include_graphics("./images/16-clustering/clustering.png")
 
 - Distance measures should be defined based on the application. There is no universally best approach.
 
+
+
+# K-Means Clustering
+
+
 ## K-Means Clustering
 
 - Partition observations into $K$ **distinct, non-overlapping** clusters: assign each to **exactly one** of the $K$ clusters.
 
 - Must pre-specify the number of clusters $K \ll n$.
 
-::: small
-```{r}
+```{r, echo=FALSE, out.width="85%"}
 #| fig-cap: "Source: Fig. 12.7 of ISL"
-#| out-width: 85%
 knitr::include_graphics("./images/16-clustering/kmeans.png")
 ```
-:::
 
-## Clustering Mathematical Formulation
-
-- $C(\cdot): \{1, \ldots, n\} \rightarrow \{1, \ldots, K\}$ is a cluster assignment function or **encoder** that assigns the $i$th observation to the $k$th cluster, $i \in  \{1, \ldots, n\}$, $k \in \{1, \ldots, K\}$, or $C(i) = k$.
-
-
-
-:::: {.columns}
-::: {.column width="50%"}
-
-- Seek a $C(\cdot)$ that minimizes the **within-cluster distance** $W(C)$
-
-
-$$ W(C) = \frac{1}{2}\sum_{k=1}^K\sum_{(i, i'): C(i), C(i')=k} d(\bx_i, \bx_{i'})$$
-
-
-
-- This is equivalent to maximizing the **between cluster distance**
-
-
-$$B(C) = \frac{1}{2}\sum_{k=1}^K\sum_{(i, i'): C(i)=k}\sum_{, C(i')\ne k} d(\bx_i, \bx_{i'})$$
-
-:::
-
-::: {.column width="50%"}
-
-::: small
-```{r}
-#| fig-cap: "Source: ISL Fig. 12.10"
-knitr::include_graphics("./images/16-clustering/12_10-1.png")
-```
-:::
-
-:::
-
-::::
-
-
-
-<!-- - A *good* clustering is one for which the **within-cluster variation** is as small as possible. -->
-
-## Clustering Mathematical Formulation
-
-:::: {.columns}
-::: {.column width="50%"}
-- The **total distance** is
-
-$$T = \frac{1}{2}\sum_{i=1}^n \sum_{i'=1}^nd(\bx_i, \bx_{i'}) = W(C) + B(C)$$
-
-<br>
-
-$$\min_{C} W(C) \iff \max_{C} B(C)$$
-:::
-
-
-::: {.column width="50%"}
-
-::: small
-```{r}
-#| fig-cap: "Source: ISL Fig. 12.10"
-knitr::include_graphics("./images/16-clustering/12_10-1.png")
-```
-:::
-
-
-:::
-
-::::
-
-
-::: notes
-- The within-cluster variation for the $k$th cluster is *the sum of all of pairwise squared Euclidean distances between the observation in the $k$th cluster, divided by the total number of observations in the $k$th cluster.*
-:::
-
-
-
-## K-Means Clustering
-
-- K-Means clustering use an iterative algorithm to solve the enlarged optimization problem:
-
-$$ \underset{C, \, \{m_k\}_{k=1}^K} \min \sum_{k=1}^K \sum_{C(i) = k} \lVert \bx_i - m_k \rVert^2, $$
-
-where $m_k = (\bar{x}_{1k}, \dots, \bar{x}_{pk})$ is the mean vector of $k$th cluster.^[K-means is for situations in which all variables are continuous.]
-
-::: notes
-This problem is NP-hard for ≥ 2 dimensions.
-There are K^n ways to partition n observations into K clusters!
-:::
 
 
 ## K-Means Algorithm (K = 3) {visibility="hidden"}
@@ -301,8 +208,8 @@ Alternatively updates the two components, the assignment $C(\cdot)$ and cluster 
 
 ::: {.column width="52%"}
 :::{.small}
-```{r}
-#| fig-cap: "Source: ISL Fig. 12.8"
+```{r, echo=FALSE, out.width="100%", fig.cap="Source: ISL Fig 12.8"}
+#| purl=FALSE
 knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 ```
 :::
@@ -373,7 +280,7 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 
 ::: {.column width="50%"}
 
-**Random assignment** $C(\cdot)$
+**Random assignment**
 
 ```{r}
 #| fig-asp: 1
@@ -409,7 +316,7 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Given $C(\cdot)$, compute the cluster centroid $m_k$**
+**Compute the cluster centroid**
 
 
 ```{r}
@@ -451,7 +358,7 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 :::: {.columns}
 ::: {.column width="50%"}
 
-**Given $m_k$, do new assignment $C(\cdot)$**
+**Do a new assignment**
 
 ```{r}
 #| fig-asp: 1
@@ -493,7 +400,7 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 
 
 ::: {.column width="50%"}
-**Given $m_k$, do new assignment $C(\cdot)$**
+**Do a new assignment**
 
 ```{r}
 #| fig-asp: 1
@@ -515,7 +422,7 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 
 ::: {.column width="50%"}
 
-**Given $C(\cdot)$, compute the cluster centroid $m_k$**
+**Compute the cluster centroid**
 
 ```{r}
 #| fig-asp: 1
@@ -538,12 +445,101 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 
 ##
 
-
 ```{r}
 #| echo: false
+#| out-width: "100%"
 #| fig-cap: "Source: ISL Figure 12.8"
 knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 ```
+
+
+## Clustering Mathematical Formulation
+
+- $C(\cdot): \{1, \ldots, n\} \rightarrow \{1, \ldots, K\}$ is a cluster assignment function or **encoder** that assigns the $i$th observation to the $k$th cluster, $i \in  \{1, \ldots, n\}$, $k \in \{1, \ldots, K\}$, or $C(i) = k$.
+
+
+
+:::: {.columns}
+::: {.column width="60%"}
+
+Seek a $C(\cdot)$ that minimizes the **within-cluster distance**
+$$ 
+\begin{align} W(C) = \frac{1}{2}\sum_{k=1}^K\sum_{(i, i'): C(i), C(i')=k} d(\bx_i, \bx_{i'})
+\end{align}
+$$
+
+If $d(\cdot, \cdot)$ is the Euclidean distance,
+$$W(C) =\sum_{k=1}^K n_k \sum_{C(i) = k} \lVert \bx_i - m_k \rVert^2,$$
+
+where $m_k = (\bar{x}_{1k}, \dots, \bar{x}_{pk})$ is the mean vector of $k$th cluster.
+
+:::
+
+::: {.column width="40%"}
+```{r}
+#| fig-cap: "Source: ISL Fig. 12.10"
+knitr::include_graphics("./images/16-clustering/12_10-1.png")
+```
+
+:::
+
+::::
+
+
+
+<!-- - A *good* clustering is one for which the **within-cluster variation** is as small as possible. -->
+
+## Clustering Mathematical Formulation
+
+:::: {.columns}
+::: {.column width="60%"}
+
+
+- This is equivalent to maximizing the **between cluster distance**
+
+
+$$B(C) = \frac{1}{2}\sum_{k=1}^K\sum_{(i, i'): C(i)=k}\sum_{, C(i')\ne k} d(\bx_i, \bx_{i'})$$
+
+
+- The **total distance** is
+
+$$T = \frac{1}{2}\sum_{i=1}^n \sum_{i'=1}^nd(\bx_i, \bx_{i'}) = W(C) + B(C)$$
+
+<br>
+
+$$\min_{C} W(C) \iff \max_{C} B(C)$$
+:::
+
+
+::: {.column width="40%"}
+```{r}
+#| fig-cap: "Source: ISL Fig. 12.10"
+knitr::include_graphics("./images/16-clustering/12_10-1.png")
+```
+
+:::
+
+::::
+
+
+::: notes
+- The within-cluster variation for the $k$th cluster is *the sum of all of pairwise squared Euclidean distances between the observation in the $k$th cluster, divided by the total number of observations in the $k$th cluster.*
+:::
+
+
+
+## K-Means Clustering
+
+- K-Means clustering use an *iterative* algorithm to solve the enlarged optimization problem:
+
+$$ \underset{C, \, \{m_k\}_{k=1}^K} \min \sum_{k=1}^K n_k \sum_{C(i) = k} \lVert \bx_i - m_k \rVert^2, $$
+
+where $m_k = (\bar{x}_{1k}, \dots, \bar{x}_{pk})$ is the mean vector of $k$th cluster.^[K-means is for situations in which all variables are continuous.]
+
+::: notes
+This problem is NP-hard for ≥ 2 dimensions.
+There are K^n ways to partition n observations into K clusters!
+:::
 
 
 ## K-Means Algorithm Issues
@@ -558,7 +554,7 @@ knitr::include_graphics("./images/16-clustering/kmeans_algo.png")
 ```{r}   
 #| echo: true
 # some random data
-set.seed(1)
+set.seed(2024)
 mat = matrix(rnorm(1000), 50, 20)
 
 # if we use only one starting point
@@ -571,13 +567,12 @@ kmeans(mat, centers = 3, nstart = 100)$tot.withinss
 
 ##
 
-
 ```{r}
 #| echo: false
-#| fig-cap: "Source: ISL Figure 12.9"
+#| out-width: "100%"
+#| fig-cap: "Source: ISL Figure 12.8"
 knitr::include_graphics("./images/16-clustering/kmeans_local.png")
 ```
-
 
 
 ## K-Mediods
@@ -800,15 +795,15 @@ Stop until $\|\btheta^{(t)} - \btheta^{(t-1)}\| < \epsilon$ or $\|Q\left(\btheta
 ## EM for GMM
 
 $$\begin{align} Q\left(\btheta, \btheta^{(t-1)} \right) &= \E\left[\ell(\btheta) \mid \bx, \btheta^{(t-1)} \right] \\
-&=\sum_{i=1}^n \E \left[ \log \left[ \prod_{k=1}^K p_kp(\bx_i \mid \btheta)^{I(z_i = k)}\right]\right]\\
-&=\sum_{i=1}^n \sum_{k=1}^K \E (I(z_i=k)) \log \left[p_kp(\bx_i \mid \btheta) \right]\\
-&=\sum_{i=1}^n \sum_{k=1}^K p\left(z_i = k \mid \bx_i, \btheta \right) \log \left[p_kp(\bx_i \mid \btheta) \right]\\
-&=\sum_{i=1}^n \sum_{k=1}^K r_{ik} \log p_k + \sum_{i=1}^n \sum_{k=1}^K r_{ik}  \log p(\bx_i \mid \btheta)\end{align}$$
+&=\sum_{i=1}^n \E \left[ \log \left[ \prod_{k=1}^K p_kp(\bx_i \mid z_i, \btheta)^{I(z_i = k)}\right]\right]\\
+&=\sum_{i=1}^n \sum_{k=1}^K \E (I(z_i=k)) \log \left[p_kp(\bx_i \mid z_i=k, \btheta) \right]\\
+&=\sum_{i=1}^n \sum_{k=1}^K p\left(z_i = k \mid \bx_i, \btheta \right) \log \left[p_kp(\bx_i \mid z_i=k, \btheta) \right]\\
+&=\sum_{i=1}^n \sum_{k=1}^K r_{ik} \log p_k + \sum_{i=1}^n \sum_{k=1}^K r_{ik}  \log p(\bx_i \mid z_i=k, \btheta)\end{align}$$
 
 
 ## EM for GMM
 ::: {.midi}
-$\begin{align} Q\left(\btheta, \btheta^{(t-1)} \right)=\sum_{i=1}^n \sum_{k=1}^K r_{ik} \log p_k + \sum_{i=1}^n \sum_{k=1}^K r_{ik}  \log p(\bx_i \mid \btheta)\end{align}$
+$\begin{align} Q\left(\btheta, \btheta^{(t-1)} \right)=\sum_{i=1}^n \sum_{k=1}^K r_{ik} \log p_k + \sum_{i=1}^n \sum_{k=1}^K r_{ik}  \log p(\bx_i \mid z_i=k, \btheta)\end{align}$
 :::
 
 
