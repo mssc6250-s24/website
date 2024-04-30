@@ -172,7 +172,6 @@ For [*group members*]{.red}, please go to <https://forms.office.com/r/tk9FrnV9ZM
 ## Class activity 3
 
 ::: {.callout collapse="true"}
-
 ### Topic: Loss Functions for Regression and Classification
 
 ::: callout-tip
@@ -247,8 +246,6 @@ For [*group members*]{.red}, please go to <https://forms.office.com/r/uC8wJMSEtn
 
 <!-- <https://forms.office.com/r/uC8wJMSEtn> -->
 
-
-
 <!-- ### Topic: Gaussian Process Classification -->
 
 <!-- ### Topic: Artificial Neural Networks -->
@@ -284,10 +281,7 @@ For [*group members*]{.red}, please go to <https://forms.office.com/r/uC8wJMSEtn
 <!-- ::: -->
 
 <!-- 1. Define the entropy of a random variable. What does it measure? -->
-
-
 :::
-
 
 ## Class activity 4
 
@@ -343,3 +337,19 @@ c("Clint")
 
 setdiff(student_set, g1_mem)
 ```
+
+
+### Knowledge Check
+
+Please go to <https://forms.office.com/r/zCh1YfFCiZ> to answer the knowledge check questions.
+
+<!-- <https://forms.office.com/r/WhjhuJ781U> -->
+
+### Evaluation
+
+For [*leaders*]{.red}, please go to <https://forms.office.com/r/0gsHsVSpkJ> to nominate most engaged members. Note that **you two leaders make one single decision and nominate members jointly**.
+
+<!-- <https://forms.office.com/r/ZYt35Czaxr> -->
+
+For [*group members*]{.red}, please go to <https://forms.office.com/r/AkAUYvucsD> to evaluate your leaders' performance.
+:::
